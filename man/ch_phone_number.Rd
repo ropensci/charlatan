@@ -9,6 +9,9 @@ ch_phone_number()
 
 ch_phone_numbers(n = 10)
 }
+\arguments{
+\item{n}{(integer) number of things to get, 1 to inifinity}
+}
 \description{
 Create fake phone numbers
 }

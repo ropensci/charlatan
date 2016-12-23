@@ -1,6 +1,7 @@
 #' Create fake phone numbers
 #'
 #' @export
+#' @template params
 #' @examples
 #' ch_phone_number()
 #' ch_phone_numbers(10)

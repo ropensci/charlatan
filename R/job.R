@@ -1,6 +1,7 @@
 #' Create fake jobs
 #'
 #' @export
+#' @template params
 #' @examples
 #' ch_job()
 #' ch_jobs(10)

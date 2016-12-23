@@ -9,6 +9,9 @@ ch_name()
 
 ch_names(n = 10)
 }
+\arguments{
+\item{n}{(integer) number of things to get, 1 to inifinity}
+}
 \description{
 Create fake person names
 }

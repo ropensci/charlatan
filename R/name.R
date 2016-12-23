@@ -1,6 +1,7 @@
 #' Create fake person names
 #'
 #' @export
+#' @template params
 #' @examples
 #' ch_name()
 #' ch_names(10)
