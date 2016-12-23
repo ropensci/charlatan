@@ -1,0 +1,58 @@
+charlatan
+=========
+
+```{r echo=FALSE}
+knitr::opts_chunk$set(
+  comment = "#>",
+  collapse = TRUE,
+  warning = FALSE,
+  message = FALSE
+)
+```
+
+[![Build Status](https://travis-ci.org/ropenscilabs/charlatan.svg?branch=master)](https://travis-ci.org/ropenscilabs/charlatan)
+
+`charlatan` makes fake data, inspired from Python's [faker](https://github.com/joke2k/faker) 
+and Ruby's [faker](http://faker.rubyforge.org/)
+
+## Installation
+
+```{r eval=FALSE}
+devtools::install_github("ropenscilabs/charlatan")
+```
+
+```{r}
+library("charlatan")
+```
+
+## person name
+
+```{r}
+ch_name()
+```
+
+```{r}
+replicate(10, ch_name())
+```
+
+
+## phone number
+
+```{r}
+ch_phone_number()
+```
+
+```{r}
+replicate(10, ch_phone_number())
+```
+
+
+## Meta
+
+* Please [report any issues or bugs](https://github.com/ropenscilabs/charlatan/issues).
+* License: MIT
+* Get citation information for `charlatan` in R doing `citation(package = 'charlatan')`
+* Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). 
+By participating in this project you agree to abide by its terms.
+
+[![ropensci_footer](https://ropensci.org/public_images/github_footer.png)](https://ropensci.org)
