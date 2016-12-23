@@ -2,16 +2,19 @@
 % Please edit documentation in R/phone_number.R
 \name{ch_phone_number}
 \alias{ch_phone_number}
+\alias{ch_phone_numbers}
 \title{Create fake phone numbers}
 \usage{
 ch_phone_number()
+
+ch_phone_numbers(n = 10)
 }
 \description{
 Create fake phone numbers
 }
 \examples{
 ch_phone_number()
-replicate(10, ch_phone_number())
-replicate(500, ch_phone_number())
+ch_phone_numbers(10)
+ch_phone_numbers(500)
 }
 

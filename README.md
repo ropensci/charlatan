@@ -25,17 +25,16 @@ library("charlatan")
 
 ```r
 ch_name()
-#> [1] "Cleveland Cartwright I"
+#> [1] " Kreiger"
 ```
 
 
 ```r
-replicate(10, ch_name())
-#>  [1] "Mr. Lilburn Walsh V"      "Dr. Shaquille Wisozk Sr."
-#>  [3] "Mrs. Erin Durgan MD"      "Waldemar Stamm"          
-#>  [5] "Tracey Kuhic"             " Muller"                 
-#>  [7] "Cael Breitenberg"         "Pricilla Berge"          
-#>  [9] "Ciarra Hermiston"         "Houston Maggio"
+ch_names(10)
+#>  [1] "Hennie Osinski"      "Mr. Denton Hoppe"    "Luther Tremblay"    
+#>  [4] " Kozey"              "Mr. Philip Moore"    "Dr. Ronny Yundt DVM"
+#>  [7] "Dannie Auer II"      "Ana Bergstrom"       " Bednar"            
+#> [10] " Murazik"
 ```
 
 
@@ -44,16 +43,39 @@ replicate(10, ch_name())
 
 ```r
 ch_phone_number()
-#> [1] "1-290-769-0345"
+#> [1] "(253)231-2316"
 ```
 
 
 ```r
-replicate(10, ch_phone_number())
-#>  [1] "296-814-0142x15128" "+93(3)0062275211"   "464.990.7488"      
-#>  [4] "762.581.1775"       "601-521-0109x7522"  "378-676-5203x9491" 
-#>  [7] "926.155.0777x8266"  "438-938-9799"       "1-070-841-2251x462"
-#> [10] "856.646.0425x46692"
+ch_phone_numbers(10)
+#>  [1] "1-799-380-7198x654"   "(047)541-9965"        "378-519-0492x0167"   
+#>  [4] "04833625912"          "570.344.1284"         "249.966.4396x6085"   
+#>  [7] "043.645.6887"         "1-939-464-7856x27419" "1-884-551-3194"      
+#> [10] "181.028.8120"
+```
+
+## job
+
+
+```r
+ch_job()
+#> [1] "Psychologist, occupational"
+```
+
+
+```r
+ch_jobs(10)
+#>  [1] "Water quality scientist"           
+#>  [2] "Banker"                            
+#>  [3] "Sport and exercise psychologist"   
+#>  [4] "Communications engineer"           
+#>  [5] "Journalist, magazine"              
+#>  [6] "Jewellery designer"                
+#>  [7] "Logistics and distribution manager"
+#>  [8] "Risk manager"                      
+#>  [9] "Web designer"                      
+#> [10] "Call centre manager"
 ```
 
 

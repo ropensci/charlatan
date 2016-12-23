@@ -10,6 +10,10 @@
 BaseProvider <- R6::R6Class(
   'BaseProvider',
   public = list(
+    random_element = function(x) {
+      sample(x, size = 1)
+    },
+
     random_digit = function() {
       sample(0:9, size = 1)
     },

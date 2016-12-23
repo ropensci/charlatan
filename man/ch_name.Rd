@@ -2,16 +2,19 @@
 % Please edit documentation in R/name.R
 \name{ch_name}
 \alias{ch_name}
+\alias{ch_names}
 \title{Create fake person names}
 \usage{
 ch_name()
+
+ch_names(n = 10)
 }
 \description{
 Create fake person names
 }
 \examples{
 ch_name()
-replicate(10, ch_name())
-replicate(500, ch_name())
+ch_names(10)
+ch_names(500)
 }
 

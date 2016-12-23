@@ -11,6 +11,7 @@ charlatan
 \examples{
 ch_name()
 ch_phone_number()
+ch_job()
 }
 \author{
 Scott Chamberlain \email{myrmecocystus@gmail.com}

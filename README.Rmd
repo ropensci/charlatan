@@ -32,7 +32,7 @@ ch_name()
 ```
 
 ```{r}
-replicate(10, ch_name())
+ch_names(10)
 ```
 
 
@@ -43,7 +43,17 @@ ch_phone_number()
 ```
 
 ```{r}
-replicate(10, ch_phone_number())
+ch_phone_numbers(10)
+```
+
+## job
+
+```{r}
+ch_job()
+```
+
+```{r}
+ch_jobs(10)
 ```
 
 

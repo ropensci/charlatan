@@ -9,4 +9,5 @@
 #' @examples
 #' ch_name()
 #' ch_phone_number()
+#' ch_job()
 NULL

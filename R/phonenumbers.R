@@ -30,7 +30,6 @@ phone_number_formats = c(
 #' @keywords internal
 #' @examples \donttest{
 #' z <- PhoneNumberProvider$new()
-#' z$random_format()
 #' z$render()
 #' }
 PhoneNumberProvider <- R6::R6Class(
@@ -39,12 +38,8 @@ PhoneNumberProvider <- R6::R6Class(
   public = list(
     formats = phone_number_formats,
 
-    random_format = function() {
-      sample(self$formats, size = 1)
-    },
-
     render = function() {
-      super$numerify(text = self$random_format())
+      super$numerify(text = super$random_element(self$formats))
     }
   )
 )
