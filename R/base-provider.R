@@ -14,6 +14,10 @@ BaseProvider <- R6::R6Class(
       sample(x, size = 1)
     },
 
+    random_int = function(min=0, max=9999) {
+      floor(runif(1, min, max))
+    },
+
     random_digit = function() {
       sample(0:9, size = 1)
     },

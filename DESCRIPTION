@@ -2,7 +2,7 @@ Package: charlatan
 Type: Package
 Title: Fake Data
 Description: Make fake data.
-Version: 0.0.2.9100
+Version: 0.0.3.9100
 Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"),
     email = "myrmecocystus@gmail.com"))
 License: MIT + file LICENSE
@@ -12,5 +12,6 @@ LazyData: true
 Imports:
     R6 (>= 2.2.0),
     tibble (>= 1.2),
-    whisker
+    whisker,
+    Rmpfr
 RoxygenNote: 5.0.1
