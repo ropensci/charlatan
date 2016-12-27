@@ -193,12 +193,10 @@ ColorProvider <- R6::R6Class(
 
     rgb_color = function() {
       gsub("\\s|\\(|\\)", "", private$rgb_color_list())
-      # return ','.join(map(str, cls.rgb_color_list()))
     },
 
     rgb_css_color = function() {
       sprintf("rgb(%s)", self$rgb_color())
-      # return 'rgb(%s)' % ','.join(map(str, cls.rgb_color_list()))
     }
   ),
 
