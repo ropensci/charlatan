@@ -1,3 +1,7 @@
+# modified from the python library faker:
+# https://github.com/joke2k/faker/blob/master/faker/providers/person/__init__.py
+# https://github.com/joke2k/faker/blob/master/faker/providers/person/en_US/__init__.py
+
 en_formats_female = c(
   '{{first_name_female}} {{last_names}}',
   '{{first_names_female}} {{last_names}}',

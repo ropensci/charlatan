@@ -1,3 +1,6 @@
+# modified from the python library faker:
+# https://github.com/joke2k/faker/blob/master/faker/providers/__init__.py
+
 #' BaseProvider
 #'
 #' @keywords internal

@@ -1,3 +1,7 @@
+# modified from the python library faker:
+# https://github.com/joke2k/faker/blob/master/faker/providers/phone_number/__init__.py
+# https://github.com/joke2k/faker/blob/master/faker/providers/phone_number/en_US/__init__.py
+
 phone_number_formats = c(
   '+##(#)##########',
   '+##(#)##########',

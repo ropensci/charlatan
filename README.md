@@ -5,8 +5,15 @@ charlatan
 
 [![Build Status](https://travis-ci.org/ropenscilabs/charlatan.svg?branch=master)](https://travis-ci.org/ropenscilabs/charlatan)
 
-`charlatan` makes fake data, inspired from Python's [faker](https://github.com/joke2k/faker) 
-and Ruby's [faker](http://faker.rubyforge.org/)
+`charlatan` makes fake data, inspired from and borrowing some code from Python's [faker](https://github.com/joke2k/faker) 
+
+Make fake data for:
+
+* person names
+* jobs
+* phone numbers
+* colors: names, hex, rgb
+* more
 
 ## Installation
 
@@ -26,37 +33,37 @@ library("charlatan")
 ```r
 ch_generate()
 #> # A tibble: 10 × 3
-#>                      name
-#>                     <chr>
-#> 1      Mr. Howell Nicolas
-#> 2  Dr. Debbie Simonis DDS
-#> 3                 Schmidt
-#> 4           Scot Champlin
-#> 5        Shane Rutherford
-#> 6              Toby Jerde
-#> 7           Abel Nikolaus
-#> 8         Laverne Roberts
-#> 9              Maxie Veum
-#> 10          Rutha Bradtke
-#> # ... with 2 more variables: job <chr>, phone_number <chr>
+#>                     name                                           job
+#>                    <chr>                                         <chr>
+#> 1  Dr. Sandy Jaskolski V                        Chief Strategy Officer
+#> 2          Rahn Smith MD                              Engineer, energy
+#> 3           Manuel Mayer Chartered legal executive (England and Wales)
+#> 4       Garold Buckridge                            Professor Emeritus
+#> 5            Lanie Smith                   Engineer, building services
+#> 6                Douglas                                Prison officer
+#> 7             Kandi Ryan                           Engineer, petroleum
+#> 8       Lorenza Hartmann                           Chemist, analytical
+#> 9           Lily Monahan                                  Sports coach
+#> 10           Myrle Ratke                     Higher education lecturer
+#> # ... with 1 more variables: phone_number <chr>
 ```
 
 
 ```r
 ch_generate('job', 'phone_number', n = 30)
 #> # A tibble: 30 × 2
-#>                                     job       phone_number
-#>                                   <chr>              <chr>
-#> 1             Health and safety adviser  586.956.6822x0445
-#> 2                  Engineer, structural 1-792-389-0742x675
-#> 3                   Animal nutritionist     1-072-692-7653
-#> 4             Learning disability nurse     1-654-054-3798
-#> 5                             Architect 502.994.0332x16014
-#> 6                        Teacher, music       920-508-5382
-#> 7            Further education lecturer       056-884-0605
-#> 8  International aid/development worker      (748)408-2853
-#> 9                          Chiropractor   326-286-2644x877
-#> 10                              Midwife       494-586-7223
+#>                               job        phone_number
+#>                             <chr>               <chr>
+#> 1              Professor Emeritus  (580)033-8371x7006
+#> 2               Quantity surveyor  1-761-442-4063x272
+#> 3            Pharmacist, hospital 1-833-355-0570x8697
+#> 4                   Airline pilot        461.606.7965
+#> 5        Environmental consultant    +02(9)4200362185
+#> 6  Commercial art gallery manager  757-029-5496x11263
+#> 7                Insurance broker         03285024221
+#> 8  Chartered certified accountant  475.801.5730x41650
+#> 9  Therapist, speech and language  (613)006-8288x5464
+#> 10       Print production planner        750-282-6785
 #> # ... with 20 more rows
 ```
 
@@ -66,17 +73,17 @@ ch_generate('job', 'phone_number', n = 30)
 
 ```r
 ch_name()
-#> [1] "Mr. Welton Jakubowski MD"
+#> [1] "Koby O'Reilly"
 ```
 
 
 ```r
 ch_names(10)
-#>  [1] "Mrs. Carlota Kuhn MD"  "Felicitas Marvin"     
-#>  [3] "Mr. Mervyn Trantow MD" "Henry Fay"            
-#>  [5] " Towne"                "Mrs. Renae Koch DVM"  
-#>  [7] "Ms. Deidre Hills"      "Mrs. Bena Kuhlman"    
-#>  [9] " Olson"                "Marcell Schuster"
+#>  [1] "Jerod Sauer"             "Christina Schimmel"     
+#>  [3] "Harlow Wyman MD"         "Lillard Blanda"         
+#>  [5] "Nova Witting MD"         "Imanol Goyette"         
+#>  [7] "Brice Bernhard"          "Miles Heaney"           
+#>  [9] "Delvin Tremblay"         "Dr. Darnell Gerhold Sr."
 ```
 
 
@@ -85,16 +92,16 @@ ch_names(10)
 
 ```r
 ch_phone_number()
-#> [1] "675-065-2455x68667"
+#> [1] "296.206.7992x322"
 ```
 
 
 ```r
 ch_phone_numbers(10)
-#>  [1] "+36(7)6861083975"    "(236)196-3941x53668" "(852)472-7134x40299"
-#>  [4] "199.741.1096"        "1-469-367-5227"      "(096)130-7354"      
-#>  [7] "06618040111"         "1-373-502-5060"      "770.420.6110x60783" 
-#> [10] "923-953-3640"
+#>  [1] "(959)263-7896"      "(815)760-2363x732"  "886.007.1677x4021" 
+#>  [4] "297.484.5387x816"   "572.264.6094"       "1-172-371-4737"    
+#>  [7] "(335)903-9469x4173" "321-069-5278x47798" "(611)696-9287"     
+#> [10] "141.880.0744x0163"
 ```
 
 ## job
@@ -102,17 +109,22 @@ ch_phone_numbers(10)
 
 ```r
 ch_job()
-#> [1] "Company secretary"
+#> [1] "Electrical engineer"
 ```
 
 
 ```r
 ch_jobs(10)
-#>  [1] "Recruitment consultant"      "Financial risk analyst"     
-#>  [3] "Multimedia specialist"       "Conservator, museum/gallery"
-#>  [5] "Theatre director"            "Facilities manager"         
-#>  [7] "Water quality scientist"     "Oceanographer"              
-#>  [9] "Health visitor"              "Clinical biochemist"
+#>  [1] "Publishing rights manager"                   
+#>  [2] "Warden/ranger"                               
+#>  [3] "Control and instrumentation engineer"        
+#>  [4] "Lighting technician, broadcasting/film/video"
+#>  [5] "Ophthalmologist"                             
+#>  [6] "Visual merchandiser"                         
+#>  [7] "Pensions consultant"                         
+#>  [8] "Customer service manager"                    
+#>  [9] "Volunteer coordinator"                       
+#> [10] "Accounting technician"
 ```
 
 

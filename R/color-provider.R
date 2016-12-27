@@ -1,3 +1,6 @@
+# modified from the python library faker:
+# https://github.com/joke2k/faker/blob/master/faker/providers/color/__init__.py
+
 all_colors <- c(
   list(AliceBlue = "#F0F8FF"),
   list(AntiqueWhite = "#FAEBD7"),

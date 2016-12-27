@@ -12,8 +12,15 @@ knitr::opts_chunk$set(
 
 [![Build Status](https://travis-ci.org/ropenscilabs/charlatan.svg?branch=master)](https://travis-ci.org/ropenscilabs/charlatan)
 
-`charlatan` makes fake data, inspired from Python's [faker](https://github.com/joke2k/faker) 
-and Ruby's [faker](http://faker.rubyforge.org/)
+`charlatan` makes fake data, inspired from and borrowing some code from Python's [faker](https://github.com/joke2k/faker) 
+
+Make fake data for:
+
+* person names
+* jobs
+* phone numbers
+* colors: names, hex, rgb
+* more
 
 ## Installation
 

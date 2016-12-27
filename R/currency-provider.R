@@ -1,3 +1,6 @@
+# modified from the python library faker:
+# https://github.com/joke2k/faker/blob/master/faker/providers/currency/__init__.py
+
 currency_formats <- c(
   "AED",
   "AFN",
