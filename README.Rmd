@@ -25,6 +25,17 @@ devtools::install_github("ropenscilabs/charlatan")
 library("charlatan")
 ```
 
+## generate a dataset
+
+```{r}
+ch_generate()
+```
+
+```{r}
+ch_generate('job', 'phone_number', n = 30)
+```
+
+
 ## person name
 
 ```{r}
