@@ -3,42 +3,24 @@
 \name{ch_color}
 \alias{ch_color}
 \alias{ch_color_name}
-\alias{ch_color_names}
 \alias{ch_hex_color}
-\alias{ch_hex_colors}
 \alias{ch_rgb_color}
-\alias{ch_rgb_colors}
 \alias{ch_rgb_css_color}
-\alias{ch_rgb_css_colors}
 \alias{ch_safe_color_name}
-\alias{ch_safe_color_names}
 \alias{ch_safe_hex_color}
-\alias{ch_safe_hex_colors}
 \title{Create fake colors}
 \usage{
-ch_color_name()
+ch_color_name(n = 1)
 
-ch_color_names(n = 10)
+ch_safe_color_name(n = 1)
 
-ch_safe_color_name(n = 10)
+ch_hex_color(n = 1)
 
-ch_safe_color_names(n = 10)
+ch_safe_hex_color(n = 1)
 
-ch_hex_color(n = 10)
+ch_rgb_color(n = 1)
 
-ch_hex_colors(n = 10)
-
-ch_safe_hex_color(n = 10)
-
-ch_safe_hex_colors(n = 10)
-
-ch_rgb_color(n = 10)
-
-ch_rgb_colors(n = 10)
-
-ch_rgb_css_color(n = 10)
-
-ch_rgb_css_colors(n = 10)
+ch_rgb_css_color(n = 1)
 }
 \arguments{
 \item{n}{(integer) number of things to get, 1 to inifinity}
@@ -48,22 +30,22 @@ Create fake colors
 }
 \examples{
 ch_color_name()
-ch_color_names(10)
-ch_color_names(500)
+ch_color_name(10)
+ch_color_name(500)
 
 ch_safe_color_name()
-ch_safe_color_names(10)
+ch_safe_color_name(10)
 
 ch_hex_color()
-ch_hex_colors(10)
+ch_hex_color(10)
 
 ch_safe_hex_color()
-ch_safe_hex_colors(10)
+ch_safe_hex_color(10)
 
 ch_rgb_color()
-ch_rgb_colors(10)
+ch_rgb_color(10)
 
 ch_rgb_css_color()
-ch_rgb_css_colors(10)
+ch_rgb_css_color(10)
 }
 

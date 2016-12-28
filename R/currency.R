@@ -4,15 +4,14 @@
 #' @template params
 #' @examples
 #' ch_currency()
-#' ch_currencies(10)
-#' ch_currencies(500)
-ch_currency <- function() {
-  CurrencyProvider$new()$render()
-}
-
-#' @export
-#' @rdname ch_currency
-ch_currencies <- function(n = 10) {
-  x <- CurrencyProvider$new()
-  replicate(n, x$render())
+#' ch_currency(10)
+#' ch_currency(500)
+ch_currency <- function(n = 1) {
+  assert(n, c('integer', 'numeric'))
+  if (n == 1) {
+    CurrencyProvider$new()$render()
+  } else {
+    x <- CurrencyProvider$new()
+    replicate(n, x$render())
+  }
 }

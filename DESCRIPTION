@@ -2,7 +2,7 @@ Package: charlatan
 Type: Package
 Title: Fake Data
 Description: Make fake data.
-Version: 0.0.3.9911
+Version: 0.0.4.9100
 Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"),
     email = "myrmecocystus@gmail.com"))
 License: MIT + file LICENSE

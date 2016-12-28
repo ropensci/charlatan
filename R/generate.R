@@ -33,17 +33,11 @@ ch_generate <- function(..., n = 10) {
   }
   cols <- stats::setNames(
     lapply(choices, function(z) {
-      eval(parse(text = paste0("ch_", z, "s")))(n)
+      eval(parse(text = paste0("ch_", z)))(n)
     }),
     choices
   )
   tibble::as_data_frame(cols)
-
-  # tibble::data_frame(
-  #   name = ch_names(n),
-  #   job = ch_jobs(n),
-  #   phone = ch_phone_numbers(n)
-  # )
 }
 
 all_choices <- c("name", "job", "phone_number", "currency",

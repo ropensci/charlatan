@@ -13,7 +13,8 @@ Make fake data for:
 * jobs
 * phone numbers
 * colors: names, hex, rgb
-* more
+* credit cards
+* more coming ...
 
 ## Installation
 
@@ -33,18 +34,18 @@ library("charlatan")
 ```r
 ch_generate()
 #> # A tibble: 10 × 3
-#>                     name                                           job
-#>                    <chr>                                         <chr>
-#> 1  Dr. Sandy Jaskolski V                        Chief Strategy Officer
-#> 2          Rahn Smith MD                              Engineer, energy
-#> 3           Manuel Mayer Chartered legal executive (England and Wales)
-#> 4       Garold Buckridge                            Professor Emeritus
-#> 5            Lanie Smith                   Engineer, building services
-#> 6                Douglas                                Prison officer
-#> 7             Kandi Ryan                           Engineer, petroleum
-#> 8       Lorenza Hartmann                           Chemist, analytical
-#> 9           Lily Monahan                                  Sports coach
-#> 10           Myrle Ratke                     Higher education lecturer
+#>                        name                                           job
+#>                       <chr>                                         <chr>
+#> 1           Zachary Stracke                                    Cabin crew
+#> 2             Von Stokes IV                           Early years teacher
+#> 3             Rodrick Swift Chartered legal executive (England and Wales)
+#> 4  Mr. Markus Langworth DVM                          Financial controller
+#> 5                     Crona                                    Air broker
+#> 6            Mathews Willms                         Community arts worker
+#> 7             Astrid Torphy                             Freight forwarder
+#> 8            Dr. Ansel Lang                        Psychologist, clinical
+#> 9        Ms. Quiana DuBuque                       Rural practice surveyor
+#> 10         Miss Lila Harvey                Chartered certified accountant
 #> # ... with 1 more variables: phone_number <chr>
 ```
 
@@ -52,18 +53,18 @@ ch_generate()
 ```r
 ch_generate('job', 'phone_number', n = 30)
 #> # A tibble: 30 × 2
-#>                               job        phone_number
-#>                             <chr>               <chr>
-#> 1              Professor Emeritus  (580)033-8371x7006
-#> 2               Quantity surveyor  1-761-442-4063x272
-#> 3            Pharmacist, hospital 1-833-355-0570x8697
-#> 4                   Airline pilot        461.606.7965
-#> 5        Environmental consultant    +02(9)4200362185
-#> 6  Commercial art gallery manager  757-029-5496x11263
-#> 7                Insurance broker         03285024221
-#> 8  Chartered certified accountant  475.801.5730x41650
-#> 9  Therapist, speech and language  (613)006-8288x5464
-#> 10       Print production planner        750-282-6785
+#>                                      job       phone_number
+#>                                    <chr>              <chr>
+#> 1                  Glass blower/designer       006.877.6386
+#> 2               Programmer, applications      (334)256-7377
+#> 3             Civil engineer, consulting   037.515.6553x578
+#> 4  Emergency planning/management officer   +50(7)5771277907
+#> 5    Social research officer, government   +89(2)3693586579
+#> 6                        Ophthalmologist  026.887.4309x9843
+#> 7            Advertising account planner       671-394-4393
+#> 8                          Meteorologist     1-616-232-3617
+#> 9        Administrator, local government 1-422-940-6388x510
+#> 10               Physiological scientist       178.195.0919
 #> # ... with 20 more rows
 ```
 
@@ -73,17 +74,16 @@ ch_generate('job', 'phone_number', n = 30)
 
 ```r
 ch_name()
-#> [1] "Koby O'Reilly"
+#> [1] "Dr. Fernand Goyette III"
 ```
 
 
 ```r
-ch_names(10)
-#>  [1] "Jerod Sauer"             "Christina Schimmel"     
-#>  [3] "Harlow Wyman MD"         "Lillard Blanda"         
-#>  [5] "Nova Witting MD"         "Imanol Goyette"         
-#>  [7] "Brice Bernhard"          "Miles Heaney"           
-#>  [9] "Delvin Tremblay"         "Dr. Darnell Gerhold Sr."
+ch_name(10)
+#>  [1] "Dr. Jaron Emard DVM" "Morris Hand"         "Perla Lang"         
+#>  [4] "Luda Hamill"         "Felecia Block DVM"   "Dr. Carmen Becker"  
+#>  [7] "Verlin Howell"       "Izayah Kling PhD"    "Saul Metz Jr."      
+#> [10] "Haven Hintz"
 ```
 
 
@@ -92,16 +92,16 @@ ch_names(10)
 
 ```r
 ch_phone_number()
-#> [1] "296.206.7992x322"
+#> [1] "08471836216"
 ```
 
 
 ```r
-ch_phone_numbers(10)
-#>  [1] "(959)263-7896"      "(815)760-2363x732"  "886.007.1677x4021" 
-#>  [4] "297.484.5387x816"   "572.264.6094"       "1-172-371-4737"    
-#>  [7] "(335)903-9469x4173" "321-069-5278x47798" "(611)696-9287"     
-#> [10] "141.880.0744x0163"
+ch_phone_number(10)
+#>  [1] "382.530.6161x92940" "805-568-4867"       "07293985430"       
+#>  [4] "+64(8)7217869990"   "726-954-8800x62749" "391-108-0820x02424"
+#>  [7] "1-180-047-7925"     "08080839373"        "+55(2)3999892314"  
+#> [10] "425.089.2261x414"
 ```
 
 ## job
@@ -109,23 +109,53 @@ ch_phone_numbers(10)
 
 ```r
 ch_job()
-#> [1] "Electrical engineer"
+#> [1] "Automotive engineer"
 ```
 
 
 ```r
-ch_jobs(10)
-#>  [1] "Publishing rights manager"                   
-#>  [2] "Warden/ranger"                               
-#>  [3] "Control and instrumentation engineer"        
-#>  [4] "Lighting technician, broadcasting/film/video"
-#>  [5] "Ophthalmologist"                             
-#>  [6] "Visual merchandiser"                         
-#>  [7] "Pensions consultant"                         
-#>  [8] "Customer service manager"                    
-#>  [9] "Volunteer coordinator"                       
-#> [10] "Accounting technician"
+ch_job(10)
+#>  [1] "Government social research officer"           
+#>  [2] "Programme researcher, broadcasting/film/video"
+#>  [3] "Education administrator"                      
+#>  [4] "Engineer, broadcasting (operations)"          
+#>  [5] "Electrical engineer"                          
+#>  [6] "Technical sales engineer"                     
+#>  [7] "Dentist"                                      
+#>  [8] "Public librarian"                             
+#>  [9] "Herpetologist"                                
+#> [10] "Administrator, Civil Service"
 ```
+
+## credit cards
+
+
+```r
+ch_credit_card_provider()
+#> [1] "Mastercard"
+ch_credit_card_provider(n = 4)
+#> [1] "Mastercard"   "JCB 16 digit" "Voyager"      "Discover"
+```
+
+
+```r
+ch_credit_card_number()
+#> [1] "4491797858096966"
+ch_credit_card_number(n = 10)
+#>  [1] "180076435321982446"  "3112727091460582514" "4901069377820456"   
+#>  [4] "3158115280428048490" "3711247221443603"    "869969368592822166" 
+#>  [7] "180007587073966813"  "51517302384177057"   "3158382384092386354"
+#> [10] "501873527310418"
+```
+
+
+```r
+ch_credit_card_security_code()
+#> [1] "2259"
+ch_credit_card_security_code(10)
+#>  [1] "958" "967" "758" "412" "080" "277" "855" "619" "929" "667"
+```
+
 
 
 ## Meta

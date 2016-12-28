@@ -20,7 +20,8 @@ Make fake data for:
 * jobs
 * phone numbers
 * colors: names, hex, rgb
-* more
+* credit cards
+* more coming ...
 
 ## Installation
 
@@ -50,7 +51,7 @@ ch_name()
 ```
 
 ```{r}
-ch_names(10)
+ch_name(10)
 ```
 
 
@@ -61,7 +62,7 @@ ch_phone_number()
 ```
 
 ```{r}
-ch_phone_numbers(10)
+ch_phone_number(10)
 ```
 
 ## job
@@ -71,8 +72,26 @@ ch_job()
 ```
 
 ```{r}
-ch_jobs(10)
+ch_job(10)
 ```
+
+## credit cards
+
+```{r}
+ch_credit_card_provider()
+ch_credit_card_provider(n = 4)
+```
+
+```{r}
+ch_credit_card_number()
+ch_credit_card_number(n = 10)
+```
+
+```{r}
+ch_credit_card_security_code()
+ch_credit_card_security_code(10)
+```
+
 
 
 ## Meta

@@ -4,15 +4,14 @@
 #' @template params
 #' @examples
 #' ch_job()
-#' ch_jobs(10)
-#' ch_jobs(500)
-ch_job <- function() {
-  JobProvider$new()$render()
-}
-
-#' @export
-#' @rdname ch_job
-ch_jobs <- function(n = 10) {
-  x <- JobProvider$new()
-  replicate(n, x$render())
+#' ch_job(10)
+#' ch_job(500)
+ch_job <- function(n = 1) {
+  assert(n, c('integer', 'numeric'))
+  if (n == 1) {
+    JobProvider$new()$render()
+  } else {
+    x <- JobProvider$new()
+    replicate(n, x$render())
+  }
 }

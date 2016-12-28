@@ -2,12 +2,9 @@
 % Please edit documentation in R/job.R
 \name{ch_job}
 \alias{ch_job}
-\alias{ch_jobs}
 \title{Create fake jobs}
 \usage{
-ch_job()
-
-ch_jobs(n = 10)
+ch_job(n = 1)
 }
 \arguments{
 \item{n}{(integer) number of things to get, 1 to inifinity}
@@ -17,7 +14,7 @@ Create fake jobs
 }
 \examples{
 ch_job()
-ch_jobs(10)
-ch_jobs(500)
+ch_job(10)
+ch_job(500)
 }
 

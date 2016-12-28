@@ -2,12 +2,9 @@
 % Please edit documentation in R/name.R
 \name{ch_name}
 \alias{ch_name}
-\alias{ch_names}
 \title{Create fake person names}
 \usage{
-ch_name()
-
-ch_names(n = 10)
+ch_name(n = 1)
 }
 \arguments{
 \item{n}{(integer) number of things to get, 1 to inifinity}
@@ -17,7 +14,7 @@ Create fake person names
 }
 \examples{
 ch_name()
-ch_names(10)
-ch_names(500)
+ch_name(10)
+ch_name(500)
 }
 
