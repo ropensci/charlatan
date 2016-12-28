@@ -2,6 +2,9 @@
 
 export(ch_color_name)
 export(ch_color_names)
+export(ch_credit_card_number)
+export(ch_credit_card_provider)
+export(ch_credit_card_security_code)
 export(ch_currencies)
 export(ch_currency)
 export(ch_generate)
