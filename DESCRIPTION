@@ -2,7 +2,7 @@ Package: charlatan
 Type: Package
 Title: Fake Data
 Description: Make fake data.
-Version: 0.0.4.9191
+Version: 0.0.4.9391
 Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"),
     email = "myrmecocystus@gmail.com"))
 License: MIT + file LICENSE
@@ -15,3 +15,24 @@ Imports:
     whisker,
     Rmpfr
 RoxygenNote: 5.0.1
+Collate:
+    'base-provider.R'
+    'datetime-provider.R'
+    'address-provider.R'
+    'charlatan-package.R'
+    'color-provider.R'
+    'color.R'
+    'credit_card-provider.R'
+    'credit_card.R'
+    'currency-provider.R'
+    'currency.R'
+    'date_time.R'
+    'generate.R'
+    'job.R'
+    'jobs-provider.R'
+    'missing-data-provider.R'
+    'name.R'
+    'person-provider.R'
+    'phone_number.R'
+    'phonenumbers-provider.R'
+    'zzz.R'

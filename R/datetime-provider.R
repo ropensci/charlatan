@@ -486,6 +486,7 @@ dt_countries <- list(
 
 #' DateTimeProvider
 #'
+#' @include base-provider.R
 #' @keywords internal
 #' @examples \donttest{
 #' z <- DateTimeProvider$new()

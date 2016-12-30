@@ -7,8 +7,14 @@
 #' @examples \donttest{
 #' (x <- BaseProvider$new())
 #'
+#' x$numerify("#%%asdf221?")
+#' x$lexify("#%%asdf221?")
+#' x$bothify("#%%asdf221?")
+#'
 #' z <- PhoneNumberProvider$new()
 #' x$numerify(z$random_format())
+#'
+#' x$random_letter()
 #' }
 BaseProvider <- R6::R6Class(
   'BaseProvider',
@@ -45,18 +51,33 @@ BaseProvider <- R6::R6Class(
       }
     },
 
+    random_letter = function() {
+      # Returns a random letter (between a-z and A-Z)
+      self$random_element(c(letters, LETTERS))
+    },
+
     numerify = function(text = '###') {
       text <- do_match(text, "#", self$random_digit)
-      text <- do_match(text, "%", self$random_digit_not_null())
-      text <- do_match(text, "!", self$random_digit_or_empty())
-      text <- do_match(text, "@", self$random_digit_not_null_or_empty())
+      text <- do_match(text, "%", self$random_digit_not_null)
+      text <- do_match(text, "!", self$random_digit_or_empty)
+      text <- do_match(text, "@", self$random_digit_not_null_or_empty)
       return(text)
+    },
+
+    lexify = function(text = '????') {
+      # Replaces all question mark ('?') occurrences with a random letter
+      do_match(text, "?", self$random_letter)
+    },
+
+    bothify = function(text = '## ??') {
+      # Replaces all placeholders with random numbers and letters.
+      self$lexify(self$numerify(text))
     }
   )
 )
 
 n_matches <- function(text, pattern) {
-  tmp <- gregexpr(pattern, text)[[1]]
+  tmp <- gregexpr(paste0("\\", pattern), text)[[1]]
   if (length(tmp) == 1) {
     if (tmp == -1) 0 else tmp
   } else {
@@ -66,7 +87,7 @@ n_matches <- function(text, pattern) {
 
 replace_loop <- function(x, pattern, repl) {
   for (i in seq_along(repl)) {
-    x <- sub(pattern, repl[i], x)
+    x <- sub(paste0("\\", pattern), repl[i], x)
   }
   return(x)
 }

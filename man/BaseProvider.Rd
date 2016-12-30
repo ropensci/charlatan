@@ -15,8 +15,14 @@ BaseProvider
 \donttest{
 (x <- BaseProvider$new())
 
+x$numerify("#\%\%asdf221?")
+x$lexify("#\%\%asdf221?")
+x$bothify("#\%\%asdf221?")
+
 z <- PhoneNumberProvider$new()
 x$numerify(z$random_format())
+
+x$random_letter()
 }
 }
 \keyword{internal}
