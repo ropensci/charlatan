@@ -1,3 +1,6 @@
+# modified from the python library faker:
+# https://github.com/joke2k/faker/blob/master/faker/providers/credit_card/__init__.py
+
 CreditCard <- R6::R6Class(
   'CreditCard',
   public = list(
