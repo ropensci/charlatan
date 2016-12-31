@@ -495,6 +495,7 @@ dt_countries <- list(
 #' z$timezone()
 #' z$unix_time()
 #' z$date_time()
+#' z$year()
 #' }
 DateTimeProvider <- R6::R6Class(
   inherit = BaseProvider,
@@ -508,7 +509,7 @@ DateTimeProvider <- R6::R6Class(
     },
 
     date = function(pattern) {
-      self$date_time()$strftime(pattern)
+      strftime(self$date_time(), pattern)
     },
 
     date_time = function(tzinfo = NULL) {
