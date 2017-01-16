@@ -23,6 +23,10 @@ z$render()
 z <- JobProvider$new(locale = "hr_HR")
 z$locale
 z$render()
+
+z <- JobProvider$new(locale = "fa_IR")
+z$locale
+z$render()
 }
 }
 \keyword{internal}
