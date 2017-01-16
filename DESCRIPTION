@@ -2,7 +2,7 @@ Package: charlatan
 Type: Package
 Title: Fake Data
 Description: Make fake data.
-Version: 0.0.5.9310
+Version: 0.0.5.9820
 Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"),
     email = "myrmecocystus@gmail.com"))
 License: MIT + file LICENSE
@@ -22,6 +22,8 @@ Collate:
     'address-provider.R'
     'available_locales.R'
     'charlatan-package.R'
+    'color-provider-en_US.R'
+    'color-provider-uk_UA.R'
     'color-provider.R'
     'color.R'
     'credit_card-provider.R'
@@ -29,6 +31,7 @@ Collate:
     'currency-provider.R'
     'currency.R'
     'date_time.R'
+    'fraudster.R'
     'generate.R'
     'job.R'
     'jobs-provider-en_US.R'

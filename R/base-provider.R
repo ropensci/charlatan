@@ -74,13 +74,15 @@ BaseProvider <- R6::R6Class(
       self$lexify(self$numerify(text))
     },
 
-    check_locale = function(x) {
-      if (!x %in% available_locales) {
-        stop(x, ' not in set of avaiable locales', call. = FALSE)
-      }
-    }
+    check_locale = function(x) check_locale_(x)
   )
 )
+
+check_locale_ <- function(x) {
+  if (!x %in% available_locales) {
+    stop(x, ' not in set of avaiable locales', call. = FALSE)
+  }
+}
 
 n_matches <- function(text, pattern) {
   tmp <- gregexpr(paste0("\\", pattern), text)[[1]]

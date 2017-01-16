@@ -3,6 +3,8 @@
 #' @export
 #' @name ch_color
 #' @template params
+#' @param locale (character) the locale to use. options: en_US (default),
+#' or uk_UA. Only affects \code{ch_color_name} function
 #' @examples
 #' ch_color_name()
 #' ch_color_name(10)
@@ -22,12 +24,14 @@
 #'
 #' ch_rgb_css_color()
 #' ch_rgb_css_color(10)
-ch_color_name <- function(n = 1) {
+#'
+#' ch_color_name(locale = "uk_UA")
+#' ch_color_name(n = 10, locale = "uk_UA")
+ch_color_name <- function(n = 1, locale = NULL) {
   assert(n, c('integer', 'numeric'))
   if (n == 1) {
-    ColorProvider$new()$color_name()
+    ColorProvider$new(locale = locale)$color_name()
   } else {
-    x <- ColorProvider$new()
     replicate(n, x$color_name())
   }
 }
