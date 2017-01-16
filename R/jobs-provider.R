@@ -1,7 +1,7 @@
 # modified from the python library faker:
 # https://github.com/joke2k/faker/blob/master/faker/providers/job/__init__.py
 
-job_formats = c(
+job_formats_en_us = c(
   "Academic librarian",
   "Accommodation manager",
   "Accountant, chartered",
@@ -649,15 +649,38 @@ job_formats = c(
 #' @examples \donttest{
 #' z <- JobProvider$new()
 #' z$render()
+#'
+#' z <- JobProvider$new(locale = "fr_FR")
+#' z$locale
+#' z$render()
+#'
+#' z <- JobProvider$new(locale = "hr_HR")
+#' z$locale
+#' z$render()
 #' }
 JobProvider <- R6::R6Class(
   inherit = BaseProvider,
   'JobProvider',
   public = list(
-    formats = job_formats,
+    locale = NULL,
+    formats = NULL,
+
+    initialize = function(locale = NULL) {
+      if (!is.null(locale)) {
+        super$check_locale(locale)
+        self$locale <- locale
+      } else {
+        self$locale <- 'en_US'
+      }
+      self$formats <- parse_eval("job_formats_", self$locale)
+    },
 
     render = function() {
       super$random_element(self$formats)
     }
   )
 )
+
+parse_eval <- function(x, y) {
+  eval(parse(text = paste0(x, tolower(y))))
+}

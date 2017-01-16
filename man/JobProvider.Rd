@@ -15,6 +15,14 @@ JobProvider
 \donttest{
 z <- JobProvider$new()
 z$render()
+
+z <- JobProvider$new(locale = "fr_FR")
+z$locale
+z$render()
+
+z <- JobProvider$new(locale = "hr_HR")
+z$locale
+z$render()
 }
 }
 \keyword{internal}

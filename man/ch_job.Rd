@@ -4,10 +4,13 @@
 \alias{ch_job}
 \title{Create fake jobs}
 \usage{
-ch_job(n = 1)
+ch_job(n = 1, locale = NULL)
 }
 \arguments{
 \item{n}{(integer) number of things to get, 1 to inifinity}
+
+\item{locale}{(character) the locale to use. only options right now are
+en_US, fr_FR, hr_FR, more coming. default: en_US}
 }
 \description{
 Create fake jobs
@@ -16,5 +19,8 @@ Create fake jobs
 ch_job()
 ch_job(10)
 ch_job(500)
+
+ch_job(locale = "fr_FR", n = 10)
+ch_job(locale = "hr_HR", n = 10)
 }
 

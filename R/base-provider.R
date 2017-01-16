@@ -72,6 +72,12 @@ BaseProvider <- R6::R6Class(
     bothify = function(text = '## ??') {
       # Replaces all placeholders with random numbers and letters.
       self$lexify(self$numerify(text))
+    },
+
+    check_locale = function(x) {
+      if (!x %in% available_locales) {
+        stop(x, ' not in set of avaiable locales', call. = FALSE)
+      }
     }
   )
 )
