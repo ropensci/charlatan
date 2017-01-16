@@ -7,6 +7,7 @@
 #' # English - the default locale
 #' (x <- fraudster())
 #' x$job()
+#' x$name()
 #' x$color_name()
 #' x$safe_color_name()
 #' x$hex_color()
@@ -51,10 +52,17 @@ FraudsterClient <- R6::R6Class(
       cat(paste0("  locale: ", self$locale))
     },
 
+    # jobs
     job = function(n = 1) {
       ch_job(n = n, locale = self$locale)
     },
 
+    # names
+    name = function(n = 1) {
+      ch_name(n = n)
+    },
+
+    # colors
     color_name = function(n = 1) {
       ch_color_name(n = n, locale = self$locale)
     },

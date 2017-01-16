@@ -17,6 +17,7 @@ Fraudster - catch all client to make all types of fake data
 # English - the default locale
 (x <- fraudster())
 x$job()
+x$name()
 x$color_name()
 x$safe_color_name()
 x$hex_color()

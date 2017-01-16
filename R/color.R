@@ -32,6 +32,7 @@ ch_color_name <- function(n = 1, locale = NULL) {
   if (n == 1) {
     ColorProvider$new(locale = locale)$color_name()
   } else {
+    x <- ColorProvider$new(locale = locale)
     replicate(n, x$color_name())
   }
 }

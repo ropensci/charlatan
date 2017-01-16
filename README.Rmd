@@ -33,6 +33,41 @@ devtools::install_github("ropenscilabs/charlatan")
 library("charlatan")
 ```
 
+## high level function 
+
+... for all fake data operations
+
+```{r}
+x <- fraudster()
+x$job()
+x$name()
+x$job()
+x$color_name()
+```
+
+## locale support
+
+Adding more locales through time, e.g., 
+
+Locale support for job data
+
+```{r}
+ch_job(locale = "en_US", n = 3)
+ch_job(locale = "fr_FR", n = 3)
+ch_job(locale = "hr_HR", n = 3)
+ch_job(locale = "uk_UA", n = 3)
+ch_job(locale = "zh_TW", n = 3)
+```
+
+For colors:
+
+```{r}
+ch_color_name(locale = "en_US", n = 3)
+ch_color_name(locale = "uk_UA", n = 3)
+```
+
+More coming soon ...
+
 ## generate a dataset
 
 ```{r}
