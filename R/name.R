@@ -2,6 +2,8 @@
 #'
 #' @export
 #' @template params
+#' @param locale (character) the locale to use. options: en_US (default),
+#' fr_FR, fr_CH, hr_FR, fa_IR, pl_PL, ru_RU, uk_UA, zh_TW.
 #' @examples
 #' ch_name()
 #' ch_name(10)
