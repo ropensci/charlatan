@@ -1,7 +1,7 @@
 # modified from the python library faker:
 # https://github.com/joke2k/faker/blob/master/faker/providers/person/es_ES/__init__.py
 
-es_es_formats_male = c(
+person_formats_male_es_es = c(
   '{{first_name_male}} {{last_name}} {{last_name}}',
   '{{first_name_male}} {{last_name}} {{last_name}}',
   '{{first_name_male}} {{last_name}} {{last_name}}',
@@ -14,7 +14,7 @@ es_es_formats_male = c(
   '{{first_name_male}} {{first_name_male}} {{last_name}} {{last_name}}'
 )
 
-es_es_formats_female = c(
+person_formats_female_es_es = c(
   '{{first_name_female}} {{last_name}} {{last_name}}',
   '{{first_name_female}} {{last_name}} {{last_name}}',
   '{{first_name_female}} {{last_name}} {{last_name}}',
@@ -27,9 +27,9 @@ es_es_formats_female = c(
   '{{first_name_female}} {{first_name_female}} {{last_name}} {{last_name}}'
 )
 
-es_es_formats = c(es_es_formats_male, es_es_formats_female)
+person_formats_es_es = c(person_formats_male_es_es, person_formats_female_es_es)
 
-es_es_first_names_male = c(
+person_first_names_male_es_es = c(
   "Antonio",
   "Jose",
   "Manuel",
@@ -132,7 +132,7 @@ es_es_first_names_male = c(
   "Rodrigo"
 )
 
-es_es_first_names_female = c(
+person_first_names_female_es_es = c(
   "Mar\u00eda",
   "Carmen",
   "Ana",
@@ -234,9 +234,9 @@ es_es_first_names_female = c(
   "Bego\u00f1a"
 )
 
-es_es_first_names = c(es_es_first_names_male, es_es_first_names_female)
+person_first_names_es_es = c(person_first_names_male_es_es, person_first_names_female_es_es)
 
-es_es_last_names = c(
+person_last_names_es_es = c(
   "Abad",
   "Abascal",
   "Abella",
@@ -1324,4 +1324,12 @@ es_es_last_names = c(
   "\u00c1vila"
 )
 
-es_es_prefixes = c('de', 'del')
+person_prefixes_es_es = c('de', 'del')
+
+person_es_es <- list(
+  first_names = person_first_names_es_es,
+  first_name_male = person_first_names_male_es_es,
+  first_name_female = person_first_names_female_es_es,
+  last_name = person_last_names_es_es,
+  prefix = person_prefixes_es_es
+)

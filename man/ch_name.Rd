@@ -4,7 +4,7 @@
 \alias{ch_name}
 \title{Create fake person names}
 \usage{
-ch_name(n = 1)
+ch_name(n = 1, locale = NULL)
 }
 \arguments{
 \item{n}{(integer) number of things to get, 1 to inifinity}
@@ -16,5 +16,10 @@ Create fake person names
 ch_name()
 ch_name(10)
 ch_name(500)
+
+ch_name(locale = "fr_FR", n = 10)
+ch_name(locale = "fr_CH", n = 10)
+ch_name(locale = "fa_IR", n = 10)
+ch_name(locale = "fi_FI", n = 10)
 }
 

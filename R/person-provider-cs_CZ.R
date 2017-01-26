@@ -1,26 +1,26 @@
 # modified from the python library faker:
-# https://github.com/joke2k/faker/blob/master/faker/providers/person/cs_CZ/__init__.py
+# https://github.com/joke2k/faker/blob/master/faker/providers/person/person/__init___cs_cz.py
 
-cs_cz_formats = c(
-    '{{first_name_male}} {{last_name_male}}',
-    '{{first_name_male}} {{last_name_male}}',
-    '{{first_name_male}} {{last_name_male}}',
-    '{{first_name_male}} {{last_name_male}}',
-    '{{first_name_male}} {{last_name_male}}',
-    '{{first_name_female}} {{last_name_female}}',
-    '{{first_name_female}} {{last_name_female}}',
-    '{{first_name_female}} {{last_name_female}}',
-    '{{first_name_female}} {{last_name_female}}',
-    '{{first_name_female}} {{last_name_female}}',
-    '{{prefix_male}} {{first_name_male}} {{last_name_male}}',
-    '{{prefix_female}} {{first_name_female}} {{last_name_female}}',
-    '{{first_name_male}} {{last_name_male}} {{suffix}}',
-    '{{first_name_female}} {{last_name_female}} {{suffix}}',
-    '{{prefix_male}} {{first_name_male}} {{last_name_male}} {{suffix}}',
-    '{{prefix_female}} {{first_name_female}} {{last_name_female}} {{suffix}}'
+person_formats_cs_cz = c(
+  '{{first_name_male}} {{last_name_male}}',
+  '{{first_name_male}} {{last_name_male}}',
+  '{{first_name_male}} {{last_name_male}}',
+  '{{first_name_male}} {{last_name_male}}',
+  '{{first_name_male}} {{last_name_male}}',
+  '{{first_name_female}} {{last_name_female}}',
+  '{{first_name_female}} {{last_name_female}}',
+  '{{first_name_female}} {{last_name_female}}',
+  '{{first_name_female}} {{last_name_female}}',
+  '{{first_name_female}} {{last_name_female}}',
+  '{{prefix_male}} {{first_name_male}} {{last_name_male}}',
+  '{{prefix_female}} {{first_name_female}} {{last_name_female}}',
+  '{{first_name_male}} {{last_name_male}} {{suffix}}',
+  '{{first_name_female}} {{last_name_female}} {{suffix}}',
+  '{{prefix_male}} {{first_name_male}} {{last_name_male}} {{suffix}}',
+  '{{prefix_female}} {{first_name_female}} {{last_name_female}} {{suffix}}'
 )
 
-cs_cz_first_names_male = c(
+person_first_names_male_cs_cz = c(
   "Adam",
   "Alexander",
   "Alexandr",
@@ -121,7 +121,7 @@ cs_cz_first_names_male = c(
   "\u0160t\u011bp\u00e1n"
 )
 
-cs_cz_first_names_female = c(
+person_first_names_female_cs_cz = c(
   "Ad\u00e9la",
   "Alena",
   "Alexandra",
@@ -224,9 +224,9 @@ cs_cz_first_names_female = c(
   "\u017daneta"
 )
 
-cs_cz_first_names = c(cs_cz_first_names_male, cs_cz_first_names_female)
+person_first_names_cs_cz = c(person_first_names_male_cs_cz, person_first_names_female_cs_cz)
 
-cs_cz_last_names_male = c(
+person_last_names_male_cs_cz = c(
   "Barto\u0161",
   "Bene\u0161",
   "Bla\u017eek",
@@ -276,7 +276,7 @@ cs_cz_last_names_male = c(
   "\u0160\u0165astn\u00fd"
 )
 
-cs_cz_last_names_female = c(
+person_last_names_female_cs_cz = c(
   "Barto\u0161ov\u00e1",
   "Bene\u0161ov\u00e1",
   "Beranov\u00e1",
@@ -332,12 +332,23 @@ cs_cz_last_names_female = c(
   "\u0160\u0165astn\u00e1"
 )
 
-cs_cz_last_names = c(cs_cz_last_names_male, cs_cz_last_names_female)
+person_last_names_cs_cz = c(person_last_names_male_cs_cz, person_last_names_female_cs_cz)
 
-cs_cz_degrees = c('JUDr.', 'Ing.', 'Bc.', 'Mgr.', 'MUDr.', 'RNDr.')
+person_degrees_cs_cz = c('JUDr.', 'Ing.', 'Bc.', 'Mgr.', 'MUDr.', 'RNDr.')
 
-cs_cz_prefixes_male = c('pan', cs_cz_degrees)
+person_prefixes_male_cs_cz = c('pan', person_degrees_cs_cz)
 
-cs_cz_prefixes_female = c("pan\u00ed", "sle\u010dna", cs_cz_degrees)
+person_prefixes_female_cs_cz = c("pan\u00ed", "sle\u010dna", person_degrees_cs_cz)
 
-cs_cz_suffixes = c('CSc.', 'DiS.', 'Ph.D.', 'Th.D.')
+person_suffixes_cs_cz = c('CSc.', 'DiS.', 'Ph.D.', 'Th.D.')
+
+person_cs_cz <- list(
+  first_names = person_first_names_cs_cz,
+  first_name_male = person_first_names_male_cs_cz,
+  first_name_female = person_first_names_female_cs_cz,
+  last_name_male = person_last_names_male_cs_cz,
+  last_name_female = person_last_names_female_cs_cz,
+  prefix_female = person_prefixes_female_cs_cz,
+  prefix_male = person_prefixes_male_cs_cz,
+  suffix = person_suffixes_cs_cz
+)

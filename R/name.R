@@ -6,12 +6,17 @@
 #' ch_name()
 #' ch_name(10)
 #' ch_name(500)
-ch_name <- function(n = 1) {
+#'
+#' ch_name(locale = "fr_FR", n = 10)
+#' ch_name(locale = "fr_CH", n = 10)
+#' ch_name(locale = "fa_IR", n = 10)
+#' ch_name(locale = "fi_FI", n = 10)
+ch_name <- function(n = 1, locale = NULL) {
   assert(n, c('integer', 'numeric'))
   if (n == 1) {
-    PersonProvider$new()$render()
+    PersonProvider$new(locale = locale)$render()
   } else {
-    x <- PersonProvider$new()
+    x <- PersonProvider$new(locale = locale)
     replicate(n, x$render())
   }
 }

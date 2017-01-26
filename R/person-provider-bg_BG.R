@@ -1,7 +1,7 @@
 # modified from the python library faker:
 # https://github.com/joke2k/faker/blob/master/faker/providers/person/bg_BG/__init__.py
 
-bg_bg_first_names_female = c(
+person_first_names_female_bg_bg = c(
   "\u0410\u0432\u0433\u0438\u044f",
   "\u0410\u0432\u0438\u0433\u0435\u044f",
   "\u0410\u0432\u0442\u043e\u0440\u043a\u0430",
@@ -605,7 +605,7 @@ bg_bg_first_names_female = c(
   "\u042f\u0442\u0430\u043d\u0430"
 )
 
-bg_bg_first_names_male = c(
+person_first_names_male_bg_bg = c(
   "\u0410\u0431\u043b\u0435\u043d",
   "\u0410\u0432\u0433\u0443\u0441\u0442",
   "\u0410\u0432\u0433\u0443\u0441\u0442\u0438\u0430\u043d",
@@ -1594,7 +1594,7 @@ bg_bg_first_names_male = c(
   "\u042f\u0448\u043e\u043d"
 )
 
-bg_bg_last_names_male = c(
+person_last_names_male_bg_bg = c(
   "\u0421\u0438\u043c\u0435\u043e\u043d\u043e\u0432",
   "\u0414\u0430\u043d\u0434\u0430\u043d\u043e\u0432",
   "\u041a\u044a\u0440\u043a\u043e\u0432",
@@ -1706,7 +1706,7 @@ bg_bg_last_names_male = c(
   "\u0417\u0430\u043d\u043e\u0432"
 )
 
-bg_bg_last_names_female = c(
+person_last_names_female_bg_bg = c(
   "u041a\u043e\u043a\u043e\u0448\u043a\u043e\u0432\u0430",
   "\u0413\u0440\u0430\u0434\u0438\u043d\u0430\u0440\u043e\u0432\u0430",
   "\u041a\u0443\u0440\u0442\u0430\u043a\u043e\u0432\u0430",
@@ -1748,26 +1748,36 @@ bg_bg_last_names_female = c(
   "\u0411\u0430\u043b\u043a\u0430\u043d\u0441\u043a\u0430"
 )
 
-bg_bg_prefixes_female = c(
+person_prefixes_female_bg_bg = c(
   "\u0413-\u0436\u0430",
   "\u0413-\u0446\u0430",
   "\u0414\u0440."
 )
-bg_bg_prefixes_male = c(
+person_prefixes_male_bg_bg = c(
   "\u0413-\u043d",
   "\u0414\u0440."
 )
 
-bg_bg_formats_female = c(
+person_formats_female_bg_bg = c(
   '{{first_name_female}} {{last_name_female}}',
   '{{prefix_female}} {{first_name_female}} {{last_name_female}}'
 )
 
-bg_bg_formats_male = c(
+person_formats_male_bg_bg = c(
   '{{first_name_male}} {{last_name_male}}',
-  '{{prefix_female}} {{first_name_male}} {{last_name_male}}'
+  '{{prefix_male}} {{first_name_male}} {{last_name_male}}'
 )
 
-bg_bg_formats = c(bg_bg_formats_male, bg_bg_formats_female)
-bg_bg_first_names = c(bg_bg_first_names_male, bg_bg_first_names_female)
-bg_bg_last_names = c(bg_bg_last_names_male, bg_bg_last_names_female)
+person_formats_bg_bg = c(person_formats_male_bg_bg, person_formats_female_bg_bg)
+person_first_names_bg_bg = c(person_first_names_male_bg_bg, person_first_names_female_bg_bg)
+person_last_names_bg_bg = c(person_last_names_male_bg_bg, person_last_names_female_bg_bg)
+
+person_bg_bg <- list(
+  first_names = person_first_names_bg_bg,
+  first_name_male = person_first_names_male_bg_bg,
+  first_name_female = person_first_names_female_bg_bg,
+  last_name_male = person_last_names_male_bg_bg,
+  last_name_female = person_last_names_female_bg_bg,
+  prefixes_female = person_prefixes_female_bg_bg,
+  prefixes_male = person_prefixes_male_bg_bg
+)

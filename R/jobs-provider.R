@@ -1,7 +1,7 @@
 #' JobProvider
 #'
 #' @keywords internal
-#' @examples \donttest{
+#' @examples
 #' z <- JobProvider$new()
 #' z$render()
 #'
@@ -16,7 +16,6 @@
 #' z <- JobProvider$new(locale = "fa_IR")
 #' z$locale
 #' z$render()
-#' }
 JobProvider <- R6::R6Class(
   inherit = BaseProvider,
   'JobProvider',

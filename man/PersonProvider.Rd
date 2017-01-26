@@ -12,10 +12,22 @@ PersonProvider
 PersonProvider
 }
 \examples{
-\donttest{
 x <- PersonProvider$new()
 x$render()
-}
+
+z <- PersonProvider$new(locale = "fr_FR")
+z$locale
+z$render()
+
+PersonProvider$new(locale = "fr_CH")$render()
+PersonProvider$new(locale = "fi_FI")$render()
+PersonProvider$new(locale = "fa_IR")$render()
+PersonProvider$new(locale = "es_ES")$render()
+PersonProvider$new(locale = "de_DE")$render()
+PersonProvider$new(locale = "de_AT")$render()
+PersonProvider$new(locale = "cs_CZ")$render()
+PersonProvider$new(locale = "bg_BG")$render()
+PersonProvider$new(locale = "dk_DK")$render()
 }
 \keyword{internal}
 

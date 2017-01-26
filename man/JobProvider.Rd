@@ -12,7 +12,6 @@ JobProvider
 JobProvider
 }
 \examples{
-\donttest{
 z <- JobProvider$new()
 z$render()
 
@@ -27,7 +26,6 @@ z$render()
 z <- JobProvider$new(locale = "fa_IR")
 z$locale
 z$render()
-}
 }
 \keyword{internal}
 

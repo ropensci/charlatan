@@ -1,7 +1,7 @@
 # modified from the python library faker:
 # https://github.com/joke2k/faker/blob/master/faker/providers/person/fa_IR/__init__.py
 
-fa_ir_formats_female = c(
+person_formats_female_fa_ir = c(
     '{{first_name_female}} {{last_name}}',
     '{{first_name_female}} {{last_name}}',
     '{{first_name_female}} {{last_name}}',
@@ -12,7 +12,7 @@ fa_ir_formats_female = c(
     '{{prefix_female}} {{first_name_female}} {{last_name}} {{suffix}}'
 )
 
-fa_ir_formats_male = c(
+person_formats_male_fa_ir = c(
     '{{first_name_male}} {{last_name}}',
     '{{first_name_male}} {{last_name}}',
     '{{first_name_male}} {{last_name}}',
@@ -23,9 +23,9 @@ fa_ir_formats_male = c(
     '{{prefix_male}} {{first_name_male}} {{last_name}} {{suffix}}'
 )
 
-fa_ir_formats = c(fa_ir_formats_female, fa_ir_formats_male)
+person_formats_fa_ir = c(person_formats_female_fa_ir, person_formats_male_fa_ir)
 
-fa_ir_first_names_female = c(
+person_first_names_female_fa_ir = c(
   "\u0641\u0627\u0637\u0645\u0647",
   "\u0627\u0633\u0645\u0627",
   "\u0632\u0647\u0631\u0627",
@@ -128,7 +128,7 @@ fa_ir_first_names_female = c(
   "\u0628\u0647\u0627\u0631"
 )
 
-fa_ir_first_names_male = c(
+person_first_names_male_fa_ir = c(
   "\u0627\u0645\u06cc\u0631 \u0639\u0644\u06cc",
   "\u067e\u0631\u0647\u0627\u0645",
   "\u0627\u0628\u0648\u0627\u0644\u0641\u0636\u0644",
@@ -231,9 +231,9 @@ fa_ir_first_names_male = c(
   "\u0628\u0646\u064a\u0627\u0645\u064a\u0646"
 )
 
-fa_ir_first_names = c(fa_ir_first_names_female, fa_ir_first_names_male)
+person_first_names_fa_ir = c(person_first_names_female_fa_ir, person_first_names_male_fa_ir)
 
-fa_ir_last_names = c(
+person_last_names_fa_ir = c(
   "\u0645\u062d\u0645\u062f\u06cc",
   "\u0645\u062d\u0645\u062f \u067e\u0648\u0631",
   "\u0627\u06a9\u0628\u0631 \u067e\u0648\u0631",
@@ -337,11 +337,22 @@ fa_ir_last_names = c(
   "\u0631\u0648\u062f\u06af\u0631"
 )
 
-fa_ir_prefixes_male = c(
+person_prefixes_male_fa_ir = c(
   "\u062c\u0646\u0627\u0628 \u0622\u0642\u0627\u06cc",
   "\u062c\u0646\u0627\u0628 \u0622\u0642\u0627\u06cc \u062f\u06a9\u062a\u0631"
 )
-fa_ir_prefixes_female = c(
+
+person_prefixes_female_fa_ir = c(
   "\u0633\u0631\u06a9\u0627\u0631 \u062e\u0627\u0646\u0645",
   "\u0633\u0631\u06a9\u0627\u0631 \u062e\u0627\u0646\u0645 \u062f\u06a9\u062a\u0631"
+)
+
+person_fa_ir <- list(
+  first_names = person_first_names_fa_ir,
+  first_name_male = person_first_names_male_fa_ir,
+  first_name_female = person_first_names_female_fa_ir,
+  last_name = person_last_names_fa_ir,
+  prefixe_female = person_prefixes_female_fa_ir,
+  prefixe_male = person_prefixes_male_fa_ir,
+  suffix = ''
 )

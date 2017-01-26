@@ -1,7 +1,7 @@
 # modified from the python library faker:
 # https://github.com/joke2k/faker/blob/master/faker/providers/person/fr_FR/__init__.py
 
-fr_fr_formats_female = c(
+person_formats_female_fr_fr = c(
   '{{first_name_female}} {{last_name}}',
   '{{first_name_female}} {{last_name}}',
   '{{first_name_female}} {{last_name}}',
@@ -14,7 +14,7 @@ fr_fr_formats_female = c(
   '{{first_name_female}} {{last_name}} {{prefix}} {{last_name}}'
 )
 
-fr_fr_formats_male = c(
+person_formats_male_fr_fr = c(
   '{{first_name_male}} {{last_name}}',
   '{{first_name_male}} {{last_name}}',
   '{{first_name_male}} {{last_name}}',
@@ -27,9 +27,9 @@ fr_fr_formats_male = c(
   '{{first_name_male}} {{last_name}} {{prefix}} {{last_name}}'
 )
 
-fr_fr_formats = c(fr_fr_formats_male, fr_fr_formats_female)
+person_formats_fr_fr = c(person_formats_male_fr_fr, person_formats_female_fr_fr)
 
-fr_fr_first_names_male = c(
+person_first_names_male_fr_fr = c(
   "Adrien",
   "Aim\u00e9",
   "Alain",
@@ -120,7 +120,7 @@ fr_fr_first_names_male = c(
   "Zacharie"
 )
 
-fr_fr_first_names_female = c(
+person_first_names_female_fr_fr = c(
   "Ad\u00e9la\u00efde",
   "Ad\u00e8le",
   "Adrienne",
@@ -255,9 +255,9 @@ fr_fr_first_names_female = c(
   "Dominique"
 )
 
-fr_fr_first_names = c(fr_fr_first_names_male, fr_fr_first_names_female)
+person_first_names_fr_fr = c(person_first_names_male_fr_fr, person_first_names_female_fr_fr)
 
-fr_fr_last_names = c(
+person_last_names_fr_fr = c(
   'Martin', 'Bernard', 'Thomas', 'Robert', 'Petit', 'Dubois', 'Richard', 'Garcia', 'Durand', 'Moreau', 'Lefebvre',
   'Simon', 'Laurent', 'Michel', 'Leroy', 'Martinez', 'David', 'Fontaine', 'Da Silva', 'Morel', 'Fournier',
   'Dupont', 'Bertrand', 'Lambert', 'Rousseau', 'Girard', 'Roux', 'Vincent', 'Lefevre', 'Boyer', 'Lopez', 'Bonnet',
@@ -299,4 +299,12 @@ fr_fr_last_names = c(
   'Diallo', 'Merle', 'Valette'
 )
 
-fr_fr_prefixes = c('de', 'de la', 'Le', 'du')
+person_prefixes_fr_fr = c('de', 'de la', 'Le', 'du')
+
+person_fr_fr <- list(
+  first_names = person_first_names_fr_fr,
+  first_name_male = person_first_names_male_fr_fr,
+  first_name_female = person_first_names_female_fr_fr,
+  last_name = person_last_names_fr_fr,
+  prefix = person_prefixes_fr_fr
+)

@@ -1,7 +1,7 @@
 # modified from the python library faker:
 # https://github.com/joke2k/faker/blob/master/faker/providers/person/en_US/__init__.py
 
-en_formats_female = c(
+person_formats_female_en_us = c(
   '{{first_name_female}} {{last_names}}',
   '{{first_names_female}} {{last_names}}',
   '{{first_names_female}} {{last_names}}',
@@ -12,7 +12,7 @@ en_formats_female = c(
   '{{prefixes_female}} {{first_names_female}} {{last_names}} {{suffixes_female}}'
 )
 
-en_formats_male = c(
+person_formats_male_en_us = c(
   '{{first_names_male}} {{last_names}}',
   '{{first_names_male}} {{last_names}}',
   '{{first_names_male}} {{last_names}}',
@@ -23,9 +23,9 @@ en_formats_male = c(
   '{{prefixes_male}} {{first_names_male}} {{last_names}} {{suffixes_male}}'
 )
 
-en_formats = c(en_formats_female, en_formats_male)
+person_formats_en_us = c(person_formats_female_en_us, person_formats_male_en_us)
 
-en_first_names_female = c(
+person_first_names_female_en_us = c(
   'Aaliyah', 'Abagail', 'Abbey', 'Abbie', 'Abbigail',
   'Abby', 'Abigail','Abigale', 'Abigayle', 'Abril', 'Achsah', 'Ada',
   'Adah', 'Adaline', 'Adalyn','Adalynn', 'Adamaris', 'Adda', 'Addie',
@@ -614,7 +614,7 @@ en_first_names_female = c(
   'Zona', 'Zora', 'Zula'
 )
 
-en_first_names_male = c(
+person_first_names_male_en_us = c(
   'Aaden', 'Aarav', 'Aaron', 'Ab', 'Abb', 'Abbott',
   'Abdiel', 'Abdul', 'Abdullah', 'Abe', 'Abel', 'Abelardo', 'Abie',
   'Abner', 'Abraham', 'Abram', 'Ace', 'Acey', 'Acie', 'Acy', 'Adalberto',
@@ -1091,9 +1091,9 @@ en_first_names_male = c(
   'Zollie'
 )
 
-en_first_names <- c(en_first_names_male, en_first_names_female)
+person_first_names_en_us <- c(person_first_names_male_en_us, person_first_names_female_en_us)
 
-en_last_names <- c(
+person_last_names_en_us <- c(
   'Abbott', 'Abernathy', 'Abshire', 'Adams', 'Altenwerth', 'Anderson', 'Ankunding', 'Armstrong', 'Auer',
   'Aufderhar',
   'Bahringer', 'Bailey', 'Balistreri', 'Barrows', 'Bartell', 'Bartoletti', 'Barton', 'Bashirian', 'Batz', 'Bauch',
@@ -1156,19 +1156,19 @@ en_last_names <- c(
   'Zboncak', 'Zemlak', 'Ziemann', 'Zieme', 'Zulauf'
 )
 
-en_prefixes_female = c('Mrs.', 'Ms.', 'Miss', 'Dr.')
-en_prefixes_male = c('Mr.', 'Dr.')
+person_prefixes_female_en_us = c('Mrs.', 'Ms.', 'Miss', 'Dr.')
+person_prefixes_male_en_us = c('Mr.', 'Dr.')
 
-en_suffixes_female = c('MD', 'DDS', 'PhD', 'DVM')
-en_suffixes_male = c('Jr.', 'Sr.', 'I', 'II', 'III', 'IV', 'V', 'MD', 'DDS', 'PhD', 'DVM')
+person_suffixes_female_en_us = c('MD', 'DDS', 'PhD', 'DVM')
+person_suffixes_male_en_us = c('Jr.', 'Sr.', 'I', 'II', 'III', 'IV', 'V', 'MD', 'DDS', 'PhD', 'DVM')
 
-person_en <- list(
-  first_names = en_first_names,
-  first_names_male = en_first_names_male,
-  first_names_female = en_first_names_female,
-  last_names = en_last_names,
-  prefixes_female = en_prefixes_female,
-  prefixes_male = en_prefixes_male,
-  suffixes_female = en_suffixes_female,
-  suffixes_male = en_suffixes_male
+person_en_us <- list(
+  first_names = person_first_names_en_us,
+  first_names_male = person_first_names_male_en_us,
+  first_names_female = person_first_names_female_en_us,
+  last_names = person_last_names_en_us,
+  prefixes_female = person_prefixes_female_en_us,
+  prefixes_male = person_prefixes_male_en_us,
+  suffixes_female = person_suffixes_female_en_us,
+  suffixes_male = person_suffixes_male_en_us
 )

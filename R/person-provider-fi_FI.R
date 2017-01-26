@@ -1,19 +1,19 @@
 # modified from the python library faker:
 # https://github.com/joke2k/faker/blob/master/faker/providers/person/fi_FI/__init__.py
 
-fi_fi_formats = c(
-    '{{first_name}} {{last_name}}',
-    '{{first_name}} {{last_name}}',
-    '{{last_name}}, {{first_name}}'
+person_formats_fi_fi = c(
+  '{{first_name}} {{last_name}}',
+  '{{first_name}} {{last_name}}',
+  '{{last_name}}, {{first_name}}'
 )
 
-fi_fi_prefixes = c(
-    'Herra', 'hra', 'Rouva', 'rva', 'Tohtori', 'tri', 'prof.', 'arkkit.'
+person_prefixes_fi_fi = c(
+  'Herra', 'hra', 'Rouva', 'rva', 'Tohtori', 'tri', 'prof.', 'arkkit.'
 )
 
-fi_fi_suffixes = c('DI', 'PhD', 'MSc', 'BSc')
+person_suffixes_fi_fi = c('DI', 'PhD', 'MSc', 'BSc')
 
-fi_fi_first_names = c(
+person_first_names_fi_fi = c(
   "Aake",
   "Aapeli",
   "Aapo",
@@ -778,7 +778,7 @@ fi_fi_first_names = c(
   "Vuokko"
 )
 
-fi_fi_last_names = c(
+person_last_names_fi_fi = c(
   "Aalto",
   "Aaltonen",
   "Aarnio",
@@ -1217,3 +1217,9 @@ fi_fi_last_names = c(
   "Yrj\u00f6nen"
 )
 
+person_fi_fi <- list(
+  first_name = person_first_names_fi_fi,
+  last_name = person_last_names_fi_fi,
+  prefixes = person_prefixes_fi_fi,
+  suffixes = person_prefixes_fi_fi
+)

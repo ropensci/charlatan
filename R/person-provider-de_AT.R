@@ -1,7 +1,7 @@
 # modified from the python library faker:
 # https://github.com/joke2k/faker/blob/master/faker/providers/person/de_AT/__init__.py
 
-de_at_formats = c(
+person_formats_de_at = c(
   '{{first_name}} {{last_name}}',
   '{{first_name}} {{last_name}}',
   '{{first_name}} {{last_name}}',
@@ -12,7 +12,7 @@ de_at_formats = c(
   '{{prefix}} {{first_name}} {{last_name}}'
 )
 
-de_at_first_names = c(
+person_first_names_de_at = c(
   'Alexander', 'Alina', 'Andreas', 'Anna', 'Anton',
   'Benjamin', 'Bernhard',
   'Christian', 'Christop',
@@ -34,7 +34,7 @@ de_at_first_names = c(
   'Valentin'
 )
 
-de_at_last_names = c(
+person_last_names_de_at = c(
   'Auer', 'Aigner',
   'Bauer', 'Baumgartner', 'Berger', 'Binder', 'Brunner',
   'Cap', 'Capek', 'Cech', 'Chum',
@@ -54,4 +54,10 @@ de_at_last_names = c(
   'Wallner', 'Weber', 'Weiss', 'Wieser', 'Wimmer', 'Winkler', 'Winter', 'Wolf'
 )
 
-de_at_prefixes = c('Dr.', 'Mag.', 'Ing.', 'Dipl.-Ing.', 'Prof.', 'Univ.Prof.')
+person_prefixes_de_at = c('Dr.', 'Mag.', 'Ing.', 'Dipl.-Ing.', 'Prof.', 'Univ.Prof.')
+
+person_de_at <- list(
+  first_name = person_first_names_de_at,
+  last_name = person_last_names_de_at,
+  prefix = person_prefixes_de_at
+)

@@ -1,30 +1,30 @@
 # modified from the python library faker:
 # https://github.com/joke2k/faker/blob/master/faker/providers/person/fr_CH/__init__.py
 
-fr_ch_formats_female = c(
-    '{{first_name_female}} {{last_name}}',
-    '{{first_name_female}} {{last_name}}',
-    '{{first_name_female}} {{last_name}}',
-    '{{first_name_female}} {{last_name}}',
-    '{{first_name_female}} {{last_name}}',
-    '{{first_name_female}} {{last_name}}',
-    '{{first_name_female}} {{last_name}}-{{last_name}}'
+person_formats_female_fr_ch = c(
+  '{{first_name_female}} {{last_name}}',
+  '{{first_name_female}} {{last_name}}',
+  '{{first_name_female}} {{last_name}}',
+  '{{first_name_female}} {{last_name}}',
+  '{{first_name_female}} {{last_name}}',
+  '{{first_name_female}} {{last_name}}',
+  '{{first_name_female}} {{last_name}}-{{last_name}}'
 )
 
-fr_ch_formats_male = c(
-    '{{first_name_male}} {{last_name}}',
-    '{{first_name_male}} {{last_name}}',
-    '{{first_name_male}} {{last_name}}',
-    '{{first_name_male}} {{last_name}}',
-    '{{first_name_male}} {{last_name}}',
-    '{{first_name_male}} {{last_name}}',
-    '{{first_name_male}} {{last_name}}-{{last_name}}'
+person_formats_male_fr_ch = c(
+  '{{first_name_male}} {{last_name}}',
+  '{{first_name_male}} {{last_name}}',
+  '{{first_name_male}} {{last_name}}',
+  '{{first_name_male}} {{last_name}}',
+  '{{first_name_male}} {{last_name}}',
+  '{{first_name_male}} {{last_name}}',
+  '{{first_name_male}} {{last_name}}-{{last_name}}'
 )
 
-fr_ch_formats = c(fr_ch_formats_male, fr_ch_formats_female)
+person_formats_fr_ch = c(person_formats_male_fr_ch, person_formats_female_fr_ch)
 
 # source: http://www.bfs.admin.ch/bfs/portal/fr/index/news/publikationen.html?publicationID=6704
-fr_ch_first_names_male = c(
+person_first_names_male_fr_ch = c(
   "Alain",
   "Albert",
   "Alexandre",
@@ -98,7 +98,7 @@ fr_ch_first_names_male = c(
   "Vincent"
 )
 
-fr_ch_first_names_female = c(
+person_first_names_female_fr_ch = c(
   "Alice",
   "Alicia",
   "Ana",
@@ -178,10 +178,10 @@ fr_ch_first_names_female = c(
   "Zo\u00e9"
 )
 
-fr_ch_first_names = c(fr_ch_first_names_male, fr_ch_first_names_female)
+person_first_names_fr_ch = c(person_first_names_male_fr_ch, person_first_names_female_fr_ch)
 
 # source = http://kunden.eye.ch/swissgen/rsr/index.html
-fr_ch_last_names = c(
+person_last_names_fr_ch = c(
   "Aebi",
   "Aeby",
   "Alber",
@@ -344,4 +344,11 @@ fr_ch_last_names = c(
   "Vonlanthen",
   "Vuille",
   "Wicht"
+)
+
+person_fr_ch <- list(
+  first_names = person_first_names_fr_ch,
+  first_name_male = person_first_names_male_fr_ch,
+  first_name_female = person_first_names_female_fr_ch,
+  last_name = person_last_names_fr_ch
 )
