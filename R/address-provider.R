@@ -32,8 +32,9 @@
 #' AddressProvider
 #'
 #' @include datetime-provider.R
+#' @export
 #' @keywords internal
-#' @examples \donttest{
+#' @examples
 #' (z <- AddressProvider$new())
 #' z$city_suffix()
 #' z$street_suffix()
@@ -42,7 +43,6 @@
 #' z$country()
 #' z$country_code()
 #' z$postcode()
-#' }
 AddressProvider <- R6::R6Class(
   inherit = BaseProvider,
   'AddressProvider',

@@ -6,8 +6,9 @@ safe_colors = c(
 
 #' ColorProvider
 #'
+#' @export
 #' @keywords internal
-#' @examples \donttest{
+#' @examples
 #' x <- ColorProvider$new()
 #' x$locale
 #' x$color_name()
@@ -20,7 +21,6 @@ safe_colors = c(
 #' x <- ColorProvider$new(locale = "uk_UA")
 #' x$locale
 #' x$color_name()
-#' }
 ColorProvider <- R6::R6Class(
   inherit = BaseProvider,
   'ColorProvider',

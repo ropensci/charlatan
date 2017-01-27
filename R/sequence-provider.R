@@ -1,5 +1,6 @@
 #' SequenceProvider
 #'
+#' @export
 #' @keywords internal
 #' @param length (integer) length of sequence to create
 #' @examples

@@ -12,7 +12,6 @@ AddressProvider
 AddressProvider
 }
 \examples{
-\donttest{
 (z <- AddressProvider$new())
 z$city_suffix()
 z$street_suffix()
@@ -21,7 +20,6 @@ z$city()
 z$country()
 z$country_code()
 z$postcode()
-}
 }
 \keyword{internal}
 

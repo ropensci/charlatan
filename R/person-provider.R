@@ -1,5 +1,6 @@
 #' PersonProvider
 #'
+#' @export
 #' @keywords internal
 #' @examples
 #' x <- PersonProvider$new()

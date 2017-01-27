@@ -1,13 +1,13 @@
 #' CoordinateProvider
 #'
+#' @export
 #' @keywords internal
-#' @examples \donttest{
+#' @examples
 #' z <- CoordinateProvider$new()
 #' z$lon()
 #' z$lat()
 #' z$position()
 #' z$position(bbox = c(-120, 30, -110, 60))
-#' }
 CoordinateProvider <- R6::R6Class(
   'CoordinateProvider',
   public = list(

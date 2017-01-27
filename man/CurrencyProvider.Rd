@@ -12,10 +12,8 @@ CurrencyProvider
 CurrencyProvider
 }
 \examples{
-\donttest{
 z <- CurrencyProvider$new()
 z$render()
-}
 }
 \keyword{internal}
 

@@ -169,11 +169,11 @@ currency_formats <- c(
 
 #' CurrencyProvider
 #'
+#' @export
 #' @keywords internal
-#' @examples \donttest{
+#' @examples
 #' z <- CurrencyProvider$new()
 #' z$render()
-#' }
 CurrencyProvider <- R6::R6Class(
   inherit = BaseProvider,
   'CurrencyProvider',

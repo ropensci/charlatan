@@ -486,9 +486,10 @@ dt_countries <- list(
 
 #' DateTimeProvider
 #'
+#' @export
 #' @include base-provider.R
 #' @keywords internal
-#' @examples \donttest{
+#' @examples
 #' z <- DateTimeProvider$new()
 #' z$countries
 #' z$centuries
@@ -496,7 +497,6 @@ dt_countries <- list(
 #' z$unix_time()
 #' z$date_time()
 #' z$year()
-#' }
 DateTimeProvider <- R6::R6Class(
   inherit = BaseProvider,
   'DateTimeProvider',

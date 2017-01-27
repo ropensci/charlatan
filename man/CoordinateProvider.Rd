@@ -12,13 +12,11 @@ CoordinateProvider
 CoordinateProvider
 }
 \examples{
-\donttest{
 z <- CoordinateProvider$new()
 z$lon()
 z$lat()
 z$position()
 z$position(bbox = c(-120, 30, -110, 60))
-}
 }
 \keyword{internal}
 

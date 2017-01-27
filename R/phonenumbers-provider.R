@@ -31,11 +31,11 @@ phone_number_formats = c(
 
 #' PhoneNumberProvider
 #'
+#' @export
 #' @keywords internal
-#' @examples \donttest{
+#' @examples
 #' z <- PhoneNumberProvider$new()
 #' z$render()
-#' }
 PhoneNumberProvider <- R6::R6Class(
   inherit = BaseProvider,
   'PhoneNumberProvider',

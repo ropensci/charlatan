@@ -24,14 +24,12 @@ Randomly, the taxonomic authority is in parentheses - which represents
 that the given authority was not the original authority.
 }
 \examples{
-\donttest{
 (z <- TaxonomyProvider$new())
 z$genus()
 z$epithet()
 z$species()
 z$species(authority = TRUE)
 z$species(authority = TRUE, date = TRUE)
-}
 }
 \keyword{internal}
 

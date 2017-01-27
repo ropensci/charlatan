@@ -1,10 +1,10 @@
 #' MissingDataProvider
 #'
+#' @export
 #' @keywords internal
-#' @examples \donttest{
+#' @examples
 #' z <- MissingDataProvider$new()
 #' z$make_missing(letters)
-#' }
 MissingDataProvider <- R6::R6Class(
   inherit = BaseProvider,
   'MissingDataProvider',

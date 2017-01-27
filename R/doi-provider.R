@@ -1,5 +1,6 @@
 #' DOIProvider
 #'
+#' @export
 #' @keywords internal
 #' @examples
 #' z <- DOIProvider$new()

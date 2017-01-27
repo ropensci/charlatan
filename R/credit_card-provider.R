@@ -70,13 +70,13 @@ credit_card_types['jcb'] <- credit_card_types['jcb16']
 
 #' CreditCardProvider
 #'
+#' @export
 #' @keywords internal
-#' @examples \donttest{
+#' @examples
 #' z <- CreditCardProvider$new()
 #' z$credit_card_provider()
 #' z$credit_card_number()
 #' z$credit_card_security_code()
-#' }
 CreditCardProvider <- R6::R6Class(
   inherit = BaseProvider,
   'CreditCardProvider',

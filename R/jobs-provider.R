@@ -1,5 +1,6 @@
 #' JobProvider
 #'
+#' @export
 #' @keywords internal
 #' @examples
 #' z <- JobProvider$new()

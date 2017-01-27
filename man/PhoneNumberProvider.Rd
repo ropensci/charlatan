@@ -12,10 +12,8 @@ PhoneNumberProvider
 PhoneNumberProvider
 }
 \examples{
-\donttest{
 z <- PhoneNumberProvider$new()
 z$render()
-}
 }
 \keyword{internal}
 

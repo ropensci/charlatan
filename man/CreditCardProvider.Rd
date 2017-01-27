@@ -12,12 +12,10 @@ CreditCardProvider
 CreditCardProvider
 }
 \examples{
-\donttest{
 z <- CreditCardProvider$new()
 z$credit_card_provider()
 z$credit_card_number()
 z$credit_card_security_code()
-}
 }
 \keyword{internal}
 

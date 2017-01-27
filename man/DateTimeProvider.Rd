@@ -12,7 +12,6 @@ DateTimeProvider
 DateTimeProvider
 }
 \examples{
-\donttest{
 z <- DateTimeProvider$new()
 z$countries
 z$centuries
@@ -20,7 +19,6 @@ z$timezone()
 z$unix_time()
 z$date_time()
 z$year()
-}
 }
 \keyword{internal}
 

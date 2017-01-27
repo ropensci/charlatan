@@ -1,5 +1,6 @@
 #' NumericsProvider
 #'
+#' @export
 #' @keywords internal
 #' @param n number of values
 #' @param mean mean value

@@ -177,6 +177,7 @@ tax_epithets <- c('abbeokutae','ackermani','adolphii','adunca','aegilicum',
 
 #' TaxonomyProvider
 #'
+#' @export
 #' @keywords internal
 #' @details names taken from Theplantlist. 500 genera names and 500
 #' epithets were chosen at random from the set of 10,000 names in the
@@ -186,14 +187,13 @@ tax_epithets <- c('abbeokutae','ackermani','adolphii','adunca','aegilicum',
 #' @section Taxonomic authority:
 #' Randomly, the taxonomic authority is in parentheses - which represents
 #' that the given authority was not the original authority.
-#' @examples \donttest{
+#' @examples
 #' (z <- TaxonomyProvider$new())
 #' z$genus()
 #' z$epithet()
 #' z$species()
 #' z$species(authority = TRUE)
 #' z$species(authority = TRUE, date = TRUE)
-#' }
 TaxonomyProvider <- R6::R6Class(
   inherit = BaseProvider,
   'TaxonomyProvider',

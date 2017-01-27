@@ -12,7 +12,6 @@ ColorProvider
 ColorProvider
 }
 \examples{
-\donttest{
 x <- ColorProvider$new()
 x$locale
 x$color_name()
@@ -25,7 +24,6 @@ x$rgb_css_color()
 x <- ColorProvider$new(locale = "uk_UA")
 x$locale
 x$color_name()
-}
 }
 \keyword{internal}
 
