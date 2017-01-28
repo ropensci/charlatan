@@ -8,6 +8,9 @@ addons:
       - libgmp-dev
       - libmpfr-dev
 
+after_success:
+  - Rscript -e 'covr::codecov()'
+
 notifications:
   email:
     on_success: change
