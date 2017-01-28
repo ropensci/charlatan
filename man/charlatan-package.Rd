@@ -6,12 +6,21 @@
 \alias{charlatan-package}
 \title{charlatan}
 \description{
-charlatan
+Make fake data, supporting addresses, person names, dates,
+times, colors, coordinates, currencies, digital object identifiers
+(DOIs), jobs, phone numbers, DNA sequences, doubles and integers
+from distributions and within a range.
 }
 \section{Package API}{
 
 \itemize{
- \item
+ \item \code{\link{ch_generate}}: generate a data.frame with fake data
+ \item \code{\link{fraudster}}: single interface to all fake dats methods
+ \item High level interfaces: There are high level functions prefixed with
+ \code{ch_} that wrap low level interfaces, and are meant to be easier
+ to use and provide easy way to make many instances of a thing.
+ \item Low level interfaces: All of these are R6 objects that a user can
+ initialize and then call methods on the them.
 }
 }
 \examples{

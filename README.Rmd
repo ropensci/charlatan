@@ -28,6 +28,17 @@ Make fake data for:
 * geographic coordinates
 * more coming ...
 
+Possible use cases for `charlatan`:
+
+* Students in a classroom setting learning any task that needs a dataset.
+* People doing simulations/modeling that need some fake data
+
+Reasons to use `charlatan`:
+
+* Lite weight, very few dependencies, all deps lite weight
+* Relatively comprehensive types of data, and more being added
+* Useful R features such as creating entire fake data.frame's 
+
 ## Installation
 
 ```{r eval=FALSE}
