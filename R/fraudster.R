@@ -95,6 +95,7 @@ FraudsterClient <- R6::R6Class(
       ch_rgb_css_color(n = n)
     },
 
+    # coordinates
     lat = function(n = 1) {
       ch_lat(n = n)
     },
@@ -107,8 +108,88 @@ FraudsterClient <- R6::R6Class(
       ch_position(n = n)
     },
 
+    # doi
     doi = function(n = 1) {
       ch_doi(n = n)
+    },
+
+    # date times
+    timezone = function(n = 1) {
+      ch_timezone(n = n)
+    },
+
+    unix_time = function(n = 1) {
+      ch_unix_time(n = n)
+    },
+
+    date_time = function(n = 1) {
+      ch_date_time(n = n)
+    },
+
+    # taxonomy
+    genus = function(n = 1) {
+      ch_taxonomic_genus(n = n)
+    },
+
+    epithet = function(n = 1) {
+      ch_taxonomic_epithet(n = n)
+    },
+
+    species = function(n = 1) {
+      ch_taxonomic_species(n = n)
+    },
+
+    # sequences
+    sequence = function(n = 1, length = 30) {
+      ch_sequence(n = n, length = length)
+    },
+
+    # phone number
+    phone_number = function(n = 1) {
+      ch_phone_number(n = n)
+    },
+
+    # numbers
+    double = function(n = 1, mean = 0, sd = 1) {
+      ch_double(n, mean, sd)
+    },
+
+    integer = function(n = 1, min = 1, max = 1000) {
+      ch_integer(n, min, max)
+    },
+
+    uniform = function(n = 1, min = 0, max = 9999) {
+      ch_unif(n, min, max)
+    },
+
+    norm = function(n = 1, mean = 0, sd = 1) {
+      ch_norm(n, mean, sd)
+    },
+
+    lnorm = function(n = 1, mean = 0, sd = 1) {
+      ch_lnorm(n, mean, sd)
+    },
+
+    beta = function(n = 1, shape1, shape2, ncp = 0) {
+      ch_double(n = n)
+    },
+
+    # currency
+    currency = function(n = 1) {
+      ch_currency(n = n)
+    },
+
+    # credit card
+    credit_card_provider = function(n = 1) {
+      ch_credit_card_provider(n = n)
+    },
+
+    credit_card_number = function(n = 1) {
+      ch_credit_card_number(n = n)
+    },
+
+    credit_card_security_code = function(n = 1) {
+      ch_credit_card_security_code(n = n)
     }
   )
 )
