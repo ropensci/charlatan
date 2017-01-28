@@ -14,6 +14,10 @@ Make fake data for:
 * phone numbers
 * colors: names, hex, rgb
 * credit cards
+* DOIs
+* numbers in range and from distributions
+* gene sequences
+* geographic coordinates
 * more coming ...
 
 ## Installation
@@ -36,13 +40,13 @@ library("charlatan")
 ```r
 x <- fraudster()
 x$job()
-#> [1] "Museum/gallery curator"
+#> [1] "Surveyor, rural practice"
 x$name()
-#> [1] "Mr. Anders Greenholt"
+#> [1] "Marisela Zemlak"
 x$job()
-#> [1] "Firefighter"
+#> [1] "Administrator"
 x$color_name()
-#> [1] "Lavender"
+#> [1] "Silver"
 ```
 
 ## locale support
@@ -54,19 +58,21 @@ Locale support for job data
 
 ```r
 ch_job(locale = "en_US", n = 3)
-#> [1] "Editor, commissioning"      "Chief Technology Officer"  
-#> [3] "Surveyor, building control"
+#> [1] "Clinical cytogeneticist"            
+#> [2] "Psychologist, educational"          
+#> [3] "Chartered public finance accountant"
 ch_job(locale = "fr_FR", n = 3)
-#> [1] "Orthophoniste"                                     
-#> [2] "Monteur en installations thermiques et climatiques"
-#> [3] "Boucher"
+#> [1] "Manipulateur en électroradiologie médicale"
+#> [2] "Vétérinaire"                               
+#> [3] "Biologiste médical"
 ch_job(locale = "hr_HR", n = 3)
-#> [1] "Pirotehnički nadzornik"    "Suradnik u nastavi"       
-#> [3] "Brodostrojarski inspektor"
+#> [1] "Viši muzejski pedagog"                                                
+#> [2] "Osoblje za održavanje  zrakoplova (mehaničari, tehničari i inženjeri)"
+#> [3] "Stručni suradnik ovlaštenog inženjera geodezije"
 ch_job(locale = "uk_UA", n = 3)
-#> [1] "Кіноактор" "Актор"     "Кушнір"
+#> [1] "Золотар"   "Математик" "Дипломат"
 ch_job(locale = "zh_TW", n = 3)
-#> [1] "鐵路車輛駕駛員" "查帳／審計人員" "人力資源人員"
+#> [1] "驗光師"         "資材主管"       "軟體設計工程師"
 ```
 
 For colors:
@@ -74,9 +80,9 @@ For colors:
 
 ```r
 ch_color_name(locale = "en_US", n = 3)
-#> [1] "Pink"      "LightCyan" "Plum"
+#> [1] "HotPink"    "White"      "LightGreen"
 ch_color_name(locale = "uk_UA", n = 3)
-#> [1] "Бронзовий"        "Зелений папороть" "Сангрія"
+#> [1] "Блідий рожево-ліловий" "Темно-аспідний сірий"  "Яскраво-зелений"
 ```
 
 More coming soon ...
@@ -87,18 +93,18 @@ More coming soon ...
 ```r
 ch_generate()
 #> # A tibble: 10 × 3
-#>                    name                                      job
-#>                   <chr>                                    <chr>
-#> 1      Florrie Turcotte                       Academic librarian
-#> 2          Gifford Yost            Advertising account executive
-#> 3               Krajcik                            Acupuncturist
-#> 4            Verda Huel                                   Gaffer
-#> 5  Dr. Esco Stoltenberg           Therapist, speech and language
-#> 6       Carlie Hartmann                            Oceanographer
-#> 7           Lettie Cole                            Haematologist
-#> 8       Shea Rutherford Geographical information systems officer
-#> 9          Chantel Ryan                         Engineer, energy
-#> 10           Che Little                      Electrical engineer
+#>                      name                                  job
+#>                     <chr>                                <chr>
+#> 1         Dempsey Windler                 Maintenance engineer
+#> 2      Mrs. Signa Haag MD                      Games developer
+#> 3  Miss Suzanna Blanda MD                       Phytotherapist
+#> 4           Hildur Ledner               Embryologist, clinical
+#> 5  Charolette Anderson MD Accountant, chartered public finance
+#> 6                   Kunde                Merchant navy officer
+#> 7          Barbra Reinger               Conservator, furniture
+#> 8          Ammie Dietrich                   Academic librarian
+#> 9                 Keebler                      Charity officer
+#> 10        Kameron Stracke            Health and safety adviser
 #> # ... with 1 more variables: phone_number <chr>
 ```
 
@@ -106,18 +112,18 @@ ch_generate()
 ```r
 ch_generate('job', 'phone_number', n = 30)
 #> # A tibble: 30 × 2
-#>                                       job       phone_number
-#>                                     <chr>              <chr>
-#> 1                Secondary school teacher 114-168-7468x64400
-#> 2                       Psychiatric nurse      (323)213-7429
-#> 3                             Illustrator       495-241-9020
-#> 4                                  Banker (610)105-8735x9485
-#> 5             Civil Service administrator 1-472-397-7996x490
-#> 6                Horticultural consultant     1-522-132-6026
-#> 7              Geophysical data processor  584.320.9534x2603
-#> 8  Teacher, English as a foreign language  549.880.2911x0738
-#> 9                        Technical author  548-630-0280x6858
-#> 10                  Administrator, sports   389-995-5331x477
+#>                                     job       phone_number
+#>                                   <chr>              <chr>
+#> 1  English as a second language teacher       899.267.2020
+#> 2                 Volunteer coordinator       986.048.9935
+#> 3                Psychologist, clinical 1-024-424-8379x471
+#> 4    Public relations account executive  (526)080-3332x216
+#> 5                 Adult guidance worker   +31(7)3479289390
+#> 6                               Midwife   +62(3)8024221131
+#> 7       Sport and exercise psychologist      (584)490-4327
+#> 8                         Oceanographer     1-600-230-0388
+#> 9                       Legal secretary       237.694.1420
+#> 10               Fitness centre manager       176.506.7116
 #> # ... with 20 more rows
 ```
 
@@ -127,17 +133,17 @@ ch_generate('job', 'phone_number', n = 30)
 
 ```r
 ch_name()
-#> [1] "Nelda Kuhlman"
+#> [1] "Darrion Predovic"
 ```
 
 
 ```r
 ch_name(10)
-#>  [1] "Luka Schmitt V"          "Mr. Tristian Walsh III" 
-#>  [3] "Ola Rodriguez"           "Mr. Fredrick Corwin Jr."
-#>  [5] "Mercedes Gerhold DVM"    "Fleda Daugherty"        
-#>  [7] "Lena Weissnat"           "Gardner Strosin"        
-#>  [9] "Moe Swaniawski"          "Ms. Ashlea O'Kon"
+#>  [1] "Dr. Ean Rowe"           "Murl Little"           
+#>  [3] "Dr. Jorden Hagenes III" "Caroline Stark MD"     
+#>  [5] "Dr. Johney Douglas"     "Riya O'Reilly"         
+#>  [7] "Blanca Daniel"          "Ruben Mueller"         
+#>  [9] " Grant"                 "Treyton Nitzsche V"
 ```
 
 
@@ -146,16 +152,16 @@ ch_name(10)
 
 ```r
 ch_phone_number()
-#> [1] "1-710-779-2179x528"
+#> [1] "607.926.6465"
 ```
 
 
 ```r
 ch_phone_number(10)
-#>  [1] "+89(4)8972695671"    "561-863-1592x99431"  "(240)291-8942"      
-#>  [4] "340.283.9196x1790"   "1-008-498-8235x8078" "867-955-3588"       
-#>  [7] "512-601-6820x505"    "(243)162-7736"       "(024)046-3559"      
-#> [10] "910-896-0264x76496"
+#>  [1] "012.588.5001"         "1-865-715-9802x519"   "1-151-516-5243x49390"
+#>  [4] "07241668634"          "450-035-5344"         "(182)022-3086x36655" 
+#>  [7] "250.550.8146x0119"    "083.165.5636"         "+61(0)2085749887"    
+#> [10] "067.814.1679x03777"
 ```
 
 ## job
@@ -163,22 +169,22 @@ ch_phone_number(10)
 
 ```r
 ch_job()
-#> [1] "Equality and diversity officer"
+#> [1] "Mechanical engineer"
 ```
 
 
 ```r
 ch_job(10)
-#>  [1] "TEFL teacher"                       
-#>  [2] "Scientist, research (life sciences)"
-#>  [3] "Nurse, mental health"               
-#>  [4] "Cytogeneticist"                     
-#>  [5] "Designer, industrial/product"       
-#>  [6] "Toxicologist"                       
-#>  [7] "Surveyor, land/geomatics"           
-#>  [8] "Regulatory affairs officer"         
-#>  [9] "Surveyor, minerals"                 
-#> [10] "Orthoptist"
+#>  [1] "Information officer"                        
+#>  [2] "Chartered accountant"                       
+#>  [3] "Psychologist, prison and probation services"
+#>  [4] "Therapist, drama"                           
+#>  [5] "Geneticist, molecular"                      
+#>  [6] "Designer, jewellery"                        
+#>  [7] "Insurance claims handler"                   
+#>  [8] "Operations geologist"                       
+#>  [9] "Development worker, community"              
+#> [10] "Ranger/warden"
 ```
 
 ## credit cards
@@ -186,29 +192,28 @@ ch_job(10)
 
 ```r
 ch_credit_card_provider()
-#> [1] "Voyager"
+#> [1] "Mastercard"
 ch_credit_card_provider(n = 4)
-#> [1] "American Express" "VISA 16 digit"    "VISA 13 digit"   
-#> [4] "JCB 16 digit"
+#> [1] "JCB 15 digit" "JCB 16 digit" "Maestro"      "Maestro"
 ```
 
 
 ```r
 ch_credit_card_number()
-#> [1] "54475589287548976"
+#> [1] "4139191403423"
 ch_credit_card_number(n = 10)
-#>  [1] "3009546087969138"    "6011542305080105677" "4729668926837448"   
-#>  [4] "6011590080204722209" "3014349466076269"    "3443023228498524"   
-#>  [7] "4000205665324682"    "3096931321873861045" "3419857669338982"   
-#> [10] "3158803317501205279"
+#>  [1] "869937736759719111"  "3000265784751728"    "3158817892934192868"
+#>  [4] "4434232531681695"    "180094119248034949"  "6011440217194063341"
+#>  [7] "3337711215517268359" "210001897759873365"  "3528113611019333408"
+#> [10] "52825956761873971"
 ```
 
 
 ```r
 ch_credit_card_security_code()
-#> [1] "3396"
+#> [1] "883"
 ch_credit_card_security_code(10)
-#>  [1] "289" "481" "071" "961" "477" "378" "683" "940" "838" "579"
+#>  [1] "203"  "378"  "569"  "143"  "2669" "216"  "133"  "582"  "321"  "465"
 ```
 
 

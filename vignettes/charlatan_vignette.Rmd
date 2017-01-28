@@ -1,5 +1,17 @@
-charlatan
-=========
+---
+title: "Introduction to the charlatan package"
+author: "Scott Chamberlain"
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: readable
+vignette: >
+  %\VignetteIndexEntry{Introduction to the charlatan package}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
 
 ```{r echo=FALSE}
 knitr::opts_chunk$set(
@@ -10,24 +22,11 @@ knitr::opts_chunk$set(
 )
 ```
 
-[![Build Status](https://travis-ci.org/ropenscilabs/charlatan.svg?branch=master)](https://travis-ci.org/ropenscilabs/charlatan)
+`charlatan` xxx
 
-`charlatan` makes fake data, inspired from and borrowing some code from Python's [faker](https://github.com/joke2k/faker) 
+## Install
 
-Make fake data for:
-
-* person names
-* jobs
-* phone numbers
-* colors: names, hex, rgb
-* credit cards
-* DOIs
-* numbers in range and from distributions
-* gene sequences
-* geographic coordinates
-* more coming ...
-
-## Installation
+Development version from Github
 
 ```{r eval=FALSE}
 devtools::install_github("ropenscilabs/charlatan")
@@ -130,15 +129,3 @@ ch_credit_card_number(n = 10)
 ch_credit_card_security_code()
 ch_credit_card_security_code(10)
 ```
-
-
-
-## Meta
-
-* Please [report any issues or bugs](https://github.com/ropenscilabs/charlatan/issues).
-* License: MIT
-* Get citation information for `charlatan` in R doing `citation(package = 'charlatan')`
-* Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). 
-By participating in this project you agree to abide by its terms.
-
-[![ropensci_footer](https://ropensci.org/public_images/github_footer.png)](https://ropensci.org)

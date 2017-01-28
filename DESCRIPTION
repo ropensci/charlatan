@@ -1,8 +1,11 @@
 Package: charlatan
 Type: Package
-Title: Fake Data
-Description: Make fake data.
-Version: 0.0.5.9828
+Title: Make Fake Data
+Description: Make fake data, supporting addresses, person names, dates, 
+    times, colors, coordinates, currencies, digital object identifiers
+    (DOIs), jobs, phone numbers, DNA sequences, doubles and integers
+    from distributions and within a range.
+Version: 0.0.6.9100
 Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"),
     email = "myrmecocystus@gmail.com"))
 License: MIT + file LICENSE
@@ -10,11 +13,17 @@ URL: https://github.com/ropenscilabs/charlatan
 BugReports: https://github.com/ropenscilabs/charlatan/issues
 LazyData: true
 Encoding: UTF-8
+VignetteBuilder: knitr
 Imports:
     R6 (>= 2.2.0),
     tibble (>= 1.2),
     whisker,
     Rmpfr
+Suggests:
+    testthat,
+    covr,
+    knitr,
+    rmarkdown
 RoxygenNote: 5.0.1
 Collate:
     'base-provider.R'
