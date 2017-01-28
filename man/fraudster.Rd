@@ -38,5 +38,13 @@ z$job()
 (w <- fraudster(locale = "uk_UA"))
 w$job()
 w$color_name()
+
+# geospatial
+x$lat()
+x$lon()
+x$position()
+
+# DOIs (Digital Object Identifier)
+x$doi()
 }
 

@@ -28,6 +28,14 @@
 #' (w <- fraudster(locale = "uk_UA"))
 #' w$job()
 #' w$color_name()
+#'
+#' # geospatial
+#' x$lat()
+#' x$lon()
+#' x$position()
+#'
+#' # DOIs (Digital Object Identifier)
+#' x$doi()
 fraudster <- function(locale = NULL) {
   FraudsterClient$new(locale = locale)
 }
@@ -85,6 +93,22 @@ FraudsterClient <- R6::R6Class(
 
     rgb_css_color = function(n = 1) {
       ch_rgb_css_color(n = n)
+    },
+
+    lat = function(n = 1) {
+      ch_lat(n = n)
+    },
+
+    lon = function(n = 1) {
+      ch_lon(n = n)
+    },
+
+    position = function(n = 1) {
+      ch_position(n = n)
+    },
+
+    doi = function(n = 1) {
+      ch_doi(n = n)
     }
   )
 )
