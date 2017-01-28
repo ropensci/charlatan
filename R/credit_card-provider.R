@@ -72,6 +72,24 @@ credit_card_types['jcb'] <- credit_card_types['jcb16']
 #'
 #' @export
 #' @keywords internal
+#' @details
+#' \strong{Methods}
+#'   \describe{
+#'     \item{\code{credit_card_type()}}{
+#'       credit card type
+#'     }
+#'     \item{\code{credit_card_provider()}}{
+#'       credit card provider
+#'     }
+#'     \item{\code{credit_card_number()}}{
+#'       credit card number
+#'     }
+#'     \item{\code{credit_card_security_code()}}{
+#'       credit card security code
+#'     }
+#'   }
+#' @format NULL
+#' @usage NULL
 #' @examples
 #' z <- CreditCardProvider$new()
 #' z$credit_card_provider()

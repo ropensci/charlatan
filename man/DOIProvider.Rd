@@ -4,12 +4,16 @@
 \name{DOIProvider}
 \alias{DOIProvider}
 \title{DOIProvider}
-\format{An object of class \code{R6ClassGenerator} of length 24.}
-\usage{
-DOIProvider
-}
 \description{
 DOIProvider
+}
+\details{
+\strong{Methods}
+  \describe{
+    \item{\code{render()}}{
+      Make a DOI
+    }
+  }
 }
 \examples{
 z <- DOIProvider$new()

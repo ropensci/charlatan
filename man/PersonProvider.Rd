@@ -4,12 +4,20 @@
 \name{PersonProvider}
 \alias{PersonProvider}
 \title{PersonProvider}
-\format{An object of class \code{R6ClassGenerator} of length 24.}
-\usage{
-PersonProvider
+\arguments{
+\item{locale}{(character) the locale to use. options: en_US (default),
+fr_FR, fr_CH, hr_FR, fa_IR, pl_PL, ru_RU, uk_UA, zh_TW.}
 }
 \description{
 PersonProvider
+}
+\details{
+\strong{Methods}
+  \describe{
+    \item{\code{render()}}{
+      Make a person's name
+    }
+  }
 }
 \examples{
 x <- PersonProvider$new()

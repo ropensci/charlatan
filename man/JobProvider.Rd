@@ -4,12 +4,20 @@
 \name{JobProvider}
 \alias{JobProvider}
 \title{JobProvider}
-\format{An object of class \code{R6ClassGenerator} of length 24.}
-\usage{
-JobProvider
+\arguments{
+\item{locale}{(character) the locale to use. options: en_US (default),
+fr_FR, fr_CH, hr_FR, fa_IR, pl_PL, ru_RU, uk_UA, zh_TW.}
 }
 \description{
 JobProvider
+}
+\details{
+\strong{Methods}
+  \describe{
+    \item{\code{render()}}{
+      Make a job
+    }
+  }
 }
 \examples{
 z <- JobProvider$new()

@@ -9,6 +9,30 @@
 #' @param max maximum value
 #' @param shape1,shape2 non-negative parameters of the Beta distribution
 #' @param ncp non-centrality parameter
+#' @details
+#' \strong{Methods}
+#'   \describe{
+#'     \item{\code{double()}}{
+#'       get a double, pulls from normal distribution
+#'     }
+#'     \item{\code{integer()}}{
+#'       get an integer, runs \code{\link{sample}} on range given
+#'     }
+#'     \item{\code{unif()}}{
+#'       get numbers from the uniform distribution
+#'     }
+#'     \item{\code{norm()}}{
+#'       get numbers from the normal distribution
+#'     }
+#'     \item{\code{lnorm()}}{
+#'       get numbers from the lognormal distribution
+#'     }
+#'     \item{\code{beta()}}{
+#'       get numbers from the beta distribution
+#'     }
+#'   }
+#' @format NULL
+#' @usage NULL
 #' @examples
 #' z <- NumericsProvider$new()
 #'

@@ -2,6 +2,15 @@
 #'
 #' @export
 #' @keywords internal
+#' @details
+#' \strong{Methods}
+#'   \describe{
+#'     \item{\code{render()}}{
+#'       Make a DOI
+#'     }
+#'   }
+#' @format NULL
+#' @usage NULL
 #' @examples
 #' z <- DOIProvider$new()
 #' z$render()

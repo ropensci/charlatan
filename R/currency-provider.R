@@ -171,6 +171,15 @@ currency_formats <- c(
 #'
 #' @export
 #' @keywords internal
+#' @details
+#' \strong{Methods}
+#'   \describe{
+#'     \item{\code{render()}}{
+#'       a currency, character string length 3
+#'     }
+#'   }
+#' @format NULL
+#' @usage NULL
 #' @examples
 #' z <- CurrencyProvider$new()
 #' z$render()

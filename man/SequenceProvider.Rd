@@ -4,15 +4,22 @@
 \name{SequenceProvider}
 \alias{SequenceProvider}
 \title{SequenceProvider}
-\format{An object of class \code{R6ClassGenerator} of length 24.}
-\usage{
-SequenceProvider
-}
 \arguments{
 \item{length}{(integer) length of sequence to create}
 }
 \description{
 SequenceProvider
+}
+\details{
+\strong{Methods}
+  \describe{
+    \item{\code{render()}}{
+      Make a sequence
+      \itemize{
+       \item length: sequence length. default: 30
+      }
+    }
+  }
 }
 \examples{
 z <- SequenceProvider$new()

@@ -4,12 +4,25 @@
 \name{CreditCardProvider}
 \alias{CreditCardProvider}
 \title{CreditCardProvider}
-\format{An object of class \code{R6ClassGenerator} of length 24.}
-\usage{
-CreditCardProvider
-}
 \description{
 CreditCardProvider
+}
+\details{
+\strong{Methods}
+  \describe{
+    \item{\code{credit_card_type()}}{
+      credit card type
+    }
+    \item{\code{credit_card_provider()}}{
+      credit card provider
+    }
+    \item{\code{credit_card_number()}}{
+      credit card number
+    }
+    \item{\code{credit_card_security_code()}}{
+      credit card security code
+    }
+  }
 }
 \examples{
 z <- CreditCardProvider$new()

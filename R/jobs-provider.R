@@ -2,6 +2,17 @@
 #'
 #' @export
 #' @keywords internal
+#' @param locale (character) the locale to use. options: en_US (default),
+#' fr_FR, fr_CH, hr_FR, fa_IR, pl_PL, ru_RU, uk_UA, zh_TW.
+#' @details
+#' \strong{Methods}
+#'   \describe{
+#'     \item{\code{render()}}{
+#'       Make a job
+#'     }
+#'   }
+#' @format NULL
+#' @usage NULL
 #' @examples
 #' z <- JobProvider$new()
 #' z$render()

@@ -4,12 +4,46 @@
 \name{BaseProvider}
 \alias{BaseProvider}
 \title{BaseProvider}
-\format{An object of class \code{R6ClassGenerator} of length 24.}
-\usage{
-BaseProvider
-}
 \description{
 BaseProvider
+}
+\details{
+\strong{Methods}
+  \describe{
+   \item{\code{random_element}}{
+     wrapper around \code{\link{sample}}
+   }
+   \item{\code{random_int}}{
+     random integer
+   }
+   \item{\code{random_digit}}{
+     random integer between 0 and 9
+   }
+   \item{\code{random_digit_not_null}}{
+     random integer between 1 and 9
+   }
+   \item{\code{random_digit_or_empty}}{
+     random integer between 0 and 9 or empty character string
+   }
+   \item{\code{random_digit_not_null_or_empty}}{
+     random integer between 1 and 9 or empty character string
+   }
+   \item{\code{random_letter}}{
+     random letter
+   }
+   \item{\code{numerify}}{
+     replace a template with numbers
+   }
+   \item{\code{lexify}}{
+     replace a template with letters
+   }
+   \item{\code{bothify}}{
+     both numerify and lexify together
+   }
+   \item{\code{check_locale}}{
+     check a locale to see if it exists, if not, stop with error message
+   }
+ }
 }
 \examples{
 (x <- BaseProvider$new())

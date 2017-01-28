@@ -4,12 +4,16 @@
 \name{CurrencyProvider}
 \alias{CurrencyProvider}
 \title{CurrencyProvider}
-\format{An object of class \code{R6ClassGenerator} of length 24.}
-\usage{
-CurrencyProvider
-}
 \description{
 CurrencyProvider
+}
+\details{
+\strong{Methods}
+  \describe{
+    \item{\code{render()}}{
+      a currency, character string length 3
+    }
+  }
 }
 \examples{
 z <- CurrencyProvider$new()

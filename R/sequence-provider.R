@@ -3,6 +3,18 @@
 #' @export
 #' @keywords internal
 #' @param length (integer) length of sequence to create
+#' @details
+#' \strong{Methods}
+#'   \describe{
+#'     \item{\code{render()}}{
+#'       Make a sequence
+#'       \itemize{
+#'        \item length: sequence length. default: 30
+#'       }
+#'     }
+#'   }
+#' @format NULL
+#' @usage NULL
 #' @examples
 #' z <- SequenceProvider$new()
 #' z$render()

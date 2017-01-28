@@ -4,12 +4,37 @@
 \name{DateTimeProvider}
 \alias{DateTimeProvider}
 \title{DateTimeProvider}
-\format{An object of class \code{R6ClassGenerator} of length 24.}
-\usage{
-DateTimeProvider
-}
 \description{
 DateTimeProvider
+}
+\details{
+\strong{Methods}
+  \describe{
+   \item{\code{unix_time}}{
+     generate a unix time
+   }
+   \item{\code{date}}{
+     generate a date
+   }
+   \item{\code{date_time}}{
+     generate a date time
+   }
+   \item{\code{date_time_ad}}{
+     generate a date time
+   }
+   \item{\code{iso8601}}{
+     generate a iso8601 format date
+   }
+   \item{\code{year}}{
+     generate a year
+   }
+   \item{\code{century}}{
+     generate a century
+   }
+   \item{\code{timezone}}{
+     generate a timezone
+   }
+ }
 }
 \examples{
 z <- DateTimeProvider$new()

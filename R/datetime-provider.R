@@ -489,6 +489,36 @@ dt_countries <- list(
 #' @export
 #' @include base-provider.R
 #' @keywords internal
+#' @details
+#' \strong{Methods}
+#'   \describe{
+#'    \item{\code{unix_time}}{
+#'      generate a unix time
+#'    }
+#'    \item{\code{date}}{
+#'      generate a date
+#'    }
+#'    \item{\code{date_time}}{
+#'      generate a date time
+#'    }
+#'    \item{\code{date_time_ad}}{
+#'      generate a date time
+#'    }
+#'    \item{\code{iso8601}}{
+#'      generate a iso8601 format date
+#'    }
+#'    \item{\code{year}}{
+#'      generate a year
+#'    }
+#'    \item{\code{century}}{
+#'      generate a century
+#'    }
+#'    \item{\code{timezone}}{
+#'      generate a timezone
+#'    }
+#'  }
+#' @format NULL
+#' @usage NULL
 #' @examples
 #' z <- DateTimeProvider$new()
 #' z$countries
@@ -524,9 +554,10 @@ DateTimeProvider <- R6::R6Class(
       as.POSIXct(0, origin = "1970-01-01", tz = tzinfo) + timedelta(seconds = ts)
     },
 
-    iso8601 = function(tzinfo = NULL) {
-      self$date_time(tzinfo)$isoformat()
-    },
+    # FIXME - not working
+    # iso8601 = function(tzinfo = NULL) {
+    #   self$date_time(tzinfo)$isoformat()
+    # },
 
     year = function() {
       self$date("%Y")

@@ -33,6 +33,15 @@ phone_number_formats = c(
 #'
 #' @export
 #' @keywords internal
+#' @details
+#' \strong{Methods}
+#'   \describe{
+#'     \item{\code{render()}}{
+#'       Make a phone number
+#'     }
+#'   }
+#' @format NULL
+#' @usage NULL
 #' @examples
 #' z <- PhoneNumberProvider$new()
 #' z$render()

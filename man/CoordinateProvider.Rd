@@ -4,12 +4,26 @@
 \name{CoordinateProvider}
 \alias{CoordinateProvider}
 \title{CoordinateProvider}
-\format{An object of class \code{R6ClassGenerator} of length 24.}
-\usage{
-CoordinateProvider
-}
 \description{
 CoordinateProvider
+}
+\details{
+\strong{Methods}
+  \describe{
+    \item{\code{lat()}}{
+      a latitude value
+    }
+    \item{\code{lon()}}{
+      a longitude value
+    }
+    \item{\code{position()}}{
+      a position, of form [longitude,latitude]
+      \itemize{
+       \item bbox: optionally, specify a bounding box for the position
+       to be in, of the form [west,south,east,north]
+      }
+    }
+  }
 }
 \examples{
 z <- CoordinateProvider$new()

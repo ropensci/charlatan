@@ -8,6 +8,30 @@ safe_colors = c(
 #'
 #' @export
 #' @keywords internal
+#' @details
+#' \strong{Methods}
+#'   \describe{
+#'    \item{\code{color_name}}{
+#'      color name
+#'    }
+#'    \item{\code{safe_color_name}}{
+#'      safe color name
+#'    }
+#'    \item{\code{hex_color}}{
+#'      hex color
+#'    }
+#'    \item{\code{safe_hex_color}}{
+#'      safe hex color
+#'    }
+#'    \item{\code{rgb_color}}{
+#'      RGB color
+#'    }
+#'    \item{\code{rgb_css_color}}{
+#'      RGB CSS color
+#'    }
+#'  }
+#' @format NULL
+#' @usage NULL
 #' @examples
 #' x <- ColorProvider$new()
 #' x$locale

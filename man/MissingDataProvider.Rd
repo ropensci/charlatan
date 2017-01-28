@@ -4,12 +4,19 @@
 \name{MissingDataProvider}
 \alias{MissingDataProvider}
 \title{MissingDataProvider}
-\format{An object of class \code{R6ClassGenerator} of length 24.}
-\usage{
-MissingDataProvider
-}
 \description{
 MissingDataProvider
+}
+\details{
+\strong{Methods}
+  \describe{
+    \item{\code{make_missing()}}{
+      make missing data
+      \itemize{
+       \item x: a vector of characters, numeric, integers, logicals, etc
+      }
+    }
+  }
 }
 \examples{
 z <- MissingDataProvider$new()

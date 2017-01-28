@@ -34,6 +34,33 @@
 #' @include datetime-provider.R
 #' @export
 #' @keywords internal
+#' @details
+#' \strong{Methods}
+#'   \describe{
+#'    \item{\code{city_suffix}}{
+#'      city suffix
+#'    }
+#'    \item{\code{street_suffix}}{
+#'      street suffix
+#'    }
+#'    \item{\code{building_number}}{
+#'      building number
+#'    }
+#'    \item{\code{city}}{
+#'      city
+#'    }
+#'    \item{\code{country}}{
+#'      country
+#'    }
+#'    \item{\code{country_code}}{
+#'      country code
+#'    }
+#'    \item{\code{postcode}}{
+#'      postal code
+#'    }
+#'  }
+#' @format NULL
+#' @usage NULL
 #' @examples
 #' (z <- AddressProvider$new())
 #' z$city_suffix()

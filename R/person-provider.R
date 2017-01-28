@@ -2,6 +2,17 @@
 #'
 #' @export
 #' @keywords internal
+#' @param locale (character) the locale to use. options: en_US (default),
+#' fr_FR, fr_CH, hr_FR, fa_IR, pl_PL, ru_RU, uk_UA, zh_TW.
+#' @details
+#' \strong{Methods}
+#'   \describe{
+#'     \item{\code{render()}}{
+#'       Make a person's name
+#'     }
+#'   }
+#' @format NULL
+#' @usage NULL
 #' @examples
 #' x <- PersonProvider$new()
 #' x$render()
@@ -38,12 +49,8 @@ PersonProvider <- R6::R6Class(
       self$person <- parse_eval("person_", self$locale)
     },
 
-    random_format = function(locale = NULL) {
-      sample(self$formats, size = 1)
-    },
-
     render = function() {
-      fmt <- self$random_format()
+      fmt <- super$random_element(self$formats)
       dat <- lapply(self$person[pluck_names(fmt, self$person)], sample, size = 1)
       whisker::whisker.render(fmt, data = dat)
     }

@@ -2,6 +2,18 @@
 #'
 #' @export
 #' @keywords internal
+#' @details
+#' \strong{Methods}
+#'   \describe{
+#'     \item{\code{make_missing()}}{
+#'       make missing data
+#'       \itemize{
+#'        \item x: a vector of characters, numeric, integers, logicals, etc
+#'       }
+#'     }
+#'   }
+#' @format NULL
+#' @usage NULL
 #' @examples
 #' z <- MissingDataProvider$new()
 #' z$make_missing(letters)

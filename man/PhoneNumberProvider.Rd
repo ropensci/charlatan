@@ -4,12 +4,16 @@
 \name{PhoneNumberProvider}
 \alias{PhoneNumberProvider}
 \title{PhoneNumberProvider}
-\format{An object of class \code{R6ClassGenerator} of length 24.}
-\usage{
-PhoneNumberProvider
-}
 \description{
 PhoneNumberProvider
+}
+\details{
+\strong{Methods}
+  \describe{
+    \item{\code{render()}}{
+      Make a phone number
+    }
+  }
 }
 \examples{
 z <- PhoneNumberProvider$new()

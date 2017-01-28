@@ -4,10 +4,6 @@
 \name{NumericsProvider}
 \alias{NumericsProvider}
 \title{NumericsProvider}
-\format{An object of class \code{R6ClassGenerator} of length 24.}
-\usage{
-NumericsProvider
-}
 \arguments{
 \item{n}{number of values}
 
@@ -25,6 +21,29 @@ NumericsProvider
 }
 \description{
 NumericsProvider
+}
+\details{
+\strong{Methods}
+  \describe{
+    \item{\code{double()}}{
+      get a double, pulls from normal distribution
+    }
+    \item{\code{integer()}}{
+      get an integer, runs \code{\link{sample}} on range given
+    }
+    \item{\code{unif()}}{
+      get numbers from the uniform distribution
+    }
+    \item{\code{norm()}}{
+      get numbers from the normal distribution
+    }
+    \item{\code{lnorm()}}{
+      get numbers from the lognormal distribution
+    }
+    \item{\code{beta()}}{
+      get numbers from the beta distribution
+    }
+  }
 }
 \examples{
 z <- NumericsProvider$new()
