@@ -4,6 +4,7 @@ charlatan
 
 
 [![Build Status](https://travis-ci.org/ropenscilabs/charlatan.svg?branch=master)](https://travis-ci.org/ropenscilabs/charlatan)
+[![codecov](https://codecov.io/gh/ropenscilabs/charlatan/branch/master/graph/badge.svg)](https://codecov.io/gh/ropenscilabs/charlatan)
 
 `charlatan` makes fake data, inspired from and borrowing some code from Python's [faker](https://github.com/joke2k/faker) 
 
@@ -40,13 +41,13 @@ library("charlatan")
 ```r
 x <- fraudster()
 x$job()
-#> [1] "Surveyor, rural practice"
+#> [1] "Professor Emeritus"
 x$name()
-#> [1] "Marisela Zemlak"
+#> [1] "Zakary Metz"
 x$job()
-#> [1] "Administrator"
+#> [1] "Copy"
 x$color_name()
-#> [1] "Silver"
+#> [1] "LightSlateGray"
 ```
 
 ## locale support
@@ -58,21 +59,20 @@ Locale support for job data
 
 ```r
 ch_job(locale = "en_US", n = 3)
-#> [1] "Clinical cytogeneticist"            
-#> [2] "Psychologist, educational"          
-#> [3] "Chartered public finance accountant"
+#> [1] "Secondary school teacher"      "Manufacturing engineer"       
+#> [3] "Scientist, research (medical)"
 ch_job(locale = "fr_FR", n = 3)
-#> [1] "Manipulateur en électroradiologie médicale"
-#> [2] "Vétérinaire"                               
-#> [3] "Biologiste médical"
+#> [1] "Conducteur d'engins de travaux publics"
+#> [2] "Vendeur en fournitures automobiles"    
+#> [3] "Technicien"
 ch_job(locale = "hr_HR", n = 3)
-#> [1] "Viši muzejski pedagog"                                                
-#> [2] "Osoblje za održavanje  zrakoplova (mehaničari, tehničari i inženjeri)"
-#> [3] "Stručni suradnik ovlaštenog inženjera geodezije"
+#> [1] "Prvostupnik medicinske radiologije"
+#> [2] "Tokar"                             
+#> [3] "Tapetar"
 ch_job(locale = "uk_UA", n = 3)
-#> [1] "Золотар"   "Математик" "Дипломат"
+#> [1] "Дизайнер"  "Кіноактор" "Пілот"
 ch_job(locale = "zh_TW", n = 3)
-#> [1] "驗光師"         "資材主管"       "軟體設計工程師"
+#> [1] "安心服務員"         "採購主管"           "市場調查／市場分析"
 ```
 
 For colors:
@@ -80,9 +80,9 @@ For colors:
 
 ```r
 ch_color_name(locale = "en_US", n = 3)
-#> [1] "HotPink"    "White"      "LightGreen"
+#> [1] "Ivory"      "DarkOrchid" "SkyBlue"
 ch_color_name(locale = "uk_UA", n = 3)
-#> [1] "Блідий рожево-ліловий" "Темно-аспідний сірий"  "Яскраво-зелений"
+#> [1] "Паросток папаї"  "Блідо-пісочний"  "Темно-оливковий"
 ```
 
 More coming soon ...
@@ -93,18 +93,18 @@ More coming soon ...
 ```r
 ch_generate()
 #> # A tibble: 10 × 3
-#>                      name                                  job
-#>                     <chr>                                <chr>
-#> 1         Dempsey Windler                 Maintenance engineer
-#> 2      Mrs. Signa Haag MD                      Games developer
-#> 3  Miss Suzanna Blanda MD                       Phytotherapist
-#> 4           Hildur Ledner               Embryologist, clinical
-#> 5  Charolette Anderson MD Accountant, chartered public finance
-#> 6                   Kunde                Merchant navy officer
-#> 7          Barbra Reinger               Conservator, furniture
-#> 8          Ammie Dietrich                   Academic librarian
-#> 9                 Keebler                      Charity officer
-#> 10        Kameron Stracke            Health and safety adviser
+#>                     name                                         job
+#>                    <chr>                                       <chr>
+#> 1             Tonya Batz                      Programmer, multimedia
+#> 2       Jethro Herzog MD           Sales promotion account executive
+#> 3         Malvin Cormier                Education officer, community
+#> 4     Josephine Hyatt MD                                      Artist
+#> 5         Sabrina Zemlak           Special educational needs teacher
+#> 6       Annabella Kirlin Armed forces training and education officer
+#> 7  Ms. Angelita Rice DDS                                Risk analyst
+#> 8       Angie Kemmer DVM                  Designer, interior/spatial
+#> 9        Harlan Shanahan                         Early years teacher
+#> 10      Faustino Smitham                          Facilities manager
 #> # ... with 1 more variables: phone_number <chr>
 ```
 
@@ -112,18 +112,18 @@ ch_generate()
 ```r
 ch_generate('job', 'phone_number', n = 30)
 #> # A tibble: 30 × 2
-#>                                     job       phone_number
-#>                                   <chr>              <chr>
-#> 1  English as a second language teacher       899.267.2020
-#> 2                 Volunteer coordinator       986.048.9935
-#> 3                Psychologist, clinical 1-024-424-8379x471
-#> 4    Public relations account executive  (526)080-3332x216
-#> 5                 Adult guidance worker   +31(7)3479289390
-#> 6                               Midwife   +62(3)8024221131
-#> 7       Sport and exercise psychologist      (584)490-4327
-#> 8                         Oceanographer     1-600-230-0388
-#> 9                       Legal secretary       237.694.1420
-#> 10               Fitness centre manager       176.506.7116
+#>                                   job       phone_number
+#>                                 <chr>              <chr>
+#> 1                         Ship broker       166-831-6462
+#> 2                    Paediatric nurse       820-087-7614
+#> 3        Research officer, government       200-962-9217
+#> 4                             Barista        07396637074
+#> 5                       Ranger/warden   +99(5)2419563330
+#> 6                          Orthoptist  (651)891-6845x446
+#> 7  Surveyor, planning and development      (347)048-9535
+#> 8                     Arboriculturist       812.251.4898
+#> 9     Environmental education officer       451-128-6060
+#> 10             Health service manager 273.634.3093x93840
 #> # ... with 20 more rows
 ```
 
@@ -133,17 +133,17 @@ ch_generate('job', 'phone_number', n = 30)
 
 ```r
 ch_name()
-#> [1] "Darrion Predovic"
+#> [1] " Rosenbaum"
 ```
 
 
 ```r
 ch_name(10)
-#>  [1] "Dr. Ean Rowe"           "Murl Little"           
-#>  [3] "Dr. Jorden Hagenes III" "Caroline Stark MD"     
-#>  [5] "Dr. Johney Douglas"     "Riya O'Reilly"         
-#>  [7] "Blanca Daniel"          "Ruben Mueller"         
-#>  [9] " Grant"                 "Treyton Nitzsche V"
+#>  [1] "Miss Lorri Bartell DVM"    "Bernita Jakubowski"       
+#>  [3] "Redden Miller MD"          "Lucetta Rogahn"           
+#>  [5] " Goodwin"                  "Dr. Candida Kemmer"       
+#>  [7] "Donavan Bode"              "Marlene Kuhlman"          
+#>  [9] "Ms. Sherita Langworth PhD" "Baker Labadie"
 ```
 
 
@@ -152,16 +152,16 @@ ch_name(10)
 
 ```r
 ch_phone_number()
-#> [1] "607.926.6465"
+#> [1] "(315)972-8326x000"
 ```
 
 
 ```r
 ch_phone_number(10)
-#>  [1] "012.588.5001"         "1-865-715-9802x519"   "1-151-516-5243x49390"
-#>  [4] "07241668634"          "450-035-5344"         "(182)022-3086x36655" 
-#>  [7] "250.550.8146x0119"    "083.165.5636"         "+61(0)2085749887"    
-#> [10] "067.814.1679x03777"
+#>  [1] "745.750.3740x1145"   "09695909022"         "1-513-104-7668"     
+#>  [4] "736-307-3470"        "629-358-6160x3756"   "(110)617-2553x79503"
+#>  [7] "1-822-654-6816"      "(092)081-8548x924"   "499-038-5814"       
+#> [10] "(686)096-9413x17552"
 ```
 
 ## job
@@ -169,22 +169,22 @@ ch_phone_number(10)
 
 ```r
 ch_job()
-#> [1] "Mechanical engineer"
+#> [1] "Solicitor, Scotland"
 ```
 
 
 ```r
 ch_job(10)
-#>  [1] "Information officer"                        
-#>  [2] "Chartered accountant"                       
-#>  [3] "Psychologist, prison and probation services"
-#>  [4] "Therapist, drama"                           
-#>  [5] "Geneticist, molecular"                      
-#>  [6] "Designer, jewellery"                        
-#>  [7] "Insurance claims handler"                   
-#>  [8] "Operations geologist"                       
-#>  [9] "Development worker, community"              
-#> [10] "Ranger/warden"
+#>  [1] "Jewellery designer"                      
+#>  [2] "Advertising copywriter"                  
+#>  [3] "Secondary school teacher"                
+#>  [4] "Neurosurgeon"                            
+#>  [5] "Psychologist, clinical"                  
+#>  [6] "Race relations officer"                  
+#>  [7] "Surveyor, land/geomatics"                
+#>  [8] "Geographical information systems officer"
+#>  [9] "Investment analyst"                      
+#> [10] "Research officer, government"
 ```
 
 ## credit cards
@@ -192,28 +192,28 @@ ch_job(10)
 
 ```r
 ch_credit_card_provider()
-#> [1] "Mastercard"
+#> [1] "American Express"
 ch_credit_card_provider(n = 4)
-#> [1] "JCB 15 digit" "JCB 16 digit" "Maestro"      "Maestro"
+#> [1] "Discover"      "JCB 16 digit"  "VISA 16 digit" "JCB 16 digit"
 ```
 
 
 ```r
 ch_credit_card_number()
-#> [1] "4139191403423"
+#> [1] "4594543103018041"
 ch_credit_card_number(n = 10)
-#>  [1] "869937736759719111"  "3000265784751728"    "3158817892934192868"
-#>  [4] "4434232531681695"    "180094119248034949"  "6011440217194063341"
-#>  [7] "3337711215517268359" "210001897759873365"  "3528113611019333408"
-#> [10] "52825956761873971"
+#>  [1] "869976397435821706"  "4204539413769531"    "3701959758184481"   
+#>  [4] "3096430466031602579" "6011097635089957697" "4041672520291979"   
+#>  [7] "3005222131360369"    "869942617220021019"  "3714409156552637"   
+#> [10] "869923512492075459"
 ```
 
 
 ```r
 ch_credit_card_security_code()
-#> [1] "883"
+#> [1] "850"
 ch_credit_card_security_code(10)
-#>  [1] "203"  "378"  "569"  "143"  "2669" "216"  "133"  "582"  "321"  "465"
+#>  [1] "461"  "975"  "197"  "337"  "6454" "272"  "855"  "366"  "085"  "143"
 ```
 
 

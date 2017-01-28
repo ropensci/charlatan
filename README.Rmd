@@ -11,6 +11,7 @@ knitr::opts_chunk$set(
 ```
 
 [![Build Status](https://travis-ci.org/ropenscilabs/charlatan.svg?branch=master)](https://travis-ci.org/ropenscilabs/charlatan)
+[![codecov](https://codecov.io/gh/ropenscilabs/charlatan/branch/master/graph/badge.svg)](https://codecov.io/gh/ropenscilabs/charlatan)
 
 `charlatan` makes fake data, inspired from and borrowing some code from Python's [faker](https://github.com/joke2k/faker) 
 
