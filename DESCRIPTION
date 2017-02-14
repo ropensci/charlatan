@@ -1,11 +1,11 @@
 Package: charlatan
 Type: Package
 Title: Make Fake Data
-Description: Make fake data, supporting addresses, person names, dates, 
+Description: Make fake data, supporting addresses, person names, dates,
     times, colors, coordinates, currencies, digital object identifiers
     (DOIs), jobs, phone numbers, DNA sequences, doubles and integers
     from distributions and within a range.
-Version: 0.0.6.9564
+Version: 0.0.6.9569
 Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"),
     email = "myrmecocystus@gmail.com"))
 License: MIT + file LICENSE
@@ -35,6 +35,16 @@ Collate:
     'color-provider-uk_UA.R'
     'color-provider.R'
     'color.R'
+    'company-provider-bg_BG.R'
+    'company-provider-cs_CZ.R'
+    'company-provider-de_DE.R'
+    'company-provider-en_US.R'
+    'company-provider-es_MX.R'
+    'company-provider-fa_IR.R'
+    'company-provider-fr_FR.R'
+    'company-provider-hr_HR.R'
+    'company-provider-it_IT.R'
+    'company-provider.R'
     'coordinate-provider.R'
     'coordinates.R'
     'credit_card-provider.R'
@@ -72,6 +82,8 @@ Collate:
     'person-provider-fi_FI.R'
     'person-provider-fr_CH.R'
     'person-provider-fr_FR.R'
+    'person-provider-hr_HR.R'
+    'person-provider-it_IT.R'
     'person-provider.R'
     'phone_number.R'
     'phonenumbers-provider.R'

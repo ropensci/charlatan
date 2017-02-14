@@ -52,5 +52,13 @@ JobProvider <- R6::R6Class(
 )
 
 parse_eval <- function(x, y) {
-  eval(parse(text = paste0(x, tolower(y))))
+  res <- tryCatch(
+    eval(parse(text = paste0(x, tolower(y)))),
+    error = function(E) E
+  )
+  if (inherits(res, "error")) {
+    NULL
+  } else {
+    res
+  }
 }
