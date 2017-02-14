@@ -11,6 +11,8 @@ addons:
 after_success:
   - Rscript -e 'covr::codecov()'
 
+r_check_args: "--as-cran --run-dontrun"
+
 notifications:
   email:
     on_success: change
