@@ -17,13 +17,13 @@
 #'    \item{\code{random_digit}}{
 #'      random integer between 0 and 9
 #'    }
-#'    \item{\code{random_digit_not_null}}{
+#'    \item{\code{random_digit_not_zero}}{
 #'      random integer between 1 and 9
 #'    }
 #'    \item{\code{random_digit_or_empty}}{
 #'      random integer between 0 and 9 or empty character string
 #'    }
-#'    \item{\code{random_digit_not_null_or_empty}}{
+#'    \item{\code{random_digit_not_zero_or_empty}}{
 #'      random integer between 1 and 9 or empty character string
 #'    }
 #'    \item{\code{random_letter}}{
@@ -57,9 +57,9 @@
 #' x$random_element(letters)
 #' x$random_int()
 #' x$random_digit()
-#' x$random_digit_not_null()
+#' x$random_digit_not_zero()
 #' x$random_digit_or_empty()
-#' x$random_digit_not_null_or_empty()
+#' x$random_digit_not_zero_or_empty()
 #' x$random_letter()
 #' x$check_locale("es_ES")
 #' ## fails
@@ -79,7 +79,7 @@ BaseProvider <- R6::R6Class(
       sample(0:9, size = 1)
     },
 
-    random_digit_not_null = function() {
+    random_digit_not_zero = function() {
       sample(1:9, size = 1)
     },
 
@@ -91,7 +91,7 @@ BaseProvider <- R6::R6Class(
       }
     },
 
-    random_digit_not_null_or_empty = function() {
+    random_digit_not_zero_or_empty = function() {
       if (sample(0:1, size = 1) == 1) {
         sample(1:9, size = 1)
       } else {
@@ -106,9 +106,9 @@ BaseProvider <- R6::R6Class(
 
     numerify = function(text = '###') {
       text <- do_match(text, "#", self$random_digit)
-      text <- do_match(text, "%", self$random_digit_not_null)
+      text <- do_match(text, "%", self$random_digit_not_zero)
       text <- do_match(text, "!", self$random_digit_or_empty)
-      text <- do_match(text, "@", self$random_digit_not_null_or_empty)
+      text <- do_match(text, "@", self$random_digit_not_zero_or_empty)
       return(text)
     },
 

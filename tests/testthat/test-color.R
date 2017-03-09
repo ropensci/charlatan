@@ -47,3 +47,15 @@ test_that("ch_hex_color", {
   expect_equal(length(ch_hex_color(12)), 12)
   expect_true(all(grepl("#", ch_hex_color(12))))
 })
+
+
+context("color and safe color matches expected format")
+
+# FIXME - do these tests
+# test_that("color_name matches expected format", {
+#   "xxx"
+# })
+#
+# test_that("safe_color_name matches expected format", {
+#   "xxx"
+# })

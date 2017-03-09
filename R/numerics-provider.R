@@ -59,7 +59,7 @@ NumericsProvider <- R6::R6Class(
     },
 
     integer = function(n = 1, min = 1, max = 1000) {
-      sample(min:max, n)
+      sample(min:max, n, replace = TRUE)
     },
 
     unif = function(n = 1, min = 0, max = 9999) {
