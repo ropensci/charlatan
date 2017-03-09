@@ -7,9 +7,10 @@
 ch_generate(..., n = 10)
 }
 \arguments{
-\item{...}{columns to include. must be in the allowed set. See Details.}
+\item{...}{columns to include. must be in the allowed set. See
+\strong{Allowed colun names} below}
 
-\item{n}{(integer) number of things to get, 1 to inifinity}
+\item{n}{(integer) number of things to get, any positive integer > 1}
 }
 \description{
 Generate a fake dataset
@@ -17,9 +18,9 @@ Generate a fake dataset
 \section{Allowed column names}{
 
 \itemize{
- \item name
- \item job
- \item phone_number
+ \item name (default included)
+ \item job (default included)
+ \item phone_number (default included)
  \item currency
  \item hex_color
  \item color_name
@@ -36,5 +37,4 @@ ch_generate(n = 100)
 ch_generate('job')
 ch_generate('job', 'name')
 ch_generate('job', 'color_name')
-# ch_generate('job', 'color_name', 'stuff')
 }

@@ -7,7 +7,7 @@
 ch_sequence(n = 1, length = 30)
 }
 \arguments{
-\item{n}{(integer) number of things to get, 1 to inifinity}
+\item{n}{(integer) number of things to get, any positive integer > 1}
 
 \item{length}{(integer) length of sequence to create}
 }

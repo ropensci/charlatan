@@ -128,7 +128,7 @@ BaseProvider <- R6::R6Class(
 
 check_locale_ <- function(x) {
   if (!x %in% available_locales) {
-    stop(x, ' not in set of avaiable locales', call. = FALSE)
+    stop(x, ' not in set of available locales', call. = FALSE)
   }
 }
 

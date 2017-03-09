@@ -14,7 +14,7 @@ ch_unix_time(n = 1)
 ch_date_time(n = 1)
 }
 \arguments{
-\item{n}{(integer) number of things to get, 1 to inifinity}
+\item{n}{(integer) number of things to get, any positive integer > 1}
 }
 \description{
 Create dates and times

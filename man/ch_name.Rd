@@ -7,7 +7,7 @@
 ch_name(n = 1, locale = NULL)
 }
 \arguments{
-\item{n}{(integer) number of things to get, 1 to inifinity}
+\item{n}{(integer) number of things to get, any positive integer > 1}
 
 \item{locale}{(character) the locale to use. options: en_US (default),
 fr_FR, fr_CH, hr_HR, fa_IR, pl_PL, ru_RU, uk_UA, zh_TW.}

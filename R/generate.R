@@ -1,13 +1,14 @@
 #' Generate a fake dataset
 #'
 #' @export
-#' @param ... columns to include. must be in the allowed set. See Details.
-#' @param n (integer) number of things to get, 1 to inifinity
+#' @param ... columns to include. must be in the allowed set. See
+#' \strong{Allowed colun names} below
+#' @template params
 #' @section Allowed column names:
 #' \itemize{
-#'  \item name
-#'  \item job
-#'  \item phone_number
+#'  \item name (default included)
+#'  \item job (default included)
+#'  \item phone_number (default included)
 #'  \item currency
 #'  \item hex_color
 #'  \item color_name
@@ -22,7 +23,6 @@
 #' ch_generate('job')
 #' ch_generate('job', 'name')
 #' ch_generate('job', 'color_name')
-#' # ch_generate('job', 'color_name', 'stuff')
 ch_generate <- function(..., n = 10) {
   choices <- unlist(list(...))
   if (length(choices) == 0) choices <- c("name", "job", "phone_number")
