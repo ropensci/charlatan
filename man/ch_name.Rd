@@ -10,7 +10,7 @@ ch_name(n = 1, locale = NULL)
 \item{n}{(integer) number of things to get, 1 to inifinity}
 
 \item{locale}{(character) the locale to use. options: en_US (default),
-fr_FR, fr_CH, hr_FR, fa_IR, pl_PL, ru_RU, uk_UA, zh_TW.}
+fr_FR, fr_CH, hr_HR, fa_IR, pl_PL, ru_RU, uk_UA, zh_TW.}
 }
 \description{
 Create fake person names
@@ -25,4 +25,3 @@ ch_name(locale = "fr_CH", n = 10)
 ch_name(locale = "fa_IR", n = 10)
 ch_name(locale = "fi_FI", n = 10)
 }
-

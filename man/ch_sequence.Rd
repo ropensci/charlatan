@@ -22,4 +22,3 @@ ch_sequence(100)
 ch_sequence(length = 500)
 ch_sequence(10, length = 500)
 }
-

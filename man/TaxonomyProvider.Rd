@@ -40,6 +40,7 @@ those of real taxa, but may not as well.
 Randomly, the taxonomic authority is in parentheses - which represents
 that the given authority was not the original authority.
 }
+
 \examples{
 (z <- TaxonomyProvider$new())
 z$genus()
@@ -49,4 +50,3 @@ z$species(authority = TRUE)
 z$species(authority = TRUE, date = TRUE)
 }
 \keyword{internal}
-

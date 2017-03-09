@@ -2,8 +2,8 @@
 % Please edit documentation in R/credit_card.R
 \name{ch_credit}
 \alias{ch_credit}
-\alias{ch_credit_card_number}
 \alias{ch_credit_card_provider}
+\alias{ch_credit_card_number}
 \alias{ch_credit_card_security_code}
 \title{Create fake credit card data}
 \usage{
@@ -31,4 +31,3 @@ ch_credit_card_security_code()
 ch_credit_card_security_code(n = 10)
 ch_credit_card_security_code(n = 500)
 }
-

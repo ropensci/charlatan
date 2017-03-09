@@ -47,4 +47,3 @@ x$position()
 # DOIs (Digital Object Identifier)
 x$doi()
 }
-

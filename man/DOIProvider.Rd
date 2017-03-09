@@ -20,4 +20,3 @@ z <- DOIProvider$new()
 z$render()
 }
 \keyword{internal}
-

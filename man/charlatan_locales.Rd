@@ -10,4 +10,3 @@ types of data.
 \examples{
 charlatan_locales()
 }
-

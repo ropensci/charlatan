@@ -2,8 +2,8 @@
 % Please edit documentation in R/charlatan-package.R
 \docType{package}
 \name{charlatan-package}
-\alias{charlatan}
 \alias{charlatan-package}
+\alias{charlatan}
 \title{charlatan}
 \description{
 Make fake data, supporting addresses, person names, dates,
@@ -23,6 +23,7 @@ from distributions and within a range.
  initialize and then call methods on the them.
 }
 }
+
 \examples{
 # generate individual types of data
 ch_name()
@@ -51,4 +52,3 @@ x$hex_color()
 Scott Chamberlain \email{myrmecocystus@gmail.com}
 }
 \keyword{package}
-

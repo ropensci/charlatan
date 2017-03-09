@@ -27,6 +27,7 @@ Generate a fake dataset
  \item rgb_css_color
 }
 }
+
 \examples{
 ch_generate()
 ch_generate(n = 1)
@@ -37,4 +38,3 @@ ch_generate('job', 'name')
 ch_generate('job', 'color_name')
 # ch_generate('job', 'color_name', 'stuff')
 }
-

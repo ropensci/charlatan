@@ -20,4 +20,3 @@ z <- CurrencyProvider$new()
 z$render()
 }
 \keyword{internal}
-

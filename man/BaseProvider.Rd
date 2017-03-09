@@ -19,13 +19,13 @@ BaseProvider
    \item{\code{random_digit}}{
      random integer between 0 and 9
    }
-   \item{\code{random_digit_not_null}}{
+   \item{\code{random_digit_not_zero}}{
      random integer between 1 and 9
    }
    \item{\code{random_digit_or_empty}}{
      random integer between 0 and 9 or empty character string
    }
-   \item{\code{random_digit_not_null_or_empty}}{
+   \item{\code{random_digit_not_zero_or_empty}}{
      random integer between 1 and 9 or empty character string
    }
    \item{\code{random_letter}}{
@@ -58,13 +58,12 @@ x$numerify(z$render())
 x$random_element(letters)
 x$random_int()
 x$random_digit()
-x$random_digit_not_null()
+x$random_digit_not_zero()
 x$random_digit_or_empty()
-x$random_digit_not_null_or_empty()
+x$random_digit_not_zero_or_empty()
 x$random_letter()
 x$check_locale("es_ES")
 ## fails
 # x$check_locale("es_EQ")
 }
 \keyword{internal}
-

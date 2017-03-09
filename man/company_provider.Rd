@@ -56,4 +56,3 @@ company_provider(locale = "de_DE")$company()
 company_provider(locale = "fa_IR")$company()
 }
 \keyword{internal}
-

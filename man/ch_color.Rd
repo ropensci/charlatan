@@ -3,11 +3,11 @@
 \name{ch_color}
 \alias{ch_color}
 \alias{ch_color_name}
+\alias{ch_safe_color_name}
 \alias{ch_hex_color}
+\alias{ch_safe_hex_color}
 \alias{ch_rgb_color}
 \alias{ch_rgb_css_color}
-\alias{ch_safe_color_name}
-\alias{ch_safe_hex_color}
 \title{Create fake colors}
 \usage{
 ch_color_name(n = 1, locale = NULL)
@@ -54,4 +54,3 @@ ch_rgb_css_color(10)
 ch_color_name(locale = "uk_UA")
 ch_color_name(n = 10, locale = "uk_UA")
 }
-

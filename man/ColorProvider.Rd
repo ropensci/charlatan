@@ -45,4 +45,3 @@ x$locale
 x$color_name()
 }
 \keyword{internal}
-

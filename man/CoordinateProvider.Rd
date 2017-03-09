@@ -33,4 +33,3 @@ z$position()
 z$position(bbox = c(-120, 30, -110, 60))
 }
 \keyword{internal}
-
