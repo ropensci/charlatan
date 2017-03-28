@@ -3,6 +3,8 @@
 #' @export
 #' @name taxonomy
 #' @template params
+#' @inheritSection TaxonomyProvider Names
+#' @inheritSection TaxonomyProvider Taxonomic authority
 #' @examples
 #' ch_taxonomic_genus()
 #' ch_taxonomic_genus(10)

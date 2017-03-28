@@ -19,6 +19,22 @@ ch_taxonomic_species(n = 1)
 \description{
 Create fake taxonomic names
 }
+\section{Names}{
+
+Names were taken from Theplantlist. 500 genera names and 500
+epithets were chosen at random from the set of 10,000 names in the
+dataset in the \code{taxize} package. Theplantlist is, as it says on the
+tin, composed of plant names - so these fake names are derived from
+plant names if that matters to you. These may generate names that match
+those of real taxa, but may not as well.
+}
+
+\section{Taxonomic authority}{
+
+Randomly, the taxonomic authority is in parentheses - which represents
+that the given authority was not the original authority.
+}
+
 \examples{
 ch_taxonomic_genus()
 ch_taxonomic_genus(10)
