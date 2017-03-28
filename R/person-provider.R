@@ -40,7 +40,10 @@ PersonProvider <- R6::R6Class(
 
     initialize = function(locale = NULL) {
       if (!is.null(locale)) {
+        # check global locales
         super$check_locale(locale)
+        # check person provider locales
+        check_locale_(tolower(locale), super$prov_avail_locales("person_"))
         self$locale <- locale
       } else {
         self$locale <- 'en_US'
@@ -51,7 +54,6 @@ PersonProvider <- R6::R6Class(
 
     render = function() {
       fmt <- super$random_element(self$formats)
-      #cat(fmt, sep = "\n")
       dat <- lapply(self$person[pluck_names(fmt, self$person)], sample,
                     size = 1)
       if (length(grep("last_name", names(dat))) > 1) {

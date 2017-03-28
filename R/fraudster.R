@@ -67,7 +67,7 @@ FraudsterClient <- R6::R6Class(
 
     # names
     name = function(n = 1) {
-      ch_name(n = n)
+      ch_name(n = n, locale = self$locale)
     },
 
     # colors
@@ -104,8 +104,8 @@ FraudsterClient <- R6::R6Class(
       ch_lon(n = n)
     },
 
-    position = function(n = 1) {
-      ch_position(n = n)
+    position = function(n = 1, bbox = NULL) {
+      ch_position(n = n, bbox = bbox)
     },
 
     # doi

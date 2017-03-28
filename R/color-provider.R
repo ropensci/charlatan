@@ -55,7 +55,10 @@ ColorProvider <- R6::R6Class(
 
     initialize = function(locale = NULL) {
       if (!is.null(locale)) {
+        # check global locales
         super$check_locale(locale)
+        # check person provider locales
+        check_locale_(tolower(locale), super$prov_avail_locales("all_colors_"))
         self$locale <- locale
       } else {
         self$locale <- 'en_US'

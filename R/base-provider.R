@@ -123,12 +123,17 @@ BaseProvider <- R6::R6Class(
       self$lexify(self$numerify(text))
     },
 
-    check_locale = function(x) check_locale_(x)
+    check_locale = function(x) check_locale_(x),
+
+    prov_avail_locales = function(x) {
+      tmp <- getNamespaceExports("charlatan")
+      gsub(x, "", tmp[tmp %in% paste(x, tolower(available_locales), sep = "")])
+    }
   )
 )
 
-check_locale_ <- function(x) {
-  if (!x %in% available_locales) {
+check_locale_ <- function(x, z = available_locales) {
+  if (!x %in% z) {
     stop(x, ' not in set of available locales', call. = FALSE)
   }
 }

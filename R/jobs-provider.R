@@ -37,7 +37,10 @@ JobProvider <- R6::R6Class(
 
     initialize = function(locale = NULL) {
       if (!is.null(locale)) {
+        # check locale globally supported
         super$check_locale(locale)
+        # check job provider locales
+        check_locale_(tolower(locale), super$prov_avail_locales("job_formats_"))
         self$locale <- locale
       } else {
         self$locale <- 'en_US'
