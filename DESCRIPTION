@@ -26,7 +26,7 @@ Suggests:
     knitr,
     rmarkdown
 RoxygenNote: 6.0.1
-Collate:
+Collate: 
     'base-provider.R'
     'datetime-provider.R'
     'address-provider.R'
@@ -69,6 +69,7 @@ Collate:
     'jobs-provider-zh_TW.R'
     'jobs-provider.R'
     'missing-data-provider.R'
+    'missing.R'
     'name.R'
     'numerics-provider.R'
     'numerics.R'
