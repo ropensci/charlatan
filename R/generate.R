@@ -29,7 +29,9 @@ ch_generate <- function(..., n = 10) {
   stopifnot(inherits(choices, "character"))
 
   if (!all(choices %in% all_choices)) {
-    stop("column name must be selected from allowed options, see docs", call. = FALSE)
+    stop("column name must be selected from the following:\n  ",
+         paste0(all_choices, collapse = "\n  "),
+         call. = FALSE)
   }
   cols <- stats::setNames(
     lapply(choices, function(z) {
