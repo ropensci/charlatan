@@ -54,6 +54,7 @@ PersonProvider <- R6::R6Class(
 
     render = function() {
       fmt <- super$random_element(self$formats)
+      cat(fmt, sep = "\n")
       dat <- lapply(self$person[pluck_names(fmt, self$person)], sample,
                     size = 1)
       if (length(grep("last_name", names(dat))) > 1) {

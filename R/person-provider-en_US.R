@@ -7,6 +7,7 @@ person_formats_female_en_us = c(
   '{{first_names_female}} {{last_names}}',
   '{{first_names_female}} {{last_names}}',
   '{{first_names_female}} {{last_names}}',
+  '{{first_names_female}} {{last_names1}}-{{last_names2}}',
   '{{prefixes_female}} {{first_names_female}} {{last_names}}',
   '{{first_names_female}} {{last_names}} {{suffixes_female}}',
   '{{prefixes_female}} {{first_names_female}} {{last_names}} {{suffixes_female}}'
@@ -18,6 +19,7 @@ person_formats_male_en_us = c(
   '{{first_names_male}} {{last_names}}',
   '{{first_names_male}} {{last_names}}',
   '{{first_names_male}} {{last_names}}',
+  '{{first_names_male}} {{last_names1}}-{{last_names2}}',
   '{{prefixes_male}} {{first_names_male}} {{last_names}}',
   '{{first_names_male}} {{last_names}} {{suffixes_male}}',
   '{{prefixes_male}} {{first_names_male}} {{last_names}} {{suffixes_male}}'
