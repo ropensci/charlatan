@@ -12,7 +12,7 @@
 #' @format NULL
 #' @usage NULL
 #' @examples
-#' z <- DOIProvider$new()
+#' (z <- DOIProvider$new())
 #' z$render()
 DOIProvider <- R6::R6Class(
   'DOIProvider',
@@ -41,7 +41,7 @@ DOIProvider <- R6::R6Class(
     ),
 
     render = function() {
-      x <- sample(length(self$funs), 1)
+      x <- super$random_element(seq_along(self$funs))
       self$funs[[x]]()
     }
   )

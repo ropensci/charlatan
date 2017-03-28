@@ -16,7 +16,7 @@ DOIProvider
   }
 }
 \examples{
-z <- DOIProvider$new()
+(z <- DOIProvider$new())
 z$render()
 }
 \keyword{internal}
