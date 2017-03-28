@@ -14,7 +14,7 @@ BaseProvider
      wrapper around \code{\link{sample}}
    }
    \item{\code{random_int}}{
-     random integer
+     random integer - uses \code{sample} internally
    }
    \item{\code{random_digit}}{
      random integer between 0 and 9

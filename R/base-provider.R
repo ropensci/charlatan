@@ -12,7 +12,7 @@
 #'      wrapper around \code{\link{sample}}
 #'    }
 #'    \item{\code{random_int}}{
-#'      random integer
+#'      random integer - uses \code{sample} internally
 #'    }
 #'    \item{\code{random_digit}}{
 #'      random integer between 0 and 9
@@ -72,20 +72,20 @@ BaseProvider <- R6::R6Class(
     },
 
     random_int = function(min=0, max=9999) {
-      floor(runif(1, min, max))
+      self$random_element(min:max)
     },
 
     random_digit = function() {
-      sample(0:9, size = 1)
+      self$random_element(0:9)
     },
 
     random_digit_not_zero = function() {
-      sample(1:9, size = 1)
+      self$random_element(1:9)
     },
 
     random_digit_or_empty = function() {
-      if (sample(0:1, size = 1) == 1) {
-        sample(0:9, size = 1)
+      if (self$random_element(0:1) == 1) {
+        self$random_element(0:9)
       } else {
         ''
       }
@@ -93,7 +93,7 @@ BaseProvider <- R6::R6Class(
 
     random_digit_not_zero_or_empty = function() {
       if (sample(0:1, size = 1) == 1) {
-        sample(1:9, size = 1)
+        self$random_element(1:9)
       } else {
         ''
       }
