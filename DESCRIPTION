@@ -87,6 +87,7 @@ Collate:
     'person-provider-hr_HR.R'
     'person-provider-it_IT.R'
     'person-provider.R'
+    'phone-number-provider-all.R'
     'phone_number.R'
     'phonenumbers-provider.R'
     'sequence-provider.R'

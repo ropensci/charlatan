@@ -3,7 +3,19 @@
 \docType{data}
 \name{PhoneNumberProvider}
 \alias{PhoneNumberProvider}
+\alias{phone_number_provider_locales}
 \title{PhoneNumberProvider}
+\format{An object of class \code{character} of length 37.}
+\usage{
+phone_number_provider_locales
+}
+\arguments{
+\item{locale}{(character) the locale to use. options: en_US (default),
+en_US, es_ES, es_MX, en_GB, en_CA, el_GR, dk_DK, de_DE, cs_CZ, bs_BA,
+bg_BG, fa_IR, fi_FI, fr_CH, fr_FR, hi_IN, hr_HR, hu_HU, it_IT, ja_JP, ko_KR,
+it_LT, lv_LV, ne_NP, nl_BE, nl_NL, no_NO, pl_PL, pt_BR, pt_PT, ru_RU,
+sk_SK, sl_SL, sv_SE, tr_TR, uk_UA, zh_TW}
+}
 \description{
 PhoneNumberProvider
 }
@@ -18,5 +30,9 @@ PhoneNumberProvider
 \examples{
 z <- PhoneNumberProvider$new()
 z$render()
+
+PhoneNumberProvider$new(locale = "fr_FR")$render()
+PhoneNumberProvider$new(locale = "sk_SK")$render()
 }
+\keyword{datasets}
 \keyword{internal}
