@@ -20,7 +20,8 @@ CoordinateProvider
       a position, of form [longitude,latitude]
       \itemize{
        \item bbox: optionally, specify a bounding box for the position
-       to be in, of the form [west,south,east,north]
+       to be in, of the form [west,south,east,north] - checks that the
+       bbox has valid values for lat and long
       }
     }
   }

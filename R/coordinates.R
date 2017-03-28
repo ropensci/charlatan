@@ -13,6 +13,7 @@
 #'
 #' ch_position()
 #' ch_position(10)
+#' ch_position(bbox = c(-120, 30, -110, 60))
 ch_lon <- function(n = 1) {
   assert(n, c('integer', 'numeric'))
   if (n == 1) {
