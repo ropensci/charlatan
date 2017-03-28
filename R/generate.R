@@ -6,6 +6,9 @@
 #' (name, job, phone_number) if nothing is specified - but are overridden
 #' by any input.
 #' @template params
+#' @param locale (character) the locale to use. options: only supported
+#' for data types that have locale support, See each data provider for
+#' details.
 #' @section Allowed column names:
 #' \itemize{
 #'  \item name (default included)
@@ -24,7 +27,12 @@
 #' ch_generate('job')
 #' ch_generate('job', 'name')
 #' ch_generate('job', 'color_name')
-ch_generate <- function(..., n = 10) {
+#'
+#' # locale
+#' ch_generate(locale = "en_US")
+#' ch_generate(locale = "fr_FR")
+#' ch_generate(locale = "fr_CH")
+ch_generate <- function(..., n = 10, locale = NULL) {
   choices <- unlist(list(...))
   if (length(choices) == 0) choices <- c("name", "job", "phone_number")
   stopifnot(inherits(choices, "character"))
@@ -36,7 +44,12 @@ ch_generate <- function(..., n = 10) {
   }
   cols <- stats::setNames(
     lapply(choices, function(z) {
-      eval(parse(text = paste0("ch_", z)))(n)
+      fun <- eval(parse(text = paste0("ch_", z)))
+      if ("locale" %in% names(formals(fun))) {
+        fun(n, locale = locale)
+      } else {
+        fun(n)
+      }
     }),
     choices
   )

@@ -4,7 +4,7 @@
 \alias{ch_generate}
 \title{Generate a fake dataset}
 \usage{
-ch_generate(..., n = 10)
+ch_generate(..., n = 10, locale = NULL)
 }
 \arguments{
 \item{...}{columns to include. must be in the allowed set. See
@@ -13,6 +13,10 @@ ch_generate(..., n = 10)
 by any input.}
 
 \item{n}{(integer) number of things to get, any non-negative integer}
+
+\item{locale}{(character) the locale to use. options: only supported
+for data types that have locale support, See each data provider for
+details.}
 }
 \description{
 Generate a fake dataset
@@ -38,4 +42,9 @@ ch_generate(n = 100)
 ch_generate('job')
 ch_generate('job', 'name')
 ch_generate('job', 'color_name')
+
+# locale
+ch_generate(locale = "en_US")
+ch_generate(locale = "fr_FR")
+ch_generate(locale = "fr_CH")
 }
