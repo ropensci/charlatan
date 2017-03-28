@@ -8,7 +8,7 @@ person_formats_female_fr_ch = c(
   '{{first_name_female}} {{last_name}}',
   '{{first_name_female}} {{last_name}}',
   '{{first_name_female}} {{last_name}}',
-  '{{first_name_female}} {{last_name}}-{{last_name}}'
+  '{{first_name_female}} {{last_name1}}-{{last_name2}}'
 )
 
 person_formats_male_fr_ch = c(
@@ -18,7 +18,7 @@ person_formats_male_fr_ch = c(
   '{{first_name_male}} {{last_name}}',
   '{{first_name_male}} {{last_name}}',
   '{{first_name_male}} {{last_name}}',
-  '{{first_name_male}} {{last_name}}-{{last_name}}'
+  '{{first_name_male}} {{last_name1}}-{{last_name2}}'
 )
 
 person_formats_fr_ch = c(person_formats_male_fr_ch, person_formats_female_fr_ch)

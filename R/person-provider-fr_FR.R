@@ -9,9 +9,9 @@ person_formats_female_fr_fr = c(
   '{{first_name_female}} {{last_name}}',
   '{{first_name_female}} {{last_name}}',
   '{{first_name_female}} {{prefix}} {{last_name}}',
-  '{{first_name_female}} {{last_name}}-{{last_name}}',
+  '{{first_name_female}} {{last_name1}}-{{last_name2}}',
   '{{first_name_female}}-{{first_name_female}} {{last_name}}',
-  '{{first_name_female}} {{last_name}} {{prefix}} {{last_name}}'
+  '{{first_name_female}} {{last_name1}} {{prefix}} {{last_name2}}'
 )
 
 person_formats_male_fr_fr = c(
@@ -22,9 +22,9 @@ person_formats_male_fr_fr = c(
   '{{first_name_male}} {{last_name}}',
   '{{first_name_male}} {{last_name}}',
   '{{first_name_male}} {{prefix}} {{last_name}}',
-  '{{first_name_male}} {{last_name}}-{{last_name}}',
+  '{{first_name_male}} {{last_name1}}-{{last_name1}}',
   '{{first_name_male}}-{{first_name_male}} {{last_name}}',
-  '{{first_name_male}} {{last_name}} {{prefix}} {{last_name}}'
+  '{{first_name_male}} {{last_name1}} {{prefix}} {{last_name2}}'
 )
 
 person_formats_fr_fr = c(person_formats_male_fr_fr, person_formats_female_fr_fr)

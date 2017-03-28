@@ -1760,12 +1760,12 @@ person_prefixes_male_bg_bg = c(
 
 person_formats_female_bg_bg = c(
   '{{first_name_female}} {{last_name_female}}',
-  '{{prefix_female}} {{first_name_female}} {{last_name_female}}'
+  '{{prefixes_female}} {{first_name_female}} {{last_name_female}}'
 )
 
 person_formats_male_bg_bg = c(
   '{{first_name_male}} {{last_name_male}}',
-  '{{prefix_male}} {{first_name_male}} {{last_name_male}}'
+  '{{prefixes_male}} {{first_name_male}} {{last_name_male}}'
 )
 
 person_formats_bg_bg = c(person_formats_male_bg_bg, person_formats_female_bg_bg)

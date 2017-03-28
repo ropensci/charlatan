@@ -6,7 +6,7 @@
 \title{PersonProvider}
 \arguments{
 \item{locale}{(character) the locale to use. options: en_US (default),
-fr_FR, fr_CH, hr_FR, fa_IR, pl_PL, ru_RU, uk_UA, zh_TW.}
+fr_FR, fr_CH, fi_FI, fa_IR, es_ES, de_DE, de_AT, cs_CZ, bg_BG, dk_DK}
 }
 \description{
 PersonProvider
