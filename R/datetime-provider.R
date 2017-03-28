@@ -524,9 +524,9 @@ dt_countries <- list(
 #' z$countries
 #' z$centuries
 #' z$timezone()
-#' z$unix_time()
-#' z$date_time()
-#' z$year()
+#' # z$unix_time()
+#' # z$date_time()
+#' # z$year()
 DateTimeProvider <- R6::R6Class(
   inherit = BaseProvider,
   'DateTimeProvider',

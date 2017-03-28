@@ -11,10 +11,10 @@ BaseProvider
 \strong{Methods}
   \describe{
    \item{\code{random_element}}{
-     wrapper around \code{\link{sample}}
+     wrapper around \code{\link{sample}}: \code{x[sample(seq_along(x), 1)]}
    }
    \item{\code{random_int}}{
-     random integer - uses \code{sample} internally
+     random integer
    }
    \item{\code{random_digit}}{
      random integer between 0 and 9

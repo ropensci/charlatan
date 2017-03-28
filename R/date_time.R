@@ -7,11 +7,11 @@
 #' ch_timezone()
 #' ch_timezone(10)
 #'
-#' ch_unix_time()
-#' ch_unix_time(20)
+#' # ch_unix_time()
+#' # ch_unix_time(20)
 #'
-#' ch_date_time()
-#' ch_date_time(20)
+#' # ch_date_time()
+#' # ch_date_time(20)
 ch_timezone <- function(n = 1) {
   assert(n, c('integer', 'numeric'))
   if (n == 1) {
