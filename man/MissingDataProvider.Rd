@@ -17,9 +17,13 @@ MissingDataProvider
       }
     }
   }
+
+This method picks a random number (\code{N}) of slots in the input
+vector \code{x} (up to \code{length(x)}). Then picks \code{N} random
+positions and replaces them with NA matching the input class.
 }
 \examples{
 z <- MissingDataProvider$new()
-z$make_missing(letters)
+z$make_missing(x = letters)
 }
 \keyword{internal}

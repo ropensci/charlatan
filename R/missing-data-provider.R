@@ -12,18 +12,22 @@
 #'       }
 #'     }
 #'   }
+#'
+#' This method picks a random number (\code{N}) of slots in the input
+#' vector \code{x} (up to \code{length(x)}). Then picks \code{N} random
+#' positions and replaces them with NA matching the input class.
 #' @format NULL
 #' @usage NULL
 #' @examples
 #' z <- MissingDataProvider$new()
-#' z$make_missing(letters)
+#' z$make_missing(x = letters)
 MissingDataProvider <- R6::R6Class(
   inherit = BaseProvider,
   'MissingDataProvider',
   public = list(
 
     make_missing = function(x) {
-      n <- sample(1:length(x), 1)
+      n <- super$random_element(seq_along(x))
       na_value <- switch(
         class(x),
         character = NA_character_,
@@ -31,7 +35,8 @@ MissingDataProvider <- R6::R6Class(
         integer = NA_integer_,
         NA
       )
-      x[seq_len(n)] <- rep(na_value, times = length(seq_len(n)))
+      pos <- sample(seq_along(x), size = n, replace = FALSE)
+      x[pos] <- rep(na_value, times = length(seq_len(n)))
       return(x)
     }
   )
