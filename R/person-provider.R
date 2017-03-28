@@ -51,6 +51,7 @@ PersonProvider <- R6::R6Class(
 
     render = function() {
       fmt <- super$random_element(self$formats)
+      cat(fmt, sep = "\n")
       dat <- lapply(self$person[pluck_names(fmt, self$person)], sample, size = 1)
       whisker::whisker.render(fmt, data = dat)
     }

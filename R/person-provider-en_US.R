@@ -2,7 +2,7 @@
 # https://github.com/joke2k/faker/blob/master/faker/providers/person/en_US/__init__.py
 
 person_formats_female_en_us = c(
-  '{{first_name_female}} {{last_names}}',
+  '{{first_names_female}} {{last_names}}',
   '{{first_names_female}} {{last_names}}',
   '{{first_names_female}} {{last_names}}',
   '{{first_names_female}} {{last_names}}',
