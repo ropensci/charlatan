@@ -1,6 +1,7 @@
 #' Create missing data
 #'
 #' @export
+#' @param x Input vector, can be any class - only 1 vetor
 #' @template params
 #' @examples
 #' ch_missing(letters)

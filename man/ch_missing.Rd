@@ -7,6 +7,8 @@
 ch_missing(x, n = 1)
 }
 \arguments{
+\item{x}{Input vector, can be any class - only 1 vetor}
+
 \item{n}{(integer) number of things to get, any non-negative integer}
 }
 \description{
