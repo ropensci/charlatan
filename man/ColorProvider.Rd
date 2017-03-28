@@ -3,7 +3,12 @@
 \docType{data}
 \name{ColorProvider}
 \alias{ColorProvider}
+\alias{color_provider_locales}
 \title{ColorProvider}
+\format{An object of class \code{character} of length 2.}
+\usage{
+color_provider_locales
+}
 \description{
 ColorProvider
 }
@@ -44,4 +49,5 @@ x <- ColorProvider$new(locale = "uk_UA")
 x$locale
 x$color_name()
 }
+\keyword{datasets}
 \keyword{internal}

@@ -40,7 +40,7 @@ JobProvider <- R6::R6Class(
         # check locale globally supported
         super$check_locale(locale)
         # check job provider locales
-        check_locale_(tolower(locale), super$prov_avail_locales("job_formats_"))
+        check_locale_(tolower(locale), job_provider_locales)
         self$locale <- locale
       } else {
         self$locale <- 'en_US'
@@ -52,4 +52,11 @@ JobProvider <- R6::R6Class(
       super$random_element(self$formats)
     }
   )
+)
+
+#' @export
+#' @rdname JobProvider
+job_provider_locales <- c(
+  "fa_ir", "fr_ch", "uk_ua", "ru_ru", "pl_pl",
+  "en_us", "fr_fr", "hr_hr", "zh_tw"
 )

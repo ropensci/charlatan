@@ -3,7 +3,12 @@
 \docType{data}
 \name{PersonProvider}
 \alias{PersonProvider}
+\alias{person_provider_locales}
 \title{PersonProvider}
+\format{An object of class \code{character} of length 11.}
+\usage{
+person_provider_locales
+}
 \arguments{
 \item{locale}{(character) the locale to use. options: en_US (default),
 fr_FR, fr_CH, fi_FI, fa_IR, es_ES, de_DE, de_AT, cs_CZ, bg_BG, dk_DK}
@@ -37,4 +42,5 @@ PersonProvider$new(locale = "cs_CZ")$render()
 PersonProvider$new(locale = "bg_BG")$render()
 PersonProvider$new(locale = "dk_DK")$render()
 }
+\keyword{datasets}
 \keyword{internal}

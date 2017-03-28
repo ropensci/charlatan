@@ -3,7 +3,12 @@
 \docType{data}
 \name{JobProvider}
 \alias{JobProvider}
+\alias{job_provider_locales}
 \title{JobProvider}
+\format{An object of class \code{character} of length 9.}
+\usage{
+job_provider_locales
+}
 \arguments{
 \item{locale}{(character) the locale to use. options: en_US (default),
 fr_FR, fr_CH, hr_FR, fa_IR, pl_PL, ru_RU, uk_UA, zh_TW.}
@@ -35,4 +40,5 @@ z <- JobProvider$new(locale = "fa_IR")
 z$locale
 z$render()
 }
+\keyword{datasets}
 \keyword{internal}

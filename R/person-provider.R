@@ -43,7 +43,7 @@ PersonProvider <- R6::R6Class(
         # check global locales
         super$check_locale(locale)
         # check person provider locales
-        check_locale_(tolower(locale), super$prov_avail_locales("person_"))
+        check_locale_(tolower(locale), person_provider_locales)
         self$locale <- locale
       } else {
         self$locale <- 'en_US'
@@ -64,4 +64,11 @@ PersonProvider <- R6::R6Class(
       whisker::whisker.render(fmt, data = dat)
     }
   )
+)
+
+#' @export
+#' @rdname PersonProvider
+person_provider_locales <- c(
+  "bg_bg", "fr_fr", "es_es", "en_us", "fa_ir", "dk_dk",
+  "cs_cz", "de_de", "fr_ch", "de_at", "fi_fi"
 )

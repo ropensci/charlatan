@@ -58,7 +58,7 @@ ColorProvider <- R6::R6Class(
         # check global locales
         super$check_locale(locale)
         # check person provider locales
-        check_locale_(tolower(locale), super$prov_avail_locales("all_colors_"))
+        check_locale_(tolower(locale), color_provider_locales)
         self$locale <- locale
       } else {
         self$locale <- 'en_US'
@@ -115,3 +115,7 @@ ColorProvider <- R6::R6Class(
     }
   )
 )
+
+#' @export
+#' @rdname ColorProvider
+color_provider_locales <- c("uk_ua", "en_us")
