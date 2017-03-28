@@ -23,7 +23,7 @@ ch_rgb_color(n = 1)
 ch_rgb_css_color(n = 1)
 }
 \arguments{
-\item{n}{(integer) number of things to get, any positive integer > 1}
+\item{n}{(integer) number of things to get, any non-negative integer}
 
 \item{locale}{(character) the locale to use. options: en_US (default),
 or uk_UA. Only affects \code{ch_color_name} function}

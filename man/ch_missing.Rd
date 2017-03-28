@@ -7,7 +7,7 @@
 ch_missing(x, n = 1)
 }
 \arguments{
-\item{n}{(integer) number of things to get, any positive integer > 1}
+\item{n}{(integer) number of things to get, any non-negative integer}
 }
 \description{
 Create missing data

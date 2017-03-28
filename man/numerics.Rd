@@ -26,7 +26,7 @@ ch_lnorm(n = 1, mean = 0, sd = 1)
 ch_beta(n = 1, shape1, shape2, ncp = 0)
 }
 \arguments{
-\item{n}{(integer) number of things to get, any positive integer > 1}
+\item{n}{(integer) number of things to get, any non-negative integer}
 
 \item{mean}{mean value}
 

@@ -14,7 +14,7 @@ ch_credit_card_number(n = 1)
 ch_credit_card_security_code(n = 1)
 }
 \arguments{
-\item{n}{(integer) number of things to get, any positive integer > 1}
+\item{n}{(integer) number of things to get, any non-negative integer}
 }
 \description{
 Create fake credit card data

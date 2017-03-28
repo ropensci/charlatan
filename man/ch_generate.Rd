@@ -8,9 +8,11 @@ ch_generate(..., n = 10)
 }
 \arguments{
 \item{...}{columns to include. must be in the allowed set. See
-\strong{Allowed colun names} below}
+\strong{Allowed colun names} below. Three default columns are included
+(name, job, phone_number) if nothing is specified - but are overridden
+by any input.}
 
-\item{n}{(integer) number of things to get, any positive integer > 1}
+\item{n}{(integer) number of things to get, any non-negative integer}
 }
 \description{
 Generate a fake dataset
@@ -22,7 +24,6 @@ Generate a fake dataset
  \item job (default included)
  \item phone_number (default included)
  \item currency
- \item hex_color
  \item color_name
  \item rgb_color
  \item rgb_css_color

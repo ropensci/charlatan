@@ -7,7 +7,7 @@
 ch_gene_sequence(n = 1, length = 30)
 }
 \arguments{
-\item{n}{(integer) number of things to get, any positive integer > 1}
+\item{n}{(integer) number of things to get, any non-negative integer}
 
 \item{length}{(integer) length of sequence to create}
 }
