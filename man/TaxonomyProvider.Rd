@@ -47,6 +47,7 @@ z$genus()
 z$epithet()
 z$species()
 z$species(authority = TRUE)
-z$species(authority = TRUE, date = TRUE)
+## FIXME - datetimeprovider slow - may be related to unix time problem
+# z$species(authority = TRUE, date = TRUE)
 }
 \keyword{internal}

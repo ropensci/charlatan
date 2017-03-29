@@ -214,7 +214,8 @@ tax_epithets <- c('abbeokutae','ackermani','adolphii','adunca','aegilicum',
 #' z$epithet()
 #' z$species()
 #' z$species(authority = TRUE)
-#' z$species(authority = TRUE, date = TRUE)
+#' ## FIXME - datetimeprovider slow - may be related to unix time problem
+#' # z$species(authority = TRUE, date = TRUE)
 TaxonomyProvider <- R6::R6Class(
   inherit = BaseProvider,
   'TaxonomyProvider',
