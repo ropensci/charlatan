@@ -28,26 +28,3 @@ company_suffixes_bg_bg <- c(
   "\u0421\u0414"
 )
 
-CompanyProvider_bg_BG <- R6::R6Class(
-  lock_objects = FALSE,
-  'CompanyProvider_bg_BG',
-  public = list(
-    locale = "bg_BG",
-    formats = company_formats_bg_bg,
-    company_suffixes = company_suffixes_bg_bg,
-
-    initialize = function(locale = 'bg_BG') {
-      self$locale <- locale
-      self$formats <- self$formats
-      self$company_suffixes <- self$company_suffixes
-    },
-
-    company = function() {
-      company_(self$locale, self$formats, self$company_suffixes)
-    },
-
-    company_suffix = function() {
-      company_suffix_(self$company_suffixes)
-    }
-  )
-)

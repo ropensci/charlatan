@@ -3,7 +3,7 @@
 #' @export
 #' @keywords internal
 #' @param locale (character) the locale to use. options: en_US (default),
-#' fr_FR, fr_CH, fi_FI, fa_IR, es_ES, de_DE, de_AT, cs_CZ, bg_BG, dk_DK
+#' fr_FR, fr_CH, fi_FI, fa_IR, es_ES, es_MX, de_DE, de_AT, cs_CZ, bg_BG, dk_DK
 #' @details
 #' \strong{Methods}
 #'   \describe{
@@ -18,6 +18,10 @@
 #' x$render()
 #'
 #' z <- PersonProvider$new(locale = "fr_FR")
+#' z$locale
+#' z$render()
+#'
+#' z <- PersonProvider$new(locale = "es_MX")
 #' z$locale
 #' z$render()
 #'
@@ -70,5 +74,5 @@ PersonProvider <- R6::R6Class(
 #' @rdname PersonProvider
 person_provider_locales <- c(
   "bg_bg", "fr_fr", "es_es", "en_us", "fa_ir", "dk_dk",
-  "cs_cz", "de_de", "fr_ch", "de_at", "fi_fi"
+  "cs_cz", "de_de", "fr_ch", "de_at", "fi_fi", "es_mx"
 )

@@ -3,96 +3,171 @@
 #' @export
 #' @keywords internal
 #' @param locale (character) the locale to use. options: en_US (default),
-#' fr_FR.
+#' bg_bg, cs_cz, de_de, es_es, es_mx, fa_ir, fr_fr, hr_hr, it_it
 #' @details
 #' \strong{Methods}
 #'   \describe{
 #'    \item{\code{company}}{
 #'      a company name
 #'    }
+#'    \item{\code{company_prefix}}{
+#'      a company prefix
+#'    }
 #'    \item{\code{company_suffix}}{
 #'      a company suffix
+#'    }
+#'    \item{\code{bs}}{
+#'      bs
+#'    }
+#'    \item{\code{catch_phrase}}{
+#'      a catch phrase
+#'    }
+#'    \item{\code{siren}}{
+#'      a siren
 #'    }
 #'  }
 #' @format NULL
 #' @usage NULL
 #' @examples
-#' x <- company_provider('en_US')
+#' x <- CompanyProvider$new()
 #' x$locale
 #' x$company()
 #' x$company_suffix()
 #' x$catch_phrase()
 #' x$bs()
 #'
-#' x <- company_provider(locale = "fr_FR")
+#' x <- CompanyProvider$new(locale = "fr_FR")
 #' x$locale
 #' x$company()
 #' x$company_suffix()
 #' x$siren()
 #'
-#' x <- company_provider(locale = "hr_HR")
+#' x <- CompanyProvider$new(locale = "hr_HR")
 #' x$locale
 #' x$company()
 #' x$company_suffix()
 #'
-#' x <- company_provider(locale = "it_IT")
+#' x <- CompanyProvider$new(locale = "it_IT")
 #' x$locale
 #' x$company()
 #' x$company_suffix()
 #' x$bs()
 #'
-#' company_provider(locale = "es_MX")$bs()
-#' company_provider(locale = "es_MX")$company_prefix()
-#' company_provider(locale = "es_MX")$catch_phrase()
+#' CompanyProvider$new(locale = "es_MX")$bs()
+#' CompanyProvider$new(locale = "es_MX")$company_prefix()
+#' CompanyProvider$new(locale = "es_MX")$catch_phrase()
 #'
-#' company_provider(locale = "bg_BG")$company()
-#' company_provider(locale = "cs_CZ")$company()
-#' company_provider(locale = "de_DE")$company()
-#' company_provider(locale = "fa_IR")$company()
-company_provider <- function(locale = 'en_US') {
-  switch(
-    locale,
-    bg_BG = CompanyProvider_bg_BG$new(locale = locale),
-    cs_CZ = CompanyProvider_cs_CZ$new(locale = locale),
-    de_DE = CompanyProvider_de_DE$new(locale = locale),
-    en_US = CompanyProvider_en_US$new(locale = locale),
-    es_MX = CompanyProvider_es_MX$new(locale = locale),
-    fa_IR = CompanyProvider_fa_IR$new(locale = locale),
-    fr_FR = CompanyProvider_fr_FR$new(locale = locale),
-    hr_HR = CompanyProvider_hr_HR$new(locale = locale),
-    it_IT = CompanyProvider_it_IT$new(locale = locale)
+#' CompanyProvider$new(locale = "bg_BG")$company()
+#' CompanyProvider$new(locale = "cs_CZ")$company()
+#' CompanyProvider$new(locale = "de_DE")$company()
+#' CompanyProvider$new(locale = "fa_IR")$company()
+
+CompanyProvider <- R6::R6Class(
+  lock_objects = FALSE,
+  'CompanyProvider',
+  inherit = BaseProvider,
+  public = list(
+    locale = NULL,
+    formats = NULL,
+    prefixes = NULL,
+    suffixes = NULL,
+    catch_phrase_words = NULL,
+    bsWords = NULL,
+    siren_format = NULL,
+
+    initialize = function(locale = NULL) {
+      if (!is.null(locale)) {
+        # check global locales
+        super$check_locale(locale)
+        # check person provider locales
+        check_locale_(tolower(locale), company_provider_locales)
+        self$locale <- locale
+      } else {
+        self$locale <- 'en_US'
+      }
+
+      self$formats <- parse_eval("company_formats_", self$locale)
+      self$prefixes <- parse_eval("company_prefixes_", self$locale)
+      self$suffixes <- parse_eval("company_suffixes_", self$locale)
+      self$catch_phrase_words <- parse_eval("catch_phrase_words_", self$locale)
+      self$bsWords <- parse_eval("bsWords_", self$locale)
+      self$siren_format <- parse_eval("siren_format_", self$locale)
+    },
+
+    company = function() {
+      if (self$locale == "fa_IR") {
+        super$random_element(company_names_fa_ir)
+      } else {
+        private$make_company(self$locale, self$formats, self$suffixes)
+      }
+    },
+
+    company_prefix = function() {
+      if (!is.null(self$prefixes)) {
+        super$random_element(self$prefixes)
+      } else {
+        stop("company_prefix() not supported for ", self$locale, call. = FALSE)
+      }
+    },
+
+    company_suffix = function() {
+      super$random_element(self$suffixes)
+    },
+
+    catch_phrase = function() {
+      private$makeit(self$catch_phrase_words)
+    },
+
+    bs = function() {
+      private$makeit(self$bsWords)
+    },
+
+    siren = function() {
+      if (!is.null(self$siren_format)) {
+        super$numerify(self$siren_format)
+      } else {
+        stop("siren() not supported for ", self$locale, call. = FALSE)
+      }
+    }
+  ),
+
+  private = list(
+    makeit = function(x) {
+      result <- list()
+      for (i in seq_along(x)) {
+        result[[i]] <- super$random_element(x[[i]])
+      }
+      paste0(result, collapse = " ")
+    },
+
+    make_company = function(locale, formats, suffix) {
+      pattern <- super$random_element(formats)
+      dat <- lapply(self$person[pluck_names(pattern, self$person)], sample,
+                    size = 1)
+      if (length(grep("last_name", names(dat))) > 1) {
+        tmp <- grep("last_name", names(dat), value = TRUE)
+        nms <- paste(tmp, seq_along(tmp), sep = "")
+        names(dat)[grep("last_name", names(dat))] <- nms
+      }
+
+      nm <- super$random_element(
+        eval(parse(text = paste0("person_last_names_", tolower(locale)))))
+
+      whisker::whisker.render(
+        template = pattern,
+        data = list(
+          last_name = nm,
+          company_suffix = super$random_element(suffix)
+        )
+      )
+    }
   )
-}
+)
 
-# helpers --------
-company_ = function(locale, formats, suffix) {
-  pattern <- sample(formats, 1)
-  nm <- sample(
-    eval(parse(text = paste0("person_last_names_", tolower(locale)))),
-    1
-  )
-  whisker::whisker.render(
-    template = pattern,
-    data = list(last_name = nm, company_suffix = eval(suffix))
-  )
-}
 
-company_suffix_ = function(x) {
-  sample(x, size = 1)
-}
-
-catch_phrase_ = function(x) {
-  result <- list()
-  for (i in seq_along(x)) {
-    result[[i]] <- sample(x[[i]], 1)
-  }
-  paste0(result, collapse = " ")
-}
-
-bs_ = function(words) {
-  result <- list()
-  for (i in seq_along(words)) {
-    result[[i]] <- sample(words[[i]], 1)
-  }
-  paste0(result, collapse = " ")
-}
+#' @export
+#' @rdname CompanyProvider
+company_provider_locales <- c(
+  "bg_bg", "cs_cz", "de_de", "en_us", "es_mx", "fa_ir", "fr_fr",
+  "hr_hr", "it_it"
+)

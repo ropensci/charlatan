@@ -1055,23 +1055,3 @@ company_names_fa_ir <- c(
   "\u06af\u0631\u0648\u0647 \u0634\u0631\u06a9\u062a \u0647\u0627\u06cc \u0645\u0634\u0627\u0648\u0631\u0647 \u062a\u0628\u0644\u06cc\u063a\u0627\u062a\u06cc",
   "\u0645\u0648\u0633\u0633\u0647 \u067e\u0648\u06cc\u0646\u062f\u06af\u0627\u0646 \u062a\u0648\u0633\u0639\u0647 \u067e\u0627\u0631\u0633"
 )
-
-CompanyProvider_fa_IR <- R6::R6Class(
-  inherit = BaseProvider,
-  lock_objects = FALSE,
-  'CompanyProvider_fa_IR',
-  public = list(
-    locale = "fa_IR",
-    names = company_names_fa_ir,
-
-    initialize = function(locale = 'fa_IR') {
-      self$locale <- locale
-      self$names <- self$names
-    },
-
-    company = function() {
-      super$random_element(self$names)
-    }
-  )
-)
-

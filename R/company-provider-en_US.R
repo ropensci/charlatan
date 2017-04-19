@@ -93,39 +93,3 @@ bsWords_en_us <- list(
 )
 
 company_suffixes_en_us <- c('Inc', 'and Sons', 'LLC', 'Group', 'PLC', 'Ltd')
-
-CompanyProvider_en_US <- R6::R6Class(
-  lock_objects = FALSE,
-  'CompanyProvider_en_US',
-  public = list(
-    locale = "en_US",
-    formats = company_formats_en_us,
-    company_suffixes = company_suffixes_en_us,
-    catch_phrase_words = catch_phrase_words_en_us,
-    bsWords = bsWords_en_us,
-
-    initialize = function(locale = 'en_US') {
-      self$locale <- locale
-      self$formats <- self$formats
-      self$company_suffixes <- self$company_suffixes
-      self$catch_phrase_words <- self$catch_phrase_words
-      self$bsWords <- self$bsWords
-    },
-
-    company = function() {
-      company_(self$locale, self$formats, self$company_suffixes)
-    },
-
-    company_suffix = function() {
-      company_suffix_(self$company_suffixes)
-    },
-
-    catch_phrase = function() {
-      catch_phrase_(self$catch_phrase_words)
-    },
-
-    bs = function() {
-      bs_(self$bsWords)
-    }
-  )
-)

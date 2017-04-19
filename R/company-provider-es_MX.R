@@ -3,13 +3,13 @@
 
 company_formats_es_mx <- c(
   '{{last_name}} {{company_suffix}}',
-  '{{last_name}}-{{last_name}}',
-  '{{company_prefix}} {{last_name}}-{{last_name}}',
-  '{{company_prefix}} {{last_name}} y {{last_name}}',
-  '{{company_prefix}} {{last_name}}, {{last_name}} y {{last_name}}',
-  '{{last_name}}-{{last_name}} {{company_suffix}}',
-  '{{last_name}}, {{last_name}} y {{last_name}}',
-  '{{last_name}} y {{last_name}} {{company_suffix}}'
+  '{{last_name1}}-{{last_name2}}',
+  '{{company_prefix}} {{last_name1}}-{{last_name2}}',
+  '{{company_prefix}} {{last_name1}} y {{last_name2}}',
+  '{{company_prefix}} {{last_name1}}, {{last_name2}} y {{last_name3}}',
+  '{{last_name1}}-{{last_name2}} {{company_suffix}}',
+  '{{last_name1}}, {{last_name2}} y {{last_name3}}',
+  '{{last_name1}} y {{last_name2}} {{company_suffix}}'
 )
 
 catch_phrase_words_es_mx <- list(
@@ -385,44 +385,3 @@ company_prefixes_es_mx <- c('Despacho', 'Grupo', 'Corporativo', 'Club',
 
 company_suffixes_es_mx <- c('A.C.', 'S.A.', 'S.A. de C.V.', 'S.C.',
                             'S. R.L. de C.V.','e Hijos', 'y Asociados')
-
-CompanyProvider_es_MX <- R6::R6Class(
-  lock_objects = FALSE,
-  'CompanyProvider_es_MX',
-  public = list(
-    locale = "es_MX",
-    formats = company_formats_es_mx,
-    company_prefixes = company_prefixes_es_mx,
-    company_suffixes = company_suffixes_es_mx,
-    catch_phrase_words = catch_phrase_words_es_mx,
-    bsWords = bsWords_es_mx,
-
-    initialize = function(locale = 'es_MX') {
-      self$locale <- locale
-      self$formats <- self$formats
-      self$company_suffixes <- self$company_suffixes
-      self$catch_phrase_words <- self$catch_phrase_words
-      self$bsWords <- self$bsWords
-    },
-
-    company = function() {
-      company_(self$locale, self$formats, self$company_suffixes)
-    },
-
-    company_prefix = function() {
-      sample(self$company_suffixes, size = 1)
-    },
-
-    company_suffix = function() {
-      company_suffix_(self$company_suffixes)
-    },
-
-    catch_phrase = function() {
-      catch_phrase_(self$catch_phrase_words)
-    },
-
-    bs = function() {
-      bs_(self$bsWords)
-    }
-  )
-)
