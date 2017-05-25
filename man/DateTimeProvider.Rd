@@ -42,8 +42,8 @@ z$countries
 z$centuries
 z$century()
 z$timezone()
-# z$unix_time()
-# z$date_time()
-# z$year()
+z$unix_time()
+z$date_time()
+z$year()
 }
 \keyword{internal}

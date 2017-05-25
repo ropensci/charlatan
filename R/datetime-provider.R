@@ -525,9 +525,9 @@ dt_countries <- list(
 #' z$centuries
 #' z$century()
 #' z$timezone()
-#' # z$unix_time()
-#' # z$date_time()
-#' # z$year()
+#' z$unix_time()
+#' z$date_time()
+#' z$year()
 DateTimeProvider <- R6::R6Class(
   inherit = BaseProvider,
   'DateTimeProvider',
@@ -536,7 +536,9 @@ DateTimeProvider <- R6::R6Class(
     countries = dt_countries,
 
     unix_time = function() {
-      super$random_int(0, as.integer(as.numeric(as.POSIXct(Sys.time()))))
+      #super$random_int(0, as.integer(as.numeric(as.POSIXct(Sys.time()))))
+      sample.int(as.integer(as.numeric(as.POSIXct(Sys.time()))), 1) *
+        sample(c(-1, 1), size = 1)
     },
 
     date = function(pattern) {
@@ -551,8 +553,8 @@ DateTimeProvider <- R6::R6Class(
       # Get a datetime object for a date between January 1, 001 and now
       # :param tzinfo: timezone, instance of datetime.tzinfo subclass
       # :example DateTime('1265-03-22 21:15:52')
-      ts <- super$random_int(-62135600400, as.integer(as.numeric(as.POSIXct(Sys.time()))))
-      as.POSIXct(0, origin = "1970-01-01", tz = tzinfo) + timedelta(seconds = ts)
+      #ts <- super$random_int(-62135600400, as.integer(as.numeric(as.POSIXct(Sys.time()))))
+      as.POSIXct(self$unix_time(), origin = "1970-01-01", tz = tzinfo)
     },
 
     # FIXME - not working

@@ -23,9 +23,9 @@ Create dates and times
 ch_timezone()
 ch_timezone(10)
 
-# ch_unix_time()
-# ch_unix_time(20)
+ch_unix_time()
+ch_unix_time(20)
 
-# ch_date_time()
-# ch_date_time(20)
+ch_date_time()
+ch_date_time(20)
 }
