@@ -27,9 +27,10 @@ assert <- function(x, y) {
   }
 }
 
-parse_eval <- function(x, y) {
+parse_eval <- function(x, y, messy = FALSE) {
+  strg <- if (messy) paste0(x, tolower(y), "_messy") else paste0(x, tolower(y))
   res <- tryCatch(
-    eval(parse(text = paste0(x, tolower(y)))),
+    eval(parse(text = strg)),
     error = function(E) E
   )
   if (inherits(res, "error")) {

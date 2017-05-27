@@ -11,7 +11,10 @@ person_provider_locales
 }
 \arguments{
 \item{locale}{(character) the locale to use. options: en_US (default),
-fr_FR, fr_CH, fi_FI, fa_IR, es_ES, es_MX, de_DE, de_AT, cs_CZ, bg_BG, dk_DK}
+fr_FR, fr_CH, fi_FI, fa_IR, es_ES, es_MX, de_DE, de_AT, cs_CZ, bg_BG,
+dk_DK}
+
+\item{messy}{(logical) make some messy data. Default: \code{FALSE}}
 }
 \description{
 PersonProvider

@@ -1159,10 +1159,20 @@ person_last_names_en_us <- c(
 )
 
 person_prefixes_female_en_us = c('Mrs.', 'Ms.', 'Miss', 'Dr.')
+person_prefixes_female_en_us_messy = c(person_prefixes_female_en_us,
+  'Mrs', 'Ms', 'Miss.', 'Dr'
+)
 person_prefixes_male_en_us = c('Mr.', 'Dr.')
+person_prefixes_male_en_us_messy = c(person_prefixes_male_en_us,
+                                     'Mr', 'Dr')
 
 person_suffixes_female_en_us = c('MD', 'DDS', 'PhD', 'DVM')
-person_suffixes_male_en_us = c('Jr.', 'Sr.', 'I', 'II', 'III', 'IV', 'V', 'MD', 'DDS', 'PhD', 'DVM')
+person_suffixes_female_en_us_messy = c(person_suffixes_female_en_us,
+                                 'md', 'm.d.', 'd.d.s.', 'Ph.D.', 'dvm')
+person_suffixes_male_en_us = c('Jr.', 'Sr.', 'I', 'II', 'III', 'IV', 'V',
+                               'MD', 'DDS', 'PhD', 'DVM')
+person_suffixes_male_en_us_messy = c(person_suffixes_male_en_us,
+                        'Jr', 'Sr', 'md', 'm.d.', 'd.d.s.', 'Ph.D.')
 
 person_en_us <- list(
   first_names = person_first_names_en_us,
@@ -1174,3 +1184,9 @@ person_en_us <- list(
   suffixes_female = person_suffixes_female_en_us,
   suffixes_male = person_suffixes_male_en_us
 )
+
+person_en_us_messy <- person_en_us
+person_en_us_messy$prefixes_female <- person_prefixes_female_en_us_messy
+person_en_us_messy$prefixes_male <- person_prefixes_male_en_us_messy
+person_en_us_messy$suffixes_female <- person_suffixes_female_en_us_messy
+person_en_us_messy$suffixes_male <- person_suffixes_male_en_us_messy

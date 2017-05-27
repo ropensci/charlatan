@@ -92,7 +92,9 @@ ColorProvider <- R6::R6Class(
     },
 
     rgb_color = function() {
-      gsub("\\s|\\(|\\)", "", private$rgb_color_list())
+      grDevices::rgb(private$sample_col(), private$sample_col(),
+                     private$sample_col(), maxColorValue = 255)
+      #gsub("\\s|\\(|\\)", "", private$rgb_color_list())
     },
 
     rgb_css_color = function() {
@@ -112,7 +114,10 @@ ColorProvider <- R6::R6Class(
         as.integer(Rmpfr::mpfr(substring(color, 4, 5), base = 16)),
         as.integer(Rmpfr::mpfr(substring(color, 6, 7), base = 16))
       )
-    }
+    },
+
+    sample_col = function() sample(0:255, 1)
+
   )
 )
 

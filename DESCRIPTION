@@ -5,7 +5,7 @@ Description: Make fake data, supporting addresses, person names, dates,
     times, colors, coordinates, currencies, digital object identifiers
     (DOIs), jobs, phone numbers, DNA sequences, doubles and integers
     from distributions and within a range.
-Version: 0.0.6.9581
+Version: 0.0.6.9583
 Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"),
     email = "myrmecocystus@gmail.com"))
 License: MIT + file LICENSE
@@ -32,6 +32,7 @@ Collate:
     'address-provider.R'
     'available_locales.R'
     'charlatan-package.R'
+    'charlatan_settings.R'
     'color-provider-en_US.R'
     'color-provider-uk_UA.R'
     'color-provider.R'
@@ -74,6 +75,7 @@ Collate:
     'name.R'
     'numerics-provider.R'
     'numerics.R'
+    'onload.R'
     'person-provider-bg_BG.R'
     'person-provider-cs_CZ.R'
     'person-provider-de_AT.R'

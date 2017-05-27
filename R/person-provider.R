@@ -3,7 +3,9 @@
 #' @export
 #' @keywords internal
 #' @param locale (character) the locale to use. options: en_US (default),
-#' fr_FR, fr_CH, fi_FI, fa_IR, es_ES, es_MX, de_DE, de_AT, cs_CZ, bg_BG, dk_DK
+#' fr_FR, fr_CH, fi_FI, fa_IR, es_ES, es_MX, de_DE, de_AT, cs_CZ, bg_BG,
+#' dk_DK
+#' @param messy (logical) make some messy data. Default: \code{FALSE}
 #' @details
 #' \strong{Methods}
 #'   \describe{
@@ -41,8 +43,10 @@ PersonProvider <- R6::R6Class(
     locale = NULL,
     formats = person_formats_en_us,
     person = person_en_us,
+    messy = FALSE,
 
-    initialize = function(locale = NULL) {
+    initialize = function(locale = NULL, messy = FALSE) {
+      self$messy <- messy
       if (!is.null(locale)) {
         # check global locales
         super$check_locale(locale)
@@ -53,7 +57,7 @@ PersonProvider <- R6::R6Class(
         self$locale <- 'en_US'
       }
       self$formats <- parse_eval("person_formats_", self$locale)
-      self$person <- parse_eval("person_", self$locale)
+      self$person <- parse_eval("person_", self$locale, self$messy)
     },
 
     render = function() {
