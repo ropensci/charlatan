@@ -22,7 +22,23 @@ knitr::opts_chunk$set(
 )
 ```
 
-`charlatan` xxx
+`charlatan` makes fake data, inspired from and borrowing some code from Python's [faker](https://github.com/joke2k/faker)
+
+Why would you want to make fake data? Here's some possible use cases to 
+give you a sense for what you can do with this package:
+
+* Students in a classroom setting learning any task that needs a dataset.
+* People doing simulations/modeling that need some fake data
+* Generate fake dataset of users for a database before actual users exist
+* Complete missing spots in a dataset
+* Generate fake data to replace sensitive real data with before public release
+* Create a random set of colors for visualization
+* Generate random coordinates for a map
+* Get a set of randomly generated DOIs (Digial Object Identifiers) to 
+assign to fake scholarly artifacts
+* Generate fake taxonomic names for a biological dataset
+* Get a set of fake sequences to use to test code/software that uses
+sequence data
 
 ## Install
 

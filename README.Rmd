@@ -32,11 +32,22 @@ Possible use cases for `charlatan`:
 
 * Students in a classroom setting learning any task that needs a dataset.
 * People doing simulations/modeling that need some fake data
+* Generate fake dataset of users for a database before actual users exist
+* Complete missing spots in a dataset
+* Generate fake data to replace sensitive real data with before public release
+* Create a random set of colors for visualization
+* Generate random coordinates for a map
+* Get a set of randomly generated DOIs (Digial Object Identifiers) to 
+assign to fake scholarly artifacts
+* Generate fake taxonomic names for a biological dataset
+* Get a set of fake sequences to use to test code/software that uses
+sequence data
 
 Reasons to use `charlatan`:
 
 * Lite weight, very few dependencies, all deps lite weight
 * Relatively comprehensive types of data, and more being added
+* Comprehensive set of languages supported, more being added
 * Useful R features such as creating entire fake data.frame's 
 
 ## Installation
