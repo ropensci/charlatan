@@ -4,10 +4,10 @@
 \alias{charlatan_settings}
 \title{charlatan settings}
 \usage{
-charlatan_settings(messy = FALSE)
+charlatan_settings(messy = NULL)
 }
 \arguments{
-\item{messy}{(logical) make some messy data. Default: \code{FALSE}}
+\item{messy}{(logical) make some messy data. Default: \code{NULL}}
 }
 \description{
 charlatan settings
@@ -18,7 +18,8 @@ charlatan settings
  \item \code{messy} - When \code{FALSE}, nothing is different from normal.
  When \code{TRUE}, we select incorrect/wrong values with probability X.
  Messy mode is only available for \strong{en-US} for now, and only for
- some data types.
+ some data types. The default setting is \code{NULL}, meaning it is
+ ignored.
 }
 }
 
@@ -26,4 +27,11 @@ charlatan settings
 charlatan_settings()
 charlatan_settings(messy = TRUE)
 charlatan_settings(messy = FALSE)
+
+# with PersonProvider - overrides local messy param in all cases
+x <- PersonProvider$new()
+x$messy
+charlatan_settings(messy = TRUE)
+x <- PersonProvider$new()
+x$messy
 }
