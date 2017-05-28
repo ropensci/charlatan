@@ -40,6 +40,18 @@ assign to fake scholarly artifacts
 * Get a set of fake sequences to use to test code/software that uses
 sequence data
 
+## Package API
+
+* Low level interfaces: All of these are `R6` objects that a user can
+initialize and then call methods on. These contain all the logic that 
+the below interfaces use.
+* High level interfaces: There are high level functions prefixed with
+`ch_*()` that wrap low level interfaces, and are meant to be easier
+to use and provide an easy way to make many instances of a thing.
+* `ch_generate()` - generate a data.frame with fake data, choosing which columns to include from the data types provided in `charlatan`
+* `fraudster()` - single interface to all fake data methods, - returns 
+vectors/lists of data - this function wraps the `ch_*()` functions described above
+
 ## Install
 
 Development version from Github
@@ -97,8 +109,9 @@ ch_generate()
 ch_generate('job', 'phone_number', n = 30)
 ```
 
+## Data types
 
-## person name
+### person name
 
 ```{r}
 ch_name()
@@ -109,7 +122,7 @@ ch_name(10)
 ```
 
 
-## phone number
+### phone number
 
 ```{r}
 ch_phone_number()
@@ -119,7 +132,7 @@ ch_phone_number()
 ch_phone_number(10)
 ```
 
-## job
+### job
 
 ```{r}
 ch_job()
@@ -129,7 +142,7 @@ ch_job()
 ch_job(10)
 ```
 
-## credit cards
+### credit cards
 
 ```{r}
 ch_credit_card_provider()
@@ -145,3 +158,19 @@ ch_credit_card_number(n = 10)
 ch_credit_card_security_code()
 ch_credit_card_security_code(10)
 ```
+
+
+## Messy data
+
+Real data is messy, right?  `charlatan` makes it easy to create 
+messy data. This is still in the early stages so is not available 
+across most data types and languages, but we're working on it. 
+
+For example, create messy names:
+
+```{r}
+ch_name(50, messy = TRUE)
+```
+
+Right now only suffixes and prefixes for names in `en_US` locale
+are supported. Notice above some variation in prefixes and suffixes.
