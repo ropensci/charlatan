@@ -22,7 +22,6 @@ Imports:
 Suggests:
     roxygen2 (>= 6.0.1),
     testthat,
-    covr,
     knitr,
     rmarkdown
 RoxygenNote: 6.0.1
