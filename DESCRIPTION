@@ -5,7 +5,7 @@ Description: Make fake data, supporting addresses, person names, dates,
     times, colors, coordinates, currencies, digital object identifiers
     (DOIs), jobs, phone numbers, DNA sequences, doubles and integers
     from distributions and within a range.
-Version: 0.0.7.9215
+Version: 0.0.7.9218
 Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"),
     email = "myrmecocystus@gmail.com"))
 License: MIT + file LICENSE

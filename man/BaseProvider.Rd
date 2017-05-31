@@ -13,34 +13,34 @@ BaseProvider
    \item{\code{random_element}}{
      wrapper around \code{\link{sample}}: \code{x[sample(seq_along(x), 1)]}
    }
-   \item{\code{random_int}}{
+   \item{\code{random_int(min = 0, max = 9999, size = 1)}}{
      random integer
    }
-   \item{\code{random_digit}}{
+   \item{\code{random_digit()}}{
      random integer between 0 and 9
    }
-   \item{\code{random_digit_not_zero}}{
+   \item{\code{random_digit_not_zero()}}{
      random integer between 1 and 9
    }
-   \item{\code{random_digit_or_empty}}{
+   \item{\code{random_digit_or_empty()}}{
      random integer between 0 and 9 or empty character string
    }
-   \item{\code{random_digit_not_zero_or_empty}}{
+   \item{\code{random_digit_not_zero_or_empty()}}{
      random integer between 1 and 9 or empty character string
    }
-   \item{\code{random_letter}}{
+   \item{\code{random_letter()}}{
      random letter
    }
-   \item{\code{numerify}}{
+   \item{\code{numerify()}}{
      replace a template with numbers
    }
-   \item{\code{lexify}}{
+   \item{\code{lexify()}}{
      replace a template with letters
    }
-   \item{\code{bothify}}{
+   \item{\code{bothify()}}{
      both numerify and lexify together
    }
-   \item{\code{check_locale}}{
+   \item{\code{check_locale()}}{
      check a locale to see if it exists, if not, stop with error message
    }
  }

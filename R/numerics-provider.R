@@ -59,10 +59,11 @@ NumericsProvider <- R6::R6Class(
     },
 
     integer = function(n = 1, min = 1, max = 1000) {
-      sample(min:max, n, replace = TRUE)
+      super$random_int(min, max, n)
     },
 
     unif = function(n = 1, min = 0, max = 9999) {
+      stopifnot(max >= min)
       runif(n, min, max)
     },
 
