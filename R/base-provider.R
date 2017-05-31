@@ -85,19 +85,11 @@ BaseProvider <- R6::R6Class(
     },
 
     random_digit_or_empty = function() {
-      if (self$random_element(0:1) == 1) {
-        self$random_element(c(0:9, ""))
-      } else {
-        ''
-      }
+      self$random_element(c(0:9, ""))
     },
 
     random_digit_not_zero_or_empty = function() {
-      if (sample(0:1, size = 1) == 1) {
-        self$random_element(c(1:9, ""))
-      } else {
-        ''
-      }
+      self$random_element(c(1:9, ""))
     },
 
     random_letter = function() {
