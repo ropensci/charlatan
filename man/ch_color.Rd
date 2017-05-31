@@ -41,6 +41,7 @@ ch_safe_color_name(10)
 
 ch_hex_color()
 ch_hex_color(10)
+ch_hex_color(1000)
 
 ch_safe_hex_color()
 ch_safe_hex_color(10)

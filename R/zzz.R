@@ -39,3 +39,7 @@ parse_eval <- function(x, y, messy = FALSE) {
     res
   }
 }
+
+rep_licate <- function(n, expr, type) {
+  vapply(integer(n), eval.parent(substitute(function(...) expr)), type)
+}

@@ -68,12 +68,12 @@ BaseProvider <- R6::R6Class(
   'BaseProvider',
   public = list(
     random_element = function(x) {
-      sample(x, size = 1)
-      #x[sample(seq_along(x), 1)]
+      #sample(x, size = 1)
+      x[sample.int(n = length(x), size = 1)]
     },
 
     random_int = function(min=0, max=9999) {
-      self$random_element(min:max)
+      sample.int(n = max, size = 1)
     },
 
     random_digit = function() {

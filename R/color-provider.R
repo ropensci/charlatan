@@ -75,8 +75,17 @@ ColorProvider <- R6::R6Class(
     },
 
     hex_color = function() {
-      x <- sprintf("#%s", sprintf("%x", super$random_int(1, 16777215)))
-      if (nchar(x) < 6) paste0(x, rep("0", 6 - nchar(x))) else x
+      x <- sprintf("%x", super$random_int(1, 16777215))
+      if (nchar(x) < 6) {
+        left <- sample(c(TRUE, FALSE), 1)
+        x <- if (left) {
+          paste0(x, rep("0", 6 - nchar(x)))
+        } else {
+          paste0(rep("0", 6 - nchar(x)), x)
+        }
+      }
+      if (length(x) > 1) x <- x[1]
+      sprintf("#%s", x)
     },
 
     safe_hex_color = function() {
@@ -94,7 +103,6 @@ ColorProvider <- R6::R6Class(
     rgb_color = function() {
       grDevices::rgb(private$sample_col(), private$sample_col(),
                      private$sample_col(), maxColorValue = 255)
-      #gsub("\\s|\\(|\\)", "", private$rgb_color_list())
     },
 
     rgb_css_color = function() {
