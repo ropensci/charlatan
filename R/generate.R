@@ -35,7 +35,8 @@
 ch_generate <- function(..., n = 10, locale = NULL) {
   choices <- unlist(list(...))
   if (length(choices) == 0) choices <- c("name", "job", "phone_number")
-  stopifnot(inherits(choices, "character"))
+  #stopifnot(inherits(choices, "character"))
+  assert(choices, "character")
 
   if (!all(choices %in% all_choices)) {
     stop("column name must be selected from the following:\n  ",
