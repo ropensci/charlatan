@@ -22,10 +22,6 @@
 #' ch_norm()
 #' ch_lnorm()
 #' ch_beta(shape1 = 1, shape2 = 1)
-ch_double <- function(n = 1, mean = 0, sd = 1) {
-  assert(n, c('integer', 'numeric'))
-  NumericsProvider$new()$double(n, mean, sd)
-}
 
 #' @export
 #' @rdname numerics

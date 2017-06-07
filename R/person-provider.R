@@ -47,8 +47,10 @@ PersonProvider <- R6::R6Class(
 
     initialize = function(locale = NULL, messy = FALSE) {
       self$messy <- if (!is.null(charlatan_settings_env$global_messy)) {
+        assert(charlatan_settings_env$global_messy, "logical")
         charlatan_settings_env$global_messy
       } else {
+        assert(messy, "logical")
         messy
       }
       if (!is.null(locale)) {

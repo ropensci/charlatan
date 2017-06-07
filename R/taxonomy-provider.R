@@ -192,7 +192,8 @@ tax_epithets <- c('abbeokutae','ackermani','adolphii','adunca','aegilicum',
 #'       Get a binomial name (genus + epithet)
 #'       \itemize{
 #'        \item authority: Include authority. default: \code{FALSE}
-#'        \item date: Include authority date. default: \code{FALSE}
+#'        \item date: Include authority date. If \code{authority = FALSE},
+#'        this is ignored.  default: \code{FALSE}
 #'       }
 #'     }
 #'   }

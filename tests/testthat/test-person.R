@@ -1,52 +1,67 @@
-context("MissingDataProvider")
+context("PersonProvider")
 
-test_that("MissingDataProvider works", {
-  aa <- MissingDataProvider$new()
-  letters2 <- aa$make_missing(letters)
-  letters3 <- aa$make_missing(letters)
+test_that("PersonProvider works", {
+  aa <- PersonProvider$new()
 
+  expect_equal(aa$locale, "en_US")
   expect_is(aa, "R6")
-  expect_is(aa, "MissingDataProvider")
+  expect_is(aa, "PersonProvider")
 
-  expect_is(aa$make_missing, "function")
+  expect_is(aa$render, "function")
 
-  expect_is(letters2, "character")
+  expect_is(aa$render(), "character")
+  expect_is(aa$render(), "character")
+  expect_is(aa$render(), "character")
+  expect_is(aa$render(), "character")
 
-  # original and with missing data are not the same
-  expect_false(identical(letters, letters2))
-
-  # two missing data objets are not the same
-  expect_false(identical(letters2, letters3))
+  aa <- PersonProvider$new(locale = "fi_FI")
+  expect_equal(aa$locale, "fi_FI")
 })
 
-test_that("MissingDataProvider fails well", {
-  aa <- MissingDataProvider$new()
+test_that("PersonProvider fails well", {
+  aa <- PersonProvider$new()
+  expect_error(aa$render(x = 5), "unused argument")
+
   expect_error(
-    aa$make_missing(),
-    "argument \"x\" is missing"
+    PersonProvider$new(locale = "foobar"),
+    "foobar not in set of available locales"
   )
 })
 
 
-context("ch_missing")
+context("ch_name")
 
-test_that("ch_missing works", {
-  letters2 <- ch_missing(letters)
-  letters3 <- ch_missing(letters)
+test_that("ch_name works", {
+  aa <- ch_name()
 
-  expect_is(letters2, "character")
-  expect_is(letters3, "character")
-
-  # original and with missing data are not the same
-  expect_false(identical(letters, letters2))
-
-  # two missing data objets are not the same
-  expect_false(identical(letters2, letters3))
+  expect_is(aa, "character")
 })
 
-test_that("ch_missing fails well", {
+test_that("ch_name - n parameter", {
+  expect_equal(length(ch_name(n = 10)), 10)
+  expect_equal(length(ch_name(n = 100)), 100)
+  expect_equal(length(ch_name(n = 500)), 500)
+})
+
+test_that("ch_name - locale parameter", {
+  expect_is(ch_company(locale = "fr_FR"), "character")
+  expect_is(ch_company(locale = "de_DE"), "character")
+  expect_is(ch_company(locale = "bg_BG"), "character")
+})
+
+test_that("ch_name fails well", {
   expect_error(
-    ch_missing(),
-    "argument \"x\" is missing"
+    ch_name(n = "xx"),
+    "n must be of class integer, numeric"
+  )
+
+  expect_error(
+    ch_name(locale = 5),
+    "5 not in set of available locales"
+  )
+
+  expect_error(
+    ch_name(messy = "adsf"),
+    "messy must be of class logical"
   )
 })
