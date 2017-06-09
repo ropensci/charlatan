@@ -141,7 +141,7 @@ FraudsterClient <- R6::R6Class(
 
     # sequences
     sequence = function(n = 1, length = 30) {
-      ch_sequence(n = n, length = length)
+      ch_gene_sequence(n = n, length = length)
     },
 
     # phone number
