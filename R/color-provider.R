@@ -75,17 +75,8 @@ ColorProvider <- R6::R6Class(
     },
 
     hex_color = function() {
-      x <- sprintf("%x", super$random_int(1, 16777215))
-      if (nchar(x) < 6) {
-        left <- sample(c(TRUE, FALSE), 1)
-        x <- if (left) {
-          paste0(x, rep("0", 6 - nchar(x)))
-        } else {
-          paste0(rep("0", 6 - nchar(x)), x)
-        }
-      }
-      if (length(x) > 1) x <- x[1]
-      sprintf("#%s", x)
+      grDevices::rgb(private$sample_col(), private$sample_col(),
+                     private$sample_col(), maxColorValue = 255)
     },
 
     safe_hex_color = function() {
@@ -101,12 +92,11 @@ ColorProvider <- R6::R6Class(
     },
 
     rgb_color = function() {
-      grDevices::rgb(private$sample_col(), private$sample_col(),
-                     private$sample_col(), maxColorValue = 255)
+      as.vector(grDevices::col2rgb(self$hex_color()))
     },
 
     rgb_css_color = function() {
-      sprintf("rgb(%s)", self$rgb_color())
+      sprintf("rgb(%s)", paste0(self$rgb_color(), collapse = ", "))
     }
   ),
 
@@ -116,12 +106,8 @@ ColorProvider <- R6::R6Class(
     },
 
     rgb_color_list = function() {
-      color <- self$hex_color()
-      sprintf("(%s, %s, %s)",
-        as.integer(Rmpfr::mpfr(substring(color, 2, 3), base = 16)),
-        as.integer(Rmpfr::mpfr(substring(color, 4, 5), base = 16)),
-        as.integer(Rmpfr::mpfr(substring(color, 6, 7), base = 16))
-      )
+      color <- self$rgb_color()
+      sprintf("(%s)", paste0(color, collapse = ", "))
     },
 
     sample_col = function() sample(0:255, 1)
