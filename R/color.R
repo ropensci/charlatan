@@ -78,12 +78,8 @@ ch_safe_hex_color <- function(n = 1) {
 #' @rdname ch_color
 ch_rgb_color <- function(n = 1) {
   assert(n, c('integer', 'numeric'))
-  if (n == 1) {
-    ColorProvider$new()$rgb_color()
-  } else {
-    x <- ColorProvider$new()
-    rep_licate(n, x$rgb_color(), "")
-  }
+  x <- ColorProvider$new()
+  replicate(n, x$rgb_color(), simplify = FALSE)
 }
 
 #' @export
