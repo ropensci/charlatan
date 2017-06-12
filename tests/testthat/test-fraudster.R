@@ -19,8 +19,12 @@ test_that("fraudster - all the things work", {
   expect_is(aa$safe_color_name(), "character")
   expect_is(aa$hex_color(), "character")
   expect_is(aa$safe_hex_color(), "character")
-  expect_is(aa$rgb_color(), "character")
+
+  # rgb_color() returns a list of RGB vectors
+  expect_is(aa$rgb_color(), "list")
+  expect_is(aa$rgb_color()[[1]], "integer")
   expect_is(aa$rgb_css_color(), "character")
+
   expect_type(aa$lat(), "double")
   expect_type(aa$lon(), "double")
   expect_type(aa$position(), "double")
