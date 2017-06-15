@@ -3,7 +3,6 @@
 \name{numerics}
 \alias{numerics}
 \alias{ch_double}
-\alias{ch_double}
 \alias{ch_integer}
 \alias{ch_unif}
 \alias{ch_norm}
@@ -11,8 +10,6 @@
 \alias{ch_beta}
 \title{Create numbers}
 \usage{
-ch_double(n = 1, mean = 0, sd = 1)
-
 ch_double(n = 1, mean = 0, sd = 1)
 
 ch_integer(n = 1, min = 1, max = 1000)

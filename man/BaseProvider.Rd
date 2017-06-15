@@ -10,8 +10,8 @@ BaseProvider
 \details{
 \strong{Methods}
   \describe{
-   \item{\code{random_element}}{
-     wrapper around \code{\link{sample}}: \code{x[sample(seq_along(x), 1)]}
+   \item{\code{random_element(x)}}{
+     pick a random element from any input vector or list
    }
    \item{\code{random_int(min = 0, max = 9999, size = 1)}}{
      random integer
@@ -31,16 +31,16 @@ BaseProvider
    \item{\code{random_letter()}}{
      random letter
    }
-   \item{\code{numerify()}}{
+   \item{\code{numerify(text = '###')}}{
      replace a template with numbers
    }
-   \item{\code{lexify()}}{
+   \item{\code{lexify(text = '????')}}{
      replace a template with letters
    }
-   \item{\code{bothify()}}{
+   \item{\code{bothify(text = '## ??')}}{
      both numerify and lexify together
    }
-   \item{\code{check_locale()}}{
+   \item{\code{check_locale(x)}}{
      check a locale to see if it exists, if not, stop with error message
    }
  }
