@@ -5,12 +5,12 @@ Description: Make fake data, supporting addresses, person names, dates,
     times, colors, coordinates, currencies, digital object identifiers
     (DOIs), jobs, phone numbers, DNA sequences, doubles and integers
     from distributions and within a range.
-Version: 0.0.7.9218
+Version: 0.0.9.9100
 Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"),
-    email = "myrmecocystus@gmail.com"))
+    email = "myrmecocystus+r@gmail.com"))
 License: MIT + file LICENSE
-URL: https://github.com/ropenscilabs/charlatan
-BugReports: https://github.com/ropenscilabs/charlatan/issues
+URL: https://github.com/ropensci/charlatan
+BugReports: https://github.com/ropensci/charlatan/issues
 LazyData: true
 Encoding: UTF-8
 VignetteBuilder: knitr

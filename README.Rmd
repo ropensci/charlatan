@@ -10,10 +10,10 @@ knitr::opts_chunk$set(
 )
 ```
 
-[![Build Status](https://travis-ci.org/ropenscilabs/charlatan.svg?branch=master)](https://travis-ci.org/ropenscilabs/charlatan)
-[![codecov](https://codecov.io/gh/ropenscilabs/charlatan/branch/master/graph/badge.svg)](https://codecov.io/gh/ropenscilabs/charlatan)
+[![Build Status](https://travis-ci.org/ropensci/charlatan.svg?branch=master)](https://travis-ci.org/ropensci/charlatan)
+[![codecov](https://codecov.io/gh/ropensci/charlatan/branch/master/graph/badge.svg)](https://codecov.io/gh/ropensci/charlatan)
 
-`charlatan` makes fake data, inspired from and borrowing some code from Python's [faker](https://github.com/joke2k/faker) 
+`charlatan` makes fake data, inspired from and borrowing some code from Python's [faker](https://github.com/joke2k/faker)
 
 Make fake data for:
 
@@ -37,7 +37,7 @@ Possible use cases for `charlatan`:
 * Generate fake data to replace sensitive real data with before public release
 * Create a random set of colors for visualization
 * Generate random coordinates for a map
-* Get a set of randomly generated DOIs (Digial Object Identifiers) to 
+* Get a set of randomly generated DOIs (Digial Object Identifiers) to
 assign to fake scholarly artifacts
 * Generate fake taxonomic names for a biological dataset
 * Get a set of fake sequences to use to test code/software that uses
@@ -48,19 +48,27 @@ Reasons to use `charlatan`:
 * Lite weight, very few dependencies, all deps lite weight
 * Relatively comprehensive types of data, and more being added
 * Comprehensive set of languages supported, more being added
-* Useful R features such as creating entire fake data.frame's 
+* Useful R features such as creating entire fake data.frame's
 
 ## Installation
 
+cran version
+
 ```{r eval=FALSE}
-devtools::install_github("ropenscilabs/charlatan")
+install.packages("charlatan")
+```
+
+dev version
+
+```{r eval=FALSE}
+devtools::install_github("ropensci/charlatan")
 ```
 
 ```{r}
 library("charlatan")
 ```
 
-## high level function 
+## high level function
 
 ... for all fake data operations
 
@@ -74,7 +82,7 @@ x$color_name()
 
 ## locale support
 
-Adding more locales through time, e.g., 
+Adding more locales through time, e.g.,
 
 Locale support for job data
 
@@ -158,10 +166,8 @@ ch_credit_card_security_code(10)
 
 ## Meta
 
-* Please [report any issues or bugs](https://github.com/ropenscilabs/charlatan/issues).
+* Please [report any issues or bugs](https://github.com/ropensci/charlatan/issues).
 * License: MIT
 * Get citation information for `charlatan` in R doing `citation(package = 'charlatan')`
-* Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). 
+* Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md).
 By participating in this project you agree to abide by its terms.
-
-[![ropensci_footer](https://ropensci.org/public_images/github_footer.png)](https://ropensci.org)
