@@ -6,3 +6,5 @@ README.Rmd
 cran-comments.md
 man-roxygen
 appveyor.yml
+.github
+appveyor.yml
