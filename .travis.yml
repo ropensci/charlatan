@@ -10,6 +10,11 @@ after_success:
 
 r_check_args: "--as-cran --run-dontrun"
 
+r:
+  - oldrel
+  - release
+  - devel
+
 notifications:
   email:
     on_success: change
