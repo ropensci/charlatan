@@ -4,6 +4,7 @@ charlatan
 
 
 [![Build Status](https://travis-ci.org/ropensci/charlatan.svg?branch=master)](https://travis-ci.org/ropensci/charlatan)
+[![Build status](https://ci.appveyor.com/api/projects/status/s2r5ltp3kcmxyb49?svg=true)](https://ci.appveyor.com/project/sckott/charlatan)
 [![codecov](https://codecov.io/gh/ropensci/charlatan/branch/master/graph/badge.svg)](https://codecov.io/gh/ropensci/charlatan)
 
 `charlatan` makes fake data, inspired from and borrowing some code from Python's [faker](https://github.com/joke2k/faker)
@@ -90,13 +91,13 @@ Locale support for job data
 
 ```r
 ch_job(locale = "en_US", n = 3)
-#> [1] "Psychologist, counselling" "Operations geologist"     
+#> [1] "Psychologist, counselling" "Operations geologist"
 #> [3] "Engineer, agricultural"
 ch_job(locale = "fr_FR", n = 3)
 #> [1] "Expert bilan carbone" "Maréchal"             "Déclarant en douane"
 ch_job(locale = "hr_HR", n = 3)
 #> [1] "Djelatnik koji obavlja poslove miniranja"
-#> [2] "Prvostupnik sanitarnog inženjerstva"     
+#> [2] "Prvostupnik sanitarnog inženjerstva"
 #> [3] "Radnik zaposlen na rukovodećim poslovima"
 ch_job(locale = "uk_UA", n = 3)
 #> [1] "Слідчий"    "Письменник" "Дерун"
@@ -168,10 +169,10 @@ ch_name()
 
 ```r
 ch_name(10)
-#>  [1] "Coral Bernier DDS"         "Miss Cleola Wyman MD"     
-#>  [3] "Eliga Roberts"             "Ellery Toy-Mosciski"      
-#>  [5] "Ms. Noretta Krajcik"       "Delton Cartwright"        
-#>  [7] "Leander Cartwright-Cremin" "Andre Fritsch"            
+#>  [1] "Coral Bernier DDS"         "Miss Cleola Wyman MD"
+#>  [3] "Eliga Roberts"             "Ellery Toy-Mosciski"
+#>  [5] "Ms. Noretta Krajcik"       "Delton Cartwright"
+#>  [7] "Leander Cartwright-Cremin" "Andre Fritsch"
 #>  [9] "Trudy Osinski"             "Ozell Harber"
 ```
 
@@ -187,9 +188,9 @@ ch_phone_number()
 
 ```r
 ch_phone_number(10)
-#>  [1] "(041)140-1861x299" "(714)986-0321"     "+14(2)9383900035" 
-#>  [4] "792-024-7630"      "+98(9)4934404941"  "05682486341"      
-#>  [7] "311-816-8497"      "158-272-6961"      "09412768076"      
+#>  [1] "(041)140-1861x299" "(714)986-0321"     "+14(2)9383900035"
+#>  [4] "792-024-7630"      "+98(9)4934404941"  "05682486341"
+#>  [7] "311-816-8497"      "158-272-6961"      "09412768076"
 #> [10] "925-770-8357x9548"
 ```
 
@@ -204,15 +205,15 @@ ch_job()
 
 ```r
 ch_job(10)
-#>  [1] "Radiographer, therapeutic"                  
-#>  [2] "Sports development officer"                 
-#>  [3] "Site engineer"                              
-#>  [4] "Archivist"                                  
-#>  [5] "Media planner"                              
+#>  [1] "Radiographer, therapeutic"
+#>  [2] "Sports development officer"
+#>  [3] "Site engineer"
+#>  [4] "Archivist"
+#>  [5] "Media planner"
 #>  [6] "Armed forces training and education officer"
-#>  [7] "Teacher, secondary school"                  
-#>  [8] "Legal secretary"                            
-#>  [9] "Sports administrator"                       
+#>  [7] "Teacher, secondary school"
+#>  [8] "Legal secretary"
+#>  [9] "Sports administrator"
 #> [10] "Biomedical engineer"
 ```
 
@@ -231,9 +232,9 @@ ch_credit_card_provider(n = 4)
 ch_credit_card_number()
 #> [1] "4393236964879"
 ch_credit_card_number(n = 10)
-#>  [1] "180092387684893340"  "51512743884706116"   "676205140541326"    
-#>  [4] "3052225761814848"    "3337762150079667193" "639084767378585"    
-#>  [7] "3337168650130468408" "52586108990026422"   "51556384483864878"  
+#>  [1] "180092387684893340"  "51512743884706116"   "676205140541326"
+#>  [4] "3052225761814848"    "3337762150079667193" "639084767378585"
+#>  [7] "3337168650130468408" "52586108990026422"   "51556384483864878"
 #> [10] "869950882615296431"
 ```
 
