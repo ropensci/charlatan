@@ -316,9 +316,6 @@ funs_ja_jp <- list(
 
 # @classmethod
 # def last_kana_name(cls):
-#     '''
-#     @example 'アオタ'
-#     '''
 #     return cls.random_element(cls.last_kana_names)
 
 # def romanized_name(self):
