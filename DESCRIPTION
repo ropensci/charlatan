@@ -6,8 +6,16 @@ Description: Make fake data, supporting addresses, person names, dates,
     (DOIs), jobs, phone numbers, DNA sequences, doubles and integers
     from distributions and within a range.
 Version: 0.0.9.9100
-Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"),
-    email = "myrmecocystus+r@gmail.com"))
+Authors@R: c(
+      person("Scott", "Chamberlain", role = c("aut", "cre"),
+        email = "myrmecocystus+r@gmail.com"),
+      person("Brooke", "Anderson", role = "ctb", 
+        comment = "Brooke Anderson reviewed the package for rOpenSci, 
+        see https://github.com/ropensci/onboarding/issues/94"),
+      person("Tristan", "Mahr", role = "ctb", 
+        comment = "Tristan Mahr reviewed the package for rOpenSci, 
+        see https://github.com/ropensci/onboarding/issues/94")
+    )
 License: MIT + file LICENSE
 URL: https://github.com/ropensci/charlatan
 BugReports: https://github.com/ropensci/charlatan/issues

@@ -49,6 +49,6 @@ x$color_name()
 x$hex_color()
 }
 \author{
-Scott Chamberlain \email{myrmecocystus@gmail.com}
+Scott Chamberlain \email{myrmecocystus+r@gmail.com}
 }
 \keyword{package}
