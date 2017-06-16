@@ -3,7 +3,7 @@ Type: Package
 Title: Make Fake Data
 Description: Make fake data, supporting addresses, person names, dates,
     times, colors, coordinates, currencies, digital object identifiers
-    (DOIs), jobs, phone numbers, DNA sequences, doubles and integers
+    ('DOIs'), jobs, phone numbers, 'DNA' sequences, doubles and integers
     from distributions and within a range.
 Version: 0.1.0
 Authors@R: c(
