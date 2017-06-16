@@ -19,6 +19,8 @@ test_that("JobProvider locale support works", {
 context("ch_job works")
 
 test_that("ch_job", {
+  skip_on_cran()
+
   aa <- ch_job()
 
   expect_is(aa, "character")
