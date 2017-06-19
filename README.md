@@ -77,8 +77,6 @@ x$job()
 #> [1] "Best boy"
 x$name()
 #> [1] "Dr. Adelard Ullrich III"
-x$job()
-#> [1] "Teacher, English as a foreign language"
 x$color_name()
 #> [1] "PaleGreen"
 ```
@@ -256,3 +254,5 @@ ch_credit_card_security_code(10)
 * Get citation information for `charlatan` in R doing `citation(package = 'charlatan')`
 * Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md).
 By participating in this project you agree to abide by its terms.
+
+[![ropensci_footer](https://ropensci.org/public_images/github_footer.png)](https://ropensci.org)
