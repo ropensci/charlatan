@@ -15,6 +15,7 @@ knitr::opts_chunk$set(
 [![Build status](https://ci.appveyor.com/api/projects/status/s2r5ltp3kcmxyb49?svg=true)](https://ci.appveyor.com/project/sckott/charlatan)
 [![codecov](https://codecov.io/gh/ropensci/charlatan/branch/master/graph/badge.svg)](https://codecov.io/gh/ropensci/charlatan)
 [![cran version](https://www.r-pkg.org/badges/version/charlatan)](https://cran.r-project.org/package=charlatan)
+[![](https://badges.ropensci.org/94_status.svg)](https://github.com/ropensci/onboarding/issues/94)
 
 `charlatan` makes fake data, inspired from and borrowing some code from Python's [faker](https://github.com/joke2k/faker)
 
