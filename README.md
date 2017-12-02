@@ -246,6 +246,9 @@ ch_credit_card_security_code(10)
 #>  [1] "946"  "994"  "634"  "794"  "682"  "581"  "270"  "697"  "3179" "483"
 ```
 
+## Usage in the wild
+
+- [eacton/R-Utility-Belt-ggplot2](https://github.com/eacton/R-Utility-Belt-ggplot2/blob/836a6bd303fbfde4a334d351e0d1c63f71c4ec68/furry_dataset.R)
 
 
 ## Meta
