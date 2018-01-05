@@ -1,6 +1,7 @@
 language: r
 sudo: false
 cache: packages
+dist: trusty
 
 r_github_packages:
   - jimhester/covr
