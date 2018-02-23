@@ -68,10 +68,14 @@ BaseProvider <- R6::R6Class(
   'BaseProvider',
   public = list(
     random_element = function(x) {
+      if (length(x) == 0) return('')
+      if (inherits(x, "character")) if (!any(nzchar(x))) return('')
       x[sample.int(n = length(x), size = 1)]
     },
 
     random_element_prob = function(x) {
+      if (length(x) == 0) return('')
+      if (inherits(x, "character")) if (!any(nzchar(x))) return('')
       choices <- names(x)
       probs <- unname(unlist(x))
       sample(choices, size = 1, prob = probs)
