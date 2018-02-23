@@ -30,6 +30,9 @@ Make fake data for:
 * numbers in range and from distributions
 * gene sequences
 * geographic coordinates
+* emails
+* URIs, URLs, and their parts
+* IP addresses
 * more coming ...
 
 Possible use cases for `charlatan`:
@@ -49,7 +52,7 @@ sequence data
 
 Reasons to use `charlatan`:
 
-* Lite weight, very few dependencies, all deps lite weight
+* Lite weight, few dependencies
 * Relatively comprehensive types of data, and more being added
 * Comprehensive set of languages supported, more being added
 * Useful R features such as creating entire fake data.frame's

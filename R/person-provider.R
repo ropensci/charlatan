@@ -156,8 +156,8 @@ PersonProvider <- R6::R6Class(
       self$person <- parse_eval("person_", self$locale, self$messy)
     },
 
-    render = function() {
-      fmt <- super$random_element(self$formats)
+    render = function(fmt = NULL) {
+      if (is.null(fmt)) fmt <- super$random_element(self$formats)
       dat <- lapply(self$person[pluck_names(fmt, self$person)], sample,
                     size = 1)
       if (length(grep("last_name", names(dat))) > 1) {

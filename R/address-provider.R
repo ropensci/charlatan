@@ -72,7 +72,7 @@
 #' z$country_code()
 #' z$postcode()
 #' z$street_name()
-#' 
+#'
 #' # en_GB
 #' (z <- AddressProvider$new('en_GB'))
 #' z$locale
@@ -120,7 +120,7 @@ AddressProvider <- R6::R6Class(
 
       self$city_prefixes <- parse_eval("city_prefixes_", self$locale)
       self$city_suffixes <- parse_eval("city_suffixes_", self$locale)
-      self$building_number_formats <- 
+      self$building_number_formats <-
         parse_eval("building_number_formats_", self$locale)
       self$street_suffixes <- parse_eval("street_suffixes_", self$locale)
       self$postcode_formats <- parse_eval("postcode_formats_", self$locale)
@@ -153,7 +153,11 @@ AddressProvider <- R6::R6Class(
       pp <- PersonProvider$new(locale = self$locale)
       dat <- list(
         first_name = super$random_element(pp$person$first_names),
-        last_name = super$random_element(pp$person$last_names), 
+        last_name = if (has_probs(self$person$last_names)) {
+          super$random_element_prob(pp$person$last_names)
+        } else {
+          super$random_element(pp$person$last_names)
+        },
         street_suffix = super$random_element(self$street_suffixes)
       )
       whisker::whisker.render(pattern, data = dat)
@@ -168,7 +172,7 @@ AddressProvider <- R6::R6Class(
       pp <- PersonProvider$new(locale = self$locale)
       dat <- list(
         first_name = super$random_element(pp$person$first_names),
-        last_name = super$random_element(pp$person$last_names), 
+        last_name = super$random_element(pp$person$last_names),
         city_prefix = super$random_element(self$city_prefixes),
         city_suffix = super$random_element(self$city_suffixes)
       )

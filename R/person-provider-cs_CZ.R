@@ -348,6 +348,7 @@ person_cs_cz <- list(
   first_names_female = person_first_names_female_cs_cz,
   last_names_male = person_last_names_male_cs_cz,
   last_names_female = person_last_names_female_cs_cz,
+  last_names = c(person_last_names_male_cs_cz, person_last_names_female_cs_cz),
   prefixes_female = person_prefixes_female_cs_cz,
   prefixes_male = person_prefixes_male_cs_cz,
   suffixes = person_suffixes_cs_cz

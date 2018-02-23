@@ -526,6 +526,7 @@ dt_countries <- list(
 #' z$century()
 #' z$timezone()
 #' z$unix_time()
+#' z$date("%Y-%M-%d")
 #' z$date_time()
 #' z$year()
 DateTimeProvider <- R6::R6Class(

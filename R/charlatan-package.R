@@ -9,6 +9,8 @@
 #' @importFrom R6 R6Class
 #' @importFrom whisker whisker.render
 #' @importFrom tibble as_data_frame
+#' @importFrom stringi stri_trans_general
+#' @importFrom iptools ip_random
 #' @aliases charlatan
 #' @docType package
 #' @keywords package
