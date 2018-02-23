@@ -2,11 +2,11 @@
 # https://github.com/joke2k/faker/blob/master/faker/providers/person/es_MX/__init__.py
 
 person_formats_es_mx <- c(
-  '{{first_name}} {{last_name1}} {{last_name2}}',
-  '{{first_name}} {{first_name}} {{last_name}}',
-  '{{first_name}} {{first_name}} {{last_name1}} {{last_name2}}',
-  '{{first_name}} {{last_name}}',
-  '{{prefix}} {{first_name}} {{last_name}}'
+  '{{first_names}} {{last_names1}} {{last_names2}}',
+  '{{first_names}} {{first_names}} {{last_names}}',
+  '{{first_names}} {{first_names}} {{last_names1}} {{last_names2}}',
+  '{{first_names}} {{last_names}}',
+  '{{prefixes}} {{first_names}} {{last_names}}'
 )
 
 person_first_names_es_mx <- c(
@@ -988,7 +988,7 @@ person_last_names_es_mx <- c(
 person_prefixes_es_mx <- c('Sr(a).', 'Dr.', 'Mtro.', 'Lic.', 'Ing.')
 
 person_es_mx <- list(
-  first_name = person_first_names_es_mx,
-  last_name = person_last_names_es_mx,
-  prefix = person_prefixes_es_mx
+  first_names = person_first_names_es_mx,
+  last_names = person_last_names_es_mx,
+  prefixes = person_prefixes_es_mx
 )

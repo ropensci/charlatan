@@ -2,29 +2,29 @@
 # https://github.com/joke2k/faker/blob/master/faker/providers/person/fr_FR/__init__.py
 
 person_formats_female_fr_fr = c(
-  '{{first_name_female}} {{last_name}}',
-  '{{first_name_female}} {{last_name}}',
-  '{{first_name_female}} {{last_name}}',
-  '{{first_name_female}} {{last_name}}',
-  '{{first_name_female}} {{last_name}}',
-  '{{first_name_female}} {{last_name}}',
-  '{{first_name_female}} {{prefix}} {{last_name}}',
-  '{{first_name_female}} {{last_name1}}-{{last_name2}}',
-  '{{first_name_female}}-{{first_name_female}} {{last_name}}',
-  '{{first_name_female}} {{last_name1}} {{prefix}} {{last_name2}}'
+  '{{first_name_female}} {{last_names}}',
+  '{{first_name_female}} {{last_names}}',
+  '{{first_name_female}} {{last_names}}',
+  '{{first_name_female}} {{last_names}}',
+  '{{first_name_female}} {{last_names}}',
+  '{{first_name_female}} {{last_names}}',
+  '{{first_name_female}} {{prefixes}} {{last_names}}',
+  '{{first_name_female}} {{last_names1}}-{{last_names2}}',
+  '{{first_name_female}}-{{first_name_female}} {{last_names}}',
+  '{{first_name_female}} {{last_names1}} {{prefixes}} {{last_names2}}'
 )
 
 person_formats_male_fr_fr = c(
-  '{{first_name_male}} {{last_name}}',
-  '{{first_name_male}} {{last_name}}',
-  '{{first_name_male}} {{last_name}}',
-  '{{first_name_male}} {{last_name}}',
-  '{{first_name_male}} {{last_name}}',
-  '{{first_name_male}} {{last_name}}',
-  '{{first_name_male}} {{prefix}} {{last_name}}',
-  '{{first_name_male}} {{last_name1}}-{{last_name1}}',
-  '{{first_name_male}}-{{first_name_male}} {{last_name}}',
-  '{{first_name_male}} {{last_name1}} {{prefix}} {{last_name2}}'
+  '{{first_name_male}} {{last_names}}',
+  '{{first_name_male}} {{last_names}}',
+  '{{first_name_male}} {{last_names}}',
+  '{{first_name_male}} {{last_names}}',
+  '{{first_name_male}} {{last_names}}',
+  '{{first_name_male}} {{last_names}}',
+  '{{first_name_male}} {{prefixes}} {{last_names}}',
+  '{{first_name_male}} {{last_names1}}-{{last_names1}}',
+  '{{first_name_male}}-{{first_name_male}} {{last_names}}',
+  '{{first_name_male}} {{last_names1}} {{prefixes}} {{last_names2}}'
 )
 
 person_formats_fr_fr = c(person_formats_male_fr_fr, person_formats_female_fr_fr)
@@ -305,6 +305,6 @@ person_fr_fr <- list(
   first_names = person_first_names_fr_fr,
   first_name_male = person_first_names_male_fr_fr,
   first_name_female = person_first_names_female_fr_fr,
-  last_name = person_last_names_fr_fr,
-  prefix = person_prefixes_fr_fr
+  last_names = person_last_names_fr_fr,
+  prefixes = person_prefixes_fr_fr
 )

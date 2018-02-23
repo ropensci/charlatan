@@ -1,7 +1,7 @@
 # modified from the python library faker:
 # https://github.com/joke2k/faker/blob/master/faker/providers/person/hr_HR/__init__.py
 
-person_formats_hr_hr <- '{{first_name}} {{last_name}}'
+person_formats_hr_hr <- '{{first_names}} {{last_names}}'
 
 person_first_names_male_hr_hr <- c(
   "Aldo",
@@ -1027,4 +1027,12 @@ person_last_names_hr_hr <- c(
   "\u017dupani\u0107",
   "\u017duvela",
   "\u017du\u017ei\u0107"
+)
+
+
+person_hr_hr <- list(
+  first_names = person_first_names_hr_hr,
+  first_name_male = person_first_names_male_hr_hr,
+  first_name_female = person_first_names_female_hr_hr,
+  last_names = person_last_names_hr_hr
 )

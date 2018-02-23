@@ -3,7 +3,12 @@
 \docType{data}
 \name{AddressProvider}
 \alias{AddressProvider}
+\alias{address_provider_locales}
 \title{AddressProvider}
+\format{An object of class \code{character} of length 2.}
+\usage{
+address_provider_locales
+}
 \description{
 AddressProvider
 }
@@ -35,6 +40,7 @@ AddressProvider
 }
 \examples{
 (z <- AddressProvider$new())
+z$locale
 z$city_suffix()
 z$street_suffix()
 z$building_number()
@@ -42,5 +48,16 @@ z$city()
 z$country()
 z$country_code()
 z$postcode()
+z$street_name()
+
+# en_GB
+(z <- AddressProvider$new('en_GB'))
+z$locale
+z$locale_data
+z$locale_data$postcode_sets
+z$postcode
+z$postcode()
+z$street_name()
 }
+\keyword{datasets}
 \keyword{internal}

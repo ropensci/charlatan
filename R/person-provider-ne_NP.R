@@ -2,21 +2,21 @@
 # https://github.com/joke2k/faker/blob/master/faker/providers/person/ne_NP/__init__.py
 
 person_formats_female_ne_np = c(
-  '{{first_name_female}} {{last_name}}',
-  '{{first_name_female}} {{last_name}}',
-  '{{first_name_female}} {{last_name}}',
-  '{{first_name_female}} {{last_name}}',
-  '{{first_name_female}} {{last_name}}',
-  '{{prefix_female}} {{first_name_female}} {{last_name}}'
+  '{{first_names_female}} {{last_names}}',
+  '{{first_names_female}} {{last_names}}',
+  '{{first_names_female}} {{last_names}}',
+  '{{first_names_female}} {{last_names}}',
+  '{{first_names_female}} {{last_names}}',
+  '{{prefixes_female}} {{first_names_female}} {{last_names}}'
 )
 
 person_formats_male_ne_np = c(
-  '{{first_name_male}} {{last_name}}',
-  '{{first_name_male}} {{last_name}}',
-  '{{first_name_male}} {{last_name}}',
-  '{{first_name_male}} {{last_name}}',
-  '{{first_name_male}} {{last_name}}',
-  '{{prefix_male}} {{first_name_male}} {{last_name}}'
+  '{{first_names_male}} {{last_names}}',
+  '{{first_names_male}} {{last_names}}',
+  '{{first_names_male}} {{last_names}}',
+  '{{first_names_male}} {{last_names}}',
+  '{{first_names_male}} {{last_names}}',
+  '{{prefixes_male}} {{first_names_male}} {{last_names}}'
 )
 
 person_formats_ne_np = c(person_formats_male_ne_np, person_formats_female_ne_np)
@@ -1543,3 +1543,12 @@ person_prefixes_female_ne_np = c("\u0936\u094d\u0930\u0940\u092e\u0924\u0940",
                                  "\u0938\u0941\u0936\u094d\u0930\u0940")
 person_prefixes_male_ne_np = c("\u0936\u094d\u0930\u0940",
                                "\u0936\u094d\u0930\u0940\u092e\u093e\u0928")
+person_prefixes_ne_np <- c(person_prefixes_female_ne_np, person_prefixes_male_ne_np)
+
+person_ne_np <- list(
+  first_names = person_first_names_ne_np,
+  last_names = person_last_names_ne_np,
+  prefixes_female = person_prefixes_female_ne_np,
+  prefixes_male = person_prefixes_male_ne_np,
+  prefixes = person_prefixes_ne_np
+)

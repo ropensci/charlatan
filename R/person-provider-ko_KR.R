@@ -2,8 +2,8 @@
 # https://github.com/joke2k/faker/blob/master/faker/providers/person/ko_KR/__init__.py
 
 person_formats_ko_kr = c(
-  '{{first_name}}{{last_name}}',
-  '{{first_name}}{{last_name}}{{last_name}}'
+  '{{first_names}}{{last_names}}',
+  '{{first_names}}{{last_names}}{{last_names}}'
 )
 
 person_first_names_ko_kr = c(
@@ -275,4 +275,9 @@ person_last_names_ko_kr = c(
   "\uac74",
   "\uc194",
   "\uae08"
+)
+
+person_ko_kr <- list(
+  first_names = person_first_names_ko_kr,
+  last_names = person_last_names_ko_kr
 )

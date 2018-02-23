@@ -2,25 +2,25 @@
 # https://github.com/joke2k/faker/blob/master/faker/providers/person/fa_IR/__init__.py
 
 person_formats_female_fa_ir = c(
-    '{{first_name_female}} {{last_name}}',
-    '{{first_name_female}} {{last_name}}',
-    '{{first_name_female}} {{last_name}}',
-    '{{first_name_female}} {{last_name}}',
-    '{{first_name_female}} {{last_name}}',
-    '{{prefix_female}} {{first_name_female}} {{last_name}}',
-    '{{first_name_female}} {{last_name}} {{suffix}}',
-    '{{prefix_female}} {{first_name_female}} {{last_name}} {{suffix}}'
+    '{{first_names_female}} {{last_names}}',
+    '{{first_names_female}} {{last_names}}',
+    '{{first_names_female}} {{last_names}}',
+    '{{first_names_female}} {{last_names}}',
+    '{{first_names_female}} {{last_names}}',
+    '{{prefixes_female}} {{first_names_female}} {{last_names}}',
+    '{{first_names_female}} {{last_names}} {{suffixes}}',
+    '{{prefixes_female}} {{first_names_female}} {{last_names}} {{suffixes}}'
 )
 
 person_formats_male_fa_ir = c(
-    '{{first_name_male}} {{last_name}}',
-    '{{first_name_male}} {{last_name}}',
-    '{{first_name_male}} {{last_name}}',
-    '{{first_name_male}} {{last_name}}',
-    '{{first_name_male}} {{last_name}}',
-    '{{prefix_male}} {{first_name_male}} {{last_name}}',
-    '{{first_name_male}} {{last_name}} {{suffix}}',
-    '{{prefix_male}} {{first_name_male}} {{last_name}} {{suffix}}'
+    '{{first_names_male}} {{last_names}}',
+    '{{first_names_male}} {{last_names}}',
+    '{{first_names_male}} {{last_names}}',
+    '{{first_names_male}} {{last_names}}',
+    '{{first_names_male}} {{last_names}}',
+    '{{prefixes_male}} {{first_names_male}} {{last_names}}',
+    '{{first_names_male}} {{last_names}} {{suffixes}}',
+    '{{prefixes_male}} {{first_names_male}} {{last_names}} {{suffixes}}'
 )
 
 person_formats_fa_ir = c(person_formats_female_fa_ir, person_formats_male_fa_ir)
@@ -349,10 +349,10 @@ person_prefixes_female_fa_ir = c(
 
 person_fa_ir <- list(
   first_names = person_first_names_fa_ir,
-  first_name_male = person_first_names_male_fa_ir,
-  first_name_female = person_first_names_female_fa_ir,
-  last_name = person_last_names_fa_ir,
-  prefixe_female = person_prefixes_female_fa_ir,
-  prefixe_male = person_prefixes_male_fa_ir,
-  suffix = ''
+  first_names_male = person_first_names_male_fa_ir,
+  first_names_female = person_first_names_female_fa_ir,
+  last_names = person_last_names_fa_ir,
+  prefixes_female = person_prefixes_female_fa_ir,
+  prefixes_male = person_prefixes_male_fa_ir,
+  suffixes = ''
 )

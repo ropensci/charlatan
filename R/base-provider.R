@@ -71,6 +71,12 @@ BaseProvider <- R6::R6Class(
       x[sample.int(n = length(x), size = 1)]
     },
 
+    random_element_prob = function(x) {
+      choices <- names(x)
+      probs <- unname(unlist(x))
+      sample(choices, size = 1, prob = probs)
+    },
+
     random_int = function(min = 0, max = 9999, size = 1) {
       stopifnot(max >= min)
       num <- max - min + 1

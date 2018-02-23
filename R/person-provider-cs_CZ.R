@@ -2,22 +2,22 @@
 # https://github.com/joke2k/faker/blob/master/faker/providers/person/person/__init___cs_cz.py
 
 person_formats_cs_cz = c(
-  '{{first_name_male}} {{last_name_male}}',
-  '{{first_name_male}} {{last_name_male}}',
-  '{{first_name_male}} {{last_name_male}}',
-  '{{first_name_male}} {{last_name_male}}',
-  '{{first_name_male}} {{last_name_male}}',
-  '{{first_name_female}} {{last_name_female}}',
-  '{{first_name_female}} {{last_name_female}}',
-  '{{first_name_female}} {{last_name_female}}',
-  '{{first_name_female}} {{last_name_female}}',
-  '{{first_name_female}} {{last_name_female}}',
-  '{{prefix_male}} {{first_name_male}} {{last_name_male}}',
-  '{{prefix_female}} {{first_name_female}} {{last_name_female}}',
-  '{{first_name_male}} {{last_name_male}} {{suffix}}',
-  '{{first_name_female}} {{last_name_female}} {{suffix}}',
-  '{{prefix_male}} {{first_name_male}} {{last_name_male}} {{suffix}}',
-  '{{prefix_female}} {{first_name_female}} {{last_name_female}} {{suffix}}'
+  '{{first_names_male}} {{last_names_male}}',
+  '{{first_names_male}} {{last_names_male}}',
+  '{{first_names_male}} {{last_names_male}}',
+  '{{first_names_male}} {{last_names_male}}',
+  '{{first_names_male}} {{last_names_male}}',
+  '{{first_names_female}} {{last_names_female}}',
+  '{{first_names_female}} {{last_names_female}}',
+  '{{first_names_female}} {{last_names_female}}',
+  '{{first_names_female}} {{last_names_female}}',
+  '{{first_names_female}} {{last_names_female}}',
+  '{{prefixes_male}} {{first_names_male}} {{last_names_male}}',
+  '{{prefixes_female}} {{first_names_female}} {{last_names_female}}',
+  '{{first_names_male}} {{last_names_male}} {{suffixes}}',
+  '{{first_names_female}} {{last_names_female}} {{suffixes}}',
+  '{{prefixes_male}} {{first_names_male}} {{last_names_male}} {{suffixes}}',
+  '{{prefixes_female}} {{first_names_female}} {{last_names_female}} {{suffixes}}'
 )
 
 person_first_names_male_cs_cz = c(
@@ -344,11 +344,11 @@ person_suffixes_cs_cz = c('CSc.', 'DiS.', 'Ph.D.', 'Th.D.')
 
 person_cs_cz <- list(
   first_names = person_first_names_cs_cz,
-  first_name_male = person_first_names_male_cs_cz,
-  first_name_female = person_first_names_female_cs_cz,
-  last_name_male = person_last_names_male_cs_cz,
-  last_name_female = person_last_names_female_cs_cz,
-  prefix_female = person_prefixes_female_cs_cz,
-  prefix_male = person_prefixes_male_cs_cz,
-  suffix = person_suffixes_cs_cz
+  first_names_male = person_first_names_male_cs_cz,
+  first_names_female = person_first_names_female_cs_cz,
+  last_names_male = person_last_names_male_cs_cz,
+  last_names_female = person_last_names_female_cs_cz,
+  prefixes_female = person_prefixes_female_cs_cz,
+  prefixes_male = person_prefixes_male_cs_cz,
+  suffixes = person_suffixes_cs_cz
 )

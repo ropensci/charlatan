@@ -1759,13 +1759,13 @@ person_prefixes_male_bg_bg = c(
 )
 
 person_formats_female_bg_bg = c(
-  '{{first_name_female}} {{last_name_female}}',
-  '{{prefixes_female}} {{first_name_female}} {{last_name_female}}'
+  '{{first_names_female}} {{last_names_female}}',
+  '{{prefixes_female}} {{first_names_female}} {{last_names_female}}'
 )
 
 person_formats_male_bg_bg = c(
-  '{{first_name_male}} {{last_name_male}}',
-  '{{prefixes_male}} {{first_name_male}} {{last_name_male}}'
+  '{{first_names_male}} {{last_names_male}}',
+  '{{prefixes_male}} {{first_names_male}} {{last_names_male}}'
 )
 
 person_formats_bg_bg = c(person_formats_male_bg_bg, person_formats_female_bg_bg)
@@ -1774,10 +1774,10 @@ person_last_names_bg_bg = c(person_last_names_male_bg_bg, person_last_names_fema
 
 person_bg_bg <- list(
   first_names = person_first_names_bg_bg,
-  first_name_male = person_first_names_male_bg_bg,
-  first_name_female = person_first_names_female_bg_bg,
-  last_name_male = person_last_names_male_bg_bg,
-  last_name_female = person_last_names_female_bg_bg,
+  first_names_male = person_first_names_male_bg_bg,
+  first_names_female = person_first_names_female_bg_bg,
+  last_names_male = person_last_names_male_bg_bg,
+  last_names_female = person_last_names_female_bg_bg,
   prefixes_female = person_prefixes_female_bg_bg,
   prefixes_male = person_prefixes_male_bg_bg
 )

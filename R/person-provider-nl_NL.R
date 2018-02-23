@@ -2,14 +2,14 @@
 # https://github.com/joke2k/faker/blob/master/faker/providers/person/nl_NL/__init__.py
 
 person_formats_nl_nl = c(
-  '{{first_name_male}} {{last_name}}',
-  '{{first_name_male}} {{last_name}}',
-  '{{first_name_male}} {{last_name}}',
-  '{{first_name_male}} {{last_name}}-{{last_name}}',
-  '{{first_name_female}} {{last_name}}',
-  '{{first_name_female}} {{last_name}}',
-  '{{first_name_female}} {{last_name}}',
-  '{{first_name_female}} {{last_name}}-{{last_name}}'
+  '{{first_names_male}} {{last_names}}',
+  '{{first_names_male}} {{last_names}}',
+  '{{first_names_male}} {{last_names}}',
+  '{{first_names_male}} {{last_names}}-{{last_names}}',
+  '{{first_names_female}} {{last_names}}',
+  '{{first_names_female}} {{last_names}}',
+  '{{first_names_female}} {{last_names}}',
+  '{{first_names_female}} {{last_names}}-{{last_names}}'
 )
 
 person_first_names_male_nl_nl = c(
@@ -1655,4 +1655,11 @@ person_last_names_nl_nl = c(
   "van der Wal",
   "van der Zijl",
   "van het Heerenveen"
+)
+
+person_nl_nl <- list(
+  first_names = person_first_names_nl_nl,
+  first_names_female = person_first_names_female_nl_nl,
+  first_names_male = person_first_names_male_nl_nl,
+  last_names = person_last_names_nl_nl
 )

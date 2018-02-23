@@ -2,9 +2,9 @@
 # https://github.com/joke2k/faker/blob/master/faker/providers/person/lt_LT/__init__.py
 
 person_formats_lt_lt = c(
-  '{{first_name}} {{last_name}}',
-  '{{first_name}} {{last_name}}',
-  '{{last_name}}, {{first_name}}'
+  '{{first_names}} {{last_names}}',
+  '{{first_names}} {{last_names}}',
+  '{{last_names}}, {{first_names}}'
 )
 
 person_first_names_lt_lt = c(
@@ -246,4 +246,9 @@ person_last_names_lt_lt = c(
   "Naus\u0117da",
   "Po\u0161ka",
   "Povilonis"
+)
+
+person_lt_lt <- list(
+  first_names = person_first_names_lt_lt,
+  last_names = person_last_names_lt_lt
 )

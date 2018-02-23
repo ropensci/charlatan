@@ -2,22 +2,22 @@
 # https://github.com/joke2k/faker/blob/master/faker/providers/person/de_DE/__init__.py
 
 person_formats_de_de = c(
-  '{{first_name_male}} {{last_name}}',
-  '{{first_name_male}} {{last_name}}',
-  '{{first_name_male}} {{last_name}}',
-  '{{first_name_male}} {{last_name}}',
-  '{{first_name_male}} {{last_name}}-{{last_name}}',
-  '{{first_name_female}} {{last_name}}',
-  '{{first_name_female}} {{last_name}}',
-  '{{first_name_female}} {{last_name}}',
-  '{{first_name_female}} {{last_name}}',
-  '{{first_name_female}} {{last_name}}-{{last_name}}',
-  '{{prefix_male}} {{first_name_male}} {{last_name}}',
-  '{{prefix_female}} {{first_name_female}} {{last_name}}',
-  '{{first_name_male}} {{last_name}} {{suffix}}',
-  '{{first_name_female}} {{last_name}} {{suffix}}',
-  '{{prefix_male}} {{first_name_male}} {{last_name}} {{suffix}}',
-  '{{prefix_female}} {{first_name_female}} {{last_name}} {{suffix}}'
+  '{{first_names_male}} {{last_names}}',
+  '{{first_names_male}} {{last_names}}',
+  '{{first_names_male}} {{last_names}}',
+  '{{first_names_male}} {{last_names}}',
+  '{{first_names_male}} {{last_names}}-{{last_names}}',
+  '{{first_names_female}} {{last_names}}',
+  '{{first_names_female}} {{last_names}}',
+  '{{first_names_female}} {{last_names}}',
+  '{{first_names_female}} {{last_names}}',
+  '{{first_names_female}} {{last_names}}-{{last_names}}',
+  '{{prefixes_male}} {{first_names_male}} {{last_names}}',
+  '{{prefixes_female}} {{first_names_female}} {{last_names}}',
+  '{{first_names_male}} {{last_names}} {{suffixes}}',
+  '{{first_names_female}} {{last_names}} {{suffixes}}',
+  '{{prefixes_male}} {{first_names_male}} {{last_names}} {{suffixes}}',
+  '{{prefixes_female}} {{first_names_female}} {{last_names}} {{suffixes}}'
 )
 
 # From http://de.wiktionary.org/wiki/Verzeichnis:Deutsch/Liste_der_h%C3%A4ufigsten_m%C3%A4nnlichen_Vornamen_Deutschlands
@@ -2453,10 +2453,10 @@ person_suffixes_de_de = c('B.Sc.', 'B.A.', 'B.Eng.', 'MBA.')
 
 person_de_de <- list(
   first_names = person_first_names_de_de,
-  first_name_male = person_first_names_male_de_de,
-  first_name_female = person_first_names_female_de_de,
-  last_name = person_last_names_de_de,
-  prefix_female = person_prefixes_female_de_de,
-  prefix_male = person_prefixes_male_de_de,
-  suffix = person_suffixes_de_de
+  first_names_male = person_first_names_male_de_de,
+  first_names_female = person_first_names_female_de_de,
+  last_names = person_last_names_de_de,
+  prefixes_female = person_prefixes_female_de_de,
+  prefixes_male = person_prefixes_male_de_de,
+  suffixes = person_suffixes_de_de
 )

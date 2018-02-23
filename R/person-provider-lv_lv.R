@@ -2,15 +2,9 @@
 # https://github.com/joke2k/faker/blob/master/faker/providers/person/lv_LV/__init__.py
 
 person_formats_lv_lv = c(
-  '{{first_name}} {{last_name}}',
-  '{{first_name}} {{last_name}}',
-  '{{last_name}}, {{first_name}}'
-)
-
-person_formats_lv_lv = c(
-  '{{first_name}} {{last_name}}',
-  '{{first_name}} {{last_name}}',
-  '{{last_name}}, {{first_name}}'
+  '{{first_names}} {{last_names}}',
+  '{{first_names}} {{last_names}}',
+  '{{last_names}}, {{first_names}}'
 )
 
 person_first_names_lv_lv = c(
@@ -368,3 +362,9 @@ person_last_names_lv_lv = c(
   "Zvaigzne",
   "Zvirbulis"
 )
+
+person_lv_lv <- list(
+  first_names = person_first_names_lv_lv,
+  last_names = person_last_names_lv_lv
+)
+

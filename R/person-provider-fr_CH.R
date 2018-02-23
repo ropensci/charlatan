@@ -2,23 +2,23 @@
 # https://github.com/joke2k/faker/blob/master/faker/providers/person/fr_CH/__init__.py
 
 person_formats_female_fr_ch = c(
-  '{{first_name_female}} {{last_name}}',
-  '{{first_name_female}} {{last_name}}',
-  '{{first_name_female}} {{last_name}}',
-  '{{first_name_female}} {{last_name}}',
-  '{{first_name_female}} {{last_name}}',
-  '{{first_name_female}} {{last_name}}',
-  '{{first_name_female}} {{last_name1}}-{{last_name2}}'
+  '{{first_names_female}} {{last_names}}',
+  '{{first_names_female}} {{last_names}}',
+  '{{first_names_female}} {{last_names}}',
+  '{{first_names_female}} {{last_names}}',
+  '{{first_names_female}} {{last_names}}',
+  '{{first_names_female}} {{last_names}}',
+  '{{first_names_female}} {{last_names1}}-{{last_names2}}'
 )
 
 person_formats_male_fr_ch = c(
-  '{{first_name_male}} {{last_name}}',
-  '{{first_name_male}} {{last_name}}',
-  '{{first_name_male}} {{last_name}}',
-  '{{first_name_male}} {{last_name}}',
-  '{{first_name_male}} {{last_name}}',
-  '{{first_name_male}} {{last_name}}',
-  '{{first_name_male}} {{last_name1}}-{{last_name2}}'
+  '{{first_names_male}} {{last_names}}',
+  '{{first_names_male}} {{last_names}}',
+  '{{first_names_male}} {{last_names}}',
+  '{{first_names_male}} {{last_names}}',
+  '{{first_names_male}} {{last_names}}',
+  '{{first_names_male}} {{last_names}}',
+  '{{first_names_male}} {{last_names1}}-{{last_names2}}'
 )
 
 person_formats_fr_ch = c(person_formats_male_fr_ch, person_formats_female_fr_ch)
@@ -348,7 +348,7 @@ person_last_names_fr_ch = c(
 
 person_fr_ch <- list(
   first_names = person_first_names_fr_ch,
-  first_name_male = person_first_names_male_fr_ch,
-  first_name_female = person_first_names_female_fr_ch,
-  last_name = person_last_names_fr_ch
+  first_names_male = person_first_names_male_fr_ch,
+  first_names_female = person_first_names_female_fr_ch,
+  last_names = person_last_names_fr_ch
 )

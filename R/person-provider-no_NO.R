@@ -2,29 +2,29 @@
 # https://github.com/joke2k/faker/blob/master/faker/providers/person/no_NO/__init__.py
 
 person_formats_no_no = c(
-  '{{first_name}} {{last_name}}',
-  '{{first_name}} {{last_name}}',
-  '{{first_name}} {{last_name}}',
-  '{{first_name}} {{last_name}}',
-  '{{first_name}} {{last_name}}',
-  '{{first_name}} {{last_name}}',
-  '{{first_name}} {{last_name}}',
-  '{{first_name}} {{last_name}}',
-  '{{first_name}} {{last_name}}',
-  '{{first_name}} {{last_name}}',
-  '{{first_name}} {{last_name}}',
-  '{{first_name}} {{last_name}}',
-  '{{first_name}} {{last_name}}',
-  '{{first_name}} {{last_name}}',
-  '{{first_name}} {{last_name}}',
-  '{{first_name}} {{last_name}}',
-  '{{first_name_male}}-{{first_name_male}} {{last_name}}',
-  '{{first_name_male}}-{{first_name_male}} {{last_name}}',
-  '{{first_name_female}}-{{first_name_female}} {{last_name}}',
-  '{{first_name_female}}-{{first_name_female}} {{last_name}}',
-  '{{first_name}} {{last_name}}-{{last_name}}',
-  '{{first_name}} {{last_name}}-{{last_name}}',
-  '{{prefix}} {{first_name_male}} {{last_name}}'
+  '{{first_names}} {{last_names}}',
+  '{{first_names}} {{last_names}}',
+  '{{first_names}} {{last_names}}',
+  '{{first_names}} {{last_names}}',
+  '{{first_names}} {{last_names}}',
+  '{{first_names}} {{last_names}}',
+  '{{first_names}} {{last_names}}',
+  '{{first_names}} {{last_names}}',
+  '{{first_names}} {{last_names}}',
+  '{{first_names}} {{last_names}}',
+  '{{first_names}} {{last_names}}',
+  '{{first_names}} {{last_names}}',
+  '{{first_names}} {{last_names}}',
+  '{{first_names}} {{last_names}}',
+  '{{first_names}} {{last_names}}',
+  '{{first_names}} {{last_names}}',
+  '{{first_names_male}}-{{first_names_male}} {{last_names}}',
+  '{{first_names_male}}-{{first_names_male}} {{last_names}}',
+  '{{first_names_female}}-{{first_names_female}} {{last_names}}',
+  '{{first_names_female}}-{{first_names_female}} {{last_names}}',
+  '{{first_names}} {{last_names}}-{{last_names}}',
+  '{{first_names}} {{last_names}}-{{last_names}}',
+  '{{prefixes}} {{first_names_male}} {{last_names}}'
 )
 
 # 100 most common male first names, alphabetically.
@@ -347,3 +347,11 @@ person_last_names_no_no = c(
 )
 
 person_prefixes_no_no = c('Dr.', 'Prof.')
+
+person_no_no <- list(
+  first_names = person_first_names_no_no,
+  first_names_female = person_first_names_female_no_no,
+  first_names_male = person_first_names_male_no_no,
+  last_names = person_last_names_no_no,
+  prefixes = person_prefixes_no_no
+)

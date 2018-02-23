@@ -1,15 +1,15 @@
 # modified from the python library faker:
 # https://github.com/joke2k/faker/blob/master/faker/providers/person/it_IT/__init__.py
 
-person_formats_female_it_it <- c(
-    '{{first_name}} {{last_name}}',
-    '{{first_name}} {{last_name}}',
-    '{{first_name}} {{last_name}}',
-    '{{first_name}} {{last_name}}',
-    '{{first_name}} {{last_name}}',
-    '{{prefix}} {{first_name}} {{last_name}}',
-    '{{first_name}} {{last_name}}',
-    '{{prefix}} {{first_name}} {{last_name}}'
+person_formats_it_it <- c(
+    '{{first_names}} {{last_names}}',
+    '{{first_names}} {{last_names}}',
+    '{{first_names}} {{last_names}}',
+    '{{first_names}} {{last_names}}',
+    '{{first_names}} {{last_names}}',
+    '{{prefixes}} {{first_names}} {{last_names}}',
+    '{{first_names}} {{last_names}}',
+    '{{prefixes}} {{first_names}} {{last_names}}'
 )
 
 person_first_names_it_it <- c(
@@ -96,3 +96,10 @@ person_prefixes_male_it_it <- c('Dott.', 'Sig.')
 
 person_prefixes_it_it <- c('Dott.', 'Sig.', 'Sig.ra')
 
+person_it_it <- list(
+  first_names = person_first_names_it_it,
+  last_names = person_last_names_it_it,
+  prefixes_female = person_prefixes_female_it_it,
+  prefixes_male = person_prefixes_male_it_it,
+  prefixes = person_prefixes_it_it
+)

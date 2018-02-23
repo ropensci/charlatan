@@ -2,20 +2,20 @@
 # https://github.com/joke2k/faker/blob/master/faker/providers/person/dk_DK/__init__.py
 
 person_formats_dk_dk = c(
-  '{{first_name_male}} {{last_name}}',
-  '{{first_name_male}} {{last_name}}',
-  '{{first_name_male}} {{last_name}}',
-  '{{first_name_male}} {{last_name}}',
-  '{{first_name_male}} {{last_name1}}-{{last_name2}}',
-  '{{first_name_female}} {{last_name}}',
-  '{{first_name_female}} {{last_name}}',
-  '{{first_name_female}} {{last_name}}',
-  '{{first_name_female}} {{last_name}}',
-  '{{first_name_female}} {{last_name1}}-{{last_name2}}',
-  '{{prefix_male}} {{first_name_male}} {{last_name}}',
-  '{{prefix_female}} {{first_name_female}} {{last_name}}',
-  '{{prefix_male}} {{first_name_male}} {{last_name}}',
-  '{{prefix_female}} {{first_name_female}} {{last_name}}'
+  '{{first_names_male}} {{last_names}}',
+  '{{first_names_male}} {{last_names}}',
+  '{{first_names_male}} {{last_names}}',
+  '{{first_names_male}} {{last_names}}',
+  '{{first_names_male}} {{last_names1}}-{{last_names2}}',
+  '{{first_names_female}} {{last_names}}',
+  '{{first_names_female}} {{last_names}}',
+  '{{first_names_female}} {{last_names}}',
+  '{{first_names_female}} {{last_names}}',
+  '{{first_names_female}} {{last_names1}}-{{last_names2}}',
+  '{{prefixes_male}} {{first_names_male}} {{last_names}}',
+  '{{prefixes_female}} {{first_names_female}} {{last_names}}',
+  '{{prefixes_male}} {{first_names_male}} {{last_names}}',
+  '{{prefixes_female}} {{first_names_female}} {{last_names}}'
 )
 
 person_first_names_male_dk_dk = c(
@@ -627,9 +627,9 @@ person_prefixes_female_dk_dk = c(
 
 person_dk_dk <- list(
   first_names = person_first_names_dk_dk,
-  first_name_male = person_first_names_male_dk_dk,
-  first_name_female = person_first_names_female_dk_dk,
-  last_name = person_last_names_dk_dk,
-  prefix_female = person_prefixes_female_dk_dk,
-  prefix_male = person_prefixes_male_dk_dk
+  first_names_male = person_first_names_male_dk_dk,
+  first_names_female = person_first_names_female_dk_dk,
+  last_names = person_last_names_dk_dk,
+  prefixes_female = person_prefixes_female_dk_dk,
+  prefixes_male = person_prefixes_male_dk_dk
 )

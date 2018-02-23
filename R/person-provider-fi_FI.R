@@ -2,9 +2,9 @@
 # https://github.com/joke2k/faker/blob/master/faker/providers/person/fi_FI/__init__.py
 
 person_formats_fi_fi = c(
-  '{{first_name}} {{last_name}}',
-  '{{first_name}} {{last_name}}',
-  '{{last_name}}, {{first_name}}'
+  '{{first_names}} {{last_names}}',
+  '{{first_names}} {{last_names}}',
+  '{{last_names}}, {{first_names}}'
 )
 
 person_prefixes_fi_fi = c(
@@ -1218,8 +1218,8 @@ person_last_names_fi_fi = c(
 )
 
 person_fi_fi <- list(
-  first_name = person_first_names_fi_fi,
-  last_name = person_last_names_fi_fi,
+  first_names = person_first_names_fi_fi,
+  last_names = person_last_names_fi_fi,
   prefixes = person_prefixes_fi_fi,
   suffixes = person_prefixes_fi_fi
 )

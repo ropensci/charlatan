@@ -5,7 +5,7 @@ Description: Make fake data, supporting addresses, person names, dates,
     times, colors, coordinates, currencies, digital object identifiers
     ('DOIs'), jobs, phone numbers, 'DNA' sequences, doubles and integers
     from distributions and within a range.
-Version: 0.1.1.9110
+Version: 0.1.2.9210
 Authors@R: c(
       person("Scott", "Chamberlain", role = c("aut", "cre"),
         email = "myrmecocystus+r@gmail.com"),
@@ -33,6 +33,8 @@ Suggests:
     rmarkdown
 RoxygenNote: 6.0.1
 Collate: 
+    'address-provider-en_GB.R'
+    'address-provider-en_US.R'
     'base-provider.R'
     'datetime-provider.R'
     'address-provider.R'
@@ -89,6 +91,7 @@ Collate:
     'person-provider-de_AT.R'
     'person-provider-de_DE.R'
     'person-provider-dk_DK.R'
+    'person-provider-en_GB.R'
     'person-provider-en_US.R'
     'person-provider-es_ES.R'
     'person-provider-es_MX.R'
@@ -101,7 +104,7 @@ Collate:
     'person-provider-ja_JP.R'
     'person-provider-ko_KR.R'
     'person-provider-lt_LT.R'
-    'person-provider-lv_lv.R'
+    'person-provider-lv_LV.R'
     'person-provider-ne_NP.R'
     'person-provider-nl_NL.R'
     'person-provider-no_NO.R'

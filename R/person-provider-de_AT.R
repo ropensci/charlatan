@@ -2,14 +2,14 @@
 # https://github.com/joke2k/faker/blob/master/faker/providers/person/de_AT/__init__.py
 
 person_formats_de_at = c(
-  '{{first_name}} {{last_name}}',
-  '{{first_name}} {{last_name}}',
-  '{{first_name}} {{last_name}}',
-  '{{first_name}} {{last_name}}',
-  '{{first_name}} {{last_name}}',
-  '{{prefix}} {{first_name}} {{last_name}}',
-  '{{first_name}} {{last_name}}',
-  '{{prefix}} {{first_name}} {{last_name}}'
+  '{{first_names}} {{last_names}}',
+  '{{first_names}} {{last_names}}',
+  '{{first_names}} {{last_names}}',
+  '{{first_names}} {{last_names}}',
+  '{{first_names}} {{last_names}}',
+  '{{prefixes}} {{first_names}} {{last_names}}',
+  '{{first_names}} {{last_names}}',
+  '{{prefixes}} {{first_names}} {{last_names}}'
 )
 
 person_first_names_de_at = c(
@@ -57,7 +57,7 @@ person_last_names_de_at = c(
 person_prefixes_de_at = c('Dr.', 'Mag.', 'Ing.', 'Dipl.-Ing.', 'Prof.', 'Univ.Prof.')
 
 person_de_at <- list(
-  first_name = person_first_names_de_at,
-  last_name = person_last_names_de_at,
-  prefix = person_prefixes_de_at
+  first_names = person_first_names_de_at,
+  last_names = person_last_names_de_at,
+  prefixes = person_prefixes_de_at
 )
