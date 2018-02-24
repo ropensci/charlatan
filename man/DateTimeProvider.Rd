@@ -46,5 +46,8 @@ z$unix_time()
 z$date("\%Y-\%M-\%d")
 z$date_time()
 z$year()
+
+(start_date <- Sys.time() - 604800L)
+z$date_time_between(start_date = start_date)
 }
 \keyword{internal}
