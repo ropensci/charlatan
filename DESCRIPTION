@@ -5,7 +5,7 @@ Description: Make fake data, supporting addresses, person names, dates,
     times, colors, coordinates, currencies, digital object identifiers
     ('DOIs'), jobs, phone numbers, 'DNA' sequences, doubles and integers
     from distributions and within a range.
-Version: 0.1.3.9641
+Version: 0.1.3.9649
 Authors@R: c(
       person("Scott", "Chamberlain", role = c("aut", "cre"),
         email = "myrmecocystus+r@gmail.com"),
@@ -91,6 +91,9 @@ Collate:
     'jobs-provider-uk_UA.R'
     'jobs-provider-zh_TW.R'
     'jobs-provider.R'
+    'lorem-provider-ar_AA.R'
+    'lorem-provider-en_US.R'
+    'lorem-provider.R'
     'misc-provider.R'
     'missing-data-provider.R'
     'missing.R'

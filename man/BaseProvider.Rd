@@ -43,6 +43,14 @@ BaseProvider
    \item{\code{check_locale(x)}}{
      check a locale to see if it exists, if not, stop with error message
    }
+   \item{\code{randomize_nb_elements(x)}}{
+     Returns a random value near number.
+     
+     param number: value to which the result must be near
+     param le: result must be lower or equal to number
+     param ge: result must be greater or equal to number
+     returns: a random int near number
+   }
  }
 }
 \examples{
@@ -65,5 +73,7 @@ x$random_letter()
 x$check_locale("es_ES")
 ## fails
 # x$check_locale("es_EQ")
+
+x$randomize_nb_elements()
 }
 \keyword{internal}

@@ -41,6 +41,14 @@
 #'    \item{\code{check_locale(x)}}{
 #'      check a locale to see if it exists, if not, stop with error message
 #'    }
+#'    \item{\code{randomize_nb_elements(x)}}{
+#'      Returns a random value near number.
+#'      
+#'      param number: value to which the result must be near
+#'      param le: result must be lower or equal to number
+#'      param ge: result must be greater or equal to number
+#'      returns: a random int near number
+#'    }
 #'  }
 #' @format NULL
 #' @usage NULL
@@ -64,6 +72,8 @@
 #' x$check_locale("es_ES")
 #' ## fails
 #' # x$check_locale("es_EQ")
+#' 
+#' x$randomize_nb_elements()
 BaseProvider <- R6::R6Class(
   'BaseProvider',
   public = list(
@@ -131,6 +141,18 @@ BaseProvider <- R6::R6Class(
     prov_avail_locales = function(x) {
       tmp <- getNamespaceExports("charlatan")
       gsub(x, "", tmp[tmp %in% paste(x, tolower(available_locales), sep = "")])
+    },
+
+    randomize_nb_elements = function(number = 10, le = FALSE, ge = FALSE,
+      min = NULL, max = NULL) {
+
+      if (le && ge) return(number)
+      '_min' = if (ge) 100 else 60
+      '_max' = if (le) 100 else 140
+      nb = as.integer(number * self$random_int(`_min`, `_max`) / 100)
+      if (!is.null(min) && nb < min) nb = min
+      if (!is.null(max) && nb > min) nb = max
+      return(nb)
     }
   )
 )

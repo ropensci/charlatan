@@ -17,6 +17,11 @@
 #' x$locale 
 #' x$mime_type()
 #' x$file_extension()
+#' x$file_name()
+#' x$file_path()
+#' x$file_path(depth = 2)
+#' x$file_path(depth = 3)
+#' x$file_path(depth = 6)
 FileProvider <- R6::R6Class(
   inherit = BaseProvider,
   'FileProvider',
@@ -27,7 +32,7 @@ FileProvider <- R6::R6Class(
         # check global locales
         super$check_locale(locale)
         # check person provider locales
-        check_locale_(tolower(locale), internet_provider_locales)
+        check_locale_(tolower(locale), file_provider_locales)
         self$locale <- locale
       } else {
         self$locale <- 'en_US'
@@ -62,14 +67,13 @@ FileProvider <- R6::R6Class(
       return(super$random_element(private$mime_types[[category]]))
     },
 
-    # def file_name(self, category=None, extension=None):
-    #     """
-    #     :param category: audio|image|office|text|video
-    #     :param extension: file extension
-    #     """
-    #     extension = extension if extension else self.file_extension(category)
-    #     filename = self.generator.word()
-    #     return '{0}.{1}'.format(filename, extension)
+    file_name = function(category = NULL, extension = NULL) {
+        # :param category: audio|image|office|text|video
+        # :param extension: file extension
+        x = if (!is.null(extension)) extension else self$file_extension(category)
+        filename = LoremProvider$new(locale = self$locale)$word()
+        sprintf('%s.%s', filename, x)
+    },
 
     file_extension = function(category = NULL) {
       category <- if (!is.null(category)) {
@@ -78,19 +82,20 @@ FileProvider <- R6::R6Class(
         super$random_element(names(private$file_extensions))
       }
       return(super$random_element(private$file_extensions[[category]]))
-    }
+    },
 
-    # def file_path(self, depth=1, category=None, extension=None):
-    #     """
-    #     :param category: audio|image|office|text|video
-    #     :param extension: file extension
-    #     :param depth: depth of the file (depth >= 0)
-    #     """
-    #     file = self.file_name(category, extension)
-    #     path = "/{0}".format(file)
-    #     for d in range(0, depth):
-    #         path = "/{0}{1}".format(self.generator.word(), path)
-    #     return path
+    file_path = function(depth = 1, category = NULL, extension = NULL) {
+      # :param category: audio|image|office|text|video
+      # :param extension: file extension
+      # :param depth: depth of the file (depth >= 0)
+      file = self$file_name(category, extension)
+      path = paste0("/", file)
+      for (d in seq_len(depth)) {
+        path = sprintf("/%s%s", 
+          LoremProvider$new(locale = self$locale)$word(), path)
+      }
+      return(path)
+    }
   ),
 
   private = list(

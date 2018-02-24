@@ -10,6 +10,7 @@
 charlatan_locales <- function() available_locales
 
 available_locales <- c(
+  'ar_AA',
   'bg_BG',
   'bs_BA',
   'cs_CZ',
