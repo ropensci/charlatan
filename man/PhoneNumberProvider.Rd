@@ -21,11 +21,11 @@ PhoneNumberProvider
 }
 \details{
 \strong{Methods}
-  \describe{
-    \item{\code{render()}}{
-      Make a phone number
-    }
-  }
+\describe{
+\item{\code{render()}}{
+Make a phone number
+}
+}
 }
 \examples{
 z <- PhoneNumberProvider$new()

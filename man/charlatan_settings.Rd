@@ -15,11 +15,11 @@ charlatan settings
 \section{More deets}{
 
 \itemize{
- \item \code{messy} - When \code{FALSE}, nothing is different from normal.
- When \code{TRUE}, we select incorrect/wrong values with probability X.
- Messy mode is only available for \strong{en-US} for now, and only for
- some data types. The default setting is \code{NULL}, meaning it is
- ignored.
+\item \code{messy} - When \code{FALSE}, nothing is different from normal.
+When \code{TRUE}, we select incorrect/wrong values with probability X.
+Messy mode is only available for \strong{en-US} for now, and only for
+some data types. The default setting is \code{NULL}, meaning it is
+ignored.
 }
 }
 

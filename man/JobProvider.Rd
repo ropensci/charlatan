@@ -18,11 +18,11 @@ JobProvider
 }
 \details{
 \strong{Methods}
-  \describe{
-    \item{\code{render()}}{
-      Make a job
-    }
-  }
+\describe{
+\item{\code{render()}}{
+Make a job
+}
+}
 }
 \examples{
 z <- JobProvider$new()

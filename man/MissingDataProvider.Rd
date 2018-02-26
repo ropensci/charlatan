@@ -9,14 +9,14 @@ MissingDataProvider
 }
 \details{
 \strong{Methods}
-  \describe{
-    \item{\code{make_missing()}}{
-      make missing data
-      \itemize{
-       \item x: a vector of characters, numeric, integers, logicals, etc
-      }
-    }
-  }
+\describe{
+\item{\code{make_missing()}}{
+make missing data
+\itemize{
+\item x: a vector of characters, numeric, integers, logicals, etc
+}
+}
+}
 
 This method picks a random number (\code{N}) of slots in the input
 vector \code{x} (up to \code{length(x)}). Then picks \code{N} random

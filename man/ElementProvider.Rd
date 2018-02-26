@@ -9,14 +9,14 @@ ElementProvider
 }
 \details{
 \strong{Methods}
-  \describe{
-    \item{\code{render()}}{
-      Get an element
-    }
-  }
+\describe{
+\item{\code{render()}}{
+Get an element
+}
+}
 
-Data from Wikipedia at 
-<https://en.wikipedia.org/wiki/Chemical_element>
+Data from Wikipedia at
+\url{https://en.wikipedia.org/wiki/Chemical_element}
 }
 \examples{
 z <- ElementProvider$new()

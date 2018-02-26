@@ -9,22 +9,22 @@ TaxonomyProvider
 }
 \details{
 \strong{Methods}
-  \describe{
-    \item{\code{genus()}}{
-      Get a genus name
-    }
-    \item{\code{epithet()}}{
-      Get an epithet name
-    }
-    \item{\code{species()}}{
-      Get a binomial name (genus + epithet)
-      \itemize{
-       \item authority: Include authority. default: \code{FALSE}
-       \item date: Include authority date. If \code{authority = FALSE},
-       this is ignored.  default: \code{FALSE}
-      }
-    }
-  }
+\describe{
+\item{\code{genus()}}{
+Get a genus name
+}
+\item{\code{epithet()}}{
+Get an epithet name
+}
+\item{\code{species()}}{
+Get a binomial name (genus + epithet)
+\itemize{
+\item authority: Include authority. default: \code{FALSE}
+\item date: Include authority date. If \code{authority = FALSE},
+this is ignored.  default: \code{FALSE}
+}
+}
+}
 }
 \section{Names}{
 

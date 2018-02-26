@@ -24,26 +24,26 @@ NumericsProvider
 }
 \details{
 \strong{Methods}
-  \describe{
-    \item{\code{double()}}{
-      get a double, pulls from normal distribution
-    }
-    \item{\code{integer()}}{
-      get an integer, runs \code{\link{sample}} on range given
-    }
-    \item{\code{unif()}}{
-      get numbers from the uniform distribution
-    }
-    \item{\code{norm()}}{
-      get numbers from the normal distribution
-    }
-    \item{\code{lnorm()}}{
-      get numbers from the lognormal distribution
-    }
-    \item{\code{beta()}}{
-      get numbers from the beta distribution
-    }
-  }
+\describe{
+\item{\code{double()}}{
+get a double, pulls from normal distribution
+}
+\item{\code{integer()}}{
+get an integer, runs \code{\link{sample}} on range given
+}
+\item{\code{unif()}}{
+get numbers from the uniform distribution
+}
+\item{\code{norm()}}{
+get numbers from the normal distribution
+}
+\item{\code{lnorm()}}{
+get numbers from the lognormal distribution
+}
+\item{\code{beta()}}{
+get numbers from the beta distribution
+}
+}
 }
 \examples{
 z <- NumericsProvider$new()

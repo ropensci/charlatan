@@ -24,13 +24,13 @@ Generate a fake dataset
 \section{Allowed column names}{
 
 \itemize{
- \item name (default included)
- \item job (default included)
- \item phone_number (default included)
- \item currency
- \item color_name
- \item rgb_color
- \item rgb_css_color
+\item name (default included)
+\item job (default included)
+\item phone_number (default included)
+\item currency
+\item color_name
+\item rgb_color
+\item rgb_css_color
 }
 }
 

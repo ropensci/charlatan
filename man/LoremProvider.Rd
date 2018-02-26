@@ -9,35 +9,104 @@
 \usage{
 lorem_provider_locales
 }
+\arguments{
+\item{sentence_punctuation}{(character) End of sentence punctuation}
+
+\item{word_connector}{(character) Default connector between words}
+}
 \description{
 LoremProvider
 }
 \details{
 \strong{Methods}
-  \describe{
-   \item{\code{word}}{
-    get a word
-  }
-   \item{\code{words}}{
-    get words
-  }
-   \item{\code{sentence}}{
-    get a sentence
-  }
-   \item{\code{sentences}}{
-    get sentences
-  }
- }
+\describe{
+\item{\code{word(ext_words = NULL)}}{
+Generate a random word\preformatted{- ext_words: a character vector of words you would like to have
+  instead of 'Lorem ipsum'
+- returns: a random word
+}
+
+}
+\item{\code{words(nb = 3, ext_words = NULL)}}{
+Generate a character vector of random words\preformatted{- nb: how many words to return
+- ext_words: a character vector of words you would like to have
+  instead of 'Lorem ipsum'
+- returns: many words
+}
+
+}
+\item{\code{sentence(nb_words, variable_nb_words, ext_words)}}{
+Generate a random sentence\preformatted{- nb_words around how many words the sentence should contain
+- variable_nb_words set to false if you want exactly `nb`
+  words returned, otherwise the result may include a number of words
+  of `nb` +/-40% (with a minimum of 1)
+- ext_words a character vector of words you would like to have instead of
+  'Lorem ipsum'.
+- returns: a single sentence
+}
+
+}
+\item{\code{sentences(nb, ext_words)}}{
+Generate a character vector of random sentences\preformatted{- nb: how many sentences to return
+- ext_words: a character vector of words you would like to have
+  instead of 'Lorem ipsum'.
+- returns: many sentences
+}
+
+}
+\item{\code{paragraph(nb_sentences, variable_nb_sentences,
+     ext_words)}}{
+Generate a single paragraph\preformatted{- nb_sentences: around how many sentences the paragraph should
+  contain
+- variable_nb_sentences: set to false if you want exactly `nb`
+  sentences returned, otherwise the result may include a number of
+  sentences of ``nb`` +/-40% (with a minimum of 1)
+- ext_words: a character vector of words you would like to have instead
+  of 'Lorem ipsum'
+- returns: a single paragraph
+}
+
+}
+\item{\code{paragraphs(nb, ext_words)}}{
+Generate many paragraphs\preformatted{- nb: how many paragraphs to return
+- ext_words: a character vector of words you would like to have instead of
+    'Lorem ipsum'.
+- returns: many paragraphs
+}
+
+}
+\item{\code{text(max_nb_chars, ext_words)}}{
+Generate a random text string\preformatted{Depending on the ``max_nb_chars, returns a string made of words,
+sentences, or paragraphs.
+
+- max_nb_chars: Maximum number of characters the text should contain
+(minimum 5)
+- ext_words: a character vector of words you would like to have instead of
+'Lorem ipsum'.
+- returns: character string of words
+}
+
+}
+}
 }
 \examples{
 (x <- LoremProvider$new())
-x$locale 
+x$locale
 x$word()
 x$words(3)
 x$words(6)
 x$sentence()
 x$sentences(3)
 x$sentences(6)
+x$paragraph()
+x$paragraphs(3)
+x$paragraphs(6)
+cat(x$paragraphs(6), sep = "\\n")
+x$text(10)
+x$text(25)
+x$text(50)
+x$text(300)
+x$text(2000)
 
 (x <- LoremProvider$new(locale = "ar_AA"))
 x$word()

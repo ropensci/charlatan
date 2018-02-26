@@ -14,29 +14,29 @@ AddressProvider
 }
 \details{
 \strong{Methods}
-  \describe{
-   \item{\code{city_suffix}}{
-     city suffix
-   }
-   \item{\code{street_suffix}}{
-     street suffix
-   }
-   \item{\code{building_number}}{
-     building number
-   }
-   \item{\code{city}}{
-     city
-   }
-   \item{\code{country}}{
-     country
-   }
-   \item{\code{country_code}}{
-     country code
-   }
-   \item{\code{postcode}}{
-     postal code
-   }
- }
+\describe{
+\item{\code{city_suffix}}{
+city suffix
+}
+\item{\code{street_suffix}}{
+street suffix
+}
+\item{\code{building_number}}{
+building number
+}
+\item{\code{city}}{
+city
+}
+\item{\code{country}}{
+country
+}
+\item{\code{country_code}}{
+country code
+}
+\item{\code{postcode}}{
+postal code
+}
+}
 }
 \examples{
 (z <- AddressProvider$new())

@@ -9,11 +9,11 @@ CurrencyProvider
 }
 \details{
 \strong{Methods}
-  \describe{
-    \item{\code{render()}}{
-      a currency, character string length 3
-    }
-  }
+\describe{
+\item{\code{render()}}{
+a currency, character string length 3
+}
+}
 }
 \examples{
 z <- CurrencyProvider$new()

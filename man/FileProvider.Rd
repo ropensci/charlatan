@@ -14,11 +14,11 @@ FileProvider
 }
 \details{
 \strong{Methods}
-  \describe{
-   \item{\code{to_ascii}}{
-    convert to ascii
-  }
- }
+\describe{
+\item{\code{to_ascii}}{
+convert to ascii
+}
+}
 }
 \examples{
 (x <- FileProvider$new())

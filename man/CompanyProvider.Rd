@@ -18,26 +18,26 @@ CompanyProvider
 }
 \details{
 \strong{Methods}
-  \describe{
-   \item{\code{company}}{
-     a company name
-   }
-   \item{\code{company_prefix}}{
-     a company prefix
-   }
-   \item{\code{company_suffix}}{
-     a company suffix
-   }
-   \item{\code{bs}}{
-     bs
-   }
-   \item{\code{catch_phrase}}{
-     a catch phrase
-   }
-   \item{\code{siren}}{
-     a siren
-   }
- }
+\describe{
+\item{\code{company}}{
+a company name
+}
+\item{\code{company_prefix}}{
+a company prefix
+}
+\item{\code{company_suffix}}{
+a company suffix
+}
+\item{\code{bs}}{
+bs
+}
+\item{\code{catch_phrase}}{
+a catch phrase
+}
+\item{\code{siren}}{
+a siren
+}
+}
 }
 \examples{
 x <- CompanyProvider$new()

@@ -9,14 +9,14 @@ MiscProvider
 }
 \details{
 \strong{Methods}
-  \describe{
-   \item{\code{to_ascii}}{
-    convert to ascii
-  }
-   \item{\code{email}}{
-    get an email address
-  }
- }
+\describe{
+\item{\code{to_ascii}}{
+convert to ascii
+}
+\item{\code{email}}{
+get an email address
+}
+}
 }
 \examples{
 (x <- MiscProvider$new())
