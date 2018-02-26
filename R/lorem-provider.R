@@ -125,10 +125,11 @@ LoremProvider <- R6::R6Class(
 
     word = function(ext_words = NULL) {
       assert(ext_words, 'character')
+      wds <- private$word_list
       if (!is.null(ext_words)) {
-        super$random_element(ext_words)
+        wds <- super$random_element(ext_words)
       }
-      super$random_element(private$word_list)
+      super$random_element(wds)
     },
 
     words = function(nb = 3, ext_words = NULL) {
