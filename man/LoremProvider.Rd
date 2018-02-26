@@ -108,6 +108,13 @@ x$text(50)
 x$text(300)
 x$text(2000)
 
+# set a different sentence_punctuation or word_connector
+(x <- LoremProvider$new(sentence_punctuation = ";"))
+x$paragraph(4)
+(x <- LoremProvider$new(word_connector = " --- "))
+x$paragraph(4)
+
+# different locales
 (x <- LoremProvider$new(locale = "ar_AA"))
 x$word()
 }
