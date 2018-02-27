@@ -5,7 +5,7 @@
 \alias{LoremProvider}
 \alias{lorem_provider_locales}
 \title{LoremProvider}
-\format{An object of class \code{character} of length 2.}
+\format{An object of class \code{character} of length 9.}
 \usage{
 lorem_provider_locales
 }
@@ -115,8 +115,11 @@ x$paragraph(4)
 x$paragraph(4)
 
 # different locales
-(x <- LoremProvider$new(locale = "ar_AA"))
-x$word()
+LoremProvider$new(locale = "ar_AA")$word()
+LoremProvider$new(locale = "el_GR")$word()
+LoremProvider$new(locale = "he_IL")$word()
+LoremProvider$new(locale = "ja_JP")$word()
+LoremProvider$new(locale = "zh_TW")$word()
 }
 \keyword{datasets}
 \keyword{internal}

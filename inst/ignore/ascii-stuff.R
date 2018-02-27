@@ -12,10 +12,17 @@ z$prefix()
 z$suffix()
 
 
-tools::showNonASCIIfile("R/internet-provider-hr_HR.R")
+tools::showNonASCIIfile("R/lorem-provider-zh_TW.R")
 # to_replace <- vapply(int_replacements_de_de, "[[", "", 1)
 # replaced <- stringi::stri_escape_unicode(to_replace)
-invisible(lapply(int_replacements_hr_hr, function(x) {
+
+## where a list with each elemnt a two length vector
+## where the first is to be encoded
+invisible(lapply(lorem_word_list_, function(x) {
   x[1] <- stringi::stri_escape_unicode(x[1])
   cat(sprintf('c("%s", "%s"),', x[1], x[2]), sep="\n")
 }))
+
+## where a character vector
+x <- stringi::stri_escape_unicode(lorem_word_list_zh_tw)
+invisible(lapply(x, function(z) cat(sprintf('"%s",', z), sep="\n")))

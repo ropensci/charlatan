@@ -104,8 +104,11 @@
 #' x$paragraph(4)
 #'
 #' # different locales
-#' (x <- LoremProvider$new(locale = "ar_AA"))
-#' x$word()
+#' LoremProvider$new(locale = "ar_AA")$word()
+#' LoremProvider$new(locale = "el_GR")$word()
+#' LoremProvider$new(locale = "he_IL")$word()
+#' LoremProvider$new(locale = "ja_JP")$word()
+#' LoremProvider$new(locale = "zh_TW")$word()
 LoremProvider <- R6::R6Class(
   inherit = BaseProvider,
   'LoremProvider',
@@ -124,10 +127,19 @@ LoremProvider <- R6::R6Class(
         self$locale <- 'en_US'
       }
       private$parse_eval_safe('word_list')
-      assert(sentence_punctuation, "character")
-      private$sentence_punctuation <- sentence_punctuation
-      assert(word_connector, "character")
-      private$word_connector <- word_connector
+
+      if (missing(sentence_punctuation)) {
+        private$parse_eval_safe('sentence_punctuation')
+      } else {
+        assert(sentence_punctuation, "character")
+        private$sentence_punctuation <- sentence_punctuation
+      }
+      if (missing(word_connector)) {
+        private$parse_eval_safe('word_connector')
+      } else {
+        assert(word_connector, "character")
+        private$word_connector <- word_connector
+      }
     },
 
     word = function(ext_words = NULL) {
@@ -277,4 +289,7 @@ LoremProvider <- R6::R6Class(
 
 #' @export
 #' @rdname LoremProvider
-lorem_provider_locales <- c("en_us", "ar_aa")
+lorem_provider_locales <- c(
+  "en_us", "ar_aa", "el_gr", "he_il", "ja_jp", "la", "ru_ru",
+  "zh_cn", "zh_tw"
+)

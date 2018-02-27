@@ -30,6 +30,7 @@ available_locales <- c(
   'fi_FI',
   'fr_CH',
   'fr_FR',
+  'he_IL',
   'hi_IN',
   'hr_HR',
   'it_IT',
