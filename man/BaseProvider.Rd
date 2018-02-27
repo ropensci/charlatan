@@ -44,10 +44,10 @@ both numerify and lexify together
 check a locale to see if it exists, if not, stop with error message
 }
 \item{\code{randomize_nb_elements(x)}}{
-Returns a random value near number.\preformatted{ param number: value to which the result must be near
- param le: result must be lower or equal to number
- param ge: result must be greater or equal to number
- returns: a random int near number
+Returns a random value near number.\preformatted{ - param number: value to which the result must be near
+ - param le: result must be lower or equal to number
+ - param ge: result must be greater or equal to number
+ - returns: a random int near number
 }
 
 }

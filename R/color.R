@@ -4,7 +4,7 @@
 #' @name ch_color
 #' @template params
 #' @param locale (character) the locale to use. options: en_US (default),
-#' or uk_UA. Only affects \code{ch_color_name} function
+#' or uk_UA. Only affects `ch_color_name` function
 #' @examples
 #' ch_color_name()
 #' ch_color_name(10)
