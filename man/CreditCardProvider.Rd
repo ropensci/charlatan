@@ -10,16 +10,16 @@ CreditCardProvider
 \details{
 \strong{Methods}
 \describe{
-\item{\code{credit_card_type()}}{
+\item{\code{credit_card_type(card_type)}}{
 credit card type
 }
-\item{\code{credit_card_provider()}}{
+\item{\code{credit_card_provider(prefix, length)}}{
 credit card provider
 }
-\item{\code{credit_card_number()}}{
+\item{\code{credit_card_number(card_type)}}{
 credit card number
 }
-\item{\code{credit_card_security_code()}}{
+\item{\code{credit_card_security_code(card_type)}}{
 credit card security code
 }
 }

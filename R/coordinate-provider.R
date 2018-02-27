@@ -11,13 +11,12 @@
 #'     \item{\code{lon()}}{
 #'       a longitude value
 #'     }
-#'     \item{\code{position()}}{
+#'     \item{\code{position(bbox)}}{
 #'       a position, of form `[longitude,latitude]`
-#'       \itemize{
-#'        \item bbox: optionally, specify a bounding box for the position
+#'        
+#'       - bbox: optionally, specify a bounding box for the position
 #'        to be in, of the form `[west,south,east,north]` - checks that the
 #'        bbox has valid values for lat and long
-#'       }
 #'     }
 #'   }
 #' @format NULL

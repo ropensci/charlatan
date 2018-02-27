@@ -5,12 +5,15 @@
 #' @details
 #' \strong{Methods}
 #'   \describe{
-#'    \item{\code{to_ascii}}{
-#'     convert to ascii
-#'   }
-#'    \item{\code{email}}{
-#'     get an email address
-#'   }
+#'    \item{\code{language_locale_codes}}{
+#'     list of language locales supported by Linux Mint
+#'    }
+#'    \item{\code{locale()}}{
+#'     locale
+#'    }
+#'    \item{\code{language_code()}}{
+#'     language code
+#'    }
 #'  }
 #'
 #' @format NULL

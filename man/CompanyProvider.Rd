@@ -10,8 +10,8 @@
 company_provider_locales
 }
 \arguments{
-\item{locale}{(character) the locale to use. options: en_US (default),
-bg_bg, cs_cz, de_de, es_es, es_mx, fa_ir, fr_fr, hr_hr, it_it}
+\item{locale}{(character) the locale to use. Run
+\code{company_provider_locales()} for locales supported (default: en_US)}
 }
 \description{
 CompanyProvider
@@ -19,22 +19,22 @@ CompanyProvider
 \details{
 \strong{Methods}
 \describe{
-\item{\code{company}}{
+\item{\code{company()}}{
 a company name
 }
-\item{\code{company_prefix}}{
+\item{\code{company_prefix()}}{
 a company prefix
 }
-\item{\code{company_suffix}}{
+\item{\code{company_suffix()}}{
 a company suffix
 }
-\item{\code{bs}}{
+\item{\code{bs()}}{
 bs
 }
-\item{\code{catch_phrase}}{
+\item{\code{catch_phrase()}}{
 a catch phrase
 }
-\item{\code{siren}}{
+\item{\code{siren()}}{
 a siren
 }
 }

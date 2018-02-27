@@ -13,7 +13,7 @@ SequenceProvider
 \details{
 \strong{Methods}
 \describe{
-\item{\code{render()}}{
+\item{\code{render(length)}}{
 Make a sequence
 \itemize{
 \item length: sequence length. default: 30

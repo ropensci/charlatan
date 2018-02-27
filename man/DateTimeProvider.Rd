@@ -10,29 +10,32 @@ DateTimeProvider
 \details{
 \strong{Methods}
 \describe{
-\item{\code{unix_time}}{
+\item{\code{unix_time()}}{
 generate a unix time
 }
-\item{\code{date}}{
+\item{\code{date(pattern)}}{
 generate a date
 }
-\item{\code{date_time}}{
+\item{\code{date_time(tzinfo)}}{
 generate a date time
 }
-\item{\code{date_time_ad}}{
+\item{\code{date_time_ad(tzinfo)}}{
 generate a date time
 }
-\item{\code{iso8601}}{
-generate a iso8601 format date
+\item{\code{iso8601()}}{
+generate a iso8601 format date - NOT WORKING YET
 }
-\item{\code{year}}{
+\item{\code{year()}}{
 generate a year
 }
-\item{\code{century}}{
+\item{\code{century()}}{
 generate a century
 }
-\item{\code{timezone}}{
+\item{\code{timezone()}}{
 generate a timezone
+}
+\item{\code{date_time_between(start_date, end_date, tzinfo)}}{
+generate a datetime between two dates
 }
 }
 }

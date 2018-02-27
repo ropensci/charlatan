@@ -10,8 +10,8 @@
 job_provider_locales
 }
 \arguments{
-\item{locale}{(character) the locale to use. options: en_US (default),
-fr_FR, fr_CH, hr_FR, fa_IR, pl_PL, ru_RU, uk_UA, zh_TW.}
+\item{locale}{(character) the locale to use. Run
+\code{job_provider_locales()} for locales supported (default: en_US)}
 }
 \description{
 JobProvider

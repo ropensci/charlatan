@@ -2,12 +2,23 @@
 #'
 #' @export
 #' @keywords internal
+#' @param locale (character) the locale to use. Run 
+#' `file_provider_locales()` for locales supported (default: en_US)
 #' @details
 #' \strong{Methods}
 #'   \describe{
-#'    \item{\code{to_ascii}}{
-#'     convert to ascii
-#'   }
+#'    \item{\code{mime_type(category)}}{
+#'      mime type
+#'    }
+#'    \item{\code{file_name(category(NULL, extension)}}{
+#'      file name
+#'    }
+#'    \item{\code{file_extension(category)}}{
+#'      file extension
+#'    }
+#'    \item{\code{file_path(depth(1, category(NULL, extension)}}{
+#'      file path
+#'    }
 #'  }
 #'
 #' @format NULL

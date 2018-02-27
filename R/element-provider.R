@@ -9,7 +9,10 @@ elements <- data.frame(symbol = el_symbols, element = el_elements, stringsAsFact
 #' @details
 #' \strong{Methods}
 #'   \describe{
-#'     \item{\code{render()}}{
+#'     \item{\code{symbol()}}{
+#'       Get a symbol
+#'     }
+#'     \item{\code{element()}}{
 #'       Get an element
 #'     }
 #'   }

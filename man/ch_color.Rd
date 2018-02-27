@@ -31,6 +31,11 @@ or uk_UA. Only affects \code{ch_color_name} function}
 \description{
 Create fake colors
 }
+\section{Locales}{
+
+Run \code{color_provider_locales()} for locales supported
+}
+
 \examples{
 ch_color_name()
 ch_color_name(10)

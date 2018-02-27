@@ -5,7 +5,7 @@
 #' @details
 #' \strong{Methods}
 #'   \describe{
-#'     \item{\code{make_missing()}}{
+#'     \item{\code{make_missing(x)}}{
 #'       make missing data
 #'       \itemize{
 #'        \item x: a vector of characters, numeric, integers, logicals, etc
@@ -13,8 +13,8 @@
 #'     }
 #'   }
 #'
-#' This method picks a random number (\code{N}) of slots in the input
-#' vector \code{x} (up to \code{length(x)}). Then picks \code{N} random
+#' This method picks a random number (`N`) of slots in the input
+#' vector `x` (up to `length(x)`). Then picks `N` random
 #' positions and replaces them with NA matching the input class.
 #' @format NULL
 #' @usage NULL

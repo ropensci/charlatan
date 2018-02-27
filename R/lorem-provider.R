@@ -2,6 +2,8 @@
 #'
 #' @export
 #' @keywords internal
+#' @param locale (character) the locale to use. Run 
+#' `lorem_provider_locales()` for locales supported (default: en_US)
 #' @param sentence_punctuation (character) End of sentence punctuation
 #' @param word_connector (character) Default connector between words
 #' @details

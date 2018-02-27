@@ -2,7 +2,7 @@
 #'
 #' @export
 #' @param ... columns to include. must be in the allowed set. See
-#' \strong{Allowed colun names} below. Three default columns are included
+#' **Allowed colun names** below. Three default columns are included
 #' (name, job, phone_number) if nothing is specified - but are overridden
 #' by any input.
 #' @template params
@@ -10,15 +10,15 @@
 #' for data types that have locale support, See each data provider for
 #' details.
 #' @section Allowed column names:
-#' \itemize{
-#'  \item name (default included)
-#'  \item job (default included)
-#'  \item phone_number (default included)
-#'  \item currency
-#'  \item color_name
-#'  \item rgb_color
-#'  \item rgb_css_color
-#' }
+#' 
+#' - name (default included)
+#' - job (default included)
+#' - phone_number (default included)
+#' - currency
+#' - color_name
+#' - rgb_color
+#' - rgb_css_color
+#' 
 #' @examples
 #' ch_generate()
 #' ch_generate(n = 1)

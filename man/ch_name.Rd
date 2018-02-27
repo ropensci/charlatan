@@ -9,8 +9,8 @@ ch_name(n = 1, locale = NULL, messy = FALSE)
 \arguments{
 \item{n}{(integer) number of things to get, any non-negative integer}
 
-\item{locale}{(character) the locale to use. options: en_US (default),
-fr_FR, fr_CH, fi_FI, fa_IR, es_ES, de_DE, de_AT, cs_CZ, bg_BG, dk_DK}
+\item{locale}{(character) the locale to use. Run
+\code{person_provider_locales()} for locales supported (default: en_US)}
 
 \item{messy}{(logical) make some messy data. Default: \code{FALSE}}
 }

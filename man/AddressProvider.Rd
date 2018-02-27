@@ -9,31 +9,35 @@
 \usage{
 address_provider_locales
 }
+\arguments{
+\item{locale}{(character) the locale to use. Run
+\code{address_provider_locales()} for locales supported (default: en_US)}
+}
 \description{
 AddressProvider
 }
 \details{
 \strong{Methods}
 \describe{
-\item{\code{city_suffix}}{
+\item{\code{city_suffix()}}{
 city suffix
 }
-\item{\code{street_suffix}}{
+\item{\code{street_suffix()}}{
 street suffix
 }
-\item{\code{building_number}}{
+\item{\code{building_number()}}{
 building number
 }
-\item{\code{city}}{
+\item{\code{city()}}{
 city
 }
-\item{\code{country}}{
+\item{\code{country()}}{
 country
 }
-\item{\code{country_code}}{
+\item{\code{country_code()}}{
 country code
 }
-\item{\code{postcode}}{
+\item{\code{postcode()}}{
 postal code
 }
 }

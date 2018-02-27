@@ -2,15 +2,13 @@
 #'
 #' @export
 #' @keywords internal
-#' @param locale (character) the locale to use. options: en_US (default),
-#' bg_BG, cs_CZ, de_AT, de_DE, dk_DK, en_GB, es_ES, es_MX, fa_IR, fi_FI,
-#' fr_CH, fr_FR, hr_HR, it_IT, ko_KR, lt_LT, lv_LV, ne_NP, nl_NL,
-#' no_NO, pl_PL
-#' @param messy (logical) make some messy data. Default: \code{FALSE}
+#' @param locale (character) the locale to use. Run 
+#' `person_provider_locales()` for locales supported (default: en_US)
+#' @param messy (logical) make some messy data. Default: `FALSE`
 #' @details
 #' \strong{Methods}
 #'   \describe{
-#'     \item{\code{render()}}{
+#'     \item{\code{render(fmt)}}{
 #'       Make a person's name
 #'     }
 #'     \item{\code{first_name()}}{

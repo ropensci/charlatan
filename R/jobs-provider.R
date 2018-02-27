@@ -2,8 +2,8 @@
 #'
 #' @export
 #' @keywords internal
-#' @param locale (character) the locale to use. options: en_US (default),
-#' fr_FR, fr_CH, hr_FR, fa_IR, pl_PL, ru_RU, uk_UA, zh_TW.
+#' @param locale (character) the locale to use. Run 
+#' `job_provider_locales()` for locales supported (default: en_US)
 #' @details
 #' \strong{Methods}
 #'   \describe{

@@ -10,7 +10,7 @@ MissingDataProvider
 \details{
 \strong{Methods}
 \describe{
-\item{\code{make_missing()}}{
+\item{\code{make_missing(x)}}{
 make missing data
 \itemize{
 \item x: a vector of characters, numeric, integers, logicals, etc

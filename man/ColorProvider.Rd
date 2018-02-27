@@ -9,28 +9,32 @@
 \usage{
 color_provider_locales
 }
+\arguments{
+\item{locale}{(character) the locale to use. Run
+\code{color_provider_locales()} for locales supported (default: en_US)}
+}
 \description{
 ColorProvider
 }
 \details{
 \strong{Methods}
 \describe{
-\item{\code{color_name}}{
+\item{\code{color_name()}}{
 color name
 }
-\item{\code{safe_color_name}}{
+\item{\code{safe_color_name()}}{
 safe color name
 }
-\item{\code{hex_color}}{
+\item{\code{hex_color()}}{
 hex color
 }
-\item{\code{safe_hex_color}}{
+\item{\code{safe_hex_color()}}{
 safe hex color
 }
-\item{\code{rgb_color}}{
+\item{\code{rgb_color()}}{
 RGB color
 }
-\item{\code{rgb_css_color}}{
+\item{\code{rgb_css_color()}}{
 RGB CSS color
 }
 }

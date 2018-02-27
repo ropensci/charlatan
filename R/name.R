@@ -2,9 +2,9 @@
 #'
 #' @export
 #' @template params
-#' @param locale (character) the locale to use. options: en_US (default),
-#' fr_FR, fr_CH, fi_FI, fa_IR, es_ES, de_DE, de_AT, cs_CZ, bg_BG, dk_DK
-#' @param messy (logical) make some messy data. Default: \code{FALSE}
+#' @param locale (character) the locale to use. Run 
+#' `person_provider_locales()` for locales supported (default: en_US)
+#' @param messy (logical) make some messy data. Default: `FALSE`
 #' @examples
 #' ch_name()
 #' ch_name(10)

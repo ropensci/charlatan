@@ -16,14 +16,13 @@ Get a genus name
 \item{\code{epithet()}}{
 Get an epithet name
 }
-\item{\code{species()}}{
-Get a binomial name (genus + epithet)
-\itemize{
-\item authority: Include authority. default: \code{FALSE}
-\item date: Include authority date. If \code{authority = FALSE},
-this is ignored.  default: \code{FALSE}
+\item{\code{species(authority, date)}}{
+Get a binomial name (genus + epithet)\preformatted{  - authority: Include authority. default: `FALSE`
+  - date: Include authority date. If `authority = FALSE`,
+   this is ignored. default: `FALSE`
 }
 }
+
 }
 }
 \section{Names}{
