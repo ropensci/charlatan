@@ -17,10 +17,10 @@ a latitude value
 a longitude value
 }
 \item{\code{position()}}{
-a position, of form \link{longitude,latitude}
+a position, of form \code{[longitude,latitude]}
 \itemize{
 \item bbox: optionally, specify a bounding box for the position
-to be in, of the form \link{west,south,east,north} - checks that the
+to be in, of the form \code{[west,south,east,north]} - checks that the
 bbox has valid values for lat and long
 }
 }

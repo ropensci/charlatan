@@ -3,7 +3,7 @@
 #' @export
 #' @name coordinates
 #' @template params
-#' @param bbox a bounding box of the form [w,s,e,n]
+#' @param bbox a bounding box of the form `[w,s,e,n]`
 #' @examples
 #' ch_lon()
 #' ch_lon(10)
