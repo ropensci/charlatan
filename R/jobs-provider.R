@@ -5,12 +5,10 @@
 #' @param locale (character) the locale to use. Run 
 #' `job_provider_locales()` for locales supported (default: en_US)
 #' @details
-#' \strong{Methods}
-#'   \describe{
-#'     \item{\code{render()}}{
-#'       Make a job
-#'     }
-#'   }
+#' **Methods**
+#' 
+#' - `render()` - Make a job
+#' 
 #' @format NULL
 #' @usage NULL
 #' @examples

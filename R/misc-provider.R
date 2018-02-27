@@ -3,18 +3,12 @@
 #' @export
 #' @keywords internal
 #' @details
-#' \strong{Methods}
-#'   \describe{
-#'    \item{\code{language_locale_codes}}{
-#'     list of language locales supported by Linux Mint
-#'    }
-#'    \item{\code{locale()}}{
-#'     locale
-#'    }
-#'    \item{\code{language_code()}}{
-#'     language code
-#'    }
-#'  }
+#' **Methods**
+#' 
+#' - `language_locale_codes` - list of language locales supported by 
+#'     Linux Mint
+#' - `locale()` - locale
+#' - `language_code()` - language code
 #'
 #' @format NULL
 #' @usage NULL

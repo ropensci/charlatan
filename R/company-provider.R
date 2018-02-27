@@ -5,27 +5,15 @@
 #' @param locale (character) the locale to use. Run 
 #' `company_provider_locales()` for locales supported (default: en_US)
 #' @details
-#' \strong{Methods}
-#'   \describe{
-#'    \item{\code{company()}}{
-#'      a company name
-#'    }
-#'    \item{\code{company_prefix()}}{
-#'      a company prefix
-#'    }
-#'    \item{\code{company_suffix()}}{
-#'      a company suffix
-#'    }
-#'    \item{\code{bs()}}{
-#'      bs
-#'    }
-#'    \item{\code{catch_phrase()}}{
-#'      a catch phrase
-#'    }
-#'    \item{\code{siren()}}{
-#'      a siren
-#'    }
-#'  }
+#' **Methods**
+#' 
+#' - `company()` - a company name
+#' - `company_prefix()` - a company prefix
+#' - `company_suffix()` - a company suffix
+#' - `bs()` - bs
+#' - `catch_phrase()` - a catch phrase
+#' - `siren()` - a siren
+#' 
 #' @format NULL
 #' @usage NULL
 #' 

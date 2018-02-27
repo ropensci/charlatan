@@ -22,73 +22,64 @@ LoremProvider
 }
 \details{
 \strong{Methods}
-\describe{
-\item{\code{word(ext_words = NULL)}}{
-Generate a random word\preformatted{- ext_words: a character vector of words you would like to have
-  instead of 'Lorem ipsum'
-- returns: a random word
+\itemize{
+\item \code{word(ext_words = NULL)} - Generate a random word
+\itemize{
+\item ext_words: a character vector of words you would like to have
+instead of 'Lorem ipsum'
+\item returns: a random word
 }
-
+\item \code{words(nb = 3, ext_words = NULL)} - Generate a character vector of random words
+\itemize{
+\item nb: how many words to return
+\item ext_words: a character vector of words you would like to have
+instead of 'Lorem ipsum'
+\item returns: many words
 }
-\item{\code{words(nb = 3, ext_words = NULL)}}{
-Generate a character vector of random words\preformatted{- nb: how many words to return
-- ext_words: a character vector of words you would like to have
-  instead of 'Lorem ipsum'
-- returns: many words
-}
-
-}
-\item{\code{sentence(nb_words, variable_nb_words, ext_words)}}{
-Generate a random sentence\preformatted{- nb_words around how many words the sentence should contain
-- variable_nb_words set to false if you want exactly `nb`
-  words returned, otherwise the result may include a number of words
-  of `nb` +/-40% (with a minimum of 1)
-- ext_words a character vector of words you would like to have instead of
-  'Lorem ipsum'.
-- returns: a single sentence
-}
-
-}
-\item{\code{sentences(nb, ext_words)}}{
-Generate a character vector of random sentences\preformatted{- nb: how many sentences to return
-- ext_words: a character vector of words you would like to have
-  instead of 'Lorem ipsum'.
-- returns: many sentences
-}
-
-}
-\item{\code{paragraph(nb_sentences, variable_nb_sentences,
-     ext_words)}}{
-Generate a single paragraph\preformatted{- nb_sentences: around how many sentences the paragraph should
-  contain
-- variable_nb_sentences: set to false if you want exactly `nb`
-  sentences returned, otherwise the result may include a number of
-  sentences of ``nb`` +/-40% (with a minimum of 1)
-- ext_words: a character vector of words you would like to have instead
-  of 'Lorem ipsum'
-- returns: a single paragraph
-}
-
-}
-\item{\code{paragraphs(nb, ext_words)}}{
-Generate many paragraphs\preformatted{- nb: how many paragraphs to return
-- ext_words: a character vector of words you would like to have instead of
-    'Lorem ipsum'.
-- returns: many paragraphs
-}
-
-}
-\item{\code{text(max_nb_chars, ext_words)}}{
-Generate a random text string\preformatted{Depending on the ``max_nb_chars, returns a string made of words,
-sentences, or paragraphs.
-
-- max_nb_chars: Maximum number of characters the text should contain
-(minimum 5)
-- ext_words: a character vector of words you would like to have instead of
+\item \code{sentence(nb_words, variable_nb_words, ext_words)} - Generate a random sentence
+\itemize{
+\item nb_words around how many words the sentence should contain
+\item variable_nb_words set to false if you want exactly \code{nb}
+words returned, otherwise the result may include a number of words
+of \code{nb} +/-40% (with a minimum of 1)
+\item ext_words a character vector of words you would like to have instead of
 'Lorem ipsum'.
-- returns: character string of words
+\item returns: a single sentence
 }
-
+\item \code{sentences(nb, ext_words)} - Generate a character vector of random sentences
+\itemize{
+\item nb: how many sentences to return
+\item ext_words: a character vector of words you would like to have
+instead of 'Lorem ipsum'.
+\item returns: many sentences
+}
+\item \code{paragraph(nb_sentences, variable_nb_sentenc} -  ext_words)` - Generate a
+single paragraph
+\itemize{
+\item nb_sentences: around how many sentences the paragraph should
+contain
+\item variable_nb_sentences: set to false if you want exactly \code{nb}
+sentences returned, otherwise the result may include a number of
+sentences of \code{nb} +/-40% (with a minimum of 1)
+\item ext_words: a character vector of words you would like to have instead
+of 'Lorem ipsum'
+\item returns: a single paragraph
+}
+\item \code{paragraphs(nb, ext_words)} - Generate many paragraphs
+\itemize{
+\item nb: how many paragraphs to return
+\item ext_words: a character vector of words you would like to have instead of
+'Lorem ipsum'.
+\item returns: many paragraphs
+}
+\item \code{text(max_nb_chars, ext_words)} - Generate a random text string. Depending on
+the \code{max_nb_chars}, returns a string made of words, sentences, or paragraphs.
+\itemize{
+\item max_nb_chars: Maximum number of characters the text should contain
+(minimum 5)
+\item ext_words: a character vector of words you would like to have instead of
+'Lorem ipsum'.
+\item returns: character string of words
 }
 }
 }

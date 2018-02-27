@@ -5,21 +5,12 @@
 #' @param locale (character) the locale to use. Run 
 #' `file_provider_locales()` for locales supported (default: en_US)
 #' @details
-#' \strong{Methods}
-#'   \describe{
-#'    \item{\code{mime_type(category)}}{
-#'      mime type
-#'    }
-#'    \item{\code{file_name(category(NULL, extension)}}{
-#'      file name
-#'    }
-#'    \item{\code{file_extension(category)}}{
-#'      file extension
-#'    }
-#'    \item{\code{file_path(depth(1, category(NULL, extension)}}{
-#'      file path
-#'    }
-#'  }
+#' **Methods**
+#' 
+#' - `mime_type(category)` - mime type
+#' - `file_name(category(NULL, extension)` - file name
+#' - `file_extension(category)` - file extension
+#' - `file_path(depth(1, category(NULL, extension)` - file path
 #'
 #' @format NULL
 #' @usage NULL

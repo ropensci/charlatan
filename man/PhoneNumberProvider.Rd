@@ -18,10 +18,8 @@ PhoneNumberProvider
 }
 \details{
 \strong{Methods}
-\describe{
-\item{\code{render()}}{
-Make a phone number
-}
+\itemize{
+\item \code{render()} - Make a phone number
 }
 }
 \examples{

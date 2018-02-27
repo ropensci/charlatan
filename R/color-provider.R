@@ -11,27 +11,15 @@ safe_colors = c(
 #' @param locale (character) the locale to use. Run 
 #' `color_provider_locales()` for locales supported (default: en_US)
 #' @details
-#' \strong{Methods}
-#'   \describe{
-#'    \item{\code{color_name()}}{
-#'      color name
-#'    }
-#'    \item{\code{safe_color_name()}}{
-#'      safe color name
-#'    }
-#'    \item{\code{hex_color()}}{
-#'      hex color
-#'    }
-#'    \item{\code{safe_hex_color()}}{
-#'      safe hex color
-#'    }
-#'    \item{\code{rgb_color()}}{
-#'      RGB color
-#'    }
-#'    \item{\code{rgb_css_color()}}{
-#'      RGB CSS color
-#'    }
-#'  }
+#' **Methods**
+#' 
+#' - `color_name()` - color name
+#' - `safe_color_name()` - safe color name
+#' - `hex_color()` - hex color
+#' - `safe_hex_color()` - safe hex color
+#' - `rgb_color()` - RGB color
+#' - `rgb_css_color()` - RGB CSS color
+#'
 #' @format NULL
 #' @usage NULL
 #' 

@@ -18,41 +18,20 @@ UserAgentProvider
 }
 \details{
 \strong{Methods}
-\describe{
-\item{\code{mac_processor()}}{
-a mac processor
-}
-\item{\code{linux_processor()}}{
-a linux processor
-}
-\item{\code{user_agent()}}{
-a user agent string, randomly picks one from chrome, firefix, safari,
-opera or internet explorer
-}
-\item{\code{chrome(version_from, version_to, build_from, build_to)}}{
-a chrome user agent string
-}
-\item{\code{firefox()}}{
-a firefox user agent string
-}
-\item{\code{safari()}}{
-a safari user agent string
-}
-\item{\code{opera()}}{
-an opera user agent string
-}
-\item{\code{internet_explorer()}}{
-an internet explorer user agent string
-}
-\item{\code{windows_platform_token()}}{
-a windows platform token
-}
-\item{\code{linux_platform_token()}}{
-a linux platform token
-}
-\item{\code{mac_platform_token()}}{
-a mac platform token
-}
+\itemize{
+\item \code{mac_processor()} - a mac processor
+\item \code{linux_processor()} - a linux processor
+\item \code{user_agent()} - a user agent string, randomly picks one
+from chrome, firefix, safari, opera or internet explorer
+\item \code{chrome(version_from, version_to, build_from, build_to)} - a chrome
+user agent string
+\item \code{firefox()} - a firefox user agent string
+\item \code{safari()} - a safari user agent string
+\item \code{opera()} - an opera user agent string
+\item \code{internet_explorer()} - an internet explorer user agent string
+\item \code{windows_platform_token()} - a windows platform token
+\item \code{linux_platform_token()} - a linux platform token
+\item \code{mac_platform_token()} - a mac platform token
 }
 }
 \examples{

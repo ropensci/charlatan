@@ -9,13 +9,9 @@ ElementProvider
 }
 \details{
 \strong{Methods}
-\describe{
-\item{\code{symbol()}}{
-Get a symbol
-}
-\item{\code{element()}}{
-Get an element
-}
+\itemize{
+\item \code{symbol()} - Get a symbol
+\item \code{element()} - Get an element
 }
 
 Data from Wikipedia at

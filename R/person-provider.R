@@ -6,48 +6,22 @@
 #' `person_provider_locales()` for locales supported (default: en_US)
 #' @param messy (logical) make some messy data. Default: `FALSE`
 #' @details
-#' \strong{Methods}
-#'   \describe{
-#'     \item{\code{render(fmt)}}{
-#'       Make a person's name
-#'     }
-#'     \item{\code{first_name()}}{
-#'       get a first name
-#'     }
-#'     \item{\code{first_name_female()}}{
-#'       get a female first name
-#'     }
-#'     \item{\code{first_name_male()}}{
-#'       get a male first namne
-#'     }
-#'     \item{\code{last_name()}}{
-#'       get a last name
-#'     }
-#'     \item{\code{last_name_female()}}{
-#'       get a female last name
-#'     }
-#'     \item{\code{last_name_male()}}{
-#'       get a male last name
-#'     }
-#'     \item{\code{prefix()}}{
-#'       get a name prefix
-#'     }
-#'     \item{\code{prefix_female()}}{
-#'       get a female name prefix
-#'     }
-#'     \item{\code{prefix_male()}}{
-#'       get a male name prefix
-#'     }
-#'     \item{\code{suffix()}}{
-#'       get a name suffix
-#'     }
-#'     \item{\code{suffix_female()}}{
-#'       get a female name suffix
-#'     }
-#'     \item{\code{suffix_male()}}{
-#'       get a male name suffix
-#'     }
-#'   }
+#' **Methods**
+#' 
+#' - `render(fmt)` - Make a person's name
+#' - `first_name()` -  get a first name
+#' - `first_name_female()` - get a female first name
+#' - `first_name_male()` - get a male first namne
+#' - `last_name()` - get a last name
+#' - `last_name_female()` - get a female last name
+#' - `last_name_male()` - get a male last name
+#' - `prefix()` - get a name prefix
+#' - `prefix_female()` - get a female name prefix
+#' - `prefix_male()` - get a male name prefix
+#' - `suffix()` - get a name suffix
+#' - `suffix_female()` - get a female name suffix
+#' - `suffix_male()` - get a male name suffix
+#' 
 #' @format NULL
 #' @usage NULL
 #'

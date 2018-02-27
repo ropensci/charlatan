@@ -3,22 +3,15 @@
 #' @export
 #' @keywords internal
 #' @details
-#' \strong{Methods}
-#'   \describe{
-#'     \item{\code{lat()}}{
-#'       a latitude value
-#'     }
-#'     \item{\code{lon()}}{
-#'       a longitude value
-#'     }
-#'     \item{\code{position(bbox)}}{
-#'       a position, of form `[longitude,latitude]`
-#'        
+#' **Methods**
+#' 
+#' - `lat()` - a latitude value
+#' - `lon()` - a longitude value
+#' - `position(bbox)` - a position, of form `[longitude,latitude]`
 #'       - bbox: optionally, specify a bounding box for the position
 #'        to be in, of the form `[west,south,east,north]` - checks that the
 #'        bbox has valid values for lat and long
-#'     }
-#'   }
+#' 
 #' @format NULL
 #' @usage NULL
 #' @examples

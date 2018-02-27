@@ -490,36 +490,19 @@ dt_countries <- list(
 #' @include base-provider.R
 #' @keywords internal
 #' @details
-#' \strong{Methods}
-#'   \describe{
-#'    \item{\code{unix_time()}}{
-#'      generate a unix time
-#'    }
-#'    \item{\code{date(pattern)}}{
-#'      generate a date
-#'    }
-#'    \item{\code{date_time(tzinfo)}}{
-#'      generate a date time
-#'    }
-#'    \item{\code{date_time_ad(tzinfo)}}{
-#'      generate a date time
-#'    }
-#'    \item{\code{iso8601()}}{
-#'      generate a iso8601 format date - NOT WORKING YET
-#'    }
-#'    \item{\code{year()}}{
-#'      generate a year
-#'    }
-#'    \item{\code{century()}}{
-#'      generate a century
-#'    }
-#'    \item{\code{timezone()}}{
-#'      generate a timezone
-#'    }
-#'    \item{\code{date_time_between(start_date, end_date, tzinfo)}}{
-#'      generate a datetime between two dates
-#'    }
-#'  }
+#' **Methods**
+#' 
+#' - `unix_time()` - generate a unix time
+#' - `date(pattern)` - generate a date
+#' - `date_time(tzinfo)` - generate a date time
+#' - `date_time_ad(tzinfo)` - generate a date time
+#' - `iso8601()` - generate a iso8601 format date - NOT WORKING YET
+#' - `year()}` - generate a year
+#' - `century()` - generate a century
+#' - `timezone()` - generate a timezone
+#' - `date_time_between(start_date, end_date, tzinfo)` - generate a 
+#'    datetime between two dates
+#' 
 #' @format NULL
 #' @usage NULL
 #' @examples

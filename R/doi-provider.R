@@ -3,12 +3,10 @@
 #' @export
 #' @keywords internal
 #' @details
-#' \strong{Methods}
-#'   \describe{
-#'     \item{\code{render()}}{
-#'       Make a DOI
-#'     }
-#'   }
+#' **Methods**
+#' 
+#' - `render()` - Make a DOI
+#' 
 #' @format NULL
 #' @usage NULL
 #' @examples

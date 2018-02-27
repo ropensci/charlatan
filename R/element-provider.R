@@ -7,15 +7,11 @@ elements <- data.frame(symbol = el_symbols, element = el_elements, stringsAsFact
 #' @export
 #' @keywords internal
 #' @details
-#' \strong{Methods}
-#'   \describe{
-#'     \item{\code{symbol()}}{
-#'       Get a symbol
-#'     }
-#'     \item{\code{element()}}{
-#'       Get an element
-#'     }
-#'   }
+#' **Methods**
+#' 
+#' - `symbol()` - Get a symbol
+#' - `element()` - Get an element
+#' 
 #' @format NULL
 #' @usage NULL
 #' @details Data from Wikipedia at 

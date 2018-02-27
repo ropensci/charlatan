@@ -7,26 +7,18 @@
 #' @param sentence_punctuation (character) End of sentence punctuation
 #' @param word_connector (character) Default connector between words
 #' @details
-#' \strong{Methods}
-#'   \describe{
-#'    \item{\code{word(ext_words = NULL)}}{
-#'     Generate a random word
-#'
+#' **Methods**
+#' 
+#' - `word(ext_words = NULL)` - Generate a random word
 #'     - ext_words: a character vector of words you would like to have
 #'       instead of 'Lorem ipsum'
 #'     - returns: a random word
-#'    }
-#'    \item{\code{words(nb = 3, ext_words = NULL)}}{
-#'     Generate a character vector of random words
-#'
+#' - `words(nb = 3, ext_words = NULL)` - Generate a character vector of random words
 #'     - nb: how many words to return
 #'     - ext_words: a character vector of words you would like to have
 #'       instead of 'Lorem ipsum'
 #'     - returns: many words
-#'    }
-#'    \item{\code{sentence(nb_words, variable_nb_words, ext_words)}}{
-#'     Generate a random sentence
-#'
+#' - `sentence(nb_words, variable_nb_words, ext_words)` - Generate a random sentence
 #'     - nb_words around how many words the sentence should contain
 #'     - variable_nb_words set to false if you want exactly `nb`
 #'       words returned, otherwise the result may include a number of words
@@ -34,19 +26,13 @@
 #'     - ext_words a character vector of words you would like to have instead of
 #'       'Lorem ipsum'.
 #'     - returns: a single sentence
-#'    }
-#'    \item{\code{sentences(nb, ext_words)}}{
-#'     Generate a character vector of random sentences
-#'
+#' - `sentences(nb, ext_words)` - Generate a character vector of random sentences
 #'     - nb: how many sentences to return
 #'     - ext_words: a character vector of words you would like to have
 #'       instead of 'Lorem ipsum'.
 #'     - returns: many sentences
-#'    }
-#'    \item{\code{paragraph(nb_sentences, variable_nb_sentences,
-#'      ext_words)}}{
-#'     Generate a single paragraph
-#'
+#' - `paragraph(nb_sentences, variable_nb_sentenc` -  ext_words)` - Generate a
+#'    single paragraph
 #'     - nb_sentences: around how many sentences the paragraph should
 #'       contain
 #'     - variable_nb_sentences: set to false if you want exactly `nb`
@@ -55,28 +41,18 @@
 #'     - ext_words: a character vector of words you would like to have instead
 #'       of 'Lorem ipsum'
 #'     - returns: a single paragraph
-#'    }
-#'    \item{\code{paragraphs(nb, ext_words)}}{
-#'     Generate many paragraphs
-#'
+#' - `paragraphs(nb, ext_words)` - Generate many paragraphs
 #'     - nb: how many paragraphs to return
 #'     - ext_words: a character vector of words you would like to have instead of
 #'         'Lorem ipsum'.
 #'     - returns: many paragraphs
-#'    }
-#'    \item{\code{text(max_nb_chars, ext_words)}}{
-#'     Generate a random text string
-#'
-#'     Depending on the ``max_nb_chars, returns a string made of words,
-#'     sentences, or paragraphs.
-#'
+#' - `text(max_nb_chars, ext_words)` - Generate a random text string. Depending on 
+#'    the `max_nb_chars`, returns a string made of words, sentences, or paragraphs.
 #'     - max_nb_chars: Maximum number of characters the text should contain
 #'     (minimum 5)
 #'     - ext_words: a character vector of words you would like to have instead of
 #'     'Lorem ipsum'.
 #'     - returns: character string of words
-#'    }
-#'  }
 #'
 #' @format NULL
 #' @usage NULL

@@ -18,10 +18,8 @@ JobProvider
 }
 \details{
 \strong{Methods}
-\describe{
-\item{\code{render()}}{
-Make a job
-}
+\itemize{
+\item \code{render()} - Make a job
 }
 }
 \examples{

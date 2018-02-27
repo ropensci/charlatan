@@ -5,12 +5,10 @@
 #' @param locale (character) the locale to use. Run 
 #' `phone_number_provider_locales()` for locales supported (default: en_US)
 #' @details
-#' \strong{Methods}
-#'   \describe{
-#'     \item{\code{render()}}{
-#'       Make a phone number
-#'     }
-#'   }
+#' **Methods**
+#' 
+#' - `render()` - Make a phone number
+#' 
 #' @format NULL
 #' @usage NULL
 #' @examples

@@ -9,16 +9,11 @@ MiscProvider
 }
 \details{
 \strong{Methods}
-\describe{
-\item{\code{language_locale_codes}}{
-list of language locales supported by Linux Mint
-}
-\item{\code{locale()}}{
-locale
-}
-\item{\code{language_code()}}{
-language code
-}
+\itemize{
+\item \code{language_locale_codes} - list of language locales supported by
+Linux Mint
+\item \code{locale()} - locale
+\item \code{language_code()} - language code
 }
 }
 \examples{

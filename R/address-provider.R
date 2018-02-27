@@ -37,30 +37,16 @@
 #' @param locale (character) the locale to use. Run 
 #' `address_provider_locales()` for locales supported (default: en_US)
 #' @details
-#' \strong{Methods}
-#'   \describe{
-#'    \item{\code{city_suffix()}}{
-#'      city suffix
-#'    }
-#'    \item{\code{street_suffix()}}{
-#'      street suffix
-#'    }
-#'    \item{\code{building_number()}}{
-#'      building number
-#'    }
-#'    \item{\code{city()}}{
-#'      city
-#'    }
-#'    \item{\code{country()}}{
-#'      country
-#'    }
-#'    \item{\code{country_code()}}{
-#'      country code
-#'    }
-#'    \item{\code{postcode()}}{
-#'      postal code
-#'    }
-#'  }
+#' **Methods**
+#' 
+#' - `city_suffix()` - city suffix
+#' - `street_suffix()` - street suffix
+#' - `building_number()` - building number
+#' - `city()` - city
+#' - `country()` - country
+#' - `country_code()` - country code
+#' - `postcode()` - postal code
+#'
 #' @format NULL
 #' @usage NULL
 #' 

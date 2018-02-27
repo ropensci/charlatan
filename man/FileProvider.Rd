@@ -18,19 +18,11 @@ FileProvider
 }
 \details{
 \strong{Methods}
-\describe{
-\item{\code{mime_type(category)}}{
-mime type
-}
-\item{\code{file_name(category(NULL, extension)}}{
-file name
-}
-\item{\code{file_extension(category)}}{
-file extension
-}
-\item{\code{file_path(depth(1, category(NULL, extension)}}{
-file path
-}
+\itemize{
+\item \code{mime_type(category)} - mime type
+\item \code{file_name(category(NULL, extension)} - file name
+\item \code{file_extension(category)} - file extension
+\item \code{file_path(depth(1, category(NULL, extension)} - file path
 }
 }
 \examples{

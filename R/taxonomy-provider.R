@@ -180,22 +180,15 @@ tax_epithets <- c('abbeokutae','ackermani','adolphii','adunca','aegilicum',
 #' @export
 #' @keywords internal
 #' @details
-#' \strong{Methods}
-#'   \describe{
-#'     \item{\code{genus()}}{
-#'       Get a genus name
-#'     }
-#'     \item{\code{epithet()}}{
-#'       Get an epithet name
-#'     }
-#'     \item{\code{species(authority, date)}}{
-#'       Get a binomial name (genus + epithet)
-#'       
+#' **Methods**
+#' 
+#' - `genus()` - Get a genus name
+#' - `epithet()` - Get an epithet name
+#' - `species(authority, date)` - Get a binomial name (genus + epithet)
 #'       - authority: Include authority. default: `FALSE`
 #'       - date: Include authority date. If `authority = FALSE`,
 #'        this is ignored. default: `FALSE`
-#'     }
-#'   }
+#' 
 #' @format NULL
 #' @usage NULL
 #' @section Names:

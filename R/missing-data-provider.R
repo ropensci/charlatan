@@ -3,15 +3,11 @@
 #' @export
 #' @keywords internal
 #' @details
-#' \strong{Methods}
-#'   \describe{
-#'     \item{\code{make_missing(x)}}{
-#'       make missing data
-#'       \itemize{
-#'        \item x: a vector of characters, numeric, integers, logicals, etc
-#'       }
-#'     }
-#'   }
+#' **Methods**
+#' 
+#' - `make_missing(x)` - make missing data
+#'       - x: a vector of characters, numeric, integers, logicals, etc
+#' 
 #'
 #' This method picks a random number (`N`) of slots in the input
 #' vector `x` (up to `length(x)`). Then picks `N` random

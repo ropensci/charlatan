@@ -18,70 +18,28 @@ InternetProvider
 }
 \details{
 \strong{Methods}
-\describe{
-\item{\code{to_ascii(x)}}{
-convert to ascii
-}
-\item{\code{email(domain)}}{
-get an email address
-}
-\item{\code{safe_email()}}{
-get a safe email address
-}
-\item{\code{free_email()}}{
-free email address
-}
-\item{\code{company_email()}}{
-company email address
-}
-\item{\code{ascii_email()}}{
-ascii email address
-}
-\item{\code{ascii_safe_email()}}{
-safe ascii email address
-}
-\item{\code{ascii_free_email()}}{
-an ascii free email address
-}
-\item{\code{ascii_company_email()}}{
-ascii company email address
-}
-\item{\code{user_name()}}{
-a user name
-}
-\item{\code{tld()}}{
-a tld
-}
-\item{\code{free_email_domain()}}{
-free email domain
-}
-\item{\code{url(schemes)}}{
-get a url
-}
-\item{\code{domain_name(levels)}}{
-get a domain name
-}
-\item{\code{domain_word()}}{
-get a domain word
-}
-\item{\code{ipv4()}}{
-get a random ipv4 address
-}
-\item{\code{mac_address()}}{
-get a mac address
-}
-\item{\code{uri_page()}}{
-get a uri page
-}
-\item{\code{uri_path()}}{
-get a uri path
-}
-\item{\code{uri_extension()}}{
-get a uri extension
-}
-\item{\code{image_url(width, height)}}{
-get an image url
-}
+\itemize{
+\item \code{to_ascii(x)} - convert to ascii
+\item \code{email(domain)} - get an email address
+\item \code{safe_email()} - get a safe email address
+\item \code{free_email()} - free email address
+\item \code{company_email()} - company email address
+\item \code{ascii_email()} - ascii email address
+\item \code{ascii_safe_email()} - safe ascii email address
+\item \code{ascii_free_email()} - an ascii free email address
+\item \code{ascii_company_email()} - ascii company email address
+\item \code{user_name()} - a user name
+\item \code{tld()} - a tld
+\item \code{free_email_domain()} - free email domain
+\item \code{url(schemes)} - get a url
+\item \code{domain_name(levels)} - get a domain name
+\item \code{domain_word()} - get a domain word
+\item \code{ipv4()} - get a random ipv4 address
+\item \code{mac_address()} - get a mac address
+\item \code{uri_page()} - get a uri page
+\item \code{uri_path()} - get a uri path
+\item \code{uri_extension()} - get a uri extension
+\item \code{image_url(width, height)} - get an image url
 }
 }
 \note{

@@ -4,15 +4,11 @@
 #' @keywords internal
 #' @param length (integer) length of sequence to create
 #' @details
-#' \strong{Methods}
-#'   \describe{
-#'     \item{\code{render(length)}}{
-#'       Make a sequence
-#'       \itemize{
-#'        \item length: sequence length. default: 30
-#'       }
-#'     }
-#'   }
+#' **Methods**
+#' 
+#' - `render(length)` - Make a sequence
+#'    - length: sequence length. default: 30
+#' 
 #' @format NULL
 #' @usage NULL
 #' @examples

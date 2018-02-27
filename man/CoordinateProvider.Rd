@@ -9,20 +9,13 @@ CoordinateProvider
 }
 \details{
 \strong{Methods}
-\describe{
-\item{\code{lat()}}{
-a latitude value
-}
-\item{\code{lon()}}{
-a longitude value
-}
-\item{\code{position(bbox)}}{
-a position, of form \code{[longitude,latitude]}\preformatted{  - bbox: optionally, specify a bounding box for the position
-   to be in, of the form `[west,south,east,north]` - checks that the
-   bbox has valid values for lat and long
-}
-}
-
+\itemize{
+\item \code{lat()} - a latitude value
+\item \code{lon()} - a longitude value
+\item \code{position(bbox)} - a position, of form \code{[longitude,latitude]}
+- bbox: optionally, specify a bounding box for the position
+to be in, of the form \code{[west,south,east,north]} - checks that the
+bbox has valid values for lat and long
 }
 }
 \examples{
