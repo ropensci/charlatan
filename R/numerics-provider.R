@@ -3,52 +3,39 @@
 #' @export
 #' @keywords internal
 #' @details
-#' \strong{Methods}
-#'   \describe{
-#'     \item{\code{double(n, mean, sd)}}{
-#'       get a double, pulls from normal distribution
+#' **Methods**
 #' 
-#'       - n: number of values, default: 1
-#'       - mean: mean value, default: 0
-#'       - sd: standard deviation, default: 1
-#'     }
-#'     \item{\code{integer(n, min, max)}}{
-#'       get an integer, runs \code{\link{sample}} on range given
+#' - `double(n, mean, sd)` - get a double, pulls from normal distribution
+#'    - n: number of values, default: 1
+#'    - mean: mean value, default: 0
+#'    - sd: standard deviation, default: 1
 #' 
-#'       - n: number of values, default: 1
-#'       - min: minimum value, default: 1
-#'       - max: maximum value, default: 1000
-#'     }
-#'     \item{\code{unif(n, min, max)}}{
-#'       get numbers from the uniform distribution
+#' - `integer(n, min, max)` - get an integer, runs [sample()] on range given
+#'    - n: number of values, default: 1
+#'    - min: minimum value, default: 1
+#'    - max: maximum value, default: 1000
 #' 
-#'       - n: number of values, default: 1
-#'       - min: minimum value, default: 0
-#'       - max: maximum value, default: 9999
-#'     }
-#'     \item{\code{norm(n, mean, sd)}}{
-#'       get numbers from the normal distribution
+#' - `unif(n, min, max)` - get numbers from the uniform distribution
+#'    - n: number of values, default: 1
+#'    - min: minimum value, default: 0
+#'    - max: maximum value, default: 9999
 #' 
-#'       - n: number of values, default: 1
-#'       - mean: mean value, default: 0
-#'       - sd: standard deviation, default: 1
-#'     }
-#'     \item{\code{lnorm(n, mean, sd)}}{
-#'       get numbers from the lognormal distribution
+#' - `norm(n, mean, sd)` - get numbers from the normal distribution
+#'    - n: number of values, default: 1
+#'    - mean: mean value, default: 0
+#'    - sd: standard deviation, default: 1
 #' 
-#'       - n: number of values, default: 1
-#'       - mean: mean value, default: 0
-#'       - sd: standard deviation, default: 1
-#'     }
-#'     \item{\code{beta(n, shape1, shape2, ncp)}}{
-#'       get numbers from the beta distribution
+#' - `lnorm(n, mean, sd)` - get numbers from the lognormal distribution
+#'    - n: number of values, default: 1
+#'    - mean: mean value, default: 0
+#'    - sd: standard deviation, default: 1
 #' 
-#'       - n: number of values, default: 1
-#'       - shape1: non-negative parameters of the Beta distribution
-#'       - shape2: non-negative parameters of the Beta distribution
-#'       - ncp: non-centrality parameter, default: 0
-#'     }
-#'   }
+#' - `beta(n, shape1, shape2, ncp)` - get numbers from the beta distribution
+#'    - n: number of values, default: 1
+#'    - shape1: non-negative parameters of the Beta distribution
+#'    - shape2: non-negative parameters of the Beta distribution
+#'    - ncp: non-centrality parameter, default: 0
+#' 
 #' @format NULL
 #' @usage NULL
 #' @examples
