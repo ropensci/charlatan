@@ -1,14 +1,20 @@
 #' Available locales
 #'
-#' Vector of available locales - not all are available across all
-#' types of data.
-#'
 #' @export
-#' @usage NULL
+#' @return a data.frame of the available locales in this package. 
+#' Not all functions support all locales. Check the docs for each one 
+#' to see what locales they support.
+#' 
+#' You can find out more about each locale by running your locale 
+#' though `stringi::stri_locale_info()`
 #' @examples
 #' charlatan_locales()
-charlatan_locales <- function() available_locales
+charlatan_locales <- function() available_locales_df
 
+# generate with:
+# available_locales_df <- data.table::setDF(data.table::rbindlist(
+#      lapply(available_locales, stringi::stri_locale_info)))
+# save(available_locales_df, file = "data/available_locales_df.rda")
 available_locales <- c(
   'ar_AA',
   'bg_BG',
