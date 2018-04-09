@@ -2,6 +2,8 @@
 #'
 #' @export
 #' @return a data.frame of the available locales in this package. 
+#' See [available_locales_df] for structure.
+#' 
 #' Not all functions support all locales. Check the docs for each one 
 #' to see what locales they support.
 #' 
