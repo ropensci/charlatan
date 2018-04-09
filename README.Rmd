@@ -44,7 +44,7 @@ Possible use cases for `charlatan`:
 * Generate fake data to replace sensitive real data with before public release
 * Create a random set of colors for visualization
 * Generate random coordinates for a map
-* Get a set of randomly generated DOIs (Digial Object Identifiers) to
+* Get a set of randomly generated DOIs (Digital Object Identifiers) to
 assign to fake scholarly artifacts
 * Generate fake taxonomic names for a biological dataset
 * Get a set of fake sequences to use to test code/software that uses
