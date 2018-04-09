@@ -74,6 +74,7 @@ Collate:
     'file-provider.R'
     'fraudster.R'
     'generate.R'
+    'globals.R'
     'internet-provider-bg_BG.R'
     'internet-provider-cs_CZ.R'
     'internet-provider-de_DE.R'
