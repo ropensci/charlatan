@@ -12,10 +12,15 @@ after_success:
 
 r_check_args: "--as-cran --run-dontrun"
 
-r:
-  - oldrel
-  - release
-  - devel
+matrix:
+  include:
+    - os: linux
+      r: oldrel
+    - os: linux
+      r: release
+      env: R_CODECOV=true
+    - os: linux
+      r: devel
 
 notifications:
   email:
