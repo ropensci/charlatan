@@ -61,3 +61,20 @@ available_locales <- c(
   'zh_CN',
   'zh_TW'
 )
+
+#' Available locales
+#'
+#' A data.frame of locales available in \pkg{charlatan}
+#'
+#' @format A data frame with 44 rows and 4 variables:
+#' \describe{
+#'   \item{language}{language two letter code}
+#'   \item{country}{country two letter code}
+#'   \item{variant}{a variant code, if applicable}
+#'   \item{name}{official locale two letter code}
+#' }
+#' @name available_locales_df
+#' @seealso data.frame used in [charlatan_locales()]
+#' @docType data
+#' @keywords data
+NULL
