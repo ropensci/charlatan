@@ -2,12 +2,12 @@
 #'
 #' @export
 #' @keywords internal
-#' @param locale (character) the locale to use. Run 
+#' @param locale (character) the locale to use. Run
 #' `person_provider_locales()` for locales supported (default: en_US)
 #' @param messy (logical) make some messy data. Default: `FALSE`
 #' @details
 #' **Methods**
-#' 
+#'
 #' - `render(fmt)` - Make a person's name
 #' - `first_name()` -  get a first name
 #' - `first_name_female()` - get a female first name
@@ -21,7 +21,7 @@
 #' - `suffix()` - get a name suffix
 #' - `suffix_female()` - get a female name suffix
 #' - `suffix_male()` - get a male name suffix
-#' 
+#'
 #' @format NULL
 #' @usage NULL
 #'
@@ -130,8 +130,16 @@ PersonProvider <- R6::R6Class(
 
     render = function(fmt = NULL) {
       if (is.null(fmt)) fmt <- super$random_element(self$formats)
-      dat <- lapply(self$person[pluck_names(fmt, self$person)], sample,
-                    size = 1)
+      dat <- lapply(
+        self$person[pluck_names(fmt, self$person)],
+        function (x) {
+          if (has_probs(x)) {
+            super$random_element_prob(x)
+          } else {
+            super$random_element(x)
+          }
+        }
+      )
       if (length(grep("last_name", names(dat))) > 1) {
         tmp <- grep("last_name", names(dat), value = TRUE)
         nms <- paste(tmp, seq_along(tmp), sep = "")
