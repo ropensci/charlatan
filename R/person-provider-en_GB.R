@@ -6,16 +6,16 @@ person_formats_en_gb <- c(
     '{{first_names_male}} {{last_names}}',
     '{{first_names_male}} {{last_names}}',
     '{{first_names_male}} {{last_names}}',
-    '{{first_names_male}} {{last_names}}-{{last_names}}',
+    '{{first_names_male}} {{last_names1}}-{{last_names2}}',
     '{{first_names_female}} {{last_names}}',
     '{{first_names_female}} {{last_names}}',
     '{{first_names_female}} {{last_names}}',
     '{{first_names_female}} {{last_names}}',
-    '{{first_names_female}} {{last_names}}-{{last_names}}',
-    '{{prefix_male}} {{first_names_male}} {{last_names}}',
-    '{{prefix_female}} {{first_names_female}} {{last_names}}',
-    '{{prefix_male}} {{first_names_male}} {{last_names}}',
-    '{{prefix_female}} {{first_names_female}} {{last_names}}'
+    '{{first_names_female}} {{last_names1}}-{{last_names2}}',
+    '{{prefixes_male}} {{first_names_male}} {{last_names}}',
+    '{{prefixes_female}} {{first_names_female}} {{last_names}}',
+    '{{prefixes_male}} {{first_names_male}} {{last_names}}',
+    '{{prefixes_female}} {{first_names_female}} {{last_names}}'
 )
 
 person_first_names_male_en_gb <- c(
