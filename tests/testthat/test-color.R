@@ -97,7 +97,7 @@ test_that("ch_safe_hex_color works", {
   expect_equal(length(ch_safe_hex_color()), 1)
   expect_equal(length(ch_safe_hex_color(12)), 12)
 
-  safe_hex_regex <- "^#([0-9A-F])\\1([0-9A-F])\\2([0-9A-F])\\3$"
+  safe_hex_regex <- "^#([0369CF])\\1([0369CF])\\2([0369CF])\\3$"
 
   expect_match(ch_safe_hex_color(), safe_hex_regex, ignore.case = TRUE)
   expect_match(ch_safe_hex_color(12), safe_hex_regex, ignore.case = TRUE)
