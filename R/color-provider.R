@@ -8,11 +8,11 @@ safe_colors = c(
 #'
 #' @export
 #' @keywords internal
-#' @param locale (character) the locale to use. Run 
+#' @param locale (character) the locale to use. Run
 #' `color_provider_locales()` for locales supported (default: en_US)
 #' @details
 #' **Methods**
-#' 
+#'
 #' - `color_name()` - color name
 #' - `safe_color_name()` - safe color name
 #' - `hex_color()` - hex color
@@ -22,7 +22,7 @@ safe_colors = c(
 #'
 #' @format NULL
 #' @usage NULL
-#' 
+#'
 #' @examples
 #' x <- ColorProvider$new()
 #' x$locale
@@ -71,8 +71,12 @@ ColorProvider <- R6::R6Class(
     },
 
     safe_hex_color = function() {
-      x <- sprintf("%x", super$random_int(0, 255))
-      x <- if (nchar(x) < 3) paste0(x, rep("0", 3 - nchar(x))) else x
+      x <- sprintf(
+        "%x%x%x",
+        super$random_int(0, 5) * 3,
+        super$random_int(0, 5) * 3,
+        super$random_int(0, 5) * 3
+      )
       paste0(
         "#",
         private$ind(x, 1), private$ind(x, 1),
