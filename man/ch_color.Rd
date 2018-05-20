@@ -12,7 +12,7 @@
 \usage{
 ch_color_name(n = 1, locale = NULL)
 
-ch_safe_color_name(n = 1)
+ch_safe_color_name(n = 1, locale = NULL)
 
 ch_hex_color(n = 1)
 
@@ -26,7 +26,7 @@ ch_rgb_css_color(n = 1)
 \item{n}{(integer) number of things to get, any non-negative integer}
 
 \item{locale}{(character) the locale to use. options: en_US (default),
-or uk_UA. Only affects \code{ch_color_name} function}
+or uk_UA. Affects the \code{ch_color_name} and \code{ch_safe_color_name} functions}
 }
 \description{
 Create fake colors
@@ -59,4 +59,7 @@ ch_rgb_css_color(10)
 
 ch_color_name(locale = "uk_UA")
 ch_color_name(n = 10, locale = "uk_UA")
+
+ch_safe_color_name(locale = "uk_UA")
+ch_safe_color_name(n = 10, locale = "uk_UA")
 }

@@ -25,16 +25,23 @@ test_that("ColorProvider locale support works", {
   skip_on_cran()
   skip_on_travis()
 
-  bb <- ColorProvider$new(locale = "uk_UA")
+  test_locale <- function(loc) {
+    bb <- ColorProvider$new(locale = loc)
 
-  expect_is(bb$locale, "character")
-  expect_equal(bb$locale, "uk_UA")
+    expect_is(bb$locale, "character")
+    expect_equal(bb$locale, loc)
 
-  expect_is(bb$color_name(), "character")
-  expect_true(all(bb$color_name() %in% names(bb$all_colors)))
+    expect_is(bb$color_name(), "character")
+    expect_true(all(bb$color_name() %in% names(bb$all_colors)))
 
-  expect_is(bb$safe_color_name(), "character")
-  expect_true(all(bb$safe_color_name() %in% bb$safe_colors))
+    expect_is(bb$safe_color_name(), "character")
+    expect_true(all(bb$safe_color_name() %in% bb$safe_colors))
+  }
+
+  locales <- c("en_US", "uk_UA")
+  for (loc in locales) {
+    test_locale(loc)
+  }
 })
 
 context("ch color functions work")
