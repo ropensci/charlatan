@@ -21,7 +21,6 @@ test_that("ColorProvider works", {
 })
 
 test_that("ColorProvider locale support works", {
-  ## FIXME: sometimes this fails
   skip_on_cran()
   skip_on_travis()
 
@@ -150,14 +149,3 @@ test_that("ch_rgb_css_color works", {
   expect_true(between_0_255(as.integer(gsub(rgb_regex, "\\2", res7))))
   expect_true(between_0_255(as.integer(gsub(rgb_regex, "\\3", res7))))
 })
-
-context("color and safe color matches expected format")
-
-# FIXME - do these tests
-# test_that("color_name matches expected format", {
-#   "xxx"
-# })
-#
-# test_that("safe_color_name matches expected format", {
-#   "xxx"
-# })
