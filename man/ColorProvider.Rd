@@ -40,6 +40,7 @@ x$rgb_css_color()
 x <- ColorProvider$new(locale = "uk_UA")
 x$locale
 x$color_name()
+x$safe_color_name()
 }
 \keyword{datasets}
 \keyword{internal}

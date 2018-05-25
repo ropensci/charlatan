@@ -1,9 +1,3 @@
-safe_colors = c(
-  'black', 'maroon', 'green', 'navy', 'olive',
-  'purple', 'teal', 'lime', 'blue', 'silver',
-  'gray', 'yellow', 'fuchsia', 'aqua', 'white'
-)
-
 #' ColorProvider
 #'
 #' @export
@@ -36,13 +30,14 @@ safe_colors = c(
 #' x <- ColorProvider$new(locale = "uk_UA")
 #' x$locale
 #' x$color_name()
+#' x$safe_color_name()
 ColorProvider <- R6::R6Class(
   inherit = BaseProvider,
   'ColorProvider',
   public = list(
     locale = NULL,
     all_colors = NULL,
-    safe_colors = safe_colors,
+    safe_colors = NULL,
 
     initialize = function(locale = NULL) {
       if (!is.null(locale)) {
@@ -55,6 +50,7 @@ ColorProvider <- R6::R6Class(
         self$locale <- 'en_US'
       }
       self$all_colors <- parse_eval("all_colors_", self$locale)
+      self$safe_colors <- parse_eval("safe_colors_", self$locale)
     },
 
     color_name = function() {
