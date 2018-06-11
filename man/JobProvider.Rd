@@ -5,7 +5,7 @@
 \alias{JobProvider}
 \alias{job_provider_locales}
 \title{JobProvider}
-\format{An object of class \code{character} of length 9.}
+\format{An object of class \code{character} of length 10.}
 \usage{
 job_provider_locales
 }
