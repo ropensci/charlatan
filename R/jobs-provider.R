@@ -56,5 +56,5 @@ JobProvider <- R6::R6Class(
 #' @rdname JobProvider
 job_provider_locales <- c(
   "fa_ir", "fr_ch", "uk_ua", "ru_ru", "pl_pl",
-  "en_us", "fr_fr", "hr_hr", "zh_tw"
+  "en_us", "fr_fr", "hr_hr", "zh_tw", "fi_fi"
 )
