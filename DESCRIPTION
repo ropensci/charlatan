@@ -87,6 +87,7 @@ Collate:
     'job.R'
     'jobs-provider-en_US.R'
     'jobs-provider-fa_IR.R'
+    'jobs-provider-fi_FI.R'
     'jobs-provider-fr_CH.R'
     'jobs-provider-fr_FR.R'
     'jobs-provider-hr_HR.R'

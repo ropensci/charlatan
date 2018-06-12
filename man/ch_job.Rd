@@ -20,6 +20,7 @@ ch_job()
 ch_job(10)
 ch_job(500)
 
+ch_job(locale = "fi_FI", n = 10)
 ch_job(locale = "fr_FR", n = 10)
 ch_job(locale = "fr_CH", n = 10)
 ch_job(locale = "hr_HR", n = 10)
