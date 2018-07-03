@@ -166,11 +166,19 @@
   "developmentStatus": "active",
   "releaseNotes": "https://github.com/ropensci/charlatan/blob/master/NEWS.md",
   "readme": "https://github.com/ropensci/charlatan/blob/master/README.md",
-  "fileSize": "276.549KB",
+  "fileSize": "275.858KB",
   "review": {
     "@type": "Review",
     "url": "https://github.com/ropensci/onboarding/issues/94",
     "provider": "http://ropensci.org"
   },
-  "keywords": ["data", "faker", "rstats", "dataset", "fake-data", "r", "r-package"]
+  "keywords": [
+    "data",
+    "faker",
+    "rstats",
+    "dataset",
+    "fake-data",
+    "r",
+    "r-package"
+  ]
 }
