@@ -50,5 +50,7 @@ x$hex_color()
 }
 \author{
 Scott Chamberlain \email{myrmecocystus+r@gmail.com}
+
+Kyle Voytovich
 }
 \keyword{package}
