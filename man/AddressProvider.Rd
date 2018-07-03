@@ -23,6 +23,9 @@ AddressProvider
 \item \code{street_suffix()} - street suffix
 \item \code{building_number()} - building number
 \item \code{city()} - city
+\item \code{street_name()} - street name
+\item \code{street_address()} - street address
+\item \code{address()} - address
 \item \code{country()} - country
 \item \code{country_code()} - country code
 \item \code{postcode()} - postal code
@@ -36,9 +39,12 @@ z$street_suffix()
 z$building_number()
 z$city()
 z$country()
+z$street_name()
+z$street_address()
+z$address()
+z$country()
 z$country_code()
 z$postcode()
-z$street_name()
 
 # en_GB
 (z <- AddressProvider$new('en_GB'))
