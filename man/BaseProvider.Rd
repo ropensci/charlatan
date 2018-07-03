@@ -7,6 +7,32 @@
 \description{
 BaseProvider
 }
+\details{
+\strong{Methods}
+\itemize{
+\item \code{random_element(x)} - pick a random element from any input vector or list
+\item \code{random_int(min = 0, max = 9999, size = 1)} - random integer
+\item \code{random_digit()} - random integer between 0 and 9
+\item \code{random_digit_not_zero()} - random integer between 1 and 9
+\item \code{random_digit_or_empty()} - random integer between 0 and 9 or empty
+character string
+\item \code{random_digit_not_zero_or_empty()} - random integer between 1 and 9 or empty
+character string
+\item \code{random_letter()} - random letter
+\item \code{numerify(text = '###')} - replace a template with numbers
+\item \code{lexify(text = '????')} - replace a template with letters
+\item \code{bothify(text = '## ??')} - both numerify and lexify together
+\item \code{check_locale(x)} - check a locale to see if it exists, if not, stop with
+error message
+\item \code{randomize_nb_elements(x)} - Returns a random value near number.
+\itemize{
+\item param number: value to which the result must be near
+\item param le: result must be lower or equal to number
+\item param ge: result must be greater or equal to number
+\item returns: a random int near number
+}
+}
+}
 \examples{
 (x <- BaseProvider$new())
 

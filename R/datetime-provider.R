@@ -491,18 +491,18 @@ dt_countries <- list(
 #' @keywords internal
 #' @details
 #' **Methods**
-#' 
+#'
 #' - `unix_time()` - generate a unix time
 #' - `date(pattern)` - generate a date
 #' - `date_time(tzinfo)` - generate a date time
 #' - `date_time_ad(tzinfo)` - generate a date time
 #' - `iso8601()` - generate a iso8601 format date - NOT WORKING YET
-#' - `year()}` - generate a year
+#' - `year()` - generate a year
 #' - `century()` - generate a century
 #' - `timezone()` - generate a timezone
-#' - `date_time_between(start_date, end_date, tzinfo)` - generate a 
+#' - `date_time_between(start_date, end_date, tzinfo)` - generate a
 #'    datetime between two dates
-#' 
+#'
 #' @format NULL
 #' @usage NULL
 #' @examples
