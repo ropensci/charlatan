@@ -195,6 +195,7 @@ InternetProvider <- R6::R6Class(
         # for search, replace in self.replacements:
         #   string = string.replace(search, replace)
       }
+      check4pkg("stringi")
       stringi::stri_trans_general(x, "latin-ascii")
     },
 
@@ -304,6 +305,7 @@ InternetProvider <- R6::R6Class(
     },
 
     ipv4 = function() {
+      check4pkg("iptools")
       iptools::ip_random(1)
       # FIXME: try to do network address later
       # if network:
