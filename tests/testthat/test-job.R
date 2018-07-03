@@ -20,6 +20,7 @@ context("ch_job works")
 
 test_that("ch_job", {
   skip_on_cran()
+  skip_on_travis()
 
   aa <- ch_job()
 

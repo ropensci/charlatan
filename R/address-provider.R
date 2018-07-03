@@ -1,55 +1,27 @@
-#     def street_name(self):
-#         """
-#         :example 'Crist Parks'
-#         """
-#         pattern = self.random_element(self.street_name_formats)
-#         return self.generator.parse(pattern)
-
-#     def street_address(self):
-#         """
-#         :example '791 Crist Parks'
-#         """
-#         pattern = self.random_element(self.street_address_formats)
-#         return self.generator.parse(pattern)
-
-#     def address(self):
-#         """
-#         :example '791 Crist Parks, Sashabury, IL 86039-9874'
-#         """
-#         pattern = self.random_element(self.address_formats)
-#         return self.generator.parse(pattern)
-
-#     @classmethod
-#     def latitude(cls):
-#         # Latitude has a range of -90 to 90, so divide by two.
-#         return cls.geo_coordinate() / 2
-
-#     @classmethod
-#     def longitude(cls):
-#         return cls.geo_coordinate()
-
-
 #' AddressProvider
 #'
 #' @include datetime-provider.R
 #' @export
 #' @keywords internal
-#' @param locale (character) the locale to use. Run 
+#' @param locale (character) the locale to use. Run
 #' `address_provider_locales()` for locales supported (default: en_US)
 #' @details
 #' **Methods**
-#' 
+#'
 #' - `city_suffix()` - city suffix
 #' - `street_suffix()` - street suffix
 #' - `building_number()` - building number
 #' - `city()` - city
+#' - `street_name()` - street name
+#' - `street_address()` - street address
+#' - `address()` - address
 #' - `country()` - country
 #' - `country_code()` - country code
 #' - `postcode()` - postal code
 #'
 #' @format NULL
 #' @usage NULL
-#' 
+#'
 #' @examples
 #' (z <- AddressProvider$new())
 #' z$locale
@@ -58,9 +30,12 @@
 #' z$building_number()
 #' z$city()
 #' z$country()
+#' z$street_name()
+#' z$street_address()
+#' z$address()
+#' z$country()
 #' z$country_code()
 #' z$postcode()
-#' z$street_name()
 #'
 #' # en_GB
 #' (z <- AddressProvider$new('en_GB'))
@@ -100,7 +75,7 @@ AddressProvider <- R6::R6Class(
       if (!is.null(locale)) {
         # check global locales
         super$check_locale(locale)
-        # check person provider locales
+        # check address provider locales
         check_locale_(tolower(locale), address_provider_locales)
         self$locale <- locale
       } else {
@@ -137,43 +112,43 @@ AddressProvider <- R6::R6Class(
       super$random_element(self$street_suffixes)
     },
 
-    street_name = function() {
-      pattern <- super$random_element(self$street_name_formats)
-      pp <- PersonProvider$new(locale = self$locale)
-      dat <- list(
-        first_name = super$random_element(pp$person$first_names),
-        last_name = if (has_probs(self$person$last_names)) {
-          super$random_element_prob(pp$person$last_names)
-        } else {
-          super$random_element(pp$person$last_names)
-        },
-        street_suffix = super$random_element(self$street_suffixes)
-      )
-      whisker::whisker.render(pattern, data = dat)
-    },
-
     building_number = function() {
       super$numerify(super$random_element(self$building_number_formats))
     },
 
     city = function() {
       pattern <- super$random_element(self$city_formats)
+      # PersonProvider must implement the same locales for this to work
       pp <- PersonProvider$new(locale = self$locale)
       dat <- list(
-        first_name = super$random_element(pp$person$first_names),
-        last_name = super$random_element(pp$person$last_names),
+        first_name = pp$first_name(),
+        last_name = pp$last_name(),
         city_prefix = super$random_element(self$city_prefixes),
         city_suffix = super$random_element(self$city_suffixes)
       )
       whisker::whisker.render(pattern, data = dat)
     },
 
-    country = function() {
-      super$random_element(self$countries)
+    street_name = function() {
+      pattern <- super$random_element(self$street_name_formats)
+      # PersonProvider must implement the same locales for this to work
+      pp <- PersonProvider$new(locale = self$locale)
+      dat <- list(
+        first_name = pp$first_name(),
+        last_name = pp$last_name(),
+        street_suffix = super$random_element(self$street_suffixes)
+      )
+      whisker::whisker.render(pattern, data = dat)
     },
 
-    country_code = function() {
-      super$random_element(self$country_codes)
+    street_address = function() {
+      pattern <- super$random_element(self$street_address_formats)
+      dat <- list(
+        building_number = self$building_number(),
+        street_name = self$street_name(),
+        secondary_address = super$bothify(super$random_element(self$secondary_address_formats))
+      )
+      whisker::whisker.render(pattern, data = dat)
     },
 
     postcode = function() {
@@ -184,13 +159,32 @@ AddressProvider <- R6::R6Class(
           pcode <- ''
           pattern <- super$random_element(self$postcode_formats)
           pattern <- strsplit(pattern, split = "")[[1]]
-          for (i in seq_along(pattern)) {
+          for (p in pattern) {
             pcode <- paste0(pcode,
-              super$random_element(self$locale_data$postcode_sets[[i]]))
+                            super$random_element(self$locale_data$postcode_sets[[p]]))
           }
           pcode
         }
       )
+    },
+
+    address = function() {
+      pattern <- super$random_element(self$address_formats)
+      dat <- list(
+        street_address = self$street_address(),
+        city = self$city(),
+        state_abbr = super$random_element(self$states_abbr),
+        postcode = self$postcode()
+      )
+      whisker::whisker.render(pattern, data = dat)
+    },
+
+    country = function() {
+      super$random_element(self$countries)
+    },
+
+    country_code = function() {
+      super$random_element(self$country_codes)
     }
 
     # geo_coordinate = function(center = NULL, radius = 0.001) {
@@ -204,6 +198,15 @@ AddressProvider <- R6::R6Class(
     #     Decimal(str(geo)).quantize(Decimal('.000001'))
     #   }
     # }
+
+    #     @classmethod
+    #     def latitude(cls):
+    #         # Latitude has a range of -90 to 90, so divide by two.
+    #         return cls.geo_coordinate() / 2
+
+    #     @classmethod
+    #     def longitude(cls):
+    #         return cls.geo_coordinate()
   )
 )
 
