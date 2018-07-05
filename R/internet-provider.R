@@ -77,7 +77,9 @@
 #'
 #' # addresses, mac, ipv4
 #' x$mac_address()
-#' x$ipv4()
+#' if (requireNamespace("iptools", quietly=TRUE)) {
+#'   x$ipv4()
+#' }
 #'
 #' # different locales
 #' (x <- InternetProvider$new(locale = "en_AU"))
@@ -119,6 +121,11 @@
 #' x$url()
 #' x$user_name()
 #' x$email()
+#' 
+#' # convert a string to ascii with stringi pkg
+#' if (requireNamespace("stringi", quietly=TRUE)) {
+#'   x$to_ascii("anï")
+#' }
 InternetProvider <- R6::R6Class(
   inherit = BaseProvider,
   'InternetProvider',
