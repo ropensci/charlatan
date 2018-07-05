@@ -80,11 +80,11 @@ library("charlatan")
 ```r
 x <- fraudster()
 x$job()
-#> [1] "Copywriter, advertising"
+#> [1] "Accountant, chartered"
 x$name()
-#> [1] "Saniyah Oberbrunner"
+#> [1] "Rosalyn Berge"
 x$color_name()
-#> [1] "DeepSkyBlue"
+#> [1] "SaddleBrown"
 ```
 
 ## locale support
@@ -96,18 +96,19 @@ Locale support for job data
 
 ```r
 ch_job(locale = "en_US", n = 3)
-#> [1] "Editor, magazine features" "Special effects artist"   
-#> [3] "Landscape architect"
+#> [1] "Energy engineer"     "Biomedical engineer" "Cabin crew"
 ch_job(locale = "fr_FR", n = 3)
-#> [1] "Scénariste"          "Collecteur de fonds" "Maroquinier"
+#> [1] "Spécialiste des affaires réglementaires en chimie"
+#> [2] "Chargé d'études naturalistes"                     
+#> [3] "Ingénieur production en mécanique"
 ch_job(locale = "hr_HR", n = 3)
-#> [1] "Čuvar"                                             
-#> [2] "Dokumentarist"                                     
-#> [3] "Upravitelj prijevoza (osoba odgovorna za prijevoz)"
+#> [1] "Dokumentarist"                           
+#> [2] "Stručni suradnik u predškolskoj ustanovi"
+#> [3] "Pregledač vagona"
 ch_job(locale = "uk_UA", n = 3)
-#> [1] "Бізнесмен"  "Антрополог" "Кіноактор"
+#> [1] "Складальник" "Психолог"    "Електрик"
 ch_job(locale = "zh_TW", n = 3)
-#> [1] "服裝／皮包／鞋類設計" "排版人員"             "照顧指導員"
+#> [1] "商業設計"     "娛樂事業人員" "日式廚師"
 ```
 
 For colors:
@@ -115,9 +116,9 @@ For colors:
 
 ```r
 ch_color_name(locale = "en_US", n = 3)
-#> [1] "MediumVioletRed" "Red"             "PeachPuff"
+#> [1] "LightCoral" "LightGreen" "Brown"
 ch_color_name(locale = "uk_UA", n = 3)
-#> [1] "Кукурудзяний"   "Синя пил"       "Ясно-лазуровий"
+#> [1] "Синій Клейна" "Червоний"     "Бурштиновий"
 ```
 
 More coming soon ...
@@ -128,36 +129,36 @@ More coming soon ...
 ```r
 ch_generate()
 #> # A tibble: 10 x 3
-#>    name                 job                           phone_number       
-#>    <chr>                <chr>                         <chr>              
-#>  1 Sigurd Bashirian Sr. Soil scientist                (353)600-7909x3810 
-#>  2 Dante Weissnat       Media planner                 (954)791-8975x45814
-#>  3 Mira Graham MD       Designer, textile             968.058.0015       
-#>  4 Wong Corkery         Herpetologist                 06628694790        
-#>  5 Harlan Kautzer       Lawyer                        111.582.7123       
-#>  6 Ramiro Mohr-Mann     Telecommunications researcher (047)016-5147x80731
-#>  7 Matilda Marks DVM    Farm manager                  1-622-482-5872x5917
-#>  8 Duard Herman         Education administrator       1-349-536-7256x051 
-#>  9 Nim Ziemann-King     Conservator, museum/gallery   (975)441-3408      
-#> 10 Oral Moen            Doctor, hospital              (112)766-2230
+#>    name                job                              phone_number      
+#>    <chr>               <chr>                            <chr>             
+#>  1 Eryn Friesen        Education officer, museum        1-112-369-7012x566
+#>  2 Katie Herman-Walter Financial trader                 005.938.2589x20920
+#>  3 Vicente Mertz       Recruitment consultant           04743829816       
+#>  4 Florentino Kiehn    Pharmacologist                   678.897.4173x91600
+#>  5 Miss Janay O'Keefe  Production assistant, television 05168743452       
+#>  6 Bo Torp             Health and safety inspector      375-455-1811x437  
+#>  7 Ewart Wehner        Consulting civil engineer        (032)662-4042x708…
+#>  8 Mrs. Brett Torphy   Engineer, land                   218.141.0453      
+#>  9 Dr. Hezzie Crist    Electrical engineer              390-729-4668x99745
+#> 10 Nasir Kirlin        Health promotion specialist      903-573-8975x42413
 ```
 
 
 ```r
 ch_generate('job', 'phone_number', n = 30)
 #> # A tibble: 30 x 2
-#>    job                      phone_number       
-#>    <chr>                    <chr>              
-#>  1 Surveyor, rural practice 146.492.6772x9344  
-#>  2 Engineer, manufacturing  707-158-2445       
-#>  3 Games developer          (044)462-2331x40960
-#>  4 Phytotherapist           804.113.8131x13872 
-#>  5 Therapist, music         05074848503        
-#>  6 Theme park manager       (658)815-7056x8683 
-#>  7 Secretary, company       00788952880        
-#>  8 Facilities manager       176.571.5865       
-#>  9 Camera operator          918-220-0620x02664 
-#> 10 Learning mentor          1-463-793-9705x4358
+#>    job                                   phone_number       
+#>    <chr>                                 <chr>              
+#>  1 TEFL teacher                          270.623.5377       
+#>  2 Engineer, structural                  646.072.1164       
+#>  3 Surveyor, land/geomatics              02205572110        
+#>  4 Optician, dispensing                  (661)832-6241x552  
+#>  5 Education administrator               398.091.8589x283   
+#>  6 Health promotion specialist           1-392-380-9439     
+#>  7 Medical laboratory scientific officer 533-660-7324       
+#>  8 Public relations account executive    505.267.2292x8952  
+#>  9 Designer, television/film set         1-687-621-5404x4993
+#> 10 Broadcast presenter                   284.869.0060       
 #> # ... with 20 more rows
 ```
 
@@ -167,16 +168,16 @@ ch_generate('job', 'phone_number', n = 30)
 
 ```r
 ch_name()
-#> [1] "Dustan Welch"
+#> [1] "Dr. Trace Paucek"
 ```
 
 
 ```r
 ch_name(10)
-#>  [1] "Else Hodkiewicz"     "Drema Douglas"       "Dr. Kamilah Roberts"
-#>  [4] "Lesley Cronin"       "Violet Hermann DDS"  "Dr. Harold Pouros V"
-#>  [7] "Harlow Johns"        "Bynum Jaskolski"     "Philo Tromp"        
-#> [10] "Jarad Grady-Crooks"
+#>  [1] "Ms. Savannah Hickle" "Farrah Bayer"        "Roslyn Upton"       
+#>  [4] "Pearley Wisozk"      "Miss Alzina Hane"    "Stefan Runte"       
+#>  [7] "Dr. Shaylee Von"     "Richie Schowalter"   "Elvin Bailey"       
+#> [10] "Marissa Gerlach"
 ```
 
 
@@ -185,16 +186,16 @@ ch_name(10)
 
 ```r
 ch_phone_number()
-#> [1] "+24(0)6622290284"
+#> [1] "777.064.5901"
 ```
 
 
 ```r
 ch_phone_number(10)
-#>  [1] "949.165.3100x8947"  "513-360-1681x1101"  "1-008-153-5409"    
-#>  [4] "01642315316"        "01638176585"        "(111)328-4365x3830"
-#>  [7] "+83(9)5001132878"   "(404)149-4301"      "1-138-847-7304x193"
-#> [10] "(395)415-6171x1206"
+#>  [1] "06888960467"        "(443)980-6761"      "516.753.6850x8631" 
+#>  [4] "03547276672"        "870-472-2879x17047" "1-187-034-5312x104"
+#>  [7] "(309)739-2098x608"  "631-587-8491"       "791.141.4061"      
+#> [10] "(265)600-8703"
 ```
 
 ## job
@@ -202,22 +203,17 @@ ch_phone_number(10)
 
 ```r
 ch_job()
-#> [1] "Publishing copy"
+#> [1] "Higher education lecturer"
 ```
 
 
 ```r
 ch_job(10)
-#>  [1] "Charity officer"                  
-#>  [2] "Arts development officer"         
-#>  [3] "Agricultural engineer"            
-#>  [4] "Structural engineer"              
-#>  [5] "Radiographer, diagnostic"         
-#>  [6] "Quantity surveyor"                
-#>  [7] "Planning and development surveyor"
-#>  [8] "Music tutor"                      
-#>  [9] "Psychologist, occupational"       
-#> [10] "Farm manager"
+#>  [1] "Actuary"                          "Administrator, local government" 
+#>  [3] "Race relations officer"           "Adult nurse"                     
+#>  [5] "Optometrist"                      "Engineer, electronics"           
+#>  [7] "Immigration officer"              "Cytogeneticist"                  
+#>  [9] "Exercise physiologist"            "Education officer, environmental"
 ```
 
 ## credit cards
@@ -225,29 +221,29 @@ ch_job(10)
 
 ```r
 ch_credit_card_provider()
-#> [1] "VISA 16 digit"
+#> [1] "Maestro"
 ch_credit_card_provider(n = 4)
-#> [1] "JCB 16 digit"                "VISA 13 digit"              
-#> [3] "Diners Club / Carte Blanche" "JCB 16 digit"
+#> [1] "Voyager"          "VISA 16 digit"    "VISA 16 digit"   
+#> [4] "American Express"
 ```
 
 
 ```r
 ch_credit_card_number()
-#> [1] "4346049017313636"
+#> [1] "3337390179998936975"
 ch_credit_card_number(n = 10)
-#>  [1] "639053354268343"     "53319468699106980"   "3112683942940146787"
-#>  [4] "210021139657488566"  "676320345856585"     "3158516238933856356"
-#>  [7] "675954203207482"     "3337829395422815699" "3337638252657030208"
-#> [10] "502038645873902"
+#>  [1] "4186144087035319"    "676356787920083"     "3428496399306990"   
+#>  [4] "4422068536379628"    "4549679282912533"    "4366618045376"      
+#>  [7] "4617373184622"       "6011518817655950980" "3088479828588119186"
+#> [10] "4486361463875038"
 ```
 
 
 ```r
 ch_credit_card_security_code()
-#> [1] "594"
+#> [1] "215"
 ch_credit_card_security_code(10)
-#>  [1] "253"  "008"  "699"  "817"  "924"  "888"  "5281" "422"  "328"  "904"
+#>  [1] "826"  "612"  "531"  "257"  "2063" "034"  "082"  "399"  "099"  "981"
 ```
 
 ## Usage in the wild
