@@ -20,7 +20,7 @@ There are no reverse dependencies.
 
 ---
 
-This version gains many new fake data generator types, and implements minor improvements for existing methods.
+This version fixes some examples that should have been run conditionally on presence of packages listed in Suggests.
 
 Thanks!
 Scott Chamberlain

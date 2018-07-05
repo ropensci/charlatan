@@ -1,3 +1,11 @@
+charlatan 0.2.2
+===============
+
+### BUG FIXES
+
+* run examples conditionally if packages installed for packages in Suggests: `iptools` and `stringi` (#82)
+
+
 charlatan 0.2.0
 ===============
 
