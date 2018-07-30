@@ -3,7 +3,7 @@
 
 person_formats_ko_kr = c(
   '{{first_names}}{{last_names}}',
-  '{{first_names}}{{last_names}}{{last_names}}'
+  '{{first_names}}{{last_names1}}{{last_names2}}'
 )
 
 person_first_names_ko_kr = c(

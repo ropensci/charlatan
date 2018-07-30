@@ -140,10 +140,15 @@ PersonProvider <- R6::R6Class(
           }
         }
       )
-      if (length(grep("last_name", names(dat))) > 1) {
-        tmp <- grep("last_name", names(dat), value = TRUE)
+      if (length(grep("first_names", names(dat))) > 1) {
+        tmp <- grep("first_names", names(dat), value = TRUE)
         nms <- paste(tmp, seq_along(tmp), sep = "")
-        names(dat)[grep("last_name", names(dat))] <- nms
+        names(dat)[grep("first_names", names(dat))] <- nms
+      }
+      if (length(grep("last_names", names(dat))) > 1) {
+        tmp <- grep("last_names", names(dat), value = TRUE)
+        nms <- paste(tmp, seq_along(tmp), sep = "")
+        names(dat)[grep("last_names", names(dat))] <- nms
       }
       whisker::whisker.render(fmt, data = dat)
     },

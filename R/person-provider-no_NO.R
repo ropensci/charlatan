@@ -18,12 +18,12 @@ person_formats_no_no = c(
   '{{first_names}} {{last_names}}',
   '{{first_names}} {{last_names}}',
   '{{first_names}} {{last_names}}',
-  '{{first_names_male}}-{{first_names_male}} {{last_names}}',
-  '{{first_names_male}}-{{first_names_male}} {{last_names}}',
-  '{{first_names_female}}-{{first_names_female}} {{last_names}}',
-  '{{first_names_female}}-{{first_names_female}} {{last_names}}',
-  '{{first_names}} {{last_names}}-{{last_names}}',
-  '{{first_names}} {{last_names}}-{{last_names}}',
+  '{{first_names_male1}}-{{first_names_male2}} {{last_names}}',
+  '{{first_names_male1}}-{{first_names_male2}} {{last_names}}',
+  '{{first_names_female1}}-{{first_names_female2}} {{last_names}}',
+  '{{first_names_female1}}-{{first_names_female2}} {{last_names}}',
+  '{{first_names}} {{last_names1}}-{{last_names2}}',
+  '{{first_names}} {{last_names1}}-{{last_names2}}',
   '{{prefixes}} {{first_names_male}} {{last_names}}'
 )
 

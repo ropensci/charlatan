@@ -2,29 +2,29 @@
 # https://github.com/joke2k/faker/blob/master/faker/providers/person/es_ES/__init__.py
 
 person_formats_male_es_es = c(
-  '{{first_name_males}} {{last_names1}} {{last_names2}}',
-  '{{first_name_males}} {{last_names1}} {{last_names2}}',
-  '{{first_name_males}} {{last_names1}} {{last_names2}}',
-  '{{first_name_males}} {{last_names1}} {{last_names2}}',
-  '{{first_name_males}} {{last_names1}} {{last_names2}}',
-  '{{first_name_males}} {{last_names1}} {{last_names2}}',
-  '{{first_name_males}} {{last_names}}',
-  '{{first_name_males}} {{prefixes}} {{last_names}}',
-  '{{first_name_males}} {{last_names1}}-{{last_names2}}',
-  '{{first_name_males}} {{first_name_males}} {{last_names1}} {{last_names2}}'
+  '{{first_names_male}} {{last_names1}} {{last_names2}}',
+  '{{first_names_male}} {{last_names1}} {{last_names2}}',
+  '{{first_names_male}} {{last_names1}} {{last_names2}}',
+  '{{first_names_male}} {{last_names1}} {{last_names2}}',
+  '{{first_names_male}} {{last_names1}} {{last_names2}}',
+  '{{first_names_male}} {{last_names1}} {{last_names2}}',
+  '{{first_names_male}} {{last_names}}',
+  '{{first_names_male}} {{prefixes}} {{last_names}}',
+  '{{first_names_male}} {{last_names1}}-{{last_names2}}',
+  '{{first_names_male1}} {{first_names_male2}} {{last_names1}} {{last_names2}}'
 )
 
 person_formats_female_es_es = c(
-  '{{first_name_females}} {{last_names1}} {{last_names2}}',
-  '{{first_name_females}} {{last_names1}} {{last_names2}}',
-  '{{first_name_females}} {{last_names1}} {{last_names2}}',
-  '{{first_name_females}} {{last_names1}} {{last_names2}}',
-  '{{first_name_females}} {{last_names1}} {{last_names2}}',
-  '{{first_name_females}} {{last_names1}} {{last_names2}}',
-  '{{first_name_females}} {{last_names}}',
-  '{{first_name_females}} {{prefixes}} {{last_names}}',
-  '{{first_name_females}} {{last_names1}}-{{last_names2}}',
-  '{{first_name_females}} {{first_name_females}} {{last_names1}} {{last_names2}}'
+  '{{first_names_female}} {{last_names1}} {{last_names2}}',
+  '{{first_names_female}} {{last_names1}} {{last_names2}}',
+  '{{first_names_female}} {{last_names1}} {{last_names2}}',
+  '{{first_names_female}} {{last_names1}} {{last_names2}}',
+  '{{first_names_female}} {{last_names1}} {{last_names2}}',
+  '{{first_names_female}} {{last_names1}} {{last_names2}}',
+  '{{first_names_female}} {{last_names}}',
+  '{{first_names_female}} {{prefixes}} {{last_names}}',
+  '{{first_names_female}} {{last_names1}}-{{last_names2}}',
+  '{{first_names_female1}} {{first_names_female2}} {{last_names1}} {{last_names2}}'
 )
 
 person_formats_es_es = c(person_formats_male_es_es, person_formats_female_es_es)
