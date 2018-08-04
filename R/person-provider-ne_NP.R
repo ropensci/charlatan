@@ -1547,6 +1547,8 @@ person_prefixes_ne_np <- c(person_prefixes_female_ne_np, person_prefixes_male_ne
 
 person_ne_np <- list(
   first_names = person_first_names_ne_np,
+  first_names_female = person_first_names_female_ne_np,
+  first_names_male = person_first_names_male_ne_np,
   last_names = person_last_names_ne_np,
   prefixes_female = person_prefixes_female_ne_np,
   prefixes_male = person_prefixes_male_ne_np,

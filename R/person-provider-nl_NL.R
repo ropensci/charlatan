@@ -5,11 +5,11 @@ person_formats_nl_nl = c(
   '{{first_names_male}} {{last_names}}',
   '{{first_names_male}} {{last_names}}',
   '{{first_names_male}} {{last_names}}',
-  '{{first_names_male}} {{last_names}}-{{last_names}}',
+  '{{first_names_male}} {{last_names1}}-{{last_names2}}',
   '{{first_names_female}} {{last_names}}',
   '{{first_names_female}} {{last_names}}',
   '{{first_names_female}} {{last_names}}',
-  '{{first_names_female}} {{last_names}}-{{last_names}}'
+  '{{first_names_female}} {{last_names1}}-{{last_names2}}'
 )
 
 person_first_names_male_nl_nl = c(
