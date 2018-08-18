@@ -69,7 +69,7 @@ available_locales <- c(
 #'
 #' A data.frame of locales available in \pkg{charlatan}
 #'
-#' @format A data frame with 44 rows and 4 variables:
+#' @format A data frame with 45 rows and 4 variables:
 #' \describe{
 #'   \item{language}{language two letter code}
 #'   \item{country}{country two letter code}
