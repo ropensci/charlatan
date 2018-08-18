@@ -1,13 +1,13 @@
 #' Available locales
 #'
 #' @export
-#' @return a data.frame of the available locales in this package. 
+#' @return a data.frame of the available locales in this package.
 #' See [available_locales_df] for structure.
-#' 
-#' Not all functions support all locales. Check the docs for each one 
+#'
+#' Not all functions support all locales. Check the docs for each one
 #' to see what locales they support.
-#' 
-#' You can find out more about each locale by running your locale 
+#'
+#' You can find out more about each locale by running your locale
 #' though `stringi::stri_locale_info()`
 #' @examples
 #' charlatan_locales()
@@ -41,6 +41,7 @@ available_locales <- c(
   'he_IL',
   'hi_IN',
   'hr_HR',
+  'hu_HU',
   'it_IT',
   'ja_JP',
   'ko_KR',
@@ -56,7 +57,7 @@ available_locales <- c(
   'pt_PT',
   'ru_RU',
   'sk_SK',
-  'sl_SI',
+  'sl_SL',
   'sv_SE',
   'tr_TR',
   'uk_UA',

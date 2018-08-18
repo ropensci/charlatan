@@ -481,7 +481,7 @@ phone_number_formats_ko_kr = c(
   '070-####-####'
 )
 
-phone_number_formats_it_lt = c(
+phone_number_formats_lt_lt = c(
   '+370 ########',
   '+(370) ########',
   '+370########'

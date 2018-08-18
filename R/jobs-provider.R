@@ -2,13 +2,13 @@
 #'
 #' @export
 #' @keywords internal
-#' @param locale (character) the locale to use. Run 
-#' `job_provider_locales()` for locales supported (default: en_US)
+#' @param locale (character) the locale to use. See
+#' `job_provider_locales` for locales supported (default: en_US)
 #' @details
 #' **Methods**
-#' 
+#'
 #' - `render()` - Make a job
-#' 
+#'
 #' @format NULL
 #' @usage NULL
 #' @examples
@@ -38,7 +38,7 @@ JobProvider <- R6::R6Class(
         # check locale globally supported
         super$check_locale(locale)
         # check job provider locales
-        check_locale_(tolower(locale), job_provider_locales)
+        check_locale_(locale, job_provider_locales)
         self$locale <- locale
       } else {
         self$locale <- 'en_US'
@@ -55,6 +55,6 @@ JobProvider <- R6::R6Class(
 #' @export
 #' @rdname JobProvider
 job_provider_locales <- c(
-  "fa_ir", "fr_ch", "uk_ua", "ru_ru", "pl_pl",
-  "en_us", "fr_fr", "hr_hr", "zh_tw", "fi_fi"
+  "fa_IR", "fr_CH", "uk_UA", "ru_RU", "pl_PL",
+  "en_US", "fr_FR", "hr_HR", "zh_TW", "fi_FI"
 )

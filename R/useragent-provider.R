@@ -2,16 +2,16 @@
 #'
 #' @export
 #' @keywords internal
-#' @param locale (character) the locale to use. Run 
-#' `useragent_provider_locales()` for locales supported (default: en_US)
+#' @param locale (character) the locale to use. See
+#' `useragent_provider_locales` for locales supported (default: en_US)
 #' @details
 #' **Methods**
-#' 
+#'
 #' - `mac_processor()` - a mac processor
 #' - `linux_processor()` - a linux processor
-#' - `user_agent()` - a user agent string, randomly picks one 
+#' - `user_agent()` - a user agent string, randomly picks one
 #'    from chrome, firefix, safari, opera or internet explorer
-#' - `chrome(version_from, version_to, build_from, build_to)` - a chrome 
+#' - `chrome(version_from, version_to, build_from, build_to)` - a chrome
 #'    user agent string
 #' - `firefox()` - a firefox user agent string
 #' - `safari()` - a safari user agent string
@@ -57,7 +57,7 @@ UserAgentProvider <- R6::R6Class(
         # check global locales
         super$check_locale(locale)
         # check person provider locales
-        check_locale_(tolower(locale), useragent_provider_locales)
+        check_locale_(locale, useragent_provider_locales)
         self$locale <- locale
       } else {
         self$locale <- 'en_US'
@@ -217,4 +217,4 @@ UserAgentProvider <- R6::R6Class(
 
 #' @export
 #' @rdname UserAgentProvider
-useragent_provider_locales <- c("en_us")
+useragent_provider_locales <- c("en_US")

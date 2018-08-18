@@ -10,8 +10,8 @@
 lorem_provider_locales
 }
 \arguments{
-\item{locale}{(character) the locale to use. Run
-\code{lorem_provider_locales()} for locales supported (default: en_US)}
+\item{locale}{(character) the locale to use. See
+\code{lorem_provider_locales} for locales supported (default: en_US)}
 
 \item{sentence_punctuation}{(character) End of sentence punctuation}
 

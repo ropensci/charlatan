@@ -2,8 +2,8 @@
 #'
 #' @export
 #' @template params
-#' @param locale (character) the locale to use. Run 
-#' `phone_number_provider_locales()` for locales supported (default: en_US)
+#' @param locale (character) the locale to use. See
+#' `phone_number_provider_locales` for locales supported (default: en_US)
 #' @examples
 #' ch_phone_number()
 #' ch_phone_number(10)

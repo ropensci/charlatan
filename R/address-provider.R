@@ -3,8 +3,8 @@
 #' @include datetime-provider.R
 #' @export
 #' @keywords internal
-#' @param locale (character) the locale to use. Run
-#' `address_provider_locales()` for locales supported (default: en_US)
+#' @param locale (character) the locale to use. See
+#' `address_provider_locales` for locales supported (default: en_US)
 #' @details
 #' **Methods**
 #'
@@ -76,7 +76,7 @@ AddressProvider <- R6::R6Class(
         # check global locales
         super$check_locale(locale)
         # check address provider locales
-        check_locale_(tolower(locale), address_provider_locales)
+        check_locale_(locale, address_provider_locales)
         self$locale <- locale
       } else {
         self$locale <- 'en_US'
@@ -213,5 +213,5 @@ AddressProvider <- R6::R6Class(
 #' @export
 #' @rdname AddressProvider
 address_provider_locales <- c(
-  "en_us", "en_gb"
+  "en_US", "en_GB"
 )

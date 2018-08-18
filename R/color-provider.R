@@ -2,8 +2,8 @@
 #'
 #' @export
 #' @keywords internal
-#' @param locale (character) the locale to use. Run
-#' `color_provider_locales()` for locales supported (default: en_US)
+#' @param locale (character) the locale to use. See
+#' `color_provider_locales` for locales supported (default: en_US)
 #' @details
 #' **Methods**
 #'
@@ -44,7 +44,7 @@ ColorProvider <- R6::R6Class(
         # check global locales
         super$check_locale(locale)
         # check person provider locales
-        check_locale_(tolower(locale), color_provider_locales)
+        check_locale_(locale, color_provider_locales)
         self$locale <- locale
       } else {
         self$locale <- 'en_US'
@@ -108,4 +108,4 @@ ColorProvider <- R6::R6Class(
 
 #' @export
 #' @rdname ColorProvider
-color_provider_locales <- c("uk_ua", "en_us")
+color_provider_locales <- c("uk_UA", "en_US")

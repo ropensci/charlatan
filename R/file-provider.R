@@ -2,11 +2,11 @@
 #'
 #' @export
 #' @keywords internal
-#' @param locale (character) the locale to use. Run 
-#' `file_provider_locales()` for locales supported (default: en_US)
+#' @param locale (character) the locale to use. See
+#' `file_provider_locales` for locales supported (default: en_US)
 #' @details
 #' **Methods**
-#' 
+#'
 #' - `mime_type(category)` - mime type
 #' - `file_name(category(NULL, extension)` - file name
 #' - `file_extension(category)` - file extension
@@ -16,7 +16,7 @@
 #' @usage NULL
 #' @examples
 #' (x <- FileProvider$new())
-#' x$locale 
+#' x$locale
 #' x$mime_type()
 #' x$file_extension()
 #' x$file_name()
@@ -34,7 +34,7 @@ FileProvider <- R6::R6Class(
         # check global locales
         super$check_locale(locale)
         # check person provider locales
-        check_locale_(tolower(locale), file_provider_locales)
+        check_locale_(locale, file_provider_locales)
         self$locale <- locale
       } else {
         self$locale <- 'en_US'
@@ -79,7 +79,7 @@ FileProvider <- R6::R6Class(
 
     file_extension = function(category = NULL) {
       category <- if (!is.null(category)) {
-        category 
+        category
       } else {
         super$random_element(names(private$file_extensions))
       }
@@ -93,7 +93,7 @@ FileProvider <- R6::R6Class(
       file = self$file_name(category, extension)
       path = paste0("/", file)
       for (d in seq_len(depth)) {
-        path = sprintf("/%s%s", 
+        path = sprintf("/%s%s",
           LoremProvider$new(locale = self$locale)$word(), path)
       }
       return(path)
@@ -271,4 +271,4 @@ FileProvider <- R6::R6Class(
 
 #' @export
 #' @rdname FileProvider
-file_provider_locales <- c("en_us")
+file_provider_locales <- c("en_US")

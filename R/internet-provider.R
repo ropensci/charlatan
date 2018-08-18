@@ -2,11 +2,11 @@
 #'
 #' @export
 #' @keywords internal
-#' @param locale (character) the locale to use. Run 
-#' `internet_provider_locales()` for locales supported (default: en_US)
+#' @param locale (character) the locale to use. See
+#' `internet_provider_locales` for locales supported (default: en_US)
 #' @details
 #' **Methods**
-#' 
+#'
 #' - `to_ascii(x)` - convert to ascii
 #' - `email(domain)` - get an email address
 #' - `safe_email()` - get a safe email address
@@ -32,7 +32,7 @@
 #' @format NULL
 #' @usage NULL
 #'
-#' @note Note that if a locale you set doesn't have a locale specific set 
+#' @note Note that if a locale you set doesn't have a locale specific set
 #' of data for [PersonProvider] or [CompanyProvider] we fall back to
 #' `en_US`
 #'
@@ -121,7 +121,7 @@
 #' x$url()
 #' x$user_name()
 #' x$email()
-#' 
+#'
 #' # convert a string to ascii with stringi pkg
 #' if (requireNamespace("stringi", quietly=TRUE)) {
 #'   x$to_ascii("anï")
@@ -178,7 +178,7 @@ InternetProvider <- R6::R6Class(
         # check global locales
         super$check_locale(locale)
         # check person provider locales
-        check_locale_(tolower(locale), internet_provider_locales)
+        check_locale_(locale, internet_provider_locales)
         self$locale <- locale
       } else {
         self$locale <- 'en_US'
@@ -396,6 +396,6 @@ InternetProvider <- R6::R6Class(
 #' @export
 #' @rdname InternetProvider
 internet_provider_locales <- c(
-  "en_us", "en_au", "de_de", "bg_bg", "cs_cz", "fa_ir", "fr_fr",
-  "hr_hr"
+  "en_US", "en_AU", "de_DE", "bg_BG", "cs_CZ", "fa_IR", "fr_FR",
+  "hr_HR"
 )
