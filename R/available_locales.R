@@ -71,10 +71,10 @@ available_locales <- c(
 #'
 #' @format A data frame with 45 rows and 4 variables:
 #' \describe{
-#'   \item{language}{language two letter code}
-#'   \item{country}{country two letter code}
-#'   \item{variant}{a variant code, if applicable}
-#'   \item{name}{official locale two letter code}
+#'   \item{Language}{language two letter code}
+#'   \item{Country}{country two letter code}
+#'   \item{Variant}{a variant code, if applicable}
+#'   \item{Name}{official locale two letter code}
 #' }
 #' @name available_locales_df
 #' @seealso data.frame used in [charlatan_locales()]
