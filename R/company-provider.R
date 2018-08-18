@@ -2,21 +2,21 @@
 #'
 #' @export
 #' @keywords internal
-#' @param locale (character) the locale to use. Run 
-#' `company_provider_locales()` for locales supported (default: en_US)
+#' @param locale (character) the locale to use. See
+#' `company_provider_locales` for locales supported (default: en_US)
 #' @details
 #' **Methods**
-#' 
+#'
 #' - `company()` - a company name
 #' - `company_prefix()` - a company prefix
 #' - `company_suffix()` - a company suffix
 #' - `bs()` - bs
 #' - `catch_phrase()` - a catch phrase
 #' - `siren()` - a siren
-#' 
+#'
 #' @format NULL
 #' @usage NULL
-#' 
+#'
 #' @examples
 #' x <- CompanyProvider$new()
 #' x$locale
@@ -69,7 +69,7 @@ CompanyProvider <- R6::R6Class(
         # check global locales
         super$check_locale(locale)
         # check person provider locales
-        check_locale_(tolower(locale), company_provider_locales)
+        check_locale_(locale, company_provider_locales)
         self$locale <- locale
       } else {
         self$locale <- 'en_US'
@@ -157,6 +157,6 @@ CompanyProvider <- R6::R6Class(
 #' @export
 #' @rdname CompanyProvider
 company_provider_locales <- c(
-  "bg_bg", "cs_cz", "de_de", "en_us", "es_mx", "fa_ir", "fr_fr",
-  "hr_hr", "it_it"
+  "bg_BG", "cs_CZ", "de_DE", "en_US", "es_MX", "fa_IR", "fr_FR",
+  "hr_HR", "it_IT"
 )

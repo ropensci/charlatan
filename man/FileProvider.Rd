@@ -10,8 +10,8 @@
 file_provider_locales
 }
 \arguments{
-\item{locale}{(character) the locale to use. Run
-\code{file_provider_locales()} for locales supported (default: en_US)}
+\item{locale}{(character) the locale to use. See
+\code{file_provider_locales} for locales supported (default: en_US)}
 }
 \description{
 FileProvider
@@ -27,7 +27,7 @@ FileProvider
 }
 \examples{
 (x <- FileProvider$new())
-x$locale 
+x$locale
 x$mime_type()
 x$file_extension()
 x$file_name()

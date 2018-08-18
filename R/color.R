@@ -7,7 +7,7 @@
 #' or uk_UA. Affects the `ch_color_name` and `ch_safe_color_name` functions
 #'
 #' @section Locales:
-#' Run `color_provider_locales()` for locales supported
+#' See `color_provider_locales` for locales supported
 #'
 #' @examples
 #' ch_color_name()

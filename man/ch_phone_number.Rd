@@ -9,8 +9,8 @@ ch_phone_number(n = 1, locale = NULL)
 \arguments{
 \item{n}{(integer) number of things to get, any non-negative integer}
 
-\item{locale}{(character) the locale to use. Run
-\code{phone_number_provider_locales()} for locales supported (default: en_US)}
+\item{locale}{(character) the locale to use. See
+\code{phone_number_provider_locales} for locales supported (default: en_US)}
 }
 \description{
 Create fake phone numbers

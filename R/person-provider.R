@@ -2,8 +2,8 @@
 #'
 #' @export
 #' @keywords internal
-#' @param locale (character) the locale to use. Run
-#' `person_provider_locales()` for locales supported (default: en_US)
+#' @param locale (character) the locale to use. See
+#' `person_provider_locales` for locales supported (default: en_US)
 #' @param messy (logical) make some messy data. Default: `FALSE`
 #' @details
 #' **Methods**
@@ -119,7 +119,7 @@ PersonProvider <- R6::R6Class(
         # check global locales
         super$check_locale(locale)
         # check person provider locales
-        check_locale_(tolower(locale), person_provider_locales)
+        check_locale_(locale, person_provider_locales)
         self$locale <- locale
       } else {
         self$locale <- 'en_US'
@@ -275,8 +275,8 @@ PersonProvider <- R6::R6Class(
 #' @export
 #' @rdname PersonProvider
 person_provider_locales <- c(
-  "bg_bg", "fr_fr", "es_es", "en_us", "fa_ir", "dk_dk",
-  "cs_cz", "de_de", "fr_ch", "de_at", "fi_fi", "es_mx",
-  "en_gb", "hr_hr", "it_it", "lv_lv", "ko_kr", "lt_lt",
-  "ne_np", "nl_nl", "no_no", "pl_pl"
+  "bg_BG", "fr_FR", "es_ES", "en_US", "fa_IR", "dk_DK",
+  "cs_CZ", "de_DE", "fr_CH", "de_AT", "fi_FI", "es_MX",
+  "en_GB", "hr_HR", "it_IT", "lv_LV", "ko_KR", "lt_LT",
+  "ne_NP", "nl_NL", "no_NO", "pl_PL"
 )

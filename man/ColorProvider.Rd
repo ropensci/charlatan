@@ -10,8 +10,8 @@
 color_provider_locales
 }
 \arguments{
-\item{locale}{(character) the locale to use. Run
-\code{color_provider_locales()} for locales supported (default: en_US)}
+\item{locale}{(character) the locale to use. See
+\code{color_provider_locales} for locales supported (default: en_US)}
 }
 \description{
 ColorProvider

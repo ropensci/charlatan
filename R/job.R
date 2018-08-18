@@ -2,8 +2,8 @@
 #'
 #' @export
 #' @template params
-#' @param locale (character) the locale to use. Run 
-#' `job_provider_locales()` for locales supported (default: en_US)
+#' @param locale (character) the locale to use. See
+#' `job_provider_locales` for locales supported (default: en_US)
 #' @examples
 #' ch_job()
 #' ch_job(10)

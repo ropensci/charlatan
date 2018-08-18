@@ -10,8 +10,8 @@
 address_provider_locales
 }
 \arguments{
-\item{locale}{(character) the locale to use. Run
-\code{address_provider_locales()} for locales supported (default: en_US)}
+\item{locale}{(character) the locale to use. See
+\code{address_provider_locales} for locales supported (default: en_US)}
 }
 \description{
 AddressProvider

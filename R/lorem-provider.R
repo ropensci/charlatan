@@ -2,13 +2,13 @@
 #'
 #' @export
 #' @keywords internal
-#' @param locale (character) the locale to use. Run 
-#' `lorem_provider_locales()` for locales supported (default: en_US)
+#' @param locale (character) the locale to use. See
+#' `lorem_provider_locales` for locales supported (default: en_US)
 #' @param sentence_punctuation (character) End of sentence punctuation
 #' @param word_connector (character) Default connector between words
 #' @details
 #' **Methods**
-#' 
+#'
 #' - `word(ext_words = NULL)` - Generate a random word
 #'     - ext_words: a character vector of words you would like to have
 #'       instead of 'Lorem ipsum'
@@ -46,7 +46,7 @@
 #'     - ext_words: a character vector of words you would like to have instead of
 #'         'Lorem ipsum'.
 #'     - returns: many paragraphs
-#' - `text(max_nb_chars, ext_words)` - Generate a random text string. Depending on 
+#' - `text(max_nb_chars, ext_words)` - Generate a random text string. Depending on
 #'    the `max_nb_chars`, returns a string made of words, sentences, or paragraphs.
 #'     - max_nb_chars: Maximum number of characters the text should contain
 #'     (minimum 5)
@@ -99,7 +99,7 @@ LoremProvider <- R6::R6Class(
         # check global locales
         super$check_locale(locale)
         # check person provider locales
-        check_locale_(tolower(locale), lorem_provider_locales)
+        check_locale_(locale, lorem_provider_locales)
         self$locale <- locale
       } else {
         self$locale <- 'en_US'
@@ -268,6 +268,6 @@ LoremProvider <- R6::R6Class(
 #' @export
 #' @rdname LoremProvider
 lorem_provider_locales <- c(
-  "en_us", "ar_aa", "el_gr", "he_il", "ja_jp", "la", "ru_ru",
-  "zh_cn", "zh_tw"
+  "en_US", "ar_AA", "el_GR", "he_IL", "ja_JP", "la", "ru_RU",
+  "zh_CN", "zh_TW"
 )

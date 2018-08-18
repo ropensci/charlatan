@@ -2,8 +2,8 @@
 #'
 #' @export
 #' @template params
-#' @param locale (character) the locale to use. Run 
-#' `person_provider_locales()` for locales supported (default: en_US)
+#' @param locale (character) the locale to use. See
+#' `person_provider_locales` for locales supported (default: en_US)
 #' @param messy (logical) make some messy data. Default: `FALSE`
 #' @examples
 #' ch_name()
