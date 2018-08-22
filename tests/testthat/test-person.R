@@ -70,10 +70,18 @@ test_that("ch_name - n parameter", {
   expect_equal(length(ch_name(n = 500)), 500)
 })
 
-test_that("ch_name - locale parameter", {
-  expect_is(ch_name(locale = "fr_FR"), "character")
-  expect_is(ch_name(locale = "de_DE"), "character")
-  expect_is(ch_name(locale = "bg_BG"), "character")
+test_that("ch_name works for all locales", {
+  test_locale <- function(loc) {
+    res <- ch_name(100, locale = loc)
+    expect_is(res, "character")
+
+    # check for leading or trailing whitespace - indicates a problem
+    expect_equal(nchar(trimws(res)), nchar(res))
+  }
+
+  for (loc in person_provider_locales) {
+    test_locale(loc)
+  }
 })
 
 test_that("ch_name fails well", {
