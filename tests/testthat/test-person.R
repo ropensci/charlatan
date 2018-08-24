@@ -74,9 +74,7 @@ test_that("ch_name works for all locales", {
   test_locale <- function(loc) {
     res <- ch_name(100, locale = loc)
     expect_is(res, "character")
-
-    # check for leading or trailing whitespace - indicates a problem
-    expect_equal(nchar(trimws(res)), nchar(res))
+    expect_equal(trimws(res), res)
   }
 
   for (loc in person_provider_locales) {

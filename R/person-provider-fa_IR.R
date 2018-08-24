@@ -7,9 +7,7 @@ person_formats_female_fa_ir = c(
     '{{first_names_female}} {{last_names}}',
     '{{first_names_female}} {{last_names}}',
     '{{first_names_female}} {{last_names}}',
-    '{{prefixes_female}} {{first_names_female}} {{last_names}}',
-    '{{first_names_female}} {{last_names}} {{suffixes}}',
-    '{{prefixes_female}} {{first_names_female}} {{last_names}} {{suffixes}}'
+    '{{prefixes_female}} {{first_names_female}} {{last_names}}'
 )
 
 person_formats_male_fa_ir = c(
@@ -18,9 +16,7 @@ person_formats_male_fa_ir = c(
     '{{first_names_male}} {{last_names}}',
     '{{first_names_male}} {{last_names}}',
     '{{first_names_male}} {{last_names}}',
-    '{{prefixes_male}} {{first_names_male}} {{last_names}}',
-    '{{first_names_male}} {{last_names}} {{suffixes}}',
-    '{{prefixes_male}} {{first_names_male}} {{last_names}} {{suffixes}}'
+    '{{prefixes_male}} {{first_names_male}} {{last_names}}'
 )
 
 person_formats_fa_ir = c(person_formats_female_fa_ir, person_formats_male_fa_ir)
@@ -353,6 +349,5 @@ person_fa_ir <- list(
   first_names_female = person_first_names_female_fa_ir,
   last_names = person_last_names_fa_ir,
   prefixes_female = person_prefixes_female_fa_ir,
-  prefixes_male = person_prefixes_male_fa_ir,
-  suffixes = ''
+  prefixes_male = person_prefixes_male_fa_ir
 )
