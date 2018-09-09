@@ -161,7 +161,7 @@ job_formats_fr_fr <- c(
   "Chercheur en biologie",
   "Chercheur en biologie du sport",
   "Chercheur en chimie",
-  "Chercheur en physique  ",
+  "Chercheur en physique",
   "Chirurgien",
   "Chirurgien-dentiste",
   "\u00c9clairagiste",
