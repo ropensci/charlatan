@@ -97,7 +97,7 @@
 #' PersonProvider$new(locale = "de_AT")$render()
 #' PersonProvider$new(locale = "cs_CZ")$render()
 #' PersonProvider$new(locale = "bg_BG")$render()
-#' PersonProvider$new(locale = "dk_DK")$render()
+#' PersonProvider$new(locale = "da_DK")$render()
 PersonProvider <- R6::R6Class(
   'PersonProvider',
   inherit = BaseProvider,
@@ -275,7 +275,7 @@ PersonProvider <- R6::R6Class(
 #' @export
 #' @rdname PersonProvider
 person_provider_locales <- c(
-  "bg_BG", "fr_FR", "es_ES", "en_US", "fa_IR", "dk_DK",
+  "bg_BG", "fr_FR", "es_ES", "en_US", "fa_IR", "da_DK",
   "cs_CZ", "de_DE", "fr_CH", "de_AT", "fi_FI", "es_MX",
   "en_GB", "hr_HR", "it_IT", "lv_LV", "ko_KR", "lt_LT",
   "ne_NP", "nl_NL", "no_NO", "pl_PL"

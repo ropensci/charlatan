@@ -108,7 +108,7 @@ PersonProvider$new(locale = "de_DE")$render()
 PersonProvider$new(locale = "de_AT")$render()
 PersonProvider$new(locale = "cs_CZ")$render()
 PersonProvider$new(locale = "bg_BG")$render()
-PersonProvider$new(locale = "dk_DK")$render()
+PersonProvider$new(locale = "da_DK")$render()
 }
 \keyword{datasets}
 \keyword{internal}

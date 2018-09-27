@@ -24,7 +24,7 @@ available_locales <- c(
   'cs_CZ',
   'de_AT',
   'de_DE',
-  'dk_DK',
+  'da_DK',
   'el_GR',
   'en',
   'en_AU',
