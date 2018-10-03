@@ -86,6 +86,7 @@ Collate:
     'internet-provider-hr_HR.R'
     'internet-provider.R'
     'job.R'
+    'jobs-provider-da_DK.R'
     'jobs-provider-en_US.R'
     'jobs-provider-fa_IR.R'
     'jobs-provider-fi_FI.R'
