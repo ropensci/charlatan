@@ -218,7 +218,6 @@ person_first_names_male_da_dk = c(
   "Sebastian",
   "Silas",
   "Simon",
-  "Simon",
   "Sonny",
   "Steen",
   "Stefan",
