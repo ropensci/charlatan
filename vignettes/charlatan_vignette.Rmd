@@ -115,6 +115,12 @@ ch_generate()
 ch_generate('job', 'phone_number', n = 30)
 ```
 
+### with missing data:
+```{r}
+testDFNA <- as.data.frame(lapply(ch_generate(), function(addNA) addNA[sample(c(TRUE, NA), prob = c(0.8, 0.2), size = length(addNA), replace = TRUE)])) #20% of the data should be filled with NAs
+```
+
+
 ## Data types
 
 ### person name
