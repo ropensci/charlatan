@@ -180,3 +180,11 @@ ch_name(50, messy = TRUE)
 
 Right now only suffixes and prefixes for names in `en_US` locale
 are supported. Notice above some variation in prefixes and suffixes.
+
+
+## Missing data
+
+```{r}
+testVec <- MissingDataProvider$new()
+testVec$make_missing(x = mtcars$mpg)  #this command will add in random missing data using the mpg column from the mtcars dataset
+```
