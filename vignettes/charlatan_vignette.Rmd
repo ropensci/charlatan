@@ -186,5 +186,5 @@ are supported. Notice above some variation in prefixes and suffixes.
 
 ```{r}
 testVec <- MissingDataProvider$new()
-testVec$make_missing(x = mtcars$mpg)  #this command will add in random missing data using the mpg column from the mtcars dataset
+testVec$make_missing(x = ch_generate()$name)  
 ```
