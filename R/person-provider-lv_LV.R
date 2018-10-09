@@ -7,7 +7,7 @@ person_formats_lv_lv = c(
   '{{last_names}}, {{first_names}}'
 )
 
-person_first_names_lv_lv = c(
+person_first_names_male_lv_lv = c(
   "\u0100dams",
   "\u0100dolfs",
   "Agris",
@@ -20,7 +20,6 @@ person_first_names_lv_lv = c(
   "Alfr\u0113ds",
   "Andrejs",
   "Andris",
-  "Andre\u0161s",
   "Ansis",
   "Antons",
   "Armands",
@@ -68,9 +67,8 @@ person_first_names_lv_lv = c(
   "Ivars",
   "Ivo",
   "Jakobs",
-  "Janis",
+  "Jans",
   "J\u0101nis",
-  "Jannis",
   "J\u0101zeps",
   "J\u0113kabs",
   "J\u0113kaubs",
@@ -80,7 +78,7 @@ person_first_names_lv_lv = c(
   "Juris",
   "K\u0101rlis",
   "Kaspars",
-  "Konradus",
+  "Konrads",
   "Kristaps",
   "Kristers",
   "Krists",
@@ -89,7 +87,7 @@ person_first_names_lv_lv = c(
   "Laimonis",
   "Lauris",
   "Leons",
-  "Macs",
+  "Maksis",
   "Mareks",
   "M\u0101ris",
   "M\u0101rti\u0146\u0161",
@@ -104,7 +102,7 @@ person_first_names_lv_lv = c(
   "O\u013c\u0123erts",
   "Oskars",
   "Osvalds",
-  "Oto",
+  "Otto",
   "Pauls",
   "P\u0113teris",
   "Raimonds",
@@ -131,7 +129,10 @@ person_first_names_lv_lv = c(
   "Vladislavs",
   "Voldem\u0101rs",
   "Ziedonis",
-  "\u017danis",
+  "\u017danis"
+)
+
+person_first_names_female_lv_lv = c(
   "Agnese",
   "Aiga",
   "Aija",
@@ -150,7 +151,6 @@ person_first_names_lv_lv = c(
   "\u0100rija",
   "Ausma",
   "Austra",
-  "Baba",
   "Baiba",
   "Berta",
   "Biruta",
@@ -237,7 +237,6 @@ person_first_names_lv_lv = c(
   "Marija",
   "M\u0101r\u012bte",
   "Marta",
-  "Ma\u017ea",
   "Milda",
   "Minna",
   "Mirdza",
@@ -257,7 +256,6 @@ person_first_names_lv_lv = c(
   "Sandra",
   "Sanita",
   "Santa",
-  "Sapa",
   "Sarm\u012bte",
   "Silvija",
   "Sintija",
@@ -282,7 +280,7 @@ person_first_names_lv_lv = c(
   "Zigr\u012bda"
 )
 
-person_last_names_lv_lv = c(
+person_last_names_male_lv_lv = c(
   "\u0100bele",
   "\u0100boli\u0146\u0161",
   "\u0100bols",
@@ -363,8 +361,106 @@ person_last_names_lv_lv = c(
   "Zvirbulis"
 )
 
-person_lv_lv <- list(
-  first_names = person_first_names_lv_lv,
-  last_names = person_last_names_lv_lv
+person_last_names_female_lv_lv = c(
+  "\u0100bele",
+  "\u0100boli\u0146a",
+  "\u0100bola",
+  "Alksne",
+  "Apine",
+  "Aps\u012bte",
+  "Auni\u0146a",
+  "Auzi\u0146a",
+  "Avoti\u0146a",
+  "Balode",
+  "Balti\u0146a",
+  "B\u0113rzi\u0146a",
+  "Birzniece",
+  "Bite",
+  "Briede",
+  "Caune",
+  "Celmi\u0146a",
+  "Celma",
+  "C\u012brule",
+  "Dzene",
+  "D\u016bmi\u0146a",
+  "Egl\u012bte",
+  "Jaunzema",
+  "Kal\u0113ja",
+  "Kalni\u0146a",
+  "Ka\u0146epa",
+  "K\u0101rkli\u0146a",
+  "Kauli\u0146a",
+  "K\u013cavi\u0146a",
+  "Krasti\u0146a",
+  "Kr\u0113sli\u0146a",
+  "Krievi\u0146a",
+  "Krieva",
+  "Kr\u016bmi\u0146a",
+  "Kr\u016bze",
+  "Kundzi\u0146a",
+  "L\u0101ce",
+  "Lagzdi\u0146a",
+  "Lapsa",
+  "L\u012bce",
+  "Liepa",
+  "Liepi\u0146a",
+  "Luksti\u0146a",
+  "L\u016bse",
+  "Paegle",
+  "P\u0113rkona",
+  "Podnieka",
+  "Pole",
+  "Priede",
+  "Pried\u012bte",
+  "Puri\u0146a",
+  "Purmala",
+  "Rieksti\u0146a",
+  "Roze",
+  "Roz\u012bte",
+  "Rubene",
+  "Rudz\u012bte",
+  "Saul\u012bte",
+  "Sili\u0146a",
+  "Skuja",
+  "Skuji\u0146a",
+  "Spro\u0123e",
+  "Strazdi\u0146a",
+  "Turi\u0146a",
+  "Vanaga",
+  "V\u012bksna",
+  "Vilci\u0146a",
+  "Vilka",
+  "V\u012btoli\u0146a",
+  "V\u012btola",
+  "Za\u0137e",
+  "Z\u0101l\u012bte",
+  "Zari\u0146a",
+  "Zelti\u0146a",
+  "Ziemele",
+  "Zirne",
+  "Zvaigzne",
+  "Zvirbule"
 )
 
+person_last_names_lv_lv = c(person_last_names_male_lv_lv, person_last_names_female_lv_lv)
+
+person_formats_female_lv_lv = c(
+  '{{first_names_female}} {{last_names_female}}',
+  '{{first_names_female}} {{last_names_female}}'
+)
+
+person_formats_male_lv_lv = c(
+  '{{first_names_male}} {{last_names_male}}',
+  '{{first_names_male}} {{last_names_male}}'
+)
+
+person_formats_lv_lv = c(person_formats_male_lv_lv, person_formats_female_lv_lv)
+person_first_names_lv_lv = c(person_first_names_male_lv_lv, person_first_names_female_lv_lv)
+
+person_lv_lv <- list(
+  first_names = person_first_names_lv_lv,
+  first_names_male = person_first_names_male_lv_lv,
+  first_names_female = person_first_names_female_lv_lv,
+  last_names_male = person_last_names_male_lv_lv,
+  last_names_female = person_last_names_female_lv_lv
+)
