@@ -123,7 +123,7 @@ testDFNA <- as.data.frame(lapply(ch_generate(), function(addNA) addNA[sample(c(T
 ### Using the `MissingDataProvider` class:
 ```{r}
 testVector <- MissingDataProvider$new()
-testVector$make_missing(x = ch_generate()$name)  #this command will add in random missing data using the mpg column from the mtcars dataset
+testVector$make_missing(x = ch_generate()$name)  
 ```
 
 
