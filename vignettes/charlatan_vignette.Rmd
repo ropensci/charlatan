@@ -120,6 +120,12 @@ ch_generate('job', 'phone_number', n = 30)
 testDFNA <- as.data.frame(lapply(ch_generate(), function(addNA) addNA[sample(c(TRUE, NA), prob = c(0.8, 0.2), size = length(addNA), replace = TRUE)])) #20% of the data should be filled with NAs
 ```
 
+### Using the `MissingDataProvider` class:
+```{r}
+testVector <- MissingDataProvider$new()
+testVector$make_missing(x = ch_generate()$name)  #this command will add in random missing data using the mpg column from the mtcars dataset
+```
+
 
 ## Data types
 
