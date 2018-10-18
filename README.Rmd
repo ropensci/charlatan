@@ -179,6 +179,13 @@ ch_credit_card_security_code(10)
 * [Scott Chamberlain](https://github.com/sckott)
 * [Kyle Voytovich](https://github.com/kylevoyto)
 
+## similar art
+
+* [wakefield](https://github.com/trinker/wakefield)
+* [ids](https://github.com/richfitz/ids)
+* [rcorpora](https://github.com/gaborcsardi/rcorpora)
+* [synthpop](https://cran.r-project.org/package=synthpop)
+
 ## Meta
 
 * Please [report any issues or bugs](https://github.com/ropensci/charlatan/issues).
