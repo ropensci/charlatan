@@ -21,7 +21,9 @@ See (<https://github.com/ropensci/charlatan/tree/master/revdep>).
 
 ---
 
-This version xxx
+This version adds a contributor, adds support for Danish (da_DK) 
+locale to the JobsProvider, and makes many improvements for 
+JobsProvider and PersonProvider's.
 
 Thanks!
 Scott Chamberlain
