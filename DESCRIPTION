@@ -11,7 +11,7 @@ Authors@R: c(
         email = "myrmecocystus+r@gmail.com", 
         comment = c(ORCID = "0000-0003-1444-9135")),
       person("Kyle", "Voytovich", role = "aut"),
-      person("Martin", "Pedersen", "Møller Skarbiniks", role = "ctb"),
+      person("Martin", "Pedersen", role = "ctb"),
       person("Brooke", "Anderson", role = "rev",
         comment = "Brooke Anderson reviewed the package for rOpenSci,
         see https://github.com/ropensci/onboarding/issues/94"),
