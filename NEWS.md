@@ -1,3 +1,21 @@
+charlatan 0.3.0
+===============
+
+### NEW FEATURES
+
+* `ch_job()` and `JobsProvider` gains `da_DK` locale support (#94) from @MartinMSPedersen
+
+### MINOR IMPROVEMENTS
+
+* fixes for `PersonProvider` for locale `fr_FR`: fix accents; avoid awkward french names; now can do double first names; removed some duplicate names   (#35) (#83) from @kylevoyto
+* remove leading and trailing whitespace in `JobsProvider` and `PersonProvider` where found; and remove some blank suffixes for `fa_IR` `PersonProvider` (#88) (#91) from @kylevoyto
+* standardization of locale names to always be `xx_XX` where first two letters are lowercase and second two are uppercase (#90) from @kylevoyto
+* change locale for Danish/Denmark from `dk_DK` to `da_DK` to comply with ISO-3166 (#93) from @MartinMSPedersen
+* fix Danish phone number formats to match phone numbers actually used there (#93) from @MartinMSPedersen
+* remove duplicates and sort names across `PersonProvider` for various locales (#96) from @MartinMSPedersen
+* mention similar packages (#72)
+
+
 charlatan 0.2.2
 ===============
 
