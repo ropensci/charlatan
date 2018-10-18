@@ -8,3 +8,4 @@ man-roxygen
 appveyor.yml
 .github
 ^codemeta\.json$
+^revdep$

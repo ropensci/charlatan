@@ -1,3 +1,6 @@
 .Rproj.user
 .Rhistory
 .RData
+revdep/checks.noindex
+revdep/data.sqlite
+revdep/library.noindex

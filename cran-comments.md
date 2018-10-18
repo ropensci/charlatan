@@ -1,7 +1,7 @@
 ## Test environments
 
-* local OS X install, R 3.5.1 RC
-* ubuntu 14.04 (on travis-ci), R 3.5.1 RC
+* local OS X install, R 3.5.1 Patched
+* ubuntu 14.04 (on travis-ci), R 3.5.1
 * win-builder (devel and release)
 
 ## R CMD check results
@@ -16,11 +16,12 @@
 
 ## Reverse dependencies
 
-There are no reverse dependencies.
+I have checked the 1 reverse dependency, and there were no problems.
+See (<https://github.com/ropensci/charlatan/tree/master/revdep>).
 
 ---
 
-This version fixes some examples that should have been run conditionally on presence of packages listed in Suggests.
+This version xxx
 
 Thanks!
 Scott Chamberlain
