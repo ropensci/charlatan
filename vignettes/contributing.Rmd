@@ -1,0 +1,216 @@
+---
+title: "Contributing to charlatan"
+author: "Scott Chamberlain"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    theme: readable
+vignette: >
+  %\VignetteIndexEntry{Contributing to charlatan}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r echo=FALSE}
+knitr::opts_chunk$set(
+  comment = "#>",
+  collapse = TRUE,
+  warning = FALSE,
+  message = FALSE
+)
+```
+
+`charlatan` is a wee bit complex. This vignette aims to help you contribute 
+to the package. 
+
+Let's start with some definitions.
+
+## Definitions
+
+For the purposes of this package:
+
+* **Provider**: a type of data that can be generated in `charlatan`. This may involve
+a single file, more than one file, a single R6 class or many R6 classes. 
+* **Locale**: a locale for our purposes is a specific spoken language that's 
+associated with a specific country. You can have more than one locale for a 
+given language (e.g., `en-US`, `en-GB`). Some fakers won't have any locales, 
+whereas others can have many.
+
+## Communication
+
+It's a good idea to open an issue if you want to add a new provider or locale to 
+an existing provider; it should help make sure there's no duplicated effort and 
+we can help make sure you have the knowledge you need.
+
+## Adding a new provider
+
+Providers are generally first created by making an R6 class. Let's start with a 
+heavily simplified base R6 class that defines some utility methods. We 
+call it `BaseProvider` in `charlatan`, but here we'll call it `MyBaseProvider`
+to avoid confusion.
+
+```{r}
+library(R6)
+MyBaseProvider <- R6::R6Class(
+  'MyBaseProvider',
+  public = list(
+    random_element = function(x) {
+      if (length(x) == 0) return('')
+      if (inherits(x, "character")) if (!any(nzchar(x))) return('')
+      x[sample.int(n = length(x), size = 1)]
+    },
+
+    random_int = function(min = 0, max = 9999, size = 1) {
+      stopifnot(max >= min)
+      num <- max - min + 1
+      sample.int(n = num, size = size, replace = TRUE) + (min - 1)
+    }
+  )
+)
+```
+
+### Providers without locale support
+
+If you don't need to handle locales it becomes simpler:
+
+
+```{r}
+FooBar <- R6::R6Class(
+  'FooBar',
+  inherit = BaseProvider,
+  public = list(
+    integer = function(n = 1, min = 1, max = 1000) {
+      super$random_int(min, max, n)
+    }
+  )
+)
+```
+
+We can create an instance of the `FooBar` class by calling `$new()` on it.
+It only has one method `integer()`, which we can call to get a random 
+integer.
+
+```{r}
+x <- FooBar$new()
+x
+x$integer()
+```
+
+### Providers with locale support
+
+If your provider will need to handle different locales, it gets a bit more
+complex. In the Python library [faker][] from which this package draws 
+inspiration, you can create separate folders for each provider within the 
+Python library. 
+
+However, R doesn't allow this, so instead we categorize different locales for
+each provider within the file names. For example, for the address provider we 
+have files in the package:
+
+- `address-provider.R`
+- `address-provider-en_US.R`
+- `address-provider-en_GB.R`
+
+Where the latter two provides specific data for each locale, and the first 
+file has the `AddressProvider` class that pulls in the locale specific data.
+
+Here, we'll create a very simplified `AddressProvider` class using an 
+example locale file.
+
+```{r}
+library(charlatan)
+file <- system.file("examples", "address-provider-en_US.R", package = "charlatan")
+source(file)
+MyAddressProvider <- R6::R6Class(
+  inherit = MyBaseProvider,
+  'MyAddressProvider',
+  lock_objects = FALSE,
+  public = list(
+    locale = NULL,
+    city_suffixes = NULL,
+
+    initialize = function() {
+      self$locale <- 'en_us'
+      self$city_suffixes <- 
+        eval(parse(text = paste0("city_suffixes_", self$locale)))
+    },
+
+    city_suffix = function() {
+      super$random_element(self$city_suffixes)
+    }
+  )
+)
+```
+
+We can create an instance of the `MyAddressProvider` class by calling `$new()` on it.
+It only has one method `city_suffix()`, which we can call to get a random 
+city suffix.
+
+```{r}
+x <- MyAddressProvider$new()
+x
+x$city_suffix()
+```
+
+#### Adding a new locale
+
+When you want to add a new locale to an existing provider, look in the `R/` folder
+of the package and the locales that are available are in the file names. 
+
+Pick one of the locale files for the provider you're extending, make a duplicate of it 
+and rename the file with your new locale. Then modify the duplicate, copying the 
+format but putting in place the appropriate information for the new locale.
+
+Where the data comes from for the new locale may vary. One easy way to start may be 
+porting over locales in the [faker][] Python library that are not yet in `charlatan`.
+
+If it's a locale for which you can't easily port over from another library, you need
+to get the data from a variety of sources. There are some R based packages that 
+should help:
+
+- [WikidataR][]
+- [humaniformat][]
+- [WikidataQueryServiceR][]
+
+
+## How locale specific data are used in providers
+
+It's a little tricky how this is done. In the `initialize()` block of each main provider 
+file (e.g., `address-provider.R`) we pull in the appropriate locale specific data
+based on the user input locale. For example, here's an abbreviated `initialize` block from
+the `AddressProvider`:
+
+```r
+initialize = function(locale = NULL) {
+  if (!is.null(locale)) {
+    # check global locales
+    super$check_locale(locale)
+    # check address provider locales
+    check_locale_(locale, address_provider_locales)
+    self$locale <- locale
+  } else {
+    self$locale <- 'en_US'
+  }
+
+  self$city_prefixes <- parse_eval("city_prefixes_", self$locale)
+}
+```
+
+A few things to note:
+
+* if no locale is given, we by default use `en_US`
+* we check that the locale given is in the allowed set
+* for each data type, here just city prefixes shown, use the internal function
+`parse_eval()` to pull in the data. Essentially, `parse_eval()` makes the 
+string `city_prefixes_en_US`, then finds that in the package environment
+and `eval()`'s it to bring the data into the R6 object in the `city_prefixes`
+slot. We repeat this for each data type. The result is the user initialized 
+class with locale specific data.
+
+
+[faker]: https://github.com/joke2k/faker
+[humaniformat]: https://github.com/Ironholds/humaniformat
+[WikidataQueryServiceR]: https://cran.r-project.org/package=WikidataQueryServiceR
+

@@ -1,0 +1,20 @@
+city_suffixes_en_us <- c(
+  'town',
+  'ton',
+  'land',
+  'ville',
+  'berg',
+  'burgh',
+  'borough',
+  'bury',
+  'view',
+  'port',
+  'mouth',
+  'stad',
+  'furt',
+  'chester',
+  'fort',
+  'haven',
+  'side',
+  'shire'
+)

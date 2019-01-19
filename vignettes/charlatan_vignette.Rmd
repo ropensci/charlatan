@@ -40,6 +40,10 @@ assign to fake scholarly artifacts
 * Get a set of fake sequences to use to test code/software that uses
 sequence data
 
+## Contributing
+
+See the **Contributing to charlatan** vignette
+
 ## Package API
 
 * Low level interfaces: All of these are `R6` objects that a user can
