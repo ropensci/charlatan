@@ -21,5 +21,9 @@ test_that("InternetProvider works", {
 
   expect_is(aa$image_url(), "character")
   expect_match(aa$image_url(), "http")
+
+  expect_is(aa$slug(), "character")
+  expect_match(aa$slug(), "-")
+  expect_match(aa$slug(), "[A-Za-z]")
 })
 
