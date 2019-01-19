@@ -6,7 +6,11 @@
 #' **Methods**
 #' 
 #' - `lat()` - a latitude value
+#'       - invalid (logical): create invalid values of laltitude. 
+#'       default: `FALSE`
 #' - `lon()` - a longitude value
+#'       - invalid (logical): create invalid values of longitude
+#'       default: `FALSE`
 #' - `position(bbox)` - a position, of form `[longitude,latitude]`
 #'       - bbox: optionally, specify a bounding box for the position
 #'        to be in, of the form `[west,south,east,north]` - checks that the
@@ -20,17 +24,26 @@
 #' z$lat()
 #' z$position()
 #' z$position(bbox = c(-120, 30, -110, 60))
+#' 
+#' dat=replicate(1000, z$lat())
+#' dat2=replicate(1000, z$lat(TRUE))
+#' summary(dat)
+#' summary(dat2)
 CoordinateProvider <- R6::R6Class(
   'CoordinateProvider',
   public = list(
-    lon = function() private$rnd() * 360,
-    lat = function() private$rnd() * 180,
+    lon = function(invalid = FALSE) {
+      private$rnd() * (if (invalid) 380 else 360)
+    },
+    lat = function(invalid = FALSE) {
+      private$rnd() * (if (invalid) 190 else 180)
+    },
 
-    position = function(bbox = NULL) {
+    position = function(bbox = NULL, invalid = FALSE) {
       if (!is.null(bbox)) {
         private$coord_in_bbbox(bbox)
       } else {
-        c(self$lon(), self$lat())
+        c(self$lon(invalid), self$lat(invalid))
       }
     }
   ),

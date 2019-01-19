@@ -11,7 +11,11 @@ CoordinateProvider
 \strong{Methods}
 \itemize{
 \item \code{lat()} - a latitude value
+- invalid (logical): create invalid values of laltitude.
+default: \code{FALSE}
 \item \code{lon()} - a longitude value
+- invalid (logical): create invalid values of longitude
+default: \code{FALSE}
 \item \code{position(bbox)} - a position, of form \code{[longitude,latitude]}
 - bbox: optionally, specify a bounding box for the position
 to be in, of the form \code{[west,south,east,north]} - checks that the
@@ -24,5 +28,10 @@ z$lon()
 z$lat()
 z$position()
 z$position(bbox = c(-120, 30, -110, 60))
+
+dat=replicate(1000, z$lat())
+dat2=replicate(1000, z$lat(TRUE))
+summary(dat)
+summary(dat2)
 }
 \keyword{internal}

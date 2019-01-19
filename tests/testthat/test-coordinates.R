@@ -22,6 +22,17 @@ test_that("CoordinateProvider works", {
   expect_lte(abs(aa$lon()), 180)
 })
 
+test_that("CoordinateProvider: invalid", {
+  aa <- CoordinateProvider$new()
+
+  lat_dat <- replicate(1000, aa$lat(invalid = TRUE))
+  expect_gt(max(lat_dat), 90)
+  expect_lt(min(lat_dat), -90)
+
+  lon_dat <- replicate(1000, aa$lon(invalid = TRUE))
+  expect_gt(max(lon_dat), 180)
+  expect_lt(min(lon_dat), -180)
+})
 
 context("ch_lon fxn")
 test_that("ch_lon works", {
