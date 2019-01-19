@@ -53,6 +53,7 @@ x$locale
 
 # uri/url/tld/etc.
 x$tld()
+x$slug()
 x$domain_word()
 x$domain_name()
 x$domain_name(levels = 2)

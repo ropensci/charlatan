@@ -42,6 +42,7 @@
 #'
 #' # uri/url/tld/etc.
 #' x$tld()
+#' x$slug()
 #' x$domain_word()
 #' x$domain_name()
 #' x$domain_name(levels = 2)
@@ -321,14 +322,14 @@ InternetProvider <- R6::R6Class(
       # return address
     },
 
-#     def ipv6(self, network=False):
-#         """Produce a random IPv6 address or network with a valid CIDR"""
-#         address = str(ip_address(self.generator.random.randint(
-#             2 ** IPV4LENGTH, (2 ** IPV6LENGTH) - 1)))
-#         if network:
-#             address += '/' + str(self.generator.random.randint(0, IPV6LENGTH))
-#             address = str(ip_network(address, strict=False))
-#         return address
+    # def ipv6(self, network=False):
+    #     """Produce a random IPv6 address or network with a valid CIDR"""
+    #     address = str(ip_address(self.generator.random.randint(
+    #         2 ** IPV4LENGTH, (2 ** IPV6LENGTH) - 1)))
+    #     if network:
+    #         address += '/' + str(self.generator.random.randint(0, IPV6LENGTH))
+    #         address = str(ip_network(address, strict=False))
+    #     return address
 
     mac_address = function() {
       mac = replicate(7, super$random_int(0, 255))
@@ -363,11 +364,11 @@ InternetProvider <- R6::R6Class(
       tolower(self$to_ascii(whisker::whisker.render(pattern, data = dat)))
     },
 
-    # FIXME: need to do lorem provider first, not made yet
-    # slug = function(value = NULL) {
-    #   if (is.null(value)) value <- LoremProvider$new()$text(20)
-    #   return(value)
-    # }
+    slug = function(value = NULL) {
+      if (is.null(value)) 
+        value <- paste0(LoremProvider$new()$words(), collapse = "-")
+      return(value)
+    },
 
     # Returns URL to placeholder image - Example: http://placehold.it/640x480
     image_url = function(width = NULL, height = NULL) {

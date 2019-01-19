@@ -38,7 +38,7 @@ Suggests:
     rmarkdown,
     iptools,
     stringi
-RoxygenNote: 6.1.0
+RoxygenNote: 6.1.1
 Collate: 
     'address-provider-en_GB.R'
     'address-provider-en_US.R'
