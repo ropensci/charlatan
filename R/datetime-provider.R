@@ -264,7 +264,7 @@ dt_countries <- list(
 #' z$date_time()
 #' z$year()
 #' z$iso8601("1932-02-12 05:32:12")
-#' z$iso8601("January 4, 1981")
+#' # z$iso8601("January 4, 1981")
 #'
 #' # date time between a range of dates
 #' (start_date <- Sys.time() - 604800L)
