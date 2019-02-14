@@ -9,17 +9,47 @@ DateTimeProvider
 }
 \details{
 \strong{Methods}
-\itemize{
-\item \code{unix_time()} - generate a unix time
-\item \code{date(pattern)} - generate a date
-\item \code{date_time(tzinfo)} - generate a date time
-\item \code{date_time_ad(tzinfo)} - generate a date time
-\item \code{iso8601()} - generate a iso8601 format date - NOT WORKING YET
-\item \code{year()} - generate a year
-\item \code{century()} - generate a century
-\item \code{timezone()} - generate a timezone
-\item \code{date_time_between(start_date, end_date, tzinfo)} - generate a
-datetime between two dates
+\describe{
+\item{\code{unix_time(start_date = NULL, end_date = "now")}}{
+Get a timestamp between January 1, 1970 and now, unless passed
+explicit \code{start_date} or \code{end_date} values
+param \code{start_date}: start date, a valid date format
+param \code{end_date}: start date, a valid date format, default: now
+ref: https://en.wikipedia.org/wiki/Unix_time
+}
+\item{\code{date(pattern)}}{
+Generate a date between January 1, 1970 and now, with given pattern
+param \code{pattern}: date pattern, default: \code{\%Y-\%m-\%d}
+}
+\item{\code{date_time(tzinfo = NULL)}}{
+Generate a date time between January 1, 1970 and now
+param \code{tzinfo}: timezone, see \link{timezone}
+}
+\item{\code{date_time_fromtimestamp(timestamp, tzinfo = NULL)}}{
+Generate a iso8601 format date
+param \code{timestamp}: a timestamp
+param \code{tzinfo}: timezone, see \link{timezone}
+ref: https://en.wikipedia.org/wiki/Unix_time
+}
+\item{\code{iso8601(tzinfo = NULL)}}{
+Generate a iso8601 format date
+param \code{tzinfo}: timezone, see \link{timezone}
+}
+\item{\code{year()}}{
+generate a year
+}
+\item{\code{century()}}{
+generate a century
+}
+\item{\code{timezone()}}{
+generate a timezone
+}
+\item{\code{date_time_between(start_date, end_date = "now", tzinfo = NULL)}}{
+Generate a date time based on a random date between two given dates
+param \code{start_date}: start date, a valid date format
+param \code{end_date}: start date, a valid date format, default: now
+param \code{tzinfo}: timezone, see \link{timezone}
+}
 }
 }
 \examples{
@@ -32,6 +62,8 @@ z$unix_time()
 z$date("\%Y-\%M-\%d")
 z$date_time()
 z$year()
+z$iso8601("1932-02-12 05:32:12")
+z$iso8601("January 4, 1981")
 
 # date time between a range of dates
 (start_date <- Sys.time() - 604800L)

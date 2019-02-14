@@ -201,289 +201,6 @@ dt_countries <- list(
     list(c('Europe/London'), 'code' = 'GB', 'continent' = 'Europe', 'name' = 'United Kingdom', 'capital' = 'London')
 )
 
-# def datetime_to_timestamp(dt):
-#     if getattr(dt, 'tzinfo', None) is not None:
-#         dt = dt.astimezone(tzlocal())
-#     return mktime(dt.timetuple())
-#
-#
-# timedelta_pattern = r''
-# for name, sym in [('years', 'y'), ('weeks', 'w'), ('days', 'd'), ('hours', 'h'), ('minutes', 'm'), ('seconds', 's')]:
-#     timedelta_pattern += r'((?P<{0}>(?:\+|-)\d+?){1})?'.format(name, sym)
-
-
-# class Provider(BaseProvider):
-#     regex = re.compile(timedelta_pattern)
-
-#     @classmethod
-#     def unix_time(cls):
-#         """
-#         Get a timestamp between January 1, 1970 and now
-#         :example 1061306726
-#         """
-#         return random.randint(0, int(time()))
-
-#     @classmethod
-#     def time_delta(cls):
-#         """
-#         Get a timedelta object
-#         """
-#         ts = random.randint(0, int(time()))
-#         return timedelta(seconds=ts)
-
-#     @classmethod
-#     def date_time(cls, tzinfo=None):
-#         """
-#         Get a datetime object for a date between January 1, 1970 and now
-#         :param tzinfo: timezone, instance of datetime.tzinfo subclass
-#         :example DateTime('2005-08-16 20:39:21')
-#         :return datetime
-#         """
-#         return datetime.fromtimestamp(cls.unix_time(), tzinfo)
-
-#     @classmethod
-#     def date_time_ad(cls, tzinfo=None):
-#         """
-#         Get a datetime object for a date between January 1, 001 and now
-#         :param tzinfo: timezone, instance of datetime.tzinfo subclass
-#         :example DateTime('1265-03-22 21:15:52')
-#         :return datetime
-#         """
-#         ts = random.randint(-62135600400, int(time()))
-#         # NOTE: using datetime.fromtimestamp(ts) directly will raise
-#         #       a "ValueError: timestamp out of range for platform time_t"
-#         #       on some platforms due to system C functions;
-#         #       see http://stackoverflow.com/a/10588133/2315612
-#         return datetime.fromtimestamp(0, tzinfo) + timedelta(seconds=ts)
-
-#     @classmethod
-#     def iso8601(cls, tzinfo=None):
-#         """
-#         :param tzinfo: timezone, instance of datetime.tzinfo subclass
-#         :example '2003-10-21T16:05:52+0000'
-#         """
-#         return cls.date_time(tzinfo).isoformat()
-
-#     @classmethod
-#     def date(cls, pattern='%Y-%m-%d'):
-#         """
-#         Get a date string between January 1, 1970 and now
-#         :param pattern format
-#         :example '2008-11-27'
-#         """
-#         return cls.date_time().strftime(pattern)
-
-#     @classmethod
-#     def date_object(cls):
-#         """
-#         Get a date object between January 1, 1970 and now
-#         :example datetime.date(2016, 9, 20)
-#         """
-#         return cls.date_time().date()
-
-#     @classmethod
-#     def time(cls, pattern='%H:%M:%S'):
-#         """
-#         Get a time string (24h format by default)
-#         :param pattern format
-#         :example '15:02:34'
-#         """
-#         return cls.date_time().time().strftime(pattern)
-
-#     @classmethod
-#     def time_object(cls):
-#         """
-#         Get a time object
-#         :example datetime.time(15, 56, 56, 772876)
-#         """
-#         return cls.date_time().time()
-
-#     @classmethod
-#     def _parse_date_time(cls, text, tzinfo=None):
-#         if isinstance(text, (datetime, date, real_datetime, real_date)):
-#             return datetime_to_timestamp(text)
-#         now = datetime.now(tzinfo)
-#         if isinstance(text, timedelta):
-#             return datetime_to_timestamp(now - text)
-#         if is_string(text):
-#             if text == 'now':
-#                 return datetime_to_timestamp(datetime.now(tzinfo))
-#             parts = cls.regex.match(text)
-#             if not parts:
-#                 return
-#             parts = parts.groupdict()
-#             time_params = {}
-#             for (name, param) in parts.items():
-#                 if param:
-#                     time_params[name] = int(param)
-
-#             if 'years' in time_params:
-#                 if 'days' not in time_params:
-#                     time_params['days'] = 0
-#                 time_params['days'] += 365.24 * time_params.pop('years')
-
-#             return datetime_to_timestamp(now + timedelta(**time_params))
-#         if isinstance(text, int):
-#             return datetime_to_timestamp(now + timedelta(text))
-#         raise ValueError("Invalid format for date '{0}'".format(text))
-
-#     @classmethod
-#     def date_time_between(cls, start_date='-30y', end_date='now', tzinfo=None):
-#         """
-#         Get a DateTime object based on a random date between two given dates.
-#         Accepts date strings that can be recognized by strtotime().
-
-#         :param start_date Defaults to 30 years ago
-#         :param end_date Defaults to "now"
-#         :param tzinfo: timezone, instance of datetime.tzinfo subclass
-#         :example DateTime('1999-02-02 11:42:52')
-#         :return DateTime
-#         """
-#         start_date = cls._parse_date_time(start_date)
-#         end_date = cls._parse_date_time(end_date)
-#         timestamp = random.randint(start_date, end_date)
-#         return datetime.fromtimestamp(timestamp, tzinfo)
-
-#     @classmethod
-#     def date_time_between_dates(cls, datetime_start=None, datetime_end=None, tzinfo=None):
-#         """
-#         Takes two DateTime objects and returns a random date between the two given dates.
-#         Accepts DateTime objects.
-
-#         :param datetime_start DateTime
-#         :param datetime_end DateTime
-#         :param tzinfo: timezone, instance of datetime.tzinfo subclass
-#         :example DateTime('1999-02-02 11:42:52')
-#         :return DateTime
-#         """
-#         if datetime_start is None:
-#             datetime_start = datetime.now(tzinfo)
-
-#         if datetime_end is None:
-#             datetime_end = datetime.now(tzinfo)
-
-#         timestamp = random.randint(
-#             datetime_to_timestamp(datetime_start),
-#             datetime_to_timestamp(datetime_end),
-#         )
-#         return datetime.fromtimestamp(timestamp, tzinfo)
-
-#     @classmethod
-#     def date_time_this_century(cls, before_now=True, after_now=False, tzinfo=None):
-#         """
-#         Gets a DateTime object for the current century.
-
-#         :param before_now: include days in current century before today
-#         :param after_now: include days in current century after today
-#         :param tzinfo: timezone, instance of datetime.tzinfo subclass
-#         :example DateTime('2012-04-04 11:02:02')
-#         :return DateTime
-#         """
-#         now = datetime.now(tzinfo)
-#         this_century_start = datetime(now.year - (now.year % 100), 1, 1, tzinfo=tzinfo)
-#         next_century_start = datetime(this_century_start.year + 100, 1, 1, tzinfo=tzinfo)
-
-#         if before_now and after_now:
-#             return cls.date_time_between_dates(this_century_start, next_century_start, tzinfo)
-#         elif not before_now and after_now:
-#             return cls.date_time_between_dates(now, next_century_start, tzinfo)
-#         elif not after_now and before_now:
-#             return cls.date_time_between_dates(this_century_start, now, tzinfo)
-#         else:
-#             return now
-
-#     @classmethod
-#     def date_time_this_decade(cls, before_now=True, after_now=False, tzinfo=None):
-#         """
-#         Gets a DateTime object for the decade year.
-
-#         :param before_now: include days in current decade before today
-#         :param after_now: include days in current decade after today
-#         :param tzinfo: timezone, instance of datetime.tzinfo subclass
-#         :example DateTime('2012-04-04 11:02:02')
-#         :return DateTime
-#         """
-#         now = datetime.now(tzinfo)
-#         this_decade_start = datetime(now.year - (now.year % 10), 1, 1, tzinfo=tzinfo)
-#         next_decade_start = datetime(this_decade_start.year + 10, 1, 1, tzinfo=tzinfo)
-
-#         if before_now and after_now:
-#             return cls.date_time_between_dates(this_decade_start, next_decade_start, tzinfo)
-#         elif not before_now and after_now:
-#             return cls.date_time_between_dates(now, next_decade_start, tzinfo)
-#         elif not after_now and before_now:
-#             return cls.date_time_between_dates(this_decade_start, now, tzinfo)
-#         else:
-#             return now
-
-#     @classmethod
-#     def date_time_this_year(cls, before_now=True, after_now=False, tzinfo=None):
-#         """
-#         Gets a DateTime object for the current year.
-
-#         :param before_now: include days in current year before today
-#         :param after_now: include days in current year after today
-#         :param tzinfo: timezone, instance of datetime.tzinfo subclass
-#         :example DateTime('2012-04-04 11:02:02')
-#         :return DateTime
-#         """
-#         now = datetime.now(tzinfo)
-#         this_year_start = now.replace(month=1, day=1, hour=0, minute=0, second=0, microsecond=0)
-#         next_year_start = datetime(now.year + 1, 1, 1, tzinfo=tzinfo)
-
-#         if before_now and after_now:
-#             return cls.date_time_between_dates(this_year_start, next_year_start, tzinfo)
-#         elif not before_now and after_now:
-#             return cls.date_time_between_dates(now, next_year_start, tzinfo)
-#         elif not after_now and before_now:
-#             return cls.date_time_between_dates(this_year_start, now, tzinfo)
-#         else:
-#             return now
-
-#     @classmethod
-#     def date_time_this_month(cls, before_now=True, after_now=False, tzinfo=None):
-#         """
-#         Gets a DateTime object for the current month.
-
-#         :param before_now: include days in current month before today
-#         :param after_now: include days in current month after today
-#         :param tzinfo: timezone, instance of datetime.tzinfo subclass
-#         :example DateTime('2012-04-04 11:02:02')
-#         :return DateTime
-#         """
-#         now = datetime.now(tzinfo)
-#         this_month_start = now.replace(day=1, hour=0, minute=0, second=0, microsecond=0)
-
-#         next_month_start = this_month_start + relativedelta.relativedelta(months=1)
-#         if before_now and after_now:
-#             return cls.date_time_between_dates(this_month_start, next_month_start, tzinfo)
-#         elif not before_now and after_now:
-#             return cls.date_time_between_dates(now, next_month_start, tzinfo)
-#         elif not after_now and before_now:
-#             return cls.date_time_between_dates(this_month_start, now, tzinfo)
-#         else:
-#             return now
-
-#     @classmethod
-#     def am_pm(cls):
-#         return cls.date('%p')
-
-#     @classmethod
-#     def day_of_month(cls):
-#         return cls.date('%d')
-
-#     @classmethod
-#     def day_of_week(cls):
-#         return cls.date('%A')
-
-#     @classmethod
-#     def month(cls):
-#         return cls.date('%m')
-
-#     @classmethod
-#     def month_name(cls):
-#         return cls.date('%B')
-
 #' DateTimeProvider
 #'
 #' @export
@@ -491,17 +208,48 @@ dt_countries <- list(
 #' @keywords internal
 #' @details
 #' **Methods**
-#'
-#' - `unix_time()` - generate a unix time
-#' - `date(pattern)` - generate a date
-#' - `date_time(tzinfo)` - generate a date time
-#' - `date_time_ad(tzinfo)` - generate a date time
-#' - `iso8601()` - generate a iso8601 format date - NOT WORKING YET
-#' - `year()` - generate a year
-#' - `century()` - generate a century
-#' - `timezone()` - generate a timezone
-#' - `date_time_between(start_date, end_date, tzinfo)` - generate a
-#'    datetime between two dates
+#'   \describe{
+#'     \item{`unix_time(start_date = NULL, end_date = "now")`}{
+#'       Get a timestamp between January 1, 1970 and now, unless passed
+#'       explicit `start_date` or `end_date` values
+#'       param `start_date`: start date, a valid date format
+#'       param `end_date`: start date, a valid date format, default: now
+#'       ref: https://en.wikipedia.org/wiki/Unix_time
+#'     }
+#'     \item{`date(pattern)`}{
+#'       Generate a date between January 1, 1970 and now, with given pattern
+#'       param `pattern`: date pattern, default: `%Y-%m-%d`
+#'     }
+#'     \item{`date_time(tzinfo = NULL)`}{
+#'       Generate a date time between January 1, 1970 and now
+#'       param `tzinfo`: timezone, see [timezone]
+#'     }
+#'     \item{`date_time_fromtimestamp(timestamp, tzinfo = NULL)`}{
+#'       Generate a iso8601 format date
+#'       param `timestamp`: a timestamp
+#'       param `tzinfo`: timezone, see [timezone]
+#'       ref: https://en.wikipedia.org/wiki/Unix_time
+#'     }
+#'     \item{`iso8601(tzinfo = NULL)`}{
+#'       Generate a iso8601 format date
+#'       param `tzinfo`: timezone, see [timezone]
+#'     }
+#'     \item{`year()`}{
+#'       generate a year
+#'     }
+#'     \item{`century()`}{
+#'       generate a century
+#'     }
+#'     \item{`timezone()`}{
+#'       generate a timezone
+#'     }
+#'     \item{`date_time_between(start_date, end_date = "now", tzinfo = NULL)`}{
+#'       Generate a date time based on a random date between two given dates
+#'       param `start_date`: start date, a valid date format
+#'       param `end_date`: start date, a valid date format, default: now
+#'       param `tzinfo`: timezone, see [timezone]
+#'     }
+#'   }
 #'
 #' @format NULL
 #' @usage NULL
@@ -515,6 +263,8 @@ dt_countries <- list(
 #' z$date("%Y-%M-%d")
 #' z$date_time()
 #' z$year()
+#' z$iso8601("1932-02-12 05:32:12")
+#' z$iso8601("January 4, 1981")
 #'
 #' # date time between a range of dates
 #' (start_date <- Sys.time() - 604800L)
@@ -524,18 +274,16 @@ dt_countries <- list(
 #' z$date_time_between("1900-01-01", "1900-12-31")
 DateTimeProvider <- R6::R6Class(
   inherit = BaseProvider,
-  'DateTimeProvider',
+  "DateTimeProvider",
   public = list(
     centuries = dt_centuries,
     countries = dt_countries,
 
-    unix_time = function() {
-      #super$random_int(0, as.integer(as.numeric(as.POSIXct(Sys.time()))))
-      sample.int(as.integer(as.numeric(as.POSIXct(Sys.time()))), 1) *
-        sample(c(-1, 1), size = 1)
+    unix_time = function(start_date = NULL, end_date = "now") {
+      private$timestamp_between(start_date, end_date)
     },
 
-    date = function(pattern) {
+    date = function(pattern = "%Y-%m-%d") {
       strftime(self$date_time(), pattern)
     },
 
@@ -543,22 +291,13 @@ DateTimeProvider <- R6::R6Class(
       as.POSIXct(self$unix_time(), origin = "1970-01-01", tz = tzinfo)
     },
 
-    date_time_ad = function(tzinfo = NULL) {
-      # Get a datetime object for a date between January 1, 001 and now
-      # :param tzinfo: timezone, instance of datetime.tzinfo subclass
-      # :example DateTime('1265-03-22 21:15:52')
-      #ts <- super$random_int(-62135600400, as.integer(as.numeric(as.POSIXct(Sys.time()))))
-      as.POSIXct(self$unix_time(), origin = "1970-01-01", tz = tzinfo)
-    },
-
     date_time_fromtimestamp = function(timestamp, tzinfo = NULL) {
       as.POSIXct(timestamp, origin = "1970-01-01", tz = tzinfo)
     },
 
-    # FIXME - not working
-    # iso8601 = function(tzinfo = NULL) {
-    #   self$date_time(tzinfo)$isoformat()
-    # },
+    iso8601 = function(date, tzinfo = NULL) {
+      strftime(date, format = "%F", tz = tzinfo %||% "")
+    },
 
     year = function() {
       self$date("%Y")
@@ -572,18 +311,8 @@ DateTimeProvider <- R6::R6Class(
       super$random_element(self$countries)
     },
 
-    date_time_between = function(start_date, end_date = 'now', tzinfo = NULL) {
-      # Get a DateTime object based on a random date between two given dates.
-      # Accepts date strings that can be recognized by strtotime().
-
-      # :param start_date Defaults to 30 years ago
-      # :param end_date Defaults to "now"
-      # :param tzinfo: timezone, instance of datetime.tzinfo subclass
-      # :example date_time_between('1999-02-02 11:42:52 EST')
-      # :return unix timestamp
-      start_ts = private$date2timestamp(start_date)
-      end_ts = private$date2timestamp(end_date)
-      timestamp = super$random_int(start_ts, end_ts)
+    date_time_between = function(start_date, end_date = "now", tzinfo = NULL) {
+      timestamp <- private$timestamp_between(start_date, end_date)
       return(self$date_time_fromtimestamp(timestamp, tzinfo))
     }
   ),
@@ -592,6 +321,17 @@ DateTimeProvider <- R6::R6Class(
     date2timestamp = function(date) {
       if (as.character(date) == "now") date <- Sys.time()
       as.numeric(as.POSIXct(date))
+    },
+    timestamp_between = function(start_date, end_date) {
+      if (is.null(start_date)) start_date <- "1970-01-01"
+      start_ts = private$date2timestamp(start_date)
+      end_ts = private$date2timestamp(end_date)
+      return(super$random_int(start_ts, end_ts))
     }
+    # parse_date = function(date) {
+    #   parsed <- parsedate::parse_date(date)
+    #   if (is.na(parsed)) stop("Invalid format for date: ", date)
+    #   return(parsed)
+    # }
   )
 )

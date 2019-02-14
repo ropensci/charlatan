@@ -54,3 +54,5 @@ check4pkg <- function(x) {
     invisible(TRUE)
   }
 }
+
+`%||%` <- function(x, y) if (is.null(x)) y else x
