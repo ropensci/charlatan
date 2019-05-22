@@ -14,6 +14,8 @@ MiscProvider
 Linux Mint
 \item \code{locale()} - locale
 \item \code{language_code()} - language code
+\item \code{boolean()} - a boolean, \code{TRUE} or \code{FALSE}
+\item \code{null_boolean()} - a boolean, \code{TRUE} or \code{FALSE}, or NULL
 }
 }
 \examples{
@@ -21,5 +23,7 @@ Linux Mint
 x$language_locale_codes
 x$language_code()
 x$locale()
+x$boolean()
+x$null_boolean()
 }
 \keyword{internal}
