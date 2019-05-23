@@ -79,7 +79,7 @@ If you don't need to handle locales it becomes simpler:
 ```{r}
 FooBar <- R6::R6Class(
   'FooBar',
-  inherit = BaseProvider,
+  inherit = charlatan::BaseProvider,
   public = list(
     integer = function(n = 1, min = 1, max = 1000) {
       super$random_int(min, max, n)
