@@ -20,7 +20,8 @@ Authors@R: c(
         see https://github.com/ropensci/onboarding/issues/94")
     )
 License: MIT + file LICENSE
-URL: https://github.com/ropensci/charlatan
+URL: https://docs.ropensci.org/charlatan (website)
+    https://github.com/ropensci/charlatan
 BugReports: https://github.com/ropensci/charlatan/issues
 LazyData: true
 Encoding: UTF-8
