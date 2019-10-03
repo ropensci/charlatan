@@ -102,6 +102,64 @@ phone_number_formats_es_mx = c(
   '###.###.####x#####'
 )
 
+area_codes_formats_es_PE = c(
+  #'1',  # Lima / Callao -- special case, phone numbers here have 7 digits
+  '41', # Amazonas
+  '43', # Ancash
+  '83', # Apurímac
+  '54', # Arequipa
+  '66', # Ayacucho
+  '76', # Cajamarca
+  '84', # Cusco
+  '67', # Huancavelica
+  '62', # Huánuco
+  '56', # Ica
+  '64', # Junín
+  '44', # La Libertad
+  '74', # Lambayeque
+  '65', # Loreto
+  '82', # Madre de Dios
+  '53', # Moquegua
+  '63', # Pasco
+  '73', # Piura
+  '51', # Puno
+  '42', # San Martín
+  '52', # Tacna
+  '72', # Tumbes
+  '61'  # Ucayali
+)
+
+phone_number_formats_es_PE = c(
+  # landline in Lima / Callao
+  '+51-1-#######',
+  '+51-1-###-####',
+  '1-#######',
+  '1-###-####',
+  '#######',
+  '###-####',
+  # national long distance prefix, also for cellphone to landline
+  '0-1-#######',
+  '0-1-###-####',
+  '01-#######',
+  '01-###-####',
+  # landline in the rest of the country
+  '+51-{{area_code}}-######',
+  '+51-{{area_code}}-###-###',
+  '{{area_code}}-######',
+  '{{area_code}}-###-###',
+  # national long distance prefix, also for cellphone to landline
+  '0-{{area_code}}-######',
+  '0-{{area_code}}-###-###',
+  '0{{area_code}}-######',
+  '0{{area_code}}-###-###',
+  # cellphone numbers always start with '9'
+  '+51-9########',
+  '+51-9##-###-###',
+  '9########',
+  '9##-###-###'
+)
+
+
 phone_number_formats_en_gb = c(
   '+44(0)##########',
   '+44(0)#### ######',
@@ -109,11 +167,13 @@ phone_number_formats_en_gb = c(
   '+44(0)#### #####',
   '0##########',
   '0#########',
+
   '0#### ######',
   '0#### #####',
   '(0####) ######',
   '(0####) #####'
 )
+
 
 phone_number_formats_en_ca = c(
   '%##-###-####',
@@ -188,7 +248,7 @@ area_codes_formats_en_nz = c(
   '7',  # Central North Island
   '9'   # Auckland
 )
- 
+
 phone_number_formats_da_dk = c(
   '+45########',
   '+45 ## ## ## ##',
