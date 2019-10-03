@@ -102,7 +102,7 @@ phone_number_formats_es_mx = c(
   '###.###.####x#####'
 )
 
-area_codes_formats_es_PE = c(
+area_codes_formats_es_pe = c(
   #'1',  # Lima / Callao -- special case, phone numbers here have 7 digits
   '41', # Amazonas
   '43', # Ancash
@@ -129,7 +129,7 @@ area_codes_formats_es_PE = c(
   '61'  # Ucayali
 )
 
-phone_number_formats_es_PE = c(
+phone_number_formats_es_pe = c(
   # landline in Lima / Callao
   '+51-1-#######',
   '+51-1-###-####',
