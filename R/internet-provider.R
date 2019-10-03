@@ -109,6 +109,10 @@
 #' x$url()
 #' x$user_name()
 #' x$email()
+#' 
+#' (x <- InternetProvider$new(locale = "en_NZ"))
+#' x$free_email_domain()
+#' x$tld()
 #'
 #' (x <- InternetProvider$new(locale = "fa_IR"))
 #' x$url()
@@ -397,6 +401,6 @@ InternetProvider <- R6::R6Class(
 #' @export
 #' @rdname InternetProvider
 internet_provider_locales <- c(
-  "en_US", "en_AU", "de_DE", "bg_BG", "cs_CZ", "fa_IR", "fr_FR",
+  "en_US", "en_AU", "en_NZ", "de_DE", "bg_BG", "cs_CZ", "fa_IR", "fr_FR",
   "hr_HR"
 )

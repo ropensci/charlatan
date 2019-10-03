@@ -45,6 +45,16 @@
 #' z$postcode
 #' z$postcode()
 #' z$street_name()
+#' 
+#' # en_NZ
+#' (z <- AddressProvider$new('en_NZ'))
+#' z$locale
+#' z$street_name()
+#' 
+#' # es_ES
+#' (z <- AddressProvider$new('es_ES'))
+#' z$locale
+#' z$street_name()
 AddressProvider <- R6::R6Class(
   inherit = BaseProvider,
   'AddressProvider',
@@ -138,6 +148,11 @@ AddressProvider <- R6::R6Class(
         last_name = pp$last_name(),
         street_suffix = super$random_element(self$street_suffixes)
       )
+      if (self$locale == "en_NZ") {
+        dat$te_reo_first <- super$random_element(self$locale_data$te_reo_first)
+        dat$te_reo_part <- super$random_element(self$locale_data$te_reo_parts)
+        dat$te_reo_ending <- super$random_element(self$locale_data$te_reo_ending)
+      }
       whisker::whisker.render(pattern, data = dat)
     },
 
@@ -213,5 +228,5 @@ AddressProvider <- R6::R6Class(
 #' @export
 #' @rdname AddressProvider
 address_provider_locales <- c(
-  "en_US", "en_GB"
+  "en_US", "en_GB", "en_NZ", "es_ES"
 )

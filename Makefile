@@ -27,5 +27,8 @@ README.md: README.Rmd
 	sed -i.bak 's/[[:space:]]*$$//' README.md
 	rm -f $@.bak
 
+locales_update:
+	${RSCRIPT} -e "devtools::load_all(); z=data.table::setDF(data.table::rbindlist(lapply(available_locales, stringi::stri_locale_info))); save(z, version=2, file='data/available_locales_df.rda')"
+
 # No real targets!
 .PHONY: all test doc install	

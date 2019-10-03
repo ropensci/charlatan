@@ -88,6 +88,14 @@
 #' z$first_name_male()
 #' z$last_name()
 #' z$prefix()
+#' 
+#' z <- PersonProvider$new(locale = "en_NZ")
+#' z$locale
+#' z$render()
+#' z$first_name()
+#' z$first_name_female()
+#' z$first_name_male()
+#' z$last_name()
 #'
 #' PersonProvider$new(locale = "fr_CH")$render()
 #' PersonProvider$new(locale = "fi_FI")$render()
@@ -155,22 +163,34 @@ PersonProvider <- R6::R6Class(
 
 
     first_name = function() {
-      super$random_element(self$person$first_names)
-    },
-
-    first_name_female = function() {
-      if ("first_names_female" %in% names(self$person)) {
-        super$random_element(self$person$first_names_female)
+      if (has_probs(self$person$first_names)) {
+        super$random_element_prob(self$person$first_names)
       } else {
         super$random_element(self$person$first_names)
       }
     },
 
+    first_name_female = function() {
+      if ("first_names_female" %in% names(self$person)) {
+        if (has_probs(self$person$first_names_female)) {
+          super$random_element_prob(self$person$first_names_female)
+        } else {
+          super$random_element(self$person$first_names_female)
+        }
+      } else {
+        self$first_name()
+      }
+    },
+
     first_name_male = function() {
       if ("first_names_male" %in% names(self$person)) {
-        super$random_element(self$person$first_names_male)
+        if (has_probs(self$person$first_names_male)) {
+          super$random_element_prob(self$person$first_names_male)
+        } else {
+          super$random_element(self$person$first_names_male)
+        }
       } else {
-        super$random_element(self$person$first_names)
+        self$first_name()
       }
     },
 
@@ -278,5 +298,5 @@ person_provider_locales <- c(
   "bg_BG", "fr_FR", "es_ES", "en_US", "fa_IR", "da_DK",
   "cs_CZ", "de_DE", "fr_CH", "de_AT", "fi_FI", "es_MX",
   "en_GB", "hr_HR", "it_IT", "lv_LV", "ko_KR", "lt_LT",
-  "ne_NP", "nl_NL", "no_NO", "pl_PL"
+  "ne_NP", "nl_NL", "no_NO", "pl_PL", "en_NZ"
 )

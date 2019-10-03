@@ -5,7 +5,7 @@
 \alias{AddressProvider}
 \alias{address_provider_locales}
 \title{AddressProvider}
-\format{An object of class \code{character} of length 2.}
+\format{An object of class \code{character} of length 4.}
 \usage{
 address_provider_locales
 }
@@ -53,6 +53,16 @@ z$locale_data
 z$locale_data$postcode_sets
 z$postcode
 z$postcode()
+z$street_name()
+
+# en_NZ
+(z <- AddressProvider$new('en_NZ'))
+z$locale
+z$street_name()
+
+# es_ES
+(z <- AddressProvider$new('es_ES'))
+z$locale
 z$street_name()
 }
 \keyword{datasets}

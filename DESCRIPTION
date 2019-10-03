@@ -5,7 +5,7 @@ Description: Make fake data, supporting addresses, person names, dates,
     times, colors, coordinates, currencies, digital object identifiers
     ('DOIs'), jobs, phone numbers, 'DNA' sequences, doubles and integers
     from distributions and within a range.
-Version: 0.3.1.9110
+Version: 0.3.2.9110
 Authors@R: c(
       person("Scott", "Chamberlain", role = c("aut", "cre"),
         email = "myrmecocystus+r@gmail.com", 
@@ -42,6 +42,7 @@ Suggests:
 RoxygenNote: 6.1.1
 Collate: 
     'address-provider-en_GB.R'
+    'address-provider-en_NZ.R'
     'address-provider-en_US.R'
     'base-provider.R'
     'datetime-provider.R'
@@ -83,6 +84,7 @@ Collate:
     'internet-provider-cs_CZ.R'
     'internet-provider-de_DE.R'
     'internet-provider-en_AU.R'
+    'internet-provider-en_NZ.R'
     'internet-provider-fa_IR.R'
     'internet-provider-fr_FR.R'
     'internet-provider-hr_HR.R'
@@ -123,6 +125,7 @@ Collate:
     'person-provider-de_AT.R'
     'person-provider-de_DE.R'
     'person-provider-en_GB.R'
+    'person-provider-en_NZ.R'
     'person-provider-en_US.R'
     'person-provider-es_ES.R'
     'person-provider-es_MX.R'

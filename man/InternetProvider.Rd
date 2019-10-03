@@ -5,7 +5,7 @@
 \alias{InternetProvider}
 \alias{internet_provider_locales}
 \title{InternetProvider}
-\format{An object of class \code{character} of length 8.}
+\format{An object of class \code{character} of length 9.}
 \usage{
 internet_provider_locales
 }
@@ -120,6 +120,10 @@ x$ascii_email()
 x$url()
 x$user_name()
 x$email()
+
+(x <- InternetProvider$new(locale = "en_NZ"))
+x$free_email_domain()
+x$tld()
 
 (x <- InternetProvider$new(locale = "fa_IR"))
 x$url()

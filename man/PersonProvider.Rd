@@ -5,7 +5,7 @@
 \alias{PersonProvider}
 \alias{person_provider_locales}
 \title{PersonProvider}
-\format{An object of class \code{character} of length 22.}
+\format{An object of class \code{character} of length 23.}
 \usage{
 person_provider_locales
 }
@@ -99,6 +99,14 @@ z$first_name_female()
 z$first_name_male()
 z$last_name()
 z$prefix()
+
+z <- PersonProvider$new(locale = "en_NZ")
+z$locale
+z$render()
+z$first_name()
+z$first_name_female()
+z$first_name_male()
+z$last_name()
 
 PersonProvider$new(locale = "fr_CH")$render()
 PersonProvider$new(locale = "fi_FI")$render()
