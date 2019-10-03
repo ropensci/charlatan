@@ -5,7 +5,7 @@
 \alias{PhoneNumberProvider}
 \alias{phone_number_provider_locales}
 \title{PhoneNumberProvider}
-\format{An object of class \code{character} of length 44.}
+\format{An object of class \code{character} of length 45.}
 \usage{
 phone_number_provider_locales
 }
@@ -32,6 +32,7 @@ PhoneNumberProvider$new(locale = "sk_SK")$render()
 # locales with area codes
 PhoneNumberProvider$new(locale = "en_AU")$render()
 PhoneNumberProvider$new(locale = "en_NZ")$render()
+PhoneNumberProvider$new(locale = "es_PE")$render()
 }
 \keyword{datasets}
 \keyword{internal}

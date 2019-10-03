@@ -12,7 +12,7 @@ doc:
 	${RSCRIPT} -e "library(methods); devtools::document()"
 
 install: doc build
-	R CMD INSTALL .
+	R CMD INSTALL . && rm *.tar.gz
 
 build:
 	R CMD build .

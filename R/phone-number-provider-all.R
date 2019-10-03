@@ -103,7 +103,7 @@ phone_number_formats_es_mx = c(
 )
 
 area_codes_formats_es_pe = c(
-  #'1',  # Lima / Callao -- special case, phone numbers here have 7 digits
+  #1',  # Lima / Callao -- special case, phone numbers here have 7 digits
   '41', # Amazonas
   '43', # Ancash
   '83', # Apurímac
