@@ -36,6 +36,7 @@ available_locales <- c(
   'es',
   'es_ES',
   'es_MX',
+  'es_PE',
   'fa_IR',
   'fi_FI',
   'fr_CH',
