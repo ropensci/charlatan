@@ -42,7 +42,7 @@ sequence data
 
 ## Contributing
 
-See the **Contributing to charlatan** vignette
+See the [**Contributing to charlatan**](https://github.com/ropensci/charlatan/blob/master/vignettes/contributing.Rmd) vignette
 
 ## Package API
 
@@ -169,6 +169,33 @@ ch_credit_card_security_code()
 ch_credit_card_security_code(10)
 ```
 
+## Missing data 
+`charlatan` makes it very easy to generate fake data with missing entries. First, you need to run `MissingDataProvider()` and then make an appropriate `make_missing()` call specifying the data type to be generated. This method picks a random number (`N`) of slots in the input the `make_missing` vector and then picks `N` random positions that will be replaced with NA matching the input class.
+
+```{r}
+testVector <- MissingDataProvider$new()
+```
+
+### character strings
+
+```{r}
+testVector$make_missing(x = ch_generate()$name) 
+```
+
+
+### numeric data
+
+```{r}
+testVector$make_missing(x = ch_integer(10)) 
+```
+
+
+### logicals
+
+```{r}
+set.seed(123)
+testVector$make_missing(x = sample(c(TRUE, FALSE), 10, replace = TRUE)) 
+```
 
 ## Messy data
 
