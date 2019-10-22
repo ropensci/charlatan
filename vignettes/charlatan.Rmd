@@ -42,7 +42,7 @@ sequence data
 
 ## Contributing
 
-See the [**Contributing to charlatan**](https://github.com/ropensci/charlatan/blob/master/vignettes/contributing.Rmd) vignette
+See the [**Contributing to charlatan**](https://docs.ropensci.org/charlatan/articles/contributing.html) vignette
 
 ## Package API
 
