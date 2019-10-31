@@ -10,14 +10,14 @@
   "codeRepository": "https://github.com/ropensci/charlatan",
   "issueTracker": "https://github.com/ropensci/charlatan/issues",
   "license": "https://spdx.org/licenses/MIT",
-  "version": "0.2.0",
+  "version": "0.3.2.9110",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
-    "version": "3.5.1",
+    "version": "3.6.1",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 3.5.1 RC (2018-06-29 r74946)",
+  "runtimePlatform": "R version 3.6.1 Patched (2019-09-23 r77210)",
   "provider": {
     "@id": "https://cran.r-project.org",
     "@type": "Organization",
@@ -52,7 +52,7 @@
       "@type": "SoftwareApplication",
       "identifier": "roxygen2",
       "name": "roxygen2",
-      "version": ">= 6.0.1",
+      "version": ">= 6.1.0",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
@@ -166,7 +166,7 @@
   "developmentStatus": "active",
   "releaseNotes": "https://github.com/ropensci/charlatan/blob/master/NEWS.md",
   "readme": "https://github.com/ropensci/charlatan/blob/master/README.md",
-  "fileSize": "275.858KB",
+  "fileSize": "290.099KB",
   "review": {
     "@type": "Review",
     "url": "https://github.com/ropensci/onboarding/issues/94",
@@ -179,6 +179,17 @@
     "dataset",
     "fake-data",
     "r",
-    "r-package"
-  ]
+    "r-package",
+    "peer-reviewed"
+  ],
+  "relatedLink": "https://docs.ropensci.org/charlatan",
+  "contributor": [
+    {
+      "@type": "Person",
+      "givenName": "Martin",
+      "familyName": "Pedersen"
+    }
+  ],
+  "copyrightHolder": {},
+  "funder": {}
 }
