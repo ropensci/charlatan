@@ -15,23 +15,6 @@ PersonProvider
 PersonProvider
 }
 \details{
-\strong{Methods}
-\itemize{
-\item \code{render(fmt)} - Make a person's name
-\item \code{first_name()} -  get a first name
-\item \code{first_name_female()} - get a female first name
-\item \code{first_name_male()} - get a male first namne
-\item \code{last_name()} - get a last name
-\item \code{last_name_female()} - get a female last name
-\item \code{last_name_male()} - get a male last name
-\item \code{prefix()} - get a name prefix
-\item \code{prefix_female()} - get a female name prefix
-\item \code{prefix_male()} - get a male name prefix
-\item \code{suffix()} - get a name suffix
-\item \code{suffix_female()} - get a female name suffix
-\item \code{suffix_male()} - get a male name suffix
-}
-
 Note that with the male/female versions if the locale
 doesn't provide a male/female version then we fall back to the
 generic thing, e.g., if no female first name we give you first
@@ -119,6 +102,19 @@ PersonProvider$new(locale = "da_DK")$render()
 \section{Super class}{
 \code{\link[charlatan:BaseProvider]{charlatan::BaseProvider}} -> \code{PersonProvider}
 }
+\section{Public fields}{
+\if{html}{\out{<div class="r6-fields">}}
+\describe{
+\item{\code{locale}}{(character) the locale}
+
+\item{\code{formats}}{(character) person name formats}
+
+\item{\code{person}}{(character) person name data}
+
+\item{\code{messy}}{(logical) the messy setting, \code{TRUE} or \code{FALSE}}
+}
+\if{html}{\out{</div>}}
+}
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
@@ -146,7 +142,6 @@ PersonProvider$new(locale = "da_DK")$render()
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale">}\href{../../charlatan/html/BaseProvider.html#method-check_locale}{\code{charlatan::BaseProvider$check_locale()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="lexify">}\href{../../charlatan/html/BaseProvider.html#method-lexify}{\code{charlatan::BaseProvider$lexify()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="numerify">}\href{../../charlatan/html/BaseProvider.html#method-numerify}{\code{charlatan::BaseProvider$numerify()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="prov_avail_locales">}\href{../../charlatan/html/BaseProvider.html#method-prov_avail_locales}{\code{charlatan::BaseProvider$prov_avail_locales()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit">}\href{../../charlatan/html/BaseProvider.html#method-random_digit}{\code{charlatan::BaseProvider$random_digit()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_not_zero}{\code{charlatan::BaseProvider$random_digit_not_zero()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero_or_empty">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_not_zero_or_empty}{\code{charlatan::BaseProvider$random_digit_not_zero_or_empty()}}\out{</span>}
@@ -162,6 +157,7 @@ PersonProvider$new(locale = "da_DK")$render()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-new"></a>}}
 \subsection{Method \code{new()}}{
+Create a new \code{PersonProvider} object
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{PersonProvider$new(locale = NULL, messy = FALSE)}\if{html}{\out{</div>}}
 }
@@ -176,18 +172,30 @@ PersonProvider$new(locale = "da_DK")$render()
 }
 \if{html}{\out{</div>}}
 }
+\subsection{Returns}{
+A new \code{PersonProvider} object
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-render"></a>}}
 \subsection{Method \code{render()}}{
+Make a person's name
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{PersonProvider$render(fmt = NULL)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{fmt}}{(character) a name format, default: \code{NULL}}
+}
+\if{html}{\out{</div>}}
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-first_name"></a>}}
 \subsection{Method \code{first_name()}}{
+make a first name
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{PersonProvider$first_name()}\if{html}{\out{</div>}}
 }
@@ -196,6 +204,7 @@ PersonProvider$new(locale = "da_DK")$render()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-first_name_female"></a>}}
 \subsection{Method \code{first_name_female()}}{
+make a female first name
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{PersonProvider$first_name_female()}\if{html}{\out{</div>}}
 }
@@ -204,6 +213,7 @@ PersonProvider$new(locale = "da_DK")$render()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-first_name_male"></a>}}
 \subsection{Method \code{first_name_male()}}{
+make a male first name
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{PersonProvider$first_name_male()}\if{html}{\out{</div>}}
 }
@@ -212,6 +222,7 @@ PersonProvider$new(locale = "da_DK")$render()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-last_name"></a>}}
 \subsection{Method \code{last_name()}}{
+make a last name
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{PersonProvider$last_name()}\if{html}{\out{</div>}}
 }
@@ -220,6 +231,7 @@ PersonProvider$new(locale = "da_DK")$render()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-last_name_female"></a>}}
 \subsection{Method \code{last_name_female()}}{
+make a female last name
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{PersonProvider$last_name_female()}\if{html}{\out{</div>}}
 }
@@ -228,6 +240,7 @@ PersonProvider$new(locale = "da_DK")$render()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-last_name_male"></a>}}
 \subsection{Method \code{last_name_male()}}{
+make a male last name
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{PersonProvider$last_name_male()}\if{html}{\out{</div>}}
 }
@@ -236,6 +249,7 @@ PersonProvider$new(locale = "da_DK")$render()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-prefix"></a>}}
 \subsection{Method \code{prefix()}}{
+make a name prefix
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{PersonProvider$prefix()}\if{html}{\out{</div>}}
 }
@@ -244,6 +258,7 @@ PersonProvider$new(locale = "da_DK")$render()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-prefix_female"></a>}}
 \subsection{Method \code{prefix_female()}}{
+make a female name prefix
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{PersonProvider$prefix_female()}\if{html}{\out{</div>}}
 }
@@ -252,6 +267,7 @@ PersonProvider$new(locale = "da_DK")$render()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-prefix_male"></a>}}
 \subsection{Method \code{prefix_male()}}{
+make a male name prefix
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{PersonProvider$prefix_male()}\if{html}{\out{</div>}}
 }
@@ -260,6 +276,7 @@ PersonProvider$new(locale = "da_DK")$render()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-suffix"></a>}}
 \subsection{Method \code{suffix()}}{
+make a name suffix
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{PersonProvider$suffix()}\if{html}{\out{</div>}}
 }
@@ -268,6 +285,7 @@ PersonProvider$new(locale = "da_DK")$render()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-suffix_female"></a>}}
 \subsection{Method \code{suffix_female()}}{
+make a female name suffix
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{PersonProvider$suffix_female()}\if{html}{\out{</div>}}
 }
@@ -276,6 +294,7 @@ PersonProvider$new(locale = "da_DK")$render()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-suffix_male"></a>}}
 \subsection{Method \code{suffix_male()}}{
+make a male name suffix
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{PersonProvider$suffix_male()}\if{html}{\out{</div>}}
 }

@@ -2,13 +2,6 @@
 #'
 #' @export
 #' @keywords internal
-#' @details
-#' **Methods**
-#' 
-#' - `render()` - Make a DOI
-#' 
-#' @format NULL
-#' @usage NULL
 #' @examples
 #' (z <- DOIProvider$new())
 #' z$render()
@@ -16,6 +9,7 @@ DOIProvider <- R6::R6Class(
   'DOIProvider',
   inherit = BaseProvider,
   public = list(
+    #' @field funs (list) list of functions to use to apply to DOI creation
     funs = list(
       a = function() {
         formats <- c("10.%s/%s-%s-%s", "10.%s/%s.%s.%s")
@@ -38,6 +32,7 @@ DOIProvider <- R6::R6Class(
       }
     ),
 
+    #' @description Make a random DOI
     render = function() {
       x <- super$random_element(seq_along(self$funs))
       self$funs[[x]]()

@@ -14,32 +14,6 @@ InternetProvider
 
 InternetProvider
 }
-\details{
-\strong{Methods}
-\itemize{
-\item \code{to_ascii(x)} - convert to ascii
-\item \code{email(domain)} - get an email address
-\item \code{safe_email()} - get a safe email address
-\item \code{free_email()} - free email address
-\item \code{company_email()} - company email address
-\item \code{ascii_email()} - ascii email address
-\item \code{ascii_safe_email()} - safe ascii email address
-\item \code{ascii_free_email()} - an ascii free email address
-\item \code{ascii_company_email()} - ascii company email address
-\item \code{user_name()} - a user name
-\item \code{tld()} - a tld
-\item \code{free_email_domain()} - free email domain
-\item \code{url(schemes)} - get a url
-\item \code{domain_name(levels)} - get a domain name
-\item \code{domain_word()} - get a domain word
-\item \code{ipv4()} - get a random ipv4 address
-\item \code{mac_address()} - get a mac address
-\item \code{uri_page()} - get a uri page
-\item \code{uri_path()} - get a uri path
-\item \code{uri_extension()} - get a uri extension
-\item \code{image_url(width, height)} - get an image url
-}
-}
 \note{
 Note that if a locale you set doesn't have a locale specific set
 of data for \link{PersonProvider} or \link{CompanyProvider} we fall back to
@@ -146,6 +120,37 @@ if (requireNamespace("stringi", quietly=TRUE)) {
 \section{Super class}{
 \code{\link[charlatan:BaseProvider]{charlatan::BaseProvider}} -> \code{InternetProvider}
 }
+\section{Public fields}{
+\if{html}{\out{<div class="r6-fields">}}
+\describe{
+\item{\code{locale}}{(character) the locale}
+
+\item{\code{safe_email_tlds}}{(character) safe email tlds}
+
+\item{\code{free_email_domains}}{(character) free email tlds}
+
+\item{\code{tlds}}{(character) tlds}
+
+\item{\code{uri_pages}}{(character) uri pages}
+
+\item{\code{uri_paths}}{(character) uri paths}
+
+\item{\code{uri_extensions}}{(character) uri extensions}
+
+\item{\code{user_name_formats}}{(character) user name formats}
+
+\item{\code{email_formats}}{(character) email formats}
+
+\item{\code{url_formats}}{(character) url formats}
+
+\item{\code{uri_formats}}{(character) uri formats}
+
+\item{\code{image_placeholder_services}}{(character) image uri formats}
+
+\item{\code{replacements}}{(list) a list}
+}
+\if{html}{\out{</div>}}
+}
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
@@ -183,7 +188,6 @@ if (requireNamespace("stringi", quietly=TRUE)) {
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale">}\href{../../charlatan/html/BaseProvider.html#method-check_locale}{\code{charlatan::BaseProvider$check_locale()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="lexify">}\href{../../charlatan/html/BaseProvider.html#method-lexify}{\code{charlatan::BaseProvider$lexify()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="numerify">}\href{../../charlatan/html/BaseProvider.html#method-numerify}{\code{charlatan::BaseProvider$numerify()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="prov_avail_locales">}\href{../../charlatan/html/BaseProvider.html#method-prov_avail_locales}{\code{charlatan::BaseProvider$prov_avail_locales()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit">}\href{../../charlatan/html/BaseProvider.html#method-random_digit}{\code{charlatan::BaseProvider$random_digit()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_not_zero}{\code{charlatan::BaseProvider$random_digit_not_zero()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero_or_empty">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_not_zero_or_empty}{\code{charlatan::BaseProvider$random_digit_not_zero_or_empty()}}\out{</span>}
@@ -199,6 +203,7 @@ if (requireNamespace("stringi", quietly=TRUE)) {
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-new"></a>}}
 \subsection{Method \code{new()}}{
+Create a new \code{InternetProvider} object
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{InternetProvider$new(locale = NULL)}\if{html}{\out{</div>}}
 }
@@ -211,26 +216,47 @@ if (requireNamespace("stringi", quietly=TRUE)) {
 }
 \if{html}{\out{</div>}}
 }
+\subsection{Returns}{
+A new \code{InternetProvider} object
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-to_ascii"></a>}}
 \subsection{Method \code{to_ascii()}}{
+convert to ascii
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{InternetProvider$to_ascii(x)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{x}}{the stringn to convert to ascii}
+}
+\if{html}{\out{</div>}}
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-email"></a>}}
 \subsection{Method \code{email()}}{
+get an email address
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{InternetProvider$email(domain = NULL)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{domain}}{(character) a domain name, if not given, a random
+name is chosen}
+}
+\if{html}{\out{</div>}}
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-safe_email"></a>}}
 \subsection{Method \code{safe_email()}}{
+get a safe email address
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{InternetProvider$safe_email()}\if{html}{\out{</div>}}
 }
@@ -239,6 +265,7 @@ if (requireNamespace("stringi", quietly=TRUE)) {
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-free_email"></a>}}
 \subsection{Method \code{free_email()}}{
+a free email address
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{InternetProvider$free_email()}\if{html}{\out{</div>}}
 }
@@ -247,6 +274,7 @@ if (requireNamespace("stringi", quietly=TRUE)) {
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-company_email"></a>}}
 \subsection{Method \code{company_email()}}{
+company email address
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{InternetProvider$company_email()}\if{html}{\out{</div>}}
 }
@@ -255,6 +283,7 @@ if (requireNamespace("stringi", quietly=TRUE)) {
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-ascii_email"></a>}}
 \subsection{Method \code{ascii_email()}}{
+ascii email address
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{InternetProvider$ascii_email()}\if{html}{\out{</div>}}
 }
@@ -263,6 +292,7 @@ if (requireNamespace("stringi", quietly=TRUE)) {
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-ascii_safe_email"></a>}}
 \subsection{Method \code{ascii_safe_email()}}{
+safe ascii email address
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{InternetProvider$ascii_safe_email()}\if{html}{\out{</div>}}
 }
@@ -271,6 +301,7 @@ if (requireNamespace("stringi", quietly=TRUE)) {
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-ascii_free_email"></a>}}
 \subsection{Method \code{ascii_free_email()}}{
+an ascii free email address
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{InternetProvider$ascii_free_email()}\if{html}{\out{</div>}}
 }
@@ -279,6 +310,7 @@ if (requireNamespace("stringi", quietly=TRUE)) {
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-ascii_company_email"></a>}}
 \subsection{Method \code{ascii_company_email()}}{
+ascii company email address
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{InternetProvider$ascii_company_email()}\if{html}{\out{</div>}}
 }
@@ -287,6 +319,7 @@ if (requireNamespace("stringi", quietly=TRUE)) {
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-user_name"></a>}}
 \subsection{Method \code{user_name()}}{
+a user name
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{InternetProvider$user_name()}\if{html}{\out{</div>}}
 }
@@ -295,6 +328,7 @@ if (requireNamespace("stringi", quietly=TRUE)) {
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-tld"></a>}}
 \subsection{Method \code{tld()}}{
+a tld
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{InternetProvider$tld()}\if{html}{\out{</div>}}
 }
@@ -303,6 +337,7 @@ if (requireNamespace("stringi", quietly=TRUE)) {
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-free_email_domain"></a>}}
 \subsection{Method \code{free_email_domain()}}{
+free email domain name
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{InternetProvider$free_email_domain()}\if{html}{\out{</div>}}
 }
@@ -311,22 +346,40 @@ if (requireNamespace("stringi", quietly=TRUE)) {
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-url"></a>}}
 \subsection{Method \code{url()}}{
+a url
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{InternetProvider$url(schemes = NULL)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{schemes}}{(character vector) a url scheme, defaults are http and https}
+}
+\if{html}{\out{</div>}}
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-domain_name"></a>}}
 \subsection{Method \code{domain_name()}}{
+Produce an Internet domain name with the specified
+number of subdomain levels
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{InternetProvider$domain_name(levels = 1)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{levels}}{(integer) how many levels, must be >1}
+}
+\if{html}{\out{</div>}}
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-domain_word"></a>}}
 \subsection{Method \code{domain_word()}}{
+a domain word
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{InternetProvider$domain_word()}\if{html}{\out{</div>}}
 }
@@ -335,6 +388,7 @@ if (requireNamespace("stringi", quietly=TRUE)) {
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-ipv4"></a>}}
 \subsection{Method \code{ipv4()}}{
+a ipv4 address
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{InternetProvider$ipv4()}\if{html}{\out{</div>}}
 }
@@ -343,6 +397,7 @@ if (requireNamespace("stringi", quietly=TRUE)) {
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-mac_address"></a>}}
 \subsection{Method \code{mac_address()}}{
+a mac address
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{InternetProvider$mac_address()}\if{html}{\out{</div>}}
 }
@@ -351,6 +406,7 @@ if (requireNamespace("stringi", quietly=TRUE)) {
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-uri_page"></a>}}
 \subsection{Method \code{uri_page()}}{
+a uri page
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{InternetProvider$uri_page()}\if{html}{\out{</div>}}
 }
@@ -359,14 +415,24 @@ if (requireNamespace("stringi", quietly=TRUE)) {
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-uri_path"></a>}}
 \subsection{Method \code{uri_path()}}{
+a uri path
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{InternetProvider$uri_path(deep = NULL)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{deep}}{how deep to go, an integer, if not given an integer
+between 1 and 4 (inclusive) is chosen}
+}
+\if{html}{\out{</div>}}
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-uri_extension"></a>}}
 \subsection{Method \code{uri_extension()}}{
+a uri extension
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{InternetProvider$uri_extension()}\if{html}{\out{</div>}}
 }
@@ -375,6 +441,7 @@ if (requireNamespace("stringi", quietly=TRUE)) {
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-uri"></a>}}
 \subsection{Method \code{uri()}}{
+a uri
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{InternetProvider$uri()}\if{html}{\out{</div>}}
 }
@@ -383,18 +450,38 @@ if (requireNamespace("stringi", quietly=TRUE)) {
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-slug"></a>}}
 \subsection{Method \code{slug()}}{
+a slug
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{InternetProvider$slug(value = NULL)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{value}}{(character) a string, if given, returns itself, if not, uses
+\link{LoremProvider} to get a random string. default: \code{NULL}}
+}
+\if{html}{\out{</div>}}
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-image_url"></a>}}
 \subsection{Method \code{image_url()}}{
+Returns URL to placeholder image -
+Example: http://placehold.it/640x480
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{InternetProvider$image_url(width = NULL, height = NULL)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{width}}{image width, in pixels}
+
+\item{\code{height}}{image height, in pixels}
+}
+\if{html}{\out{</div>}}
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-clone"></a>}}

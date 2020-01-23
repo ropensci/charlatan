@@ -14,17 +14,6 @@ CompanyProvider
 
 CompanyProvider
 }
-\details{
-\strong{Methods}
-\itemize{
-\item \code{company()} - a company name
-\item \code{company_prefix()} - a company prefix
-\item \code{company_suffix()} - a company suffix
-\item \code{bs()} - bs
-\item \code{catch_phrase()} - a catch phrase
-\item \code{siren()} - a siren
-}
-}
 \examples{
 x <- CompanyProvider$new()
 x$locale
@@ -64,6 +53,25 @@ CompanyProvider$new(locale = "fa_IR")$company()
 \section{Super class}{
 \code{\link[charlatan:BaseProvider]{charlatan::BaseProvider}} -> \code{CompanyProvider}
 }
+\section{Public fields}{
+\if{html}{\out{<div class="r6-fields">}}
+\describe{
+\item{\code{locale}}{(character) xxx}
+
+\item{\code{formats}}{(character) xxx}
+
+\item{\code{prefixes}}{(character) xxx}
+
+\item{\code{suffixes}}{(character) xxx}
+
+\item{\code{catch_phrase_words}}{(character) xxx}
+
+\item{\code{bsWords}}{(character) xxx}
+
+\item{\code{siren_format}}{(character) xxx}
+}
+\if{html}{\out{</div>}}
+}
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
@@ -84,7 +92,6 @@ CompanyProvider$new(locale = "fa_IR")$company()
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale">}\href{../../charlatan/html/BaseProvider.html#method-check_locale}{\code{charlatan::BaseProvider$check_locale()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="lexify">}\href{../../charlatan/html/BaseProvider.html#method-lexify}{\code{charlatan::BaseProvider$lexify()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="numerify">}\href{../../charlatan/html/BaseProvider.html#method-numerify}{\code{charlatan::BaseProvider$numerify()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="prov_avail_locales">}\href{../../charlatan/html/BaseProvider.html#method-prov_avail_locales}{\code{charlatan::BaseProvider$prov_avail_locales()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit">}\href{../../charlatan/html/BaseProvider.html#method-random_digit}{\code{charlatan::BaseProvider$random_digit()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_not_zero}{\code{charlatan::BaseProvider$random_digit_not_zero()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero_or_empty">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_not_zero_or_empty}{\code{charlatan::BaseProvider$random_digit_not_zero_or_empty()}}\out{</span>}
@@ -100,6 +107,7 @@ CompanyProvider$new(locale = "fa_IR")$company()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-new"></a>}}
 \subsection{Method \code{new()}}{
+Create a new \code{CompanyProvider} object
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{CompanyProvider$new(locale = NULL)}\if{html}{\out{</div>}}
 }
@@ -112,10 +120,14 @@ CompanyProvider$new(locale = "fa_IR")$company()
 }
 \if{html}{\out{</div>}}
 }
+\subsection{Returns}{
+A new \code{CompanyProvider} object
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-company"></a>}}
 \subsection{Method \code{company()}}{
+a company name
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{CompanyProvider$company()}\if{html}{\out{</div>}}
 }
@@ -124,6 +136,7 @@ CompanyProvider$new(locale = "fa_IR")$company()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-company_prefix"></a>}}
 \subsection{Method \code{company_prefix()}}{
+a company prefix
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{CompanyProvider$company_prefix()}\if{html}{\out{</div>}}
 }
@@ -132,6 +145,7 @@ CompanyProvider$new(locale = "fa_IR")$company()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-company_suffix"></a>}}
 \subsection{Method \code{company_suffix()}}{
+a company suffix
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{CompanyProvider$company_suffix()}\if{html}{\out{</div>}}
 }
@@ -140,6 +154,7 @@ CompanyProvider$new(locale = "fa_IR")$company()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-catch_phrase"></a>}}
 \subsection{Method \code{catch_phrase()}}{
+a catch phrase
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{CompanyProvider$catch_phrase()}\if{html}{\out{</div>}}
 }
@@ -148,6 +163,7 @@ CompanyProvider$new(locale = "fa_IR")$company()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-bs"></a>}}
 \subsection{Method \code{bs()}}{
+BS words
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{CompanyProvider$bs()}\if{html}{\out{</div>}}
 }
@@ -156,6 +172,7 @@ CompanyProvider$new(locale = "fa_IR")$company()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-siren"></a>}}
 \subsection{Method \code{siren()}}{
+a siren
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{CompanyProvider$siren()}\if{html}{\out{</div>}}
 }

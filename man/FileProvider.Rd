@@ -14,15 +14,6 @@ FileProvider
 
 FileProvider
 }
-\details{
-\strong{Methods}
-\itemize{
-\item \code{mime_type(category)} - mime type
-\item \verb{file_name(category(NULL, extension)} - file name
-\item \code{file_extension(category)} - file extension
-\item \verb{file_path(depth(1, category(NULL, extension)} - file path
-}
-}
 \examples{
 (x <- FileProvider$new())
 x$locale
@@ -38,6 +29,13 @@ x$file_path(depth = 6)
 \keyword{internal}
 \section{Super class}{
 \code{\link[charlatan:BaseProvider]{charlatan::BaseProvider}} -> \code{FileProvider}
+}
+\section{Public fields}{
+\if{html}{\out{<div class="r6-fields">}}
+\describe{
+\item{\code{locale}}{(character) the locale}
+}
+\if{html}{\out{</div>}}
 }
 \section{Methods}{
 \subsection{Public methods}{
@@ -57,7 +55,6 @@ x$file_path(depth = 6)
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale">}\href{../../charlatan/html/BaseProvider.html#method-check_locale}{\code{charlatan::BaseProvider$check_locale()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="lexify">}\href{../../charlatan/html/BaseProvider.html#method-lexify}{\code{charlatan::BaseProvider$lexify()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="numerify">}\href{../../charlatan/html/BaseProvider.html#method-numerify}{\code{charlatan::BaseProvider$numerify()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="prov_avail_locales">}\href{../../charlatan/html/BaseProvider.html#method-prov_avail_locales}{\code{charlatan::BaseProvider$prov_avail_locales()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit">}\href{../../charlatan/html/BaseProvider.html#method-random_digit}{\code{charlatan::BaseProvider$random_digit()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_not_zero}{\code{charlatan::BaseProvider$random_digit_not_zero()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero_or_empty">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_not_zero_or_empty}{\code{charlatan::BaseProvider$random_digit_not_zero_or_empty()}}\out{</span>}
@@ -73,6 +70,7 @@ x$file_path(depth = 6)
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-new"></a>}}
 \subsection{Method \code{new()}}{
+Create a new \code{FileProvider} object
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{FileProvider$new(locale = NULL)}\if{html}{\out{</div>}}
 }
@@ -85,38 +83,88 @@ x$file_path(depth = 6)
 }
 \if{html}{\out{</div>}}
 }
+\subsection{Returns}{
+A new \code{FileProvider} object
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-mime_type"></a>}}
 \subsection{Method \code{mime_type()}}{
+a random mime type
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{FileProvider$mime_type(category = NULL)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{category}}{(character) a mime type category of mime types, one
+of application, audio, image, message, model, multipart, text or
+video. default: \code{NULL}}
+}
+\if{html}{\out{</div>}}
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-file_name"></a>}}
 \subsection{Method \code{file_name()}}{
+a random file name
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{FileProvider$file_name(category = NULL, extension = NULL)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{category}}{(character) a category of file extension type, one of
+audio, image, office, text or video. default: \code{NULL}. If this is
+given, \code{extension} is ignored}
+
+\item{\code{extension}}{(character) a file extension. if this is given,
+\code{category} is ignored.}
+}
+\if{html}{\out{</div>}}
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-file_extension"></a>}}
 \subsection{Method \code{file_extension()}}{
+a random file extension
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{FileProvider$file_extension(category = NULL)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{category}}{(character) a category of file extension type, one of
+audio, image, office, text or video. default: \code{NULL}}
+}
+\if{html}{\out{</div>}}
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-file_path"></a>}}
 \subsection{Method \code{file_path()}}{
+a random file path
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{FileProvider$file_path(depth = 1, category = NULL, extension = NULL)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{depth}}{(character) depth of the file (depth >= 0). default: 1}
+
+\item{\code{category}}{(character) a category of file extension type, one of
+audio, image, office, text or video. default: \code{NULL}. If this is
+given, \code{extension} is ignored}
+
+\item{\code{extension}}{(character) a file extension. if this is given,
+\code{category} is ignored.}
+}
+\if{html}{\out{</div>}}
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-clone"></a>}}

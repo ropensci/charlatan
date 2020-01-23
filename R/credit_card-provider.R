@@ -72,25 +72,18 @@ credit_card_types['jcb'] <- credit_card_types['jcb16']
 #'
 #' @export
 #' @keywords internal
-#' @details
-#' **Methods**
-#' 
-#' - `credit_card_type(card_type)` - credit card type
-#' - `credit_card_provider(prefix, length)` - credit card provider
-#' - `credit_card_number(card_type)` - credit card number
-#' - `credit_card_security_code(card_type)` - credit card security code
-#' 
-#' @format NULL
-#' @usage NULL
 #' @examples
 #' z <- CreditCardProvider$new()
 #' z$credit_card_provider()
 #' z$credit_card_number()
 #' z$credit_card_security_code()
+#' z$generate_number(13)
 CreditCardProvider <- R6::R6Class(
   inherit = BaseProvider,
   'CreditCardProvider',
   public = list(
+    #' @description Returns a random credit card type
+    #' @param card_type (character) a card type, see `credit_card_types`
     credit_card_type = function(card_type = NULL) {
       if (is.null(card_type)) {
         card_type <- super$random_element(names(credit_card_types))
@@ -100,7 +93,10 @@ CreditCardProvider <- R6::R6Class(
       return(credit_card_types[[card_type]])
     },
 
-    generate_number = function(prefix = NULL, length = NULL) {
+    #' @description make a credit card number with specific starting numbers
+    #' @param prefix the start of the CC number as a string, any number of digits.
+    #' @param length the length of the CC number to generate. Typically 13 or 16
+    generate_number = function(prefix, length = 13) {
       number <- prefix
       # Generate random char digits
       number <- paste0(number, paste0(rep('#', (length - length(prefix) - 1)), collapse = ""))
@@ -122,6 +118,8 @@ CreditCardProvider <- R6::R6Class(
       return(number)
     },
 
+    #' @description credit card provider
+    #' @param card_type (character) a card type, see `credit_card_types`
     credit_card_provider = function(card_type = NULL) {
       if (is.null(card_type)) {
         card_type <- super$random_element(names(credit_card_types))
@@ -129,6 +127,8 @@ CreditCardProvider <- R6::R6Class(
       self$credit_card_type(card_type)$name
     },
 
+    #' @description credit card number
+    #' @param card_type (character) a card type, see `credit_card_types`
     credit_card_number = function(card_type = NULL) {
       card = self$credit_card_type(card_type)
       prefix = super$random_element(card$prefixes)
@@ -140,11 +140,14 @@ CreditCardProvider <- R6::R6Class(
     #   return(expire_date$strftime(date_format))
     # },
 
+    #' @description credit card security code
+    #' @param card_type (character) a card type, see `credit_card_types`
     credit_card_security_code = function(card_type = NULL) {
       sec_len <- self$credit_card_type(card_type)$security_code_length
       super$numerify(paste0(rep('#', sec_len), collapse = ""))
     },
 
+    #' @field luhn_lookup (list) luhn lookup, named list
     luhn_lookup = list('0' = 0, '1' = 2, '2' = 4, '3' = 6, '4' = 8,
                        '5' = 1, '6' = 3, '7' = 5, '8' = 7, '9' = 9)
   )

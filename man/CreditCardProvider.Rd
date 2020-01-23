@@ -8,24 +8,23 @@ CreditCardProvider
 
 CreditCardProvider
 }
-\details{
-\strong{Methods}
-\itemize{
-\item \code{credit_card_type(card_type)} - credit card type
-\item \code{credit_card_provider(prefix, length)} - credit card provider
-\item \code{credit_card_number(card_type)} - credit card number
-\item \code{credit_card_security_code(card_type)} - credit card security code
-}
-}
 \examples{
 z <- CreditCardProvider$new()
 z$credit_card_provider()
 z$credit_card_number()
 z$credit_card_security_code()
+z$generate_number(13)
 }
 \keyword{internal}
 \section{Super class}{
 \code{\link[charlatan:BaseProvider]{charlatan::BaseProvider}} -> \code{CreditCardProvider}
+}
+\section{Public fields}{
+\if{html}{\out{<div class="r6-fields">}}
+\describe{
+\item{\code{luhn_lookup}}{(list) luhn lookup, named list}
+}
+\if{html}{\out{</div>}}
 }
 \section{Methods}{
 \subsection{Public methods}{
@@ -45,7 +44,6 @@ z$credit_card_security_code()
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale">}\href{../../charlatan/html/BaseProvider.html#method-check_locale}{\code{charlatan::BaseProvider$check_locale()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="lexify">}\href{../../charlatan/html/BaseProvider.html#method-lexify}{\code{charlatan::BaseProvider$lexify()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="numerify">}\href{../../charlatan/html/BaseProvider.html#method-numerify}{\code{charlatan::BaseProvider$numerify()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="prov_avail_locales">}\href{../../charlatan/html/BaseProvider.html#method-prov_avail_locales}{\code{charlatan::BaseProvider$prov_avail_locales()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit">}\href{../../charlatan/html/BaseProvider.html#method-random_digit}{\code{charlatan::BaseProvider$random_digit()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_not_zero}{\code{charlatan::BaseProvider$random_digit_not_zero()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero_or_empty">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_not_zero_or_empty}{\code{charlatan::BaseProvider$random_digit_not_zero_or_empty()}}\out{</span>}
@@ -61,42 +59,84 @@ z$credit_card_security_code()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-credit_card_type"></a>}}
 \subsection{Method \code{credit_card_type()}}{
+Returns a random credit card type
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{CreditCardProvider$credit_card_type(card_type = NULL)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{card_type}}{(character) a card type, see \code{credit_card_types}}
+}
+\if{html}{\out{</div>}}
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-generate_number"></a>}}
 \subsection{Method \code{generate_number()}}{
+make a credit card number with specific starting numbers
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{CreditCardProvider$generate_number(prefix = NULL, length = NULL)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{CreditCardProvider$generate_number(prefix, length = 13)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{prefix}}{the start of the CC number as a string, any number of digits.}
+
+\item{\code{length}}{the length of the CC number to generate. Typically 13 or 16}
+}
+\if{html}{\out{</div>}}
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-credit_card_provider"></a>}}
 \subsection{Method \code{credit_card_provider()}}{
+credit card provider
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{CreditCardProvider$credit_card_provider(card_type = NULL)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{card_type}}{(character) a card type, see \code{credit_card_types}}
+}
+\if{html}{\out{</div>}}
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-credit_card_number"></a>}}
 \subsection{Method \code{credit_card_number()}}{
+credit card number
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{CreditCardProvider$credit_card_number(card_type = NULL)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{card_type}}{(character) a card type, see \code{credit_card_types}}
+}
+\if{html}{\out{</div>}}
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-credit_card_security_code"></a>}}
 \subsection{Method \code{credit_card_security_code()}}{
+credit card security code
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{CreditCardProvider$credit_card_security_code(card_type = NULL)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{card_type}}{(character) a card type, see \code{credit_card_types}}
+}
+\if{html}{\out{</div>}}
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-clone"></a>}}

@@ -8,17 +8,6 @@ MissingDataProvider
 
 MissingDataProvider
 }
-\details{
-\strong{Methods}
-\itemize{
-\item \code{make_missing(x)} - make missing data
-- x: a vector of characters, numeric, integers, logicals, etc
-}
-
-This method picks a random number (\code{N}) of slots in the input
-vector \code{x} (up to \code{length(x)}). Then picks \code{N} random
-positions and replaces them with NA matching the input class.
-}
 \examples{
 z <- MissingDataProvider$new()
 z$make_missing(x = letters)
@@ -41,7 +30,6 @@ z$make_missing(x = letters)
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale">}\href{../../charlatan/html/BaseProvider.html#method-check_locale}{\code{charlatan::BaseProvider$check_locale()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="lexify">}\href{../../charlatan/html/BaseProvider.html#method-lexify}{\code{charlatan::BaseProvider$lexify()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="numerify">}\href{../../charlatan/html/BaseProvider.html#method-numerify}{\code{charlatan::BaseProvider$numerify()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="prov_avail_locales">}\href{../../charlatan/html/BaseProvider.html#method-prov_avail_locales}{\code{charlatan::BaseProvider$prov_avail_locales()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit">}\href{../../charlatan/html/BaseProvider.html#method-random_digit}{\code{charlatan::BaseProvider$random_digit()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_not_zero}{\code{charlatan::BaseProvider$random_digit_not_zero()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero_or_empty">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_not_zero_or_empty}{\code{charlatan::BaseProvider$random_digit_not_zero_or_empty()}}\out{</span>}
@@ -57,8 +45,22 @@ z$make_missing(x = letters)
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-make_missing"></a>}}
 \subsection{Method \code{make_missing()}}{
+make missing data
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MissingDataProvider$make_missing(x)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{x}}{a vector of characters, numeric, integers, logicals, etc}
+}
+\if{html}{\out{</div>}}
+}
+\subsection{Details}{
+This method picks a random number (\code{N}) of slots in
+the input vector \code{x} (up to \code{length(x)}). Then picks \code{N} random
+positions and replaces them with NA matching the input class.
 }
 
 }

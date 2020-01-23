@@ -2,18 +2,6 @@
 #'
 #' @export
 #' @keywords internal
-#' @details
-#' **Methods**
-#' 
-#' - `make_missing(x)` - make missing data
-#'       - x: a vector of characters, numeric, integers, logicals, etc
-#' 
-#'
-#' This method picks a random number (`N`) of slots in the input
-#' vector `x` (up to `length(x)`). Then picks `N` random
-#' positions and replaces them with NA matching the input class.
-#' @format NULL
-#' @usage NULL
 #' @examples
 #' z <- MissingDataProvider$new()
 #' z$make_missing(x = letters)
@@ -21,7 +9,11 @@ MissingDataProvider <- R6::R6Class(
   inherit = BaseProvider,
   'MissingDataProvider',
   public = list(
-
+    #' @description make missing data
+    #' @param x a vector of characters, numeric, integers, logicals, etc
+    #' @details This method picks a random number (`N`) of slots in
+    #' the input vector `x` (up to `length(x)`). Then picks `N` random
+    #' positions and replaces them with NA matching the input class.
     make_missing = function(x) {
       n <- super$random_element(seq_along(x))
       na_value <- switch(

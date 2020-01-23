@@ -14,21 +14,6 @@ AddressProvider
 
 AddressProvider
 }
-\details{
-\strong{Methods}
-\itemize{
-\item \code{city_suffix()} - city suffix
-\item \code{street_suffix()} - street suffix
-\item \code{building_number()} - building number
-\item \code{city()} - city
-\item \code{street_name()} - street name
-\item \code{street_address()} - street address
-\item \code{address()} - address
-\item \code{country()} - country
-\item \code{country_code()} - country code
-\item \code{postcode()} - postal code
-}
-}
 \examples{
 (z <- AddressProvider$new())
 z$locale
@@ -68,6 +53,51 @@ z$street_name()
 \section{Super class}{
 \code{\link[charlatan:BaseProvider]{charlatan::BaseProvider}} -> \code{AddressProvider}
 }
+\section{Public fields}{
+\if{html}{\out{<div class="r6-fields">}}
+\describe{
+\item{\code{locale}}{(character) xxx}
+
+\item{\code{city_prefixes}}{(character) xxx}
+
+\item{\code{city_suffixes}}{(character) xxx}
+
+\item{\code{street_suffixes}}{(character) xxx}
+
+\item{\code{building_number_formats}}{(character) xxx}
+
+\item{\code{postcode_formats}}{(character) xxx}
+
+\item{\code{states}}{(character) xxx}
+
+\item{\code{states_abbr}}{(character) xxx}
+
+\item{\code{military_state_abbr}}{(character) xxx}
+
+\item{\code{military_ship_prefix}}{(character) xxx}
+
+\item{\code{military_apo_format}}{(character) xxx}
+
+\item{\code{military_dpo_format}}{(character) xxx}
+
+\item{\code{city_formats}}{(character) xxx}
+
+\item{\code{street_name_formats}}{(character) xxx}
+
+\item{\code{street_address_formats}}{(character) xxx}
+
+\item{\code{address_formats}}{(character) xxx}
+
+\item{\code{secondary_address_formats}}{(character) xxx}
+
+\item{\code{countries}}{(character) xxx}
+
+\item{\code{country_codes}}{(character) xxx}
+
+\item{\code{locale_data}}{(character) xxx}
+}
+\if{html}{\out{</div>}}
+}
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
@@ -92,7 +122,6 @@ z$street_name()
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale">}\href{../../charlatan/html/BaseProvider.html#method-check_locale}{\code{charlatan::BaseProvider$check_locale()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="lexify">}\href{../../charlatan/html/BaseProvider.html#method-lexify}{\code{charlatan::BaseProvider$lexify()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="numerify">}\href{../../charlatan/html/BaseProvider.html#method-numerify}{\code{charlatan::BaseProvider$numerify()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="prov_avail_locales">}\href{../../charlatan/html/BaseProvider.html#method-prov_avail_locales}{\code{charlatan::BaseProvider$prov_avail_locales()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit">}\href{../../charlatan/html/BaseProvider.html#method-random_digit}{\code{charlatan::BaseProvider$random_digit()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_not_zero}{\code{charlatan::BaseProvider$random_digit_not_zero()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero_or_empty">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_not_zero_or_empty}{\code{charlatan::BaseProvider$random_digit_not_zero_or_empty()}}\out{</span>}
@@ -108,6 +137,7 @@ z$street_name()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-new"></a>}}
 \subsection{Method \code{new()}}{
+Create a new \code{AddressProvider} object
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{AddressProvider$new(locale = NULL)}\if{html}{\out{</div>}}
 }
@@ -120,10 +150,14 @@ z$street_name()
 }
 \if{html}{\out{</div>}}
 }
+\subsection{Returns}{
+A new \code{AddressProvider} object
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-city_suffix"></a>}}
 \subsection{Method \code{city_suffix()}}{
+city suffix
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{AddressProvider$city_suffix()}\if{html}{\out{</div>}}
 }
@@ -132,6 +166,7 @@ z$street_name()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-street_suffix"></a>}}
 \subsection{Method \code{street_suffix()}}{
+street suffix
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{AddressProvider$street_suffix()}\if{html}{\out{</div>}}
 }
@@ -140,6 +175,7 @@ z$street_name()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-building_number"></a>}}
 \subsection{Method \code{building_number()}}{
+building numeber
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{AddressProvider$building_number()}\if{html}{\out{</div>}}
 }
@@ -148,6 +184,7 @@ z$street_name()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-city"></a>}}
 \subsection{Method \code{city()}}{
+city
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{AddressProvider$city()}\if{html}{\out{</div>}}
 }
@@ -156,6 +193,7 @@ z$street_name()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-street_name"></a>}}
 \subsection{Method \code{street_name()}}{
+street name
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{AddressProvider$street_name()}\if{html}{\out{</div>}}
 }
@@ -164,6 +202,7 @@ z$street_name()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-street_address"></a>}}
 \subsection{Method \code{street_address()}}{
+street address
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{AddressProvider$street_address()}\if{html}{\out{</div>}}
 }
@@ -172,6 +211,7 @@ z$street_name()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-postcode"></a>}}
 \subsection{Method \code{postcode()}}{
+postal code
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{AddressProvider$postcode()}\if{html}{\out{</div>}}
 }
@@ -180,6 +220,7 @@ z$street_name()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-address"></a>}}
 \subsection{Method \code{address()}}{
+address
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{AddressProvider$address()}\if{html}{\out{</div>}}
 }
@@ -188,6 +229,7 @@ z$street_name()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-country"></a>}}
 \subsection{Method \code{country()}}{
+country name
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{AddressProvider$country()}\if{html}{\out{</div>}}
 }
@@ -196,6 +238,7 @@ z$street_name()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-country_code"></a>}}
 \subsection{Method \code{country_code()}}{
+country code
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{AddressProvider$country_code()}\if{html}{\out{</div>}}
 }

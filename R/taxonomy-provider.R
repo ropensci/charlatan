@@ -175,22 +175,10 @@ tax_epithets <- c('abbeokutae','ackermani','adolphii','adunca','aegilicum',
   'wattsii','weinmannii','wilkensii','wittrockii','wolfii','xantholeuca',
   'yukonensis','zangezurus')
 
-#' TaxonomyProvider
-#'
+#' @title TaxonomyProvider
+#' @description Taxonomy provider
 #' @export
 #' @keywords internal
-#' @details
-#' **Methods**
-#' 
-#' - `genus()` - Get a genus name
-#' - `epithet()` - Get an epithet name
-#' - `species(authority, date)` - Get a binomial name (genus + epithet)
-#'       - authority: Include authority. default: `FALSE`
-#'       - date: Include authority date. If `authority = FALSE`,
-#'        this is ignored. default: `FALSE`
-#' 
-#' @format NULL
-#' @usage NULL
 #' @section Names:
 #' Names were taken from Theplantlist. 500 genera names and 500
 #' epithets were chosen at random from the set of 10,000 names in the
@@ -213,17 +201,25 @@ TaxonomyProvider <- R6::R6Class(
   inherit = BaseProvider,
   'TaxonomyProvider',
   public = list(
+    #' @field genera (character) vector of generic names
     genera = tax_genera,
+    #' @field epithets (character) vector of eptithet names
     epithets = tax_epithets,
 
+    #' @description Get a genus name
     genus = function() {
       super$random_element(self$genera)
     },
 
+    #' @description Get an epithet name
     epithet = function() {
       super$random_element(self$epithets)
     },
 
+    #' @description Get a binomial name (genus + epithet)
+    #' @param authority Include authority. default: `FALSE`
+    #' @param date Include authority date. If `authority = FALSE`,
+    #' this is ignored. default: `FALSE`
     species = function(authority = FALSE, date = FALSE) {
       name <- paste(
         super$random_element(self$genera),

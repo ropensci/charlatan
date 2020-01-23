@@ -171,13 +171,6 @@ currency_formats <- c(
 #'
 #' @export
 #' @keywords internal
-#' @details
-#' **Methods**
-#' 
-#' - `render()` - a currency, character string length 3
-#' 
-#' @format NULL
-#' @usage NULL
 #' @examples
 #' z <- CurrencyProvider$new()
 #' z$render()
@@ -185,8 +178,11 @@ CurrencyProvider <- R6::R6Class(
   inherit = BaseProvider,
   'CurrencyProvider',
   public = list(
+    #' @field formats (character) currency formats character vector
     formats = currency_formats,
 
+    #' @description get a currency
+    #' @return (character string) of length 3
     render = function() {
       super$random_element(self$formats)
     }

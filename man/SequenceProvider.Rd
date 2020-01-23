@@ -8,15 +8,6 @@ SequenceProvider
 
 SequenceProvider
 }
-\details{
-\strong{Methods}
-\itemize{
-\item \code{render(length)} - Make a sequence
-\itemize{
-\item length: sequence length. default: 30
-}
-}
-}
 \examples{
 z <- SequenceProvider$new()
 z$render()
@@ -25,6 +16,13 @@ z$render(100)
 z$render(500)
 }
 \keyword{internal}
+\section{Public fields}{
+\if{html}{\out{<div class="r6-fields">}}
+\describe{
+\item{\code{letters}}{(character) nucleotides to include in sequences}
+}
+\if{html}{\out{</div>}}
+}
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
@@ -35,6 +33,7 @@ z$render(500)
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-render"></a>}}
 \subsection{Method \code{render()}}{
+Make a sequence
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{SequenceProvider$render(length = 30)}\if{html}{\out{</div>}}
 }
@@ -42,7 +41,7 @@ z$render(500)
 \subsection{Arguments}{
 \if{html}{\out{<div class="arguments">}}
 \describe{
-\item{\code{length}}{(integer) length of sequence to create}
+\item{\code{length}}{(integer) length of sequence to create. default: 30}
 }
 \if{html}{\out{</div>}}
 }

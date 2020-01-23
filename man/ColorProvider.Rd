@@ -14,17 +14,6 @@ ColorProvider
 
 ColorProvider
 }
-\details{
-\strong{Methods}
-\itemize{
-\item \code{color_name()} - color name
-\item \code{safe_color_name()} - safe color name
-\item \code{hex_color()} - hex color
-\item \code{safe_hex_color()} - safe hex color
-\item \code{rgb_color()} - RGB color
-\item \code{rgb_css_color()} - RGB CSS color
-}
-}
 \examples{
 x <- ColorProvider$new()
 x$locale
@@ -44,6 +33,17 @@ x$safe_color_name()
 \keyword{internal}
 \section{Super class}{
 \code{\link[charlatan:BaseProvider]{charlatan::BaseProvider}} -> \code{ColorProvider}
+}
+\section{Public fields}{
+\if{html}{\out{<div class="r6-fields">}}
+\describe{
+\item{\code{locale}}{(character) xxx}
+
+\item{\code{all_colors}}{(character) xxx}
+
+\item{\code{safe_colors}}{(character) xxx}
+}
+\if{html}{\out{</div>}}
 }
 \section{Methods}{
 \subsection{Public methods}{
@@ -65,7 +65,6 @@ x$safe_color_name()
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale">}\href{../../charlatan/html/BaseProvider.html#method-check_locale}{\code{charlatan::BaseProvider$check_locale()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="lexify">}\href{../../charlatan/html/BaseProvider.html#method-lexify}{\code{charlatan::BaseProvider$lexify()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="numerify">}\href{../../charlatan/html/BaseProvider.html#method-numerify}{\code{charlatan::BaseProvider$numerify()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="prov_avail_locales">}\href{../../charlatan/html/BaseProvider.html#method-prov_avail_locales}{\code{charlatan::BaseProvider$prov_avail_locales()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit">}\href{../../charlatan/html/BaseProvider.html#method-random_digit}{\code{charlatan::BaseProvider$random_digit()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_not_zero}{\code{charlatan::BaseProvider$random_digit_not_zero()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero_or_empty">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_not_zero_or_empty}{\code{charlatan::BaseProvider$random_digit_not_zero_or_empty()}}\out{</span>}
@@ -81,6 +80,7 @@ x$safe_color_name()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-new"></a>}}
 \subsection{Method \code{new()}}{
+Create a new \code{ColorProvider} object
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{ColorProvider$new(locale = NULL)}\if{html}{\out{</div>}}
 }
@@ -93,10 +93,14 @@ x$safe_color_name()
 }
 \if{html}{\out{</div>}}
 }
+\subsection{Returns}{
+A new \code{ColorProvider} object
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-color_name"></a>}}
 \subsection{Method \code{color_name()}}{
+color name
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{ColorProvider$color_name()}\if{html}{\out{</div>}}
 }
@@ -105,6 +109,7 @@ x$safe_color_name()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-safe_color_name"></a>}}
 \subsection{Method \code{safe_color_name()}}{
+safe color name
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{ColorProvider$safe_color_name()}\if{html}{\out{</div>}}
 }
@@ -113,6 +118,7 @@ x$safe_color_name()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-hex_color"></a>}}
 \subsection{Method \code{hex_color()}}{
+hex color
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{ColorProvider$hex_color()}\if{html}{\out{</div>}}
 }
@@ -121,6 +127,7 @@ x$safe_color_name()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-safe_hex_color"></a>}}
 \subsection{Method \code{safe_hex_color()}}{
+safe hex color
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{ColorProvider$safe_hex_color()}\if{html}{\out{</div>}}
 }
@@ -129,6 +136,7 @@ x$safe_color_name()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-rgb_color"></a>}}
 \subsection{Method \code{rgb_color()}}{
+RGB color
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{ColorProvider$rgb_color()}\if{html}{\out{</div>}}
 }
@@ -137,6 +145,7 @@ x$safe_color_name()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-rgb_css_color"></a>}}
 \subsection{Method \code{rgb_css_color()}}{
+RGB CSS color
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{ColorProvider$rgb_css_color()}\if{html}{\out{</div>}}
 }

@@ -6,14 +6,6 @@ elements <- data.frame(symbol = el_symbols, element = el_elements, stringsAsFact
 #'
 #' @export
 #' @keywords internal
-#' @details
-#' **Methods**
-#' 
-#' - `symbol()` - Get a symbol
-#' - `element()` - Get an element
-#' 
-#' @format NULL
-#' @usage NULL
 #' @details Data from Wikipedia at 
 #' <https://en.wikipedia.org/wiki/Chemical_element>
 #' @examples
@@ -24,10 +16,11 @@ ElementProvider <- R6::R6Class(
   inherit = BaseProvider,
   'ElementProvider',
   public = list(
+    #' @description Get a symbol
     symbol = function() {
       super$random_element(elements$symbol)
     },
-
+    #' @description Get an element
     element = function() {
       super$random_element(elements$element)
     }

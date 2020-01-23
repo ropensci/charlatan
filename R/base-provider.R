@@ -4,32 +4,6 @@
 #' BaseProvider
 #'
 #' @export
-#' @keywords internal
-#' @details
-#' **Methods**
-#'
-#' - `random_element(x)` - pick a random element from any input vector or list
-#' - `random_int(min = 0, max = 9999, size = 1)` - random integer
-#' - `random_digit()` - random integer between 0 and 9
-#' - `random_digit_not_zero()` - random integer between 1 and 9
-#' - `random_digit_or_empty()` - random integer between 0 and 9 or empty
-#'    character string
-#' - `random_digit_not_zero_or_empty()` - random integer between 1 and 9 or empty
-#'    character string
-#' - `random_letter()` - random letter
-#' - `numerify(text = '###')` - replace a template with numbers
-#' - `lexify(text = '????')` - replace a template with letters
-#' - `bothify(text = '## ??')` - both numerify and lexify together
-#' - `check_locale(x)` - check a locale to see if it exists, if not, stop with
-#'    error message
-#' - `randomize_nb_elements(x)` - Returns a random value near number.
-#'      - param number: value to which the result must be near
-#'      - param le: result must be lower or equal to number
-#'      - param ge: result must be greater or equal to number
-#'      - returns: a random int near number
-#'
-#' @format NULL
-#' @usage NULL
 #' @examples
 #' (x <- BaseProvider$new())
 #'
@@ -55,12 +29,17 @@
 BaseProvider <- R6::R6Class(
   'BaseProvider',
   public = list(
+    #' @description pick a random element from vector/list
+    #' @param x vector or list
+    #' @return a single element from x
     random_element = function(x) {
       if (length(x) == 0) return('')
       if (inherits(x, "character")) if (!any(nzchar(x))) return('')
       x[sample.int(n = length(x), size = 1)]
     },
 
+    #' @description pick a random element with probability from vector/list
+    #' @param x vector or list
     random_element_prob = function(x) {
       if (length(x) == 0) return('')
       if (inherits(x, "character")) if (!any(nzchar(x))) return('')
@@ -68,34 +47,46 @@ BaseProvider <- R6::R6Class(
       probs <- unname(unlist(x))
       sample(choices, size = 1, prob = probs)
     },
-
+    
+    #' @description any number of random integers from a min, max
+    #' @param min the minimum value. default: 0
+    #' @param max the maximum value. default: 9999
+    #' @param size number of values to return. default: 1
+    #' @return random integer
     random_int = function(min = 0, max = 9999, size = 1) {
       stopifnot(max >= min)
       num <- max - min + 1
       sample.int(n = num, size = size, replace = TRUE) + (min - 1)
     },
 
+    #' @description random integer between 0 and 9
     random_digit = function() {
       self$random_element(0:9)
     },
 
+    #' @description random integer between 1 and 9
     random_digit_not_zero = function() {
       self$random_element(1:9)
     },
 
+    #' @description random integer between 0 and 9 or empty character string
     random_digit_or_empty = function() {
       self$random_element(c(0:9, ""))
     },
 
+    #' @description random integer between 1 and 9 or empty character string
     random_digit_not_zero_or_empty = function() {
       self$random_element(c(1:9, ""))
     },
 
+    #' @description random letter
     random_letter = function() {
       # Returns a random letter (between a-z and A-Z)
       self$random_element(c(letters, LETTERS))
     },
 
+    #' @description replace a template with numbers
+    #' @param text (character) a string
     numerify = function(text = '###') {
       text <- do_match(text, "#", self$random_digit)
       text <- do_match(text, "%", self$random_digit_not_zero)
@@ -104,23 +95,33 @@ BaseProvider <- R6::R6Class(
       return(text)
     },
 
+    #' @description replace a template with letters
+    #' @param text (character) a string
     lexify = function(text = '????') {
       # Replaces all question mark ('?') occurrences with a random letter
       do_match(text, "?", self$random_letter)
     },
 
+    #' @description both numerify and lexify together
+    #' @param text (character) a string
     bothify = function(text = '## ??') {
       # Replaces all placeholders with random numbers and letters.
       self$lexify(self$numerify(text))
     },
 
+    #' @description check a locale to see if it exists, if not, stop with
+    #' error message
+    #' @param x a locale name, e.g, 'bg_BG'
+    #' @return returns nothing if locale is supported; stops w/ message if not
     check_locale = function(x) check_locale_(x),
 
-    prov_avail_locales = function(x) {
-      tmp <- getNamespaceExports("charlatan")
-      gsub(x, "", tmp[tmp %in% paste(x, tolower(available_locales), sep = "")])
-    },
-
+    #' @description Returns a random value near number
+    #' @param number value to which the result must be near
+    #' @param le result must be lower or equal to number
+    #' @param ge result must be greater or equal to number
+    #' @param min the minimum value. default: `NULL`
+    #' @param max the maximum value. default: `NULL`
+    #' @return a random int near number
     randomize_nb_elements = function(number = 10, le = FALSE, ge = FALSE,
       min = NULL, max = NULL) {
 

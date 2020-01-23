@@ -2,27 +2,6 @@
 #'
 #' @export
 #' @keywords internal
-#' @param locale (character) the locale to use. See
-#' `useragent_provider_locales` for locales supported (default: en_US)
-#' @details
-#' **Methods**
-#'
-#' - `mac_processor()` - a mac processor
-#' - `linux_processor()` - a linux processor
-#' - `user_agent()` - a user agent string, randomly picks one
-#'    from chrome, firefix, safari, opera or internet explorer
-#' - `chrome(version_from, version_to, build_from, build_to)` - a chrome
-#'    user agent string
-#' - `firefox()` - a firefox user agent string
-#' - `safari()` - a safari user agent string
-#' - `opera()` - an opera user agent string
-#' - `internet_explorer()` - an internet explorer user agent string
-#' - `windows_platform_token()` - a windows platform token
-#' - `linux_platform_token()` - a linux platform token
-#' - `mac_platform_token()` - a mac platform token
-#'
-#' @format NULL
-#' @usage NULL
 #' @examples
 #' (x <- UserAgentProvider$new())
 #' x$locale
@@ -38,20 +17,28 @@ UserAgentProvider <- R6::R6Class(
   inherit = BaseProvider,
   'UserAgentProvider',
   public = list(
+    #' @field locale (character) the locale
     locale = NULL,
+    #' @field user_agents (character) user agent browser specific strings
     user_agents = c(
         'chrome', 'firefox', 'internet_explorer', 'opera', 'safari'
     ),
+    #' @field windows_platform_tokens (character) windows platform tokens
     windows_platform_tokens = c(
         'Windows 95', 'Windows 98', 'Windows 98; Win 9x 4.90', 'Windows CE',
         'Windows NT 4.0', 'Windows NT 5.0', 'Windows NT 5.01',
         'Windows NT 5.1', 'Windows NT 5.2', 'Windows NT 6.0', 'Windows NT 6.1',
         'Windows NT 6.2'
     ),
+    #' @field linux_processors (character) linux processor options
     linux_processors = c('i686', 'x86_64'),
+    #' @field mac_processors (character) mac processor options
     mac_processors = c('Intel', 'PPC', 'U; Intel', 'U; PPC'),
 
-
+    #' @description Create a new `UserAgentProvider` object
+    #' @param locale (character) the locale to use. See
+    #' `useragent_provider_locales` for locales supported (default: en_US)
+    #' @return A new `UserAgentProvider` object
     initialize = function(locale = NULL) {
       if (!is.null(locale)) {
         # check global locales
@@ -64,19 +51,27 @@ UserAgentProvider <- R6::R6Class(
       }
     },
 
+    #' @description a mac processor
     mac_processor = function() {
         super$random_element(self$mac_processors)
     },
 
+    #' @description a linux processor
     linux_processor = function() {
         super$random_element(self$linux_processors)
     },
 
+    #' @description a random user agent string
     user_agent = function() {
         name <- super$random_element(self$user_agents)
         self[[name]]()
     },
 
+    #' @description a chrome user agent string
+    #' @param version_from (integer) minimum version
+    #' @param version_to (integer) maximum version
+    #' @param build_from (integer) minimum build
+    #' @param build_to (integer) maximum build
     chrome = function(version_from = 13, version_to = 63,
                build_from = 800, build_to = 899) {
 
@@ -103,6 +98,7 @@ UserAgentProvider <- R6::R6Class(
         paste0('Mozilla/5.0 ', super$random_element(platforms))
     },
 
+    #' @description a firefox user agent string
     firefox = function() {
       dt <- DateTimeProvider$new()
       ver = c(
@@ -136,6 +132,7 @@ UserAgentProvider <- R6::R6Class(
       paste0('Mozilla/5.0 ', super$random_element(platforms))
     },
 
+    #' @description a safari user agent string
     safari = function() {
       saf <- sprintf("%s.%s.%s", super$random_int(531, 535),
                      super$random_int(1, 50),
@@ -171,6 +168,7 @@ UserAgentProvider <- R6::R6Class(
       paste0('Mozilla/5.0 ', super$random_element(platforms))
     },
 
+    #' @description an opera user agent string
     opera = function() {
       platform <- sprintf(
         '(%s; %s) Presto/2.9.%s Version/%s.00',
@@ -189,6 +187,7 @@ UserAgentProvider <- R6::R6Class(
               platform)
     },
 
+    #' @description an internet explorer user agent string
     internet_explorer = function() {
       tmplt <- 'Mozilla/5.0 (compatible; MSIE %s.0; %s; Trident/%s.%s)'
       sprintf(tmplt, super$random_int(5, 9),
@@ -197,14 +196,17 @@ UserAgentProvider <- R6::R6Class(
               super$random_int(0, 1))
     },
 
+    #' @description a windows platform token
     windows_platform_token = function() {
       super$random_element(self$windows_platform_tokens)
     },
 
+    #' @description a linux platform token
     linux_platform_token = function() {
       paste0('X11; Linux ', super$random_element(self$linux_processors))
     },
 
+    #' @description a mac platform token
     mac_platform_token = function() {
       sprintf('Macintosh; %s Mac OS X 10_%s_%s',
               super$random_element(self$mac_processors),

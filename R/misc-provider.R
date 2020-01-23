@@ -2,18 +2,6 @@
 #'
 #' @export
 #' @keywords internal
-#' @details
-#' **Methods**
-#' 
-#' - `language_locale_codes` - list of language locales supported by 
-#'     Linux Mint
-#' - `locale()` - locale
-#' - `language_code()` - language code
-#' - `boolean()` - a boolean, `TRUE` or `FALSE`
-#' - `null_boolean()` - a boolean, `TRUE` or `FALSE`, or NULL
-#'
-#' @format NULL
-#' @usage NULL
 #' @examples
 #' (x <- MiscProvider$new())
 #' x$language_locale_codes
@@ -26,6 +14,7 @@ MiscProvider <- R6::R6Class(
   'MiscProvider',
   public = list(
     # Locales supported by Linux Mint from `/usr/share/i18n/SUPPORTED`
+    #' @field language_locale_codes (list) locale codes by locale family
     language_locale_codes = list(
         'aa' = c('DJ', 'ER', 'ET'),
         'af' = c('ZA'),
@@ -214,11 +203,14 @@ MiscProvider <- R6::R6Class(
         'zh' = c('CN', 'HK', 'SG', 'TW'),
         'zu' = c('ZA')
     ),
-
+    
+    #' @description get a random boolean, `TRUE` or `FALSE`
+    #' @param chance_of_getting_true (integer) an integer, default: 50
     boolean = function(chance_of_getting_true = 50) {
       super$random_int(1, 100) <= chance_of_getting_true
     },
 
+    #' @description get a random boolean, `TRUE` or `FALSE`, or NULL
     null_boolean = function() {
       take <- as.character(super$random_int(-1, 1))
       list(`0` = NULL, `1` = TRUE, `-1` = FALSE)[[take]]
@@ -232,11 +224,13 @@ MiscProvider <- R6::R6Class(
     #     blob = [self.generator.random.randrange(256) for o in range(length)]
     #     return bytes(blob) if sys.version_info[0] >= 3 else bytearray(blob)
 
+    #' @description get a random locale
     locale = function() {
       lc = self$language_code()
       paste0(lc, '_', super$random_element(self$language_locale_codes[[lc]]))
     },
 
+    #' @description random language code
     language_code = function() {
       super$random_element(names(self$language_locale_codes))
     }

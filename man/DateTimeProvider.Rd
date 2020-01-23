@@ -8,51 +8,6 @@ DateTimeProvider
 
 DateTimeProvider
 }
-\details{
-\strong{Methods}
-\describe{
-\item{\code{unix_time(start_date = NULL, end_date = "now")}}{
-Get a timestamp between January 1, 1970 and now, unless passed
-explicit \code{start_date} or \code{end_date} values
-param \code{start_date}: start date, a valid date format
-param \code{end_date}: start date, a valid date format, default: now
-ref: https://en.wikipedia.org/wiki/Unix_time
-}
-\item{\code{date(pattern)}}{
-Generate a date between January 1, 1970 and now, with given pattern
-param \code{pattern}: date pattern, default: \verb{\%Y-\%m-\%d}
-}
-\item{\code{date_time(tzinfo = NULL)}}{
-Generate a date time between January 1, 1970 and now
-param \code{tzinfo}: timezone, see \link{timezone}
-}
-\item{\code{date_time_fromtimestamp(timestamp, tzinfo = NULL)}}{
-Generate a iso8601 format date
-param \code{timestamp}: a timestamp
-param \code{tzinfo}: timezone, see \link{timezone}
-ref: https://en.wikipedia.org/wiki/Unix_time
-}
-\item{\code{iso8601(tzinfo = NULL)}}{
-Generate a iso8601 format date
-param \code{tzinfo}: timezone, see \link{timezone}
-}
-\item{\code{year()}}{
-generate a year
-}
-\item{\code{century()}}{
-generate a century
-}
-\item{\code{timezone()}}{
-generate a timezone
-}
-\item{\code{date_time_between(start_date, end_date = "now", tzinfo = NULL)}}{
-Generate a date time based on a random date between two given dates
-param \code{start_date}: start date, a valid date format
-param \code{end_date}: start date, a valid date format, default: now
-param \code{tzinfo}: timezone, see \link{timezone}
-}
-}
-}
 \examples{
 z <- DateTimeProvider$new()
 z$countries
@@ -73,9 +28,23 @@ z$date_time_between(start_date = start_date)
 z$date_time_between("1900-01-01 00:00:00 PST", "1900-12-31 00:00:00 PST")
 z$date_time_between("1900-01-01", "1900-12-31")
 }
+\references{
+https://en.wikipedia.org/wiki/Unix_time
+
+https://en.wikipedia.org/wiki/Unix_time
+}
 \keyword{internal}
 \section{Super class}{
 \code{\link[charlatan:BaseProvider]{charlatan::BaseProvider}} -> \code{DateTimeProvider}
+}
+\section{Public fields}{
+\if{html}{\out{<div class="r6-fields">}}
+\describe{
+\item{\code{centuries}}{(character) centuries in roman numerals}
+
+\item{\code{countries}}{(list) countries list}
+}
+\if{html}{\out{</div>}}
 }
 \section{Methods}{
 \subsection{Public methods}{
@@ -99,7 +68,6 @@ z$date_time_between("1900-01-01", "1900-12-31")
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale">}\href{../../charlatan/html/BaseProvider.html#method-check_locale}{\code{charlatan::BaseProvider$check_locale()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="lexify">}\href{../../charlatan/html/BaseProvider.html#method-lexify}{\code{charlatan::BaseProvider$lexify()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="numerify">}\href{../../charlatan/html/BaseProvider.html#method-numerify}{\code{charlatan::BaseProvider$numerify()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="prov_avail_locales">}\href{../../charlatan/html/BaseProvider.html#method-prov_avail_locales}{\code{charlatan::BaseProvider$prov_avail_locales()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit">}\href{../../charlatan/html/BaseProvider.html#method-random_digit}{\code{charlatan::BaseProvider$random_digit()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_not_zero}{\code{charlatan::BaseProvider$random_digit_not_zero()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero_or_empty">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_not_zero_or_empty}{\code{charlatan::BaseProvider$random_digit_not_zero_or_empty()}}\out{</span>}
@@ -115,46 +83,95 @@ z$date_time_between("1900-01-01", "1900-12-31")
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-unix_time"></a>}}
 \subsection{Method \code{unix_time()}}{
+Get a timestamp between January 1, 1970 and now, unless passed
+explicit \code{start_date} or \code{end_date} values
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{DateTimeProvider$unix_time(start_date = NULL, end_date = "now")}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{start_date}}{start date, a valid date format}
+
+\item{\code{end_date}}{start date, a valid date format, default: "now"}
+}
+\if{html}{\out{</div>}}
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-date"></a>}}
 \subsection{Method \code{date()}}{
+Generate a date between January 1, 1970 and now,
+with given pattern
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{DateTimeProvider$date(pattern = "\%Y-\%m-\%d")}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{pattern}}{date pattern, default: \verb{\%Y-\%m-\%d}}
+}
+\if{html}{\out{</div>}}
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-date_time"></a>}}
 \subsection{Method \code{date_time()}}{
+Generate a date time between January 1, 1970 and now
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{DateTimeProvider$date_time(tzinfo = NULL)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{tzinfo}}{timezone, see \link{timezone}}
+}
+\if{html}{\out{</div>}}
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-date_time_fromtimestamp"></a>}}
 \subsection{Method \code{date_time_fromtimestamp()}}{
+Generate a iso8601 format date
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{DateTimeProvider$date_time_fromtimestamp(timestamp, tzinfo = NULL)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{timestamp}}{a timestamp}
+
+\item{\code{tzinfo}}{timezone, see \link{timezone}}
+}
+\if{html}{\out{</div>}}
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-iso8601"></a>}}
 \subsection{Method \code{iso8601()}}{
+Generate a iso8601 format date
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{DateTimeProvider$iso8601(date, tzinfo = NULL)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{date}}{a date, in a valid date format}
+
+\item{\code{tzinfo}}{timezone, see \link{timezone}}
+}
+\if{html}{\out{</div>}}
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-year"></a>}}
 \subsection{Method \code{year()}}{
+generate a year
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{DateTimeProvider$year()}\if{html}{\out{</div>}}
 }
@@ -163,6 +180,7 @@ z$date_time_between("1900-01-01", "1900-12-31")
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-century"></a>}}
 \subsection{Method \code{century()}}{
+generate a century
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{DateTimeProvider$century()}\if{html}{\out{</div>}}
 }
@@ -171,6 +189,7 @@ z$date_time_between("1900-01-01", "1900-12-31")
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-timezone"></a>}}
 \subsection{Method \code{timezone()}}{
+generate a timezone
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{DateTimeProvider$timezone()}\if{html}{\out{</div>}}
 }
@@ -179,10 +198,23 @@ z$date_time_between("1900-01-01", "1900-12-31")
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-date_time_between"></a>}}
 \subsection{Method \code{date_time_between()}}{
+Generate a date time based on a random date between
+two given dates
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{DateTimeProvider$date_time_between(start_date, end_date = "now", tzinfo = NULL)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{start_date}}{start date, a valid date format}
+
+\item{\code{end_date}}{start date, a valid date format, default: "now"}
+
+\item{\code{tzinfo}}{timezone, see \link{timezone}}
+}
+\if{html}{\out{</div>}}
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-clone"></a>}}

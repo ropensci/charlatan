@@ -8,48 +8,6 @@ NumericsProvider
 
 NumericsProvider
 }
-\details{
-\strong{Methods}
-\itemize{
-\item \code{double(n, mean, sd)} - get a double, pulls from normal distribution
-\itemize{
-\item n: number of values, default: 1
-\item mean: mean value, default: 0
-\item sd: standard deviation, default: 1
-}
-\item \code{integer(n, min, max)} - get an integer, runs \code{\link[=sample]{sample()}} on range given
-\itemize{
-\item n: number of values, default: 1
-\item min: minimum value, default: 1
-\item max: maximum value, default: 1000
-}
-\item \code{unif(n, min, max)} - get numbers from the uniform distribution
-\itemize{
-\item n: number of values, default: 1
-\item min: minimum value, default: 0
-\item max: maximum value, default: 9999
-}
-\item \code{norm(n, mean, sd)} - get numbers from the normal distribution
-\itemize{
-\item n: number of values, default: 1
-\item mean: mean value, default: 0
-\item sd: standard deviation, default: 1
-}
-\item \code{lnorm(n, mean, sd)} - get numbers from the lognormal distribution
-\itemize{
-\item n: number of values, default: 1
-\item mean: mean value, default: 0
-\item sd: standard deviation, default: 1
-}
-\item \code{beta(n, shape1, shape2, ncp)} - get numbers from the beta distribution
-\itemize{
-\item n: number of values, default: 1
-\item shape1: non-negative parameters of the Beta distribution
-\item shape2: non-negative parameters of the Beta distribution
-\item ncp: non-centrality parameter, default: 0
-}
-}
-}
 \examples{
 z <- NumericsProvider$new()
 
@@ -91,7 +49,6 @@ z$beta(10, 1, 1)
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale">}\href{../../charlatan/html/BaseProvider.html#method-check_locale}{\code{charlatan::BaseProvider$check_locale()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="lexify">}\href{../../charlatan/html/BaseProvider.html#method-lexify}{\code{charlatan::BaseProvider$lexify()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="numerify">}\href{../../charlatan/html/BaseProvider.html#method-numerify}{\code{charlatan::BaseProvider$numerify()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="prov_avail_locales">}\href{../../charlatan/html/BaseProvider.html#method-prov_avail_locales}{\code{charlatan::BaseProvider$prov_avail_locales()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit">}\href{../../charlatan/html/BaseProvider.html#method-random_digit}{\code{charlatan::BaseProvider$random_digit()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_not_zero}{\code{charlatan::BaseProvider$random_digit_not_zero()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero_or_empty">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_not_zero_or_empty}{\code{charlatan::BaseProvider$random_digit_not_zero_or_empty()}}\out{</span>}
@@ -107,50 +64,124 @@ z$beta(10, 1, 1)
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-double"></a>}}
 \subsection{Method \code{double()}}{
+get a double, pulls from normal distribution
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{NumericsProvider$double(n = 1, mean = 0, sd = 1)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{n}}{(integer) number of values, default: 1}
+
+\item{\code{mean}}{mean value, default: 0}
+
+\item{\code{sd}}{standard deviation, default: 1}
+}
+\if{html}{\out{</div>}}
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-integer"></a>}}
 \subsection{Method \code{integer()}}{
+get an integer, runs \code{\link[=sample]{sample()}} on range given
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{NumericsProvider$integer(n = 1, min = 1, max = 1000)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{n}}{(integer) number of values, default: 1}
+
+\item{\code{min}}{minimum value, default: 1}
+
+\item{\code{max}}{maximum value, default: 1000}
+}
+\if{html}{\out{</div>}}
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-unif"></a>}}
 \subsection{Method \code{unif()}}{
+get numbers from the uniform distribution
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{NumericsProvider$unif(n = 1, min = 0, max = 9999)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{n}}{(integer) number of values, default: 1}
+
+\item{\code{min}}{minimum value, default: 1}
+
+\item{\code{max}}{maximum value, default: 1000}
+}
+\if{html}{\out{</div>}}
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-norm"></a>}}
 \subsection{Method \code{norm()}}{
+get numbers from the normal distribution
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{NumericsProvider$norm(n = 1, mean = 0, sd = 1)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{n}}{(integer) number of values, default: 1}
+
+\item{\code{mean}}{mean value, default: 0}
+
+\item{\code{sd}}{standard deviation, default: 1}
+}
+\if{html}{\out{</div>}}
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-lnorm"></a>}}
 \subsection{Method \code{lnorm()}}{
+get numbers from the lognormal distribution
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{NumericsProvider$lnorm(n = 1, mean = 0, sd = 1)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{n}}{(integer) number of values, default: 1}
+
+\item{\code{mean}}{mean value, default: 0}
+
+\item{\code{sd}}{standard deviation, default: 1}
+}
+\if{html}{\out{</div>}}
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-beta"></a>}}
 \subsection{Method \code{beta()}}{
+get numbers from the beta distribution
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{NumericsProvider$beta(n = 1, shape1, shape2, ncp = 0)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{n}}{(integer) number of values, default: 1}
+
+\item{\code{shape1}}{non-negative parameters of the Beta distribution}
+
+\item{\code{shape2}}{non-negative parameters of the Beta distribution}
+
+\item{\code{ncp}}{non-centrality parameter, default: 0}
+}
+\if{html}{\out{</div>}}
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-clone"></a>}}

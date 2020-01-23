@@ -2,18 +2,6 @@
 #'
 #' @export
 #' @keywords internal
-#' @details
-#' **Methods**
-#' 
-#' - `lat()` - a latitude value
-#' - `lon()` - a longitude value
-#' - `position(bbox)` - a position, of form `[longitude,latitude]`
-#'       - bbox: optionally, specify a bounding box for the position
-#'        to be in, of the form `[west,south,east,north]` - checks that the
-#'        bbox has valid values for lat and long
-#' 
-#' @format NULL
-#' @usage NULL
 #' @examples
 #' z <- CoordinateProvider$new()
 #' z$lon()
@@ -23,9 +11,14 @@
 CoordinateProvider <- R6::R6Class(
   'CoordinateProvider',
   public = list(
+    #' @description a latitude value
     lon = function() private$rnd() * 360,
+    #' @description a longitude value
     lat = function() private$rnd() * 180,
-
+    #' @description a position, of form `[longitude,latitude]`
+    #' @param bbox optionally, specify a bounding box for the position
+    #' to be in, of the form `[west,south,east,north]` - checks that the
+    #' bbox has valid values for lat and long
     position = function(bbox = NULL) {
       if (!is.null(bbox)) {
         private$coord_in_bbbox(bbox)

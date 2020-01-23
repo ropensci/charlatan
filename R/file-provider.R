@@ -2,18 +2,6 @@
 #'
 #' @export
 #' @keywords internal
-#' @param locale (character) the locale to use. See
-#' `file_provider_locales` for locales supported (default: en_US)
-#' @details
-#' **Methods**
-#'
-#' - `mime_type(category)` - mime type
-#' - `file_name(category(NULL, extension)` - file name
-#' - `file_extension(category)` - file extension
-#' - `file_path(depth(1, category(NULL, extension)` - file path
-#'
-#' @format NULL
-#' @usage NULL
 #' @examples
 #' (x <- FileProvider$new())
 #' x$locale
@@ -28,7 +16,13 @@ FileProvider <- R6::R6Class(
   inherit = BaseProvider,
   'FileProvider',
   public = list(
+    #' @field locale (character) the locale
     locale = NULL,
+
+    #' @description Create a new `FileProvider` object
+    #' @param locale (character) the locale to use. See
+    #' `file_provider_locales` for locales supported (default: en_US)
+    #' @return A new `FileProvider` object
     initialize = function(locale = NULL) {
       if (!is.null(locale)) {
         # check global locales
@@ -60,6 +54,10 @@ FileProvider <- R6::R6Class(
       )
     },
 
+    #' @description a random mime type
+    #' @param category (character) a mime type category of mime types, one
+    #' of application, audio, image, message, model, multipart, text or
+    #' video. default: `NULL`
     mime_type = function(category = NULL) {
       category <- if (!is.null(category)) {
         category
@@ -69,14 +67,21 @@ FileProvider <- R6::R6Class(
       return(super$random_element(private$mime_types[[category]]))
     },
 
+    #' @description a random file name
+    #' @param category (character) a category of file extension type, one of
+    #' audio, image, office, text or video. default: `NULL`. If this is 
+    #' given, `extension` is ignored
+    #' @param extension (character) a file extension. if this is given,
+    #' `category` is ignored.
     file_name = function(category = NULL, extension = NULL) {
-        # :param category: audio|image|office|text|video
-        # :param extension: file extension
         x = if (!is.null(extension)) extension else self$file_extension(category)
         filename = LoremProvider$new(locale = self$locale)$word()
         sprintf('%s.%s', filename, x)
     },
 
+    #' @description a random file extension
+    #' @param category (character) a category of file extension type, one of
+    #' audio, image, office, text or video. default: `NULL`
     file_extension = function(category = NULL) {
       category <- if (!is.null(category)) {
         category
@@ -86,10 +91,14 @@ FileProvider <- R6::R6Class(
       return(super$random_element(private$file_extensions[[category]]))
     },
 
+    #' @description a random file path
+    #' @param depth (character) depth of the file (depth >= 0). default: 1
+    #' @param category (character) a category of file extension type, one of
+    #' audio, image, office, text or video. default: `NULL`. If this is 
+    #' given, `extension` is ignored
+    #' @param extension (character) a file extension. if this is given,
+    #' `category` is ignored.
     file_path = function(depth = 1, category = NULL, extension = NULL) {
-      # :param category: audio|image|office|text|video
-      # :param extension: file extension
-      # :param depth: depth of the file (depth >= 0)
       file = self$file_name(category, extension)
       path = paste0("/", file)
       for (d in seq_len(depth)) {

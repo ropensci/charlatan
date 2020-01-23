@@ -8,17 +8,6 @@ CoordinateProvider
 
 CoordinateProvider
 }
-\details{
-\strong{Methods}
-\itemize{
-\item \code{lat()} - a latitude value
-\item \code{lon()} - a longitude value
-\item \code{position(bbox)} - a position, of form \verb{[longitude,latitude]}
-- bbox: optionally, specify a bounding box for the position
-to be in, of the form \verb{[west,south,east,north]} - checks that the
-bbox has valid values for lat and long
-}
-}
 \examples{
 z <- CoordinateProvider$new()
 z$lon()
@@ -39,6 +28,7 @@ z$position(bbox = c(-120, 30, -110, 60))
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-lon"></a>}}
 \subsection{Method \code{lon()}}{
+a latitude value
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{CoordinateProvider$lon()}\if{html}{\out{</div>}}
 }
@@ -47,6 +37,7 @@ z$position(bbox = c(-120, 30, -110, 60))
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-lat"></a>}}
 \subsection{Method \code{lat()}}{
+a longitude value
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{CoordinateProvider$lat()}\if{html}{\out{</div>}}
 }
@@ -55,10 +46,20 @@ z$position(bbox = c(-120, 30, -110, 60))
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-position"></a>}}
 \subsection{Method \code{position()}}{
+a position, of form \verb{[longitude,latitude]}
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{CoordinateProvider$position(bbox = NULL)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{bbox}}{optionally, specify a bounding box for the position
+to be in, of the form \verb{[west,south,east,north]} - checks that the
+bbox has valid values for lat and long}
+}
+\if{html}{\out{</div>}}
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-clone"></a>}}

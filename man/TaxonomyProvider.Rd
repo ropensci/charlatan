@@ -4,20 +4,7 @@
 \alias{TaxonomyProvider}
 \title{TaxonomyProvider}
 \description{
-TaxonomyProvider
-
-TaxonomyProvider
-}
-\details{
-\strong{Methods}
-\itemize{
-\item \code{genus()} - Get a genus name
-\item \code{epithet()} - Get an epithet name
-\item \code{species(authority, date)} - Get a binomial name (genus + epithet)
-- authority: Include authority. default: \code{FALSE}
-- date: Include authority date. If \code{authority = FALSE},
-this is ignored. default: \code{FALSE}
-}
+Taxonomy provider
 }
 \section{Names}{
 
@@ -48,6 +35,15 @@ z$species(authority = TRUE)
 \section{Super class}{
 \code{\link[charlatan:BaseProvider]{charlatan::BaseProvider}} -> \code{TaxonomyProvider}
 }
+\section{Public fields}{
+\if{html}{\out{<div class="r6-fields">}}
+\describe{
+\item{\code{genera}}{(character) vector of generic names}
+
+\item{\code{epithets}}{(character) vector of eptithet names}
+}
+\if{html}{\out{</div>}}
+}
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
@@ -64,7 +60,6 @@ z$species(authority = TRUE)
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale">}\href{../../charlatan/html/BaseProvider.html#method-check_locale}{\code{charlatan::BaseProvider$check_locale()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="lexify">}\href{../../charlatan/html/BaseProvider.html#method-lexify}{\code{charlatan::BaseProvider$lexify()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="numerify">}\href{../../charlatan/html/BaseProvider.html#method-numerify}{\code{charlatan::BaseProvider$numerify()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="prov_avail_locales">}\href{../../charlatan/html/BaseProvider.html#method-prov_avail_locales}{\code{charlatan::BaseProvider$prov_avail_locales()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit">}\href{../../charlatan/html/BaseProvider.html#method-random_digit}{\code{charlatan::BaseProvider$random_digit()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_not_zero}{\code{charlatan::BaseProvider$random_digit_not_zero()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero_or_empty">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_not_zero_or_empty}{\code{charlatan::BaseProvider$random_digit_not_zero_or_empty()}}\out{</span>}
@@ -80,6 +75,7 @@ z$species(authority = TRUE)
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-genus"></a>}}
 \subsection{Method \code{genus()}}{
+Get a genus name
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{TaxonomyProvider$genus()}\if{html}{\out{</div>}}
 }
@@ -88,6 +84,7 @@ z$species(authority = TRUE)
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-epithet"></a>}}
 \subsection{Method \code{epithet()}}{
+Get an epithet name
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{TaxonomyProvider$epithet()}\if{html}{\out{</div>}}
 }
@@ -96,10 +93,21 @@ z$species(authority = TRUE)
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-species"></a>}}
 \subsection{Method \code{species()}}{
+Get a binomial name (genus + epithet)
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{TaxonomyProvider$species(authority = FALSE, date = FALSE)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{authority}}{Include authority. default: \code{FALSE}}
+
+\item{\code{date}}{Include authority date. If \code{authority = FALSE},
+this is ignored. default: \code{FALSE}}
+}
+\if{html}{\out{</div>}}
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-clone"></a>}}

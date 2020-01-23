@@ -8,32 +8,6 @@ BaseProvider
 
 BaseProvider
 }
-\details{
-\strong{Methods}
-\itemize{
-\item \code{random_element(x)} - pick a random element from any input vector or list
-\item \code{random_int(min = 0, max = 9999, size = 1)} - random integer
-\item \code{random_digit()} - random integer between 0 and 9
-\item \code{random_digit_not_zero()} - random integer between 1 and 9
-\item \code{random_digit_or_empty()} - random integer between 0 and 9 or empty
-character string
-\item \code{random_digit_not_zero_or_empty()} - random integer between 1 and 9 or empty
-character string
-\item \code{random_letter()} - random letter
-\item \code{numerify(text = '###')} - replace a template with numbers
-\item \code{lexify(text = '????')} - replace a template with letters
-\item \code{bothify(text = '## ??')} - both numerify and lexify together
-\item \code{check_locale(x)} - check a locale to see if it exists, if not, stop with
-error message
-\item \code{randomize_nb_elements(x)} - Returns a random value near number.
-\itemize{
-\item param number: value to which the result must be near
-\item param le: result must be lower or equal to number
-\item param ge: result must be greater or equal to number
-\item returns: a random int near number
-}
-}
-}
 \examples{
 (x <- BaseProvider$new())
 
@@ -57,7 +31,6 @@ x$check_locale("es_ES")
 
 x$randomize_nb_elements()
 }
-\keyword{internal}
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
@@ -73,7 +46,6 @@ x$randomize_nb_elements()
 \item \href{#method-lexify}{\code{BaseProvider$lexify()}}
 \item \href{#method-bothify}{\code{BaseProvider$bothify()}}
 \item \href{#method-check_locale}{\code{BaseProvider$check_locale()}}
-\item \href{#method-prov_avail_locales}{\code{BaseProvider$prov_avail_locales()}}
 \item \href{#method-randomize_nb_elements}{\code{BaseProvider$randomize_nb_elements()}}
 \item \href{#method-clone}{\code{BaseProvider$clone()}}
 }
@@ -81,30 +53,65 @@ x$randomize_nb_elements()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-random_element"></a>}}
 \subsection{Method \code{random_element()}}{
+pick a random element from vector/list
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{BaseProvider$random_element(x)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{x}}{vector or list}
+}
+\if{html}{\out{</div>}}
+}
+\subsection{Returns}{
+a single element from x
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-random_element_prob"></a>}}
 \subsection{Method \code{random_element_prob()}}{
+pick a random element with probability from vector/list
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{BaseProvider$random_element_prob(x)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{x}}{vector or list}
+}
+\if{html}{\out{</div>}}
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-random_int"></a>}}
 \subsection{Method \code{random_int()}}{
+any number of random integers from a min, max
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{BaseProvider$random_int(min = 0, max = 9999, size = 1)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{min}}{the minimum value. default: 0}
+
+\item{\code{max}}{the maximum value. default: 9999}
+
+\item{\code{size}}{number of values to return. default: 1}
+}
+\if{html}{\out{</div>}}
+}
+\subsection{Returns}{
+random integer
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-random_digit"></a>}}
 \subsection{Method \code{random_digit()}}{
+random integer between 0 and 9
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{BaseProvider$random_digit()}\if{html}{\out{</div>}}
 }
@@ -113,6 +120,7 @@ x$randomize_nb_elements()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-random_digit_not_zero"></a>}}
 \subsection{Method \code{random_digit_not_zero()}}{
+random integer between 1 and 9
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{BaseProvider$random_digit_not_zero()}\if{html}{\out{</div>}}
 }
@@ -121,6 +129,7 @@ x$randomize_nb_elements()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-random_digit_or_empty"></a>}}
 \subsection{Method \code{random_digit_or_empty()}}{
+random integer between 0 and 9 or empty character string
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{BaseProvider$random_digit_or_empty()}\if{html}{\out{</div>}}
 }
@@ -129,6 +138,7 @@ x$randomize_nb_elements()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-random_digit_not_zero_or_empty"></a>}}
 \subsection{Method \code{random_digit_not_zero_or_empty()}}{
+random integer between 1 and 9 or empty character string
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{BaseProvider$random_digit_not_zero_or_empty()}\if{html}{\out{</div>}}
 }
@@ -137,6 +147,7 @@ x$randomize_nb_elements()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-random_letter"></a>}}
 \subsection{Method \code{random_letter()}}{
+random letter
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{BaseProvider$random_letter()}\if{html}{\out{</div>}}
 }
@@ -145,46 +156,75 @@ x$randomize_nb_elements()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-numerify"></a>}}
 \subsection{Method \code{numerify()}}{
+replace a template with numbers
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{BaseProvider$numerify(text = "###")}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{text}}{(character) a string}
+}
+\if{html}{\out{</div>}}
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-lexify"></a>}}
 \subsection{Method \code{lexify()}}{
+replace a template with letters
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{BaseProvider$lexify(text = "????")}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{text}}{(character) a string}
+}
+\if{html}{\out{</div>}}
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-bothify"></a>}}
 \subsection{Method \code{bothify()}}{
+both numerify and lexify together
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{BaseProvider$bothify(text = "## ??")}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{text}}{(character) a string}
+}
+\if{html}{\out{</div>}}
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-check_locale"></a>}}
 \subsection{Method \code{check_locale()}}{
+check a locale to see if it exists, if not, stop with
+error message
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{BaseProvider$check_locale(x)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{x}}{a locale name, e.g, 'bg_BG'}
 }
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-prov_avail_locales"></a>}}
-\subsection{Method \code{prov_avail_locales()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{BaseProvider$prov_avail_locales(x)}\if{html}{\out{</div>}}
+\if{html}{\out{</div>}}
 }
-
+\subsection{Returns}{
+returns nothing if locale is supported; stops w/ message if not
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-randomize_nb_elements"></a>}}
 \subsection{Method \code{randomize_nb_elements()}}{
+Returns a random value near number
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{BaseProvider$randomize_nb_elements(
   number = 10,
@@ -195,6 +235,24 @@ x$randomize_nb_elements()
 )}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{number}}{value to which the result must be near}
+
+\item{\code{le}}{result must be lower or equal to number}
+
+\item{\code{ge}}{result must be greater or equal to number}
+
+\item{\code{min}}{the minimum value. default: \code{NULL}}
+
+\item{\code{max}}{the maximum value. default: \code{NULL}}
+}
+\if{html}{\out{</div>}}
+}
+\subsection{Returns}{
+a random int near number
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-clone"></a>}}

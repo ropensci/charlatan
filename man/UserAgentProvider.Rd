@@ -14,24 +14,6 @@ UserAgentProvider
 
 UserAgentProvider
 }
-\details{
-\strong{Methods}
-\itemize{
-\item \code{mac_processor()} - a mac processor
-\item \code{linux_processor()} - a linux processor
-\item \code{user_agent()} - a user agent string, randomly picks one
-from chrome, firefix, safari, opera or internet explorer
-\item \code{chrome(version_from, version_to, build_from, build_to)} - a chrome
-user agent string
-\item \code{firefox()} - a firefox user agent string
-\item \code{safari()} - a safari user agent string
-\item \code{opera()} - an opera user agent string
-\item \code{internet_explorer()} - an internet explorer user agent string
-\item \code{windows_platform_token()} - a windows platform token
-\item \code{linux_platform_token()} - a linux platform token
-\item \code{mac_platform_token()} - a mac platform token
-}
-}
 \examples{
 (x <- UserAgentProvider$new())
 x$locale
@@ -48,6 +30,21 @@ x$safari()
 \keyword{internal}
 \section{Super class}{
 \code{\link[charlatan:BaseProvider]{charlatan::BaseProvider}} -> \code{UserAgentProvider}
+}
+\section{Public fields}{
+\if{html}{\out{<div class="r6-fields">}}
+\describe{
+\item{\code{locale}}{(character) the locale}
+
+\item{\code{user_agents}}{(character) user agent browser specific strings}
+
+\item{\code{windows_platform_tokens}}{(character) windows platform tokens}
+
+\item{\code{linux_processors}}{(character) linux processor options}
+
+\item{\code{mac_processors}}{(character) mac processor options}
+}
+\if{html}{\out{</div>}}
 }
 \section{Methods}{
 \subsection{Public methods}{
@@ -74,7 +71,6 @@ x$safari()
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale">}\href{../../charlatan/html/BaseProvider.html#method-check_locale}{\code{charlatan::BaseProvider$check_locale()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="lexify">}\href{../../charlatan/html/BaseProvider.html#method-lexify}{\code{charlatan::BaseProvider$lexify()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="numerify">}\href{../../charlatan/html/BaseProvider.html#method-numerify}{\code{charlatan::BaseProvider$numerify()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="prov_avail_locales">}\href{../../charlatan/html/BaseProvider.html#method-prov_avail_locales}{\code{charlatan::BaseProvider$prov_avail_locales()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit">}\href{../../charlatan/html/BaseProvider.html#method-random_digit}{\code{charlatan::BaseProvider$random_digit()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_not_zero}{\code{charlatan::BaseProvider$random_digit_not_zero()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero_or_empty">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_not_zero_or_empty}{\code{charlatan::BaseProvider$random_digit_not_zero_or_empty()}}\out{</span>}
@@ -90,6 +86,7 @@ x$safari()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-new"></a>}}
 \subsection{Method \code{new()}}{
+Create a new \code{UserAgentProvider} object
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{UserAgentProvider$new(locale = NULL)}\if{html}{\out{</div>}}
 }
@@ -102,10 +99,14 @@ x$safari()
 }
 \if{html}{\out{</div>}}
 }
+\subsection{Returns}{
+A new \code{UserAgentProvider} object
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-mac_processor"></a>}}
 \subsection{Method \code{mac_processor()}}{
+a mac processor
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{UserAgentProvider$mac_processor()}\if{html}{\out{</div>}}
 }
@@ -114,6 +115,7 @@ x$safari()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-linux_processor"></a>}}
 \subsection{Method \code{linux_processor()}}{
+a linux processor
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{UserAgentProvider$linux_processor()}\if{html}{\out{</div>}}
 }
@@ -122,6 +124,7 @@ x$safari()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-user_agent"></a>}}
 \subsection{Method \code{user_agent()}}{
+a random user agent string
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{UserAgentProvider$user_agent()}\if{html}{\out{</div>}}
 }
@@ -130,6 +133,7 @@ x$safari()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-chrome"></a>}}
 \subsection{Method \code{chrome()}}{
+a chrome user agent string
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{UserAgentProvider$chrome(
   version_from = 13,
@@ -139,10 +143,24 @@ x$safari()
 )}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{version_from}}{(integer) minimum version}
+
+\item{\code{version_to}}{(integer) maximum version}
+
+\item{\code{build_from}}{(integer) minimum build}
+
+\item{\code{build_to}}{(integer) maximum build}
+}
+\if{html}{\out{</div>}}
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-firefox"></a>}}
 \subsection{Method \code{firefox()}}{
+a firefox user agent string
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{UserAgentProvider$firefox()}\if{html}{\out{</div>}}
 }
@@ -151,6 +169,7 @@ x$safari()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-safari"></a>}}
 \subsection{Method \code{safari()}}{
+a safari user agent string
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{UserAgentProvider$safari()}\if{html}{\out{</div>}}
 }
@@ -159,6 +178,7 @@ x$safari()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-opera"></a>}}
 \subsection{Method \code{opera()}}{
+an opera user agent string
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{UserAgentProvider$opera()}\if{html}{\out{</div>}}
 }
@@ -167,6 +187,7 @@ x$safari()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-internet_explorer"></a>}}
 \subsection{Method \code{internet_explorer()}}{
+an internet explorer user agent string
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{UserAgentProvider$internet_explorer()}\if{html}{\out{</div>}}
 }
@@ -175,6 +196,7 @@ x$safari()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-windows_platform_token"></a>}}
 \subsection{Method \code{windows_platform_token()}}{
+a windows platform token
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{UserAgentProvider$windows_platform_token()}\if{html}{\out{</div>}}
 }
@@ -183,6 +205,7 @@ x$safari()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-linux_platform_token"></a>}}
 \subsection{Method \code{linux_platform_token()}}{
+a linux platform token
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{UserAgentProvider$linux_platform_token()}\if{html}{\out{</div>}}
 }
@@ -191,6 +214,7 @@ x$safari()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-mac_platform_token"></a>}}
 \subsection{Method \code{mac_platform_token()}}{
+a mac platform token
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{UserAgentProvider$mac_platform_token()}\if{html}{\out{</div>}}
 }

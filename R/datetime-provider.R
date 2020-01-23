@@ -206,53 +206,6 @@ dt_countries <- list(
 #' @export
 #' @include base-provider.R
 #' @keywords internal
-#' @details
-#' **Methods**
-#'   \describe{
-#'     \item{`unix_time(start_date = NULL, end_date = "now")`}{
-#'       Get a timestamp between January 1, 1970 and now, unless passed
-#'       explicit `start_date` or `end_date` values
-#'       param `start_date`: start date, a valid date format
-#'       param `end_date`: start date, a valid date format, default: now
-#'       ref: https://en.wikipedia.org/wiki/Unix_time
-#'     }
-#'     \item{`date(pattern)`}{
-#'       Generate a date between January 1, 1970 and now, with given pattern
-#'       param `pattern`: date pattern, default: `%Y-%m-%d`
-#'     }
-#'     \item{`date_time(tzinfo = NULL)`}{
-#'       Generate a date time between January 1, 1970 and now
-#'       param `tzinfo`: timezone, see [timezone]
-#'     }
-#'     \item{`date_time_fromtimestamp(timestamp, tzinfo = NULL)`}{
-#'       Generate a iso8601 format date
-#'       param `timestamp`: a timestamp
-#'       param `tzinfo`: timezone, see [timezone]
-#'       ref: https://en.wikipedia.org/wiki/Unix_time
-#'     }
-#'     \item{`iso8601(tzinfo = NULL)`}{
-#'       Generate a iso8601 format date
-#'       param `tzinfo`: timezone, see [timezone]
-#'     }
-#'     \item{`year()`}{
-#'       generate a year
-#'     }
-#'     \item{`century()`}{
-#'       generate a century
-#'     }
-#'     \item{`timezone()`}{
-#'       generate a timezone
-#'     }
-#'     \item{`date_time_between(start_date, end_date = "now", tzinfo = NULL)`}{
-#'       Generate a date time based on a random date between two given dates
-#'       param `start_date`: start date, a valid date format
-#'       param `end_date`: start date, a valid date format, default: now
-#'       param `tzinfo`: timezone, see [timezone]
-#'     }
-#'   }
-#'
-#' @format NULL
-#' @usage NULL
 #' @examples
 #' z <- DateTimeProvider$new()
 #' z$countries
@@ -276,41 +229,68 @@ DateTimeProvider <- R6::R6Class(
   inherit = BaseProvider,
   "DateTimeProvider",
   public = list(
+    #' @field centuries (character) centuries in roman numerals
     centuries = dt_centuries,
+    #' @field countries (list) countries list
     countries = dt_countries,
 
+    #' @description Get a timestamp between January 1, 1970 and now, unless passed
+    #' explicit `start_date` or `end_date` values
+    #' @param start_date start date, a valid date format
+    #' @param end_date start date, a valid date format, default: "now"
+    #' @references https://en.wikipedia.org/wiki/Unix_time
     unix_time = function(start_date = NULL, end_date = "now") {
       private$timestamp_between(start_date, end_date)
     },
 
+    #' @description Generate a date between January 1, 1970 and now,
+    #' with given pattern
+    #' @param pattern date pattern, default: `%Y-%m-%d`
     date = function(pattern = "%Y-%m-%d") {
       strftime(self$date_time(), pattern)
     },
 
+    #' @description Generate a date time between January 1, 1970 and now
+    #' @param tzinfo timezone, see [timezone]
     date_time = function(tzinfo = NULL) {
       as.POSIXct(self$unix_time(), origin = "1970-01-01", tz = tzinfo)
     },
 
+    #' @description Generate a iso8601 format date
+    #' @param timestamp a timestamp
+    #' @param tzinfo timezone, see [timezone]
+    #' @references https://en.wikipedia.org/wiki/Unix_time
     date_time_fromtimestamp = function(timestamp, tzinfo = NULL) {
       as.POSIXct(timestamp, origin = "1970-01-01", tz = tzinfo)
     },
 
+    #' @description Generate a iso8601 format date
+    #' @param date a date, in a valid date format
+    #' @param tzinfo timezone, see [timezone]
     iso8601 = function(date, tzinfo = NULL) {
       strftime(date, format = "%F", tz = tzinfo %||% "")
     },
 
+    #' @description generate a year
     year = function() {
       self$date("%Y")
     },
 
+    #' @description generate a century
     century = function() {
       super$random_element(self$centuries)
     },
 
+    #' @description generate a timezone
     timezone = function() {
       super$random_element(self$countries)
     },
 
+    #' @description Generate a date time based on a random date between
+    #' two given dates
+    #' @param start_date start date, a valid date format
+    #' @param end_date start date, a valid date format, default: "now"
+    #' @param tzinfo timezone, see [timezone]
     date_time_between = function(start_date, end_date = "now", tzinfo = NULL) {
       timestamp <- private$timestamp_between(start_date, end_date)
       return(self$date_time_fromtimestamp(timestamp, tzinfo))

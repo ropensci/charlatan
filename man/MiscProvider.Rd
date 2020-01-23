@@ -8,17 +8,6 @@ MiscProvider
 
 MiscProvider
 }
-\details{
-\strong{Methods}
-\itemize{
-\item \code{language_locale_codes} - list of language locales supported by
-Linux Mint
-\item \code{locale()} - locale
-\item \code{language_code()} - language code
-\item \code{boolean()} - a boolean, \code{TRUE} or \code{FALSE}
-\item \code{null_boolean()} - a boolean, \code{TRUE} or \code{FALSE}, or NULL
-}
-}
 \examples{
 (x <- MiscProvider$new())
 x$language_locale_codes
@@ -30,6 +19,13 @@ x$null_boolean()
 \keyword{internal}
 \section{Super class}{
 \code{\link[charlatan:BaseProvider]{charlatan::BaseProvider}} -> \code{MiscProvider}
+}
+\section{Public fields}{
+\if{html}{\out{<div class="r6-fields">}}
+\describe{
+\item{\code{language_locale_codes}}{(list) locale codes by locale family}
+}
+\if{html}{\out{</div>}}
 }
 \section{Methods}{
 \subsection{Public methods}{
@@ -48,7 +44,6 @@ x$null_boolean()
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale">}\href{../../charlatan/html/BaseProvider.html#method-check_locale}{\code{charlatan::BaseProvider$check_locale()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="lexify">}\href{../../charlatan/html/BaseProvider.html#method-lexify}{\code{charlatan::BaseProvider$lexify()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="numerify">}\href{../../charlatan/html/BaseProvider.html#method-numerify}{\code{charlatan::BaseProvider$numerify()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="prov_avail_locales">}\href{../../charlatan/html/BaseProvider.html#method-prov_avail_locales}{\code{charlatan::BaseProvider$prov_avail_locales()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit">}\href{../../charlatan/html/BaseProvider.html#method-random_digit}{\code{charlatan::BaseProvider$random_digit()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_not_zero}{\code{charlatan::BaseProvider$random_digit_not_zero()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero_or_empty">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_not_zero_or_empty}{\code{charlatan::BaseProvider$random_digit_not_zero_or_empty()}}\out{</span>}
@@ -64,14 +59,23 @@ x$null_boolean()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-boolean"></a>}}
 \subsection{Method \code{boolean()}}{
+get a random boolean, \code{TRUE} or \code{FALSE}
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MiscProvider$boolean(chance_of_getting_true = 50)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{chance_of_getting_true}}{(integer) an integer, default: 50}
+}
+\if{html}{\out{</div>}}
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-null_boolean"></a>}}
 \subsection{Method \code{null_boolean()}}{
+get a random boolean, \code{TRUE} or \code{FALSE}, or NULL
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MiscProvider$null_boolean()}\if{html}{\out{</div>}}
 }
@@ -80,6 +84,7 @@ x$null_boolean()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-locale"></a>}}
 \subsection{Method \code{locale()}}{
+get a random locale
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MiscProvider$locale()}\if{html}{\out{</div>}}
 }
@@ -88,6 +93,7 @@ x$null_boolean()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-language_code"></a>}}
 \subsection{Method \code{language_code()}}{
+random language code
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MiscProvider$language_code()}\if{html}{\out{</div>}}
 }

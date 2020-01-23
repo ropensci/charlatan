@@ -2,15 +2,6 @@
 #'
 #' @export
 #' @keywords internal
-#' @param locale (character) the locale to use. See
-#' `phone_number_provider_locales` for locales supported (default: en_US)
-#' @details
-#' **Methods**
-#'
-#' - `render()` - Make a phone number
-#'
-#' @format NULL
-#' @usage NULL
 #' @examples
 #' z <- PhoneNumberProvider$new()
 #' z$render()
@@ -26,10 +17,17 @@ PhoneNumberProvider <- R6::R6Class(
   inherit = BaseProvider,
   'PhoneNumberProvider',
   public = list(
+    #' @field locale (character) the locale
     locale = NULL,
+    #' @field formats phone number formats
     formats = phone_number_formats_en_us,
+    #' @field area_code_formats area code formats
     area_code_formats = NULL,
 
+    #' @description Create a new `PhoneNumberProvider` object
+    #' @param locale (character) the locale to use. See
+    #' `phone_number_provider_locales` for locales supported (default: en_US)
+    #' @return A new `PhoneNumberProvider` object
     initialize = function(locale = NULL) {
       if (!is.null(locale)) {
         # check locale globally supported
@@ -45,6 +43,7 @@ PhoneNumberProvider <- R6::R6Class(
         parse_eval("area_codes_formats_", self$locale)
     },
 
+    #' @description Make a phone number
     render = function() {
       if (!is.null(self$area_code_formats)) {
         return(super$numerify(

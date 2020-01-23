@@ -2,60 +2,8 @@
 #'
 #' @export
 #' @keywords internal
-#' @param locale (character) the locale to use. See
-#' `lorem_provider_locales` for locales supported (default: en_US)
-#' @param sentence_punctuation (character) End of sentence punctuation
-#' @param word_connector (character) Default connector between words
-#' @details
-#' **Methods**
-#'
-#' - `word(ext_words = NULL)` - Generate a random word
-#'     - ext_words: a character vector of words you would like to have
-#'       instead of 'Lorem ipsum'
-#'     - returns: a random word
-#' - `words(nb = 3, ext_words = NULL)` - Generate a character vector of random words
-#'     - nb: how many words to return
-#'     - ext_words: a character vector of words you would like to have
-#'       instead of 'Lorem ipsum'
-#'     - returns: many words
-#' - `sentence(nb_words, variable_nb_words, ext_words)` - Generate a random sentence
-#'     - nb_words around how many words the sentence should contain
-#'     - variable_nb_words set to false if you want exactly `nb`
-#'       words returned, otherwise the result may include a number of words
-#'       of `nb` +/-40% (with a minimum of 1)
-#'     - ext_words a character vector of words you would like to have instead of
-#'       'Lorem ipsum'.
-#'     - returns: a single sentence
-#' - `sentences(nb, ext_words)` - Generate a character vector of random sentences
-#'     - nb: how many sentences to return
-#'     - ext_words: a character vector of words you would like to have
-#'       instead of 'Lorem ipsum'.
-#'     - returns: many sentences
-#' - `paragraph(nb_sentences, variable_nb_sentenc` -  ext_words)` - Generate a
-#'    single paragraph
-#'     - nb_sentences: around how many sentences the paragraph should
-#'       contain
-#'     - variable_nb_sentences: set to false if you want exactly `nb`
-#'       sentences returned, otherwise the result may include a number of
-#'       sentences of ``nb`` +/-40% (with a minimum of 1)
-#'     - ext_words: a character vector of words you would like to have instead
-#'       of 'Lorem ipsum'
-#'     - returns: a single paragraph
-#' - `paragraphs(nb, ext_words)` - Generate many paragraphs
-#'     - nb: how many paragraphs to return
-#'     - ext_words: a character vector of words you would like to have instead of
-#'         'Lorem ipsum'.
-#'     - returns: many paragraphs
-#' - `text(max_nb_chars, ext_words)` - Generate a random text string. Depending on
-#'    the `max_nb_chars`, returns a string made of words, sentences, or paragraphs.
-#'     - max_nb_chars: Maximum number of characters the text should contain
-#'     (minimum 5)
-#'     - ext_words: a character vector of words you would like to have instead of
-#'     'Lorem ipsum'.
-#'     - returns: character string of words
-#'
-#' @format NULL
-#' @usage NULL
+#' @param ext_words a character vector of words you would like to have
+#' instead of 'Lorem ipsum'
 #' @examples
 #' (x <- LoremProvider$new())
 #' x$locale
@@ -91,7 +39,14 @@ LoremProvider <- R6::R6Class(
   inherit = BaseProvider,
   'LoremProvider',
   public = list(
+    #' @field locale (character) the locale
     locale = NULL,
+    #' @description Create a new `LoremProvider` object
+    #' @param locale (character) the locale to use. See
+    #' `lorem_provider_locales` for locales supported (default: en_US)
+    #' @param sentence_punctuation (character) End of sentence punctuation
+    #' @param word_connector (character) Default connector between words
+    #' @return A new `LoremProvider` object
     initialize = function(locale = NULL, sentence_punctuation = '.',
                           word_connector = ' ') {
 
@@ -120,6 +75,8 @@ LoremProvider <- R6::R6Class(
       }
     },
 
+    #' @description Generate a random word
+    #' @return a single word
     word = function(ext_words = NULL) {
       assert(ext_words, 'character')
       wds <- private$word_list
@@ -129,12 +86,22 @@ LoremProvider <- R6::R6Class(
       super$random_element(wds)
     },
 
+    #' @description Generate a character vector of random words
+    #' @param nb (integer) how many words to return
+    #' @return many words
     words = function(nb = 3, ext_words = NULL) {
       assert(nb, c('numeric', 'integer'))
       assert(ext_words, 'character')
       replicate(nb, self$word(ext_words))
     },
 
+    #' @description Generate a random sentence
+    #' @param nb_words (integer) around how many words the sentence should
+    #' contain
+    #' @param variable_nb_words set to `FALSE` if you want exactly `nb`
+    #' words returned, otherwise the result may include a number of words
+    #' of `nb` +/-40% (with a minimum of 1)
+    #' @return a single sentence
     sentence = function(nb_words = 6, variable_nb_words = TRUE, ext_words = NULL) {
       assert(nb_words, c('numeric', 'integer'))
       assert(variable_nb_words, 'logical')
@@ -154,12 +121,22 @@ LoremProvider <- R6::R6Class(
       )
     },
 
+    #' @description Generate a character vector of random sentences
+    #' @param nb (integer) how many sentences to return
+    #' @return many sentences
     sentences = function(nb = 3, ext_words = NULL) {
       assert(nb, c('numeric', 'integer'))
       assert(ext_words, 'character')
       replicate(nb, self$sentence(ext_words = ext_words))
     },
 
+    #' @description Generate a single paragraph
+    #' @param nb_sentences (integer) around how many sentences the paragraph
+    #' should contain
+    #' @param variable_nb_sentences set to `FALSE` if you want exactly `nb`
+    #' sentences returned, otherwise the result may include a number of
+    #' sentences of ``nb`` +/-40% (with a minimum of 1)
+    #' @return a single paragraph
     paragraph = function(nb_sentences = 3, variable_nb_sentences = TRUE,
       ext_words = NULL) {
 
@@ -174,12 +151,21 @@ LoremProvider <- R6::R6Class(
       paste0(para, collapse = private$word_connector)
     },
 
+    #' @description Generate many paragraphs
+    #' @param nb (integer) how many paragraphs to return
+    #' @return many paragraphs
     paragraphs = function(nb = 3, ext_words = NULL) {
       assert(nb, c('numeric', 'integer'))
       assert(ext_words, 'character')
       replicate(nb, self$paragraph(ext_words = ext_words))
     },
 
+    #' @description Generate a random text string. Depending on the
+    #' `max_nb_chars`, returns a string made of words, sentences, or
+    #' paragraphs.
+    #' @param max_nb_chars Maximum number of characters the text should
+    #' contain (minimum 5)
+    #' @return character string of words
     text = function(max_nb_chars = 200, ext_words = NULL) {
       assert(max_nb_chars, c('numeric', 'integer'))
       assert(ext_words, 'character')

@@ -9,12 +9,6 @@ ElementProvider
 ElementProvider
 }
 \details{
-\strong{Methods}
-\itemize{
-\item \code{symbol()} - Get a symbol
-\item \code{element()} - Get an element
-}
-
 Data from Wikipedia at
 \url{https://en.wikipedia.org/wiki/Chemical_element}
 }
@@ -42,7 +36,6 @@ z$element()
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale">}\href{../../charlatan/html/BaseProvider.html#method-check_locale}{\code{charlatan::BaseProvider$check_locale()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="lexify">}\href{../../charlatan/html/BaseProvider.html#method-lexify}{\code{charlatan::BaseProvider$lexify()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="numerify">}\href{../../charlatan/html/BaseProvider.html#method-numerify}{\code{charlatan::BaseProvider$numerify()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="prov_avail_locales">}\href{../../charlatan/html/BaseProvider.html#method-prov_avail_locales}{\code{charlatan::BaseProvider$prov_avail_locales()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit">}\href{../../charlatan/html/BaseProvider.html#method-random_digit}{\code{charlatan::BaseProvider$random_digit()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_not_zero}{\code{charlatan::BaseProvider$random_digit_not_zero()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero_or_empty">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_not_zero_or_empty}{\code{charlatan::BaseProvider$random_digit_not_zero_or_empty()}}\out{</span>}
@@ -58,6 +51,7 @@ z$element()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-symbol"></a>}}
 \subsection{Method \code{symbol()}}{
+Get a symbol
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{ElementProvider$symbol()}\if{html}{\out{</div>}}
 }
@@ -66,6 +60,7 @@ z$element()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-element"></a>}}
 \subsection{Method \code{element()}}{
+Get an element
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{ElementProvider$element()}\if{html}{\out{</div>}}
 }

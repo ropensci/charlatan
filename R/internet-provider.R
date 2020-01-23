@@ -2,40 +2,9 @@
 #'
 #' @export
 #' @keywords internal
-#' @param locale (character) the locale to use. See
-#' `internet_provider_locales` for locales supported (default: en_US)
-#' @details
-#' **Methods**
-#'
-#' - `to_ascii(x)` - convert to ascii
-#' - `email(domain)` - get an email address
-#' - `safe_email()` - get a safe email address
-#' - `free_email()` - free email address
-#' - `company_email()` - company email address
-#' - `ascii_email()` - ascii email address
-#' - `ascii_safe_email()` - safe ascii email address
-#' - `ascii_free_email()` - an ascii free email address
-#' - `ascii_company_email()` - ascii company email address
-#' - `user_name()` - a user name
-#' - `tld()` - a tld
-#' - `free_email_domain()` - free email domain
-#' - `url(schemes)` - get a url
-#' - `domain_name(levels)` - get a domain name
-#' - `domain_word()` - get a domain word
-#' - `ipv4()` - get a random ipv4 address
-#' - `mac_address()` - get a mac address
-#' - `uri_page()` - get a uri page
-#' - `uri_path()` - get a uri path
-#' - `uri_extension()` - get a uri extension
-#' - `image_url(width, height)` - get an image url
-#'
-#' @format NULL
-#' @usage NULL
-#'
 #' @note Note that if a locale you set doesn't have a locale specific set
 #' of data for [PersonProvider] or [CompanyProvider] we fall back to
 #' `en_US`
-#'
 #' @examples
 #' (x <- InternetProvider$new())
 #' x$locale
@@ -135,33 +104,44 @@ InternetProvider <- R6::R6Class(
   inherit = BaseProvider,
   'InternetProvider',
   public = list(
+    #' @field locale (character) the locale
     locale = NULL,
+    #' @field safe_email_tlds (character) safe email tlds
     safe_email_tlds = c('org', 'com', 'net'),
+    #' @field free_email_domains (character) free email tlds
     free_email_domains = c('gmail.com', 'yahoo.com', 'hotmail.com'),
+    #' @field tlds (character) tlds
     tlds = c(
         'com', 'com', 'com', 'com', 'com', 'com', 'biz', 'info', 'net', 'org'
     ),
+    #' @field uri_pages (character) uri pages
     uri_pages = c(
         'index', 'home', 'search', 'main', 'post', 'homepage', 'category',
         'register', 'login', 'faq', 'about', 'terms', 'privacy', 'author'
     ),
+    #' @field uri_paths (character) uri paths
     uri_paths = c(
         'app', 'main', 'wp-content', 'search', 'category', 'tag', 'categories',
         'tags', 'blog', 'posts', 'list', 'explore'
     ),
+    #' @field uri_extensions (character) uri extensions
     uri_extensions = c(
         '.html', '.html', '.html', '.htm', '.htm', '.php', '.php', '.jsp',
         '.asp'
     ),
+    #' @field user_name_formats (character) user name formats
     user_name_formats = c(
         '{{last_names}}.{{first_names}}',
         '{{first_names}}.{{last_names}}',
         '{{first_names}}##',
         '?{{last_names}}'
     ),
+    #' @field email_formats (character) email formats
     email_formats = c('{{user_name}}@{{domain_name}}',
         '{{user_name}}@{{free_email_domain}}'),
+    #' @field url_formats (character) url formats
     url_formats = c('www.{{domain_name}}/', '{{domain_name}}/'),
+    #' @field uri_formats (character) uri formats
     uri_formats = c(
         '{{url}}',
         '{{url}}{{uri_page}}/',
@@ -169,15 +149,19 @@ InternetProvider <- R6::R6Class(
         '{{url}}{{uri_path}}/{{uri_page}}/',
         '{{url}}{{uri_path}}/{{uri_page}}{{uri_extension}}'
     ),
+    #' @field image_placeholder_services (character) image uri formats
     image_placeholder_services = c(
         'https://placeholdit.imgix.net/~text?txtsize=55&txt={{width}}x{{height}}&w={{width}&h={{height}}',
         'https://www.lorempixel.com/{{width}}/{{height}}',
         'https://dummyimage.com/{{width}}x{{height}}'
     ),
+    #' @field replacements (list) a list
     replacements = list(),
 
-
-
+    #' @description Create a new `InternetProvider` object
+    #' @param locale (character) the locale to use. See
+    #' `internet_provider_locales` for locales supported (default: en_US)
+    #' @return A new `InternetProvider` object
     initialize = function(locale = NULL) {
       if (!is.null(locale)) {
         # check global locales
@@ -198,7 +182,8 @@ InternetProvider <- R6::R6Class(
       private$parse_eval_safe('safe_email_tlds')
     },
 
-
+    #' @description convert to ascii
+    #' @param x the stringn to convert to ascii
     to_ascii = function(x) {
       if (length(self$replacements) != 0) {
         for (i in seq_along(self$replacements)) {
@@ -211,6 +196,9 @@ InternetProvider <- R6::R6Class(
       stringi::stri_trans_general(x, "latin-ascii")
     },
 
+    #' @description get an email address
+    #' @param domain (character) a domain name, if not given, a random
+    #' name is chosen
     email = function(domain = NULL) {
       if (!is.null(domain)) {
         sprintf('%s@%s', self$user_name(), domain)
@@ -225,20 +213,24 @@ InternetProvider <- R6::R6Class(
       }
     },
 
+    #' @description get a safe email address
     safe_email = function() {
       tolower(sprintf('%s@example.%s',
         self$user_name(), super$random_element(self$safe_email_tlds)
       ))
     },
 
+    #' @description a free email address
     free_email = function() {
       tolower(paste0(self$user_name(), '@', self$free_email_domain()))
     },
 
+    #' @description company email address
     company_email = function() {
       tolower(paste0(self$user_name(), '@', self$domain_name()))
     },
 
+    #' @description ascii email address
     ascii_email = function() {
       pattern <- super$random_element(self$email_formats)
       out <- list(
@@ -249,6 +241,7 @@ InternetProvider <- R6::R6Class(
       tolower(self$to_ascii(whisker::whisker.render(pattern, data = out)))
     },
 
+    #' @description safe ascii email address
     ascii_safe_email = function() {
       tolower(self$to_ascii(
               paste0(self$user_name(), '@example.',
@@ -256,16 +249,19 @@ InternetProvider <- R6::R6Class(
             ))
     },
 
+    #' @description an ascii free email address
     ascii_free_email = function() {
       tolower(self$to_ascii(
               paste0(self$user_name(), '@', self$free_email_domain())
             ))
     },
 
+    #' @description ascii company email address
     ascii_company_email = function() {
       tolower(self$to_ascii(paste0(self$user_name(), '@', self$domain_name())))
     },
 
+    #' @description a user name
     user_name = function() {
       pattern <- super$random_element(self$user_name_formats)
       loc <- if (private$has_locale(self$locale, person_provider_locales)) {
@@ -277,14 +273,18 @@ InternetProvider <- R6::R6Class(
       self$to_ascii(tolower(super$bothify(out)))
     },
 
+    #' @description a tld
     tld = function() {
       super$random_element(self$tlds)
     },
 
+    #' @description free email domain name
     free_email_domain = function() {
       super$random_element(self$free_email_domains)
     },
 
+    #' @description a url
+    #' @param schemes (character vector) a url scheme, defaults are http and https
     url = function(schemes = NULL) {
       if (is.null(schemes)) schemes <- c('http', 'https')
       pattern <- sprintf(
@@ -297,8 +297,9 @@ InternetProvider <- R6::R6Class(
         data = list(domain_name = self$domain_name()))
     },
 
-    # Produce an Internet domain name with the specified number of
-    # subdomain levels
+    #' @description Produce an Internet domain name with the specified
+    #' number of subdomain levels
+    #' @param levels (integer) how many levels, must be >1
     domain_name = function(levels = 1) {
       if (levels < 1) {
         stop("levels must be greater than or equal to 1")
@@ -309,6 +310,7 @@ InternetProvider <- R6::R6Class(
       }
     },
 
+    #' @description a domain word
     domain_word = function() {
       company <- CompanyProvider$new()
       xx <- company$company()
@@ -316,6 +318,7 @@ InternetProvider <- R6::R6Class(
       tolower(self$to_ascii(xxx[2]))
     },
 
+    #' @description a ipv4 address
     ipv4 = function() {
       check4pkg("iptools")
       iptools::ip_random(1)
@@ -335,15 +338,20 @@ InternetProvider <- R6::R6Class(
     #         address = str(ip_network(address, strict=False))
     #     return address
 
+    #' @description a mac address
     mac_address = function() {
       mac = replicate(7, super$random_int(0, 255))
       paste0(sprintf("%02x", mac), collapse = ":")
     },
 
+    #' @description a uri page
     uri_page = function() {
       super$random_element(self$uri_pages)
     },
 
+    #' @description a uri path
+    #' @param deep how deep to go, an integer, if not given an integer
+    #' between 1 and 4 (inclusive) is chosen
     uri_path = function(deep = NULL) {
       deep <- if (!is.null(deep)) deep else super$random_int(1, 4)
       paste0(
@@ -352,10 +360,12 @@ InternetProvider <- R6::R6Class(
       )
     },
 
+    #' @description a uri extension
     uri_extension = function() {
       super$random_element(self$uri_extensions)
     },
 
+    #' @description a uri
     uri = function() {
       pattern <- super$random_element(self$uri_formats)
       '{{url}}{{uri_path}}/{{uri_page}}{{uri_extension}}'
@@ -368,13 +378,19 @@ InternetProvider <- R6::R6Class(
       tolower(self$to_ascii(whisker::whisker.render(pattern, data = dat)))
     },
 
+    #' @description a slug
+    #' @param value (character) a string, if given, returns itself, if not, uses
+    #' [LoremProvider] to get a random string. default: `NULL`
     slug = function(value = NULL) {
       if (is.null(value)) 
         value <- paste0(LoremProvider$new()$words(), collapse = "-")
       return(value)
     },
 
-    # Returns URL to placeholder image - Example: http://placehold.it/640x480
+    #' @description Returns URL to placeholder image -
+    #' Example: http://placehold.it/640x480
+    #' @param width image width, in pixels
+    #' @param height image height, in pixels
     image_url = function(width = NULL, height = NULL) {
       width_ = if (!is.null(width)) width else super$random_int(max = 1024)
       height_ = if (!is.null(height)) height else super$random_int(max = 1024)
@@ -382,8 +398,6 @@ InternetProvider <- R6::R6Class(
       whisker::whisker.render(placeholder_url,
                               data = list(width = width_, height = height_))
     }
-
-
   ),
 
   private = list(

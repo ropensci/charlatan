@@ -14,69 +14,6 @@ LoremProvider
 
 LoremProvider
 }
-\details{
-\strong{Methods}
-\itemize{
-\item \code{word(ext_words = NULL)} - Generate a random word
-\itemize{
-\item ext_words: a character vector of words you would like to have
-instead of 'Lorem ipsum'
-\item returns: a random word
-}
-\item \code{words(nb = 3, ext_words = NULL)} - Generate a character vector of random words
-\itemize{
-\item nb: how many words to return
-\item ext_words: a character vector of words you would like to have
-instead of 'Lorem ipsum'
-\item returns: many words
-}
-\item \code{sentence(nb_words, variable_nb_words, ext_words)} - Generate a random sentence
-\itemize{
-\item nb_words around how many words the sentence should contain
-\item variable_nb_words set to false if you want exactly \code{nb}
-words returned, otherwise the result may include a number of words
-of \code{nb} +/-40\% (with a minimum of 1)
-\item ext_words a character vector of words you would like to have instead of
-'Lorem ipsum'.
-\item returns: a single sentence
-}
-\item \code{sentences(nb, ext_words)} - Generate a character vector of random sentences
-\itemize{
-\item nb: how many sentences to return
-\item ext_words: a character vector of words you would like to have
-instead of 'Lorem ipsum'.
-\item returns: many sentences
-}
-\item \verb{paragraph(nb_sentences, variable_nb_sentenc} -  ext_words)` - Generate a
-single paragraph
-\itemize{
-\item nb_sentences: around how many sentences the paragraph should
-contain
-\item variable_nb_sentences: set to false if you want exactly \code{nb}
-sentences returned, otherwise the result may include a number of
-sentences of \code{nb} +/-40\% (with a minimum of 1)
-\item ext_words: a character vector of words you would like to have instead
-of 'Lorem ipsum'
-\item returns: a single paragraph
-}
-\item \code{paragraphs(nb, ext_words)} - Generate many paragraphs
-\itemize{
-\item nb: how many paragraphs to return
-\item ext_words: a character vector of words you would like to have instead of
-'Lorem ipsum'.
-\item returns: many paragraphs
-}
-\item \code{text(max_nb_chars, ext_words)} - Generate a random text string. Depending on
-the \code{max_nb_chars}, returns a string made of words, sentences, or paragraphs.
-\itemize{
-\item max_nb_chars: Maximum number of characters the text should contain
-(minimum 5)
-\item ext_words: a character vector of words you would like to have instead of
-'Lorem ipsum'.
-\item returns: character string of words
-}
-}
-}
 \examples{
 (x <- LoremProvider$new())
 x$locale
@@ -114,6 +51,13 @@ LoremProvider$new(locale = "zh_TW")$word()
 \section{Super class}{
 \code{\link[charlatan:BaseProvider]{charlatan::BaseProvider}} -> \code{LoremProvider}
 }
+\section{Public fields}{
+\if{html}{\out{<div class="r6-fields">}}
+\describe{
+\item{\code{locale}}{(character) the locale}
+}
+\if{html}{\out{</div>}}
+}
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
@@ -135,7 +79,6 @@ LoremProvider$new(locale = "zh_TW")$word()
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale">}\href{../../charlatan/html/BaseProvider.html#method-check_locale}{\code{charlatan::BaseProvider$check_locale()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="lexify">}\href{../../charlatan/html/BaseProvider.html#method-lexify}{\code{charlatan::BaseProvider$lexify()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="numerify">}\href{../../charlatan/html/BaseProvider.html#method-numerify}{\code{charlatan::BaseProvider$numerify()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="prov_avail_locales">}\href{../../charlatan/html/BaseProvider.html#method-prov_avail_locales}{\code{charlatan::BaseProvider$prov_avail_locales()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit">}\href{../../charlatan/html/BaseProvider.html#method-random_digit}{\code{charlatan::BaseProvider$random_digit()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_not_zero}{\code{charlatan::BaseProvider$random_digit_not_zero()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero_or_empty">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_not_zero_or_empty}{\code{charlatan::BaseProvider$random_digit_not_zero_or_empty()}}\out{</span>}
@@ -151,6 +94,7 @@ LoremProvider$new(locale = "zh_TW")$word()
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-new"></a>}}
 \subsection{Method \code{new()}}{
+Create a new \code{LoremProvider} object
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{LoremProvider$new(
   locale = NULL,
@@ -171,26 +115,56 @@ LoremProvider$new(locale = "zh_TW")$word()
 }
 \if{html}{\out{</div>}}
 }
+\subsection{Returns}{
+A new \code{LoremProvider} object
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-word"></a>}}
 \subsection{Method \code{word()}}{
+Generate a random word
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{LoremProvider$word(ext_words = NULL)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{ext_words}}{a character vector of words you would like to have
+instead of 'Lorem ipsum'}
+}
+\if{html}{\out{</div>}}
+}
+\subsection{Returns}{
+a single word
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-words"></a>}}
 \subsection{Method \code{words()}}{
+Generate a character vector of random words
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{LoremProvider$words(nb = 3, ext_words = NULL)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{nb}}{(integer) how many words to return}
+
+\item{\code{ext_words}}{a character vector of words you would like to have
+instead of 'Lorem ipsum'}
+}
+\if{html}{\out{</div>}}
+}
+\subsection{Returns}{
+many words
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-sentence"></a>}}
 \subsection{Method \code{sentence()}}{
+Generate a random sentence
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{LoremProvider$sentence(
   nb_words = 6,
@@ -199,18 +173,51 @@ LoremProvider$new(locale = "zh_TW")$word()
 )}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{nb_words}}{(integer) around how many words the sentence should
+contain}
+
+\item{\code{variable_nb_words}}{set to \code{FALSE} if you want exactly \code{nb}
+words returned, otherwise the result may include a number of words
+of \code{nb} +/-40\% (with a minimum of 1)}
+
+\item{\code{ext_words}}{a character vector of words you would like to have
+instead of 'Lorem ipsum'}
+}
+\if{html}{\out{</div>}}
+}
+\subsection{Returns}{
+a single sentence
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-sentences"></a>}}
 \subsection{Method \code{sentences()}}{
+Generate a character vector of random sentences
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{LoremProvider$sentences(nb = 3, ext_words = NULL)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{nb}}{(integer) how many sentences to return}
+
+\item{\code{ext_words}}{a character vector of words you would like to have
+instead of 'Lorem ipsum'}
+}
+\if{html}{\out{</div>}}
+}
+\subsection{Returns}{
+many sentences
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-paragraph"></a>}}
 \subsection{Method \code{paragraph()}}{
+Generate a single paragraph
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{LoremProvider$paragraph(
   nb_sentences = 3,
@@ -219,22 +226,71 @@ LoremProvider$new(locale = "zh_TW")$word()
 )}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{nb_sentences}}{(integer) around how many sentences the paragraph
+should contain}
+
+\item{\code{variable_nb_sentences}}{set to \code{FALSE} if you want exactly \code{nb}
+sentences returned, otherwise the result may include a number of
+sentences of \code{nb} +/-40\% (with a minimum of 1)}
+
+\item{\code{ext_words}}{a character vector of words you would like to have
+instead of 'Lorem ipsum'}
+}
+\if{html}{\out{</div>}}
+}
+\subsection{Returns}{
+a single paragraph
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-paragraphs"></a>}}
 \subsection{Method \code{paragraphs()}}{
+Generate many paragraphs
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{LoremProvider$paragraphs(nb = 3, ext_words = NULL)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{nb}}{(integer) how many paragraphs to return}
+
+\item{\code{ext_words}}{a character vector of words you would like to have
+instead of 'Lorem ipsum'}
+}
+\if{html}{\out{</div>}}
+}
+\subsection{Returns}{
+many paragraphs
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-text"></a>}}
 \subsection{Method \code{text()}}{
+Generate a random text string. Depending on the
+\code{max_nb_chars}, returns a string made of words, sentences, or
+paragraphs.
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{LoremProvider$text(max_nb_chars = 200, ext_words = NULL)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{max_nb_chars}}{Maximum number of characters the text should
+contain (minimum 5)}
+
+\item{\code{ext_words}}{a character vector of words you would like to have
+instead of 'Lorem ipsum'}
+}
+\if{html}{\out{</div>}}
+}
+\subsection{Returns}{
+character string of words
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-clone"></a>}}
