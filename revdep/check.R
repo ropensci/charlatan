@@ -1,2 +1,2 @@
-library("revdepcheck")
-revdep_check()
+revdepcheck::revdep_reset()
+revdepcheck::revdep_check()
