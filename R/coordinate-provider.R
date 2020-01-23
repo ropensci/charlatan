@@ -1,5 +1,5 @@
-#' CoordinateProvider
-#'
+#' @title CoordinateProvider
+#' @description coordinates methods
 #' @export
 #' @keywords internal
 #' @examples
@@ -43,4 +43,3 @@ CoordinateProvider <- R6::R6Class(
     }
   )
 )
-

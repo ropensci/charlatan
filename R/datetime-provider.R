@@ -201,8 +201,8 @@ dt_countries <- list(
     list(c('Europe/London'), 'code' = 'GB', 'continent' = 'Europe', 'name' = 'United Kingdom', 'capital' = 'London')
 )
 
-#' DateTimeProvider
-#'
+#' @title DateTimeProvider
+#' @description date and time methods
 #' @export
 #' @include base-provider.R
 #' @keywords internal

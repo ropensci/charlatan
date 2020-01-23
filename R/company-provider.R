@@ -1,5 +1,5 @@
-#' CompanyProvider
-#'
+#' @title CompanyProvider
+#' @description company name/etc. methods
 #' @export
 #' @keywords internal
 #' @examples
@@ -157,6 +157,7 @@ CompanyProvider <- R6::R6Class(
 
 
 #' @export
+#' @noRd
 #' @rdname CompanyProvider
 company_provider_locales <- c(
   "bg_BG", "cs_CZ", "de_DE", "en_US", "es_MX", "fa_IR", "fr_FR",

@@ -1,5 +1,5 @@
-#' SequenceProvider
-#'
+#' @title SequenceProvider
+#' @description genetic sequence generator
 #' @export
 #' @keywords internal
 #' @examples

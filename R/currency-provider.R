@@ -167,8 +167,8 @@ currency_formats <- c(
   "ZWD"
 )
 
-#' CurrencyProvider
-#'
+#' @title CurrencyProvider
+#' @description currencies
 #' @export
 #' @keywords internal
 #' @examples

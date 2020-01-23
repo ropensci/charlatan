@@ -4,9 +4,7 @@
 \alias{MiscProvider}
 \title{MiscProvider}
 \description{
-MiscProvider
-
-MiscProvider
+miscellaneous methods
 }
 \examples{
 (x <- MiscProvider$new())

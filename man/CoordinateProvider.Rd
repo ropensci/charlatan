@@ -4,9 +4,7 @@
 \alias{CoordinateProvider}
 \title{CoordinateProvider}
 \description{
-CoordinateProvider
-
-CoordinateProvider
+coordinates methods
 }
 \examples{
 z <- CoordinateProvider$new()

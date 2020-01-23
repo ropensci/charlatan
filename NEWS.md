@@ -11,6 +11,10 @@ charlatan 0.4.0
 * main vignette gains examples on using the `MissingDataProvider` thanks to @KKulma (#110)
 * `PhoneNumberProvider` gains support for locales: `dk_DK`, `en_NZ`, `id_ID`, `th_TH`, and `tw_GH` (#100)
 
+### MINOR IMPROVEMENTS
+
+* convert all documentation to the new R6 support in roxygen2
+
 
 charlatan 0.3.0
 ===============

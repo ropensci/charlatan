@@ -1,5 +1,5 @@
-#' ColorProvider
-#'
+#' @title ColorProvider
+#' @description methods for colors
 #' @export
 #' @keywords internal
 #' @examples
@@ -105,5 +105,6 @@ ColorProvider <- R6::R6Class(
 )
 
 #' @export
+#' @noRd
 #' @rdname ColorProvider
 color_provider_locales <- c("uk_UA", "en_US")

@@ -1,5 +1,5 @@
-#' FileProvider
-#'
+#' @title FileProvider
+#' @description file methods
 #' @export
 #' @keywords internal
 #' @examples
@@ -279,5 +279,6 @@ FileProvider <- R6::R6Class(
 )
 
 #' @export
+#' @noRd
 #' @rdname FileProvider
 file_provider_locales <- c("en_US")

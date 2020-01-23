@@ -4,9 +4,7 @@
 \alias{CreditCardProvider}
 \title{CreditCardProvider}
 \description{
-CreditCardProvider
-
-CreditCardProvider
+credit card methods
 }
 \examples{
 z <- CreditCardProvider$new()

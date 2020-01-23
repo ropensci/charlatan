@@ -4,9 +4,7 @@
 \alias{DateTimeProvider}
 \title{DateTimeProvider}
 \description{
-DateTimeProvider
-
-DateTimeProvider
+date and time methods
 }
 \examples{
 z <- DateTimeProvider$new()

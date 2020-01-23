@@ -4,9 +4,7 @@
 \alias{MissingDataProvider}
 \title{MissingDataProvider}
 \description{
-MissingDataProvider
-
-MissingDataProvider
+make missing data
 }
 \examples{
 z <- MissingDataProvider$new()

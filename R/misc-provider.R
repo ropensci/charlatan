@@ -1,5 +1,5 @@
-#' MiscProvider
-#'
+#' @title MiscProvider
+#' @description miscellaneous methods
 #' @export
 #' @keywords internal
 #' @examples

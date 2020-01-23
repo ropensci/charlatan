@@ -1,5 +1,5 @@
-#' MissingDataProvider
-#'
+#' @title MissingDataProvider
+#' @description make missing data
 #' @export
 #' @keywords internal
 #' @examples

@@ -4,9 +4,7 @@
 \alias{ElementProvider}
 \title{ElementProvider}
 \description{
-ElementProvider
-
-ElementProvider
+chemical elements methods
 }
 \details{
 Data from Wikipedia at

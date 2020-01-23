@@ -1,5 +1,5 @@
-#' NumericsProvider
-#'
+#' @title NumericsProvider
+#' @description numeric methods, generate numbers
 #' @export
 #' @keywords internal
 #' @param n (integer) number of values, default: 1

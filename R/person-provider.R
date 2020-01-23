@@ -1,5 +1,5 @@
-#' PersonProvider
-#'
+#' @title PersonProvider
+#' @description person names methods
 #' @export
 #' @keywords internal
 #' @details Note that with the male/female versions if the locale
@@ -288,6 +288,7 @@ PersonProvider <- R6::R6Class(
 )
 
 #' @export
+#' @noRd
 #' @rdname PersonProvider
 person_provider_locales <- c(
   "bg_BG", "fr_FR", "es_ES", "en_US", "fa_IR", "da_DK",

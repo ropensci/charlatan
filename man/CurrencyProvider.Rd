@@ -4,9 +4,7 @@
 \alias{CurrencyProvider}
 \title{CurrencyProvider}
 \description{
-CurrencyProvider
-
-CurrencyProvider
+currencies
 }
 \examples{
 z <- CurrencyProvider$new()

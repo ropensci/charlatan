@@ -4,9 +4,7 @@
 \alias{NumericsProvider}
 \title{NumericsProvider}
 \description{
-NumericsProvider
-
-NumericsProvider
+numeric methods, generate numbers
 }
 \examples{
 z <- NumericsProvider$new()

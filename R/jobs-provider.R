@@ -1,5 +1,5 @@
-#' JobProvider
-#'
+#' @title JobProvider
+#' @description generate jobs
 #' @export
 #' @keywords internal
 #' @examples
@@ -51,6 +51,7 @@ JobProvider <- R6::R6Class(
 )
 
 #' @export
+#' @noRd
 #' @rdname JobProvider
 job_provider_locales <- c(
   "da_DK", "fa_IR", "fr_CH", "uk_UA", "ru_RU", "pl_PL",

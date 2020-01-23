@@ -1,5 +1,5 @@
-#' InternetProvider
-#'
+#' @title InternetProvider
+#' @description internet methods, e.g., email addresses, domain names
 #' @export
 #' @keywords internal
 #' @note Note that if a locale you set doesn't have a locale specific set
@@ -413,6 +413,7 @@ InternetProvider <- R6::R6Class(
 )
 
 #' @export
+#' @noRd
 #' @rdname InternetProvider
 internet_provider_locales <- c(
   "en_US", "en_AU", "en_NZ", "de_DE", "bg_BG", "cs_CZ", "fa_IR", "fr_FR",

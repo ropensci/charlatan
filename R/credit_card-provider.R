@@ -68,8 +68,8 @@ credit_card_types['jcb'] <- credit_card_types['jcb16']
 #     return self.generator.parse(tpl)
 
 
-#' CreditCardProvider
-#'
+#' @title CreditCardProvider
+#' @description credit card methods
 #' @export
 #' @keywords internal
 #' @examples
@@ -154,4 +154,3 @@ CreditCardProvider <- R6::R6Class(
 )
 
 rev_s <- function(x) paste(rev(strsplit(x, NULL)[[1]]), collapse = "")
-

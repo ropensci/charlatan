@@ -1,5 +1,5 @@
-#' LoremProvider
-#'
+#' @title LoremProvider
+#' @description lorem ipsum methods
 #' @export
 #' @keywords internal
 #' @param ext_words a character vector of words you would like to have
@@ -252,6 +252,7 @@ LoremProvider <- R6::R6Class(
 )
 
 #' @export
+#' @noRd
 #' @rdname LoremProvider
 lorem_provider_locales <- c(
   "en_US", "ar_AA", "el_GR", "he_IL", "ja_JP", "la", "ru_RU",

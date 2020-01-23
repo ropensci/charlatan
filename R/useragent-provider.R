@@ -1,5 +1,5 @@
-#' UserAgentProvider
-#'
+#' @title UserAgentProvider
+#' @description user agent methods
 #' @export
 #' @keywords internal
 #' @examples
@@ -218,5 +218,6 @@ UserAgentProvider <- R6::R6Class(
 )
 
 #' @export
+#' @noRd
 #' @rdname UserAgentProvider
 useragent_provider_locales <- c("en_US")

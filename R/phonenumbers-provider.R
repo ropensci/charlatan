@@ -1,5 +1,5 @@
-#' PhoneNumberProvider
-#'
+#' @title PhoneNumberProvider
+#' @description methods for generating phone numbers 
 #' @export
 #' @keywords internal
 #' @examples
@@ -57,6 +57,7 @@ PhoneNumberProvider <- R6::R6Class(
 )
 
 #' @export
+#' @noRd
 #' @rdname PhoneNumberProvider
 phone_number_provider_locales <- c(
   "en_US", "es_ES", "es_MX", "es_PE", "en_GB", "en_CA", "el_GR",

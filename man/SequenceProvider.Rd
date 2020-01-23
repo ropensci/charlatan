@@ -4,9 +4,7 @@
 \alias{SequenceProvider}
 \title{SequenceProvider}
 \description{
-SequenceProvider
-
-SequenceProvider
+genetic sequence generator
 }
 \examples{
 z <- SequenceProvider$new()
