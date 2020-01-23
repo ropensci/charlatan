@@ -223,4 +223,4 @@ class with locale specific data.
 [faker]: https://github.com/joke2k/faker
 [humaniformat]: https://github.com/Ironholds/humaniformat
 [WikidataQueryServiceR]: https://cran.r-project.org/package=WikidataQueryServiceR
-
+[WikidataR]: https://cran.r-project.org/package=WikidataR
