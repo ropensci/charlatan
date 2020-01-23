@@ -1,3 +1,17 @@
+charlatan 0.4.0
+===============
+
+### NEW FEATURES
+
+* gains new vignette "Contributing to charlatan" - given that it can be complicated to contribute, this vignette should make the process easier (#49) (#84)
+* `InternetProvider` gains new method `slug` (#67)
+* `MiscProvider` gains two new methods `boolean` and `null_boolean` (#70)
+* `es_PE` locale support added to `PhoneNumberProvider` (#108)
+* `en_NZ` locale support added to `AddressProvider`, `InternetProvider`, and `PersonProvider` (#109)
+* main vignette gains examples on using the `MissingDataProvider` thanks to @KKulma (#110)
+* `PhoneNumberProvider` gains support for locales: `dk_DK`, `en_NZ`, `id_ID`, `th_TH`, and `tw_GH` (#100)
+
+
 charlatan 0.3.0
 ===============
 

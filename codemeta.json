@@ -10,14 +10,14 @@
   "codeRepository": "https://github.com/ropensci/charlatan",
   "issueTracker": "https://github.com/ropensci/charlatan/issues",
   "license": "https://spdx.org/licenses/MIT",
-  "version": "0.3.2.9110",
+  "version": "0.4.0",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
-    "version": "3.6.1",
+    "version": "3.6.2",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 3.6.1 Patched (2019-09-23 r77210)",
+  "runtimePlatform": "R version 3.6.2 Patched (2019-12-12 r77564)",
   "provider": {
     "@id": "https://cran.r-project.org",
     "@type": "Organization",
@@ -48,19 +48,6 @@
     }
   ],
   "softwareSuggestions": [
-    {
-      "@type": "SoftwareApplication",
-      "identifier": "roxygen2",
-      "name": "roxygen2",
-      "version": ">= 6.1.0",
-      "provider": {
-        "@id": "https://cran.r-project.org",
-        "@type": "Organization",
-        "name": "Comprehensive R Archive Network (CRAN)",
-        "url": "https://cran.r-project.org"
-      },
-      "sameAs": "https://CRAN.R-project.org/package=roxygen2"
-    },
     {
       "@type": "SoftwareApplication",
       "identifier": "testthat",
@@ -162,15 +149,15 @@
       "sameAs": "https://CRAN.R-project.org/package=whisker"
     }
   ],
-  "contIntegration": "https://travis-ci.org/ropensci/charlatan",
-  "developmentStatus": "active",
+  "contIntegration": ["https://travis-ci.org/ropensci/charlatan", "https://ci.appveyor.com/project/sckott/charlatan", "https://codecov.io/gh/ropensci/charlatan"],
+  "developmentStatus": "https://www.repostatus.org/#active",
   "releaseNotes": "https://github.com/ropensci/charlatan/blob/master/NEWS.md",
   "readme": "https://github.com/ropensci/charlatan/blob/master/README.md",
-  "fileSize": "290.099KB",
+  "fileSize": "299.61KB",
   "review": {
     "@type": "Review",
-    "url": "https://github.com/ropensci/onboarding/issues/94",
-    "provider": "http://ropensci.org"
+    "url": "https://github.com/ropensci/software-review/issues/94",
+    "provider": "https://ropensci.org"
   },
   "keywords": [
     "data",
@@ -191,5 +178,10 @@
     }
   ],
   "copyrightHolder": {},
-  "funder": {}
+  "funder": [
+    {
+      "@type": "Organization",
+      "name": "rOpenSci"
+    }
+  ]
 }
