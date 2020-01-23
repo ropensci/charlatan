@@ -15,8 +15,6 @@ r_check_args: "--as-cran --run-dontrun"
 matrix:
   include:
     - os: linux
-      r: oldrel
-    - os: linux
       r: release
       env: R_CODECOV=true
     - os: linux
