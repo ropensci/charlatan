@@ -16,5 +16,3 @@ Check out the [Contributing to charlatan](https://github.com/ropensci/charlatan/
 * Submit a pull request to home base (likely master branch, but check to make sure) at `ropensci/charlatan`
 
 ### Also, check out our [discussion forum](https://discuss.ropensci.org)
-
-### Thanks for contributing!

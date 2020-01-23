@@ -9,13 +9,9 @@
 \usage{
 person_provider_locales
 }
-\arguments{
-\item{locale}{(character) the locale to use. See
-\code{person_provider_locales} for locales supported (default: en_US)}
-
-\item{messy}{(logical) make some messy data. Default: \code{FALSE}}
-}
 \description{
+PersonProvider
+
 PersonProvider
 }
 \details{
@@ -120,3 +116,185 @@ PersonProvider$new(locale = "da_DK")$render()
 }
 \keyword{datasets}
 \keyword{internal}
+\section{Super class}{
+\code{\link[charlatan:BaseProvider]{charlatan::BaseProvider}} -> \code{PersonProvider}
+}
+\section{Methods}{
+\subsection{Public methods}{
+\itemize{
+\item \href{#method-new}{\code{PersonProvider$new()}}
+\item \href{#method-render}{\code{PersonProvider$render()}}
+\item \href{#method-first_name}{\code{PersonProvider$first_name()}}
+\item \href{#method-first_name_female}{\code{PersonProvider$first_name_female()}}
+\item \href{#method-first_name_male}{\code{PersonProvider$first_name_male()}}
+\item \href{#method-last_name}{\code{PersonProvider$last_name()}}
+\item \href{#method-last_name_female}{\code{PersonProvider$last_name_female()}}
+\item \href{#method-last_name_male}{\code{PersonProvider$last_name_male()}}
+\item \href{#method-prefix}{\code{PersonProvider$prefix()}}
+\item \href{#method-prefix_female}{\code{PersonProvider$prefix_female()}}
+\item \href{#method-prefix_male}{\code{PersonProvider$prefix_male()}}
+\item \href{#method-suffix}{\code{PersonProvider$suffix()}}
+\item \href{#method-suffix_female}{\code{PersonProvider$suffix_female()}}
+\item \href{#method-suffix_male}{\code{PersonProvider$suffix_male()}}
+\item \href{#method-clone}{\code{PersonProvider$clone()}}
+}
+}
+\if{html}{
+\out{<details ><summary>Inherited methods</summary>}
+\itemize{
+\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="bothify">}\href{../../charlatan/html/BaseProvider.html#method-bothify}{\code{charlatan::BaseProvider$bothify()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale">}\href{../../charlatan/html/BaseProvider.html#method-check_locale}{\code{charlatan::BaseProvider$check_locale()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="lexify">}\href{../../charlatan/html/BaseProvider.html#method-lexify}{\code{charlatan::BaseProvider$lexify()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="numerify">}\href{../../charlatan/html/BaseProvider.html#method-numerify}{\code{charlatan::BaseProvider$numerify()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="prov_avail_locales">}\href{../../charlatan/html/BaseProvider.html#method-prov_avail_locales}{\code{charlatan::BaseProvider$prov_avail_locales()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit">}\href{../../charlatan/html/BaseProvider.html#method-random_digit}{\code{charlatan::BaseProvider$random_digit()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_not_zero}{\code{charlatan::BaseProvider$random_digit_not_zero()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero_or_empty">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_not_zero_or_empty}{\code{charlatan::BaseProvider$random_digit_not_zero_or_empty()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_or_empty">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_or_empty}{\code{charlatan::BaseProvider$random_digit_or_empty()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_element">}\href{../../charlatan/html/BaseProvider.html#method-random_element}{\code{charlatan::BaseProvider$random_element()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_element_prob">}\href{../../charlatan/html/BaseProvider.html#method-random_element_prob}{\code{charlatan::BaseProvider$random_element_prob()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_int">}\href{../../charlatan/html/BaseProvider.html#method-random_int}{\code{charlatan::BaseProvider$random_int()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_letter">}\href{../../charlatan/html/BaseProvider.html#method-random_letter}{\code{charlatan::BaseProvider$random_letter()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="randomize_nb_elements">}\href{../../charlatan/html/BaseProvider.html#method-randomize_nb_elements}{\code{charlatan::BaseProvider$randomize_nb_elements()}}\out{</span>}
+}
+\out{</details>}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-new"></a>}}
+\subsection{Method \code{new()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{PersonProvider$new(locale = NULL, messy = FALSE)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{locale}}{(character) the locale to use. See
+\code{person_provider_locales} for locales supported (default: en_US)}
+
+\item{\code{messy}}{(logical) make some messy data. Default: \code{FALSE}}
+}
+\if{html}{\out{</div>}}
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-render"></a>}}
+\subsection{Method \code{render()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{PersonProvider$render(fmt = NULL)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-first_name"></a>}}
+\subsection{Method \code{first_name()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{PersonProvider$first_name()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-first_name_female"></a>}}
+\subsection{Method \code{first_name_female()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{PersonProvider$first_name_female()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-first_name_male"></a>}}
+\subsection{Method \code{first_name_male()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{PersonProvider$first_name_male()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-last_name"></a>}}
+\subsection{Method \code{last_name()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{PersonProvider$last_name()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-last_name_female"></a>}}
+\subsection{Method \code{last_name_female()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{PersonProvider$last_name_female()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-last_name_male"></a>}}
+\subsection{Method \code{last_name_male()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{PersonProvider$last_name_male()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-prefix"></a>}}
+\subsection{Method \code{prefix()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{PersonProvider$prefix()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-prefix_female"></a>}}
+\subsection{Method \code{prefix_female()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{PersonProvider$prefix_female()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-prefix_male"></a>}}
+\subsection{Method \code{prefix_male()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{PersonProvider$prefix_male()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-suffix"></a>}}
+\subsection{Method \code{suffix()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{PersonProvider$suffix()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-suffix_female"></a>}}
+\subsection{Method \code{suffix_female()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{PersonProvider$suffix_female()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-suffix_male"></a>}}
+\subsection{Method \code{suffix_male()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{PersonProvider$suffix_male()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-clone"></a>}}
+\subsection{Method \code{clone()}}{
+The objects of this class are cloneable with this method.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{PersonProvider$clone(deep = FALSE)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{deep}}{Whether to make a deep clone.}
+}
+\if{html}{\out{</div>}}
+}
+}
+}

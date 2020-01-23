@@ -9,11 +9,9 @@
 \usage{
 useragent_provider_locales
 }
-\arguments{
-\item{locale}{(character) the locale to use. See
-\code{useragent_provider_locales} for locales supported (default: en_US)}
-}
 \description{
+UserAgentProvider
+
 UserAgentProvider
 }
 \details{
@@ -48,3 +46,170 @@ x$safari()
 }
 \keyword{datasets}
 \keyword{internal}
+\section{Super class}{
+\code{\link[charlatan:BaseProvider]{charlatan::BaseProvider}} -> \code{UserAgentProvider}
+}
+\section{Methods}{
+\subsection{Public methods}{
+\itemize{
+\item \href{#method-new}{\code{UserAgentProvider$new()}}
+\item \href{#method-mac_processor}{\code{UserAgentProvider$mac_processor()}}
+\item \href{#method-linux_processor}{\code{UserAgentProvider$linux_processor()}}
+\item \href{#method-user_agent}{\code{UserAgentProvider$user_agent()}}
+\item \href{#method-chrome}{\code{UserAgentProvider$chrome()}}
+\item \href{#method-firefox}{\code{UserAgentProvider$firefox()}}
+\item \href{#method-safari}{\code{UserAgentProvider$safari()}}
+\item \href{#method-opera}{\code{UserAgentProvider$opera()}}
+\item \href{#method-internet_explorer}{\code{UserAgentProvider$internet_explorer()}}
+\item \href{#method-windows_platform_token}{\code{UserAgentProvider$windows_platform_token()}}
+\item \href{#method-linux_platform_token}{\code{UserAgentProvider$linux_platform_token()}}
+\item \href{#method-mac_platform_token}{\code{UserAgentProvider$mac_platform_token()}}
+\item \href{#method-clone}{\code{UserAgentProvider$clone()}}
+}
+}
+\if{html}{
+\out{<details ><summary>Inherited methods</summary>}
+\itemize{
+\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="bothify">}\href{../../charlatan/html/BaseProvider.html#method-bothify}{\code{charlatan::BaseProvider$bothify()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale">}\href{../../charlatan/html/BaseProvider.html#method-check_locale}{\code{charlatan::BaseProvider$check_locale()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="lexify">}\href{../../charlatan/html/BaseProvider.html#method-lexify}{\code{charlatan::BaseProvider$lexify()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="numerify">}\href{../../charlatan/html/BaseProvider.html#method-numerify}{\code{charlatan::BaseProvider$numerify()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="prov_avail_locales">}\href{../../charlatan/html/BaseProvider.html#method-prov_avail_locales}{\code{charlatan::BaseProvider$prov_avail_locales()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit">}\href{../../charlatan/html/BaseProvider.html#method-random_digit}{\code{charlatan::BaseProvider$random_digit()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_not_zero}{\code{charlatan::BaseProvider$random_digit_not_zero()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero_or_empty">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_not_zero_or_empty}{\code{charlatan::BaseProvider$random_digit_not_zero_or_empty()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_or_empty">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_or_empty}{\code{charlatan::BaseProvider$random_digit_or_empty()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_element">}\href{../../charlatan/html/BaseProvider.html#method-random_element}{\code{charlatan::BaseProvider$random_element()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_element_prob">}\href{../../charlatan/html/BaseProvider.html#method-random_element_prob}{\code{charlatan::BaseProvider$random_element_prob()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_int">}\href{../../charlatan/html/BaseProvider.html#method-random_int}{\code{charlatan::BaseProvider$random_int()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_letter">}\href{../../charlatan/html/BaseProvider.html#method-random_letter}{\code{charlatan::BaseProvider$random_letter()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="randomize_nb_elements">}\href{../../charlatan/html/BaseProvider.html#method-randomize_nb_elements}{\code{charlatan::BaseProvider$randomize_nb_elements()}}\out{</span>}
+}
+\out{</details>}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-new"></a>}}
+\subsection{Method \code{new()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{UserAgentProvider$new(locale = NULL)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{locale}}{(character) the locale to use. See
+\code{useragent_provider_locales} for locales supported (default: en_US)}
+}
+\if{html}{\out{</div>}}
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-mac_processor"></a>}}
+\subsection{Method \code{mac_processor()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{UserAgentProvider$mac_processor()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-linux_processor"></a>}}
+\subsection{Method \code{linux_processor()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{UserAgentProvider$linux_processor()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-user_agent"></a>}}
+\subsection{Method \code{user_agent()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{UserAgentProvider$user_agent()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-chrome"></a>}}
+\subsection{Method \code{chrome()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{UserAgentProvider$chrome(
+  version_from = 13,
+  version_to = 63,
+  build_from = 800,
+  build_to = 899
+)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-firefox"></a>}}
+\subsection{Method \code{firefox()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{UserAgentProvider$firefox()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-safari"></a>}}
+\subsection{Method \code{safari()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{UserAgentProvider$safari()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-opera"></a>}}
+\subsection{Method \code{opera()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{UserAgentProvider$opera()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-internet_explorer"></a>}}
+\subsection{Method \code{internet_explorer()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{UserAgentProvider$internet_explorer()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-windows_platform_token"></a>}}
+\subsection{Method \code{windows_platform_token()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{UserAgentProvider$windows_platform_token()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-linux_platform_token"></a>}}
+\subsection{Method \code{linux_platform_token()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{UserAgentProvider$linux_platform_token()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-mac_platform_token"></a>}}
+\subsection{Method \code{mac_platform_token()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{UserAgentProvider$mac_platform_token()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-clone"></a>}}
+\subsection{Method \code{clone()}}{
+The objects of this class are cloneable with this method.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{UserAgentProvider$clone(deep = FALSE)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{deep}}{Whether to make a deep clone.}
+}
+\if{html}{\out{</div>}}
+}
+}
+}

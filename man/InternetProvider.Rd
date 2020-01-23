@@ -9,11 +9,9 @@
 \usage{
 internet_provider_locales
 }
-\arguments{
-\item{locale}{(character) the locale to use. See
-\code{internet_provider_locales} for locales supported (default: en_US)}
-}
 \description{
+InternetProvider
+
 InternetProvider
 }
 \details{
@@ -145,3 +143,273 @@ if (requireNamespace("stringi", quietly=TRUE)) {
 }
 \keyword{datasets}
 \keyword{internal}
+\section{Super class}{
+\code{\link[charlatan:BaseProvider]{charlatan::BaseProvider}} -> \code{InternetProvider}
+}
+\section{Methods}{
+\subsection{Public methods}{
+\itemize{
+\item \href{#method-new}{\code{InternetProvider$new()}}
+\item \href{#method-to_ascii}{\code{InternetProvider$to_ascii()}}
+\item \href{#method-email}{\code{InternetProvider$email()}}
+\item \href{#method-safe_email}{\code{InternetProvider$safe_email()}}
+\item \href{#method-free_email}{\code{InternetProvider$free_email()}}
+\item \href{#method-company_email}{\code{InternetProvider$company_email()}}
+\item \href{#method-ascii_email}{\code{InternetProvider$ascii_email()}}
+\item \href{#method-ascii_safe_email}{\code{InternetProvider$ascii_safe_email()}}
+\item \href{#method-ascii_free_email}{\code{InternetProvider$ascii_free_email()}}
+\item \href{#method-ascii_company_email}{\code{InternetProvider$ascii_company_email()}}
+\item \href{#method-user_name}{\code{InternetProvider$user_name()}}
+\item \href{#method-tld}{\code{InternetProvider$tld()}}
+\item \href{#method-free_email_domain}{\code{InternetProvider$free_email_domain()}}
+\item \href{#method-url}{\code{InternetProvider$url()}}
+\item \href{#method-domain_name}{\code{InternetProvider$domain_name()}}
+\item \href{#method-domain_word}{\code{InternetProvider$domain_word()}}
+\item \href{#method-ipv4}{\code{InternetProvider$ipv4()}}
+\item \href{#method-mac_address}{\code{InternetProvider$mac_address()}}
+\item \href{#method-uri_page}{\code{InternetProvider$uri_page()}}
+\item \href{#method-uri_path}{\code{InternetProvider$uri_path()}}
+\item \href{#method-uri_extension}{\code{InternetProvider$uri_extension()}}
+\item \href{#method-uri}{\code{InternetProvider$uri()}}
+\item \href{#method-slug}{\code{InternetProvider$slug()}}
+\item \href{#method-image_url}{\code{InternetProvider$image_url()}}
+\item \href{#method-clone}{\code{InternetProvider$clone()}}
+}
+}
+\if{html}{
+\out{<details ><summary>Inherited methods</summary>}
+\itemize{
+\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="bothify">}\href{../../charlatan/html/BaseProvider.html#method-bothify}{\code{charlatan::BaseProvider$bothify()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale">}\href{../../charlatan/html/BaseProvider.html#method-check_locale}{\code{charlatan::BaseProvider$check_locale()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="lexify">}\href{../../charlatan/html/BaseProvider.html#method-lexify}{\code{charlatan::BaseProvider$lexify()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="numerify">}\href{../../charlatan/html/BaseProvider.html#method-numerify}{\code{charlatan::BaseProvider$numerify()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="prov_avail_locales">}\href{../../charlatan/html/BaseProvider.html#method-prov_avail_locales}{\code{charlatan::BaseProvider$prov_avail_locales()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit">}\href{../../charlatan/html/BaseProvider.html#method-random_digit}{\code{charlatan::BaseProvider$random_digit()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_not_zero}{\code{charlatan::BaseProvider$random_digit_not_zero()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero_or_empty">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_not_zero_or_empty}{\code{charlatan::BaseProvider$random_digit_not_zero_or_empty()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_or_empty">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_or_empty}{\code{charlatan::BaseProvider$random_digit_or_empty()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_element">}\href{../../charlatan/html/BaseProvider.html#method-random_element}{\code{charlatan::BaseProvider$random_element()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_element_prob">}\href{../../charlatan/html/BaseProvider.html#method-random_element_prob}{\code{charlatan::BaseProvider$random_element_prob()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_int">}\href{../../charlatan/html/BaseProvider.html#method-random_int}{\code{charlatan::BaseProvider$random_int()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_letter">}\href{../../charlatan/html/BaseProvider.html#method-random_letter}{\code{charlatan::BaseProvider$random_letter()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="randomize_nb_elements">}\href{../../charlatan/html/BaseProvider.html#method-randomize_nb_elements}{\code{charlatan::BaseProvider$randomize_nb_elements()}}\out{</span>}
+}
+\out{</details>}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-new"></a>}}
+\subsection{Method \code{new()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{InternetProvider$new(locale = NULL)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{locale}}{(character) the locale to use. See
+\code{internet_provider_locales} for locales supported (default: en_US)}
+}
+\if{html}{\out{</div>}}
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-to_ascii"></a>}}
+\subsection{Method \code{to_ascii()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{InternetProvider$to_ascii(x)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-email"></a>}}
+\subsection{Method \code{email()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{InternetProvider$email(domain = NULL)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-safe_email"></a>}}
+\subsection{Method \code{safe_email()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{InternetProvider$safe_email()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-free_email"></a>}}
+\subsection{Method \code{free_email()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{InternetProvider$free_email()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-company_email"></a>}}
+\subsection{Method \code{company_email()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{InternetProvider$company_email()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-ascii_email"></a>}}
+\subsection{Method \code{ascii_email()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{InternetProvider$ascii_email()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-ascii_safe_email"></a>}}
+\subsection{Method \code{ascii_safe_email()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{InternetProvider$ascii_safe_email()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-ascii_free_email"></a>}}
+\subsection{Method \code{ascii_free_email()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{InternetProvider$ascii_free_email()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-ascii_company_email"></a>}}
+\subsection{Method \code{ascii_company_email()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{InternetProvider$ascii_company_email()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-user_name"></a>}}
+\subsection{Method \code{user_name()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{InternetProvider$user_name()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-tld"></a>}}
+\subsection{Method \code{tld()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{InternetProvider$tld()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-free_email_domain"></a>}}
+\subsection{Method \code{free_email_domain()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{InternetProvider$free_email_domain()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-url"></a>}}
+\subsection{Method \code{url()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{InternetProvider$url(schemes = NULL)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-domain_name"></a>}}
+\subsection{Method \code{domain_name()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{InternetProvider$domain_name(levels = 1)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-domain_word"></a>}}
+\subsection{Method \code{domain_word()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{InternetProvider$domain_word()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-ipv4"></a>}}
+\subsection{Method \code{ipv4()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{InternetProvider$ipv4()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-mac_address"></a>}}
+\subsection{Method \code{mac_address()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{InternetProvider$mac_address()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-uri_page"></a>}}
+\subsection{Method \code{uri_page()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{InternetProvider$uri_page()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-uri_path"></a>}}
+\subsection{Method \code{uri_path()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{InternetProvider$uri_path(deep = NULL)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-uri_extension"></a>}}
+\subsection{Method \code{uri_extension()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{InternetProvider$uri_extension()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-uri"></a>}}
+\subsection{Method \code{uri()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{InternetProvider$uri()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-slug"></a>}}
+\subsection{Method \code{slug()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{InternetProvider$slug(value = NULL)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-image_url"></a>}}
+\subsection{Method \code{image_url()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{InternetProvider$image_url(width = NULL, height = NULL)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-clone"></a>}}
+\subsection{Method \code{clone()}}{
+The objects of this class are cloneable with this method.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{InternetProvider$clone(deep = FALSE)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{deep}}{Whether to make a deep clone.}
+}
+\if{html}{\out{</div>}}
+}
+}
+}

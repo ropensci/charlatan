@@ -16,7 +16,7 @@ ch_position(n = 1, bbox = NULL)
 \arguments{
 \item{n}{(integer) number of things to get, any non-negative integer}
 
-\item{bbox}{a bounding box of the form \code{[w,s,e,n]}}
+\item{bbox}{a bounding box of the form \verb{[w,s,e,n]}}
 }
 \description{
 Create fake coordinates

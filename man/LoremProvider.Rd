@@ -9,15 +9,9 @@
 \usage{
 lorem_provider_locales
 }
-\arguments{
-\item{locale}{(character) the locale to use. See
-\code{lorem_provider_locales} for locales supported (default: en_US)}
-
-\item{sentence_punctuation}{(character) End of sentence punctuation}
-
-\item{word_connector}{(character) Default connector between words}
-}
 \description{
+LoremProvider
+
 LoremProvider
 }
 \details{
@@ -41,7 +35,7 @@ instead of 'Lorem ipsum'
 \item nb_words around how many words the sentence should contain
 \item variable_nb_words set to false if you want exactly \code{nb}
 words returned, otherwise the result may include a number of words
-of \code{nb} +/-40% (with a minimum of 1)
+of \code{nb} +/-40\% (with a minimum of 1)
 \item ext_words a character vector of words you would like to have instead of
 'Lorem ipsum'.
 \item returns: a single sentence
@@ -53,14 +47,14 @@ of \code{nb} +/-40% (with a minimum of 1)
 instead of 'Lorem ipsum'.
 \item returns: many sentences
 }
-\item \code{paragraph(nb_sentences, variable_nb_sentenc} -  ext_words)` - Generate a
+\item \verb{paragraph(nb_sentences, variable_nb_sentenc} -  ext_words)` - Generate a
 single paragraph
 \itemize{
 \item nb_sentences: around how many sentences the paragraph should
 contain
 \item variable_nb_sentences: set to false if you want exactly \code{nb}
 sentences returned, otherwise the result may include a number of
-sentences of \code{nb} +/-40% (with a minimum of 1)
+sentences of \code{nb} +/-40\% (with a minimum of 1)
 \item ext_words: a character vector of words you would like to have instead
 of 'Lorem ipsum'
 \item returns: a single paragraph
@@ -95,7 +89,7 @@ x$sentences(6)
 x$paragraph()
 x$paragraphs(3)
 x$paragraphs(6)
-cat(x$paragraphs(6), sep = "\\n")
+cat(x$paragraphs(6), sep = "\n")
 x$text(10)
 x$text(25)
 x$text(50)
@@ -117,3 +111,145 @@ LoremProvider$new(locale = "zh_TW")$word()
 }
 \keyword{datasets}
 \keyword{internal}
+\section{Super class}{
+\code{\link[charlatan:BaseProvider]{charlatan::BaseProvider}} -> \code{LoremProvider}
+}
+\section{Methods}{
+\subsection{Public methods}{
+\itemize{
+\item \href{#method-new}{\code{LoremProvider$new()}}
+\item \href{#method-word}{\code{LoremProvider$word()}}
+\item \href{#method-words}{\code{LoremProvider$words()}}
+\item \href{#method-sentence}{\code{LoremProvider$sentence()}}
+\item \href{#method-sentences}{\code{LoremProvider$sentences()}}
+\item \href{#method-paragraph}{\code{LoremProvider$paragraph()}}
+\item \href{#method-paragraphs}{\code{LoremProvider$paragraphs()}}
+\item \href{#method-text}{\code{LoremProvider$text()}}
+\item \href{#method-clone}{\code{LoremProvider$clone()}}
+}
+}
+\if{html}{
+\out{<details ><summary>Inherited methods</summary>}
+\itemize{
+\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="bothify">}\href{../../charlatan/html/BaseProvider.html#method-bothify}{\code{charlatan::BaseProvider$bothify()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale">}\href{../../charlatan/html/BaseProvider.html#method-check_locale}{\code{charlatan::BaseProvider$check_locale()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="lexify">}\href{../../charlatan/html/BaseProvider.html#method-lexify}{\code{charlatan::BaseProvider$lexify()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="numerify">}\href{../../charlatan/html/BaseProvider.html#method-numerify}{\code{charlatan::BaseProvider$numerify()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="prov_avail_locales">}\href{../../charlatan/html/BaseProvider.html#method-prov_avail_locales}{\code{charlatan::BaseProvider$prov_avail_locales()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit">}\href{../../charlatan/html/BaseProvider.html#method-random_digit}{\code{charlatan::BaseProvider$random_digit()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_not_zero}{\code{charlatan::BaseProvider$random_digit_not_zero()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero_or_empty">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_not_zero_or_empty}{\code{charlatan::BaseProvider$random_digit_not_zero_or_empty()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_or_empty">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_or_empty}{\code{charlatan::BaseProvider$random_digit_or_empty()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_element">}\href{../../charlatan/html/BaseProvider.html#method-random_element}{\code{charlatan::BaseProvider$random_element()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_element_prob">}\href{../../charlatan/html/BaseProvider.html#method-random_element_prob}{\code{charlatan::BaseProvider$random_element_prob()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_int">}\href{../../charlatan/html/BaseProvider.html#method-random_int}{\code{charlatan::BaseProvider$random_int()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_letter">}\href{../../charlatan/html/BaseProvider.html#method-random_letter}{\code{charlatan::BaseProvider$random_letter()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="randomize_nb_elements">}\href{../../charlatan/html/BaseProvider.html#method-randomize_nb_elements}{\code{charlatan::BaseProvider$randomize_nb_elements()}}\out{</span>}
+}
+\out{</details>}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-new"></a>}}
+\subsection{Method \code{new()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{LoremProvider$new(
+  locale = NULL,
+  sentence_punctuation = ".",
+  word_connector = " "
+)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{locale}}{(character) the locale to use. See
+\code{lorem_provider_locales} for locales supported (default: en_US)}
+
+\item{\code{sentence_punctuation}}{(character) End of sentence punctuation}
+
+\item{\code{word_connector}}{(character) Default connector between words}
+}
+\if{html}{\out{</div>}}
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-word"></a>}}
+\subsection{Method \code{word()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{LoremProvider$word(ext_words = NULL)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-words"></a>}}
+\subsection{Method \code{words()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{LoremProvider$words(nb = 3, ext_words = NULL)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-sentence"></a>}}
+\subsection{Method \code{sentence()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{LoremProvider$sentence(
+  nb_words = 6,
+  variable_nb_words = TRUE,
+  ext_words = NULL
+)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-sentences"></a>}}
+\subsection{Method \code{sentences()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{LoremProvider$sentences(nb = 3, ext_words = NULL)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-paragraph"></a>}}
+\subsection{Method \code{paragraph()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{LoremProvider$paragraph(
+  nb_sentences = 3,
+  variable_nb_sentences = TRUE,
+  ext_words = NULL
+)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-paragraphs"></a>}}
+\subsection{Method \code{paragraphs()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{LoremProvider$paragraphs(nb = 3, ext_words = NULL)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-text"></a>}}
+\subsection{Method \code{text()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{LoremProvider$text(max_nb_chars = 200, ext_words = NULL)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-clone"></a>}}
+\subsection{Method \code{clone()}}{
+The objects of this class are cloneable with this method.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{LoremProvider$clone(deep = FALSE)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{deep}}{Whether to make a deep clone.}
+}
+\if{html}{\out{</div>}}
+}
+}
+}
