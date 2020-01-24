@@ -241,8 +241,7 @@ AddressProvider <- R6::R6Class(
 )
 
 #' @export
-#' @noRd
-#' @rdname AddressProvider
+#' @rdname per_provider_locales
 address_provider_locales <- c(
   "en_US", "en_GB", "en_NZ", "es_ES"
 )

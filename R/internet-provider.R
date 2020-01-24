@@ -413,8 +413,7 @@ InternetProvider <- R6::R6Class(
 )
 
 #' @export
-#' @noRd
-#' @rdname InternetProvider
+#' @rdname per_provider_locales
 internet_provider_locales <- c(
   "en_US", "en_AU", "en_NZ", "de_DE", "bg_BG", "cs_CZ", "fa_IR", "fr_FR",
   "hr_HR"

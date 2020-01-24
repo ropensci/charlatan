@@ -252,8 +252,7 @@ LoremProvider <- R6::R6Class(
 )
 
 #' @export
-#' @noRd
-#' @rdname LoremProvider
+#' @rdname per_provider_locales
 lorem_provider_locales <- c(
   "en_US", "ar_AA", "el_GR", "he_IL", "ja_JP", "la", "ru_RU",
   "zh_CN", "zh_TW"

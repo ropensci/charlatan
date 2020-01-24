@@ -57,8 +57,7 @@ PhoneNumberProvider <- R6::R6Class(
 )
 
 #' @export
-#' @noRd
-#' @rdname PhoneNumberProvider
+#' @rdname per_provider_locales
 phone_number_provider_locales <- c(
   "en_US", "es_ES", "es_MX", "es_PE", "en_GB", "en_CA", "el_GR",
   "da_DK", "de_DE", "cs_CZ", "bs_BA", "bg_BG", "fa_IR", "fi_FI",

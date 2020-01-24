@@ -279,6 +279,5 @@ FileProvider <- R6::R6Class(
 )
 
 #' @export
-#' @noRd
-#' @rdname FileProvider
+#' @rdname per_provider_locales
 file_provider_locales <- c("en_US")

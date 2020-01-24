@@ -52,5 +52,7 @@ x$hex_color()
 Scott Chamberlain \email{myrmecocystus+r@gmail.com}
 
 Kyle Voytovich
+
+Martin Pedersen
 }
 \keyword{package}

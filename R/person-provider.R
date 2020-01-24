@@ -288,8 +288,7 @@ PersonProvider <- R6::R6Class(
 )
 
 #' @export
-#' @noRd
-#' @rdname PersonProvider
+#' @rdname per_provider_locales
 person_provider_locales <- c(
   "bg_BG", "fr_FR", "es_ES", "en_US", "fa_IR", "da_DK",
   "cs_CZ", "de_DE", "fr_CH", "de_AT", "fi_FI", "es_MX",

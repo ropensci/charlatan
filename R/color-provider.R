@@ -105,6 +105,5 @@ ColorProvider <- R6::R6Class(
 )
 
 #' @export
-#' @noRd
-#' @rdname ColorProvider
+#' @rdname per_provider_locales
 color_provider_locales <- c("uk_UA", "en_US")

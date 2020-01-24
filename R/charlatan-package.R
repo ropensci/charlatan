@@ -14,6 +14,7 @@
 #' @keywords package
 #' @author Scott Chamberlain \email{myrmecocystus+r@@gmail.com}
 #' @author Kyle Voytovich
+#' @author Martin Pedersen
 #'
 #' @section Package API:
 #' 

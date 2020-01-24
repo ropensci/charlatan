@@ -218,6 +218,5 @@ UserAgentProvider <- R6::R6Class(
 )
 
 #' @export
-#' @noRd
-#' @rdname UserAgentProvider
+#' @rdname per_provider_locales
 useragent_provider_locales <- c("en_US")
