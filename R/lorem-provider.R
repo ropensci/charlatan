@@ -17,7 +17,9 @@
 #' x$paragraphs(3)
 #' x$paragraphs(6)
 #' cat(x$paragraphs(6), sep = "\n")
+#' x$text(6)
 #' x$text(10)
+#' x$text(19)
 #' x$text(25)
 #' x$text(50)
 #' x$text(300)
@@ -194,9 +196,9 @@ LoremProvider <- R6::R6Class(
           }
           text <- private$drop_last(text)
         }
-        text[1] <- paste0(toupper(text[1][1]), text[1][seq(3, length(text))])
-        last_index <- length(text) - 1
-        text[last_index] <- c(text, private$sentence_punctuation)
+        text[[1]] <- paste0(toupper(substring(text[[1]], 1, 1)), substring(text[[1]], 2))
+        # last_index <- length(text) - 1
+        text[[length(text)]] <- paste0(text[[length(text)]], private$sentence_punctuation)
       } else if (max_nb_chars < 100) {
         # join sentences
         while (length(text) == 0) {
