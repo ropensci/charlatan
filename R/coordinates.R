@@ -4,6 +4,7 @@
 #' @name coordinates
 #' @template params
 #' @param bbox a bounding box of the form `[w,s,e,n]`
+#' @seealso [CoordinateProvider]
 #' @examples
 #' ch_lon()
 #' ch_lon(10)

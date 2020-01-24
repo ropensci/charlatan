@@ -2,6 +2,7 @@
 #'
 #' @export
 #' @template params
+#' @seealso [CurrencyProvider]
 #' @examples
 #' ch_currency()
 #' ch_currency(10)

@@ -48,3 +48,6 @@ ch_taxonomic_species()
 ch_taxonomic_species(10)
 ch_taxonomic_species(500)
 }
+\seealso{
+\link{TaxonomyProvider}
+}

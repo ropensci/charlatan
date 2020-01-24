@@ -9,8 +9,8 @@ ch_company(n = 1, locale = NULL)
 \arguments{
 \item{n}{(integer) number of things to get, any non-negative integer}
 
-\item{locale}{(character) the locale to use. options: en_US (default),
-bg_bg, cs_cz, de_de, es_mx, fa_ir, fr_fr, hr_hr, it_it}
+\item{locale}{(character) the locale to use. See
+\code{CompanyProvider$new()$allowed_locales()} for locales supported.}
 }
 \description{
 Create fake company names and other company bits
@@ -24,4 +24,7 @@ ch_company(locale = "fr_FR", n = 10)
 ch_company(locale = "cs_CZ", n = 10)
 ch_company(locale = "es_MX", n = 10)
 ch_company(locale = "hr_HR", n = 10)
+}
+\seealso{
+\link{CompanyProvider}
 }

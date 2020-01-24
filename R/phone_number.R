@@ -3,7 +3,9 @@
 #' @export
 #' @template params
 #' @param locale (character) the locale to use. See
-#' `phone_number_provider_locales` for locales supported (default: en_US)
+#' `PhoneNumberProvider$new()$allowed_locales()` for locales
+#' supported (default: en_US)
+#' @seealso [PhoneNumberProvider]
 #' @examples
 #' ch_phone_number()
 #' ch_phone_number(10)

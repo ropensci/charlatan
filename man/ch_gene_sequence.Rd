@@ -22,3 +22,6 @@ ch_gene_sequence(100)
 ch_gene_sequence(length = 500)
 ch_gene_sequence(10, length = 500)
 }
+\seealso{
+\link{SequenceProvider}
+}

@@ -3,6 +3,7 @@
 #' @name date_time
 #' @export
 #' @template params
+#' @seealso [DateTimeProvider]
 #' @examples
 #' ch_timezone()
 #' ch_timezone(10)

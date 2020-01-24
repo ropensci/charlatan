@@ -31,3 +31,6 @@ ch_credit_card_security_code()
 ch_credit_card_security_code(n = 10)
 ch_credit_card_security_code(n = 500)
 }
+\seealso{
+\link{CreditCardProvider}
+}

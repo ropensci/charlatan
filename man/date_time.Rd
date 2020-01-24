@@ -29,3 +29,6 @@ ch_unix_time(20)
 ch_date_time()
 ch_date_time(20)
 }
+\seealso{
+\link{DateTimeProvider}
+}

@@ -25,3 +25,6 @@ ch_element_element()
 ch_element_element(10)
 ch_element_element(50)
 }
+\seealso{
+\link{ElementProvider}
+}

@@ -3,6 +3,7 @@
 #' @export
 #' @name ch_credit
 #' @template params
+#' @seealso [CreditCardProvider]
 #' @examples
 #' ch_credit_card_provider()
 #' ch_credit_card_provider(n = 4)

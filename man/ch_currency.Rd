@@ -17,3 +17,6 @@ ch_currency()
 ch_currency(10)
 ch_currency(500)
 }
+\seealso{
+\link{CurrencyProvider}
+}

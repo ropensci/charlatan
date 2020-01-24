@@ -2,8 +2,9 @@
 #'
 #' @export
 #' @template params
-#' @param locale (character) the locale to use. options: en_US (default),
-#' bg_bg, cs_cz, de_de, es_mx, fa_ir, fr_fr, hr_hr, it_it
+#' @param locale (character) the locale to use. See
+#' `CompanyProvider$new()$allowed_locales()` for locales supported.
+#' @seealso [CompanyProvider]
 #' @examples
 #' ch_company()
 #' ch_company(10)

@@ -3,6 +3,7 @@
 #' @export
 #' @name elements
 #' @template params
+#' @seealso [ElementProvider]
 #' @examples
 #' ch_element_symbol()
 #' ch_element_symbol(10)

@@ -10,7 +10,8 @@ ch_name(n = 1, locale = NULL, messy = FALSE)
 \item{n}{(integer) number of things to get, any non-negative integer}
 
 \item{locale}{(character) the locale to use. See
-\code{person_provider_locales} for locales supported (default: en_US)}
+\code{PersonProvider$new()$allowed_locales()} for locales supported
+(default: en_US)}
 
 \item{messy}{(logical) make some messy data. Default: \code{FALSE}}
 }
@@ -26,4 +27,7 @@ ch_name(locale = "fr_FR", n = 10)
 ch_name(locale = "fr_CH", n = 10)
 ch_name(locale = "fa_IR", n = 10)
 ch_name(locale = "fi_FI", n = 10)
+}
+\seealso{
+\link{PersonProvider}
 }

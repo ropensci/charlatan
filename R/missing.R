@@ -3,6 +3,7 @@
 #' @export
 #' @param x Input vector, can be any class - only 1 vetor
 #' @template params
+#' @seealso [MissingDataProvider]
 #' @examples
 #' ch_missing(letters)
 #' ch_missing(letters, 10)

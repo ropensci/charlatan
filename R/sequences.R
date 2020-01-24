@@ -3,6 +3,7 @@
 #' @export
 #' @template params
 #' @param length (integer) length of sequence to create
+#' @seealso [SequenceProvider]
 #' @examples
 #' ch_gene_sequence()
 #' ch_gene_sequence(10)

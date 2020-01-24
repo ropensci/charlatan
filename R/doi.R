@@ -2,6 +2,7 @@
 #'
 #' @export
 #' @template params
+#' @seealso [DOIProvider]
 #' @examples
 #' ch_doi()
 #' ch_doi(10)

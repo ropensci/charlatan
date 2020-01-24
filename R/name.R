@@ -3,8 +3,10 @@
 #' @export
 #' @template params
 #' @param locale (character) the locale to use. See
-#' `person_provider_locales` for locales supported (default: en_US)
+#' `PersonProvider$new()$allowed_locales()` for locales supported
+#' (default: en_US)
 #' @param messy (logical) make some messy data. Default: `FALSE`
+#' @seealso [PersonProvider]
 #' @examples
 #' ch_name()
 #' ch_name(10)

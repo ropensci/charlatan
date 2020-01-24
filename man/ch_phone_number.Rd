@@ -10,7 +10,8 @@ ch_phone_number(n = 1, locale = NULL)
 \item{n}{(integer) number of things to get, any non-negative integer}
 
 \item{locale}{(character) the locale to use. See
-\code{phone_number_provider_locales} for locales supported (default: en_US)}
+\code{PhoneNumberProvider$new()$allowed_locales()} for locales
+supported (default: en_US)}
 }
 \description{
 Create fake phone numbers
@@ -25,4 +26,7 @@ ch_phone_number(locale = "fr_FR")
 ch_phone_number(locale = "uk_UA")
 ch_phone_number(locale = "en_CA")
 ch_phone_number(locale = "lv_LV")
+}
+\seealso{
+\link{PhoneNumberProvider}
 }

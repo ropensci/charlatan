@@ -3,12 +3,10 @@
 #' @export
 #' @name ch_color
 #' @template params
-#' @param locale (character) the locale to use. options: en_US (default),
-#' or uk_UA. Affects the `ch_color_name` and `ch_safe_color_name` functions
-#'
-#' @section Locales:
-#' See `color_provider_locales` for locales supported
-#'
+#' @param locale (character) the locale to use. See
+#' `ColorProvider$new()$allowed_locales()` for locales supported.
+#' Affects the `ch_color_name` and `ch_safe_color_name` functions
+#' @seealso [ColorProvider]
 #' @examples
 #' ch_color_name()
 #' ch_color_name(10)
