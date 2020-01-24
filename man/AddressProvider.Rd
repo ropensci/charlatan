@@ -9,6 +9,7 @@ address methods
 \examples{
 (z <- AddressProvider$new())
 z$locale
+z$allowed_locales()
 z$city_suffix()
 z$street_suffix()
 z$building_number()
@@ -92,6 +93,7 @@ z$street_name()
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
+\item \href{#method-allowed_locales}{\code{AddressProvider$allowed_locales()}}
 \item \href{#method-new}{\code{AddressProvider$new()}}
 \item \href{#method-city_suffix}{\code{AddressProvider$city_suffix()}}
 \item \href{#method-street_suffix}{\code{AddressProvider$street_suffix()}}
@@ -126,6 +128,15 @@ z$street_name()
 \out{</details>}
 }
 \if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-allowed_locales"></a>}}
+\subsection{Method \code{allowed_locales()}}{
+fetch the allowed locales for this provider
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{AddressProvider$allowed_locales()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-new"></a>}}
 \subsection{Method \code{new()}}{
 Create a new \code{AddressProvider} object
@@ -137,7 +148,7 @@ Create a new \code{AddressProvider} object
 \if{html}{\out{<div class="arguments">}}
 \describe{
 \item{\code{locale}}{(character) the locale to use. See
-\code{address_provider_locales} for locales supported (default: en_US)}
+\verb{$allowed_locales()} for locales supported (default: en_US)}
 }
 \if{html}{\out{</div>}}
 }

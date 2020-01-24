@@ -27,16 +27,19 @@ ColorProvider <- R6::R6Class(
     #' @field safe_colors (character) xxx
     safe_colors = NULL,
 
+    #' @description fetch the allowed locales for this provider
+    allowed_locales = function() private$locales,
+
     #' @description Create a new `ColorProvider` object
     #' @param locale (character) the locale to use. See
-    #' `color_provider_locales` for locales supported (default: en_US)
+    #' `$allowed_locales()` for locales supported (default: en_US)
     #' @return A new `ColorProvider` object
     initialize = function(locale = NULL) {
       if (!is.null(locale)) {
         # check global locales
         super$check_locale(locale)
         # check person provider locales
-        check_locale_(locale, color_provider_locales)
+        check_locale_(locale, private$locales)
         self$locale <- locale
       } else {
         self$locale <- 'en_US'
@@ -99,11 +102,8 @@ ColorProvider <- R6::R6Class(
       sprintf("(%s)", paste0(color, collapse = ", "))
     },
 
-    sample_col = function() sample(0:255, 1)
+    sample_col = function() sample(0:255, 1),
 
+    locales = c("uk_UA", "en_US")
   )
 )
-
-#' @export
-#' @rdname per_provider_locales
-color_provider_locales <- c("uk_UA", "en_US")

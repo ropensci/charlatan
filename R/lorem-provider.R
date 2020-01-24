@@ -41,9 +41,13 @@ LoremProvider <- R6::R6Class(
   public = list(
     #' @field locale (character) the locale
     locale = NULL,
+
+    #' @description fetch the allowed locales for this provider
+    allowed_locales = function() private$locales,
+
     #' @description Create a new `LoremProvider` object
     #' @param locale (character) the locale to use. See
-    #' `lorem_provider_locales` for locales supported (default: en_US)
+    #' `$allowed_locales()` for locales supported (default: en_US)
     #' @param sentence_punctuation (character) End of sentence punctuation
     #' @param word_connector (character) Default connector between words
     #' @return A new `LoremProvider` object
@@ -54,7 +58,7 @@ LoremProvider <- R6::R6Class(
         # check global locales
         super$check_locale(locale)
         # check person provider locales
-        check_locale_(locale, lorem_provider_locales)
+        check_locale_(locale, private$locales)
         self$locale <- locale
       } else {
         self$locale <- 'en_US'
@@ -247,13 +251,9 @@ LoremProvider <- R6::R6Class(
 
     drop_last = function(x) {
       x[-length(x)]
-    }
-  )
-)
+    },
 
-#' @export
-#' @rdname per_provider_locales
-lorem_provider_locales <- c(
-  "en_US", "ar_AA", "el_GR", "he_IL", "ja_JP", "la", "ru_RU",
-  "zh_CN", "zh_TW"
+    locales = c("en_US", "ar_AA", "el_GR", "he_IL", "ja_JP", "la",
+      "ru_RU", "zh_CN", "zh_TW")
+  )
 )

@@ -109,6 +109,7 @@ PersonProvider$new(locale = "da_DK")$render()
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
+\item \href{#method-allowed_locales}{\code{PersonProvider$allowed_locales()}}
 \item \href{#method-new}{\code{PersonProvider$new()}}
 \item \href{#method-render}{\code{PersonProvider$render()}}
 \item \href{#method-first_name}{\code{PersonProvider$first_name()}}
@@ -146,6 +147,15 @@ PersonProvider$new(locale = "da_DK")$render()
 \out{</details>}
 }
 \if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-allowed_locales"></a>}}
+\subsection{Method \code{allowed_locales()}}{
+fetch the allowed locales for this provider
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{PersonProvider$allowed_locales()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-new"></a>}}
 \subsection{Method \code{new()}}{
 Create a new \code{PersonProvider} object
@@ -157,7 +167,7 @@ Create a new \code{PersonProvider} object
 \if{html}{\out{<div class="arguments">}}
 \describe{
 \item{\code{locale}}{(character) the locale to use. See
-\code{person_provider_locales} for locales supported (default: en_US)}
+\verb{$allowed_locales()} for locales supported (default: en_US)}
 
 \item{\code{messy}}{(logical) make some messy data. Default: \code{FALSE}}
 }

@@ -35,16 +35,19 @@ UserAgentProvider <- R6::R6Class(
     #' @field mac_processors (character) mac processor options
     mac_processors = c('Intel', 'PPC', 'U; Intel', 'U; PPC'),
 
+    #' @description fetch the allowed locales for this provider
+    allowed_locales = function() private$locales,
+
     #' @description Create a new `UserAgentProvider` object
     #' @param locale (character) the locale to use. See
-    #' `useragent_provider_locales` for locales supported (default: en_US)
+    #' `$allowed_locales()` for locales supported (default: en_US)
     #' @return A new `UserAgentProvider` object
     initialize = function(locale = NULL) {
       if (!is.null(locale)) {
         # check global locales
         super$check_locale(locale)
         # check person provider locales
-        check_locale_(locale, useragent_provider_locales)
+        check_locale_(locale, private$locales)
         self$locale <- locale
       } else {
         self$locale <- 'en_US'
@@ -214,9 +217,8 @@ UserAgentProvider <- R6::R6Class(
               super$random_int(0, 9)
       )
     }
+  ),
+  private = list(
+    locales = c("en_US")
   )
 )
-
-#' @export
-#' @rdname per_provider_locales
-useragent_provider_locales <- c("en_US")

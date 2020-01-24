@@ -36,6 +36,7 @@ PhoneNumberProvider$new(locale = "es_PE")$render()
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
+\item \href{#method-allowed_locales}{\code{PhoneNumberProvider$allowed_locales()}}
 \item \href{#method-new}{\code{PhoneNumberProvider$new()}}
 \item \href{#method-render}{\code{PhoneNumberProvider$render()}}
 \item \href{#method-clone}{\code{PhoneNumberProvider$clone()}}
@@ -61,6 +62,15 @@ PhoneNumberProvider$new(locale = "es_PE")$render()
 \out{</details>}
 }
 \if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-allowed_locales"></a>}}
+\subsection{Method \code{allowed_locales()}}{
+fetch the allowed locales for this provider
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{PhoneNumberProvider$allowed_locales()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-new"></a>}}
 \subsection{Method \code{new()}}{
 Create a new \code{PhoneNumberProvider} object
@@ -72,7 +82,7 @@ Create a new \code{PhoneNumberProvider} object
 \if{html}{\out{<div class="arguments">}}
 \describe{
 \item{\code{locale}}{(character) the locale to use. See
-\code{phone_number_provider_locales} for locales supported (default: en_US)}
+\verb{$allowed_locales()} for locales supported (default: en_US)}
 }
 \if{html}{\out{</div>}}
 }

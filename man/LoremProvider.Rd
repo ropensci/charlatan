@@ -52,6 +52,7 @@ LoremProvider$new(locale = "zh_TW")$word()
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
+\item \href{#method-allowed_locales}{\code{LoremProvider$allowed_locales()}}
 \item \href{#method-new}{\code{LoremProvider$new()}}
 \item \href{#method-word}{\code{LoremProvider$word()}}
 \item \href{#method-words}{\code{LoremProvider$words()}}
@@ -83,6 +84,15 @@ LoremProvider$new(locale = "zh_TW")$word()
 \out{</details>}
 }
 \if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-allowed_locales"></a>}}
+\subsection{Method \code{allowed_locales()}}{
+fetch the allowed locales for this provider
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{LoremProvider$allowed_locales()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-new"></a>}}
 \subsection{Method \code{new()}}{
 Create a new \code{LoremProvider} object
@@ -98,7 +108,7 @@ Create a new \code{LoremProvider} object
 \if{html}{\out{<div class="arguments">}}
 \describe{
 \item{\code{locale}}{(character) the locale to use. See
-\code{lorem_provider_locales} for locales supported (default: en_US)}
+\verb{$allowed_locales()} for locales supported (default: en_US)}
 
 \item{\code{sentence_punctuation}}{(character) End of sentence punctuation}
 

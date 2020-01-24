@@ -77,7 +77,7 @@ test_that("ch_name works for all locales", {
     expect_equal(trimws(res), res)
   }
 
-  for (loc in person_provider_locales) {
+  for (loc in PersonProvider$new()$allowed_locales()) {
     test_locale(loc)
   }
 })

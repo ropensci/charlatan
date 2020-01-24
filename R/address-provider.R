@@ -6,6 +6,7 @@
 #' @examples
 #' (z <- AddressProvider$new())
 #' z$locale
+#' z$allowed_locales()
 #' z$city_suffix()
 #' z$street_suffix()
 #' z$building_number()
@@ -82,16 +83,19 @@ AddressProvider <- R6::R6Class(
     #' @field locale_data (character) xxx
     locale_data = list(),
 
+    #' @description fetch the allowed locales for this provider
+    allowed_locales = function() private$locales,
+
     #' @description Create a new `AddressProvider` object
     #' @param locale (character) the locale to use. See
-    #' `address_provider_locales` for locales supported (default: en_US)
+    #' `$allowed_locales()` for locales supported (default: en_US)
     #' @return A new `AddressProvider` object
     initialize = function(locale = NULL) {
       if (!is.null(locale)) {
         # check global locales
         super$check_locale(locale)
         # check address provider locales
-        check_locale_(locale, address_provider_locales)
+        check_locale_(locale, private$locales)
         self$locale <- locale
       } else {
         self$locale <- 'en_US'
@@ -237,11 +241,8 @@ AddressProvider <- R6::R6Class(
     #     @classmethod
     #     def longitude(cls):
     #         return cls.geo_coordinate()
+  ),
+  private = list(
+    locales = c("en_US", "en_GB", "en_NZ", "es_ES")
   )
-)
-
-#' @export
-#' @rdname per_provider_locales
-address_provider_locales <- c(
-  "en_US", "en_GB", "en_NZ", "es_ES"
 )

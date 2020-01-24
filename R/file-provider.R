@@ -19,16 +19,19 @@ FileProvider <- R6::R6Class(
     #' @field locale (character) the locale
     locale = NULL,
 
+    #' @description fetch the allowed locales for this provider
+    allowed_locales = function() private$locales,
+
     #' @description Create a new `FileProvider` object
     #' @param locale (character) the locale to use. See
-    #' `file_provider_locales` for locales supported (default: en_US)
+    #' `$allowed_locales()` for locales supported (default: en_US)
     #' @return A new `FileProvider` object
     initialize = function(locale = NULL) {
       if (!is.null(locale)) {
         # check global locales
         super$check_locale(locale)
         # check person provider locales
-        check_locale_(locale, file_provider_locales)
+        check_locale_(locale, private$locales)
         self$locale <- locale
       } else {
         self$locale <- 'en_US'
@@ -274,10 +277,8 @@ FileProvider <- R6::R6Class(
         "pdf"  # Portable Document Format
     ),
 
-    file_extensions = NULL
+    file_extensions = NULL,
+
+    locales = c("en_US")
   )
 )
-
-#' @export
-#' @rdname per_provider_locales
-file_provider_locales <- c("en_US")

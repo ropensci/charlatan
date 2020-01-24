@@ -158,16 +158,19 @@ InternetProvider <- R6::R6Class(
     #' @field replacements (list) a list
     replacements = list(),
 
+    #' @description fetch the allowed locales for this provider
+    allowed_locales = function() private$locales,
+
     #' @description Create a new `InternetProvider` object
     #' @param locale (character) the locale to use. See
-    #' `internet_provider_locales` for locales supported (default: en_US)
+    #' `$allowed_locales()` for locales supported (default: en_US)
     #' @return A new `InternetProvider` object
     initialize = function(locale = NULL) {
       if (!is.null(locale)) {
         # check global locales
         super$check_locale(locale)
         # check person provider locales
-        check_locale_(locale, internet_provider_locales)
+        check_locale_(locale, private$locales)
         self$locale <- locale
       } else {
         self$locale <- 'en_US'
@@ -264,7 +267,7 @@ InternetProvider <- R6::R6Class(
     #' @description a user name
     user_name = function() {
       pattern <- super$random_element(self$user_name_formats)
-      loc <- if (private$has_locale(self$locale, person_provider_locales)) {
+      loc <- if (private$has_locale(self$locale, PersonProvider$new()$allowed_locales())) {
         self$locale
       } else {
         "en_US"
@@ -408,13 +411,9 @@ InternetProvider <- R6::R6Class(
         tmp <- parse_eval(sprintf("int_%s_", name), self$locale)
         if (!is.null(tmp)) self[[name]] <- tmp
       }
-    }
-  )
-)
+    },
 
-#' @export
-#' @rdname per_provider_locales
-internet_provider_locales <- c(
-  "en_US", "en_AU", "en_NZ", "de_DE", "bg_BG", "cs_CZ", "fa_IR", "fr_FR",
-  "hr_HR"
+    locales = c("en_US", "en_AU", "en_NZ", "de_DE", "bg_BG", "cs_CZ",
+      "fa_IR", "fr_FR", "hr_HR")
+  )
 )

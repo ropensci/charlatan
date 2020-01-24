@@ -40,6 +40,7 @@ x$safari()
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
+\item \href{#method-allowed_locales}{\code{UserAgentProvider$allowed_locales()}}
 \item \href{#method-new}{\code{UserAgentProvider$new()}}
 \item \href{#method-mac_processor}{\code{UserAgentProvider$mac_processor()}}
 \item \href{#method-linux_processor}{\code{UserAgentProvider$linux_processor()}}
@@ -75,6 +76,15 @@ x$safari()
 \out{</details>}
 }
 \if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-allowed_locales"></a>}}
+\subsection{Method \code{allowed_locales()}}{
+fetch the allowed locales for this provider
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{UserAgentProvider$allowed_locales()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-new"></a>}}
 \subsection{Method \code{new()}}{
 Create a new \code{UserAgentProvider} object
@@ -86,7 +96,7 @@ Create a new \code{UserAgentProvider} object
 \if{html}{\out{<div class="arguments">}}
 \describe{
 \item{\code{locale}}{(character) the locale to use. See
-\code{useragent_provider_locales} for locales supported (default: en_US)}
+\verb{$allowed_locales()} for locales supported (default: en_US)}
 }
 \if{html}{\out{</div>}}
 }

@@ -95,9 +95,12 @@ PersonProvider <- R6::R6Class(
     #' @field messy (logical) the messy setting, `TRUE` or `FALSE`
     messy = FALSE,
 
+    #' @description fetch the allowed locales for this provider
+    allowed_locales = function() private$locales,
+
     #' @description Create a new `PersonProvider` object
     #' @param locale (character) the locale to use. See
-    #' `person_provider_locales` for locales supported (default: en_US)
+    #' `$allowed_locales()` for locales supported (default: en_US)
     #' @param messy (logical) make some messy data. Default: `FALSE`
     #' @return A new `PersonProvider` object
     initialize = function(locale = NULL, messy = FALSE) {
@@ -112,7 +115,7 @@ PersonProvider <- R6::R6Class(
         # check global locales
         super$check_locale(locale)
         # check person provider locales
-        check_locale_(locale, person_provider_locales)
+        check_locale_(locale, private$locales)
         self$locale <- locale
       } else {
         self$locale <- 'en_US'
@@ -284,14 +287,14 @@ PersonProvider <- R6::R6Class(
       }
     }
 
-  )
-)
+  ),
 
-#' @export
-#' @rdname per_provider_locales
-person_provider_locales <- c(
-  "bg_BG", "fr_FR", "es_ES", "en_US", "fa_IR", "da_DK",
-  "cs_CZ", "de_DE", "fr_CH", "de_AT", "fi_FI", "es_MX",
-  "en_GB", "hr_HR", "it_IT", "lv_LV", "ko_KR", "lt_LT",
-  "ne_NP", "nl_NL", "no_NO", "pl_PL", "en_NZ"
+  private = list(
+    locales = c(
+      "bg_BG", "fr_FR", "es_ES", "en_US", "fa_IR", "da_DK",
+      "cs_CZ", "de_DE", "fr_CH", "de_AT", "fi_FI", "es_MX",
+      "en_GB", "hr_HR", "it_IT", "lv_LV", "ko_KR", "lt_LT",
+      "ne_NP", "nl_NL", "no_NO", "pl_PL", "en_NZ"
+    )
+  )
 )

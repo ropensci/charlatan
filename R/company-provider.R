@@ -56,16 +56,19 @@ CompanyProvider <- R6::R6Class(
     #' @field siren_format (character) xxx
     siren_format = NULL,
 
+    #' @description fetch the allowed locales for this provider
+    allowed_locales = function() private$locales,
+
     #' @description Create a new `CompanyProvider` object
     #' @param locale (character) the locale to use. See
-    #' `company_provider_locales` for locales supported (default: en_US)
+    #' `$allowed_locales()` for locales supported (default: en_US)
     #' @return A new `CompanyProvider` object
     initialize = function(locale = NULL) {
       if (!is.null(locale)) {
         # check global locales
         super$check_locale(locale)
         # check person provider locales
-        check_locale_(locale, company_provider_locales)
+        check_locale_(locale, private$locales)
         self$locale <- locale
       } else {
         self$locale <- 'en_US'
@@ -151,14 +154,9 @@ CompanyProvider <- R6::R6Class(
           company_suffix = super$random_element(suffix)
         )
       )
-    }
+    },
+
+    locales = c("bg_BG", "cs_CZ", "de_DE", "en_US", "es_MX", "fa_IR",
+      "fr_FR", "hr_HR", "it_IT")
   )
-)
-
-
-#' @export
-#' @rdname per_provider_locales
-company_provider_locales <- c(
-  "bg_BG", "cs_CZ", "de_DE", "en_US", "es_MX", "fa_IR", "fr_FR",
-  "hr_HR", "it_IT"
 )

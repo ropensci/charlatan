@@ -13,12 +13,6 @@
 #' charlatan_locales()
 charlatan_locales <- function() available_locales_df
 
-#' @title per provider locale vectors
-#' @description vectors of allowed locales used for each provider of the
-#' same name
-#' @name per_provider_locales
-NULL
-
 # generate with:
 # available_locales_df <- data.table::setDF(data.table::rbindlist(
 #      lapply(available_locales, stringi::stri_locale_info)))

@@ -10,6 +10,7 @@ charlatan 0.4.0
 * `en_NZ` locale support added to `AddressProvider`, `InternetProvider`, and `PersonProvider` (#109)
 * main vignette gains examples on using the `MissingDataProvider` thanks to @KKulma (#110)
 * `PhoneNumberProvider` gains support for locales: `dk_DK`, `en_NZ`, `id_ID`, `th_TH`, and `tw_GH` (#100)
+* each R6 provider gains new method `allowed_locales()` - the exported character vector of allowed locales for each provider has moved inside of the R6 class in `$private` because there's no reason for the user to modify allowed locales - `allowed_locales()` reads this vector for each provider
 
 ### MINOR IMPROVEMENTS
 
