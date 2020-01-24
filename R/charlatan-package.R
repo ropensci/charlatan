@@ -8,7 +8,7 @@
 #' @name charlatan-package
 #' @importFrom R6 R6Class
 #' @importFrom whisker whisker.render
-#' @importFrom tibble as_data_frame
+#' @importFrom tibble as_tibble
 #' @aliases charlatan
 #' @docType package
 #' @keywords package

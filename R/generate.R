@@ -54,7 +54,7 @@ ch_generate <- function(..., n = 10, locale = NULL) {
     }),
     choices
   )
-  tibble::as_data_frame(cols)
+  tibble::as_tibble(cols)
 }
 
 all_choices <- c("name", "job", "phone_number", "currency",
