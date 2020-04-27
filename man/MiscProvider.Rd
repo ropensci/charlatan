@@ -56,6 +56,7 @@ x$null_boolean()
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-boolean"></a>}}
+\if{latex}{\out{\hypertarget{method-boolean}{}}}
 \subsection{Method \code{boolean()}}{
 get a random boolean, \code{TRUE} or \code{FALSE}
 \subsection{Usage}{
@@ -72,6 +73,7 @@ get a random boolean, \code{TRUE} or \code{FALSE}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-null_boolean"></a>}}
+\if{latex}{\out{\hypertarget{method-null_boolean}{}}}
 \subsection{Method \code{null_boolean()}}{
 get a random boolean, \code{TRUE} or \code{FALSE}, or NULL
 \subsection{Usage}{
@@ -81,6 +83,7 @@ get a random boolean, \code{TRUE} or \code{FALSE}, or NULL
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-locale"></a>}}
+\if{latex}{\out{\hypertarget{method-locale}{}}}
 \subsection{Method \code{locale()}}{
 get a random locale
 \subsection{Usage}{
@@ -90,6 +93,7 @@ get a random locale
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-language_code"></a>}}
+\if{latex}{\out{\hypertarget{method-language_code}{}}}
 \subsection{Method \code{language_code()}}{
 random language code
 \subsection{Usage}{
@@ -99,6 +103,7 @@ random language code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

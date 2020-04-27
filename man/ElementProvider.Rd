@@ -48,6 +48,7 @@ z$element()
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-symbol"></a>}}
+\if{latex}{\out{\hypertarget{method-symbol}{}}}
 \subsection{Method \code{symbol()}}{
 Get a symbol
 \subsection{Usage}{
@@ -57,6 +58,7 @@ Get a symbol
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-element"></a>}}
+\if{latex}{\out{\hypertarget{method-element}{}}}
 \subsection{Method \code{element()}}{
 Get an element
 \subsection{Usage}{
@@ -66,6 +68,7 @@ Get an element
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

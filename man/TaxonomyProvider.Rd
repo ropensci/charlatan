@@ -74,6 +74,7 @@ z$species(authority = TRUE)
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-genus"></a>}}
+\if{latex}{\out{\hypertarget{method-genus}{}}}
 \subsection{Method \code{genus()}}{
 Get a genus name
 \subsection{Usage}{
@@ -83,6 +84,7 @@ Get a genus name
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-epithet"></a>}}
+\if{latex}{\out{\hypertarget{method-epithet}{}}}
 \subsection{Method \code{epithet()}}{
 Get an epithet name
 \subsection{Usage}{
@@ -92,6 +94,7 @@ Get an epithet name
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-species"></a>}}
+\if{latex}{\out{\hypertarget{method-species}{}}}
 \subsection{Method \code{species()}}{
 Get a binomial name (genus + epithet)
 \subsection{Usage}{
@@ -111,6 +114,7 @@ this is ignored. default: \code{FALSE}}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

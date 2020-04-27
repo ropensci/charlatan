@@ -87,6 +87,7 @@ LoremProvider$new(locale = "zh_TW")$word()
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-allowed_locales"></a>}}
+\if{latex}{\out{\hypertarget{method-allowed_locales}{}}}
 \subsection{Method \code{allowed_locales()}}{
 fetch the allowed locales for this provider
 \subsection{Usage}{
@@ -96,6 +97,7 @@ fetch the allowed locales for this provider
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-new"></a>}}
+\if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 Create a new \code{LoremProvider} object
 \subsection{Usage}{
@@ -124,6 +126,7 @@ A new \code{LoremProvider} object
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-word"></a>}}
+\if{latex}{\out{\hypertarget{method-word}{}}}
 \subsection{Method \code{word()}}{
 Generate a random word
 \subsection{Usage}{
@@ -144,6 +147,7 @@ a single word
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-words"></a>}}
+\if{latex}{\out{\hypertarget{method-words}{}}}
 \subsection{Method \code{words()}}{
 Generate a character vector of random words
 \subsection{Usage}{
@@ -166,6 +170,7 @@ many words
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-sentence"></a>}}
+\if{latex}{\out{\hypertarget{method-sentence}{}}}
 \subsection{Method \code{sentence()}}{
 Generate a random sentence
 \subsection{Usage}{
@@ -197,6 +202,7 @@ a single sentence
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-sentences"></a>}}
+\if{latex}{\out{\hypertarget{method-sentences}{}}}
 \subsection{Method \code{sentences()}}{
 Generate a character vector of random sentences
 \subsection{Usage}{
@@ -219,6 +225,7 @@ many sentences
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-paragraph"></a>}}
+\if{latex}{\out{\hypertarget{method-paragraph}{}}}
 \subsection{Method \code{paragraph()}}{
 Generate a single paragraph
 \subsection{Usage}{
@@ -250,6 +257,7 @@ a single paragraph
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-paragraphs"></a>}}
+\if{latex}{\out{\hypertarget{method-paragraphs}{}}}
 \subsection{Method \code{paragraphs()}}{
 Generate many paragraphs
 \subsection{Usage}{
@@ -272,6 +280,7 @@ many paragraphs
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-text"></a>}}
+\if{latex}{\out{\hypertarget{method-text}{}}}
 \subsection{Method \code{text()}}{
 Generate a random text string. Depending on the
 \code{max_nb_chars}, returns a string made of words, sentences, or
@@ -297,6 +306,7 @@ character string of words
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

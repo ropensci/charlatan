@@ -98,6 +98,7 @@ CompanyProvider$new(locale = "fa_IR")$company()
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-allowed_locales"></a>}}
+\if{latex}{\out{\hypertarget{method-allowed_locales}{}}}
 \subsection{Method \code{allowed_locales()}}{
 fetch the allowed locales for this provider
 \subsection{Usage}{
@@ -107,6 +108,7 @@ fetch the allowed locales for this provider
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-new"></a>}}
+\if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 Create a new \code{CompanyProvider} object
 \subsection{Usage}{
@@ -127,6 +129,7 @@ A new \code{CompanyProvider} object
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-company"></a>}}
+\if{latex}{\out{\hypertarget{method-company}{}}}
 \subsection{Method \code{company()}}{
 a company name
 \subsection{Usage}{
@@ -136,6 +139,7 @@ a company name
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-company_prefix"></a>}}
+\if{latex}{\out{\hypertarget{method-company_prefix}{}}}
 \subsection{Method \code{company_prefix()}}{
 a company prefix
 \subsection{Usage}{
@@ -145,6 +149,7 @@ a company prefix
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-company_suffix"></a>}}
+\if{latex}{\out{\hypertarget{method-company_suffix}{}}}
 \subsection{Method \code{company_suffix()}}{
 a company suffix
 \subsection{Usage}{
@@ -154,6 +159,7 @@ a company suffix
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-catch_phrase"></a>}}
+\if{latex}{\out{\hypertarget{method-catch_phrase}{}}}
 \subsection{Method \code{catch_phrase()}}{
 a catch phrase
 \subsection{Usage}{
@@ -163,6 +169,7 @@ a catch phrase
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-bs"></a>}}
+\if{latex}{\out{\hypertarget{method-bs}{}}}
 \subsection{Method \code{bs()}}{
 BS words
 \subsection{Usage}{
@@ -172,6 +179,7 @@ BS words
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-siren"></a>}}
+\if{latex}{\out{\hypertarget{method-siren}{}}}
 \subsection{Method \code{siren()}}{
 a siren
 \subsection{Usage}{
@@ -181,6 +189,7 @@ a siren
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

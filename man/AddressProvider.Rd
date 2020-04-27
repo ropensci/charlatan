@@ -129,6 +129,7 @@ z$street_name()
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-allowed_locales"></a>}}
+\if{latex}{\out{\hypertarget{method-allowed_locales}{}}}
 \subsection{Method \code{allowed_locales()}}{
 fetch the allowed locales for this provider
 \subsection{Usage}{
@@ -138,6 +139,7 @@ fetch the allowed locales for this provider
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-new"></a>}}
+\if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 Create a new \code{AddressProvider} object
 \subsection{Usage}{
@@ -158,6 +160,7 @@ A new \code{AddressProvider} object
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-city_suffix"></a>}}
+\if{latex}{\out{\hypertarget{method-city_suffix}{}}}
 \subsection{Method \code{city_suffix()}}{
 city suffix
 \subsection{Usage}{
@@ -167,6 +170,7 @@ city suffix
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-street_suffix"></a>}}
+\if{latex}{\out{\hypertarget{method-street_suffix}{}}}
 \subsection{Method \code{street_suffix()}}{
 street suffix
 \subsection{Usage}{
@@ -176,6 +180,7 @@ street suffix
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-building_number"></a>}}
+\if{latex}{\out{\hypertarget{method-building_number}{}}}
 \subsection{Method \code{building_number()}}{
 building numeber
 \subsection{Usage}{
@@ -185,6 +190,7 @@ building numeber
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-city"></a>}}
+\if{latex}{\out{\hypertarget{method-city}{}}}
 \subsection{Method \code{city()}}{
 city
 \subsection{Usage}{
@@ -194,6 +200,7 @@ city
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-street_name"></a>}}
+\if{latex}{\out{\hypertarget{method-street_name}{}}}
 \subsection{Method \code{street_name()}}{
 street name
 \subsection{Usage}{
@@ -203,6 +210,7 @@ street name
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-street_address"></a>}}
+\if{latex}{\out{\hypertarget{method-street_address}{}}}
 \subsection{Method \code{street_address()}}{
 street address
 \subsection{Usage}{
@@ -212,6 +220,7 @@ street address
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-postcode"></a>}}
+\if{latex}{\out{\hypertarget{method-postcode}{}}}
 \subsection{Method \code{postcode()}}{
 postal code
 \subsection{Usage}{
@@ -221,6 +230,7 @@ postal code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-address"></a>}}
+\if{latex}{\out{\hypertarget{method-address}{}}}
 \subsection{Method \code{address()}}{
 address
 \subsection{Usage}{
@@ -230,6 +240,7 @@ address
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-country"></a>}}
+\if{latex}{\out{\hypertarget{method-country}{}}}
 \subsection{Method \code{country()}}{
 country name
 \subsection{Usage}{
@@ -239,6 +250,7 @@ country name
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-country_code"></a>}}
+\if{latex}{\out{\hypertarget{method-country_code}{}}}
 \subsection{Method \code{country_code()}}{
 country code
 \subsection{Usage}{
@@ -248,6 +260,7 @@ country code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

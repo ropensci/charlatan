@@ -42,6 +42,7 @@ z$make_missing(x = letters)
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-make_missing"></a>}}
+\if{latex}{\out{\hypertarget{method-make_missing}{}}}
 \subsection{Method \code{make_missing()}}{
 make missing data
 \subsection{Usage}{
@@ -64,6 +65,7 @@ positions and replaces them with NA matching the input class.
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

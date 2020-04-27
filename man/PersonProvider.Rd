@@ -148,6 +148,7 @@ PersonProvider$new(locale = "da_DK")$render()
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-allowed_locales"></a>}}
+\if{latex}{\out{\hypertarget{method-allowed_locales}{}}}
 \subsection{Method \code{allowed_locales()}}{
 fetch the allowed locales for this provider
 \subsection{Usage}{
@@ -157,6 +158,7 @@ fetch the allowed locales for this provider
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-new"></a>}}
+\if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 Create a new \code{PersonProvider} object
 \subsection{Usage}{
@@ -179,6 +181,7 @@ A new \code{PersonProvider} object
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-render"></a>}}
+\if{latex}{\out{\hypertarget{method-render}{}}}
 \subsection{Method \code{render()}}{
 Make a person's name
 \subsection{Usage}{
@@ -195,6 +198,7 @@ Make a person's name
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-first_name"></a>}}
+\if{latex}{\out{\hypertarget{method-first_name}{}}}
 \subsection{Method \code{first_name()}}{
 make a first name
 \subsection{Usage}{
@@ -204,6 +208,7 @@ make a first name
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-first_name_female"></a>}}
+\if{latex}{\out{\hypertarget{method-first_name_female}{}}}
 \subsection{Method \code{first_name_female()}}{
 make a female first name
 \subsection{Usage}{
@@ -213,6 +218,7 @@ make a female first name
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-first_name_male"></a>}}
+\if{latex}{\out{\hypertarget{method-first_name_male}{}}}
 \subsection{Method \code{first_name_male()}}{
 make a male first name
 \subsection{Usage}{
@@ -222,6 +228,7 @@ make a male first name
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-last_name"></a>}}
+\if{latex}{\out{\hypertarget{method-last_name}{}}}
 \subsection{Method \code{last_name()}}{
 make a last name
 \subsection{Usage}{
@@ -231,6 +238,7 @@ make a last name
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-last_name_female"></a>}}
+\if{latex}{\out{\hypertarget{method-last_name_female}{}}}
 \subsection{Method \code{last_name_female()}}{
 make a female last name
 \subsection{Usage}{
@@ -240,6 +248,7 @@ make a female last name
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-last_name_male"></a>}}
+\if{latex}{\out{\hypertarget{method-last_name_male}{}}}
 \subsection{Method \code{last_name_male()}}{
 make a male last name
 \subsection{Usage}{
@@ -249,6 +258,7 @@ make a male last name
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-prefix"></a>}}
+\if{latex}{\out{\hypertarget{method-prefix}{}}}
 \subsection{Method \code{prefix()}}{
 make a name prefix
 \subsection{Usage}{
@@ -258,6 +268,7 @@ make a name prefix
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-prefix_female"></a>}}
+\if{latex}{\out{\hypertarget{method-prefix_female}{}}}
 \subsection{Method \code{prefix_female()}}{
 make a female name prefix
 \subsection{Usage}{
@@ -267,6 +278,7 @@ make a female name prefix
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-prefix_male"></a>}}
+\if{latex}{\out{\hypertarget{method-prefix_male}{}}}
 \subsection{Method \code{prefix_male()}}{
 make a male name prefix
 \subsection{Usage}{
@@ -276,6 +288,7 @@ make a male name prefix
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-suffix"></a>}}
+\if{latex}{\out{\hypertarget{method-suffix}{}}}
 \subsection{Method \code{suffix()}}{
 make a name suffix
 \subsection{Usage}{
@@ -285,6 +298,7 @@ make a name suffix
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-suffix_female"></a>}}
+\if{latex}{\out{\hypertarget{method-suffix_female}{}}}
 \subsection{Method \code{suffix_female()}}{
 make a female name suffix
 \subsection{Usage}{
@@ -294,6 +308,7 @@ make a female name suffix
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-suffix_male"></a>}}
+\if{latex}{\out{\hypertarget{method-suffix_male}{}}}
 \subsection{Method \code{suffix_male()}}{
 make a male name suffix
 \subsection{Usage}{
@@ -303,6 +318,7 @@ make a male name suffix
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

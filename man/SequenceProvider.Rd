@@ -30,6 +30,7 @@ z$render(500)
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-render"></a>}}
+\if{latex}{\out{\hypertarget{method-render}{}}}
 \subsection{Method \code{render()}}{
 Make a sequence
 \subsection{Usage}{
@@ -46,6 +47,7 @@ Make a sequence
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

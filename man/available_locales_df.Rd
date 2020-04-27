@@ -4,13 +4,15 @@
 \name{available_locales_df}
 \alias{available_locales_df}
 \title{Available locales}
-\format{A data frame with 45 rows and 4 variables:
+\format{
+A data frame with 45 rows and 4 variables:
 \describe{
 \item{Language}{language two letter code}
 \item{Country}{country two letter code}
 \item{Variant}{a variant code, if applicable}
 \item{Name}{official locale two letter code}
-}}
+}
+}
 \description{
 A data.frame of locales available in \pkg{charlatan}
 }

@@ -61,6 +61,7 @@ x$file_path(depth = 6)
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-allowed_locales"></a>}}
+\if{latex}{\out{\hypertarget{method-allowed_locales}{}}}
 \subsection{Method \code{allowed_locales()}}{
 fetch the allowed locales for this provider
 \subsection{Usage}{
@@ -70,6 +71,7 @@ fetch the allowed locales for this provider
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-new"></a>}}
+\if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 Create a new \code{FileProvider} object
 \subsection{Usage}{
@@ -90,6 +92,7 @@ A new \code{FileProvider} object
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-mime_type"></a>}}
+\if{latex}{\out{\hypertarget{method-mime_type}{}}}
 \subsection{Method \code{mime_type()}}{
 a random mime type
 \subsection{Usage}{
@@ -108,6 +111,7 @@ video. default: \code{NULL}}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-file_name"></a>}}
+\if{latex}{\out{\hypertarget{method-file_name}{}}}
 \subsection{Method \code{file_name()}}{
 a random file name
 \subsection{Usage}{
@@ -129,6 +133,7 @@ given, \code{extension} is ignored}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-file_extension"></a>}}
+\if{latex}{\out{\hypertarget{method-file_extension}{}}}
 \subsection{Method \code{file_extension()}}{
 a random file extension
 \subsection{Usage}{
@@ -146,6 +151,7 @@ audio, image, office, text or video. default: \code{NULL}}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-file_path"></a>}}
+\if{latex}{\out{\hypertarget{method-file_path}{}}}
 \subsection{Method \code{file_path()}}{
 a random file path
 \subsection{Usage}{
@@ -169,6 +175,7 @@ given, \code{extension} is ignored}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

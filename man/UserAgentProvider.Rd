@@ -77,6 +77,7 @@ x$safari()
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-allowed_locales"></a>}}
+\if{latex}{\out{\hypertarget{method-allowed_locales}{}}}
 \subsection{Method \code{allowed_locales()}}{
 fetch the allowed locales for this provider
 \subsection{Usage}{
@@ -86,6 +87,7 @@ fetch the allowed locales for this provider
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-new"></a>}}
+\if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 Create a new \code{UserAgentProvider} object
 \subsection{Usage}{
@@ -106,6 +108,7 @@ A new \code{UserAgentProvider} object
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-mac_processor"></a>}}
+\if{latex}{\out{\hypertarget{method-mac_processor}{}}}
 \subsection{Method \code{mac_processor()}}{
 a mac processor
 \subsection{Usage}{
@@ -115,6 +118,7 @@ a mac processor
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-linux_processor"></a>}}
+\if{latex}{\out{\hypertarget{method-linux_processor}{}}}
 \subsection{Method \code{linux_processor()}}{
 a linux processor
 \subsection{Usage}{
@@ -124,6 +128,7 @@ a linux processor
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-user_agent"></a>}}
+\if{latex}{\out{\hypertarget{method-user_agent}{}}}
 \subsection{Method \code{user_agent()}}{
 a random user agent string
 \subsection{Usage}{
@@ -133,6 +138,7 @@ a random user agent string
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-chrome"></a>}}
+\if{latex}{\out{\hypertarget{method-chrome}{}}}
 \subsection{Method \code{chrome()}}{
 a chrome user agent string
 \subsection{Usage}{
@@ -160,6 +166,7 @@ a chrome user agent string
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-firefox"></a>}}
+\if{latex}{\out{\hypertarget{method-firefox}{}}}
 \subsection{Method \code{firefox()}}{
 a firefox user agent string
 \subsection{Usage}{
@@ -169,6 +176,7 @@ a firefox user agent string
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-safari"></a>}}
+\if{latex}{\out{\hypertarget{method-safari}{}}}
 \subsection{Method \code{safari()}}{
 a safari user agent string
 \subsection{Usage}{
@@ -178,6 +186,7 @@ a safari user agent string
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-opera"></a>}}
+\if{latex}{\out{\hypertarget{method-opera}{}}}
 \subsection{Method \code{opera()}}{
 an opera user agent string
 \subsection{Usage}{
@@ -187,6 +196,7 @@ an opera user agent string
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-internet_explorer"></a>}}
+\if{latex}{\out{\hypertarget{method-internet_explorer}{}}}
 \subsection{Method \code{internet_explorer()}}{
 an internet explorer user agent string
 \subsection{Usage}{
@@ -196,6 +206,7 @@ an internet explorer user agent string
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-windows_platform_token"></a>}}
+\if{latex}{\out{\hypertarget{method-windows_platform_token}{}}}
 \subsection{Method \code{windows_platform_token()}}{
 a windows platform token
 \subsection{Usage}{
@@ -205,6 +216,7 @@ a windows platform token
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-linux_platform_token"></a>}}
+\if{latex}{\out{\hypertarget{method-linux_platform_token}{}}}
 \subsection{Method \code{linux_platform_token()}}{
 a linux platform token
 \subsection{Usage}{
@@ -214,6 +226,7 @@ a linux platform token
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-mac_platform_token"></a>}}
+\if{latex}{\out{\hypertarget{method-mac_platform_token}{}}}
 \subsection{Method \code{mac_platform_token()}}{
 a mac platform token
 \subsection{Usage}{
@@ -223,6 +236,7 @@ a mac platform token
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

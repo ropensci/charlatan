@@ -52,6 +52,7 @@ x$randomize_nb_elements()
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-random_element"></a>}}
+\if{latex}{\out{\hypertarget{method-random_element}{}}}
 \subsection{Method \code{random_element()}}{
 pick a random element from vector/list
 \subsection{Usage}{
@@ -71,6 +72,7 @@ a single element from x
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-random_element_prob"></a>}}
+\if{latex}{\out{\hypertarget{method-random_element_prob}{}}}
 \subsection{Method \code{random_element_prob()}}{
 pick a random element with probability from vector/list
 \subsection{Usage}{
@@ -87,6 +89,7 @@ pick a random element with probability from vector/list
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-random_int"></a>}}
+\if{latex}{\out{\hypertarget{method-random_int}{}}}
 \subsection{Method \code{random_int()}}{
 any number of random integers from a min, max
 \subsection{Usage}{
@@ -110,6 +113,7 @@ random integer
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-random_digit"></a>}}
+\if{latex}{\out{\hypertarget{method-random_digit}{}}}
 \subsection{Method \code{random_digit()}}{
 random integer between 0 and 9
 \subsection{Usage}{
@@ -119,6 +123,7 @@ random integer between 0 and 9
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-random_digit_not_zero"></a>}}
+\if{latex}{\out{\hypertarget{method-random_digit_not_zero}{}}}
 \subsection{Method \code{random_digit_not_zero()}}{
 random integer between 1 and 9
 \subsection{Usage}{
@@ -128,6 +133,7 @@ random integer between 1 and 9
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-random_digit_or_empty"></a>}}
+\if{latex}{\out{\hypertarget{method-random_digit_or_empty}{}}}
 \subsection{Method \code{random_digit_or_empty()}}{
 random integer between 0 and 9 or empty character string
 \subsection{Usage}{
@@ -137,6 +143,7 @@ random integer between 0 and 9 or empty character string
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-random_digit_not_zero_or_empty"></a>}}
+\if{latex}{\out{\hypertarget{method-random_digit_not_zero_or_empty}{}}}
 \subsection{Method \code{random_digit_not_zero_or_empty()}}{
 random integer between 1 and 9 or empty character string
 \subsection{Usage}{
@@ -146,6 +153,7 @@ random integer between 1 and 9 or empty character string
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-random_letter"></a>}}
+\if{latex}{\out{\hypertarget{method-random_letter}{}}}
 \subsection{Method \code{random_letter()}}{
 random letter
 \subsection{Usage}{
@@ -155,6 +163,7 @@ random letter
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-numerify"></a>}}
+\if{latex}{\out{\hypertarget{method-numerify}{}}}
 \subsection{Method \code{numerify()}}{
 replace a template with numbers
 \subsection{Usage}{
@@ -171,6 +180,7 @@ replace a template with numbers
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-lexify"></a>}}
+\if{latex}{\out{\hypertarget{method-lexify}{}}}
 \subsection{Method \code{lexify()}}{
 replace a template with letters
 \subsection{Usage}{
@@ -187,6 +197,7 @@ replace a template with letters
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-bothify"></a>}}
+\if{latex}{\out{\hypertarget{method-bothify}{}}}
 \subsection{Method \code{bothify()}}{
 both numerify and lexify together
 \subsection{Usage}{
@@ -203,6 +214,7 @@ both numerify and lexify together
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-check_locale"></a>}}
+\if{latex}{\out{\hypertarget{method-check_locale}{}}}
 \subsection{Method \code{check_locale()}}{
 check a locale to see if it exists, if not, stop with
 error message
@@ -223,6 +235,7 @@ returns nothing if locale is supported; stops w/ message if not
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-randomize_nb_elements"></a>}}
+\if{latex}{\out{\hypertarget{method-randomize_nb_elements}{}}}
 \subsection{Method \code{randomize_nb_elements()}}{
 Returns a random value near number
 \subsection{Usage}{
@@ -256,6 +269,7 @@ a random int near number
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

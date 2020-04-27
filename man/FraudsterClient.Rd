@@ -54,6 +54,7 @@ Fraudster R6 client
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-new"></a>}}
+\if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 Create a new \code{FraudsterClient} object
 \subsection{Usage}{
@@ -74,6 +75,7 @@ A new \code{RequestSignature} object
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-print"></a>}}
+\if{latex}{\out{\hypertarget{method-print}{}}}
 \subsection{Method \code{print()}}{
 print method for the \code{FraudsterClient} class
 \subsection{Usage}{
@@ -92,6 +94,7 @@ print method for the \code{FraudsterClient} class
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-job"></a>}}
+\if{latex}{\out{\hypertarget{method-job}{}}}
 \subsection{Method \code{job()}}{
 jobs
 \subsection{Usage}{
@@ -108,6 +111,7 @@ jobs
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-name"></a>}}
+\if{latex}{\out{\hypertarget{method-name}{}}}
 \subsection{Method \code{name()}}{
 names
 \subsection{Usage}{
@@ -124,6 +128,7 @@ names
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-color_name"></a>}}
+\if{latex}{\out{\hypertarget{method-color_name}{}}}
 \subsection{Method \code{color_name()}}{
 colors
 \subsection{Usage}{
@@ -140,6 +145,7 @@ colors
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-safe_color_name"></a>}}
+\if{latex}{\out{\hypertarget{method-safe_color_name}{}}}
 \subsection{Method \code{safe_color_name()}}{
 safe color name
 \subsection{Usage}{
@@ -156,6 +162,7 @@ safe color name
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-hex_color"></a>}}
+\if{latex}{\out{\hypertarget{method-hex_color}{}}}
 \subsection{Method \code{hex_color()}}{
 hex color
 \subsection{Usage}{
@@ -172,6 +179,7 @@ hex color
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-safe_hex_color"></a>}}
+\if{latex}{\out{\hypertarget{method-safe_hex_color}{}}}
 \subsection{Method \code{safe_hex_color()}}{
 safe hex color
 \subsection{Usage}{
@@ -188,6 +196,7 @@ safe hex color
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-rgb_color"></a>}}
+\if{latex}{\out{\hypertarget{method-rgb_color}{}}}
 \subsection{Method \code{rgb_color()}}{
 rgb color
 \subsection{Usage}{
@@ -204,6 +213,7 @@ rgb color
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-rgb_css_color"></a>}}
+\if{latex}{\out{\hypertarget{method-rgb_css_color}{}}}
 \subsection{Method \code{rgb_css_color()}}{
 rgb css color
 \subsection{Usage}{
@@ -220,6 +230,7 @@ rgb css color
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-lat"></a>}}
+\if{latex}{\out{\hypertarget{method-lat}{}}}
 \subsection{Method \code{lat()}}{
 latitude
 \subsection{Usage}{
@@ -236,6 +247,7 @@ latitude
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-lon"></a>}}
+\if{latex}{\out{\hypertarget{method-lon}{}}}
 \subsection{Method \code{lon()}}{
 longitude
 \subsection{Usage}{
@@ -252,6 +264,7 @@ longitude
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-position"></a>}}
+\if{latex}{\out{\hypertarget{method-position}{}}}
 \subsection{Method \code{position()}}{
 long/lat coordinate pair
 \subsection{Usage}{
@@ -270,6 +283,7 @@ long/lat coordinate pair
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-doi"></a>}}
+\if{latex}{\out{\hypertarget{method-doi}{}}}
 \subsection{Method \code{doi()}}{
 DOIs
 \subsection{Usage}{
@@ -286,6 +300,7 @@ DOIs
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-timezone"></a>}}
+\if{latex}{\out{\hypertarget{method-timezone}{}}}
 \subsection{Method \code{timezone()}}{
 date times
 \subsection{Usage}{
@@ -302,6 +317,7 @@ date times
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-unix_time"></a>}}
+\if{latex}{\out{\hypertarget{method-unix_time}{}}}
 \subsection{Method \code{unix_time()}}{
 unix time
 \subsection{Usage}{
@@ -318,6 +334,7 @@ unix time
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-date_time"></a>}}
+\if{latex}{\out{\hypertarget{method-date_time}{}}}
 \subsection{Method \code{date_time()}}{
 date time
 \subsection{Usage}{
@@ -334,6 +351,7 @@ date time
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-genus"></a>}}
+\if{latex}{\out{\hypertarget{method-genus}{}}}
 \subsection{Method \code{genus()}}{
 taxonomic genus
 \subsection{Usage}{
@@ -350,6 +368,7 @@ taxonomic genus
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-epithet"></a>}}
+\if{latex}{\out{\hypertarget{method-epithet}{}}}
 \subsection{Method \code{epithet()}}{
 taxonomic epithet
 \subsection{Usage}{
@@ -366,6 +385,7 @@ taxonomic epithet
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-species"></a>}}
+\if{latex}{\out{\hypertarget{method-species}{}}}
 \subsection{Method \code{species()}}{
 taxonomic species (genus + epithet)
 \subsection{Usage}{
@@ -382,6 +402,7 @@ taxonomic species (genus + epithet)
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-sequence"></a>}}
+\if{latex}{\out{\hypertarget{method-sequence}{}}}
 \subsection{Method \code{sequence()}}{
 random genetic sequence
 \subsection{Usage}{
@@ -400,6 +421,7 @@ random genetic sequence
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-phone_number"></a>}}
+\if{latex}{\out{\hypertarget{method-phone_number}{}}}
 \subsection{Method \code{phone_number()}}{
 phone number
 \subsection{Usage}{
@@ -416,6 +438,7 @@ phone number
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-double"></a>}}
+\if{latex}{\out{\hypertarget{method-double}{}}}
 \subsection{Method \code{double()}}{
 a double
 \subsection{Usage}{
@@ -436,6 +459,7 @@ a double
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-integer"></a>}}
+\if{latex}{\out{\hypertarget{method-integer}{}}}
 \subsection{Method \code{integer()}}{
 an integer
 \subsection{Usage}{
@@ -456,6 +480,7 @@ an integer
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-uniform"></a>}}
+\if{latex}{\out{\hypertarget{method-uniform}{}}}
 \subsection{Method \code{uniform()}}{
 an integer from a uniform distribution
 \subsection{Usage}{
@@ -476,6 +501,7 @@ an integer from a uniform distribution
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-norm"></a>}}
+\if{latex}{\out{\hypertarget{method-norm}{}}}
 \subsection{Method \code{norm()}}{
 an integer from a normal distribution
 \subsection{Usage}{
@@ -496,6 +522,7 @@ an integer from a normal distribution
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-lnorm"></a>}}
+\if{latex}{\out{\hypertarget{method-lnorm}{}}}
 \subsection{Method \code{lnorm()}}{
 an integer from a lognormal distribution
 \subsection{Usage}{
@@ -516,6 +543,7 @@ an integer from a lognormal distribution
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-beta"></a>}}
+\if{latex}{\out{\hypertarget{method-beta}{}}}
 \subsection{Method \code{beta()}}{
 an integer from a beta distribution
 \subsection{Usage}{
@@ -538,6 +566,7 @@ an integer from a beta distribution
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-currency"></a>}}
+\if{latex}{\out{\hypertarget{method-currency}{}}}
 \subsection{Method \code{currency()}}{
 currency
 \subsection{Usage}{
@@ -554,6 +583,7 @@ currency
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-credit_card_provider"></a>}}
+\if{latex}{\out{\hypertarget{method-credit_card_provider}{}}}
 \subsection{Method \code{credit_card_provider()}}{
 credit card provider
 \subsection{Usage}{
@@ -570,6 +600,7 @@ credit card provider
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-credit_card_number"></a>}}
+\if{latex}{\out{\hypertarget{method-credit_card_number}{}}}
 \subsection{Method \code{credit_card_number()}}{
 credit card number
 \subsection{Usage}{
@@ -586,6 +617,7 @@ credit card number
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-credit_card_security_code"></a>}}
+\if{latex}{\out{\hypertarget{method-credit_card_security_code}{}}}
 \subsection{Method \code{credit_card_security_code()}}{
 credit card security code
 \subsection{Usage}{
@@ -602,6 +634,7 @@ credit card security code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

@@ -194,6 +194,7 @@ if (requireNamespace("stringi", quietly=TRUE)) {
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-allowed_locales"></a>}}
+\if{latex}{\out{\hypertarget{method-allowed_locales}{}}}
 \subsection{Method \code{allowed_locales()}}{
 fetch the allowed locales for this provider
 \subsection{Usage}{
@@ -203,6 +204,7 @@ fetch the allowed locales for this provider
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-new"></a>}}
+\if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 Create a new \code{InternetProvider} object
 \subsection{Usage}{
@@ -223,6 +225,7 @@ A new \code{InternetProvider} object
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-to_ascii"></a>}}
+\if{latex}{\out{\hypertarget{method-to_ascii}{}}}
 \subsection{Method \code{to_ascii()}}{
 convert to ascii
 \subsection{Usage}{
@@ -239,6 +242,7 @@ convert to ascii
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-email"></a>}}
+\if{latex}{\out{\hypertarget{method-email}{}}}
 \subsection{Method \code{email()}}{
 get an email address
 \subsection{Usage}{
@@ -256,6 +260,7 @@ name is chosen}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-safe_email"></a>}}
+\if{latex}{\out{\hypertarget{method-safe_email}{}}}
 \subsection{Method \code{safe_email()}}{
 get a safe email address
 \subsection{Usage}{
@@ -265,6 +270,7 @@ get a safe email address
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-free_email"></a>}}
+\if{latex}{\out{\hypertarget{method-free_email}{}}}
 \subsection{Method \code{free_email()}}{
 a free email address
 \subsection{Usage}{
@@ -274,6 +280,7 @@ a free email address
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-company_email"></a>}}
+\if{latex}{\out{\hypertarget{method-company_email}{}}}
 \subsection{Method \code{company_email()}}{
 company email address
 \subsection{Usage}{
@@ -283,6 +290,7 @@ company email address
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-ascii_email"></a>}}
+\if{latex}{\out{\hypertarget{method-ascii_email}{}}}
 \subsection{Method \code{ascii_email()}}{
 ascii email address
 \subsection{Usage}{
@@ -292,6 +300,7 @@ ascii email address
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-ascii_safe_email"></a>}}
+\if{latex}{\out{\hypertarget{method-ascii_safe_email}{}}}
 \subsection{Method \code{ascii_safe_email()}}{
 safe ascii email address
 \subsection{Usage}{
@@ -301,6 +310,7 @@ safe ascii email address
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-ascii_free_email"></a>}}
+\if{latex}{\out{\hypertarget{method-ascii_free_email}{}}}
 \subsection{Method \code{ascii_free_email()}}{
 an ascii free email address
 \subsection{Usage}{
@@ -310,6 +320,7 @@ an ascii free email address
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-ascii_company_email"></a>}}
+\if{latex}{\out{\hypertarget{method-ascii_company_email}{}}}
 \subsection{Method \code{ascii_company_email()}}{
 ascii company email address
 \subsection{Usage}{
@@ -319,6 +330,7 @@ ascii company email address
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-user_name"></a>}}
+\if{latex}{\out{\hypertarget{method-user_name}{}}}
 \subsection{Method \code{user_name()}}{
 a user name
 \subsection{Usage}{
@@ -328,6 +340,7 @@ a user name
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-tld"></a>}}
+\if{latex}{\out{\hypertarget{method-tld}{}}}
 \subsection{Method \code{tld()}}{
 a tld
 \subsection{Usage}{
@@ -337,6 +350,7 @@ a tld
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-free_email_domain"></a>}}
+\if{latex}{\out{\hypertarget{method-free_email_domain}{}}}
 \subsection{Method \code{free_email_domain()}}{
 free email domain name
 \subsection{Usage}{
@@ -346,6 +360,7 @@ free email domain name
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-url"></a>}}
+\if{latex}{\out{\hypertarget{method-url}{}}}
 \subsection{Method \code{url()}}{
 a url
 \subsection{Usage}{
@@ -362,6 +377,7 @@ a url
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-domain_name"></a>}}
+\if{latex}{\out{\hypertarget{method-domain_name}{}}}
 \subsection{Method \code{domain_name()}}{
 Produce an Internet domain name with the specified
 number of subdomain levels
@@ -379,6 +395,7 @@ number of subdomain levels
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-domain_word"></a>}}
+\if{latex}{\out{\hypertarget{method-domain_word}{}}}
 \subsection{Method \code{domain_word()}}{
 a domain word
 \subsection{Usage}{
@@ -388,6 +405,7 @@ a domain word
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-ipv4"></a>}}
+\if{latex}{\out{\hypertarget{method-ipv4}{}}}
 \subsection{Method \code{ipv4()}}{
 a ipv4 address
 \subsection{Usage}{
@@ -397,6 +415,7 @@ a ipv4 address
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-mac_address"></a>}}
+\if{latex}{\out{\hypertarget{method-mac_address}{}}}
 \subsection{Method \code{mac_address()}}{
 a mac address
 \subsection{Usage}{
@@ -406,6 +425,7 @@ a mac address
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-uri_page"></a>}}
+\if{latex}{\out{\hypertarget{method-uri_page}{}}}
 \subsection{Method \code{uri_page()}}{
 a uri page
 \subsection{Usage}{
@@ -415,6 +435,7 @@ a uri page
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-uri_path"></a>}}
+\if{latex}{\out{\hypertarget{method-uri_path}{}}}
 \subsection{Method \code{uri_path()}}{
 a uri path
 \subsection{Usage}{
@@ -432,6 +453,7 @@ between 1 and 4 (inclusive) is chosen}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-uri_extension"></a>}}
+\if{latex}{\out{\hypertarget{method-uri_extension}{}}}
 \subsection{Method \code{uri_extension()}}{
 a uri extension
 \subsection{Usage}{
@@ -441,6 +463,7 @@ a uri extension
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-uri"></a>}}
+\if{latex}{\out{\hypertarget{method-uri}{}}}
 \subsection{Method \code{uri()}}{
 a uri
 \subsection{Usage}{
@@ -450,6 +473,7 @@ a uri
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-slug"></a>}}
+\if{latex}{\out{\hypertarget{method-slug}{}}}
 \subsection{Method \code{slug()}}{
 a slug
 \subsection{Usage}{
@@ -467,6 +491,7 @@ a slug
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-image_url"></a>}}
+\if{latex}{\out{\hypertarget{method-image_url}{}}}
 \subsection{Method \code{image_url()}}{
 Returns URL to placeholder image -
 Example: http://placehold.it/640x480
@@ -486,6 +511,7 @@ Example: http://placehold.it/640x480
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

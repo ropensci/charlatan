@@ -71,6 +71,7 @@ x$safe_color_name()
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-allowed_locales"></a>}}
+\if{latex}{\out{\hypertarget{method-allowed_locales}{}}}
 \subsection{Method \code{allowed_locales()}}{
 fetch the allowed locales for this provider
 \subsection{Usage}{
@@ -80,6 +81,7 @@ fetch the allowed locales for this provider
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-new"></a>}}
+\if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 Create a new \code{ColorProvider} object
 \subsection{Usage}{
@@ -100,6 +102,7 @@ A new \code{ColorProvider} object
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-color_name"></a>}}
+\if{latex}{\out{\hypertarget{method-color_name}{}}}
 \subsection{Method \code{color_name()}}{
 color name
 \subsection{Usage}{
@@ -109,6 +112,7 @@ color name
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-safe_color_name"></a>}}
+\if{latex}{\out{\hypertarget{method-safe_color_name}{}}}
 \subsection{Method \code{safe_color_name()}}{
 safe color name
 \subsection{Usage}{
@@ -118,6 +122,7 @@ safe color name
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-hex_color"></a>}}
+\if{latex}{\out{\hypertarget{method-hex_color}{}}}
 \subsection{Method \code{hex_color()}}{
 hex color
 \subsection{Usage}{
@@ -127,6 +132,7 @@ hex color
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-safe_hex_color"></a>}}
+\if{latex}{\out{\hypertarget{method-safe_hex_color}{}}}
 \subsection{Method \code{safe_hex_color()}}{
 safe hex color
 \subsection{Usage}{
@@ -136,6 +142,7 @@ safe hex color
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-rgb_color"></a>}}
+\if{latex}{\out{\hypertarget{method-rgb_color}{}}}
 \subsection{Method \code{rgb_color()}}{
 RGB color
 \subsection{Usage}{
@@ -145,6 +152,7 @@ RGB color
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-rgb_css_color"></a>}}
+\if{latex}{\out{\hypertarget{method-rgb_css_color}{}}}
 \subsection{Method \code{rgb_css_color()}}{
 RGB CSS color
 \subsection{Usage}{
@@ -154,6 +162,7 @@ RGB CSS color
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

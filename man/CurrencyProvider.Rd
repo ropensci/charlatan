@@ -49,6 +49,7 @@ z$render()
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-render"></a>}}
+\if{latex}{\out{\hypertarget{method-render}{}}}
 \subsection{Method \code{render()}}{
 get a currency
 \subsection{Usage}{
@@ -61,6 +62,7 @@ get a currency
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

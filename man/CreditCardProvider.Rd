@@ -56,6 +56,7 @@ z$generate_number(13)
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-credit_card_type"></a>}}
+\if{latex}{\out{\hypertarget{method-credit_card_type}{}}}
 \subsection{Method \code{credit_card_type()}}{
 Returns a random credit card type
 \subsection{Usage}{
@@ -72,6 +73,7 @@ Returns a random credit card type
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-generate_number"></a>}}
+\if{latex}{\out{\hypertarget{method-generate_number}{}}}
 \subsection{Method \code{generate_number()}}{
 make a credit card number with specific starting numbers
 \subsection{Usage}{
@@ -90,6 +92,7 @@ make a credit card number with specific starting numbers
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-credit_card_provider"></a>}}
+\if{latex}{\out{\hypertarget{method-credit_card_provider}{}}}
 \subsection{Method \code{credit_card_provider()}}{
 credit card provider
 \subsection{Usage}{
@@ -106,6 +109,7 @@ credit card provider
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-credit_card_number"></a>}}
+\if{latex}{\out{\hypertarget{method-credit_card_number}{}}}
 \subsection{Method \code{credit_card_number()}}{
 credit card number
 \subsection{Usage}{
@@ -122,6 +126,7 @@ credit card number
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-credit_card_security_code"></a>}}
+\if{latex}{\out{\hypertarget{method-credit_card_security_code}{}}}
 \subsection{Method \code{credit_card_security_code()}}{
 credit card security code
 \subsection{Usage}{
@@ -138,6 +143,7 @@ credit card security code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

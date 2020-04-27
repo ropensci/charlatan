@@ -25,6 +25,7 @@ z$position(bbox = c(-120, 30, -110, 60))
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-lon"></a>}}
+\if{latex}{\out{\hypertarget{method-lon}{}}}
 \subsection{Method \code{lon()}}{
 a latitude value
 \subsection{Usage}{
@@ -34,6 +35,7 @@ a latitude value
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-lat"></a>}}
+\if{latex}{\out{\hypertarget{method-lat}{}}}
 \subsection{Method \code{lat()}}{
 a longitude value
 \subsection{Usage}{
@@ -43,6 +45,7 @@ a longitude value
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-position"></a>}}
+\if{latex}{\out{\hypertarget{method-position}{}}}
 \subsection{Method \code{position()}}{
 a position, of form \verb{[longitude,latitude]}
 \subsection{Usage}{
@@ -61,6 +64,7 @@ bbox has valid values for lat and long}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

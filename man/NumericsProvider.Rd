@@ -61,6 +61,7 @@ z$beta(10, 1, 1)
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-double"></a>}}
+\if{latex}{\out{\hypertarget{method-double}{}}}
 \subsection{Method \code{double()}}{
 get a double, pulls from normal distribution
 \subsection{Usage}{
@@ -81,6 +82,7 @@ get a double, pulls from normal distribution
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-integer"></a>}}
+\if{latex}{\out{\hypertarget{method-integer}{}}}
 \subsection{Method \code{integer()}}{
 get an integer, runs \code{\link[=sample]{sample()}} on range given
 \subsection{Usage}{
@@ -101,6 +103,7 @@ get an integer, runs \code{\link[=sample]{sample()}} on range given
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-unif"></a>}}
+\if{latex}{\out{\hypertarget{method-unif}{}}}
 \subsection{Method \code{unif()}}{
 get numbers from the uniform distribution
 \subsection{Usage}{
@@ -121,6 +124,7 @@ get numbers from the uniform distribution
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-norm"></a>}}
+\if{latex}{\out{\hypertarget{method-norm}{}}}
 \subsection{Method \code{norm()}}{
 get numbers from the normal distribution
 \subsection{Usage}{
@@ -141,6 +145,7 @@ get numbers from the normal distribution
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-lnorm"></a>}}
+\if{latex}{\out{\hypertarget{method-lnorm}{}}}
 \subsection{Method \code{lnorm()}}{
 get numbers from the lognormal distribution
 \subsection{Usage}{
@@ -161,6 +166,7 @@ get numbers from the lognormal distribution
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-beta"></a>}}
+\if{latex}{\out{\hypertarget{method-beta}{}}}
 \subsection{Method \code{beta()}}{
 get numbers from the beta distribution
 \subsection{Usage}{
@@ -183,6 +189,7 @@ get numbers from the beta distribution
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

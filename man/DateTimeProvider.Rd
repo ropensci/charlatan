@@ -80,6 +80,7 @@ https://en.wikipedia.org/wiki/Unix_time
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-unix_time"></a>}}
+\if{latex}{\out{\hypertarget{method-unix_time}{}}}
 \subsection{Method \code{unix_time()}}{
 Get a timestamp between January 1, 1970 and now, unless passed
 explicit \code{start_date} or \code{end_date} values
@@ -99,6 +100,7 @@ explicit \code{start_date} or \code{end_date} values
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-date"></a>}}
+\if{latex}{\out{\hypertarget{method-date}{}}}
 \subsection{Method \code{date()}}{
 Generate a date between January 1, 1970 and now,
 with given pattern
@@ -116,6 +118,7 @@ with given pattern
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-date_time"></a>}}
+\if{latex}{\out{\hypertarget{method-date_time}{}}}
 \subsection{Method \code{date_time()}}{
 Generate a date time between January 1, 1970 and now
 \subsection{Usage}{
@@ -132,6 +135,7 @@ Generate a date time between January 1, 1970 and now
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-date_time_fromtimestamp"></a>}}
+\if{latex}{\out{\hypertarget{method-date_time_fromtimestamp}{}}}
 \subsection{Method \code{date_time_fromtimestamp()}}{
 Generate a iso8601 format date
 \subsection{Usage}{
@@ -150,6 +154,7 @@ Generate a iso8601 format date
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-iso8601"></a>}}
+\if{latex}{\out{\hypertarget{method-iso8601}{}}}
 \subsection{Method \code{iso8601()}}{
 Generate a iso8601 format date
 \subsection{Usage}{
@@ -168,6 +173,7 @@ Generate a iso8601 format date
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-year"></a>}}
+\if{latex}{\out{\hypertarget{method-year}{}}}
 \subsection{Method \code{year()}}{
 generate a year
 \subsection{Usage}{
@@ -177,6 +183,7 @@ generate a year
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-century"></a>}}
+\if{latex}{\out{\hypertarget{method-century}{}}}
 \subsection{Method \code{century()}}{
 generate a century
 \subsection{Usage}{
@@ -186,6 +193,7 @@ generate a century
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-timezone"></a>}}
+\if{latex}{\out{\hypertarget{method-timezone}{}}}
 \subsection{Method \code{timezone()}}{
 generate a timezone
 \subsection{Usage}{
@@ -195,6 +203,7 @@ generate a timezone
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-date_time_between"></a>}}
+\if{latex}{\out{\hypertarget{method-date_time_between}{}}}
 \subsection{Method \code{date_time_between()}}{
 Generate a date time based on a random date between
 two given dates
@@ -216,6 +225,7 @@ two given dates
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{
