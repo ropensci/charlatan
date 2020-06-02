@@ -1,9 +1,6 @@
 PACKAGE := $(shell grep '^Package:' DESCRIPTION | sed -E 's/^Package:[[:space:]]+//')
 RSCRIPT = Rscript --no-init-file
 
-all:
-	${RSCRIPT} -e 'library(methods); devtools::compile_dll()'
-
 test:
 	${RSCRIPT} -e 'library(methods); devtools::test()'
 
@@ -25,10 +22,8 @@ check: build
 	@rm -f `ls -1tr ${PACKAGE}*gz | tail -n1`
 	@rm -rf ${PACKAGE}.Rcheck
 
-README.md: README.Rmd
-	${RSCRIPT} -e "library(methods); knitr::knit('$<')"
-	sed -i.bak 's/[[:space:]]*$$//' README.md
-	rm -f $@.bak
+readme: README.Rmd
+	${RSCRIPT} -e "knitr::knit('README.Rmd')"
 
 locales_update:
 	${RSCRIPT} -e "devtools::load_all(); z=data.table::setDF(data.table::rbindlist(lapply(available_locales, stringi::stri_locale_info))); save(z, version=2, file='data/available_locales_df.rda')"
