@@ -1,7 +1,6 @@
 language: r
 os: linux
 cache: packages
-dist: trusty
 warnings_are_errors: false
 
 r_packages:
