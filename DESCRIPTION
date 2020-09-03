@@ -21,7 +21,7 @@ Authors@R: c(
       person("rOpenSci", role = "fnd", comment = "https://ropensci.org")
     )
 License: MIT + file LICENSE
-URL: https://docs.ropensci.org/charlatan (website)
+URL: https://docs.ropensci.org/charlatan/ (website)
     https://github.com/ropensci/charlatan (devel)
 BugReports: https://github.com/ropensci/charlatan/issues
 LazyData: true
