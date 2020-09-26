@@ -27,3 +27,20 @@ test_that("InternetProvider works", {
   expect_match(aa$slug(), "[A-Za-z]")
 })
 
+test_that("IP address generation works", {
+  skip_if_not_installed("ipaddress")
+
+  aa <- InternetProvider$new()
+
+  expect_is(aa$ipv4(), "character")
+  expect_true(ipaddress::is_ipv4(ipaddress::ip_address(aa$ipv4())))
+
+  expect_is(aa$ipv4(network = TRUE), "character")
+  expect_true(ipaddress::is_ipv4(ipaddress::ip_network(aa$ipv4(network = TRUE))))
+
+  expect_is(aa$ipv6(), "character")
+  expect_true(ipaddress::is_ipv6(ipaddress::ip_address(aa$ipv6())))
+
+  expect_is(aa$ipv6(network = TRUE), "character")
+  expect_true(ipaddress::is_ipv6(ipaddress::ip_network(aa$ipv6(network = TRUE))))
+})
