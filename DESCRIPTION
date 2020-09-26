@@ -37,9 +37,9 @@ Suggests:
     testthat,
     knitr,
     rmarkdown,
-    iptools,
+    ipaddress,
     stringi
-RoxygenNote: 7.1.0
+RoxygenNote: 7.1.1
 Collate: 
     'address-provider-en_GB.R'
     'address-provider-en_NZ.R'

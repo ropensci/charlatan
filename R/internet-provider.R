@@ -45,10 +45,13 @@
 #' x$ascii_free_email()
 #' x$ascii_company_email()
 #'
-#' # addresses, mac, ipv4
+#' # addresses, mac, ipv4, ipv6
 #' x$mac_address()
-#' if (requireNamespace("iptools", quietly=TRUE)) {
+#' if (requireNamespace("ipaddress", quietly=TRUE)) {
 #'   x$ipv4()
+#'   x$ipv4(network = TRUE)
+#'   x$ipv6()
+#'   x$ipv6(network = TRUE)
 #' }
 #'
 #' # different locales
@@ -321,25 +324,29 @@ InternetProvider <- R6::R6Class(
       tolower(self$to_ascii(xxx[2]))
     },
 
-    #' @description a ipv4 address
-    ipv4 = function() {
-      check4pkg("iptools")
-      iptools::ip_random(1)
-      # FIXME: try to do network address later
-      # if network:
-      #     address += '/' + str(self.generator.random.randint(0, IPV4LENGTH))
-      #     address = str(ip_network(address, strict=False))
-      # return address
+    #' @description an ipv4 address or network
+    #' @param network (logical) produce a network
+    ipv4 = function(network = FALSE) {
+      check4pkg("ipaddress")
+      address <- ipaddress::sample_ipv4(1)
+      if (network) {
+        prefix <- super$random_int(0, ipaddress::max_prefix_length(address))
+        address <- ipaddress::ip_network(address, prefix, strict = FALSE)
+      }
+      as.character(address)
     },
 
-    # def ipv6(self, network=False):
-    #     """Produce a random IPv6 address or network with a valid CIDR"""
-    #     address = str(ip_address(self.generator.random.randint(
-    #         2 ** IPV4LENGTH, (2 ** IPV6LENGTH) - 1)))
-    #     if network:
-    #         address += '/' + str(self.generator.random.randint(0, IPV6LENGTH))
-    #         address = str(ip_network(address, strict=False))
-    #     return address
+    #' @description an ipv6 address or network
+    #' @param network (logical) produce a network
+    ipv6 = function(network = FALSE) {
+      check4pkg("ipaddress")
+      address <- ipaddress::sample_ipv6(1)
+      if (network) {
+        prefix <- super$random_int(0, ipaddress::max_prefix_length(address))
+        address <- ipaddress::ip_network(address, prefix, strict = FALSE)
+      }
+      as.character(address)
+    },
 
     #' @description a mac address
     mac_address = function() {

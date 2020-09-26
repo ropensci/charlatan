@@ -51,10 +51,13 @@ x$ascii_safe_email()
 x$ascii_free_email()
 x$ascii_company_email()
 
-# addresses, mac, ipv4
+# addresses, mac, ipv4, ipv6
 x$mac_address()
-if (requireNamespace("iptools", quietly=TRUE)) {
+if (requireNamespace("ipaddress", quietly=TRUE)) {
   x$ipv4()
+  x$ipv4(network = TRUE)
+  x$ipv6()
+  x$ipv6(network = TRUE)
 }
 
 # different locales
@@ -163,6 +166,7 @@ if (requireNamespace("stringi", quietly=TRUE)) {
 \item \href{#method-domain_name}{\code{InternetProvider$domain_name()}}
 \item \href{#method-domain_word}{\code{InternetProvider$domain_word()}}
 \item \href{#method-ipv4}{\code{InternetProvider$ipv4()}}
+\item \href{#method-ipv6}{\code{InternetProvider$ipv6()}}
 \item \href{#method-mac_address}{\code{InternetProvider$mac_address()}}
 \item \href{#method-uri_page}{\code{InternetProvider$uri_page()}}
 \item \href{#method-uri_path}{\code{InternetProvider$uri_path()}}
@@ -407,11 +411,35 @@ a domain word
 \if{html}{\out{<a id="method-ipv4"></a>}}
 \if{latex}{\out{\hypertarget{method-ipv4}{}}}
 \subsection{Method \code{ipv4()}}{
-a ipv4 address
+an ipv4 address or network
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{InternetProvider$ipv4()}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{InternetProvider$ipv4(network = FALSE)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{network}}{(logical) produce a network}
+}
+\if{html}{\out{</div>}}
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-ipv6"></a>}}
+\if{latex}{\out{\hypertarget{method-ipv6}{}}}
+\subsection{Method \code{ipv6()}}{
+an ipv6 address or network
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{InternetProvider$ipv6(network = FALSE)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{network}}{(logical) produce a network}
+}
+\if{html}{\out{</div>}}
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-mac_address"></a>}}
