@@ -65,7 +65,7 @@ dev version
 
 
 ```r
-devtools::install_github("ropensci/charlatan")
+remotes::install_github("ropensci/charlatan")
 ```
 
 
@@ -81,11 +81,11 @@ library("charlatan")
 ```r
 x <- fraudster()
 x$job()
-#> [1] "Journalist, broadcasting"
+#> [1] "Teacher, early years/pre"
 x$name()
-#> [1] "Manson Bahringer"
+#> [1] "Ms. Jewell Heller DVM"
 x$color_name()
-#> [1] "SlateGray"
+#> [1] "Sienna"
 ```
 
 ## locale support
@@ -97,19 +97,19 @@ Locale support for job data
 
 ```r
 ch_job(locale = "en_US", n = 3)
-#> [1] "Production assistant, television" "Manufacturing engineer"
-#> [3] "Geoscientist"
+#> [1] "Psychologist, counselling" "Geneticist, molecular"    
+#> [3] "Teacher, secondary school"
 ch_job(locale = "fr_FR", n = 3)
-#> [1] "Ingénieur en R et D en énergies renouvelables"
-#> [2] "Technicien en optique de précision"
-#> [3] "Chargé des relations publiques"
+#> [1] "Directeur d'hôpital"                           
+#> [2] "Professeur de lycée professionnel ou technique"
+#> [3] "Projectionniste"
 ch_job(locale = "hr_HR", n = 3)
-#> [1] "Restaurator majstor"               "Predavač"
-#> [3] "Ovlašteni inženjer građevinarstva"
+#> [1] "Glavni nadzornik"            "Hidrograđevinski  inspektor"
+#> [3] "Čuvar prirode"
 ch_job(locale = "uk_UA", n = 3)
-#> [1] "Юрист"     "Футболіст" "Нотаріус"
+#> [1] "Модельєр"  "Економіст" "Медик"
 ch_job(locale = "zh_TW", n = 3)
-#> [1] "泥水小工"     "汽車美容人員" "照顧指導員"
+#> [1] "廣告設計"            "CNC電腦程式編排人員" "醫事放射師"
 ```
 
 For colors:
@@ -117,9 +117,9 @@ For colors:
 
 ```r
 ch_color_name(locale = "en_US", n = 3)
-#> [1] "OrangeRed" "RoyalBlue" "Tomato"
+#> [1] "DimGray"   "RoyalBlue" "Pink"
 ch_color_name(locale = "uk_UA", n = 3)
-#> [1] "Світло-синій" "Світло-синій" "Бурштиновий"
+#> [1] "Лазуровий"        "Блідо-пурпуровий" "Карміновий"
 ```
 
 More coming soon ...
@@ -130,36 +130,36 @@ More coming soon ...
 ```r
 ch_generate()
 #> # A tibble: 10 x 3
-#>    name                 job                                     phone_number
-#>    <chr>                <chr>                                   <chr>
-#>  1 Bryson Collier       Psychiatric nurse                       02848575811
-#>  2 Auther Bauch-Mann    Sports development officer              1-928-629-1098
-#>  3 Yee Mann             Administrator, charities/voluntary org… 00055747789
-#>  4 Flavia Senger DDS    Engineer, petroleum                     764.123.8829
-#>  5 Timmie Funk          Pharmacologist                          +91(1)4463595412
-#>  6 Olympia Prosacco     Estate agent                            08121255708
-#>  7 Dr. Ruffin Altenwer… Technical author                        00830260460
-#>  8 Kaden Schulist PhD   Catering manager                        578.686.1463x11…
-#>  9 Kyree Morissette     Programmer, applications                919.757.5013x47…
-#> 10 Dr. Cassie Funk      Recruitment consultant                  1-229-251-6641x…
+#>    name                       job                              phone_number     
+#>    <chr>                      <chr>                            <chr>            
+#>  1 Mr. Dominic Kemmer DVM     Financial trader                 052.745.9960x318 
+#>  2 Dr. Ryley Mayer            Insurance account manager        580-091-9526x937 
+#>  3 Rick Denesik               Hydrographic surveyor            1-242-288-2630x2…
+#>  4 Miss Jacqueline Stokes PhD Surveyor, insurance              +77(8)8775339754 
+#>  5 Winifred Kreiger           Research scientist (medical)     321.011.4770x0581
+#>  6 Braulio Howe               Forensic psychologist            255.062.9188x707 
+#>  7 Miss Michaele Jones PhD    Operations geologist             480-690-6146x308…
+#>  8 Elaine Bogan               Dramatherapist                   349.476.3434     
+#>  9 Sheena Abshire             Systems developer                00600016387      
+#> 10 Pallie Luettgen            Higher education careers adviser 01245001642
 ```
 
 
 ```r
 ch_generate('job', 'phone_number', n = 30)
 #> # A tibble: 30 x 2
-#>    job                                                   phone_number
-#>    <chr>                                                 <chr>
-#>  1 Nutritional therapist                                 (806)063-1483
-#>  2 Secondary school teacher                              260-842-0791
-#>  3 Adult guidance worker                                 (950)335-9695
-#>  4 Trading standards officer                             (789)724-0122x54521
-#>  5 Arboriculturist                                       1-457-393-0622x360
-#>  6 Teacher, adult education                              606.906.1542x199
-#>  7 Telecommunications researcher                         1-293-002-5448x8188
-#>  8 Armed forces logistics/support/administrative officer 423-714-8765x533
-#>  9 Telecommunications researcher                         891.582.9799x03590
-#> 10 Production designer, theatre/television/film          829.571.5195x953
+#>    job                                   phone_number       
+#>    <chr>                                 <chr>              
+#>  1 Advice worker                         499.208.6850       
+#>  2 Veterinary surgeon                    +30(9)9986602509   
+#>  3 English as a foreign language teacher (328)611-3384x7919 
+#>  4 Publishing rights manager             (876)751-5809      
+#>  5 Waste management officer              239-121-5948x3127  
+#>  6 Clinical research associate           433.142.4403       
+#>  7 Fisheries officer                     240.932.5389x7573  
+#>  8 Science writer                        1-150-055-6653x5490
+#>  9 Technical author                      (541)245-2753x2542 
+#> 10 Radiographer, diagnostic              08438330095        
 #> # … with 20 more rows
 ```
 
@@ -169,17 +169,17 @@ ch_generate('job', 'phone_number', n = 30)
 
 ```r
 ch_name()
-#> [1] "Deena Walter MD"
+#> [1] "Odie McGlynn PhD"
 ```
 
 
 ```r
 ch_name(10)
-#>  [1] "Leandra Olson DVM"          "Iva Stokes"
-#>  [3] "Mrs. Heather Schroeder PhD" "Miss Merry Quigley"
-#>  [5] "Isaak Bauch MD"             "Mr. Parley O'Reilly V"
-#>  [7] "Cris Torp"                  "Mistie Herman"
-#>  [9] "Kori Davis"                 "Dr. Kendall Jones"
+#>  [1] "Morgan Brown"            "Bernetta Jast DDS"      
+#>  [3] "Vada Wiegand"            "Caroline Erdman"        
+#>  [5] "Sincere Fahey"           "Rogelio Romaguera-Yundt"
+#>  [7] "Luz Gulgowski"           "Jaycie Berge"           
+#>  [9] "Miss Vivien Marks PhD"   "Tameka Prosacco"
 ```
 
 
@@ -188,16 +188,16 @@ ch_name(10)
 
 ```r
 ch_phone_number()
-#> [1] "+03(0)6570590151"
+#> [1] "668-981-6872"
 ```
 
 
 ```r
 ch_phone_number(10)
-#>  [1] "(012)517-0700x67838"  "1-272-827-4278x1104"  "1-167-876-5950x40367"
-#>  [4] "981-637-8155x437"     "270.789.9528"         "815-853-0651x77152"
-#>  [7] "144-907-7632x7302"    "03557740196"          "1-393-088-9907"
-#> [10] "(729)302-5720"
+#>  [1] "080-416-0639x81495"   "810-141-9608"         "+60(3)6095078897"    
+#>  [4] "01663791328"          "+74(5)8258522901"     "1-733-818-3058x44926"
+#>  [7] "+08(0)7764725852"     "01801634551"          "04515633735"         
+#> [10] "(254)691-1314x322"
 ```
 
 ## job
@@ -205,17 +205,17 @@ ch_phone_number(10)
 
 ```r
 ch_job()
-#> [1] "Pilot, airline"
+#> [1] "Surveyor, hydrographic"
 ```
 
 
 ```r
 ch_job(10)
-#>  [1] "Presenter, broadcasting"            "Teacher, music"
-#>  [3] "Psychiatrist"                       "Conservator, museum/gallery"
-#>  [5] "Illustrator"                        "Public relations account executive"
-#>  [7] "Volunteer coordinator"              "Designer, furniture"
-#>  [9] "Research scientist (life sciences)" "Doctor, hospital"
+#>  [1] "Personal assistant"                "Librarian, academic"              
+#>  [3] "Dentist"                           "Buyer, retail"                    
+#>  [5] "Television camera operator"        "Police officer"                   
+#>  [7] "Sales executive"                   "Radiation protection practitioner"
+#>  [9] "Dance movement psychotherapist"    "Land"
 ```
 
 ## credit cards
@@ -223,28 +223,28 @@ ch_job(10)
 
 ```r
 ch_credit_card_provider()
-#> [1] "VISA 16 digit"
+#> [1] "JCB 16 digit"
 ch_credit_card_provider(n = 4)
-#> [1] "JCB 15 digit"  "VISA 16 digit" "Mastercard"    "Maestro"
+#> [1] "Mastercard" "Maestro"    "Maestro"    "Discover"
 ```
 
 
 ```r
 ch_credit_card_number()
-#> [1] "4238224975631474"
+#> [1] "4159622202993838"
 ch_credit_card_number(n = 10)
-#>  [1] "3413363198114305"    "6011989791405364547" "3044477013710542"
-#>  [4] "4485129086911139"    "4911032598227"       "4802432792153632"
-#>  [7] "3088162315422127635" "54746971197462691"   "55973572068232546"
-#> [10] "3787398080129707"
+#>  [1] "55605672551121085"   "3337303178520469618" "869950090941034191" 
+#>  [4] "54190783678266223"   "6011932756948016472" "180031313169537800" 
+#>  [7] "53046901816538941"   "3036051107840354"    "3112241687269987247"
+#> [10] "3528912849653507696"
 ```
 
 
 ```r
 ch_credit_card_security_code()
-#> [1] "776"
+#> [1] "379"
 ch_credit_card_security_code(10)
-#>  [1] "989" "820" "240" "124" "266" "516" "642" "473" "140" "682"
+#>  [1] "634"  "060"  "294"  "459"  "675"  "891"  "5295" "173"  "851"  "2020"
 ```
 
 ## Usage in the wild
@@ -270,9 +270,6 @@ ch_credit_card_security_code(10)
 * Please [report any issues or bugs](https://github.com/ropensci/charlatan/issues).
 * License: MIT
 * Get citation information for `charlatan` in R doing `citation(package = 'charlatan')`
-* Please note that this project is released with a [Contributor Code of Conduct][coc].
-By participating in this project you agree to abide by its terms.
+* Please note that this package is released with a [Contributor Code of Conduct](https://ropensci.org/code-of-conduct/). By contributing to this project, you agree to abide by its terms.
 
 [![ropensci_footer](https://ropensci.org/public_images/github_footer.png)](https://ropensci.org)
-
-[coc]: https://github.com/ropensci/charlatan/blob/master/CODE_OF_CONDUCT.md
