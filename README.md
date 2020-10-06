@@ -12,7 +12,7 @@ charlatan
 [![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/charlatan)](https://github.com/metacran/cranlogs.app)
 [![](https://badges.ropensci.org/94_status.svg)](https://github.com/ropensci/onboarding/issues/94)
 
-`charlatan` makes fake data, inspired from and borrowing some code from Python's [faker](https://github.com/joke2k/faker)
+`charlatan` makes fake data, inspired from and borrowing some code from Python's faker (https://github.com/joke2k/faker)
 
 Make fake data for:
 
@@ -81,11 +81,11 @@ library("charlatan")
 ```r
 x <- fraudster()
 x$job()
-#> [1] "Teacher, early years/pre"
+#> [1] "Agricultural consultant"
 x$name()
-#> [1] "Ms. Jewell Heller DVM"
+#> [1] "Britney Pollich"
 x$color_name()
-#> [1] "Sienna"
+#> [1] "HoneyDew"
 ```
 
 ## locale support
@@ -97,19 +97,19 @@ Locale support for job data
 
 ```r
 ch_job(locale = "en_US", n = 3)
-#> [1] "Psychologist, counselling" "Geneticist, molecular"    
-#> [3] "Teacher, secondary school"
+#> [1] "Development worker, international aid"
+#> [2] "Geoscientist"                         
+#> [3] "Engineer, technical sales"
 ch_job(locale = "fr_FR", n = 3)
-#> [1] "Directeur d'hôpital"                           
-#> [2] "Professeur de lycée professionnel ou technique"
-#> [3] "Projectionniste"
+#> [1] "Chef de mission humanitaire" "Entraîneur de chevaux"      
+#> [3] "Officier de marine"
 ch_job(locale = "hr_HR", n = 3)
-#> [1] "Glavni nadzornik"            "Hidrograđevinski  inspektor"
-#> [3] "Čuvar prirode"
+#> [1] "Ovlašteni inženjer strojarstva" "Knjižničarski savjetnik"       
+#> [3] "Zlatar"
 ch_job(locale = "uk_UA", n = 3)
-#> [1] "Модельєр"  "Економіст" "Медик"
+#> [1] "Економіст"   "Модель"      "Палеонтолог"
 ch_job(locale = "zh_TW", n = 3)
-#> [1] "廣告設計"            "CNC電腦程式編排人員" "醫事放射師"
+#> [1] "飛行機師"         "塑膠射出技術人員" "手工包裝工"
 ```
 
 For colors:
@@ -117,9 +117,9 @@ For colors:
 
 ```r
 ch_color_name(locale = "en_US", n = 3)
-#> [1] "DimGray"   "RoyalBlue" "Pink"
+#> [1] "SaddleBrown"  "LemonChiffon" "ForestGreen"
 ch_color_name(locale = "uk_UA", n = 3)
-#> [1] "Лазуровий"        "Блідо-пурпуровий" "Карміновий"
+#> [1] "Зелений чай"   "Ніжно-рожевий" "Смарагдовий"
 ```
 
 More coming soon ...
@@ -130,36 +130,36 @@ More coming soon ...
 ```r
 ch_generate()
 #> # A tibble: 10 x 3
-#>    name                       job                              phone_number     
-#>    <chr>                      <chr>                            <chr>            
-#>  1 Mr. Dominic Kemmer DVM     Financial trader                 052.745.9960x318 
-#>  2 Dr. Ryley Mayer            Insurance account manager        580-091-9526x937 
-#>  3 Rick Denesik               Hydrographic surveyor            1-242-288-2630x2…
-#>  4 Miss Jacqueline Stokes PhD Surveyor, insurance              +77(8)8775339754 
-#>  5 Winifred Kreiger           Research scientist (medical)     321.011.4770x0581
-#>  6 Braulio Howe               Forensic psychologist            255.062.9188x707 
-#>  7 Miss Michaele Jones PhD    Operations geologist             480-690-6146x308…
-#>  8 Elaine Bogan               Dramatherapist                   349.476.3434     
-#>  9 Sheena Abshire             Systems developer                00600016387      
-#> 10 Pallie Luettgen            Higher education careers adviser 01245001642
+#>    name                 job                                     phone_number    
+#>    <chr>                <chr>                                   <chr>           
+#>  1 Miss Kayleigh Dietr… Lighting technician, broadcasting/film… 500.521.7362x47…
+#>  2 Lim O'Kon            Designer, fashion/clothing              179-726-6648    
+#>  3 Tamisha Mayert PhD   Sub                                     535.439.1715x11…
+#>  4 Jordy Stamm          Soil scientist                          +57(1)2448847839
+#>  5 Leighton Langosh     Clinical biochemist                     673.628.3141x63…
+#>  6 Bambi Fritsch        Optician, dispensing                    +05(2)9665064998
+#>  7 Erlinda Welch        Database administrator                  844-661-0630    
+#>  8 Mr. Myer Padberg     Education administrator                 1-961-436-8520  
+#>  9 Amin Beahan          Hotel manager                           994.778.2680x64…
+#> 10 Derl Kulas IV        Office manager                          237.117.2042x70…
 ```
 
 
 ```r
 ch_generate('job', 'phone_number', n = 30)
 #> # A tibble: 30 x 2
-#>    job                                   phone_number       
-#>    <chr>                                 <chr>              
-#>  1 Advice worker                         499.208.6850       
-#>  2 Veterinary surgeon                    +30(9)9986602509   
-#>  3 English as a foreign language teacher (328)611-3384x7919 
-#>  4 Publishing rights manager             (876)751-5809      
-#>  5 Waste management officer              239-121-5948x3127  
-#>  6 Clinical research associate           433.142.4403       
-#>  7 Fisheries officer                     240.932.5389x7573  
-#>  8 Science writer                        1-150-055-6653x5490
-#>  9 Technical author                      (541)245-2753x2542 
-#> 10 Radiographer, diagnostic              08438330095        
+#>    job                                phone_number       
+#>    <chr>                              <chr>              
+#>  1 Government social research officer 1-233-523-0412x4350
+#>  2 Geophysical data processor         1-068-624-4456x3615
+#>  3 Civil Service administrator        756.909.1036x6157  
+#>  4 Animator                           977-515-5664       
+#>  5 Production manager                 +81(8)3608969316   
+#>  6 Public librarian                   (433)179-5585      
+#>  7 Health visitor                     (979)259-6778x85903
+#>  8 Higher education lecturer          045.270.9911x946   
+#>  9 Web designer                       1-819-943-8977x8767
+#> 10 Audiological scientist             411.429.8116x1221  
 #> # … with 20 more rows
 ```
 
@@ -169,17 +169,17 @@ ch_generate('job', 'phone_number', n = 30)
 
 ```r
 ch_name()
-#> [1] "Odie McGlynn PhD"
+#> [1] "Marcellus Wintheiser"
 ```
 
 
 ```r
 ch_name(10)
-#>  [1] "Morgan Brown"            "Bernetta Jast DDS"      
-#>  [3] "Vada Wiegand"            "Caroline Erdman"        
-#>  [5] "Sincere Fahey"           "Rogelio Romaguera-Yundt"
-#>  [7] "Luz Gulgowski"           "Jaycie Berge"           
-#>  [9] "Miss Vivien Marks PhD"   "Tameka Prosacco"
+#>  [1] "Leia Greenholt PhD"        "Tatyana Renner-Bartoletti"
+#>  [3] "Leonia Wolff DVM"          "Berneice Marvin-Zulauf"   
+#>  [5] "Dr. Reggie Reichert Sr."   "Valentina Fisher"         
+#>  [7] "Alena King"                "Mabelle Brakus"           
+#>  [9] "Tyreke D'Amore-Klein"      "Clarine Mraz PhD"
 ```
 
 
@@ -188,16 +188,16 @@ ch_name(10)
 
 ```r
 ch_phone_number()
-#> [1] "668-981-6872"
+#> [1] "391.480.9016x29138"
 ```
 
 
 ```r
 ch_phone_number(10)
-#>  [1] "080-416-0639x81495"   "810-141-9608"         "+60(3)6095078897"    
-#>  [4] "01663791328"          "+74(5)8258522901"     "1-733-818-3058x44926"
-#>  [7] "+08(0)7764725852"     "01801634551"          "04515633735"         
-#> [10] "(254)691-1314x322"
+#>  [1] "1-444-462-8908"       "1-607-225-7080"       "1-042-282-7832x489"  
+#>  [4] "1-187-719-1456"       "+62(9)2775060147"     "09880850028"         
+#>  [7] "477.760.3248x0189"    "100-214-2675"         "(636)600-3735x7625"  
+#> [10] "1-972-824-8726x55089"
 ```
 
 ## job
@@ -205,17 +205,22 @@ ch_phone_number(10)
 
 ```r
 ch_job()
-#> [1] "Surveyor, hydrographic"
+#> [1] "Recycling officer"
 ```
 
 
 ```r
 ch_job(10)
-#>  [1] "Personal assistant"                "Librarian, academic"              
-#>  [3] "Dentist"                           "Buyer, retail"                    
-#>  [5] "Television camera operator"        "Police officer"                   
-#>  [7] "Sales executive"                   "Radiation protection practitioner"
-#>  [9] "Dance movement psychotherapist"    "Land"
+#>  [1] "Metallurgist"                         
+#>  [2] "Trade mark attorney"                  
+#>  [3] "Printmaker"                           
+#>  [4] "Editor, commissioning"                
+#>  [5] "Product/process development scientist"
+#>  [6] "Personnel officer"                    
+#>  [7] "Art gallery manager"                  
+#>  [8] "Nurse, mental health"                 
+#>  [9] "Leisure centre manager"               
+#> [10] "Biochemist, clinical"
 ```
 
 ## credit cards
@@ -223,47 +228,48 @@ ch_job(10)
 
 ```r
 ch_credit_card_provider()
-#> [1] "JCB 16 digit"
+#> [1] "Maestro"
 ch_credit_card_provider(n = 4)
-#> [1] "Mastercard" "Maestro"    "Maestro"    "Discover"
+#> [1] "JCB 15 digit"                "Voyager"                    
+#> [3] "JCB 15 digit"                "Diners Club / Carte Blanche"
 ```
 
 
 ```r
 ch_credit_card_number()
-#> [1] "4159622202993838"
+#> [1] "55822361446116206"
 ch_credit_card_number(n = 10)
-#>  [1] "55605672551121085"   "3337303178520469618" "869950090941034191" 
-#>  [4] "54190783678266223"   "6011932756948016472" "180031313169537800" 
-#>  [7] "53046901816538941"   "3036051107840354"    "3112241687269987247"
-#> [10] "3528912849653507696"
+#>  [1] "3498363999948883"   "180067076908985096" "4062017321928"     
+#>  [4] "4170398299942"      "4527661145377"      "51638673599454307" 
+#>  [7] "4854103984796010"   "4618290138974861"   "4502776360832164"  
+#> [10] "54706214706241050"
 ```
 
 
 ```r
 ch_credit_card_security_code()
-#> [1] "379"
+#> [1] "751"
 ch_credit_card_security_code(10)
-#>  [1] "634"  "060"  "294"  "459"  "675"  "891"  "5295" "173"  "851"  "2020"
+#>  [1] "119"  "680"  "432"  "254"  "888"  "285"  "743"  "284"  "5914" "286"
 ```
 
 ## Usage in the wild
 
-- [eacton/R-Utility-Belt-ggplot2](https://github.com/eacton/R-Utility-Belt-ggplot2/blob/836a6bd303fbfde4a334d351e0d1c63f71c4ec68/furry_dataset.R)
+- eacton/R-Utility-Belt-ggplot2 (https://github.com/eacton/R-Utility-Belt-ggplot2/blob/836a6bd303fbfde4a334d351e0d1c63f71c4ec68/furry_dataset.R)
 
 
 ## Contributors
 
-* [Scott Chamberlain](https://github.com/sckott)
-* [Kyle Voytovich](https://github.com/kylevoyto)
-* [Martin Pedersen](https://github.com/MartinMSPedersen)
+* Scott Chamberlain (https://github.com/sckott)
+* Kyle Voytovich (https://github.com/kylevoyto)
+* Martin Pedersen (https://github.com/MartinMSPedersen)
 
 ## similar art
 
-* [wakefield](https://github.com/trinker/wakefield)
-* [ids](https://github.com/richfitz/ids)
-* [rcorpora](https://github.com/gaborcsardi/rcorpora)
-* [synthpop](https://cran.r-project.org/package=synthpop)
+* wakefield (https://github.com/trinker/wakefield)
+* ids (https://github.com/richfitz/ids)
+* rcorpora (https://github.com/gaborcsardi/rcorpora)
+* synthpop (https://cran.r-project.org/package=synthpop)
 
 ## Meta
 

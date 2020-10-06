@@ -19,7 +19,7 @@ knitr::opts_chunk$set(
 [![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/charlatan)](https://github.com/metacran/cranlogs.app)
 [![](https://badges.ropensci.org/94_status.svg)](https://github.com/ropensci/onboarding/issues/94)
 
-`charlatan` makes fake data, inspired from and borrowing some code from Python's [faker](https://github.com/joke2k/faker)
+`charlatan` makes fake data, inspired from and borrowing some code from Python's faker (https://github.com/joke2k/faker)
 
 Make fake data for:
 
@@ -172,21 +172,21 @@ ch_credit_card_security_code(10)
 
 ## Usage in the wild
 
-- [eacton/R-Utility-Belt-ggplot2](https://github.com/eacton/R-Utility-Belt-ggplot2/blob/836a6bd303fbfde4a334d351e0d1c63f71c4ec68/furry_dataset.R)
+- eacton/R-Utility-Belt-ggplot2 (https://github.com/eacton/R-Utility-Belt-ggplot2/blob/836a6bd303fbfde4a334d351e0d1c63f71c4ec68/furry_dataset.R)
 
 
 ## Contributors
 
-* [Scott Chamberlain](https://github.com/sckott)
-* [Kyle Voytovich](https://github.com/kylevoyto)
-* [Martin Pedersen](https://github.com/MartinMSPedersen)
+* Scott Chamberlain (https://github.com/sckott)
+* Kyle Voytovich (https://github.com/kylevoyto)
+* Martin Pedersen (https://github.com/MartinMSPedersen)
 
 ## similar art
 
-* [wakefield](https://github.com/trinker/wakefield)
-* [ids](https://github.com/richfitz/ids)
-* [rcorpora](https://github.com/gaborcsardi/rcorpora)
-* [synthpop](https://cran.r-project.org/package=synthpop)
+* wakefield (https://github.com/trinker/wakefield)
+* ids (https://github.com/richfitz/ids)
+* rcorpora (https://github.com/gaborcsardi/rcorpora)
+* synthpop (https://cran.r-project.org/package=synthpop)
 
 ## Meta
 
