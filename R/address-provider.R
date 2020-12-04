@@ -1,3 +1,19 @@
+#' addresses
+#' @export
+#' @examples
+#' x <- addresses('es_ES')
+#' self=x
+#' x
+#' x$locale
+#' x$street_name()
+#' x$street_prefix()
+#' x$secondary_address()
+#' x$state()
+addresses <- function(locale = NULL) {
+  if (is.null(locale)) return(AddressProvider$new())
+  eval(parse(text=paste0("AddressProvider", "_", locale)))$new(locale=locale)
+}
+
 #' @title AddressProvider
 #' @description address methods
 #' @include datetime-provider.R
@@ -82,6 +98,10 @@ AddressProvider <- R6::R6Class(
     country_codes = vapply(DateTimeProvider$new()$countries, "[[", "", "code"),
     #' @field locale_data (character) xxx
     locale_data = list(),
+    #' @field first_name (character) xxx
+    first_name = NULL,
+    #' @field last_name (character) xxx
+    last_name = NULL,
 
     #' @description fetch the allowed locales for this provider
     allowed_locales = function() private$locales,
@@ -101,23 +121,27 @@ AddressProvider <- R6::R6Class(
         self$locale <- 'en_US'
       }
 
-      self$city_prefixes <- parse_eval("city_prefixes_", self$locale)
-      self$city_suffixes <- parse_eval("city_suffixes_", self$locale)
-      self$building_number_formats <-
-        parse_eval("building_number_formats_", self$locale)
-      self$street_suffixes <- parse_eval("street_suffixes_", self$locale)
-      self$postcode_formats <- parse_eval("postcode_formats_", self$locale)
-      self$states <- parse_eval("states_", self$locale)
-      self$states_abbr <- parse_eval("states_abbr_", self$locale)
-      self$military_state_abbr <- parse_eval("military_state_abbr_", self$locale)
-      self$military_ship_prefix <- parse_eval("military_ship_prefix_", self$locale)
-      self$military_apo_format <- parse_eval("military_apo_format_", self$locale)
-      self$military_dpo_format <- parse_eval("military_dpo_format_", self$locale)
-      self$city_formats <- parse_eval("city_formats_", self$locale)
-      self$street_name_formats <- parse_eval("street_name_formats_", self$locale)
-      self$street_address_formats <- parse_eval("street_address_formats_", self$locale)
-      self$address_formats <- parse_eval("address_formats_", self$locale)
-      self$secondary_address_formats <- parse_eval("secondary_address_formats_", self$locale)
+      person <- PersonProvider$new(locale = self$locale)
+      self$first_name <- person$first_name
+      self$last_name <- person$last_name
+
+      # self$city_prefixes <- parse_eval("city_prefixes_", self$locale)
+      # self$city_suffixes <- parse_eval("city_suffixes_", self$locale)
+      # self$building_number_formats <-
+      #   parse_eval("building_number_formats_", self$locale)
+      # self$street_suffixes <- parse_eval("street_suffixes_", self$locale)
+      # self$postcode_formats <- parse_eval("postcode_formats_", self$locale)
+      # self$states <- parse_eval("states_", self$locale)
+      # self$states_abbr <- parse_eval("states_abbr_", self$locale)
+      # self$military_state_abbr <- parse_eval("military_state_abbr_", self$locale)
+      # self$military_ship_prefix <- parse_eval("military_ship_prefix_", self$locale)
+      # self$military_apo_format <- parse_eval("military_apo_format_", self$locale)
+      # self$military_dpo_format <- parse_eval("military_dpo_format_", self$locale)
+      # self$city_formats <- parse_eval("city_formats_", self$locale)
+      # self$street_name_formats <- parse_eval("street_name_formats_", self$locale)
+      # self$street_address_formats <- parse_eval("street_address_formats_", self$locale)
+      # self$address_formats <- parse_eval("address_formats_", self$locale)
+      # self$secondary_address_formats <- parse_eval("secondary_address_formats_", self$locale)
 
       # if any locale specific data, throw it in a list
       self$locale_data <- parse_eval("locale_data_", self$locale)
@@ -155,13 +179,14 @@ AddressProvider <- R6::R6Class(
     #' @description street name
     street_name = function() {
       pattern <- super$random_element(self$street_name_formats)
-      # PersonProvider must implement the same locales for this to work
-      pp <- PersonProvider$new(locale = self$locale)
-      dat <- list(
-        first_name = pp$first_name(),
-        last_name = pp$last_name(),
-        street_suffix = super$random_element(self$street_suffixes)
-      )
+      # PersonProvider must implement the same locales for this to wor`
+      # pp <- PersonProvider$new(locale = self$locale)
+      # dat <- list(
+      #   first_name = self$person$first_name(),
+      #   last_name = self$person$last_name()
+      #   # street_suffix = super$random_element(self$street_suffixes)
+      # )
+      dat <- private$fetch_parts(pattern)
       if (self$locale == "en_NZ") {
         dat$te_reo_first <- super$random_element(self$locale_data$te_reo_first)
         dat$te_reo_part <- super$random_element(self$locale_data$te_reo_parts)
@@ -243,6 +268,16 @@ AddressProvider <- R6::R6Class(
     #         return cls.geo_coordinate()
   ),
   private = list(
-    locales = c("en_US", "en_GB", "en_NZ", "es_ES")
+    locales = c("en_US", "en_GB", "en_NZ", "es_ES"),
+    #' @param str a pattern
+    fetch_parts = function(str) {
+      pats <- strxt(str, "[A-Za-z]+_[A-Za-z]+")[[1]]
+      res <- list()
+      for (i in seq_along(pats)) {
+        tmp <- self[[pats[i]]]
+        res[[pats[i]]] <- if (is.function(tmp)) tmp() else super$random_element(tmp)
+      }
+      return(res)
+    }
   )
 )

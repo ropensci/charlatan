@@ -44,6 +44,8 @@ Collate:
     'address-provider-en_GB.R'
     'address-provider-en_NZ.R'
     'address-provider-en_US.R'
+    'address-provider-es_ES.R'
+    'address-provider-es_ES2.R'
     'base-provider.R'
     'datetime-provider.R'
     'address-provider.R'
