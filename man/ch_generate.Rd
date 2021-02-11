@@ -8,7 +8,7 @@ ch_generate(..., n = 10, locale = NULL)
 }
 \arguments{
 \item{...}{columns to include. must be in the allowed set. See
-\strong{Allowed colun names} below. Three default columns are included
+\strong{Allowed column names} below. Three default columns are included
 (name, job, phone_number) if nothing is specified - but are overridden
 by any input.}
 
