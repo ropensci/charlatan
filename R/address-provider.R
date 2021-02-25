@@ -27,12 +27,12 @@
 #' z$postcode
 #' z$postcode()
 #' z$street_name()
-#' 
+#'
 #' # en_NZ
 #' (z <- AddressProvider$new('en_NZ'))
 #' z$locale
 #' z$street_name()
-#' 
+#'
 #' # es_ES
 #' (z <- AddressProvider$new('es_ES'))
 #' z$locale
@@ -195,6 +195,14 @@ AddressProvider <- R6::R6Class(
                             super$random_element(self$locale_data$postcode_sets[[p]]))
           }
           pcode
+        },
+        nl_NL = {
+          paste0(
+            super$random_element(1000:9999),
+            ' ',
+            super$random_element(LETTERS),
+            super$random_element(LETTERS)
+          )
         }
       )
     },
@@ -243,6 +251,6 @@ AddressProvider <- R6::R6Class(
     #         return cls.geo_coordinate()
   ),
   private = list(
-    locales = c("en_US", "en_GB", "en_NZ", "es_ES")
+    locales = c("en_US", "en_GB", "en_NZ", "es_ES", "nl_NL")
   )
 )
