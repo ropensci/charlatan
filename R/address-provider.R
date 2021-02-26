@@ -37,6 +37,13 @@
 #' (z <- AddressProvider$new('es_ES'))
 #' z$locale
 #' z$street_name()
+#'
+#' # nl_NL
+#' (z <- AddressProvider$new('nl_NL'))
+#' z$locale
+#' z$street_name()
+#' z$postcode()
+#' z$city()
 AddressProvider <- R6::R6Class(
   inherit = BaseProvider,
   'AddressProvider',
