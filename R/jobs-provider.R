@@ -17,6 +17,10 @@
 #' z <- JobProvider$new(locale = "fa_IR")
 #' z$locale
 #' z$render()
+#'
+#' z <- JobProvider$new(locale = "nl_NL")
+#' z$locale
+#' z$render()
 JobProvider <- R6::R6Class(
   inherit = BaseProvider,
   'JobProvider',
@@ -54,6 +58,6 @@ JobProvider <- R6::R6Class(
 
   private = list(
     locales = c("da_DK", "fa_IR", "fr_CH", "uk_UA", "ru_RU", "pl_PL",
-      "en_US", "fr_FR", "hr_HR", "zh_TW", "fi_FI")
+      "en_US", "fr_FR", "hr_HR", "zh_TW", "fi_FI", "nl_NL")
   )
 )

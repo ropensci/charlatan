@@ -10,7 +10,7 @@
 #' for data types that have locale support, See each data provider for
 #' details.
 #' @section Allowed column names:
-#' 
+#'
 #' - name (default included)
 #' - job (default included)
 #' - phone_number (default included)
@@ -18,7 +18,7 @@
 #' - color_name
 #' - rgb_color
 #' - rgb_css_color
-#' 
+#'
 #' @examples
 #' ch_generate()
 #' ch_generate(n = 1)
@@ -27,14 +27,17 @@
 #' ch_generate('job')
 #' ch_generate('job', 'name')
 #' ch_generate('job', 'color_name')
+#' ch_generate('name', 'credit_card_number')
+#' ch_generate('name', 'street_address', 'postcode')
 #'
 #' # locale
 #' ch_generate(locale = "en_US")
 #' ch_generate(locale = "fr_FR")
 #' ch_generate(locale = "fr_CH")
+#' ch_generate(locale = "nl_NL")
 ch_generate <- function(..., n = 10, locale = NULL) {
   choices <- unlist(list(...))
-  if (length(choices) == 0) choices <- c("name", "job", "phone_number")
+  if (length(choices) == 0) choices <- c("name", "job", "phone_number", "credit_card_number", "street_address", "postcode")
   #stopifnot(inherits(choices, "character"))
   assert(choices, "character")
 
@@ -58,4 +61,5 @@ ch_generate <- function(..., n = 10, locale = NULL) {
 }
 
 all_choices <- c("name", "job", "phone_number", "currency",
-                 "color_name", "rgb_color", "rgb_css_color")
+                 "color_name", "rgb_color", "rgb_css_color",
+                  "credit_card_number", "street_address", "postcode")

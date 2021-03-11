@@ -8,7 +8,7 @@ Description: Make fake data, supporting addresses, person names, dates,
 Version: 0.4.1.92
 Authors@R: c(
       person("Scott", "Chamberlain", role = c("aut", "cre"),
-        email = "myrmecocystus+r@gmail.com", 
+        email = "myrmecocystus+r@gmail.com",
         comment = c(ORCID = "0000-0003-1444-9135")),
       person("Kyle", "Voytovich", role = "aut"),
       person("Martin", "Pedersen", role = "ctb"),
@@ -40,7 +40,7 @@ Suggests:
     rmarkdown,
     ipaddress
 RoxygenNote: 7.1.1
-Collate: 
+Collate:
     'address-provider-en_GB.R'
     'address-provider-en_NZ.R'
     'address-provider-en_US.R'
@@ -48,6 +48,7 @@ Collate:
     'base-provider.R'
     'datetime-provider.R'
     'address-provider.R'
+    'address.R'
     'available_locales.R'
     'charlatan-package.R'
     'charlatan_settings.R'
@@ -103,6 +104,7 @@ Collate:
     'jobs-provider-ru_RU.R'
     'jobs-provider-uk_UA.R'
     'jobs-provider-zh_TW.R'
+    'jobs-provider-nl_NL.R'
     'jobs-provider.R'
     'lorem-provider-ar_AA.R'
     'lorem-provider-el_GR.R'
