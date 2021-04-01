@@ -32,6 +32,15 @@ NumericsProvider <- R6::R6Class(
     double = function(n = 1, mean = 0, sd = 1) {
       self$norm(n, mean, sd)
     },
+    
+    #' @description create a double on a range given with fixed decimals
+    double2 = function(n = 1, min = 1, max = 1000, dec = 2) {
+      paste(
+        self$integer(n = n, min = min, max = max),
+        self$integer(n = n, min = 10 ^ (dec - 1), max = 10 ^ dec -1),
+        sep = "."
+      ) %>% as.numeric()
+    },
 
     #' @description get an integer, runs [sample()] on range given
     integer = function(n = 1, min = 1, max = 1000) {
