@@ -32,13 +32,13 @@ VignetteBuilder: knitr
 Imports:
     R6 (>= 2.2.0),
     tibble (>= 1.2),
-    whisker
+    whisker,
+    stringi
 Suggests:
     testthat,
     knitr,
     rmarkdown,
-    ipaddress,
-    stringi
+    ipaddress
 RoxygenNote: 7.1.1
 Collate: 
     'address-provider-en_GB.R'
@@ -80,6 +80,7 @@ Collate:
     'file-provider.R'
     'fraudster.R'
     'generate.R'
+    'generate2.R'
     'globals.R'
     'internet-provider-bg_BG.R'
     'internet-provider-cs_CZ.R'
