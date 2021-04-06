@@ -33,7 +33,8 @@ Imports:
     R6 (>= 2.2.0),
     tibble (>= 1.2),
     whisker,
-    stringi
+    stringi,
+    rlang
 Suggests:
     testthat,
     knitr,
