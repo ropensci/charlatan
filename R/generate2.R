@@ -39,8 +39,8 @@ ch_generate2 <- function(choices, n = 10, locale = "en_US", fun_args = list()) {
   cols <- stats::setNames(
     lapply(names(choices), function(col) {
       z <- choices[[col]]
-      if (stri_detect(z, regex = "^.+?\\..+?$")) {
-        provider_method <- stri_split(z, fixed = ".")[[1]]
+      if (stringi::stri_detect(z, regex = "^.+?\\..+?$")) {
+        provider_method <- stringi::stri_split(z, fixed = ".")[[1]]
         provider <- provider_method[[1]]
         method <- provider_method[[2]]
       } else {
