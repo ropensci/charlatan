@@ -71,7 +71,7 @@ ch_generate2 <- function(choices, n = 10, locale = "en_US", fun_args = list()) {
                     ". Please check available options with ch_generate_all_choices()"))
       }
       args <- fun_args[[col]]
-      replicate(n, invoke(provider_instance[[method]], args))
+      replicate(n, rlang::invoke(provider_instance[[method]], args))
     }),
     names(choices)
   )
