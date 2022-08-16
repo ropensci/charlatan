@@ -24,13 +24,13 @@ z$render(500)
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
-\item \href{#method-render}{\code{SequenceProvider$render()}}
-\item \href{#method-clone}{\code{SequenceProvider$clone()}}
+\item \href{#method-SequenceProvider-render}{\code{SequenceProvider$render()}}
+\item \href{#method-SequenceProvider-clone}{\code{SequenceProvider$clone()}}
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-render"></a>}}
-\if{latex}{\out{\hypertarget{method-render}{}}}
+\if{html}{\out{<a id="method-SequenceProvider-render"></a>}}
+\if{latex}{\out{\hypertarget{method-SequenceProvider-render}{}}}
 \subsection{Method \code{render()}}{
 Make a sequence
 \subsection{Usage}{
@@ -46,8 +46,8 @@ Make a sequence
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-clone"></a>}}
-\if{latex}{\out{\hypertarget{method-clone}{}}}
+\if{html}{\out{<a id="method-SequenceProvider-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-SequenceProvider-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

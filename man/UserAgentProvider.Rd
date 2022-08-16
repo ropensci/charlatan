@@ -40,44 +40,44 @@ x$safari()
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
-\item \href{#method-allowed_locales}{\code{UserAgentProvider$allowed_locales()}}
-\item \href{#method-new}{\code{UserAgentProvider$new()}}
-\item \href{#method-mac_processor}{\code{UserAgentProvider$mac_processor()}}
-\item \href{#method-linux_processor}{\code{UserAgentProvider$linux_processor()}}
-\item \href{#method-user_agent}{\code{UserAgentProvider$user_agent()}}
-\item \href{#method-chrome}{\code{UserAgentProvider$chrome()}}
-\item \href{#method-firefox}{\code{UserAgentProvider$firefox()}}
-\item \href{#method-safari}{\code{UserAgentProvider$safari()}}
-\item \href{#method-opera}{\code{UserAgentProvider$opera()}}
-\item \href{#method-internet_explorer}{\code{UserAgentProvider$internet_explorer()}}
-\item \href{#method-windows_platform_token}{\code{UserAgentProvider$windows_platform_token()}}
-\item \href{#method-linux_platform_token}{\code{UserAgentProvider$linux_platform_token()}}
-\item \href{#method-mac_platform_token}{\code{UserAgentProvider$mac_platform_token()}}
-\item \href{#method-clone}{\code{UserAgentProvider$clone()}}
+\item \href{#method-UserAgentProvider-allowed_locales}{\code{UserAgentProvider$allowed_locales()}}
+\item \href{#method-UserAgentProvider-new}{\code{UserAgentProvider$new()}}
+\item \href{#method-UserAgentProvider-mac_processor}{\code{UserAgentProvider$mac_processor()}}
+\item \href{#method-UserAgentProvider-linux_processor}{\code{UserAgentProvider$linux_processor()}}
+\item \href{#method-UserAgentProvider-user_agent}{\code{UserAgentProvider$user_agent()}}
+\item \href{#method-UserAgentProvider-chrome}{\code{UserAgentProvider$chrome()}}
+\item \href{#method-UserAgentProvider-firefox}{\code{UserAgentProvider$firefox()}}
+\item \href{#method-UserAgentProvider-safari}{\code{UserAgentProvider$safari()}}
+\item \href{#method-UserAgentProvider-opera}{\code{UserAgentProvider$opera()}}
+\item \href{#method-UserAgentProvider-internet_explorer}{\code{UserAgentProvider$internet_explorer()}}
+\item \href{#method-UserAgentProvider-windows_platform_token}{\code{UserAgentProvider$windows_platform_token()}}
+\item \href{#method-UserAgentProvider-linux_platform_token}{\code{UserAgentProvider$linux_platform_token()}}
+\item \href{#method-UserAgentProvider-mac_platform_token}{\code{UserAgentProvider$mac_platform_token()}}
+\item \href{#method-UserAgentProvider-clone}{\code{UserAgentProvider$clone()}}
 }
 }
-\if{html}{
-\out{<details ><summary>Inherited methods</summary>}
-\itemize{
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="bothify">}\href{../../charlatan/html/BaseProvider.html#method-bothify}{\code{charlatan::BaseProvider$bothify()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale">}\href{../../charlatan/html/BaseProvider.html#method-check_locale}{\code{charlatan::BaseProvider$check_locale()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="lexify">}\href{../../charlatan/html/BaseProvider.html#method-lexify}{\code{charlatan::BaseProvider$lexify()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="numerify">}\href{../../charlatan/html/BaseProvider.html#method-numerify}{\code{charlatan::BaseProvider$numerify()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit">}\href{../../charlatan/html/BaseProvider.html#method-random_digit}{\code{charlatan::BaseProvider$random_digit()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_not_zero}{\code{charlatan::BaseProvider$random_digit_not_zero()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero_or_empty">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_not_zero_or_empty}{\code{charlatan::BaseProvider$random_digit_not_zero_or_empty()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_or_empty">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_or_empty}{\code{charlatan::BaseProvider$random_digit_or_empty()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_element">}\href{../../charlatan/html/BaseProvider.html#method-random_element}{\code{charlatan::BaseProvider$random_element()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_element_prob">}\href{../../charlatan/html/BaseProvider.html#method-random_element_prob}{\code{charlatan::BaseProvider$random_element_prob()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_int">}\href{../../charlatan/html/BaseProvider.html#method-random_int}{\code{charlatan::BaseProvider$random_int()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_letter">}\href{../../charlatan/html/BaseProvider.html#method-random_letter}{\code{charlatan::BaseProvider$random_letter()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="randomize_nb_elements">}\href{../../charlatan/html/BaseProvider.html#method-randomize_nb_elements}{\code{charlatan::BaseProvider$randomize_nb_elements()}}\out{</span>}
-}
-\out{</details>}
-}
+\if{html}{\out{
+<details><summary>Inherited methods</summary>
+<ul>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="bothify"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-bothify'><code>charlatan::BaseProvider$bothify()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-check_locale'><code>charlatan::BaseProvider$check_locale()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="lexify"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-lexify'><code>charlatan::BaseProvider$lexify()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="numerify"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-numerify'><code>charlatan::BaseProvider$numerify()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_digit'><code>charlatan::BaseProvider$random_digit()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_digit_not_zero'><code>charlatan::BaseProvider$random_digit_not_zero()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero_or_empty"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_digit_not_zero_or_empty'><code>charlatan::BaseProvider$random_digit_not_zero_or_empty()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_or_empty"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_digit_or_empty'><code>charlatan::BaseProvider$random_digit_or_empty()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_element"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_element'><code>charlatan::BaseProvider$random_element()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_element_prob"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_element_prob'><code>charlatan::BaseProvider$random_element_prob()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_int"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_int'><code>charlatan::BaseProvider$random_int()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_letter"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_letter'><code>charlatan::BaseProvider$random_letter()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="randomize_nb_elements"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-randomize_nb_elements'><code>charlatan::BaseProvider$randomize_nb_elements()</code></a></span></li>
+</ul>
+</details>
+}}
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-allowed_locales"></a>}}
-\if{latex}{\out{\hypertarget{method-allowed_locales}{}}}
+\if{html}{\out{<a id="method-UserAgentProvider-allowed_locales"></a>}}
+\if{latex}{\out{\hypertarget{method-UserAgentProvider-allowed_locales}{}}}
 \subsection{Method \code{allowed_locales()}}{
 fetch the allowed locales for this provider
 \subsection{Usage}{
@@ -86,8 +86,8 @@ fetch the allowed locales for this provider
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-new"></a>}}
-\if{latex}{\out{\hypertarget{method-new}{}}}
+\if{html}{\out{<a id="method-UserAgentProvider-new"></a>}}
+\if{latex}{\out{\hypertarget{method-UserAgentProvider-new}{}}}
 \subsection{Method \code{new()}}{
 Create a new \code{UserAgentProvider} object
 \subsection{Usage}{
@@ -107,8 +107,8 @@ A new \code{UserAgentProvider} object
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-mac_processor"></a>}}
-\if{latex}{\out{\hypertarget{method-mac_processor}{}}}
+\if{html}{\out{<a id="method-UserAgentProvider-mac_processor"></a>}}
+\if{latex}{\out{\hypertarget{method-UserAgentProvider-mac_processor}{}}}
 \subsection{Method \code{mac_processor()}}{
 a mac processor
 \subsection{Usage}{
@@ -117,8 +117,8 @@ a mac processor
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-linux_processor"></a>}}
-\if{latex}{\out{\hypertarget{method-linux_processor}{}}}
+\if{html}{\out{<a id="method-UserAgentProvider-linux_processor"></a>}}
+\if{latex}{\out{\hypertarget{method-UserAgentProvider-linux_processor}{}}}
 \subsection{Method \code{linux_processor()}}{
 a linux processor
 \subsection{Usage}{
@@ -127,8 +127,8 @@ a linux processor
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-user_agent"></a>}}
-\if{latex}{\out{\hypertarget{method-user_agent}{}}}
+\if{html}{\out{<a id="method-UserAgentProvider-user_agent"></a>}}
+\if{latex}{\out{\hypertarget{method-UserAgentProvider-user_agent}{}}}
 \subsection{Method \code{user_agent()}}{
 a random user agent string
 \subsection{Usage}{
@@ -137,8 +137,8 @@ a random user agent string
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-chrome"></a>}}
-\if{latex}{\out{\hypertarget{method-chrome}{}}}
+\if{html}{\out{<a id="method-UserAgentProvider-chrome"></a>}}
+\if{latex}{\out{\hypertarget{method-UserAgentProvider-chrome}{}}}
 \subsection{Method \code{chrome()}}{
 a chrome user agent string
 \subsection{Usage}{
@@ -165,8 +165,8 @@ a chrome user agent string
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-firefox"></a>}}
-\if{latex}{\out{\hypertarget{method-firefox}{}}}
+\if{html}{\out{<a id="method-UserAgentProvider-firefox"></a>}}
+\if{latex}{\out{\hypertarget{method-UserAgentProvider-firefox}{}}}
 \subsection{Method \code{firefox()}}{
 a firefox user agent string
 \subsection{Usage}{
@@ -175,8 +175,8 @@ a firefox user agent string
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-safari"></a>}}
-\if{latex}{\out{\hypertarget{method-safari}{}}}
+\if{html}{\out{<a id="method-UserAgentProvider-safari"></a>}}
+\if{latex}{\out{\hypertarget{method-UserAgentProvider-safari}{}}}
 \subsection{Method \code{safari()}}{
 a safari user agent string
 \subsection{Usage}{
@@ -185,8 +185,8 @@ a safari user agent string
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-opera"></a>}}
-\if{latex}{\out{\hypertarget{method-opera}{}}}
+\if{html}{\out{<a id="method-UserAgentProvider-opera"></a>}}
+\if{latex}{\out{\hypertarget{method-UserAgentProvider-opera}{}}}
 \subsection{Method \code{opera()}}{
 an opera user agent string
 \subsection{Usage}{
@@ -195,8 +195,8 @@ an opera user agent string
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-internet_explorer"></a>}}
-\if{latex}{\out{\hypertarget{method-internet_explorer}{}}}
+\if{html}{\out{<a id="method-UserAgentProvider-internet_explorer"></a>}}
+\if{latex}{\out{\hypertarget{method-UserAgentProvider-internet_explorer}{}}}
 \subsection{Method \code{internet_explorer()}}{
 an internet explorer user agent string
 \subsection{Usage}{
@@ -205,8 +205,8 @@ an internet explorer user agent string
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-windows_platform_token"></a>}}
-\if{latex}{\out{\hypertarget{method-windows_platform_token}{}}}
+\if{html}{\out{<a id="method-UserAgentProvider-windows_platform_token"></a>}}
+\if{latex}{\out{\hypertarget{method-UserAgentProvider-windows_platform_token}{}}}
 \subsection{Method \code{windows_platform_token()}}{
 a windows platform token
 \subsection{Usage}{
@@ -215,8 +215,8 @@ a windows platform token
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-linux_platform_token"></a>}}
-\if{latex}{\out{\hypertarget{method-linux_platform_token}{}}}
+\if{html}{\out{<a id="method-UserAgentProvider-linux_platform_token"></a>}}
+\if{latex}{\out{\hypertarget{method-UserAgentProvider-linux_platform_token}{}}}
 \subsection{Method \code{linux_platform_token()}}{
 a linux platform token
 \subsection{Usage}{
@@ -225,8 +225,8 @@ a linux platform token
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-mac_platform_token"></a>}}
-\if{latex}{\out{\hypertarget{method-mac_platform_token}{}}}
+\if{html}{\out{<a id="method-UserAgentProvider-mac_platform_token"></a>}}
+\if{latex}{\out{\hypertarget{method-UserAgentProvider-mac_platform_token}{}}}
 \subsection{Method \code{mac_platform_token()}}{
 a mac platform token
 \subsection{Usage}{
@@ -235,8 +235,8 @@ a mac platform token
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-clone"></a>}}
-\if{latex}{\out{\hypertarget{method-clone}{}}}
+\if{html}{\out{<a id="method-UserAgentProvider-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-UserAgentProvider-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

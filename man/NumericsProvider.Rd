@@ -31,37 +31,37 @@ z$beta(10, 1, 1)
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
-\item \href{#method-double}{\code{NumericsProvider$double()}}
-\item \href{#method-integer}{\code{NumericsProvider$integer()}}
-\item \href{#method-unif}{\code{NumericsProvider$unif()}}
-\item \href{#method-norm}{\code{NumericsProvider$norm()}}
-\item \href{#method-lnorm}{\code{NumericsProvider$lnorm()}}
-\item \href{#method-beta}{\code{NumericsProvider$beta()}}
-\item \href{#method-clone}{\code{NumericsProvider$clone()}}
+\item \href{#method-NumericsProvider-double}{\code{NumericsProvider$double()}}
+\item \href{#method-NumericsProvider-integer}{\code{NumericsProvider$integer()}}
+\item \href{#method-NumericsProvider-unif}{\code{NumericsProvider$unif()}}
+\item \href{#method-NumericsProvider-norm}{\code{NumericsProvider$norm()}}
+\item \href{#method-NumericsProvider-lnorm}{\code{NumericsProvider$lnorm()}}
+\item \href{#method-NumericsProvider-beta}{\code{NumericsProvider$beta()}}
+\item \href{#method-NumericsProvider-clone}{\code{NumericsProvider$clone()}}
 }
 }
-\if{html}{
-\out{<details ><summary>Inherited methods</summary>}
-\itemize{
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="bothify">}\href{../../charlatan/html/BaseProvider.html#method-bothify}{\code{charlatan::BaseProvider$bothify()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale">}\href{../../charlatan/html/BaseProvider.html#method-check_locale}{\code{charlatan::BaseProvider$check_locale()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="lexify">}\href{../../charlatan/html/BaseProvider.html#method-lexify}{\code{charlatan::BaseProvider$lexify()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="numerify">}\href{../../charlatan/html/BaseProvider.html#method-numerify}{\code{charlatan::BaseProvider$numerify()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit">}\href{../../charlatan/html/BaseProvider.html#method-random_digit}{\code{charlatan::BaseProvider$random_digit()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_not_zero}{\code{charlatan::BaseProvider$random_digit_not_zero()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero_or_empty">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_not_zero_or_empty}{\code{charlatan::BaseProvider$random_digit_not_zero_or_empty()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_or_empty">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_or_empty}{\code{charlatan::BaseProvider$random_digit_or_empty()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_element">}\href{../../charlatan/html/BaseProvider.html#method-random_element}{\code{charlatan::BaseProvider$random_element()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_element_prob">}\href{../../charlatan/html/BaseProvider.html#method-random_element_prob}{\code{charlatan::BaseProvider$random_element_prob()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_int">}\href{../../charlatan/html/BaseProvider.html#method-random_int}{\code{charlatan::BaseProvider$random_int()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_letter">}\href{../../charlatan/html/BaseProvider.html#method-random_letter}{\code{charlatan::BaseProvider$random_letter()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="randomize_nb_elements">}\href{../../charlatan/html/BaseProvider.html#method-randomize_nb_elements}{\code{charlatan::BaseProvider$randomize_nb_elements()}}\out{</span>}
-}
-\out{</details>}
-}
+\if{html}{\out{
+<details><summary>Inherited methods</summary>
+<ul>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="bothify"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-bothify'><code>charlatan::BaseProvider$bothify()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-check_locale'><code>charlatan::BaseProvider$check_locale()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="lexify"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-lexify'><code>charlatan::BaseProvider$lexify()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="numerify"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-numerify'><code>charlatan::BaseProvider$numerify()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_digit'><code>charlatan::BaseProvider$random_digit()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_digit_not_zero'><code>charlatan::BaseProvider$random_digit_not_zero()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero_or_empty"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_digit_not_zero_or_empty'><code>charlatan::BaseProvider$random_digit_not_zero_or_empty()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_or_empty"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_digit_or_empty'><code>charlatan::BaseProvider$random_digit_or_empty()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_element"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_element'><code>charlatan::BaseProvider$random_element()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_element_prob"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_element_prob'><code>charlatan::BaseProvider$random_element_prob()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_int"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_int'><code>charlatan::BaseProvider$random_int()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_letter"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_letter'><code>charlatan::BaseProvider$random_letter()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="randomize_nb_elements"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-randomize_nb_elements'><code>charlatan::BaseProvider$randomize_nb_elements()</code></a></span></li>
+</ul>
+</details>
+}}
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-double"></a>}}
-\if{latex}{\out{\hypertarget{method-double}{}}}
+\if{html}{\out{<a id="method-NumericsProvider-double"></a>}}
+\if{latex}{\out{\hypertarget{method-NumericsProvider-double}{}}}
 \subsection{Method \code{double()}}{
 get a double, pulls from normal distribution
 \subsection{Usage}{
@@ -81,8 +81,8 @@ get a double, pulls from normal distribution
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-integer"></a>}}
-\if{latex}{\out{\hypertarget{method-integer}{}}}
+\if{html}{\out{<a id="method-NumericsProvider-integer"></a>}}
+\if{latex}{\out{\hypertarget{method-NumericsProvider-integer}{}}}
 \subsection{Method \code{integer()}}{
 get an integer, runs \code{\link[=sample]{sample()}} on range given
 \subsection{Usage}{
@@ -102,8 +102,8 @@ get an integer, runs \code{\link[=sample]{sample()}} on range given
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-unif"></a>}}
-\if{latex}{\out{\hypertarget{method-unif}{}}}
+\if{html}{\out{<a id="method-NumericsProvider-unif"></a>}}
+\if{latex}{\out{\hypertarget{method-NumericsProvider-unif}{}}}
 \subsection{Method \code{unif()}}{
 get numbers from the uniform distribution
 \subsection{Usage}{
@@ -123,8 +123,8 @@ get numbers from the uniform distribution
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-norm"></a>}}
-\if{latex}{\out{\hypertarget{method-norm}{}}}
+\if{html}{\out{<a id="method-NumericsProvider-norm"></a>}}
+\if{latex}{\out{\hypertarget{method-NumericsProvider-norm}{}}}
 \subsection{Method \code{norm()}}{
 get numbers from the normal distribution
 \subsection{Usage}{
@@ -144,8 +144,8 @@ get numbers from the normal distribution
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-lnorm"></a>}}
-\if{latex}{\out{\hypertarget{method-lnorm}{}}}
+\if{html}{\out{<a id="method-NumericsProvider-lnorm"></a>}}
+\if{latex}{\out{\hypertarget{method-NumericsProvider-lnorm}{}}}
 \subsection{Method \code{lnorm()}}{
 get numbers from the lognormal distribution
 \subsection{Usage}{
@@ -165,8 +165,8 @@ get numbers from the lognormal distribution
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-beta"></a>}}
-\if{latex}{\out{\hypertarget{method-beta}{}}}
+\if{html}{\out{<a id="method-NumericsProvider-beta"></a>}}
+\if{latex}{\out{\hypertarget{method-NumericsProvider-beta}{}}}
 \subsection{Method \code{beta()}}{
 get numbers from the beta distribution
 \subsection{Usage}{
@@ -188,8 +188,8 @@ get numbers from the beta distribution
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-clone"></a>}}
-\if{latex}{\out{\hypertarget{method-clone}{}}}
+\if{html}{\out{<a id="method-NumericsProvider-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-NumericsProvider-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

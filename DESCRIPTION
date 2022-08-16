@@ -5,7 +5,7 @@ Description: Make fake data, supporting addresses, person names, dates,
     times, colors, coordinates, currencies, digital object identifiers
     ('DOIs'), jobs, phone numbers, 'DNA' sequences, doubles and integers
     from distributions and within a range.
-Version: 0.4.1.92
+Version: 0.4.1.94
 Authors@R: c(
       person("Scott", "Chamberlain", role = c("aut", "cre"),
         email = "myrmecocystus+r@gmail.com", 
@@ -39,7 +39,7 @@ Suggests:
     rmarkdown,
     ipaddress,
     stringi
-RoxygenNote: 7.1.1
+RoxygenNote: 7.2.1
 Collate: 
     'address-provider-en_GB.R'
     'address-provider-en_NZ.R'

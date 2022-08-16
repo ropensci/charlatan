@@ -54,40 +54,40 @@ LoremProvider$new(locale = "zh_TW")$word()
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
-\item \href{#method-allowed_locales}{\code{LoremProvider$allowed_locales()}}
-\item \href{#method-new}{\code{LoremProvider$new()}}
-\item \href{#method-word}{\code{LoremProvider$word()}}
-\item \href{#method-words}{\code{LoremProvider$words()}}
-\item \href{#method-sentence}{\code{LoremProvider$sentence()}}
-\item \href{#method-sentences}{\code{LoremProvider$sentences()}}
-\item \href{#method-paragraph}{\code{LoremProvider$paragraph()}}
-\item \href{#method-paragraphs}{\code{LoremProvider$paragraphs()}}
-\item \href{#method-text}{\code{LoremProvider$text()}}
-\item \href{#method-clone}{\code{LoremProvider$clone()}}
+\item \href{#method-LoremProvider-allowed_locales}{\code{LoremProvider$allowed_locales()}}
+\item \href{#method-LoremProvider-new}{\code{LoremProvider$new()}}
+\item \href{#method-LoremProvider-word}{\code{LoremProvider$word()}}
+\item \href{#method-LoremProvider-words}{\code{LoremProvider$words()}}
+\item \href{#method-LoremProvider-sentence}{\code{LoremProvider$sentence()}}
+\item \href{#method-LoremProvider-sentences}{\code{LoremProvider$sentences()}}
+\item \href{#method-LoremProvider-paragraph}{\code{LoremProvider$paragraph()}}
+\item \href{#method-LoremProvider-paragraphs}{\code{LoremProvider$paragraphs()}}
+\item \href{#method-LoremProvider-text}{\code{LoremProvider$text()}}
+\item \href{#method-LoremProvider-clone}{\code{LoremProvider$clone()}}
 }
 }
-\if{html}{
-\out{<details ><summary>Inherited methods</summary>}
-\itemize{
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="bothify">}\href{../../charlatan/html/BaseProvider.html#method-bothify}{\code{charlatan::BaseProvider$bothify()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale">}\href{../../charlatan/html/BaseProvider.html#method-check_locale}{\code{charlatan::BaseProvider$check_locale()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="lexify">}\href{../../charlatan/html/BaseProvider.html#method-lexify}{\code{charlatan::BaseProvider$lexify()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="numerify">}\href{../../charlatan/html/BaseProvider.html#method-numerify}{\code{charlatan::BaseProvider$numerify()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit">}\href{../../charlatan/html/BaseProvider.html#method-random_digit}{\code{charlatan::BaseProvider$random_digit()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_not_zero}{\code{charlatan::BaseProvider$random_digit_not_zero()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero_or_empty">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_not_zero_or_empty}{\code{charlatan::BaseProvider$random_digit_not_zero_or_empty()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_or_empty">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_or_empty}{\code{charlatan::BaseProvider$random_digit_or_empty()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_element">}\href{../../charlatan/html/BaseProvider.html#method-random_element}{\code{charlatan::BaseProvider$random_element()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_element_prob">}\href{../../charlatan/html/BaseProvider.html#method-random_element_prob}{\code{charlatan::BaseProvider$random_element_prob()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_int">}\href{../../charlatan/html/BaseProvider.html#method-random_int}{\code{charlatan::BaseProvider$random_int()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_letter">}\href{../../charlatan/html/BaseProvider.html#method-random_letter}{\code{charlatan::BaseProvider$random_letter()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="randomize_nb_elements">}\href{../../charlatan/html/BaseProvider.html#method-randomize_nb_elements}{\code{charlatan::BaseProvider$randomize_nb_elements()}}\out{</span>}
-}
-\out{</details>}
-}
+\if{html}{\out{
+<details><summary>Inherited methods</summary>
+<ul>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="bothify"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-bothify'><code>charlatan::BaseProvider$bothify()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-check_locale'><code>charlatan::BaseProvider$check_locale()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="lexify"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-lexify'><code>charlatan::BaseProvider$lexify()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="numerify"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-numerify'><code>charlatan::BaseProvider$numerify()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_digit'><code>charlatan::BaseProvider$random_digit()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_digit_not_zero'><code>charlatan::BaseProvider$random_digit_not_zero()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero_or_empty"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_digit_not_zero_or_empty'><code>charlatan::BaseProvider$random_digit_not_zero_or_empty()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_or_empty"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_digit_or_empty'><code>charlatan::BaseProvider$random_digit_or_empty()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_element"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_element'><code>charlatan::BaseProvider$random_element()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_element_prob"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_element_prob'><code>charlatan::BaseProvider$random_element_prob()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_int"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_int'><code>charlatan::BaseProvider$random_int()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_letter"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_letter'><code>charlatan::BaseProvider$random_letter()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="randomize_nb_elements"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-randomize_nb_elements'><code>charlatan::BaseProvider$randomize_nb_elements()</code></a></span></li>
+</ul>
+</details>
+}}
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-allowed_locales"></a>}}
-\if{latex}{\out{\hypertarget{method-allowed_locales}{}}}
+\if{html}{\out{<a id="method-LoremProvider-allowed_locales"></a>}}
+\if{latex}{\out{\hypertarget{method-LoremProvider-allowed_locales}{}}}
 \subsection{Method \code{allowed_locales()}}{
 fetch the allowed locales for this provider
 \subsection{Usage}{
@@ -96,8 +96,8 @@ fetch the allowed locales for this provider
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-new"></a>}}
-\if{latex}{\out{\hypertarget{method-new}{}}}
+\if{html}{\out{<a id="method-LoremProvider-new"></a>}}
+\if{latex}{\out{\hypertarget{method-LoremProvider-new}{}}}
 \subsection{Method \code{new()}}{
 Create a new \code{LoremProvider} object
 \subsection{Usage}{
@@ -125,8 +125,8 @@ A new \code{LoremProvider} object
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-word"></a>}}
-\if{latex}{\out{\hypertarget{method-word}{}}}
+\if{html}{\out{<a id="method-LoremProvider-word"></a>}}
+\if{latex}{\out{\hypertarget{method-LoremProvider-word}{}}}
 \subsection{Method \code{word()}}{
 Generate a random word
 \subsection{Usage}{
@@ -146,8 +146,8 @@ a single word
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-words"></a>}}
-\if{latex}{\out{\hypertarget{method-words}{}}}
+\if{html}{\out{<a id="method-LoremProvider-words"></a>}}
+\if{latex}{\out{\hypertarget{method-LoremProvider-words}{}}}
 \subsection{Method \code{words()}}{
 Generate a character vector of random words
 \subsection{Usage}{
@@ -169,8 +169,8 @@ many words
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-sentence"></a>}}
-\if{latex}{\out{\hypertarget{method-sentence}{}}}
+\if{html}{\out{<a id="method-LoremProvider-sentence"></a>}}
+\if{latex}{\out{\hypertarget{method-LoremProvider-sentence}{}}}
 \subsection{Method \code{sentence()}}{
 Generate a random sentence
 \subsection{Usage}{
@@ -201,8 +201,8 @@ a single sentence
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-sentences"></a>}}
-\if{latex}{\out{\hypertarget{method-sentences}{}}}
+\if{html}{\out{<a id="method-LoremProvider-sentences"></a>}}
+\if{latex}{\out{\hypertarget{method-LoremProvider-sentences}{}}}
 \subsection{Method \code{sentences()}}{
 Generate a character vector of random sentences
 \subsection{Usage}{
@@ -224,8 +224,8 @@ many sentences
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-paragraph"></a>}}
-\if{latex}{\out{\hypertarget{method-paragraph}{}}}
+\if{html}{\out{<a id="method-LoremProvider-paragraph"></a>}}
+\if{latex}{\out{\hypertarget{method-LoremProvider-paragraph}{}}}
 \subsection{Method \code{paragraph()}}{
 Generate a single paragraph
 \subsection{Usage}{
@@ -256,8 +256,8 @@ a single paragraph
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-paragraphs"></a>}}
-\if{latex}{\out{\hypertarget{method-paragraphs}{}}}
+\if{html}{\out{<a id="method-LoremProvider-paragraphs"></a>}}
+\if{latex}{\out{\hypertarget{method-LoremProvider-paragraphs}{}}}
 \subsection{Method \code{paragraphs()}}{
 Generate many paragraphs
 \subsection{Usage}{
@@ -279,8 +279,8 @@ many paragraphs
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-text"></a>}}
-\if{latex}{\out{\hypertarget{method-text}{}}}
+\if{html}{\out{<a id="method-LoremProvider-text"></a>}}
+\if{latex}{\out{\hypertarget{method-LoremProvider-text}{}}}
 \subsection{Method \code{text()}}{
 Generate a random text string. Depending on the
 \code{max_nb_chars}, returns a string made of words, sentences, or
@@ -305,8 +305,8 @@ character string of words
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-clone"></a>}}
-\if{latex}{\out{\hypertarget{method-clone}{}}}
+\if{html}{\out{<a id="method-LoremProvider-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-LoremProvider-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

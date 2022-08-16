@@ -17,15 +17,15 @@ z$position(bbox = c(-120, 30, -110, 60))
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
-\item \href{#method-lon}{\code{CoordinateProvider$lon()}}
-\item \href{#method-lat}{\code{CoordinateProvider$lat()}}
-\item \href{#method-position}{\code{CoordinateProvider$position()}}
-\item \href{#method-clone}{\code{CoordinateProvider$clone()}}
+\item \href{#method-CoordinateProvider-lon}{\code{CoordinateProvider$lon()}}
+\item \href{#method-CoordinateProvider-lat}{\code{CoordinateProvider$lat()}}
+\item \href{#method-CoordinateProvider-position}{\code{CoordinateProvider$position()}}
+\item \href{#method-CoordinateProvider-clone}{\code{CoordinateProvider$clone()}}
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-lon"></a>}}
-\if{latex}{\out{\hypertarget{method-lon}{}}}
+\if{html}{\out{<a id="method-CoordinateProvider-lon"></a>}}
+\if{latex}{\out{\hypertarget{method-CoordinateProvider-lon}{}}}
 \subsection{Method \code{lon()}}{
 a latitude value
 \subsection{Usage}{
@@ -34,8 +34,8 @@ a latitude value
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-lat"></a>}}
-\if{latex}{\out{\hypertarget{method-lat}{}}}
+\if{html}{\out{<a id="method-CoordinateProvider-lat"></a>}}
+\if{latex}{\out{\hypertarget{method-CoordinateProvider-lat}{}}}
 \subsection{Method \code{lat()}}{
 a longitude value
 \subsection{Usage}{
@@ -44,8 +44,8 @@ a longitude value
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-position"></a>}}
-\if{latex}{\out{\hypertarget{method-position}{}}}
+\if{html}{\out{<a id="method-CoordinateProvider-position"></a>}}
+\if{latex}{\out{\hypertarget{method-CoordinateProvider-position}{}}}
 \subsection{Method \code{position()}}{
 a position, of form \verb{[longitude,latitude]}
 \subsection{Usage}{
@@ -63,8 +63,8 @@ bbox has valid values for lat and long}
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-clone"></a>}}
-\if{latex}{\out{\hypertarget{method-clone}{}}}
+\if{html}{\out{<a id="method-CoordinateProvider-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-CoordinateProvider-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

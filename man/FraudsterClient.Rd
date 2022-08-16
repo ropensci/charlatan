@@ -17,44 +17,44 @@ Fraudster R6 client
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
-\item \href{#method-new}{\code{FraudsterClient$new()}}
-\item \href{#method-print}{\code{FraudsterClient$print()}}
-\item \href{#method-job}{\code{FraudsterClient$job()}}
-\item \href{#method-name}{\code{FraudsterClient$name()}}
-\item \href{#method-color_name}{\code{FraudsterClient$color_name()}}
-\item \href{#method-safe_color_name}{\code{FraudsterClient$safe_color_name()}}
-\item \href{#method-hex_color}{\code{FraudsterClient$hex_color()}}
-\item \href{#method-safe_hex_color}{\code{FraudsterClient$safe_hex_color()}}
-\item \href{#method-rgb_color}{\code{FraudsterClient$rgb_color()}}
-\item \href{#method-rgb_css_color}{\code{FraudsterClient$rgb_css_color()}}
-\item \href{#method-lat}{\code{FraudsterClient$lat()}}
-\item \href{#method-lon}{\code{FraudsterClient$lon()}}
-\item \href{#method-position}{\code{FraudsterClient$position()}}
-\item \href{#method-doi}{\code{FraudsterClient$doi()}}
-\item \href{#method-timezone}{\code{FraudsterClient$timezone()}}
-\item \href{#method-unix_time}{\code{FraudsterClient$unix_time()}}
-\item \href{#method-date_time}{\code{FraudsterClient$date_time()}}
-\item \href{#method-genus}{\code{FraudsterClient$genus()}}
-\item \href{#method-epithet}{\code{FraudsterClient$epithet()}}
-\item \href{#method-species}{\code{FraudsterClient$species()}}
-\item \href{#method-sequence}{\code{FraudsterClient$sequence()}}
-\item \href{#method-phone_number}{\code{FraudsterClient$phone_number()}}
-\item \href{#method-double}{\code{FraudsterClient$double()}}
-\item \href{#method-integer}{\code{FraudsterClient$integer()}}
-\item \href{#method-uniform}{\code{FraudsterClient$uniform()}}
-\item \href{#method-norm}{\code{FraudsterClient$norm()}}
-\item \href{#method-lnorm}{\code{FraudsterClient$lnorm()}}
-\item \href{#method-beta}{\code{FraudsterClient$beta()}}
-\item \href{#method-currency}{\code{FraudsterClient$currency()}}
-\item \href{#method-credit_card_provider}{\code{FraudsterClient$credit_card_provider()}}
-\item \href{#method-credit_card_number}{\code{FraudsterClient$credit_card_number()}}
-\item \href{#method-credit_card_security_code}{\code{FraudsterClient$credit_card_security_code()}}
-\item \href{#method-clone}{\code{FraudsterClient$clone()}}
+\item \href{#method-FraudsterClient-new}{\code{FraudsterClient$new()}}
+\item \href{#method-FraudsterClient-print}{\code{FraudsterClient$print()}}
+\item \href{#method-FraudsterClient-job}{\code{FraudsterClient$job()}}
+\item \href{#method-FraudsterClient-name}{\code{FraudsterClient$name()}}
+\item \href{#method-FraudsterClient-color_name}{\code{FraudsterClient$color_name()}}
+\item \href{#method-FraudsterClient-safe_color_name}{\code{FraudsterClient$safe_color_name()}}
+\item \href{#method-FraudsterClient-hex_color}{\code{FraudsterClient$hex_color()}}
+\item \href{#method-FraudsterClient-safe_hex_color}{\code{FraudsterClient$safe_hex_color()}}
+\item \href{#method-FraudsterClient-rgb_color}{\code{FraudsterClient$rgb_color()}}
+\item \href{#method-FraudsterClient-rgb_css_color}{\code{FraudsterClient$rgb_css_color()}}
+\item \href{#method-FraudsterClient-lat}{\code{FraudsterClient$lat()}}
+\item \href{#method-FraudsterClient-lon}{\code{FraudsterClient$lon()}}
+\item \href{#method-FraudsterClient-position}{\code{FraudsterClient$position()}}
+\item \href{#method-FraudsterClient-doi}{\code{FraudsterClient$doi()}}
+\item \href{#method-FraudsterClient-timezone}{\code{FraudsterClient$timezone()}}
+\item \href{#method-FraudsterClient-unix_time}{\code{FraudsterClient$unix_time()}}
+\item \href{#method-FraudsterClient-date_time}{\code{FraudsterClient$date_time()}}
+\item \href{#method-FraudsterClient-genus}{\code{FraudsterClient$genus()}}
+\item \href{#method-FraudsterClient-epithet}{\code{FraudsterClient$epithet()}}
+\item \href{#method-FraudsterClient-species}{\code{FraudsterClient$species()}}
+\item \href{#method-FraudsterClient-sequence}{\code{FraudsterClient$sequence()}}
+\item \href{#method-FraudsterClient-phone_number}{\code{FraudsterClient$phone_number()}}
+\item \href{#method-FraudsterClient-double}{\code{FraudsterClient$double()}}
+\item \href{#method-FraudsterClient-integer}{\code{FraudsterClient$integer()}}
+\item \href{#method-FraudsterClient-uniform}{\code{FraudsterClient$uniform()}}
+\item \href{#method-FraudsterClient-norm}{\code{FraudsterClient$norm()}}
+\item \href{#method-FraudsterClient-lnorm}{\code{FraudsterClient$lnorm()}}
+\item \href{#method-FraudsterClient-beta}{\code{FraudsterClient$beta()}}
+\item \href{#method-FraudsterClient-currency}{\code{FraudsterClient$currency()}}
+\item \href{#method-FraudsterClient-credit_card_provider}{\code{FraudsterClient$credit_card_provider()}}
+\item \href{#method-FraudsterClient-credit_card_number}{\code{FraudsterClient$credit_card_number()}}
+\item \href{#method-FraudsterClient-credit_card_security_code}{\code{FraudsterClient$credit_card_security_code()}}
+\item \href{#method-FraudsterClient-clone}{\code{FraudsterClient$clone()}}
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-new"></a>}}
-\if{latex}{\out{\hypertarget{method-new}{}}}
+\if{html}{\out{<a id="method-FraudsterClient-new"></a>}}
+\if{latex}{\out{\hypertarget{method-FraudsterClient-new}{}}}
 \subsection{Method \code{new()}}{
 Create a new \code{FraudsterClient} object
 \subsection{Usage}{
@@ -74,8 +74,8 @@ A new \code{RequestSignature} object
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-print"></a>}}
-\if{latex}{\out{\hypertarget{method-print}{}}}
+\if{html}{\out{<a id="method-FraudsterClient-print"></a>}}
+\if{latex}{\out{\hypertarget{method-FraudsterClient-print}{}}}
 \subsection{Method \code{print()}}{
 print method for the \code{FraudsterClient} class
 \subsection{Usage}{
@@ -93,8 +93,8 @@ print method for the \code{FraudsterClient} class
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-job"></a>}}
-\if{latex}{\out{\hypertarget{method-job}{}}}
+\if{html}{\out{<a id="method-FraudsterClient-job"></a>}}
+\if{latex}{\out{\hypertarget{method-FraudsterClient-job}{}}}
 \subsection{Method \code{job()}}{
 jobs
 \subsection{Usage}{
@@ -110,8 +110,8 @@ jobs
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-name"></a>}}
-\if{latex}{\out{\hypertarget{method-name}{}}}
+\if{html}{\out{<a id="method-FraudsterClient-name"></a>}}
+\if{latex}{\out{\hypertarget{method-FraudsterClient-name}{}}}
 \subsection{Method \code{name()}}{
 names
 \subsection{Usage}{
@@ -127,8 +127,8 @@ names
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-color_name"></a>}}
-\if{latex}{\out{\hypertarget{method-color_name}{}}}
+\if{html}{\out{<a id="method-FraudsterClient-color_name"></a>}}
+\if{latex}{\out{\hypertarget{method-FraudsterClient-color_name}{}}}
 \subsection{Method \code{color_name()}}{
 colors
 \subsection{Usage}{
@@ -144,8 +144,8 @@ colors
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-safe_color_name"></a>}}
-\if{latex}{\out{\hypertarget{method-safe_color_name}{}}}
+\if{html}{\out{<a id="method-FraudsterClient-safe_color_name"></a>}}
+\if{latex}{\out{\hypertarget{method-FraudsterClient-safe_color_name}{}}}
 \subsection{Method \code{safe_color_name()}}{
 safe color name
 \subsection{Usage}{
@@ -161,8 +161,8 @@ safe color name
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-hex_color"></a>}}
-\if{latex}{\out{\hypertarget{method-hex_color}{}}}
+\if{html}{\out{<a id="method-FraudsterClient-hex_color"></a>}}
+\if{latex}{\out{\hypertarget{method-FraudsterClient-hex_color}{}}}
 \subsection{Method \code{hex_color()}}{
 hex color
 \subsection{Usage}{
@@ -178,8 +178,8 @@ hex color
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-safe_hex_color"></a>}}
-\if{latex}{\out{\hypertarget{method-safe_hex_color}{}}}
+\if{html}{\out{<a id="method-FraudsterClient-safe_hex_color"></a>}}
+\if{latex}{\out{\hypertarget{method-FraudsterClient-safe_hex_color}{}}}
 \subsection{Method \code{safe_hex_color()}}{
 safe hex color
 \subsection{Usage}{
@@ -195,8 +195,8 @@ safe hex color
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-rgb_color"></a>}}
-\if{latex}{\out{\hypertarget{method-rgb_color}{}}}
+\if{html}{\out{<a id="method-FraudsterClient-rgb_color"></a>}}
+\if{latex}{\out{\hypertarget{method-FraudsterClient-rgb_color}{}}}
 \subsection{Method \code{rgb_color()}}{
 rgb color
 \subsection{Usage}{
@@ -212,8 +212,8 @@ rgb color
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-rgb_css_color"></a>}}
-\if{latex}{\out{\hypertarget{method-rgb_css_color}{}}}
+\if{html}{\out{<a id="method-FraudsterClient-rgb_css_color"></a>}}
+\if{latex}{\out{\hypertarget{method-FraudsterClient-rgb_css_color}{}}}
 \subsection{Method \code{rgb_css_color()}}{
 rgb css color
 \subsection{Usage}{
@@ -229,8 +229,8 @@ rgb css color
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-lat"></a>}}
-\if{latex}{\out{\hypertarget{method-lat}{}}}
+\if{html}{\out{<a id="method-FraudsterClient-lat"></a>}}
+\if{latex}{\out{\hypertarget{method-FraudsterClient-lat}{}}}
 \subsection{Method \code{lat()}}{
 latitude
 \subsection{Usage}{
@@ -246,8 +246,8 @@ latitude
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-lon"></a>}}
-\if{latex}{\out{\hypertarget{method-lon}{}}}
+\if{html}{\out{<a id="method-FraudsterClient-lon"></a>}}
+\if{latex}{\out{\hypertarget{method-FraudsterClient-lon}{}}}
 \subsection{Method \code{lon()}}{
 longitude
 \subsection{Usage}{
@@ -263,8 +263,8 @@ longitude
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-position"></a>}}
-\if{latex}{\out{\hypertarget{method-position}{}}}
+\if{html}{\out{<a id="method-FraudsterClient-position"></a>}}
+\if{latex}{\out{\hypertarget{method-FraudsterClient-position}{}}}
 \subsection{Method \code{position()}}{
 long/lat coordinate pair
 \subsection{Usage}{
@@ -282,8 +282,8 @@ long/lat coordinate pair
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-doi"></a>}}
-\if{latex}{\out{\hypertarget{method-doi}{}}}
+\if{html}{\out{<a id="method-FraudsterClient-doi"></a>}}
+\if{latex}{\out{\hypertarget{method-FraudsterClient-doi}{}}}
 \subsection{Method \code{doi()}}{
 DOIs
 \subsection{Usage}{
@@ -299,8 +299,8 @@ DOIs
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-timezone"></a>}}
-\if{latex}{\out{\hypertarget{method-timezone}{}}}
+\if{html}{\out{<a id="method-FraudsterClient-timezone"></a>}}
+\if{latex}{\out{\hypertarget{method-FraudsterClient-timezone}{}}}
 \subsection{Method \code{timezone()}}{
 date times
 \subsection{Usage}{
@@ -316,8 +316,8 @@ date times
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-unix_time"></a>}}
-\if{latex}{\out{\hypertarget{method-unix_time}{}}}
+\if{html}{\out{<a id="method-FraudsterClient-unix_time"></a>}}
+\if{latex}{\out{\hypertarget{method-FraudsterClient-unix_time}{}}}
 \subsection{Method \code{unix_time()}}{
 unix time
 \subsection{Usage}{
@@ -333,8 +333,8 @@ unix time
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-date_time"></a>}}
-\if{latex}{\out{\hypertarget{method-date_time}{}}}
+\if{html}{\out{<a id="method-FraudsterClient-date_time"></a>}}
+\if{latex}{\out{\hypertarget{method-FraudsterClient-date_time}{}}}
 \subsection{Method \code{date_time()}}{
 date time
 \subsection{Usage}{
@@ -350,8 +350,8 @@ date time
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-genus"></a>}}
-\if{latex}{\out{\hypertarget{method-genus}{}}}
+\if{html}{\out{<a id="method-FraudsterClient-genus"></a>}}
+\if{latex}{\out{\hypertarget{method-FraudsterClient-genus}{}}}
 \subsection{Method \code{genus()}}{
 taxonomic genus
 \subsection{Usage}{
@@ -367,8 +367,8 @@ taxonomic genus
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-epithet"></a>}}
-\if{latex}{\out{\hypertarget{method-epithet}{}}}
+\if{html}{\out{<a id="method-FraudsterClient-epithet"></a>}}
+\if{latex}{\out{\hypertarget{method-FraudsterClient-epithet}{}}}
 \subsection{Method \code{epithet()}}{
 taxonomic epithet
 \subsection{Usage}{
@@ -384,8 +384,8 @@ taxonomic epithet
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-species"></a>}}
-\if{latex}{\out{\hypertarget{method-species}{}}}
+\if{html}{\out{<a id="method-FraudsterClient-species"></a>}}
+\if{latex}{\out{\hypertarget{method-FraudsterClient-species}{}}}
 \subsection{Method \code{species()}}{
 taxonomic species (genus + epithet)
 \subsection{Usage}{
@@ -401,8 +401,8 @@ taxonomic species (genus + epithet)
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-sequence"></a>}}
-\if{latex}{\out{\hypertarget{method-sequence}{}}}
+\if{html}{\out{<a id="method-FraudsterClient-sequence"></a>}}
+\if{latex}{\out{\hypertarget{method-FraudsterClient-sequence}{}}}
 \subsection{Method \code{sequence()}}{
 random genetic sequence
 \subsection{Usage}{
@@ -420,8 +420,8 @@ random genetic sequence
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-phone_number"></a>}}
-\if{latex}{\out{\hypertarget{method-phone_number}{}}}
+\if{html}{\out{<a id="method-FraudsterClient-phone_number"></a>}}
+\if{latex}{\out{\hypertarget{method-FraudsterClient-phone_number}{}}}
 \subsection{Method \code{phone_number()}}{
 phone number
 \subsection{Usage}{
@@ -437,8 +437,8 @@ phone number
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-double"></a>}}
-\if{latex}{\out{\hypertarget{method-double}{}}}
+\if{html}{\out{<a id="method-FraudsterClient-double"></a>}}
+\if{latex}{\out{\hypertarget{method-FraudsterClient-double}{}}}
 \subsection{Method \code{double()}}{
 a double
 \subsection{Usage}{
@@ -458,8 +458,8 @@ a double
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-integer"></a>}}
-\if{latex}{\out{\hypertarget{method-integer}{}}}
+\if{html}{\out{<a id="method-FraudsterClient-integer"></a>}}
+\if{latex}{\out{\hypertarget{method-FraudsterClient-integer}{}}}
 \subsection{Method \code{integer()}}{
 an integer
 \subsection{Usage}{
@@ -479,8 +479,8 @@ an integer
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-uniform"></a>}}
-\if{latex}{\out{\hypertarget{method-uniform}{}}}
+\if{html}{\out{<a id="method-FraudsterClient-uniform"></a>}}
+\if{latex}{\out{\hypertarget{method-FraudsterClient-uniform}{}}}
 \subsection{Method \code{uniform()}}{
 an integer from a uniform distribution
 \subsection{Usage}{
@@ -500,8 +500,8 @@ an integer from a uniform distribution
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-norm"></a>}}
-\if{latex}{\out{\hypertarget{method-norm}{}}}
+\if{html}{\out{<a id="method-FraudsterClient-norm"></a>}}
+\if{latex}{\out{\hypertarget{method-FraudsterClient-norm}{}}}
 \subsection{Method \code{norm()}}{
 an integer from a normal distribution
 \subsection{Usage}{
@@ -521,8 +521,8 @@ an integer from a normal distribution
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-lnorm"></a>}}
-\if{latex}{\out{\hypertarget{method-lnorm}{}}}
+\if{html}{\out{<a id="method-FraudsterClient-lnorm"></a>}}
+\if{latex}{\out{\hypertarget{method-FraudsterClient-lnorm}{}}}
 \subsection{Method \code{lnorm()}}{
 an integer from a lognormal distribution
 \subsection{Usage}{
@@ -542,8 +542,8 @@ an integer from a lognormal distribution
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-beta"></a>}}
-\if{latex}{\out{\hypertarget{method-beta}{}}}
+\if{html}{\out{<a id="method-FraudsterClient-beta"></a>}}
+\if{latex}{\out{\hypertarget{method-FraudsterClient-beta}{}}}
 \subsection{Method \code{beta()}}{
 an integer from a beta distribution
 \subsection{Usage}{
@@ -565,8 +565,8 @@ an integer from a beta distribution
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-currency"></a>}}
-\if{latex}{\out{\hypertarget{method-currency}{}}}
+\if{html}{\out{<a id="method-FraudsterClient-currency"></a>}}
+\if{latex}{\out{\hypertarget{method-FraudsterClient-currency}{}}}
 \subsection{Method \code{currency()}}{
 currency
 \subsection{Usage}{
@@ -582,8 +582,8 @@ currency
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-credit_card_provider"></a>}}
-\if{latex}{\out{\hypertarget{method-credit_card_provider}{}}}
+\if{html}{\out{<a id="method-FraudsterClient-credit_card_provider"></a>}}
+\if{latex}{\out{\hypertarget{method-FraudsterClient-credit_card_provider}{}}}
 \subsection{Method \code{credit_card_provider()}}{
 credit card provider
 \subsection{Usage}{
@@ -599,8 +599,8 @@ credit card provider
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-credit_card_number"></a>}}
-\if{latex}{\out{\hypertarget{method-credit_card_number}{}}}
+\if{html}{\out{<a id="method-FraudsterClient-credit_card_number"></a>}}
+\if{latex}{\out{\hypertarget{method-FraudsterClient-credit_card_number}{}}}
 \subsection{Method \code{credit_card_number()}}{
 credit card number
 \subsection{Usage}{
@@ -616,8 +616,8 @@ credit card number
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-credit_card_security_code"></a>}}
-\if{latex}{\out{\hypertarget{method-credit_card_security_code}{}}}
+\if{html}{\out{<a id="method-FraudsterClient-credit_card_security_code"></a>}}
+\if{latex}{\out{\hypertarget{method-FraudsterClient-credit_card_security_code}{}}}
 \subsection{Method \code{credit_card_security_code()}}{
 credit card security code
 \subsection{Usage}{
@@ -633,8 +633,8 @@ credit card security code
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-clone"></a>}}
-\if{latex}{\out{\hypertarget{method-clone}{}}}
+\if{html}{\out{<a id="method-FraudsterClient-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-FraudsterClient-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

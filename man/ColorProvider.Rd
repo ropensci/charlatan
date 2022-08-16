@@ -39,39 +39,39 @@ x$safe_color_name()
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
-\item \href{#method-allowed_locales}{\code{ColorProvider$allowed_locales()}}
-\item \href{#method-new}{\code{ColorProvider$new()}}
-\item \href{#method-color_name}{\code{ColorProvider$color_name()}}
-\item \href{#method-safe_color_name}{\code{ColorProvider$safe_color_name()}}
-\item \href{#method-hex_color}{\code{ColorProvider$hex_color()}}
-\item \href{#method-safe_hex_color}{\code{ColorProvider$safe_hex_color()}}
-\item \href{#method-rgb_color}{\code{ColorProvider$rgb_color()}}
-\item \href{#method-rgb_css_color}{\code{ColorProvider$rgb_css_color()}}
-\item \href{#method-clone}{\code{ColorProvider$clone()}}
+\item \href{#method-ColorProvider-allowed_locales}{\code{ColorProvider$allowed_locales()}}
+\item \href{#method-ColorProvider-new}{\code{ColorProvider$new()}}
+\item \href{#method-ColorProvider-color_name}{\code{ColorProvider$color_name()}}
+\item \href{#method-ColorProvider-safe_color_name}{\code{ColorProvider$safe_color_name()}}
+\item \href{#method-ColorProvider-hex_color}{\code{ColorProvider$hex_color()}}
+\item \href{#method-ColorProvider-safe_hex_color}{\code{ColorProvider$safe_hex_color()}}
+\item \href{#method-ColorProvider-rgb_color}{\code{ColorProvider$rgb_color()}}
+\item \href{#method-ColorProvider-rgb_css_color}{\code{ColorProvider$rgb_css_color()}}
+\item \href{#method-ColorProvider-clone}{\code{ColorProvider$clone()}}
 }
 }
-\if{html}{
-\out{<details ><summary>Inherited methods</summary>}
-\itemize{
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="bothify">}\href{../../charlatan/html/BaseProvider.html#method-bothify}{\code{charlatan::BaseProvider$bothify()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale">}\href{../../charlatan/html/BaseProvider.html#method-check_locale}{\code{charlatan::BaseProvider$check_locale()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="lexify">}\href{../../charlatan/html/BaseProvider.html#method-lexify}{\code{charlatan::BaseProvider$lexify()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="numerify">}\href{../../charlatan/html/BaseProvider.html#method-numerify}{\code{charlatan::BaseProvider$numerify()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit">}\href{../../charlatan/html/BaseProvider.html#method-random_digit}{\code{charlatan::BaseProvider$random_digit()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_not_zero}{\code{charlatan::BaseProvider$random_digit_not_zero()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero_or_empty">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_not_zero_or_empty}{\code{charlatan::BaseProvider$random_digit_not_zero_or_empty()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_or_empty">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_or_empty}{\code{charlatan::BaseProvider$random_digit_or_empty()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_element">}\href{../../charlatan/html/BaseProvider.html#method-random_element}{\code{charlatan::BaseProvider$random_element()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_element_prob">}\href{../../charlatan/html/BaseProvider.html#method-random_element_prob}{\code{charlatan::BaseProvider$random_element_prob()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_int">}\href{../../charlatan/html/BaseProvider.html#method-random_int}{\code{charlatan::BaseProvider$random_int()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_letter">}\href{../../charlatan/html/BaseProvider.html#method-random_letter}{\code{charlatan::BaseProvider$random_letter()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="randomize_nb_elements">}\href{../../charlatan/html/BaseProvider.html#method-randomize_nb_elements}{\code{charlatan::BaseProvider$randomize_nb_elements()}}\out{</span>}
-}
-\out{</details>}
-}
+\if{html}{\out{
+<details><summary>Inherited methods</summary>
+<ul>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="bothify"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-bothify'><code>charlatan::BaseProvider$bothify()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-check_locale'><code>charlatan::BaseProvider$check_locale()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="lexify"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-lexify'><code>charlatan::BaseProvider$lexify()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="numerify"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-numerify'><code>charlatan::BaseProvider$numerify()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_digit'><code>charlatan::BaseProvider$random_digit()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_digit_not_zero'><code>charlatan::BaseProvider$random_digit_not_zero()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero_or_empty"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_digit_not_zero_or_empty'><code>charlatan::BaseProvider$random_digit_not_zero_or_empty()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_or_empty"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_digit_or_empty'><code>charlatan::BaseProvider$random_digit_or_empty()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_element"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_element'><code>charlatan::BaseProvider$random_element()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_element_prob"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_element_prob'><code>charlatan::BaseProvider$random_element_prob()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_int"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_int'><code>charlatan::BaseProvider$random_int()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_letter"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_letter'><code>charlatan::BaseProvider$random_letter()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="randomize_nb_elements"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-randomize_nb_elements'><code>charlatan::BaseProvider$randomize_nb_elements()</code></a></span></li>
+</ul>
+</details>
+}}
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-allowed_locales"></a>}}
-\if{latex}{\out{\hypertarget{method-allowed_locales}{}}}
+\if{html}{\out{<a id="method-ColorProvider-allowed_locales"></a>}}
+\if{latex}{\out{\hypertarget{method-ColorProvider-allowed_locales}{}}}
 \subsection{Method \code{allowed_locales()}}{
 fetch the allowed locales for this provider
 \subsection{Usage}{
@@ -80,8 +80,8 @@ fetch the allowed locales for this provider
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-new"></a>}}
-\if{latex}{\out{\hypertarget{method-new}{}}}
+\if{html}{\out{<a id="method-ColorProvider-new"></a>}}
+\if{latex}{\out{\hypertarget{method-ColorProvider-new}{}}}
 \subsection{Method \code{new()}}{
 Create a new \code{ColorProvider} object
 \subsection{Usage}{
@@ -101,8 +101,8 @@ A new \code{ColorProvider} object
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-color_name"></a>}}
-\if{latex}{\out{\hypertarget{method-color_name}{}}}
+\if{html}{\out{<a id="method-ColorProvider-color_name"></a>}}
+\if{latex}{\out{\hypertarget{method-ColorProvider-color_name}{}}}
 \subsection{Method \code{color_name()}}{
 color name
 \subsection{Usage}{
@@ -111,8 +111,8 @@ color name
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-safe_color_name"></a>}}
-\if{latex}{\out{\hypertarget{method-safe_color_name}{}}}
+\if{html}{\out{<a id="method-ColorProvider-safe_color_name"></a>}}
+\if{latex}{\out{\hypertarget{method-ColorProvider-safe_color_name}{}}}
 \subsection{Method \code{safe_color_name()}}{
 safe color name
 \subsection{Usage}{
@@ -121,8 +121,8 @@ safe color name
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-hex_color"></a>}}
-\if{latex}{\out{\hypertarget{method-hex_color}{}}}
+\if{html}{\out{<a id="method-ColorProvider-hex_color"></a>}}
+\if{latex}{\out{\hypertarget{method-ColorProvider-hex_color}{}}}
 \subsection{Method \code{hex_color()}}{
 hex color
 \subsection{Usage}{
@@ -131,8 +131,8 @@ hex color
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-safe_hex_color"></a>}}
-\if{latex}{\out{\hypertarget{method-safe_hex_color}{}}}
+\if{html}{\out{<a id="method-ColorProvider-safe_hex_color"></a>}}
+\if{latex}{\out{\hypertarget{method-ColorProvider-safe_hex_color}{}}}
 \subsection{Method \code{safe_hex_color()}}{
 safe hex color
 \subsection{Usage}{
@@ -141,8 +141,8 @@ safe hex color
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-rgb_color"></a>}}
-\if{latex}{\out{\hypertarget{method-rgb_color}{}}}
+\if{html}{\out{<a id="method-ColorProvider-rgb_color"></a>}}
+\if{latex}{\out{\hypertarget{method-ColorProvider-rgb_color}{}}}
 \subsection{Method \code{rgb_color()}}{
 RGB color
 \subsection{Usage}{
@@ -151,8 +151,8 @@ RGB color
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-rgb_css_color"></a>}}
-\if{latex}{\out{\hypertarget{method-rgb_css_color}{}}}
+\if{html}{\out{<a id="method-ColorProvider-rgb_css_color"></a>}}
+\if{latex}{\out{\hypertarget{method-ColorProvider-rgb_css_color}{}}}
 \subsection{Method \code{rgb_css_color()}}{
 RGB CSS color
 \subsection{Usage}{
@@ -161,8 +161,8 @@ RGB CSS color
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-clone"></a>}}
-\if{latex}{\out{\hypertarget{method-clone}{}}}
+\if{html}{\out{<a id="method-ColorProvider-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-ColorProvider-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

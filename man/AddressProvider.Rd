@@ -100,43 +100,43 @@ z$city()
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
-\item \href{#method-allowed_locales}{\code{AddressProvider$allowed_locales()}}
-\item \href{#method-new}{\code{AddressProvider$new()}}
-\item \href{#method-city_suffix}{\code{AddressProvider$city_suffix()}}
-\item \href{#method-street_suffix}{\code{AddressProvider$street_suffix()}}
-\item \href{#method-building_number}{\code{AddressProvider$building_number()}}
-\item \href{#method-city}{\code{AddressProvider$city()}}
-\item \href{#method-street_name}{\code{AddressProvider$street_name()}}
-\item \href{#method-street_address}{\code{AddressProvider$street_address()}}
-\item \href{#method-postcode}{\code{AddressProvider$postcode()}}
-\item \href{#method-address}{\code{AddressProvider$address()}}
-\item \href{#method-country}{\code{AddressProvider$country()}}
-\item \href{#method-country_code}{\code{AddressProvider$country_code()}}
-\item \href{#method-clone}{\code{AddressProvider$clone()}}
+\item \href{#method-AddressProvider-allowed_locales}{\code{AddressProvider$allowed_locales()}}
+\item \href{#method-AddressProvider-new}{\code{AddressProvider$new()}}
+\item \href{#method-AddressProvider-city_suffix}{\code{AddressProvider$city_suffix()}}
+\item \href{#method-AddressProvider-street_suffix}{\code{AddressProvider$street_suffix()}}
+\item \href{#method-AddressProvider-building_number}{\code{AddressProvider$building_number()}}
+\item \href{#method-AddressProvider-city}{\code{AddressProvider$city()}}
+\item \href{#method-AddressProvider-street_name}{\code{AddressProvider$street_name()}}
+\item \href{#method-AddressProvider-street_address}{\code{AddressProvider$street_address()}}
+\item \href{#method-AddressProvider-postcode}{\code{AddressProvider$postcode()}}
+\item \href{#method-AddressProvider-address}{\code{AddressProvider$address()}}
+\item \href{#method-AddressProvider-country}{\code{AddressProvider$country()}}
+\item \href{#method-AddressProvider-country_code}{\code{AddressProvider$country_code()}}
+\item \href{#method-AddressProvider-clone}{\code{AddressProvider$clone()}}
 }
 }
-\if{html}{
-\out{<details ><summary>Inherited methods</summary>}
-\itemize{
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="bothify">}\href{../../charlatan/html/BaseProvider.html#method-bothify}{\code{charlatan::BaseProvider$bothify()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale">}\href{../../charlatan/html/BaseProvider.html#method-check_locale}{\code{charlatan::BaseProvider$check_locale()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="lexify">}\href{../../charlatan/html/BaseProvider.html#method-lexify}{\code{charlatan::BaseProvider$lexify()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="numerify">}\href{../../charlatan/html/BaseProvider.html#method-numerify}{\code{charlatan::BaseProvider$numerify()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit">}\href{../../charlatan/html/BaseProvider.html#method-random_digit}{\code{charlatan::BaseProvider$random_digit()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_not_zero}{\code{charlatan::BaseProvider$random_digit_not_zero()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero_or_empty">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_not_zero_or_empty}{\code{charlatan::BaseProvider$random_digit_not_zero_or_empty()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_or_empty">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_or_empty}{\code{charlatan::BaseProvider$random_digit_or_empty()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_element">}\href{../../charlatan/html/BaseProvider.html#method-random_element}{\code{charlatan::BaseProvider$random_element()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_element_prob">}\href{../../charlatan/html/BaseProvider.html#method-random_element_prob}{\code{charlatan::BaseProvider$random_element_prob()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_int">}\href{../../charlatan/html/BaseProvider.html#method-random_int}{\code{charlatan::BaseProvider$random_int()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_letter">}\href{../../charlatan/html/BaseProvider.html#method-random_letter}{\code{charlatan::BaseProvider$random_letter()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="randomize_nb_elements">}\href{../../charlatan/html/BaseProvider.html#method-randomize_nb_elements}{\code{charlatan::BaseProvider$randomize_nb_elements()}}\out{</span>}
-}
-\out{</details>}
-}
+\if{html}{\out{
+<details><summary>Inherited methods</summary>
+<ul>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="bothify"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-bothify'><code>charlatan::BaseProvider$bothify()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-check_locale'><code>charlatan::BaseProvider$check_locale()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="lexify"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-lexify'><code>charlatan::BaseProvider$lexify()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="numerify"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-numerify'><code>charlatan::BaseProvider$numerify()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_digit'><code>charlatan::BaseProvider$random_digit()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_digit_not_zero'><code>charlatan::BaseProvider$random_digit_not_zero()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero_or_empty"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_digit_not_zero_or_empty'><code>charlatan::BaseProvider$random_digit_not_zero_or_empty()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_or_empty"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_digit_or_empty'><code>charlatan::BaseProvider$random_digit_or_empty()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_element"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_element'><code>charlatan::BaseProvider$random_element()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_element_prob"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_element_prob'><code>charlatan::BaseProvider$random_element_prob()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_int"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_int'><code>charlatan::BaseProvider$random_int()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_letter"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_letter'><code>charlatan::BaseProvider$random_letter()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="randomize_nb_elements"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-randomize_nb_elements'><code>charlatan::BaseProvider$randomize_nb_elements()</code></a></span></li>
+</ul>
+</details>
+}}
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-allowed_locales"></a>}}
-\if{latex}{\out{\hypertarget{method-allowed_locales}{}}}
+\if{html}{\out{<a id="method-AddressProvider-allowed_locales"></a>}}
+\if{latex}{\out{\hypertarget{method-AddressProvider-allowed_locales}{}}}
 \subsection{Method \code{allowed_locales()}}{
 fetch the allowed locales for this provider
 \subsection{Usage}{
@@ -145,8 +145,8 @@ fetch the allowed locales for this provider
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-new"></a>}}
-\if{latex}{\out{\hypertarget{method-new}{}}}
+\if{html}{\out{<a id="method-AddressProvider-new"></a>}}
+\if{latex}{\out{\hypertarget{method-AddressProvider-new}{}}}
 \subsection{Method \code{new()}}{
 Create a new \code{AddressProvider} object
 \subsection{Usage}{
@@ -166,8 +166,8 @@ A new \code{AddressProvider} object
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-city_suffix"></a>}}
-\if{latex}{\out{\hypertarget{method-city_suffix}{}}}
+\if{html}{\out{<a id="method-AddressProvider-city_suffix"></a>}}
+\if{latex}{\out{\hypertarget{method-AddressProvider-city_suffix}{}}}
 \subsection{Method \code{city_suffix()}}{
 city suffix
 \subsection{Usage}{
@@ -176,8 +176,8 @@ city suffix
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-street_suffix"></a>}}
-\if{latex}{\out{\hypertarget{method-street_suffix}{}}}
+\if{html}{\out{<a id="method-AddressProvider-street_suffix"></a>}}
+\if{latex}{\out{\hypertarget{method-AddressProvider-street_suffix}{}}}
 \subsection{Method \code{street_suffix()}}{
 street suffix
 \subsection{Usage}{
@@ -186,8 +186,8 @@ street suffix
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-building_number"></a>}}
-\if{latex}{\out{\hypertarget{method-building_number}{}}}
+\if{html}{\out{<a id="method-AddressProvider-building_number"></a>}}
+\if{latex}{\out{\hypertarget{method-AddressProvider-building_number}{}}}
 \subsection{Method \code{building_number()}}{
 building numeber
 \subsection{Usage}{
@@ -196,8 +196,8 @@ building numeber
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-city"></a>}}
-\if{latex}{\out{\hypertarget{method-city}{}}}
+\if{html}{\out{<a id="method-AddressProvider-city"></a>}}
+\if{latex}{\out{\hypertarget{method-AddressProvider-city}{}}}
 \subsection{Method \code{city()}}{
 city
 \subsection{Usage}{
@@ -206,8 +206,8 @@ city
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-street_name"></a>}}
-\if{latex}{\out{\hypertarget{method-street_name}{}}}
+\if{html}{\out{<a id="method-AddressProvider-street_name"></a>}}
+\if{latex}{\out{\hypertarget{method-AddressProvider-street_name}{}}}
 \subsection{Method \code{street_name()}}{
 street name
 \subsection{Usage}{
@@ -216,8 +216,8 @@ street name
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-street_address"></a>}}
-\if{latex}{\out{\hypertarget{method-street_address}{}}}
+\if{html}{\out{<a id="method-AddressProvider-street_address"></a>}}
+\if{latex}{\out{\hypertarget{method-AddressProvider-street_address}{}}}
 \subsection{Method \code{street_address()}}{
 street address
 \subsection{Usage}{
@@ -226,8 +226,8 @@ street address
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-postcode"></a>}}
-\if{latex}{\out{\hypertarget{method-postcode}{}}}
+\if{html}{\out{<a id="method-AddressProvider-postcode"></a>}}
+\if{latex}{\out{\hypertarget{method-AddressProvider-postcode}{}}}
 \subsection{Method \code{postcode()}}{
 postal code
 \subsection{Usage}{
@@ -236,8 +236,8 @@ postal code
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-address"></a>}}
-\if{latex}{\out{\hypertarget{method-address}{}}}
+\if{html}{\out{<a id="method-AddressProvider-address"></a>}}
+\if{latex}{\out{\hypertarget{method-AddressProvider-address}{}}}
 \subsection{Method \code{address()}}{
 address
 \subsection{Usage}{
@@ -246,8 +246,8 @@ address
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-country"></a>}}
-\if{latex}{\out{\hypertarget{method-country}{}}}
+\if{html}{\out{<a id="method-AddressProvider-country"></a>}}
+\if{latex}{\out{\hypertarget{method-AddressProvider-country}{}}}
 \subsection{Method \code{country()}}{
 country name
 \subsection{Usage}{
@@ -256,8 +256,8 @@ country name
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-country_code"></a>}}
-\if{latex}{\out{\hypertarget{method-country_code}{}}}
+\if{html}{\out{<a id="method-AddressProvider-country_code"></a>}}
+\if{latex}{\out{\hypertarget{method-AddressProvider-country_code}{}}}
 \subsection{Method \code{country_code()}}{
 country code
 \subsection{Usage}{
@@ -266,8 +266,8 @@ country code
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-clone"></a>}}
-\if{latex}{\out{\hypertarget{method-clone}{}}}
+\if{html}{\out{<a id="method-AddressProvider-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-AddressProvider-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

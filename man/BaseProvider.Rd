@@ -34,25 +34,25 @@ x$randomize_nb_elements()
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
-\item \href{#method-random_element}{\code{BaseProvider$random_element()}}
-\item \href{#method-random_element_prob}{\code{BaseProvider$random_element_prob()}}
-\item \href{#method-random_int}{\code{BaseProvider$random_int()}}
-\item \href{#method-random_digit}{\code{BaseProvider$random_digit()}}
-\item \href{#method-random_digit_not_zero}{\code{BaseProvider$random_digit_not_zero()}}
-\item \href{#method-random_digit_or_empty}{\code{BaseProvider$random_digit_or_empty()}}
-\item \href{#method-random_digit_not_zero_or_empty}{\code{BaseProvider$random_digit_not_zero_or_empty()}}
-\item \href{#method-random_letter}{\code{BaseProvider$random_letter()}}
-\item \href{#method-numerify}{\code{BaseProvider$numerify()}}
-\item \href{#method-lexify}{\code{BaseProvider$lexify()}}
-\item \href{#method-bothify}{\code{BaseProvider$bothify()}}
-\item \href{#method-check_locale}{\code{BaseProvider$check_locale()}}
-\item \href{#method-randomize_nb_elements}{\code{BaseProvider$randomize_nb_elements()}}
-\item \href{#method-clone}{\code{BaseProvider$clone()}}
+\item \href{#method-BaseProvider-random_element}{\code{BaseProvider$random_element()}}
+\item \href{#method-BaseProvider-random_element_prob}{\code{BaseProvider$random_element_prob()}}
+\item \href{#method-BaseProvider-random_int}{\code{BaseProvider$random_int()}}
+\item \href{#method-BaseProvider-random_digit}{\code{BaseProvider$random_digit()}}
+\item \href{#method-BaseProvider-random_digit_not_zero}{\code{BaseProvider$random_digit_not_zero()}}
+\item \href{#method-BaseProvider-random_digit_or_empty}{\code{BaseProvider$random_digit_or_empty()}}
+\item \href{#method-BaseProvider-random_digit_not_zero_or_empty}{\code{BaseProvider$random_digit_not_zero_or_empty()}}
+\item \href{#method-BaseProvider-random_letter}{\code{BaseProvider$random_letter()}}
+\item \href{#method-BaseProvider-numerify}{\code{BaseProvider$numerify()}}
+\item \href{#method-BaseProvider-lexify}{\code{BaseProvider$lexify()}}
+\item \href{#method-BaseProvider-bothify}{\code{BaseProvider$bothify()}}
+\item \href{#method-BaseProvider-check_locale}{\code{BaseProvider$check_locale()}}
+\item \href{#method-BaseProvider-randomize_nb_elements}{\code{BaseProvider$randomize_nb_elements()}}
+\item \href{#method-BaseProvider-clone}{\code{BaseProvider$clone()}}
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-random_element"></a>}}
-\if{latex}{\out{\hypertarget{method-random_element}{}}}
+\if{html}{\out{<a id="method-BaseProvider-random_element"></a>}}
+\if{latex}{\out{\hypertarget{method-BaseProvider-random_element}{}}}
 \subsection{Method \code{random_element()}}{
 pick a random element from vector/list
 \subsection{Usage}{
@@ -71,8 +71,8 @@ a single element from x
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-random_element_prob"></a>}}
-\if{latex}{\out{\hypertarget{method-random_element_prob}{}}}
+\if{html}{\out{<a id="method-BaseProvider-random_element_prob"></a>}}
+\if{latex}{\out{\hypertarget{method-BaseProvider-random_element_prob}{}}}
 \subsection{Method \code{random_element_prob()}}{
 pick a random element with probability from vector/list
 \subsection{Usage}{
@@ -88,8 +88,8 @@ pick a random element with probability from vector/list
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-random_int"></a>}}
-\if{latex}{\out{\hypertarget{method-random_int}{}}}
+\if{html}{\out{<a id="method-BaseProvider-random_int"></a>}}
+\if{latex}{\out{\hypertarget{method-BaseProvider-random_int}{}}}
 \subsection{Method \code{random_int()}}{
 any number of random integers from a min, max
 \subsection{Usage}{
@@ -112,8 +112,8 @@ random integer
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-random_digit"></a>}}
-\if{latex}{\out{\hypertarget{method-random_digit}{}}}
+\if{html}{\out{<a id="method-BaseProvider-random_digit"></a>}}
+\if{latex}{\out{\hypertarget{method-BaseProvider-random_digit}{}}}
 \subsection{Method \code{random_digit()}}{
 random integer between 0 and 9
 \subsection{Usage}{
@@ -122,8 +122,8 @@ random integer between 0 and 9
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-random_digit_not_zero"></a>}}
-\if{latex}{\out{\hypertarget{method-random_digit_not_zero}{}}}
+\if{html}{\out{<a id="method-BaseProvider-random_digit_not_zero"></a>}}
+\if{latex}{\out{\hypertarget{method-BaseProvider-random_digit_not_zero}{}}}
 \subsection{Method \code{random_digit_not_zero()}}{
 random integer between 1 and 9
 \subsection{Usage}{
@@ -132,8 +132,8 @@ random integer between 1 and 9
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-random_digit_or_empty"></a>}}
-\if{latex}{\out{\hypertarget{method-random_digit_or_empty}{}}}
+\if{html}{\out{<a id="method-BaseProvider-random_digit_or_empty"></a>}}
+\if{latex}{\out{\hypertarget{method-BaseProvider-random_digit_or_empty}{}}}
 \subsection{Method \code{random_digit_or_empty()}}{
 random integer between 0 and 9 or empty character string
 \subsection{Usage}{
@@ -142,8 +142,8 @@ random integer between 0 and 9 or empty character string
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-random_digit_not_zero_or_empty"></a>}}
-\if{latex}{\out{\hypertarget{method-random_digit_not_zero_or_empty}{}}}
+\if{html}{\out{<a id="method-BaseProvider-random_digit_not_zero_or_empty"></a>}}
+\if{latex}{\out{\hypertarget{method-BaseProvider-random_digit_not_zero_or_empty}{}}}
 \subsection{Method \code{random_digit_not_zero_or_empty()}}{
 random integer between 1 and 9 or empty character string
 \subsection{Usage}{
@@ -152,8 +152,8 @@ random integer between 1 and 9 or empty character string
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-random_letter"></a>}}
-\if{latex}{\out{\hypertarget{method-random_letter}{}}}
+\if{html}{\out{<a id="method-BaseProvider-random_letter"></a>}}
+\if{latex}{\out{\hypertarget{method-BaseProvider-random_letter}{}}}
 \subsection{Method \code{random_letter()}}{
 random letter
 \subsection{Usage}{
@@ -162,8 +162,8 @@ random letter
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-numerify"></a>}}
-\if{latex}{\out{\hypertarget{method-numerify}{}}}
+\if{html}{\out{<a id="method-BaseProvider-numerify"></a>}}
+\if{latex}{\out{\hypertarget{method-BaseProvider-numerify}{}}}
 \subsection{Method \code{numerify()}}{
 replace a template with numbers
 \subsection{Usage}{
@@ -179,8 +179,8 @@ replace a template with numbers
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-lexify"></a>}}
-\if{latex}{\out{\hypertarget{method-lexify}{}}}
+\if{html}{\out{<a id="method-BaseProvider-lexify"></a>}}
+\if{latex}{\out{\hypertarget{method-BaseProvider-lexify}{}}}
 \subsection{Method \code{lexify()}}{
 replace a template with letters
 \subsection{Usage}{
@@ -196,8 +196,8 @@ replace a template with letters
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-bothify"></a>}}
-\if{latex}{\out{\hypertarget{method-bothify}{}}}
+\if{html}{\out{<a id="method-BaseProvider-bothify"></a>}}
+\if{latex}{\out{\hypertarget{method-BaseProvider-bothify}{}}}
 \subsection{Method \code{bothify()}}{
 both numerify and lexify together
 \subsection{Usage}{
@@ -213,8 +213,8 @@ both numerify and lexify together
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-check_locale"></a>}}
-\if{latex}{\out{\hypertarget{method-check_locale}{}}}
+\if{html}{\out{<a id="method-BaseProvider-check_locale"></a>}}
+\if{latex}{\out{\hypertarget{method-BaseProvider-check_locale}{}}}
 \subsection{Method \code{check_locale()}}{
 check a locale to see if it exists, if not, stop with
 error message
@@ -234,8 +234,8 @@ returns nothing if locale is supported; stops w/ message if not
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-randomize_nb_elements"></a>}}
-\if{latex}{\out{\hypertarget{method-randomize_nb_elements}{}}}
+\if{html}{\out{<a id="method-BaseProvider-randomize_nb_elements"></a>}}
+\if{latex}{\out{\hypertarget{method-BaseProvider-randomize_nb_elements}{}}}
 \subsection{Method \code{randomize_nb_elements()}}{
 Returns a random value near number
 \subsection{Usage}{
@@ -268,8 +268,8 @@ a random int near number
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-clone"></a>}}
-\if{latex}{\out{\hypertarget{method-clone}{}}}
+\if{html}{\out{<a id="method-BaseProvider-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-BaseProvider-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

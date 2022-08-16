@@ -148,57 +148,57 @@ if (requireNamespace("stringi", quietly=TRUE)) {
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
-\item \href{#method-allowed_locales}{\code{InternetProvider$allowed_locales()}}
-\item \href{#method-new}{\code{InternetProvider$new()}}
-\item \href{#method-to_ascii}{\code{InternetProvider$to_ascii()}}
-\item \href{#method-email}{\code{InternetProvider$email()}}
-\item \href{#method-safe_email}{\code{InternetProvider$safe_email()}}
-\item \href{#method-free_email}{\code{InternetProvider$free_email()}}
-\item \href{#method-company_email}{\code{InternetProvider$company_email()}}
-\item \href{#method-ascii_email}{\code{InternetProvider$ascii_email()}}
-\item \href{#method-ascii_safe_email}{\code{InternetProvider$ascii_safe_email()}}
-\item \href{#method-ascii_free_email}{\code{InternetProvider$ascii_free_email()}}
-\item \href{#method-ascii_company_email}{\code{InternetProvider$ascii_company_email()}}
-\item \href{#method-user_name}{\code{InternetProvider$user_name()}}
-\item \href{#method-tld}{\code{InternetProvider$tld()}}
-\item \href{#method-free_email_domain}{\code{InternetProvider$free_email_domain()}}
-\item \href{#method-url}{\code{InternetProvider$url()}}
-\item \href{#method-domain_name}{\code{InternetProvider$domain_name()}}
-\item \href{#method-domain_word}{\code{InternetProvider$domain_word()}}
-\item \href{#method-ipv4}{\code{InternetProvider$ipv4()}}
-\item \href{#method-ipv6}{\code{InternetProvider$ipv6()}}
-\item \href{#method-mac_address}{\code{InternetProvider$mac_address()}}
-\item \href{#method-uri_page}{\code{InternetProvider$uri_page()}}
-\item \href{#method-uri_path}{\code{InternetProvider$uri_path()}}
-\item \href{#method-uri_extension}{\code{InternetProvider$uri_extension()}}
-\item \href{#method-uri}{\code{InternetProvider$uri()}}
-\item \href{#method-slug}{\code{InternetProvider$slug()}}
-\item \href{#method-image_url}{\code{InternetProvider$image_url()}}
-\item \href{#method-clone}{\code{InternetProvider$clone()}}
+\item \href{#method-InternetProvider-allowed_locales}{\code{InternetProvider$allowed_locales()}}
+\item \href{#method-InternetProvider-new}{\code{InternetProvider$new()}}
+\item \href{#method-InternetProvider-to_ascii}{\code{InternetProvider$to_ascii()}}
+\item \href{#method-InternetProvider-email}{\code{InternetProvider$email()}}
+\item \href{#method-InternetProvider-safe_email}{\code{InternetProvider$safe_email()}}
+\item \href{#method-InternetProvider-free_email}{\code{InternetProvider$free_email()}}
+\item \href{#method-InternetProvider-company_email}{\code{InternetProvider$company_email()}}
+\item \href{#method-InternetProvider-ascii_email}{\code{InternetProvider$ascii_email()}}
+\item \href{#method-InternetProvider-ascii_safe_email}{\code{InternetProvider$ascii_safe_email()}}
+\item \href{#method-InternetProvider-ascii_free_email}{\code{InternetProvider$ascii_free_email()}}
+\item \href{#method-InternetProvider-ascii_company_email}{\code{InternetProvider$ascii_company_email()}}
+\item \href{#method-InternetProvider-user_name}{\code{InternetProvider$user_name()}}
+\item \href{#method-InternetProvider-tld}{\code{InternetProvider$tld()}}
+\item \href{#method-InternetProvider-free_email_domain}{\code{InternetProvider$free_email_domain()}}
+\item \href{#method-InternetProvider-url}{\code{InternetProvider$url()}}
+\item \href{#method-InternetProvider-domain_name}{\code{InternetProvider$domain_name()}}
+\item \href{#method-InternetProvider-domain_word}{\code{InternetProvider$domain_word()}}
+\item \href{#method-InternetProvider-ipv4}{\code{InternetProvider$ipv4()}}
+\item \href{#method-InternetProvider-ipv6}{\code{InternetProvider$ipv6()}}
+\item \href{#method-InternetProvider-mac_address}{\code{InternetProvider$mac_address()}}
+\item \href{#method-InternetProvider-uri_page}{\code{InternetProvider$uri_page()}}
+\item \href{#method-InternetProvider-uri_path}{\code{InternetProvider$uri_path()}}
+\item \href{#method-InternetProvider-uri_extension}{\code{InternetProvider$uri_extension()}}
+\item \href{#method-InternetProvider-uri}{\code{InternetProvider$uri()}}
+\item \href{#method-InternetProvider-slug}{\code{InternetProvider$slug()}}
+\item \href{#method-InternetProvider-image_url}{\code{InternetProvider$image_url()}}
+\item \href{#method-InternetProvider-clone}{\code{InternetProvider$clone()}}
 }
 }
-\if{html}{
-\out{<details ><summary>Inherited methods</summary>}
-\itemize{
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="bothify">}\href{../../charlatan/html/BaseProvider.html#method-bothify}{\code{charlatan::BaseProvider$bothify()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale">}\href{../../charlatan/html/BaseProvider.html#method-check_locale}{\code{charlatan::BaseProvider$check_locale()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="lexify">}\href{../../charlatan/html/BaseProvider.html#method-lexify}{\code{charlatan::BaseProvider$lexify()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="numerify">}\href{../../charlatan/html/BaseProvider.html#method-numerify}{\code{charlatan::BaseProvider$numerify()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit">}\href{../../charlatan/html/BaseProvider.html#method-random_digit}{\code{charlatan::BaseProvider$random_digit()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_not_zero}{\code{charlatan::BaseProvider$random_digit_not_zero()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero_or_empty">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_not_zero_or_empty}{\code{charlatan::BaseProvider$random_digit_not_zero_or_empty()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_or_empty">}\href{../../charlatan/html/BaseProvider.html#method-random_digit_or_empty}{\code{charlatan::BaseProvider$random_digit_or_empty()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_element">}\href{../../charlatan/html/BaseProvider.html#method-random_element}{\code{charlatan::BaseProvider$random_element()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_element_prob">}\href{../../charlatan/html/BaseProvider.html#method-random_element_prob}{\code{charlatan::BaseProvider$random_element_prob()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_int">}\href{../../charlatan/html/BaseProvider.html#method-random_int}{\code{charlatan::BaseProvider$random_int()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_letter">}\href{../../charlatan/html/BaseProvider.html#method-random_letter}{\code{charlatan::BaseProvider$random_letter()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="randomize_nb_elements">}\href{../../charlatan/html/BaseProvider.html#method-randomize_nb_elements}{\code{charlatan::BaseProvider$randomize_nb_elements()}}\out{</span>}
-}
-\out{</details>}
-}
+\if{html}{\out{
+<details><summary>Inherited methods</summary>
+<ul>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="bothify"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-bothify'><code>charlatan::BaseProvider$bothify()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-check_locale'><code>charlatan::BaseProvider$check_locale()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="lexify"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-lexify'><code>charlatan::BaseProvider$lexify()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="numerify"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-numerify'><code>charlatan::BaseProvider$numerify()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_digit'><code>charlatan::BaseProvider$random_digit()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_digit_not_zero'><code>charlatan::BaseProvider$random_digit_not_zero()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero_or_empty"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_digit_not_zero_or_empty'><code>charlatan::BaseProvider$random_digit_not_zero_or_empty()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_or_empty"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_digit_or_empty'><code>charlatan::BaseProvider$random_digit_or_empty()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_element"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_element'><code>charlatan::BaseProvider$random_element()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_element_prob"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_element_prob'><code>charlatan::BaseProvider$random_element_prob()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_int"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_int'><code>charlatan::BaseProvider$random_int()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_letter"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_letter'><code>charlatan::BaseProvider$random_letter()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="randomize_nb_elements"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-randomize_nb_elements'><code>charlatan::BaseProvider$randomize_nb_elements()</code></a></span></li>
+</ul>
+</details>
+}}
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-allowed_locales"></a>}}
-\if{latex}{\out{\hypertarget{method-allowed_locales}{}}}
+\if{html}{\out{<a id="method-InternetProvider-allowed_locales"></a>}}
+\if{latex}{\out{\hypertarget{method-InternetProvider-allowed_locales}{}}}
 \subsection{Method \code{allowed_locales()}}{
 fetch the allowed locales for this provider
 \subsection{Usage}{
@@ -207,8 +207,8 @@ fetch the allowed locales for this provider
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-new"></a>}}
-\if{latex}{\out{\hypertarget{method-new}{}}}
+\if{html}{\out{<a id="method-InternetProvider-new"></a>}}
+\if{latex}{\out{\hypertarget{method-InternetProvider-new}{}}}
 \subsection{Method \code{new()}}{
 Create a new \code{InternetProvider} object
 \subsection{Usage}{
@@ -228,8 +228,8 @@ A new \code{InternetProvider} object
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-to_ascii"></a>}}
-\if{latex}{\out{\hypertarget{method-to_ascii}{}}}
+\if{html}{\out{<a id="method-InternetProvider-to_ascii"></a>}}
+\if{latex}{\out{\hypertarget{method-InternetProvider-to_ascii}{}}}
 \subsection{Method \code{to_ascii()}}{
 convert to ascii
 \subsection{Usage}{
@@ -245,8 +245,8 @@ convert to ascii
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-email"></a>}}
-\if{latex}{\out{\hypertarget{method-email}{}}}
+\if{html}{\out{<a id="method-InternetProvider-email"></a>}}
+\if{latex}{\out{\hypertarget{method-InternetProvider-email}{}}}
 \subsection{Method \code{email()}}{
 get an email address
 \subsection{Usage}{
@@ -263,8 +263,8 @@ name is chosen}
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-safe_email"></a>}}
-\if{latex}{\out{\hypertarget{method-safe_email}{}}}
+\if{html}{\out{<a id="method-InternetProvider-safe_email"></a>}}
+\if{latex}{\out{\hypertarget{method-InternetProvider-safe_email}{}}}
 \subsection{Method \code{safe_email()}}{
 get a safe email address
 \subsection{Usage}{
@@ -273,8 +273,8 @@ get a safe email address
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-free_email"></a>}}
-\if{latex}{\out{\hypertarget{method-free_email}{}}}
+\if{html}{\out{<a id="method-InternetProvider-free_email"></a>}}
+\if{latex}{\out{\hypertarget{method-InternetProvider-free_email}{}}}
 \subsection{Method \code{free_email()}}{
 a free email address
 \subsection{Usage}{
@@ -283,8 +283,8 @@ a free email address
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-company_email"></a>}}
-\if{latex}{\out{\hypertarget{method-company_email}{}}}
+\if{html}{\out{<a id="method-InternetProvider-company_email"></a>}}
+\if{latex}{\out{\hypertarget{method-InternetProvider-company_email}{}}}
 \subsection{Method \code{company_email()}}{
 company email address
 \subsection{Usage}{
@@ -293,8 +293,8 @@ company email address
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-ascii_email"></a>}}
-\if{latex}{\out{\hypertarget{method-ascii_email}{}}}
+\if{html}{\out{<a id="method-InternetProvider-ascii_email"></a>}}
+\if{latex}{\out{\hypertarget{method-InternetProvider-ascii_email}{}}}
 \subsection{Method \code{ascii_email()}}{
 ascii email address
 \subsection{Usage}{
@@ -303,8 +303,8 @@ ascii email address
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-ascii_safe_email"></a>}}
-\if{latex}{\out{\hypertarget{method-ascii_safe_email}{}}}
+\if{html}{\out{<a id="method-InternetProvider-ascii_safe_email"></a>}}
+\if{latex}{\out{\hypertarget{method-InternetProvider-ascii_safe_email}{}}}
 \subsection{Method \code{ascii_safe_email()}}{
 safe ascii email address
 \subsection{Usage}{
@@ -313,8 +313,8 @@ safe ascii email address
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-ascii_free_email"></a>}}
-\if{latex}{\out{\hypertarget{method-ascii_free_email}{}}}
+\if{html}{\out{<a id="method-InternetProvider-ascii_free_email"></a>}}
+\if{latex}{\out{\hypertarget{method-InternetProvider-ascii_free_email}{}}}
 \subsection{Method \code{ascii_free_email()}}{
 an ascii free email address
 \subsection{Usage}{
@@ -323,8 +323,8 @@ an ascii free email address
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-ascii_company_email"></a>}}
-\if{latex}{\out{\hypertarget{method-ascii_company_email}{}}}
+\if{html}{\out{<a id="method-InternetProvider-ascii_company_email"></a>}}
+\if{latex}{\out{\hypertarget{method-InternetProvider-ascii_company_email}{}}}
 \subsection{Method \code{ascii_company_email()}}{
 ascii company email address
 \subsection{Usage}{
@@ -333,8 +333,8 @@ ascii company email address
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-user_name"></a>}}
-\if{latex}{\out{\hypertarget{method-user_name}{}}}
+\if{html}{\out{<a id="method-InternetProvider-user_name"></a>}}
+\if{latex}{\out{\hypertarget{method-InternetProvider-user_name}{}}}
 \subsection{Method \code{user_name()}}{
 a user name
 \subsection{Usage}{
@@ -343,8 +343,8 @@ a user name
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-tld"></a>}}
-\if{latex}{\out{\hypertarget{method-tld}{}}}
+\if{html}{\out{<a id="method-InternetProvider-tld"></a>}}
+\if{latex}{\out{\hypertarget{method-InternetProvider-tld}{}}}
 \subsection{Method \code{tld()}}{
 a tld
 \subsection{Usage}{
@@ -353,8 +353,8 @@ a tld
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-free_email_domain"></a>}}
-\if{latex}{\out{\hypertarget{method-free_email_domain}{}}}
+\if{html}{\out{<a id="method-InternetProvider-free_email_domain"></a>}}
+\if{latex}{\out{\hypertarget{method-InternetProvider-free_email_domain}{}}}
 \subsection{Method \code{free_email_domain()}}{
 free email domain name
 \subsection{Usage}{
@@ -363,8 +363,8 @@ free email domain name
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-url"></a>}}
-\if{latex}{\out{\hypertarget{method-url}{}}}
+\if{html}{\out{<a id="method-InternetProvider-url"></a>}}
+\if{latex}{\out{\hypertarget{method-InternetProvider-url}{}}}
 \subsection{Method \code{url()}}{
 a url
 \subsection{Usage}{
@@ -380,8 +380,8 @@ a url
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-domain_name"></a>}}
-\if{latex}{\out{\hypertarget{method-domain_name}{}}}
+\if{html}{\out{<a id="method-InternetProvider-domain_name"></a>}}
+\if{latex}{\out{\hypertarget{method-InternetProvider-domain_name}{}}}
 \subsection{Method \code{domain_name()}}{
 Produce an Internet domain name with the specified
 number of subdomain levels
@@ -398,8 +398,8 @@ number of subdomain levels
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-domain_word"></a>}}
-\if{latex}{\out{\hypertarget{method-domain_word}{}}}
+\if{html}{\out{<a id="method-InternetProvider-domain_word"></a>}}
+\if{latex}{\out{\hypertarget{method-InternetProvider-domain_word}{}}}
 \subsection{Method \code{domain_word()}}{
 a domain word
 \subsection{Usage}{
@@ -408,8 +408,8 @@ a domain word
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-ipv4"></a>}}
-\if{latex}{\out{\hypertarget{method-ipv4}{}}}
+\if{html}{\out{<a id="method-InternetProvider-ipv4"></a>}}
+\if{latex}{\out{\hypertarget{method-InternetProvider-ipv4}{}}}
 \subsection{Method \code{ipv4()}}{
 an ipv4 address or network
 \subsection{Usage}{
@@ -425,8 +425,8 @@ an ipv4 address or network
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-ipv6"></a>}}
-\if{latex}{\out{\hypertarget{method-ipv6}{}}}
+\if{html}{\out{<a id="method-InternetProvider-ipv6"></a>}}
+\if{latex}{\out{\hypertarget{method-InternetProvider-ipv6}{}}}
 \subsection{Method \code{ipv6()}}{
 an ipv6 address or network
 \subsection{Usage}{
@@ -442,8 +442,8 @@ an ipv6 address or network
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-mac_address"></a>}}
-\if{latex}{\out{\hypertarget{method-mac_address}{}}}
+\if{html}{\out{<a id="method-InternetProvider-mac_address"></a>}}
+\if{latex}{\out{\hypertarget{method-InternetProvider-mac_address}{}}}
 \subsection{Method \code{mac_address()}}{
 a mac address
 \subsection{Usage}{
@@ -452,8 +452,8 @@ a mac address
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-uri_page"></a>}}
-\if{latex}{\out{\hypertarget{method-uri_page}{}}}
+\if{html}{\out{<a id="method-InternetProvider-uri_page"></a>}}
+\if{latex}{\out{\hypertarget{method-InternetProvider-uri_page}{}}}
 \subsection{Method \code{uri_page()}}{
 a uri page
 \subsection{Usage}{
@@ -462,8 +462,8 @@ a uri page
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-uri_path"></a>}}
-\if{latex}{\out{\hypertarget{method-uri_path}{}}}
+\if{html}{\out{<a id="method-InternetProvider-uri_path"></a>}}
+\if{latex}{\out{\hypertarget{method-InternetProvider-uri_path}{}}}
 \subsection{Method \code{uri_path()}}{
 a uri path
 \subsection{Usage}{
@@ -480,8 +480,8 @@ between 1 and 4 (inclusive) is chosen}
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-uri_extension"></a>}}
-\if{latex}{\out{\hypertarget{method-uri_extension}{}}}
+\if{html}{\out{<a id="method-InternetProvider-uri_extension"></a>}}
+\if{latex}{\out{\hypertarget{method-InternetProvider-uri_extension}{}}}
 \subsection{Method \code{uri_extension()}}{
 a uri extension
 \subsection{Usage}{
@@ -490,8 +490,8 @@ a uri extension
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-uri"></a>}}
-\if{latex}{\out{\hypertarget{method-uri}{}}}
+\if{html}{\out{<a id="method-InternetProvider-uri"></a>}}
+\if{latex}{\out{\hypertarget{method-InternetProvider-uri}{}}}
 \subsection{Method \code{uri()}}{
 a uri
 \subsection{Usage}{
@@ -500,8 +500,8 @@ a uri
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-slug"></a>}}
-\if{latex}{\out{\hypertarget{method-slug}{}}}
+\if{html}{\out{<a id="method-InternetProvider-slug"></a>}}
+\if{latex}{\out{\hypertarget{method-InternetProvider-slug}{}}}
 \subsection{Method \code{slug()}}{
 a slug
 \subsection{Usage}{
@@ -518,8 +518,8 @@ a slug
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-image_url"></a>}}
-\if{latex}{\out{\hypertarget{method-image_url}{}}}
+\if{html}{\out{<a id="method-InternetProvider-image_url"></a>}}
+\if{latex}{\out{\hypertarget{method-InternetProvider-image_url}{}}}
 \subsection{Method \code{image_url()}}{
 Returns URL to placeholder image -
 Example: http://placehold.it/640x480
@@ -538,8 +538,8 @@ Example: http://placehold.it/640x480
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-clone"></a>}}
-\if{latex}{\out{\hypertarget{method-clone}{}}}
+\if{html}{\out{<a id="method-InternetProvider-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-InternetProvider-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{
