@@ -1,5 +1,7 @@
 context("JobProvider works")
 
+skip_on_cran()
+
 test_that("JobProvider works", {
   aa <- JobProvider$new()
 
@@ -19,9 +21,6 @@ test_that("JobProvider locale support works", {
 context("ch_job works")
 
 test_that("ch_job", {
-  skip_on_cran()
-  skip_on_travis()
-
   aa <- ch_job()
 
   expect_is(aa, "character")

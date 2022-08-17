@@ -1,5 +1,7 @@
 context("MissingDataProvider")
 
+skip_on_cran()
+
 test_that("MissingDataProvider works", {
   aa <- MissingDataProvider$new()
   letters2 <- aa$make_missing(letters)
