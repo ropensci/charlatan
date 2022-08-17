@@ -1,3 +1,16 @@
+charlatan 0.5.0
+===============
+
+### NEW FEATURES
+
+* `InternetProvider` adds new methods `ipv4` and `ipv6` via the new suggested package `ipaddress` (#112) thanks @davidchall
+* `AddressProvider` and `JobsProvider` gain new langugage locale `nl_NL` (#118) (#119) thanks @markbaas
+
+### MINOR IMPROVEMENTS
+
+* fixed typo in docs (#117) thanks @j450h1
+
+
 charlatan 0.4.0
 ===============
 

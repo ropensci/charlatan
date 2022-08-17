@@ -1,7 +1,7 @@
 ## Test environments
 
-* local OS X install, R 3.6.2 Patched
-* ubuntu 14.04 (on travis-ci), R 3.6.2
+* local macos, R 4.2.1
+* ubuntu 20.04 (on github actions), R 4.1.2, R Devel
 * win-builder (devel and release)
 
 ## R CMD check results
@@ -10,12 +10,13 @@
 
 ## Reverse dependencies
 
-I have checked the 1 reverse dependency, and there were no problems.
+I have checked the 2 reverse dependencies, and there were no problems.
 See (<https://github.com/ropensci/charlatan/tree/master/revdep>).
 
 ---
 
-This version adds support for a variety of new language locales to various data type methods.
+This version adds support for NL language locale for jobs and addresses,
+and InternetProvider adds new methods for generating ipv4 and ipv6 addresses.
 
 Thanks!
 Scott Chamberlain
