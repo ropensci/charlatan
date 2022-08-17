@@ -1,7 +1,7 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^CODE_OF_CONDUCT\.md$
-README.Rmd
+README.*
 .travis.yml
 cran-comments.md
 man-roxygen

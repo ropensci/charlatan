@@ -12,11 +12,10 @@ knitr::opts_chunk$set(
 
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![R-check](https://github.com/ropensci/charlatan/workflows/R-check/badge.svg)](https://github.com/ropensci/charlatan/actions?query=workflow%3AR-check)
-[![cran checks](https://cranchecks.info/badges/worst/charlatan)](https://cranchecks.info/pkgs/charlatan)
-[![codecov](https://codecov.io/gh/ropensci/charlatan/branch/master/graph/badge.svg)](https://codecov.io/gh/ropensci/charlatan)
+[![cran checks](https://badges.cranchecks.info/worst/charlatan.svg)](https://cranchecks.info/pkgs/charlatan)
 [![cran version](https://www.r-pkg.org/badges/version/charlatan)](https://cran.r-project.org/package=charlatan)
 [![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/charlatan)](https://github.com/r-hub/cranlogs.app)
-[![](https://badges.ropensci.org/94_status.svg)](https://github.com/ropensci/onboarding/issues/94)
+[![](https://badges.ropensci.org/94_status.svg)](https://github.com/ropensci/software-review/issues/94)
 
 `charlatan` makes fake data, inspired from and borrowing some code from Python's faker (https://github.com/joke2k/faker)
 
