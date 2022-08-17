@@ -48,7 +48,6 @@ Collate:
     'base-provider.R'
     'datetime-provider.R'
     'address-provider.R'
-    'address.R'
     'available_locales.R'
     'charlatan-package.R'
     'charlatan_settings.R'
