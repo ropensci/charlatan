@@ -21,6 +21,10 @@ z$render()
 z <- JobProvider$new(locale = "fa_IR")
 z$locale
 z$render()
+
+z <- JobProvider$new(locale = "nl_NL")
+z$locale
+z$render()
 }
 \keyword{internal}
 \section{Super class}{
