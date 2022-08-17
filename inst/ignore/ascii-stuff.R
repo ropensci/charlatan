@@ -12,9 +12,10 @@ z$prefix()
 z$suffix()
 
 
-tools::showNonASCIIfile("R/lorem-provider-zh_TW.R")
-# to_replace <- vapply(int_replacements_de_de, "[[", "", 1)
-# replaced <- stringi::stri_escape_unicode(to_replace)
+tools::showNonASCIIfile("R/jobs-provider-nl_NL.R")
+to_replace <- vapply(job_formats_nl_nl, "[[", "", 1)
+replaced <- stringi::stri_escape_unicode(to_replace)
+invisible(lapply(replaced, function(z) cat(sprintf('"%s",', z), sep="\n")))
 
 ## where a list with each elemnt a two length vector
 ## where the first is to be encoded
