@@ -1,27 +1,24 @@
 {
-  "@context": [
-    "http://purl.org/codemeta/2.0",
-    "http://schema.org"
-  ],
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
   "@type": "SoftwareSourceCode",
   "identifier": "charlatan",
-  "description": "Make fake data, supporting addresses, person names, dates,\n    times, colors, coordinates, currencies, digital object identifiers\n    ('DOIs'), jobs, phone numbers, 'DNA' sequences, doubles and integers\n    from distributions and within a range.",
+  "description": "Make fake data, supporting addresses, person names, dates, times, colors, coordinates, currencies, digital object identifiers ('DOIs'), jobs, phone numbers, 'DNA' sequences, doubles and integers from distributions and within a range.",
   "name": "charlatan: Make Fake Data",
+  "relatedLink": "https://docs.ropensci.org/charlatan/",
   "codeRepository": "https://github.com/ropensci/charlatan",
   "issueTracker": "https://github.com/ropensci/charlatan/issues",
   "license": "https://spdx.org/licenses/MIT",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
-    "version": "3.6.2",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 3.6.2 Patched (2019-12-12 r77564)",
+  "runtimePlatform": "R version 4.2.1 (2022-06-23)",
   "provider": {
     "@id": "https://cran.r-project.org",
     "@type": "Organization",
-    "name": "Central R Archive Network (CRAN)",
+    "name": "Comprehensive R Archive Network (CRAN)",
     "url": "https://cran.r-project.org"
   },
   "author": [
@@ -36,6 +33,19 @@
       "@type": "Person",
       "givenName": "Kyle",
       "familyName": "Voytovich"
+    }
+  ],
+  "contributor": [
+    {
+      "@type": "Person",
+      "givenName": "Martin",
+      "familyName": "Pedersen"
+    }
+  ],
+  "funder": [
+    {
+      "@type": "Organization",
+      "name": "rOpenSci"
     }
   ],
   "maintainer": [
@@ -86,15 +96,15 @@
     },
     {
       "@type": "SoftwareApplication",
-      "identifier": "iptools",
-      "name": "iptools",
+      "identifier": "ipaddress",
+      "name": "ipaddress",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
         "name": "Comprehensive R Archive Network (CRAN)",
         "url": "https://cran.r-project.org"
       },
-      "sameAs": "https://CRAN.R-project.org/package=iptools"
+      "sameAs": "https://CRAN.R-project.org/package=ipaddress"
     },
     {
       "@type": "SoftwareApplication",
@@ -109,8 +119,8 @@
       "sameAs": "https://CRAN.R-project.org/package=stringi"
     }
   ],
-  "softwareRequirements": [
-    {
+  "softwareRequirements": {
+    "1": {
       "@type": "SoftwareApplication",
       "identifier": "R6",
       "name": "R6",
@@ -123,7 +133,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=R6"
     },
-    {
+    "2": {
       "@type": "SoftwareApplication",
       "identifier": "tibble",
       "name": "tibble",
@@ -136,7 +146,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=tibble"
     },
-    {
+    "3": {
       "@type": "SoftwareApplication",
       "identifier": "whisker",
       "name": "whisker",
@@ -147,41 +157,8 @@
         "url": "https://cran.r-project.org"
       },
       "sameAs": "https://CRAN.R-project.org/package=whisker"
-    }
-  ],
-  "contIntegration": ["https://travis-ci.org/ropensci/charlatan", "https://ci.appveyor.com/project/sckott/charlatan", "https://codecov.io/gh/ropensci/charlatan"],
-  "developmentStatus": "https://www.repostatus.org/#active",
-  "releaseNotes": "https://github.com/ropensci/charlatan/blob/master/NEWS.md",
-  "readme": "https://github.com/ropensci/charlatan/blob/master/README.md",
-  "fileSize": "300.134KB",
-  "review": {
-    "@type": "Review",
-    "url": "https://github.com/ropensci/software-review/issues/94",
-    "provider": "https://ropensci.org"
+    },
+    "SystemRequirements": null
   },
-  "keywords": [
-    "data",
-    "faker",
-    "rstats",
-    "dataset",
-    "fake-data",
-    "r",
-    "r-package",
-    "peer-reviewed"
-  ],
-  "relatedLink": "https://docs.ropensci.org/charlatan",
-  "contributor": [
-    {
-      "@type": "Person",
-      "givenName": "Martin",
-      "familyName": "Pedersen"
-    }
-  ],
-  "copyrightHolder": {},
-  "funder": [
-    {
-      "@type": "Organization",
-      "name": "rOpenSci"
-    }
-  ]
+  "fileSize": "1495.95KB"
 }
