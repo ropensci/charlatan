@@ -24,9 +24,15 @@
   "author": [
     {
       "@type": "Person",
+      "givenName": "Roel M.",
+      "familyName": "Hogervorst",
+      "email": "hogervorst.rm@gmail.com",
+      "@id": "https://orchid.org/0000-0001-7509-0328"
+    },
+    {
+      "@type": "Person",
       "givenName": "Scott",
       "familyName": "Chamberlain",
-      "email": "myrmecocystus+r@gmail.com",
       "@id": "https://orcid.org/0000-0003-1444-9135"
     },
     {
@@ -51,10 +57,10 @@
   "maintainer": [
     {
       "@type": "Person",
-      "givenName": "Scott",
-      "familyName": "Chamberlain",
-      "email": "myrmecocystus+r@gmail.com",
-      "@id": "https://orcid.org/0000-0003-1444-9135"
+      "givenName": "Roel M.",
+      "familyName": "Hogervorst",
+      "email": "hogervorst.rm@gmail.com",
+      "@id": "https://orchid.org/0000-0001-7509-0328"
     }
   ],
   "softwareSuggestions": [
