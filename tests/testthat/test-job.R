@@ -25,7 +25,7 @@ test_that("ch_job", {
 
   expect_is(aa, "character")
   expect_gt(nchar(aa), 0)
-  expect_true(any(grepl(aa, JobProvider$new()$formats)))
+  expect_true(aa %in% JobProvider$new()$formats)
 })
 
 test_that("ch_job - n parameter", {
