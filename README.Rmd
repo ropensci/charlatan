@@ -174,7 +174,7 @@ ch_credit_card_security_code(10)
 
 
 ## Contributors
-
+* Roel M. Hogervorst (https://github.com/rmhogervorst)
 * Scott Chamberlain (https://github.com/sckott)
 * Kyle Voytovich (https://github.com/kylevoyto)
 * Martin Pedersen (https://github.com/MartinMSPedersen)
