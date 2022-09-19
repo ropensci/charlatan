@@ -73,6 +73,7 @@ remotes::install_github("ropensci/charlatan")
 
 ```{r}
 library("charlatan")
+set.seed(12345)
 ```
 
 ## high level function
