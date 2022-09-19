@@ -1,3 +1,14 @@
+charlatan 0.5.1
+===============
+
+### NEW FEATURES
+* None this is a maintainer change
+
+### MINOR IMPROVEMENTS
+* Fixed a failing test on r-devel
+* Added new maintainer (RMHogervorst)
+
+
 charlatan 0.5.0
 ===============
 
