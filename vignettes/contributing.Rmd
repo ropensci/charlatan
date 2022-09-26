@@ -120,36 +120,67 @@ have files in the package:
 - [address-provider-en_US.R](https://github.com/ropensci/charlatan/blob/master/R/address-provider-en_US.R)
 - [address-provider-en_GB.R](https://github.com/ropensci/charlatan/blob/master/R/address-provider-en_GB.R)
 
-Where the latter two provides specific data for each locale, and the first
-file has the `AddressProvider` class that pulls in the locale specific data.
+Where the latter two provides specific classes for each locale, and the first
+file has the base `AddressProvider` class that is inherited by the locale specific class.
 
-Here, we'll create a very simplified `AddressProvider` class using an
-example locale file.
+Here, we'll create a very simplified localized `AddressProvider` class using an
+template file.
 
 ```{r}
 library(charlatan)
-file <- system.file("examples", "address-provider-en_US.R", package = "charlatan")
+file <- system.file("examples", "address-provider-template", package = "charlatan")
 source(file)
-MyAddressProvider <- R6::R6Class(
-  inherit = MyBaseProvider,
-  'MyAddressProvider',
-  lock_objects = FALSE,
-  public = list(
-    locale = NULL,
-    city_suffixes = NULL,
 
-    initialize = function() {
-      self$locale <- 'en_us'
-      self$city_suffixes <-
-        eval(parse(text = paste0("city_suffixes_", self$locale)))
-    },
-
-    city_suffix = function() {
-      super$random_element(self$city_suffixes)
-    }
-  )
-)
 ```
+
+If you want to add a locale specific provider you must add a new class. 
+The localized address provider inherits from the Addressprovider and must
+provide the functions that are in the template, but you have freedom to 
+create specifics that are necesssary for your locale. 
+
+```r
+AddressProvider_template <- R6::R6Class(
+    inherit = AddressProvider,
+    "AddressProvider_template",
+    lock_objects = FALSE,
+    public = list(
+        # add your data here
+        
+        
+        # Fill in these functions
+        #' @description address
+        address = function(){
+            # override this required function 
+        },
+        #' @description city
+        city = function() {
+            # override this required function
+        },
+        #' @description street name
+        street_name = function() {
+            # override this required function
+        },
+        #' @description street address
+        street_address = function() {
+            # override this required function
+        },
+        #' @description postal code
+        postcode = function() {
+            # override this required function
+        }
+        # Add more functions if you like, that is what makes 
+        # the class inheritance so useful
+    )
+)
+
+```
+TODO: make this an example like spongebob squarepants? 
+
+```
+124 Conch Street, Bikini Bottom, Pacific Ocean
+```
+
+Something like needs to be a fruit in English, street is always something like bottom, below, or sea related
 
 We can create an instance of the `MyAddressProvider` class by calling `$new()` on it.
 It only has one method `city_suffix()`, which we can call to get a random
@@ -186,7 +217,7 @@ with respect to whether it can be used in this package.
 
 
 ## How locale specific data are used in providers
-
+TODO: this no longer works like this.
 It's a little tricky how this is done. In the `initialize()` block of each main provider
 file (e.g., `address-provider.R`) we pull in the appropriate locale specific data
 based on the user input locale. For example, here's an abbreviated `initialize` block from

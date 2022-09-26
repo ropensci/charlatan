@@ -4,7 +4,7 @@
 #' @name ch_color
 #' @template params
 #' @param locale (character) the locale to use. See
-#' `ColorProvider$new()$allowed_locales()` for locales supported.
+#' `colors()$allowed_locales()` for locales supported.
 #' Affects the `ch_color_name` and `ch_safe_color_name` functions
 #' @seealso [ColorProvider]
 #' @examples
@@ -36,9 +36,9 @@
 ch_color_name <- function(n = 1, locale = NULL) {
   assert(n, c('integer', 'numeric'))
   if (n == 1) {
-    ColorProvider$new(locale = locale)$color_name()
+    colors(locale = locale)$color_name()
   } else {
-    x <- ColorProvider$new(locale = locale)
+    x <- colors(locale = locale)
     rep_licate(n, x$color_name(), "")
   }
 }
@@ -48,9 +48,9 @@ ch_color_name <- function(n = 1, locale = NULL) {
 ch_safe_color_name <- function(n = 1, locale = NULL) {
   assert(n, c('integer', 'numeric'))
   if (n == 1) {
-    ColorProvider$new(locale = locale)$safe_color_name()
+    colors(locale = locale)$safe_color_name()
   } else {
-    x <- ColorProvider$new(locale = locale)
+    x <- colors(locale = locale)
     rep_licate(n, x$safe_color_name(), "")
   }
 }
@@ -60,9 +60,9 @@ ch_safe_color_name <- function(n = 1, locale = NULL) {
 ch_hex_color <- function(n = 1) {
   assert(n, c('integer', 'numeric'))
   if (n == 1) {
-    ColorProvider$new()$hex_color()
+    colors()$hex_color()
   } else {
-    x <- ColorProvider$new()
+    x <- colors()
     rep_licate(n, x$hex_color(), "")
   }
 }
@@ -72,9 +72,9 @@ ch_hex_color <- function(n = 1) {
 ch_safe_hex_color <- function(n = 1) {
   assert(n, c('integer', 'numeric'))
   if (n == 1) {
-    ColorProvider$new()$safe_hex_color()
+    colors()$safe_hex_color()
   } else {
-    x <- ColorProvider$new()
+    x <- colors()
     rep_licate(n, x$safe_hex_color(), "")
   }
 }
@@ -83,7 +83,7 @@ ch_safe_hex_color <- function(n = 1) {
 #' @rdname ch_color
 ch_rgb_color <- function(n = 1) {
   assert(n, c('integer', 'numeric'))
-  x <- ColorProvider$new()
+  x <- colors()
   replicate(n, x$rgb_color(), simplify = FALSE)
 }
 
@@ -92,9 +92,9 @@ ch_rgb_color <- function(n = 1) {
 ch_rgb_css_color <- function(n = 1) {
   assert(n, c('integer', 'numeric'))
   if (n == 1) {
-    ColorProvider$new()$rgb_css_color()
+    colors()$rgb_css_color()
   } else {
-    x <- ColorProvider$new()
+    x <- colors()
     rep_licate(n, x$rgb_css_color(), "")
   }
 }

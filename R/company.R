@@ -3,7 +3,7 @@
 #' @export
 #' @template params
 #' @param locale (character) the locale to use. See
-#' `CompanyProvider$new()$allowed_locales()` for locales supported.
+#' `company()$allowed_locales()` for locales supported.
 #' @seealso [CompanyProvider]
 #' @examples
 #' ch_company()
@@ -17,9 +17,9 @@
 ch_company <- function(n = 1, locale = NULL) {
   assert(n, c('integer', 'numeric'))
   if (n == 1) {
-    CompanyProvider$new(locale = locale)$company()
+    company(locale = locale)$company()
   } else {
-    x <- CompanyProvider$new(locale = locale)
+    x <- company(locale = locale)
     replicate(n, x$company())
   }
 }

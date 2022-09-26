@@ -1,7 +1,7 @@
 context("ColorProvider works")
 
 test_that("ColorProvider works", {
-  aa <- ColorProvider$new()
+  aa <- colors("en_US")
 
   expect_is(aa, "ColorProvider")
   expect_is(aa, "R6")
@@ -25,7 +25,7 @@ test_that("ColorProvider locale support works", {
   skip_on_travis()
 
   test_locale <- function(loc) {
-    bb <- ColorProvider$new(locale = loc)
+    bb <- colors(loc)
 
     expect_is(bb$locale, "character")
     expect_equal(bb$locale, loc)
@@ -35,6 +35,8 @@ test_that("ColorProvider locale support works", {
 
     expect_is(bb$safe_color_name(), "character")
     expect_true(all(bb$safe_color_name() %in% bb$safe_colors))
+    
+    expect_is(bb$hex_from_name, 'function')
   }
 
   locales <- c("en_US", "uk_UA")
@@ -65,8 +67,8 @@ test_that("ch_color_name works", {
   expect_equal(length(ch_color_name()), 1)
   expect_equal(length(ch_color_name(12)), 12)
 
-  expect_true(all(ch_color_name() %in% names(ColorProvider$new()$all_colors)))
-  expect_true(all(ch_color_name(7) %in% names(ColorProvider$new()$all_colors)))
+  expect_true(all(ch_color_name() %in% names(colors()$all_colors)))
+  expect_true(all(ch_color_name(7) %in% names(colors()$all_colors)))
 })
 
 test_that("ch_safe_color_name works", {
@@ -76,8 +78,8 @@ test_that("ch_safe_color_name works", {
   expect_equal(length(ch_safe_color_name()), 1)
   expect_equal(length(ch_safe_color_name(7)), 7)
 
-  expect_true(all(ch_safe_color_name() %in% ColorProvider$new()$safe_colors))
-  expect_true(all(ch_safe_color_name(7) %in% ColorProvider$new()$safe_colors))
+  expect_true(all(ch_safe_color_name() %in% colors()$safe_colors))
+  expect_true(all(ch_safe_color_name(7) %in% colors()$safe_colors))
 })
 
 test_that("ch_hex_color works", {
