@@ -4,7 +4,7 @@ test_that("CompanyProvider works", {
   aa <- company()
 
   expect_s3_class(aa, "CompanyProvider")
-  expect_s3_classd(aa, "R6")
+  expect_s3_class(aa, "R6")
 
   expect_type(aa$company, "closure")
   expect_type(aa$company(), "character")

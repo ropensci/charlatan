@@ -12,7 +12,8 @@
 #' @aliases charlatan
 #' @docType package
 #' @keywords package
-#' @author Scott Chamberlain \email{myrmecocystus+r@@gmail.com}
+#' @author Roel M. Hogervorst \email{hogervorst.rm@gmail.com}
+#' @author Scott Chamberlain
 #' @author Kyle Voytovich
 #' @author Martin Pedersen
 #'
