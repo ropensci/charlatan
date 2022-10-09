@@ -154,6 +154,8 @@ Collate:
     'phonenumbers-provider.R'
     'sequence-provider.R'
     'sequences.R'
+    'ssn-provider.R'
+    'ssn.R'
     'taxonomy-provider.R'
     'taxonomy.R'
     'useragent-provider.R'
