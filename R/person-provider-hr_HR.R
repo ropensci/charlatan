@@ -1,7 +1,7 @@
 # modified from the python library faker:
 # https://github.com/joke2k/faker/blob/master/faker/providers/person/hr_HR/__init__.py
 
-person_formats_hr_hr <- '{{first_names}} {{last_names}}'
+person_formats_hr_hr <- "{{first_names}} {{last_names}}"
 
 person_first_names_male_hr_hr <- c(
   "Aldo",
@@ -1035,4 +1035,17 @@ person_hr_hr <- list(
   first_name_male = person_first_names_male_hr_hr,
   first_name_female = person_first_names_female_hr_hr,
   last_names = person_last_names_hr_hr
+)
+#' @describeIn {PersonProvider} {}
+PersonProvider_hr_HR <- R6::R6Class(
+  "PersonProvider_hr_HR",
+  inherit = PersonProvider,
+  public = list(
+    #' @field locale (character) the locale
+    locale = "hr_HR",
+    #' @field formats (character) person name formats
+    formats = person_formats_hr_hr,
+    #' @field person (character) person name data
+    person = person_hr_hr
+  )
 )

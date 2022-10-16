@@ -20,7 +20,9 @@ assert <- function(x, y) {
   if (!is.null(x)) {
     if (!inherits(x, y)) {
       stop(deparse(substitute(x)), " must be of class ",
-           paste0(y, collapse = ", "), call. = FALSE)
+        paste0(y, collapse = ", "),
+        call. = FALSE
+      )
     }
   }
 }
@@ -56,3 +58,27 @@ check4pkg <- function(x) {
 }
 
 `%||%` <- function(x, y) if (is.null(x)) y else x
+
+
+# instantiate a locale specific provider
+#
+# Errors with a clear error message if it does not exist
+cr_loc_spec_provider <- function(provider, locale) {
+  if (!provider %in% available_providers) stop(paste0(provider, " does not exist"))
+  name <- paste0(provider, "_", locale)
+  if (exists(name)) {
+    return(eval(parse(text = name))$new())
+  } else {
+    stop(paste0("There is no locale ", locale, " for provider ", provider), call. = FALSE)
+  }
+}
+
+
+# instantiate subclass
+subclass <- function(provider, locale) {
+  if (is.null(locale)) {
+    locale <- "en_US"
+    warning(paste("No locale provided for ", provider, " defaulting to en_US"), call. = FALSE)
+  }
+  return(cr_loc_spec_provider(provider, locale))
+}

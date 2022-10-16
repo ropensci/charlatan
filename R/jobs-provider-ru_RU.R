@@ -543,3 +543,15 @@ job_formats_ru_ru <- c(
   "\u042e\u0440\u0438\u0441\u043a\u043e\u043d\u0441\u0443\u043b\u044c\u0442",
   "\u042e\u0440\u0438\u0441\u0442"
 )
+
+#' @describeIn {JobProvider} {Russian (Russia)}
+JobProvider_ru_RU <- R6::R6Class(
+  inherit = JobProvider,
+  "JobProvider_ru_RU",
+  public = list(
+    #' @field locale (character) the locale
+    locale = "ru_RU",
+    #' @field formats (character) vector of possible formats
+    formats = job_formats_ru_ru
+  )
+)

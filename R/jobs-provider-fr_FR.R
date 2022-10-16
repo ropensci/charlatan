@@ -668,3 +668,15 @@ job_formats_fr_fr <- c(
   "Webmestre",
   "Zoologiste"
 )
+
+#' @describeIn {JobProvider} {French (France)}
+JobProvider_fr_FR <- R6::R6Class(
+  inherit = JobProvider,
+  "JobProvider_fr_FR",
+  public = list(
+    #' @field locale (character) the locale
+    locale = "fr_FR",
+    #' @field formats (character) vector of possible formats
+    formats = job_formats_fr_fr
+  )
+)

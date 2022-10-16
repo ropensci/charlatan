@@ -1,35 +1,35 @@
 # modified from the python library faker:
 # https://github.com/joke2k/faker/blob/master/faker/providers/person/no_NO/__init__.py
 
-person_formats_no_no = c(
-  '{{first_names}} {{last_names}}',
-  '{{first_names}} {{last_names}}',
-  '{{first_names}} {{last_names}}',
-  '{{first_names}} {{last_names}}',
-  '{{first_names}} {{last_names}}',
-  '{{first_names}} {{last_names}}',
-  '{{first_names}} {{last_names}}',
-  '{{first_names}} {{last_names}}',
-  '{{first_names}} {{last_names}}',
-  '{{first_names}} {{last_names}}',
-  '{{first_names}} {{last_names}}',
-  '{{first_names}} {{last_names}}',
-  '{{first_names}} {{last_names}}',
-  '{{first_names}} {{last_names}}',
-  '{{first_names}} {{last_names}}',
-  '{{first_names}} {{last_names}}',
-  '{{first_names_male1}}-{{first_names_male2}} {{last_names}}',
-  '{{first_names_male1}}-{{first_names_male2}} {{last_names}}',
-  '{{first_names_female1}}-{{first_names_female2}} {{last_names}}',
-  '{{first_names_female1}}-{{first_names_female2}} {{last_names}}',
-  '{{first_names}} {{last_names1}}-{{last_names2}}',
-  '{{first_names}} {{last_names1}}-{{last_names2}}',
-  '{{prefixes}} {{first_names_male}} {{last_names}}'
+person_formats_no_no <- c(
+  "{{first_names}} {{last_names}}",
+  "{{first_names}} {{last_names}}",
+  "{{first_names}} {{last_names}}",
+  "{{first_names}} {{last_names}}",
+  "{{first_names}} {{last_names}}",
+  "{{first_names}} {{last_names}}",
+  "{{first_names}} {{last_names}}",
+  "{{first_names}} {{last_names}}",
+  "{{first_names}} {{last_names}}",
+  "{{first_names}} {{last_names}}",
+  "{{first_names}} {{last_names}}",
+  "{{first_names}} {{last_names}}",
+  "{{first_names}} {{last_names}}",
+  "{{first_names}} {{last_names}}",
+  "{{first_names}} {{last_names}}",
+  "{{first_names}} {{last_names}}",
+  "{{first_names_male1}}-{{first_names_male2}} {{last_names}}",
+  "{{first_names_male1}}-{{first_names_male2}} {{last_names}}",
+  "{{first_names_female1}}-{{first_names_female2}} {{last_names}}",
+  "{{first_names_female1}}-{{first_names_female2}} {{last_names}}",
+  "{{first_names}} {{last_names1}}-{{last_names2}}",
+  "{{first_names}} {{last_names1}}-{{last_names2}}",
+  "{{prefixes}} {{first_names_male}} {{last_names}}"
 )
 
 # 100 most common male first names, alphabetically.
 # Source: http://www.ssb.no/a/navn/fornavn-menn-100.html
-person_first_names_male_no_no = c(
+person_first_names_male_no_no <- c(
   "Adrian",
   "Alexander",
   "Alf",
@@ -134,7 +134,7 @@ person_first_names_male_no_no = c(
 
 # 100 most common female first names, alphabetically.
 # Source: http://www.ssb.no/a/navn/fornavn-kvinner-100.html
-person_first_names_female_no_no = c(
+person_first_names_female_no_no <- c(
   "Andrea",
   "Anette",
   "Anita",
@@ -237,12 +237,14 @@ person_first_names_female_no_no = c(
   "\u00c5se"
 )
 
-person_first_names_no_no = c(person_first_names_male_no_no,
-                             person_first_names_female_no_no)
+person_first_names_no_no <- c(
+  person_first_names_male_no_no,
+  person_first_names_female_no_no
+)
 
 # 100 most common last names, alphabetically.
 # Source: http://www.ssb.no/a/navn/alf/etter100.html
-person_last_names_no_no = c(
+person_last_names_no_no <- c(
   "Aasen",
   "Aas",
   "Abrahamsen",
@@ -346,7 +348,7 @@ person_last_names_no_no = c(
   "Vik"
 )
 
-person_prefixes_no_no = c('Dr.', 'Prof.')
+person_prefixes_no_no <- c("Dr.", "Prof.")
 
 person_no_no <- list(
   first_names = person_first_names_no_no,
@@ -354,4 +356,18 @@ person_no_no <- list(
   first_names_male = person_first_names_male_no_no,
   last_names = person_last_names_no_no,
   prefixes = person_prefixes_no_no
+)
+
+#' @describeIn {PersonProvider} {}
+PersonProvider_no_NO <- R6::R6Class(
+  "PersonProvider_no_NO",
+  inherit = PersonProvider,
+  public = list(
+    #' @field locale (character) the locale
+    locale = "no_NO",
+    #' @field formats (character) person name formats
+    formats = person_formats_no_no,
+    #' @field person (character) person name data
+    person = person_no_no
+  )
 )

@@ -1,7 +1,7 @@
 # modified from the python library faker:
 # https://github.com/joke2k/faker/blob/master/faker/providers/lorem/ar_AA/__init__.py
 
-lorem_word_list_ar_aa = c(
+lorem_word_list_ar_aa <- c(
   "\u062a\u0627\u0631\u064a\u062e",
   "\u062b\u0645\u0651\u0629",
   "\u0648\u064a\u0643\u064a\u0628\u064a\u062f\u064a\u0627",
@@ -695,4 +695,16 @@ lorem_word_list_ar_aa = c(
   "\u0648\u0625\u0639\u0644\u0627\u0646",
   "\u0628\u0645\u0628\u0627\u0631\u0643\u0629",
   "\u0648\u0627\u0644\u0645\u0627\u0646\u064a\u0627"
+)
+
+#' @describeIn {LoremProvider} {English (United States)}
+LoremProvider_ar_AA <- R6::R6Class(
+    inherit = LoremProvider,
+    "LoremProvider_ar_AA",
+    public = list(
+        locale = "ar_AA"
+    ),
+    private = list(
+        world_list = lorem_word_list_ar_aa
+    )
 )

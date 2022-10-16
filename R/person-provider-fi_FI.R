@@ -1,19 +1,19 @@
 # modified from the python library faker:
 # https://github.com/joke2k/faker/blob/master/faker/providers/person/fi_FI/__init__.py
 
-person_formats_fi_fi = c(
-  '{{first_names}} {{last_names}}',
-  '{{first_names}} {{last_names}}',
-  '{{last_names}}, {{first_names}}'
+person_formats_fi_fi <- c(
+  "{{first_names}} {{last_names}}",
+  "{{first_names}} {{last_names}}",
+  "{{last_names}}, {{first_names}}"
 )
 
-person_prefixes_fi_fi = c(
-  'Herra', 'hra', 'Rouva', 'rva', 'Tohtori', 'tri', 'prof.', 'arkkit.'
+person_prefixes_fi_fi <- c(
+  "Herra", "hra", "Rouva", "rva", "Tohtori", "tri", "prof.", "arkkit."
 )
 
-person_suffixes_fi_fi = c('DI', 'PhD', 'MSc', 'BSc')
+person_suffixes_fi_fi <- c("DI", "PhD", "MSc", "BSc")
 
-person_first_names_fi_fi = c(
+person_first_names_fi_fi <- c(
   "Aake",
   "Aapeli",
   "Aapo",
@@ -778,7 +778,7 @@ person_first_names_fi_fi = c(
   "Vuokko"
 )
 
-person_last_names_fi_fi = c(
+person_last_names_fi_fi <- c(
   "Aalto",
   "Aaltonen",
   "Aarnio",
@@ -1222,4 +1222,18 @@ person_fi_fi <- list(
   last_names = person_last_names_fi_fi,
   prefixes = person_prefixes_fi_fi,
   suffixes = person_prefixes_fi_fi
+)
+
+#' @describeIn {PersonProvider} {Finnish (Finland)}
+PersonProvider_fi_FI <- R6::R6Class(
+  "PersonProvider_fi_FI",
+  inherit = PersonProvider,
+  public = list(
+    #' @field locale (character) the locale
+    locale = "fi_FI",
+    #' @field formats (character) person name formats
+    formats = person_formats_fi_fi,
+    #' @field person (character) person name data
+    person = person_fi_fi
+  )
 )

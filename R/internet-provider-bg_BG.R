@@ -1,26 +1,28 @@
 # modified from the python library faker:
 # https://github.com/joke2k/faker/blob/master/faker/providers/internet/bg_BG/__init__.py
 
-int_user_name_formats_bg_bg = c(
-    '{{last_name_female}}.{{first_name_female}}',
-    '{{last_name_male}}.{{first_name_male}}',
-    '{{last_name_male}}.{{first_name_male}}',
-    '{{first_name_male}}.{{last_name_male}}',
-    '{{first_name}}##',
-    '?{{last_name}}',
-    '{{first_name}}{{year}}'
+int_user_name_formats_bg_bg <- c(
+  "{{last_name_female}}.{{first_name_female}}",
+  "{{last_name_male}}.{{first_name_male}}",
+  "{{last_name_male}}.{{first_name_male}}",
+  "{{first_name_male}}.{{last_name_male}}",
+  "{{first_name}}##",
+  "?{{last_name}}",
+  "{{first_name}}{{year}}"
 )
 
-int_email_formats_bg_bg = c('{{user_name}}@{{free_email_domain}}',
-'{{user_name}}@{{domain_name}}')
-
-int_free_email_domains_bg_bg = c(
-    'gmail.com', 'yahoo.com', 'hotmail.com', 'mail.bg', 'abv.bg', 'dir.bg'
+int_email_formats_bg_bg <- c(
+  "{{user_name}}@{{free_email_domain}}",
+  "{{user_name}}@{{domain_name}}"
 )
 
-int_tlds_bg_bg = c('bg', 'com', 'biz', 'info', 'net', 'org', 'edu')
+int_free_email_domains_bg_bg <- c(
+  "gmail.com", "yahoo.com", "hotmail.com", "mail.bg", "abv.bg", "dir.bg"
+)
 
-int_replacements_bg_bg = list(
+int_tlds_bg_bg <- c("bg", "com", "biz", "info", "net", "org", "edu")
+
+int_replacements_bg_bg <- list(
   c("\u0411", "b"),
   c("\u0413", "r"),
   c("\u0414", "d"),
@@ -102,3 +104,24 @@ int_replacements_bg_bg = list(
   c("\u044e", "yu"),
   c("\u044f", "ya")
 )
+
+#' @describeIn {InternetProvider} {}
+InternetProvider_bg_BG <- R6::R6Class(
+    inherit = InternetProvider,
+    "InternetProvider_bg_BG",
+    public = list(
+        locale = "bg_BG",
+        #' @field free_email_domains (character) free email tlds
+        free_email_domains = int_free_email_domains_bg_bg,
+        #' @field tlds (character) tlds
+        tlds = int_tlds_bg_bg,
+        #' @field replacements (list) a list
+        replacements = int_replacements_bg_bg,
+        #' @field user_name_formats (character) user name formats
+        user_name_formats =int_user_name_formats_bg_bg,
+        #' @field email_formats (character) email formats
+        email_formats =int_email_formats_bg_bg
+    )
+)
+
+

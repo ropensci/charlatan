@@ -3,20 +3,21 @@ context("JobProvider works")
 skip_on_cran()
 
 test_that("JobProvider works", {
-  aa <- JobProvider$new()
+  aa <- JobProvider_en_US$new()
 
   expect_is(aa$render(), "character")
   expect_gt(nchar(aa$render()), 0)
 })
 
 test_that("JobProvider locale support works", {
-  bb <- JobProvider$new(locale = "fr_FR")
+  bb <- cr_loc_spec_provider("JobProvider", "fr_FR")
 
   expect_is(bb$locale, "character")
   expect_equal(bb$locale, "fr_FR")
   expect_is(bb$render(), "character")
   expect_gt(nchar(bb$render()), 0)
 })
+
 
 context("ch_job works")
 
@@ -36,10 +37,16 @@ test_that("ch_job - n parameter", {
 
 test_that("ch_job - locale parameter", {
   expect_true(
-    any(grepl(ch_job(locale = "fr_FR"),
-              JobProvider$new(locale = "fr_FR")$formats)))
+    any(grepl(
+      ch_job(locale = "fr_FR"),
+      JobProvider$new(locale = "fr_FR")$formats
+    ))
+  )
 
   expect_true(
-    any(grepl(ch_job(locale = "ru_RU"),
-              JobProvider$new(locale = "ru_RU")$formats)))
+    any(grepl(
+      ch_job(locale = "ru_RU"),
+      JobProvider$new(locale = "ru_RU")$formats
+    ))
+  )
 })

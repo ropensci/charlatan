@@ -1,27 +1,27 @@
 # modified from the python library faker:
 # https://github.com/joke2k/faker/blob/master/faker/providers/person/de_DE/__init__.py
 
-person_formats_de_de = c(
-  '{{first_names_male}} {{last_names}}',
-  '{{first_names_male}} {{last_names}}',
-  '{{first_names_male}} {{last_names}}',
-  '{{first_names_male}} {{last_names}}',
-  '{{first_names_male}} {{last_names1}}-{{last_names2}}',
-  '{{first_names_female}} {{last_names}}',
-  '{{first_names_female}} {{last_names}}',
-  '{{first_names_female}} {{last_names}}',
-  '{{first_names_female}} {{last_names}}',
-  '{{first_names_female}} {{last_names1}}-{{last_names2}}',
-  '{{prefixes_male}} {{first_names_male}} {{last_names}}',
-  '{{prefixes_female}} {{first_names_female}} {{last_names}}',
-  '{{first_names_male}} {{last_names}} {{suffixes}}',
-  '{{first_names_female}} {{last_names}} {{suffixes}}',
-  '{{prefixes_male}} {{first_names_male}} {{last_names}} {{suffixes}}',
-  '{{prefixes_female}} {{first_names_female}} {{last_names}} {{suffixes}}'
+person_formats_de_de <- c(
+  "{{first_names_male}} {{last_names}}",
+  "{{first_names_male}} {{last_names}}",
+  "{{first_names_male}} {{last_names}}",
+  "{{first_names_male}} {{last_names}}",
+  "{{first_names_male}} {{last_names1}}-{{last_names2}}",
+  "{{first_names_female}} {{last_names}}",
+  "{{first_names_female}} {{last_names}}",
+  "{{first_names_female}} {{last_names}}",
+  "{{first_names_female}} {{last_names}}",
+  "{{first_names_female}} {{last_names1}}-{{last_names2}}",
+  "{{prefixes_male}} {{first_names_male}} {{last_names}}",
+  "{{prefixes_female}} {{first_names_female}} {{last_names}}",
+  "{{first_names_male}} {{last_names}} {{suffixes}}",
+  "{{first_names_female}} {{last_names}} {{suffixes}}",
+  "{{prefixes_male}} {{first_names_male}} {{last_names}} {{suffixes}}",
+  "{{prefixes_female}} {{first_names_female}} {{last_names}} {{suffixes}}"
 )
 
 # From http://de.wiktionary.org/wiki/Verzeichnis:Deutsch/Liste_der_h%C3%A4ufigsten_m%C3%A4nnlichen_Vornamen_Deutschlands
-person_first_names_male_de_de = c(
+person_first_names_male_de_de <- c(
   "Abbas",
   "Abdul",
   "Abdullah",
@@ -1025,7 +1025,7 @@ person_first_names_male_de_de = c(
 )
 
 # From http://de.wiktionary.org/wiki/Verzeichnis:Deutsch/Liste_der_h%C3%A4ufigsten_weiblichen_Vornamen_Deutschlands
-person_first_names_female_de_de = c(
+person_first_names_female_de_de <- c(
   "Adele",
   "Adelgunde",
   "Adelheid",
@@ -2031,9 +2031,9 @@ person_first_names_female_de_de = c(
   "Zofia"
 )
 
-person_first_names_de_de = c(person_first_names_male_de_de, person_first_names_female_de_de)
+person_first_names_de_de <- c(person_first_names_male_de_de, person_first_names_female_de_de)
 
-person_last_names_de_de = c(
+person_last_names_de_de <- c(
   "Ackermann",
   "Adler",
   "Adolph",
@@ -2441,15 +2441,15 @@ person_last_names_de_de = c(
   "Zorbach"
 )
 
-person_prefixes_male_de_de = c(
-  'Herr', 'Dr.', 'Ing.', 'Dipl.-Ing.', 'Prof.', 'Univ.Prof.'
+person_prefixes_male_de_de <- c(
+  "Herr", "Dr.", "Ing.", "Dipl.-Ing.", "Prof.", "Univ.Prof."
 )
 
-person_prefixes_female_de_de = c(
-  'Frau', 'Dr.', 'Ing.', 'Dipl.-Ing.', 'Prof.', 'Univ.Prof.'
+person_prefixes_female_de_de <- c(
+  "Frau", "Dr.", "Ing.", "Dipl.-Ing.", "Prof.", "Univ.Prof."
 )
 
-person_suffixes_de_de = c('B.Sc.', 'B.A.', 'B.Eng.', 'MBA.')
+person_suffixes_de_de <- c("B.Sc.", "B.A.", "B.Eng.", "MBA.")
 
 person_de_de <- list(
   first_names = person_first_names_de_de,
@@ -2459,4 +2459,18 @@ person_de_de <- list(
   prefixes_female = person_prefixes_female_de_de,
   prefixes_male = person_prefixes_male_de_de,
   suffixes = person_suffixes_de_de
+)
+
+#' @describeIn {PersonProvider} {German (Germany)}
+PersonProvider_de_DE <- R6::R6Class(
+  "PersonProvider_de_DE",
+  inherit = PersonProvider,
+  public = list(
+    #' @field locale (character) the locale
+    locale = "de_DE",
+    #' @field formats (character) person name formats
+    formats = person_formats_de_de,
+    #' @field person (character) person name data
+    person = person_de_de
+  )
 )

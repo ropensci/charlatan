@@ -17,7 +17,7 @@
 #' ch_phone_number(locale = "en_CA")
 #' ch_phone_number(locale = "lv_LV")
 ch_phone_number <- function(n = 1, locale = NULL) {
-  assert(n, c('integer', 'numeric'))
+  assert(n, c("integer", "numeric"))
   if (n == 1) {
     PhoneNumberProvider$new(locale = locale)$render()
   } else {

@@ -1,7 +1,7 @@
 context("InternetProvider works")
 
 test_that("InternetProvider works", {
-  aa <- InternetProvider$new()
+  aa <- InternetProvider_en_US$new()
 
   expect_is(aa, "InternetProvider")
   expect_is(aa, "R6")
@@ -30,7 +30,7 @@ test_that("InternetProvider works", {
 test_that("IP address generation works", {
   skip_if_not_installed("ipaddress")
 
-  aa <- InternetProvider$new()
+  aa <- InternetProvider_en_US$new()
 
   expect_is(aa$ipv4(), "character")
   expect_true(ipaddress::is_ipv4(ipaddress::ip_address(aa$ipv4())))

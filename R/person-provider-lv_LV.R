@@ -1,13 +1,13 @@
 # modified from the python library faker:
 # https://github.com/joke2k/faker/blob/master/faker/providers/person/lv_LV/__init__.py
 
-person_formats_lv_lv = c(
-  '{{first_names}} {{last_names}}',
-  '{{first_names}} {{last_names}}',
-  '{{last_names}}, {{first_names}}'
+person_formats_lv_lv <- c(
+  "{{first_names}} {{last_names}}",
+  "{{first_names}} {{last_names}}",
+  "{{last_names}}, {{first_names}}"
 )
 
-person_first_names_male_lv_lv = c(
+person_first_names_male_lv_lv <- c(
   "\u0100dams",
   "\u0100dolfs",
   "Agris",
@@ -132,7 +132,7 @@ person_first_names_male_lv_lv = c(
   "\u017danis"
 )
 
-person_first_names_female_lv_lv = c(
+person_first_names_female_lv_lv <- c(
   "Agnese",
   "Aiga",
   "Aija",
@@ -280,7 +280,7 @@ person_first_names_female_lv_lv = c(
   "Zigr\u012bda"
 )
 
-person_last_names_male_lv_lv = c(
+person_last_names_male_lv_lv <- c(
   "\u0100bele",
   "\u0100boli\u0146\u0161",
   "\u0100bols",
@@ -361,7 +361,7 @@ person_last_names_male_lv_lv = c(
   "Zvirbulis"
 )
 
-person_last_names_female_lv_lv = c(
+person_last_names_female_lv_lv <- c(
   "\u0100bele",
   "\u0100boli\u0146a",
   "\u0100bola",
@@ -442,20 +442,20 @@ person_last_names_female_lv_lv = c(
   "Zvirbule"
 )
 
-person_last_names_lv_lv = c(person_last_names_male_lv_lv, person_last_names_female_lv_lv)
+person_last_names_lv_lv <- c(person_last_names_male_lv_lv, person_last_names_female_lv_lv)
 
-person_formats_female_lv_lv = c(
-  '{{first_names_female}} {{last_names_female}}',
-  '{{first_names_female}} {{last_names_female}}'
+person_formats_female_lv_lv <- c(
+  "{{first_names_female}} {{last_names_female}}",
+  "{{first_names_female}} {{last_names_female}}"
 )
 
-person_formats_male_lv_lv = c(
-  '{{first_names_male}} {{last_names_male}}',
-  '{{first_names_male}} {{last_names_male}}'
+person_formats_male_lv_lv <- c(
+  "{{first_names_male}} {{last_names_male}}",
+  "{{first_names_male}} {{last_names_male}}"
 )
 
-person_formats_lv_lv = c(person_formats_male_lv_lv, person_formats_female_lv_lv)
-person_first_names_lv_lv = c(person_first_names_male_lv_lv, person_first_names_female_lv_lv)
+person_formats_lv_lv <- c(person_formats_male_lv_lv, person_formats_female_lv_lv)
+person_first_names_lv_lv <- c(person_first_names_male_lv_lv, person_first_names_female_lv_lv)
 
 person_lv_lv <- list(
   first_names = person_first_names_lv_lv,
@@ -463,4 +463,18 @@ person_lv_lv <- list(
   first_names_female = person_first_names_female_lv_lv,
   last_names_male = person_last_names_male_lv_lv,
   last_names_female = person_last_names_female_lv_lv
+)
+
+#' @describeIn {PersonProvider} {Latvian (Latvia)}
+PersonProvider_lv_LV <- R6::R6Class(
+  "PersonProvider_lv_LV",
+  inherit = PersonProvider,
+  public = list(
+    #' @field locale (character) the locale
+    locale = "lv_LV",
+    #' @field formats (character) person name formats
+    formats = person_formats_lv_lv,
+    #' @field person (character) person name data
+    person = person_lv_lv
+  )
 )

@@ -11,9 +11,8 @@
 #' x$rgb_color()
 #' x$rgb_css_color()
 colors <- function(locale=NULL){
-    # TODO: probably warn that this overrides the grDevices::colors() function
     if (is.null(locale)) return(ColorProvider_en_US$new("en_US"))
-    eval(parse(text=paste0("ColorProvider", "_", locale)))$new(locale)
+    cr_loc_spec_provider("ColorProvider",locale)
 }
 
 #' @title ColorProvider

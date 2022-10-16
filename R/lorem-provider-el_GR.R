@@ -524,3 +524,15 @@ lorem_word_list_el_gr <- c(rep(lorem_common_words_el_gr, 2), c(
   "\u03cd\u03c8\u03bf\u03c2",
   "\u03ce\u03c1\u03b1"
 ))
+
+#' @describeIn {LoremProvider} {}
+LoremProvider_el_GR <- R6::R6Class(
+    inherit = LoremProvider,
+    "LoremProvider_el_GR",
+    public = list(
+        locale = "el_GR"
+    ),
+    private = list(
+        world_list = lorem_word_list_el_gr
+    )
+)

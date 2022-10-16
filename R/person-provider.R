@@ -1,3 +1,6 @@
+
+
+
 #' @title PersonProvider
 #' @description person names methods
 #' @export
@@ -64,7 +67,7 @@
 #' z$first_name_male()
 #' z$last_name()
 #' z$prefix()
-#' 
+#'
 #' z <- PersonProvider$new(locale = "en_NZ")
 #' z$locale
 #' z$render()
@@ -83,45 +86,35 @@
 #' PersonProvider$new(locale = "bg_BG")$render()
 #' PersonProvider$new(locale = "da_DK")$render()
 PersonProvider <- R6::R6Class(
-  'PersonProvider',
+  "PersonProvider",
   inherit = BaseProvider,
   public = list(
     #' @field locale (character) the locale
     locale = NULL,
     #' @field formats (character) person name formats
-    formats = person_formats_en_us,
+    formats = NULL,
     #' @field person (character) person name data
-    person = person_en_us,
+    person = NULL,
     #' @field messy (logical) the messy setting, `TRUE` or `FALSE`
     messy = FALSE,
-
+    #' @field person_messy (character) person name data (but messy data)
+    person_messy = NULL,
     #' @description fetch the allowed locales for this provider
     allowed_locales = function() private$locales,
 
     #' @description Create a new `PersonProvider` object
-    #' @param locale (character) the locale to use. See
-    #' `$allowed_locales()` for locales supported (default: en_US)
-    #' @param messy (logical) make some messy data. Default: `FALSE`
-    #' @return A new `PersonProvider` object
-    initialize = function(locale = NULL, messy = FALSE) {
-      self$messy <- if (!is.null(charlatan_settings_env$global_messy)) {
-        assert(charlatan_settings_env$global_messy, "logical")
-        charlatan_settings_env$global_messy
-      } else {
-        assert(messy, "logical")
-        messy
+    #
+    initialize = function(messy = FALSE) {
+      # if messy is true, check if we can use that.
+      if (isTRUE(messy)) {
+        # is there messy data that we can sample from?
+        if (!is.null(self$person_messy)) {
+          self$messy <- TRUE
+        } else {
+          warning("this locale does not have 'messy' data, setting `messy=FALSE`")
+          self$messy <- FALSE
+        }
       }
-      if (!is.null(locale)) {
-        # check global locales
-        super$check_locale(locale)
-        # check person provider locales
-        check_locale_(locale, private$locales)
-        self$locale <- locale
-      } else {
-        self$locale <- 'en_US'
-      }
-      self$formats <- parse_eval("person_formats_", self$locale)
-      self$person <- parse_eval("person_", self$locale, self$messy)
     },
 
     #' @description Make a person's name
@@ -130,7 +123,7 @@ PersonProvider <- R6::R6Class(
       if (is.null(fmt)) fmt <- super$random_element(self$formats)
       dat <- lapply(
         self$person[pluck_names(fmt, self$person)],
-        function (x) {
+        function(x) {
           if (has_probs(x)) {
             super$random_element_prob(x)
           } else {
@@ -150,13 +143,22 @@ PersonProvider <- R6::R6Class(
       }
       whisker::whisker.render(fmt, data = dat)
     },
+    #' @description messy switch (internal).
+    messy_switch = function(clean_choice, messy_choice) {
+      if (self$messy && !is.null(messy_choice)) {
+        messy_choice
+      } else {
+        clean_choice
+      }
+    },
 
     #' @description make a first name
     first_name = function() {
-      if (has_probs(self$person$first_names)) {
-        super$random_element_prob(self$person$first_names)
+      nameobject <- self$messy_switch(self$person$first_names, self$person_messy$first_names)
+      if (has_probs(nameobject)) {
+        super$random_element_prob(nameobject)
       } else {
-        super$random_element(self$person$first_names)
+        super$random_element(nameobject)
       }
     },
 
@@ -197,7 +199,7 @@ PersonProvider <- R6::R6Class(
       } else {
         comb <- c(self$person$last_names_female, self$person$last_names_male)
         if (has_probs(self$person$last_names_female) ||
-            has_probs(self$person$last_names_male)) {
+          has_probs(self$person$last_names_male)) {
           super$random_element_prob(comb)
         } else {
           super$random_element(comb)
@@ -233,62 +235,70 @@ PersonProvider <- R6::R6Class(
 
     #' @description make a name prefix
     prefix = function() {
-      if (any(c("prefixes_male", "prefixes_female") %in% names(self$person))) {
-        super$random_element(c(self$person$prefixes_male,
-          self$person$prefixes_female))
+      nameobject <- self$messy_switch(self$person, self$person_messy)
+      if (any(c("prefixes_male", "prefixes_female") %in% names(nameobject))) {
+        super$random_element(c(
+          nameobject$prefixes_male,
+          nameobject$prefixes_female
+        ))
       } else {
-        super$random_element(self$person$prefixes)
+        super$random_element(nameobject$prefixes)
       }
     },
 
     #' @description make a female name prefix
     prefix_female = function() {
-      if ("prefixes_female" %in% names(self$person)) {
-        super$random_element(self$person$prefixes_female)
+      nameobject <- self$messy_switch(self$person, self$person_messy)
+      if ("prefixes_female" %in% names(nameobject)) {
+        super$random_element(nameobject$prefixes_female)
       } else {
-        super$random_element(self$person$prefixes)
+        super$random_element(nameobject$prefixes)
       }
     },
 
     #' @description make a male name prefix
     prefix_male = function() {
-      if ("prefixes_male" %in% names(self$person)) {
-        super$random_element(self$person$prefixes_male)
+      nameobject <- self$messy_switch(self$person, self$person_messy)
+      if ("prefixes_male" %in% names(nameobject)) {
+        super$random_element(nameobject$prefixes_male)
       } else {
-        super$random_element(self$person$prefixes)
+        super$random_element(nameobject$prefixes)
       }
     },
 
     #' @description make a name suffix
     suffix = function() {
-      if (any(c("suffixes_male", "suffixes_female") %in% names(self$person))) {
-        super$random_element(c(self$person$suffixes_male,
-          self$person$suffixes_female))
+      nameobject <- self$messy_switch(self$person, self$person_messy)
+      if (any(c("suffixes_male", "suffixes_female") %in% names(nameobject))) {
+        super$random_element(c(
+          nameobject$suffixes_male,
+          nameobject$suffixes_female
+        ))
       } else {
-        super$random_element(self$person$suffixes)
+        super$random_element(nameobject$suffixes)
       }
     },
 
     #' @description make a female name suffix
     suffix_female = function() {
-      if ("suffixes_female" %in% names(self$person)) {
-        super$random_element(self$person$suffixes_female)
+      nameobject <- self$messy_switch(self$person, self$person_messy)
+      if ("suffixes_female" %in% names(nameobject)) {
+        super$random_element(nameobject$suffixes_female)
       } else {
-        super$random_element(self$person$suffixes)
+        super$random_element(nameobject$suffixes)
       }
     },
 
     #' @description make a male name suffix
     suffix_male = function() {
-      if ("suffixes_male" %in% names(self$person)) {
-        super$random_element(self$person$suffixes_male)
+      nameobject <- self$messy_switch(self$person, self$person_messy)
+      if ("suffixes_male" %in% names(nameobject)) {
+        super$random_element(nameobject$suffixes_male)
       } else {
-        super$random_element(self$person$suffixes)
+        super$random_element(nameobject$suffixes)
       }
     }
-
   ),
-
   private = list(
     locales = c(
       "bg_BG", "fr_FR", "es_ES", "en_US", "fa_IR", "da_DK",

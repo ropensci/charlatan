@@ -1,12 +1,12 @@
 # modified from the python library faker:
 # https://github.com/joke2k/faker/blob/master/faker/providers/person/ko_KR/__init__.py
 
-person_formats_ko_kr = c(
-  '{{first_names}}{{last_names}}',
-  '{{first_names}}{{last_names1}}{{last_names2}}'
+person_formats_ko_kr <- c(
+  "{{first_names}}{{last_names}}",
+  "{{first_names}}{{last_names1}}{{last_names2}}"
 )
 
-person_first_names_ko_kr = c(
+person_first_names_ko_kr <- c(
   "\uae40",
   "\uc774",
   "\ucd5c",
@@ -170,7 +170,7 @@ person_first_names_ko_kr = c(
   "\uc99d"
 )
 
-person_last_names_ko_kr = c(
+person_last_names_ko_kr <- c(
   "\uc7ac",
   "\uc6b0",
   "\uc9c0",
@@ -280,4 +280,18 @@ person_last_names_ko_kr = c(
 person_ko_kr <- list(
   first_names = person_first_names_ko_kr,
   last_names = person_last_names_ko_kr
+)
+
+#' @describeIn {PersonProvider} {Korean (Republic of Korea)}
+PersonProvider_ko_KR <- R6::R6Class(
+  "PersonProvider_ko_KR",
+  inherit = PersonProvider,
+  public = list(
+    #' @field locale (character) the locale
+    locale = "ko_KR",
+    #' @field formats (character) person name formats
+    formats = person_formats_ko_kr,
+    #' @field person (character) person name data
+    person = person_ko_kr
+  )
 )

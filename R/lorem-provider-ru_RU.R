@@ -503,3 +503,15 @@ lorem_word_list_ru_ru <- c(
   "\u0443\u0432\u0435\u043b\u0438\u0447\u0438\u0432\u0430\u0442\u044c\u0441\u044f",
   "\u0440\u0430\u0432\u043d\u043e\u0434\u0443\u0448\u043d\u044b\u0439"
 )
+
+#' @describeIn {LoremProvider} {Russian (Russia)}
+LoremProvider_ru_RU <- R6::R6Class(
+  inherit = LoremProvider,
+  "LoremProvider_ru_RU",
+  public = list(
+    locale = "ru_RU"
+  ),
+  private = list(
+    world_list = lorem_word_list_ru_ru
+  )
+)

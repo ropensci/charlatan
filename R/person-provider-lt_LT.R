@@ -1,13 +1,13 @@
 # modified from the python library faker:
 # https://github.com/joke2k/faker/blob/master/faker/providers/person/lt_LT/__init__.py
 
-person_formats_lt_lt = c(
-  '{{first_names}} {{last_names}}',
-  '{{first_names}} {{last_names}}',
-  '{{last_names}}, {{first_names}}'
+person_formats_lt_lt <- c(
+  "{{first_names}} {{last_names}}",
+  "{{first_names}} {{last_names}}",
+  "{{last_names}}, {{first_names}}"
 )
 
-person_first_names_lt_lt = c(
+person_first_names_lt_lt <- c(
   "Tomas",
   "Lukas",
   "Mantas",
@@ -208,7 +208,7 @@ person_first_names_lt_lt = c(
   "Diana"
 )
 
-person_last_names_lt_lt = c(
+person_last_names_lt_lt <- c(
   "Kazlauskas",
   "Jankauskas",
   "Petrauskas",
@@ -251,4 +251,18 @@ person_last_names_lt_lt = c(
 person_lt_lt <- list(
   first_names = person_first_names_lt_lt,
   last_names = person_last_names_lt_lt
+)
+
+#' @describeIn {PersonProvider} {}
+PersonProvider_lt_LT <- R6::R6Class(
+  "PersonProvider_lt_LT",
+  inherit = PersonProvider,
+  public = list(
+    #' @field locale (character) the locale
+    locale = "lt_LT",
+    #' @field formats (character) person name formats
+    formats = person_formats_lt_lt,
+    #' @field person (character) person name data
+    person = person_lt_lt
+  )
 )

@@ -11,3 +11,5 @@ appveyor.yml
 ^codemeta\.json$
 ^revdep$
 ^Makefile$
+^todo.md$
+^data-raw$

@@ -1,3 +1,36 @@
+
+
+
+charlatan 0.6.0
+===============
+This release changes the internal logic of the package to make it easier for you to contribute.
+One of the greatest strengths of charlatan and its spirit brothers faker (in python) and faker (in perl) is
+the ability to customize realistically looking data in many locales.
+But it was not so easy to add locales that were very different from en_US. 
+
+## Detailed
+Charlatan used logic to load in locale-specific data, and this worked great, but requires every locale to use the same naming conventions.
+We are using R6 classes to encapsulate the functions and inherit from other classes.
+Since version 0.6.0, locale specific Providers inherit from a global provider with minimal functionality.
+See vignette [TODO name of vignette] for more info.
+TODO this text needs work.
+
+
+### NEW FEATURES
+* Locales inherit from a global provider, giving us the ability to customize every locale.
+* Every provider has at least an en_US locale.
+* Ability to create specific functions for your locale specific provider. Example: Are first and last names not used in your locale? you can now create specific functions for your locale. Example: the japanese locale now has first_kana_name _(for example ヒロキ)_, last_kana_name functionality next to the romanized names. 
+* to instantiate providers you need the new functions `colors()`,`companies()`,`addresses()`, `lorem()`, `internetprovider()`,`jobs()`, `person()`
+
+### MINOR IMPROVEMENTS
+* All locale specific Providers fall back to locale `en_US` if there is no version of this locale provider and will warn you if they do.
+* Reworked development vignette
+* added locale-templates for addresses, colors, company and internet
+
+### BUG FIXES
+* None
+
+
 charlatan 0.5.1
 ===============
 

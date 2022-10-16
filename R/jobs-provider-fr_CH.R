@@ -831,3 +831,15 @@ job_formats_fr_ch <- c(
   "Zingueur avec brevet f\u00e9d\u00e9ral",
   "Zingueur dipl\u00f4m\u00e9"
 )
+
+#' @describeIn {JobProvider} {}
+JobProvider_fr_CH <- R6::R6Class(
+  inherit = JobProvider,
+  "JobProvider_fr_CH",
+  public = list(
+    #' @field locale (character) the locale
+    locale = "fr_CH",
+    #' @field formats (character) vector of possible formats
+    formats = job_formats_fr_ch
+  )
+)

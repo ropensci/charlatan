@@ -147,3 +147,15 @@ lorem_word_list_he_il <- c(
   "\u05ea\u05e6\u05d8\u05e8\u05d9\u05e7",
   "\u05ea\u05e8\u05d1\u05e0\u05da"
 )
+
+#' @describeIn {LoremProvider} {}
+LoremProvider_he_IL <- R6::R6Class(
+    inherit = LoremProvider,
+    "LoremProvider_he_IL",
+    public = list(
+        locale = "he_IL"
+    ),
+    private = list(
+        world_list = lorem_word_list_he_il
+    )
+)

@@ -157,3 +157,15 @@ job_formats_uk_ua <- c(
   "\u042e\u0432\u0435\u043b\u0456\u0440",
   "\u042e\u0440\u0438\u0441\u0442"
 )
+
+#' @describeIn {JobProvider} {}
+JobProvider_uk_UA <- R6::R6Class(
+  inherit = JobProvider,
+  "JobProvider_uk_UA",
+  public = list(
+    #' @field locale (character) the locale
+    locale = "uk_UA",
+    #' @field formats (character) vector of possible formats
+    formats = job_formats_uk_ua
+  )
+)

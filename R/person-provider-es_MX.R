@@ -2,11 +2,11 @@
 # https://github.com/joke2k/faker/blob/master/faker/providers/person/es_MX/__init__.py
 
 person_formats_es_mx <- c(
-  '{{first_names}} {{last_names1}} {{last_names2}}',
-  '{{first_names1}} {{first_names2}} {{last_names}}',
-  '{{first_names1}} {{first_names2}} {{last_names1}} {{last_names2}}',
-  '{{first_names}} {{last_names}}',
-  '{{prefixes}} {{first_names}} {{last_names}}'
+  "{{first_names}} {{last_names1}} {{last_names2}}",
+  "{{first_names1}} {{first_names2}} {{last_names}}",
+  "{{first_names1}} {{first_names2}} {{last_names1}} {{last_names2}}",
+  "{{first_names}} {{last_names}}",
+  "{{prefixes}} {{first_names}} {{last_names}}"
 )
 
 person_first_names_es_mx <- c(
@@ -985,10 +985,24 @@ person_last_names_es_mx <- c(
   "Z\u00fa\u00f1iga"
 )
 
-person_prefixes_es_mx <- c('Sr(a).', 'Dr.', 'Mtro.', 'Lic.', 'Ing.')
+person_prefixes_es_mx <- c("Sr(a).", "Dr.", "Mtro.", "Lic.", "Ing.")
 
 person_es_mx <- list(
   first_names = person_first_names_es_mx,
   last_names = person_last_names_es_mx,
   prefixes = person_prefixes_es_mx
+)
+
+#' @describeIn {PersonProvider} {}
+PersonProvider_es_MX <- R6::R6Class(
+  "PersonProvider_es_MX",
+  inherit = PersonProvider,
+  public = list(
+    #' @field locale (character) the locale
+    locale = "es_MX",
+    #' @field formats (character) person name formats
+    formats = person_formats_es_mx,
+    #' @field person (character) person name data
+    person = person_es_mx
+  )
 )

@@ -39,7 +39,7 @@ company <- function(locale = NULL) {
   if (is.null(locale)) {
     return(CompanyProvider_en_US$new("en_US"))
   }
-  eval(parse(text = paste0("CompanyProvider", "_", locale)))$new(locale)
+    cr_loc_spec_provider("CompanyProvider", locale)
 }
 
 #' @noRd

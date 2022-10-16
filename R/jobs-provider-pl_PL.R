@@ -221,3 +221,15 @@ job_formats_pl_pl <- c(
   "\u017bo\u0142nierz",
   "\u017bongler"
 )
+
+#' @describeIn {JobProvider} {}
+JobProvider_pl_PL <- R6::R6Class(
+  inherit = JobProvider,
+  "JobProvider_pl_PL",
+  public = list(
+    #' @field locale (character) the locale
+    locale = "pl_PL",
+    #' @field formats (character) vector of possible formats
+    formats = job_formats_pl_pl
+  )
+)

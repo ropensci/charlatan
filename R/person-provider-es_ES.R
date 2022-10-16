@@ -1,35 +1,35 @@
 # modified from the python library faker:
 # https://github.com/joke2k/faker/blob/master/faker/providers/person/es_ES/__init__.py
 
-person_formats_male_es_es = c(
-  '{{first_names_male}} {{last_names1}} {{last_names2}}',
-  '{{first_names_male}} {{last_names1}} {{last_names2}}',
-  '{{first_names_male}} {{last_names1}} {{last_names2}}',
-  '{{first_names_male}} {{last_names1}} {{last_names2}}',
-  '{{first_names_male}} {{last_names1}} {{last_names2}}',
-  '{{first_names_male}} {{last_names1}} {{last_names2}}',
-  '{{first_names_male}} {{last_names}}',
-  '{{first_names_male}} {{prefixes}} {{last_names}}',
-  '{{first_names_male}} {{last_names1}}-{{last_names2}}',
-  '{{first_names_male1}} {{first_names_male2}} {{last_names1}} {{last_names2}}'
+person_formats_male_es_es <- c(
+  "{{first_names_male}} {{last_names1}} {{last_names2}}",
+  "{{first_names_male}} {{last_names1}} {{last_names2}}",
+  "{{first_names_male}} {{last_names1}} {{last_names2}}",
+  "{{first_names_male}} {{last_names1}} {{last_names2}}",
+  "{{first_names_male}} {{last_names1}} {{last_names2}}",
+  "{{first_names_male}} {{last_names1}} {{last_names2}}",
+  "{{first_names_male}} {{last_names}}",
+  "{{first_names_male}} {{prefixes}} {{last_names}}",
+  "{{first_names_male}} {{last_names1}}-{{last_names2}}",
+  "{{first_names_male1}} {{first_names_male2}} {{last_names1}} {{last_names2}}"
 )
 
-person_formats_female_es_es = c(
-  '{{first_names_female}} {{last_names1}} {{last_names2}}',
-  '{{first_names_female}} {{last_names1}} {{last_names2}}',
-  '{{first_names_female}} {{last_names1}} {{last_names2}}',
-  '{{first_names_female}} {{last_names1}} {{last_names2}}',
-  '{{first_names_female}} {{last_names1}} {{last_names2}}',
-  '{{first_names_female}} {{last_names1}} {{last_names2}}',
-  '{{first_names_female}} {{last_names}}',
-  '{{first_names_female}} {{prefixes}} {{last_names}}',
-  '{{first_names_female}} {{last_names1}}-{{last_names2}}',
-  '{{first_names_female1}} {{first_names_female2}} {{last_names1}} {{last_names2}}'
+person_formats_female_es_es <- c(
+  "{{first_names_female}} {{last_names1}} {{last_names2}}",
+  "{{first_names_female}} {{last_names1}} {{last_names2}}",
+  "{{first_names_female}} {{last_names1}} {{last_names2}}",
+  "{{first_names_female}} {{last_names1}} {{last_names2}}",
+  "{{first_names_female}} {{last_names1}} {{last_names2}}",
+  "{{first_names_female}} {{last_names1}} {{last_names2}}",
+  "{{first_names_female}} {{last_names}}",
+  "{{first_names_female}} {{prefixes}} {{last_names}}",
+  "{{first_names_female}} {{last_names1}}-{{last_names2}}",
+  "{{first_names_female1}} {{first_names_female2}} {{last_names1}} {{last_names2}}"
 )
 
-person_formats_es_es = c(person_formats_male_es_es, person_formats_female_es_es)
+person_formats_es_es <- c(person_formats_male_es_es, person_formats_female_es_es)
 
-person_first_names_male_es_es = c(
+person_first_names_male_es_es <- c(
   "Antonio",
   "Jose",
   "Manuel",
@@ -132,7 +132,7 @@ person_first_names_male_es_es = c(
   "Rodrigo"
 )
 
-person_first_names_female_es_es = c(
+person_first_names_female_es_es <- c(
   "Mar\u00eda",
   "Carmen",
   "Ana",
@@ -234,9 +234,9 @@ person_first_names_female_es_es = c(
   "Bego\u00f1a"
 )
 
-person_first_names_es_es = c(person_first_names_male_es_es, person_first_names_female_es_es)
+person_first_names_es_es <- c(person_first_names_male_es_es, person_first_names_female_es_es)
 
-person_last_names_es_es = c(
+person_last_names_es_es <- c(
   "Abad",
   "Abascal",
   "Abella",
@@ -1324,7 +1324,7 @@ person_last_names_es_es = c(
   "\u00c1vila"
 )
 
-person_prefixes_es_es = c('de', 'del')
+person_prefixes_es_es <- c("de", "del")
 
 person_es_es <- list(
   first_names = person_first_names_es_es,
@@ -1332,4 +1332,18 @@ person_es_es <- list(
   first_names_female = person_first_names_female_es_es,
   last_names = person_last_names_es_es,
   prefixes = person_prefixes_es_es
+)
+
+#' @describeIn {PersonProvider} {Spanish (Spain)}
+PersonProvider_es_ES <- R6::R6Class(
+  "PersonProvider_es_ES",
+  inherit = PersonProvider,
+  public = list(
+    #' @field locale (character) the locale
+    locale = "es_ES",
+    #' @field formats (character) person name formats
+    formats = person_formats_es_es,
+    #' @field person (character) person name data
+    person = person_es_es
+  )
 )

@@ -57,7 +57,7 @@ test_that("fraudster locale support works", {
   expect_equal(bb$locale, "fr_FR")
 
   # some funs don't have support in certain locales
-  expect_error(bb$color_name(), "fr_FR not in set of available locales")
+  expect_error(bb$color_name(), "There is no locale fr_FR for provider ColorProvider")
 })
 
 test_that("fraudster - fails well", {
@@ -84,7 +84,7 @@ test_that("FraudsterClient - locale parameter", {
   expect_equal(bb$locale, "fr_FR")
 
   # some funs don't have support in certain locales
-  expect_error(bb$color_name(), "fr_FR not in set of available locales")
+  expect_error(bb$color_name(), "There is no locale fr_FR for provider ColorProvider")
 })
 
 test_that("FraudsterClient - fails well", {

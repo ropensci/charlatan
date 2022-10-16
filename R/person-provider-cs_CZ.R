@@ -1,26 +1,26 @@
 # modified from the python library faker:
 # https://github.com/joke2k/faker/blob/master/faker/providers/person/person/__init___cs_cz.py
 
-person_formats_cs_cz = c(
-  '{{first_names_male}} {{last_names_male}}',
-  '{{first_names_male}} {{last_names_male}}',
-  '{{first_names_male}} {{last_names_male}}',
-  '{{first_names_male}} {{last_names_male}}',
-  '{{first_names_male}} {{last_names_male}}',
-  '{{first_names_female}} {{last_names_female}}',
-  '{{first_names_female}} {{last_names_female}}',
-  '{{first_names_female}} {{last_names_female}}',
-  '{{first_names_female}} {{last_names_female}}',
-  '{{first_names_female}} {{last_names_female}}',
-  '{{prefixes_male}} {{first_names_male}} {{last_names_male}}',
-  '{{prefixes_female}} {{first_names_female}} {{last_names_female}}',
-  '{{first_names_male}} {{last_names_male}} {{suffixes}}',
-  '{{first_names_female}} {{last_names_female}} {{suffixes}}',
-  '{{prefixes_male}} {{first_names_male}} {{last_names_male}} {{suffixes}}',
-  '{{prefixes_female}} {{first_names_female}} {{last_names_female}} {{suffixes}}'
+person_formats_cs_cz <- c(
+  "{{first_names_male}} {{last_names_male}}",
+  "{{first_names_male}} {{last_names_male}}",
+  "{{first_names_male}} {{last_names_male}}",
+  "{{first_names_male}} {{last_names_male}}",
+  "{{first_names_male}} {{last_names_male}}",
+  "{{first_names_female}} {{last_names_female}}",
+  "{{first_names_female}} {{last_names_female}}",
+  "{{first_names_female}} {{last_names_female}}",
+  "{{first_names_female}} {{last_names_female}}",
+  "{{first_names_female}} {{last_names_female}}",
+  "{{prefixes_male}} {{first_names_male}} {{last_names_male}}",
+  "{{prefixes_female}} {{first_names_female}} {{last_names_female}}",
+  "{{first_names_male}} {{last_names_male}} {{suffixes}}",
+  "{{first_names_female}} {{last_names_female}} {{suffixes}}",
+  "{{prefixes_male}} {{first_names_male}} {{last_names_male}} {{suffixes}}",
+  "{{prefixes_female}} {{first_names_female}} {{last_names_female}} {{suffixes}}"
 )
 
-person_first_names_male_cs_cz = c(
+person_first_names_male_cs_cz <- c(
   "Adam",
   "Alexander",
   "Alexandr",
@@ -121,7 +121,7 @@ person_first_names_male_cs_cz = c(
   "\u0160t\u011bp\u00e1n"
 )
 
-person_first_names_female_cs_cz = c(
+person_first_names_female_cs_cz <- c(
   "Ad\u00e9la",
   "Alena",
   "Alexandra",
@@ -224,9 +224,9 @@ person_first_names_female_cs_cz = c(
   "\u017daneta"
 )
 
-person_first_names_cs_cz = c(person_first_names_male_cs_cz, person_first_names_female_cs_cz)
+person_first_names_cs_cz <- c(person_first_names_male_cs_cz, person_first_names_female_cs_cz)
 
-person_last_names_male_cs_cz = c(
+person_last_names_male_cs_cz <- c(
   "Barto\u0161",
   "Bene\u0161",
   "Bla\u017eek",
@@ -276,7 +276,7 @@ person_last_names_male_cs_cz = c(
   "\u0160\u0165astn\u00fd"
 )
 
-person_last_names_female_cs_cz = c(
+person_last_names_female_cs_cz <- c(
   "Barto\u0161ov\u00e1",
   "Bene\u0161ov\u00e1",
   "Beranov\u00e1",
@@ -332,15 +332,15 @@ person_last_names_female_cs_cz = c(
   "\u0160\u0165astn\u00e1"
 )
 
-person_last_names_cs_cz = c(person_last_names_male_cs_cz, person_last_names_female_cs_cz)
+person_last_names_cs_cz <- c(person_last_names_male_cs_cz, person_last_names_female_cs_cz)
 
-person_degrees_cs_cz = c('JUDr.', 'Ing.', 'Bc.', 'Mgr.', 'MUDr.', 'RNDr.')
+person_degrees_cs_cz <- c("JUDr.", "Ing.", "Bc.", "Mgr.", "MUDr.", "RNDr.")
 
-person_prefixes_male_cs_cz = c('pan', person_degrees_cs_cz)
+person_prefixes_male_cs_cz <- c("pan", person_degrees_cs_cz)
 
-person_prefixes_female_cs_cz = c("pan\u00ed", "sle\u010dna", person_degrees_cs_cz)
+person_prefixes_female_cs_cz <- c("pan\u00ed", "sle\u010dna", person_degrees_cs_cz)
 
-person_suffixes_cs_cz = c('CSc.', 'DiS.', 'Ph.D.', 'Th.D.')
+person_suffixes_cs_cz <- c("CSc.", "DiS.", "Ph.D.", "Th.D.")
 
 person_cs_cz <- list(
   first_names = person_first_names_cs_cz,
@@ -352,4 +352,18 @@ person_cs_cz <- list(
   prefixes_female = person_prefixes_female_cs_cz,
   prefixes_male = person_prefixes_male_cs_cz,
   suffixes = person_suffixes_cs_cz
+)
+
+#' @describeIn {PersonProvider} {}
+PersonProvider_cs_CZ <- R6::R6Class(
+  "PersonProvider_cs_CZ",
+  inherit = PersonProvider,
+  public = list(
+    #' @field locale (character) the locale
+    locale = "cs_CZ",
+    #' @field formats (character) person name formats
+    formats = person_formats_cs_cz,
+    #' @field person (character) person name data
+    person = person_cs_cz
+  )
 )

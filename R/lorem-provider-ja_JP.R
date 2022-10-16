@@ -1,8 +1,8 @@
 # modified from the python library faker:
 # https://github.com/joke2k/faker/blob/master/faker/providers/lorem/ja_JP/__init__.py
 
-lorem_word_connector_ja_jp <- ''
-lorem_sentence_punctuation_ja_jp <- '\\u3002'
+lorem_word_connector_ja_jp <- ""
+lorem_sentence_punctuation_ja_jp <- "\\u3002"
 lorem_word_list_ja_jp <- c(
   "\u30b3\u30df\u30e5\u30cb\u30c6\u30a3",
   "\u96a0\u3059",
@@ -223,4 +223,18 @@ lorem_word_list_ja_jp <- c(
   "\u3042\u306a\u305f\u81ea\u8eab",
   "\u3058\u3076\u3093\u306e",
   "\u9271\u5c71"
+)
+
+#' @describeIn {LoremProvider} {Japanese (Japan)}
+LoremProvider_ja_JP <- R6::R6Class(
+  inherit = LoremProvider,
+  "LoremProvider_ja_JP",
+  public = list(
+    locale = "ja_JP"
+  ),
+  private = list(
+    world_list = lorem_word_list_ja_jp,
+    word_connector = lorem_word_connector_ja_jp,
+    sentence_punctuation = lorem_sentence_punctuation_ja_jp
+  )
 )

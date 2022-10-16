@@ -1,6 +1,6 @@
 # modified from https://nl.wikipedia.org/wiki/Lijst_van_beroepen
 
-job_formats_nl_nl = c(
+job_formats_nl_nl <- c(
   "Aankondiger",
   "Acceptant",
   "Accountant",
@@ -1246,4 +1246,16 @@ job_formats_nl_nl = c(
   "Zilversmid",
   "Zweminstructeur",
   "Zo\u00f6loog"
+)
+
+#' @describeIn {JobProvider} {Dutch (the Netherlands)}
+JobProvider_nl_NL <- R6::R6Class(
+  inherit = JobProvider,
+  "JobProvider_nl_NL",
+  public = list(
+    #' @field locale (character) the locale
+    locale = "nl_NL",
+    #' @field formats (character) vector of possible formats
+    formats = job_formats_nl_nl
+  )
 )

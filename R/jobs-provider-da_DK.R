@@ -1,7 +1,7 @@
 # modified from the python library faker:
 # https://github.com/joke2k/faker/blob/master/faker/providers/job/__init__.py
 
-job_formats_da_dk = c(
+job_formats_da_dk <- c(
   "Administrationsassistent",
   "Administrationschef",
   "Administrations\u00f8konom",
@@ -700,4 +700,15 @@ job_formats_da_dk = c(
   "\u00d8konomidirekt\u00f8r",
   "\u00d8konomikonsulent",
   "\u00d8konomir\u00e5dgiver"
+)
+#' @describeIn {JobProvider} {}
+JobProvider_da_DK <- R6::R6Class(
+  inherit = JobProvider,
+  "JobProvider_da_DK",
+  public = list(
+    #' @field locale (character) the locale
+    locale = "da_DK",
+    #' @field formats (character) vector of possible formats
+    formats = job_formats_da_dk
+  )
 )

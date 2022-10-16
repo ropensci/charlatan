@@ -1,7 +1,7 @@
 # modified from the python library faker:
 # https://github.com/joke2k/faker/blob/master/faker/providers/job/__init__.py
 
-job_formats_en_us = c(
+job_formats_en_us <- c(
   "Academic librarian",
   "Accommodation manager",
   "Accountant, chartered",
@@ -641,4 +641,16 @@ job_formats_en_us = c(
   "Wellsite geologist",
   "Writer",
   "Youth worker"
+)
+
+#' @describeIn {JobProvider} {English (United States)}
+JobProvider_en_US <- R6::R6Class(
+  inherit = JobProvider,
+  "JobProvider_en_US",
+  public = list(
+    #' @field locale (character) the locale
+    locale = "en_US",
+    #' @field formats (character) vector of possible formats
+    formats = job_formats_en_us
+  )
 )

@@ -98,3 +98,15 @@ job_formats_fa_ir <- c(
   "\u06af\u0632\u0627\u0631\u0634\f\u06af\u0631",
   "\u062e\u0637\u0627\u0637"
 )
+
+#' @describeIn {JobProvider} {Farsi (Iran)}
+JobProvider_fa_IR <- R6::R6Class(
+  inherit = JobProvider,
+  "JobProvider_fa_IR",
+  public = list(
+    #' @field locale (character) the locale
+    locale = "fa_IR",
+    #' @field formats (character) vector of possible formats
+    formats = job_formats_fa_ir
+  )
+)
