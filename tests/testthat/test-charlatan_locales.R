@@ -16,7 +16,7 @@ test_that("available_locales and charlatan_locales have equal length", {
 })
 
 test_that("all provider locales are in available_locales", {
-  expect_true(all(AddressProvider$new()$allowed_locales() %in% available_locales))
+  expect_true(all(addresses("en_US")$allowed_locales() %in% available_locales))
   expect_true(all(ColorProvider$new()$allowed_locales() %in% available_locales))
   expect_true(all(CompanyProvider$new()$allowed_locales() %in% available_locales))
   expect_true(all(FileProvider$new()$allowed_locales() %in% available_locales))

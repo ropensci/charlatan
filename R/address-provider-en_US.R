@@ -1,284 +1,359 @@
 # modified from the python library faker:
 # https://github.com/joke2k/faker/blob/master/faker/providers/address/en_US/__init__.py
 
-city_prefixes_en_us <- c('North', 'East', 'West', 'South', 'New', 'Lake', 'Port')
+AddressProvider_en_US <- R6::R6Class(
+  inherit = AddressProvider,
+  "AddressProvider_en_US",
+  lock_objects = FALSE,
+  public = list(
+    city_prefixes = c("North", "East", "West", "South", "New", "Lake", "Port"),
+    city_suffixes = c(
+      "town",
+      "ton",
+      "land",
+      "ville",
+      "berg",
+      "burgh",
+      "borough",
+      "bury",
+      "view",
+      "port",
+      "mouth",
+      "stad",
+      "furt",
+      "chester",
+      "fort",
+      "haven",
+      "side",
+      "shire"
+    ),
+    building_number_formats = c("#####", "####", "###"),
+    street_suffixes = c(
+      "Alley",
+      "Avenue",
+      "Branch",
+      "Bridge",
+      "Brook",
+      "Brooks",
+      "Burg",
+      "Burgs",
+      "Bypass",
+      "Camp",
+      "Canyon",
+      "Cape",
+      "Causeway",
+      "Center",
+      "Centers",
+      "Circle",
+      "Circles",
+      "Cliff",
+      "Cliffs",
+      "Club",
+      "Common",
+      "Corner",
+      "Corners",
+      "Course",
+      "Court",
+      "Courts",
+      "Cove",
+      "Coves",
+      "Creek",
+      "Crescent",
+      "Crest",
+      "Crossing",
+      "Crossroad",
+      "Curve",
+      "Dale",
+      "Dam",
+      "Divide",
+      "Drive",
+      "Drives",
+      "Estate",
+      "Estates",
+      "Expressway",
+      "Extension",
+      "Extensions",
+      "Fall",
+      "Falls",
+      "Ferry",
+      "Field",
+      "Fields",
+      "Flat",
+      "Flats",
+      "Ford",
+      "Fords",
+      "Forest",
+      "Forge",
+      "Forges",
+      "Fork",
+      "Forks",
+      "Fort",
+      "Freeway",
+      "Garden",
+      "Gardens",
+      "Gateway",
+      "Glen",
+      "Glens",
+      "Green",
+      "Greens",
+      "Grove",
+      "Groves",
+      "Harbor",
+      "Harbors",
+      "Haven",
+      "Heights",
+      "Highway",
+      "Hill",
+      "Hills",
+      "Hollow",
+      "Inlet",
+      "Island",
+      "Islands",
+      "Isle",
+      "Junction",
+      "Junctions",
+      "Key",
+      "Keys",
+      "Knoll",
+      "Knolls",
+      "Lake",
+      "Lakes",
+      "Land",
+      "Landing",
+      "Lane",
+      "Light",
+      "Lights",
+      "Loaf",
+      "Lock",
+      "Locks",
+      "Lodge",
+      "Loop",
+      "Mall",
+      "Manor",
+      "Manors",
+      "Meadow",
+      "Meadows",
+      "Mews",
+      "Mill",
+      "Mills",
+      "Mission",
+      "Motorway",
+      "Mount",
+      "Mountain",
+      "Mountains",
+      "Neck",
+      "Orchard",
+      "Oval",
+      "Overpass",
+      "Park",
+      "Parks",
+      "Parkway",
+      "Parkways",
+      "Pass",
+      "Passage",
+      "Path",
+      "Pike",
+      "Pine",
+      "Pines",
+      "Place",
+      "Plain",
+      "Plains",
+      "Plaza",
+      "Point",
+      "Points",
+      "Port",
+      "Ports",
+      "Prairie",
+      "Radial",
+      "Ramp",
+      "Ranch",
+      "Rapid",
+      "Rapids",
+      "Rest",
+      "Ridge",
+      "Ridges",
+      "River",
+      "Road",
+      "Roads",
+      "Route",
+      "Row",
+      "Rue",
+      "Run",
+      "Shoal",
+      "Shoals",
+      "Shore",
+      "Shores",
+      "Skyway",
+      "Spring",
+      "Springs",
+      "Spur",
+      "Spurs",
+      "Square",
+      "Squares",
+      "Station",
+      "Stravenue",
+      "Stream",
+      "Street",
+      "Streets",
+      "Summit",
+      "Terrace",
+      "Throughway",
+      "Trace",
+      "Track",
+      "Trafficway",
+      "Trail",
+      "Tunnel",
+      "Turnpike",
+      "Underpass",
+      "Union",
+      "Unions",
+      "Valley",
+      "Valleys",
+      "Via",
+      "Viaduct",
+      "View",
+      "Views",
+      "Village",
+      "Villages",
+      "Ville",
+      "Vista",
+      "Walk",
+      "Walks",
+      "Wall",
+      "Way",
+      "Ways",
+      "Well",
+      "Wells"
+    ),
+    postcode_formats = c("#####", "#####-####"),
+    states = c(
+      "Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado",
+      "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho",
+      "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana",
+      "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota",
+      "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada",
+      "New Hampshire", "New Jersey", "New Mexico", "New York",
+      "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon",
+      "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota",
+      "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington",
+      "West Virginia", "Wisconsin", "Wyoming"
+    ),
+    states_abbr = c(
+      "AL", "AK", "AS", "AZ", "AR", "CA", "CO", "CT", "DE", "DC", "FM", "FL",
+      "GA", "GU", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MH",
+      "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM",
+      "NY", "NC", "ND", "MP", "OH", "OK", "OR", "PW", "PA", "PR", "RI", "SC",
+      "SD", "TN", "TX", "UT", "VT", "VI", "VA", "WA", "WV", "WI", "WY"
+    ),
+    military_state_abbr = c("AE", "AA", "AP"),
+    military_ship_prefix = c("USS", "USNS", "USNV", "USCGC"),
+    military_apo_format = c("PSC ####, Box ####"),
+    military_dpo_format = c("Unit #### Box ####"),
+    city_formats = c(
+      "{{city_prefix}} {{first_name}}{{city_suffix}}",
+      "{{city_prefix}} {{first_name}}",
+      "{{first_name}}{{city_suffix}}",
+      "{{last_name}}{{city_suffix}}"
+    ),
+    street_name_formats = c(
+      "{{first_name}} {{street_suffix}}",
+      "{{last_name}} {{street_suffix}}"
+    ),
+    street_address_formats = c(
+      "{{building_number}} {{street_name}}",
+      "{{building_number}} {{street_name}} {{secondary_address}}"
+    ),
+    address_formats = c(
+      "{{street_address}}\n{{city}}, {{state_abbr}} {{postcode}}"
+    ),
+    mil_address_formats = c(
+      "{{military_apo}}\nAPO {{military_state}} {{postcode}}",
+      "{{military_ship}} {{last_name}}\nFPO {{military_state}} {{postcode}}",
+      "{{military_dpo}}\nDPO {{military_state}} {{postcode}}"
+    ),
+    secondary_address_formats = c("Apt. ###", "Suite ###"),
 
-city_suffixes_en_us <- c(
-  'town',
-  'ton',
-  'land',
-  'ville',
-  'berg',
-  'burgh',
-  'borough',
-  'bury',
-  'view',
-  'port',
-  'mouth',
-  'stad',
-  'furt',
-  'chester',
-  'fort',
-  'haven',
-  'side',
-  'shire'
+    #' @description address
+    address = function() {
+      # faker python library has 25 civ addresses, and 3 military addresses
+      draw <- sample(1:28, 1)
+      if (draw >= 26) {
+        self$mil_address()
+      } else {
+        self$civ_address()
+      }
+    },
+
+    #' @description civilian address the type of address you would expect
+    civ_address = function() {
+      pattern <- super$random_element(self$address_formats)
+      dat <- list(
+        street_address = self$street_address(),
+        city = self$city(),
+        state_abbr = super$random_element(self$states_abbr),
+        postcode = self$postcode()
+      )
+      whisker::whisker.render(pattern, data = dat)
+    },
+    #' @description Military address
+    mil_address = function() {
+      pattern <- super$random_element(self$mil_address_formats)
+      pp <- PersonProvider$new(locale = self$locale)
+      dat <- list(
+        military_state = super$random_element(self$military_state_abbr),
+        military_apo = super$numerify(super$random_element(self$military_apo_format)),
+        military_ship = super$random_element(self$military_ship_prefix),
+        military_dpo = super$numerify(super$random_element(self$military_dpo_format)),
+        last_name = pp$last_name(),
+        postcode = self$postcode()
+      )
+      whisker::whisker.render(pattern, data = dat)
+    },
+    #' @description city
+    city = function() {
+      pattern <- super$random_element(self$city_formats)
+      # PersonProvider must implement the same locales for this to work
+      pp <- PersonProvider$new(locale = self$locale)
+
+      dat <- list(
+        first_name = pp$first_name(),
+        last_name = pp$last_name(),
+        city_prefix = super$random_element(self$city_prefixes),
+        city_suffix = super$random_element(self$city_suffixes)
+      )
+      whisker::whisker.render(pattern, data = dat)
+    },
+    #' @description street name
+    street_name = function() {
+      pattern <- super$random_element(self$street_name_formats)
+      # PersonProvider must implement the same locales for this to work
+      pp <- PersonProvider$new(locale = self$locale)
+      dat <- list(
+        first_name = pp$first_name(),
+        last_name = pp$last_name(),
+        street_suffix = super$random_element(self$street_suffixes)
+      )
+      whisker::whisker.render(pattern, data = dat)
+    },
+    #' @description street address
+    street_address = function() {
+      pattern <- super$random_element(self$street_address_formats)
+      dat <- list(
+        building_number = self$building_number(),
+        street_name = self$street_name(),
+        secondary_address = super$bothify(super$random_element(self$secondary_address_formats))
+      )
+      whisker::whisker.render(pattern, data = dat)
+    },
+    #' @description postal code
+    postcode = function() {
+      toupper(super$bothify(super$random_element(self$postcode_formats)))
+    },
+    building_number = function() {
+      super$numerify(super$random_element(self$building_number_formats))
+    },
+    state = function() {
+      super$random_element(self$states)
+    }
+  )
 )
-
-building_number_formats_en_us <- c('#####', '####', '###')
-
-street_suffixes_en_us <- c(
-  'Alley',
-  'Avenue',
-  'Branch',
-  'Bridge',
-  'Brook',
-  'Brooks',
-  'Burg',
-  'Burgs',
-  'Bypass',
-  'Camp',
-  'Canyon',
-  'Cape',
-  'Causeway',
-  'Center',
-  'Centers',
-  'Circle',
-  'Circles',
-  'Cliff',
-  'Cliffs',
-  'Club',
-  'Common',
-  'Corner',
-  'Corners',
-  'Course',
-  'Court',
-  'Courts',
-  'Cove',
-  'Coves',
-  'Creek',
-  'Crescent',
-  'Crest',
-  'Crossing',
-  'Crossroad',
-  'Curve',
-  'Dale',
-  'Dam',
-  'Divide',
-  'Drive',
-  'Drives',
-  'Estate',
-  'Estates',
-  'Expressway',
-  'Extension',
-  'Extensions',
-  'Fall',
-  'Falls',
-  'Ferry',
-  'Field',
-  'Fields',
-  'Flat',
-  'Flats',
-  'Ford',
-  'Fords',
-  'Forest',
-  'Forge',
-  'Forges',
-  'Fork',
-  'Forks',
-  'Fort',
-  'Freeway',
-  'Garden',
-  'Gardens',
-  'Gateway',
-  'Glen',
-  'Glens',
-  'Green',
-  'Greens',
-  'Grove',
-  'Groves',
-  'Harbor',
-  'Harbors',
-  'Haven',
-  'Heights',
-  'Highway',
-  'Hill',
-  'Hills',
-  'Hollow',
-  'Inlet',
-  'Island',
-  'Islands',
-  'Isle',
-  'Junction',
-  'Junctions',
-  'Key',
-  'Keys',
-  'Knoll',
-  'Knolls',
-  'Lake',
-  'Lakes',
-  'Land',
-  'Landing',
-  'Lane',
-  'Light',
-  'Lights',
-  'Loaf',
-  'Lock',
-  'Locks',
-  'Lodge',
-  'Loop',
-  'Mall',
-  'Manor',
-  'Manors',
-  'Meadow',
-  'Meadows',
-  'Mews',
-  'Mill',
-  'Mills',
-  'Mission',
-  'Motorway',
-  'Mount',
-  'Mountain',
-  'Mountains',
-  'Neck',
-  'Orchard',
-  'Oval',
-  'Overpass',
-  'Park',
-  'Parks',
-  'Parkway',
-  'Parkways',
-  'Pass',
-  'Passage',
-  'Path',
-  'Pike',
-  'Pine',
-  'Pines',
-  'Place',
-  'Plain',
-  'Plains',
-  'Plaza',
-  'Point',
-  'Points',
-  'Port',
-  'Ports',
-  'Prairie',
-  'Radial',
-  'Ramp',
-  'Ranch',
-  'Rapid',
-  'Rapids',
-  'Rest',
-  'Ridge',
-  'Ridges',
-  'River',
-  'Road',
-  'Roads',
-  'Route',
-  'Row',
-  'Rue',
-  'Run',
-  'Shoal',
-  'Shoals',
-  'Shore',
-  'Shores',
-  'Skyway',
-  'Spring',
-  'Springs',
-  'Spur',
-  'Spurs',
-  'Square',
-  'Squares',
-  'Station',
-  'Stravenue',
-  'Stream',
-  'Street',
-  'Streets',
-  'Summit',
-  'Terrace',
-  'Throughway',
-  'Trace',
-  'Track',
-  'Trafficway',
-  'Trail',
-  'Tunnel',
-  'Turnpike',
-  'Underpass',
-  'Union',
-  'Unions',
-  'Valley',
-  'Valleys',
-  'Via',
-  'Viaduct',
-  'View',
-  'Views',
-  'Village',
-  'Villages',
-  'Ville',
-  'Vista',
-  'Walk',
-  'Walks',
-  'Wall',
-  'Way',
-  'Ways',
-  'Well',
-  'Wells'
-)
-
-postcode_formats_en_us <- c('#####', '#####-####')
-
-states_en_us <- c(
-  'Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado',
-  'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho',
-  'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana',
-  'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota',
-  'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada',
-  'New Hampshire', 'New Jersey', 'New Mexico', 'New York',
-  'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon',
-  'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota',
-  'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington',
-  'West Virginia', 'Wisconsin', 'Wyoming'
-)
-states_abbr_en_us <- c(
-  'AL', 'AK', 'AS', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'DC', 'FM', 'FL',
-  'GA', 'GU', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MH',
-  'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM',
-  'NY', 'NC', 'ND', 'MP', 'OH', 'OK', 'OR', 'PW', 'PA', 'PR', 'RI', 'SC',
-  'SD', 'TN', 'TX', 'UT', 'VT', 'VI', 'VA', 'WA', 'WV', 'WI', 'WY'
-)
-
-military_state_abbr_en_us <- c('AE', 'AA', 'AP')
-
-military_ship_prefix_en_us <- c('USS', 'USNS', 'USNV', 'USCGC')
-
-military_apo_format_en_us <- c("PSC ####, Box ####")
-
-military_dpo_format_en_us <- c("Unit #### Box ####")
-
-city_formats_en_us <- c(
-  '{{city_prefix}} {{first_name}}{{city_suffix}}',
-  '{{city_prefix}} {{first_name}}',
-  '{{first_name}}{{city_suffix}}',
-  '{{last_name}}{{city_suffix}}'
-)
-
-street_name_formats_en_us <- c(
-  '{{first_name}} {{street_suffix}}',
-  '{{last_name}} {{street_suffix}}'
-)
-
-street_address_formats_en_us <- c(
-  '{{building_number}} {{street_name}}',
-  '{{building_number}} {{street_name}} {{secondary_address}}'
-)
-
-address_formats_en_us <- "{{street_address}}\n{{city}}, {{state_abbr}} {{postcode}}"
-
-# address_formats = OrderedDict((
-#   ("{{street_address}}\n{{city}}, {{state_abbr}} {{postcode}}", 25),
-#   #  military address formatting.
-#   ("{{military_apo}}\nAPO {{military_state}} {{postcode}}", 1),
-#   ("{{military_ship}} {{last_name}}\nFPO {{military_state}} {{postcode}}", 1),
-#   ("{{military_dpo}}\nDPO {{military_state}} {{postcode}}", 1),
-# ))
-
-secondary_address_formats_en_us <- c('Apt. ###', 'Suite ###')
