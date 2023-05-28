@@ -22,11 +22,14 @@
 #' ch_job(locale = "uk_UA", n = 10)
 #' ch_job(locale = "zh_TW", n = 10)
 ch_job <- function(n = 1, locale = NULL) {
-  assert(n, c('integer', 'numeric'))
+  assert(n, c("integer", "numeric"))
+  if (is.null(locale)) {
+    locale <- "en_US"
+  }
+  jj <- cr_loc_spec_provider("JobProvider", locale)
   if (n == 1) {
-    JobProvider$new(locale = locale)$render()
+    jj$render()
   } else {
-    x <- JobProvider$new(locale = locale)
-    replicate(n, x$render())
+    replicate(n, jj$render())
   }
 }

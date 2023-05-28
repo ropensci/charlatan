@@ -18,14 +18,18 @@ TODO this text needs work.
 
 ### NEW FEATURES
 * Locales inherit from a global provider, giving us the ability to customize every locale.
+* A new baseclass BareProvider creates all of the selection and fill in functions, the BaseProvider inherits from that  and provides the locale specific functionality. Functionality of BaseProvider remains the same, but we can now also use BareProvider for non-locale Providers such as datetime provider.
 * Every provider has at least an en_US locale.
 * Ability to create specific functions for your locale specific provider. Example: Are first and last names not used in your locale? you can now create specific functions for your locale. Example: the japanese locale now has first_kana_name _(for example ヒロキ)_, last_kana_name functionality next to the romanized names. 
-* to instantiate providers you need the new functions `colors()`,`companies()`,`addresses()`, `lorem()`, `internetprovider()`,`jobs()`, `person()`
+* all bare classes will error when you try to init them.
+* all locales have labels so they are connected in the docs.
+
 
 ### MINOR IMPROVEMENTS
 * All locale specific Providers fall back to locale `en_US` if there is no version of this locale provider and will warn you if they do.
 * Reworked development vignette
 * added locale-templates for addresses, colors, company and internet
+* fix all docs
 
 ### BUG FIXES
 * None

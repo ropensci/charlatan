@@ -8,17 +8,30 @@ int_free_email_domains_fa_ir <- c(
 )
 int_tlds_fa_ir <- c("com", "com", "com", "net", "org", "ir", "ir", "ir")
 
-#' @describeIn {InternetProvider} {}
+#' Internet provider for Iran
+#'
+#' methods for internet related data, like email addresses,
+#' usernames, and websites.
+#' @family fa
+#' @family IR
+#' @export
+#' @examples
+#' x <- InternetProvider_bg_BG$new()
+#' x$email()
+#' x$free_email()
+#' x$mac_address()
+#' x$company_email()
 InternetProvider_fa_IR <- R6::R6Class(
-    inherit = InternetProvider,
-    "InternetProvider_fa_IR",
-    public = list(
-        locale = "fa_IR",
-        #' @field free_email_domains (character) free email tlds
-        free_email_domains = int_free_email_domains_fa_ir,
-        #' @field tlds (character) tlds
-        tlds = int_tlds_fa_ir,
-        #' @field safe_email_tlds (character) safe email tlds
-        safe_email_tlds = int_safe_email_tlds_fa_ir
-    )
+  inherit = InternetProvider,
+  "InternetProvider_fa_IR",
+  public = list(
+    #' @field locale (character) the locale
+    locale = "fa_IR",
+    #' @field free_email_domains (character) free email tlds
+    free_email_domains = int_free_email_domains_fa_ir,
+    #' @field tlds (character) tlds
+    tlds = int_tlds_fa_ir,
+    #' @field safe_email_tlds (character) safe email tlds
+    safe_email_tlds = int_safe_email_tlds_fa_ir
+  )
 )

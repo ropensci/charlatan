@@ -28,22 +28,32 @@ int_free_email_domains_cs_cz <- c(
 
 int_tlds_cs_cz <- c("cz", "com", "cz")
 
-#' @describeIn {InternetProvider} {}
+#' Internet provider
+#'
+#' methods for internet related data, like email addresses,
+#' usernames, and websites.
+#' @family cs
+#' @family CZ
+#' @export
+#' @examples
+#' x <- InternetProvider_cs_CZ$new()
+#' x$email()
+#' x$free_email()
+#' x$mac_address()
+#' x$company_email()
 InternetProvider_cs_CZ <- R6::R6Class(
-    inherit = InternetProvider,
-    "InternetProvider_cs_CZ",
-    public = list(
-        locale = "cs_CZ",
-        #' @field free_email_domains (character) free email tlds
-        free_email_domains = int_free_email_domains_cs_cz,
-        #' @field tlds (character) tlds
-        tlds = int_tlds_cs_cz,
-        #' @field user_name_formats (character) user name formats
-        user_name_formats =int_user_name_formats_cs_cz,
-        #' @field email_formats (character) email formats
-        email_formats =int_email_formats_cs_cz
-    )
+  inherit = InternetProvider,
+  "InternetProvider_cs_CZ",
+  public = list(
+    #' @field locale (character) the locale
+    locale = "cs_CZ",
+    #' @field free_email_domains (character) free email tlds
+    free_email_domains = int_free_email_domains_cs_cz,
+    #' @field tlds (character) tlds
+    tlds = int_tlds_cs_cz,
+    #' @field user_name_formats (character) user name formats
+    user_name_formats = int_user_name_formats_cs_cz,
+    #' @field email_formats (character) email formats
+    email_formats = int_email_formats_cs_cz
+  )
 )
-
-
-

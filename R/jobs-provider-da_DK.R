@@ -701,7 +701,15 @@ job_formats_da_dk <- c(
   "\u00d8konomikonsulent",
   "\u00d8konomir\u00e5dgiver"
 )
-#' @describeIn {JobProvider} {}
+#' Job provider
+#'
+#' Methods for jobs. Create a job name.
+#' @family da
+#' @family DK
+#' @export
+#' @examples
+#' x <- JobProvider_da_DK$new()
+#' x$render()
 JobProvider_da_DK <- R6::R6Class(
   inherit = JobProvider,
   "JobProvider_da_DK",

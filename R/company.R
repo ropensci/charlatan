@@ -15,11 +15,11 @@
 #' ch_company(locale = "es_MX", n = 10)
 #' ch_company(locale = "hr_HR", n = 10)
 ch_company <- function(n = 1, locale = NULL) {
-  assert(n, c('integer', 'numeric'))
+  assert(n, c("integer", "numeric"))
+  x <- subclass(provider = "CompanyProvider",locale = locale)
   if (n == 1) {
-    company(locale = locale)$company()
+    x$company()
   } else {
-    x <- company(locale = locale)
     replicate(n, x$company())
   }
 }

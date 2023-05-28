@@ -222,7 +222,15 @@ job_formats_pl_pl <- c(
   "\u017bongler"
 )
 
-#' @describeIn {JobProvider} {}
+#' Job provider
+#'
+#' Methods for jobs. Create a job name.
+#' @family pl
+#' @family PL
+#' @export
+#' @examples
+#' x <- JobProvider_pl_PL$new()
+#' x$render()
 JobProvider_pl_PL <- R6::R6Class(
   inherit = JobProvider,
   "JobProvider_pl_PL",

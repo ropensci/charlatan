@@ -5,7 +5,7 @@ test_that("ch_generate works - default settings", {
 
   expect_is(aa, "data.frame")
   expect_is(aa, "tbl_df")
-  expect_named(aa, c('name', 'job', 'phone_number'))
+  expect_named(aa, c("name", "job", "phone_number"))
   expect_is(aa$name, "character")
   expect_is(aa$job, "character")
   expect_is(aa$phone_number, "character")
@@ -18,12 +18,12 @@ test_that("ch_generate works - choose fields", {
   aa <- ch_generate("job")
   expect_is(aa, "data.frame")
   expect_is(aa, "tbl_df")
-  expect_named(aa, 'job')
+  expect_named(aa, "job")
 
   aa <- ch_generate("job", "currency")
   expect_is(aa, "data.frame")
   expect_is(aa, "tbl_df")
-  expect_named(aa, c('job', 'currency'))
+  expect_named(aa, c("job", "currency"))
 })
 
 
@@ -57,9 +57,13 @@ test_that("ch_generate fails well", {
   # has to be character
   expect_error(ch_generate(4), "choices must be of class character")
 
-  expect_error(ch_generate(n = "Asdf"),
-               "n must be of class integer, numeric")
+  expect_error(
+    ch_generate(n = "Asdf"),
+    "n must be of class integer, numeric"
+  )
 
-  expect_error(ch_generate(locale = "foobar"),
-               "foobar not in set of available locales")
+  expect_error(
+    ch_generate(locale = "foobar"),
+    "There is no locale foobar for provider PersonProvider"
+  )
 })

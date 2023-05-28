@@ -475,7 +475,15 @@ job_formats_zh_tw <- c(
   "\u9eb5\u5305\u5e2b",
   "\u9ebb\u9189\u91ab\u5e2b"
 )
-#' @describeIn {JobProvider} {}
+#' Job provider
+#'
+#' Methods for jobs. Create a job name.
+#' @family zh
+#' @family TW
+#' @export
+#' @examples
+#' x <- JobProvider_zh_TW$new()
+#' x$render()
 JobProvider_zh_TW <- R6::R6Class(
   inherit = JobProvider,
   "JobProvider_zh_TW",

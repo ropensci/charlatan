@@ -42,7 +42,7 @@ test_that("fraudster - all the things work", {
   expect_type(aa$uniform(), "double")
   expect_type(aa$norm(), "double")
   expect_type(aa$lnorm(), "double")
-  expect_type(aa$beta(), "double")
+  expect_type(aa$beta(shape1 = 1, shape2 = 1), "double")
   expect_is(aa$currency(), "character")
   expect_is(aa$credit_card_number(), "character")
   expect_is(aa$credit_card_provider(), "character")
@@ -88,6 +88,8 @@ test_that("FraudsterClient - locale parameter", {
 })
 
 test_that("FraudsterClient - fails well", {
-  expect_error(FraudsterClient$new(locale = "foobar"),
-               "foobar not in set of available locales")
+  expect_error(
+    FraudsterClient$new(locale = "foobar"),
+    "foobar not in set of available locales"
+  )
 })

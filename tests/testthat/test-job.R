@@ -26,7 +26,7 @@ test_that("ch_job", {
 
   expect_is(aa, "character")
   expect_gt(nchar(aa), 0)
-  expect_true(aa %in% JobProvider$new()$formats)
+  expect_true(aa %in% JobProvider_en_US$new()$formats)
 })
 
 test_that("ch_job - n parameter", {
@@ -39,14 +39,14 @@ test_that("ch_job - locale parameter", {
   expect_true(
     any(grepl(
       ch_job(locale = "fr_FR"),
-      JobProvider$new(locale = "fr_FR")$formats
+      JobProvider_fr_FR$new()$formats
     ))
   )
 
   expect_true(
     any(grepl(
       ch_job(locale = "ru_RU"),
-      JobProvider$new(locale = "ru_RU")$formats
+      JobProvider_ru_RU$new()$formats
     ))
   )
 })

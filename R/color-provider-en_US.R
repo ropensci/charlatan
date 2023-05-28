@@ -4,9 +4,10 @@
 #' @title ColorProvider
 #' @description methods for colors in locale English (United States)
 #' @export
-#' @keywords internal
+#' @family en
+#' @family US
 #' @examples
-#' x <- colors("en_US")
+#' x <- ColorProvider_en_US$new()
 #' x$locale
 #' x$color_name()
 #' x$safe_color_name()
@@ -19,6 +20,9 @@ ColorProvider_en_US <- R6::R6Class(
   "ColorProvider_en_US",
   lock_objects = FALSE,
   public = list(
+    #' @field locale (character) xxx
+    locale = "en_US",
+    #' @field all_colors A vector with named list items containing the name of the color and the hex value.
     all_colors = c(
       list(AliceBlue = "#F0F8FF"),
       list(AntiqueWhite = "#FAEBD7"),
@@ -161,6 +165,7 @@ ColorProvider_en_US <- R6::R6Class(
       list(Yellow = "#FFFF00"),
       list(YellowGreen = "#9ACD3")
     ),
+    #' @field safe_colors safe to use colors.
     safe_colors = c(
       "black", "maroon", "green", "navy", "olive",
       "purple", "teal", "lime", "blue", "silver",

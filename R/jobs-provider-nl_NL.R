@@ -1248,7 +1248,15 @@ job_formats_nl_nl <- c(
   "Zo\u00f6loog"
 )
 
-#' @describeIn {JobProvider} {Dutch (the Netherlands)}
+#' Job provider
+#'
+#' Methods for jobs. Create a job name.
+#' @family nl
+#' @family NL
+#' @export
+#' @examples
+#' x <- JobProvider_nl_NL$new()
+#' x$render()
 JobProvider_nl_NL <- R6::R6Class(
   inherit = JobProvider,
   "JobProvider_nl_NL",

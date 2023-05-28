@@ -25,7 +25,7 @@ x$domain_name(levels = 3)
 x$domain_name(levels = 10)
 ## url's
 x$url()
-x$url(schemes = c('hbbp', 'hggp'))
+x$url(schemes = c("hbbp", "hggp"))
 x$image_url()
 ## uri's
 x$uri()
@@ -53,7 +53,7 @@ x$ascii_company_email()
 
 # addresses, mac, ipv4, ipv6
 x$mac_address()
-if (requireNamespace("ipaddress", quietly=TRUE)) {
+if (requireNamespace("ipaddress", quietly = TRUE)) {
   x$ipv4()
   x$ipv4(network = TRUE)
   x$ipv6()
@@ -106,13 +106,13 @@ x$user_name()
 x$email()
 
 # convert a string to ascii with stringi pkg
-if (requireNamespace("stringi", quietly=TRUE)) {
+if (requireNamespace("stringi", quietly = TRUE)) {
   x$to_ascii("anï")
 }
 }
 \keyword{internal}
-\section{Super class}{
-\code{\link[charlatan:BaseProvider]{charlatan::BaseProvider}} -> \code{InternetProvider}
+\section{Super classes}{
+\code{\link[charlatan:BareProvider]{charlatan::BareProvider}} -> \code{\link[charlatan:BaseProvider]{charlatan::BaseProvider}} -> \code{InternetProvider}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
@@ -180,19 +180,19 @@ if (requireNamespace("stringi", quietly=TRUE)) {
 \if{html}{\out{
 <details><summary>Inherited methods</summary>
 <ul>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="bothify"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-bothify'><code>charlatan::BaseProvider$bothify()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="bothify"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-bothify'><code>charlatan::BareProvider$bothify()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="lexify"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-lexify'><code>charlatan::BareProvider$lexify()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="numerify"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-numerify'><code>charlatan::BareProvider$numerify()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_digit"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_digit'><code>charlatan::BareProvider$random_digit()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_digit_not_zero"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_digit_not_zero'><code>charlatan::BareProvider$random_digit_not_zero()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_digit_not_zero_or_empty"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_digit_not_zero_or_empty'><code>charlatan::BareProvider$random_digit_not_zero_or_empty()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_digit_or_empty"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_digit_or_empty'><code>charlatan::BareProvider$random_digit_or_empty()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_element"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_element'><code>charlatan::BareProvider$random_element()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_element_prob"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_element_prob'><code>charlatan::BareProvider$random_element_prob()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_int"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_int'><code>charlatan::BareProvider$random_int()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_letter"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_letter'><code>charlatan::BareProvider$random_letter()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="randomize_nb_elements"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-randomize_nb_elements'><code>charlatan::BareProvider$randomize_nb_elements()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-check_locale'><code>charlatan::BaseProvider$check_locale()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="lexify"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-lexify'><code>charlatan::BaseProvider$lexify()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="numerify"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-numerify'><code>charlatan::BaseProvider$numerify()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_digit'><code>charlatan::BaseProvider$random_digit()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_digit_not_zero'><code>charlatan::BaseProvider$random_digit_not_zero()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero_or_empty"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_digit_not_zero_or_empty'><code>charlatan::BaseProvider$random_digit_not_zero_or_empty()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_or_empty"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_digit_or_empty'><code>charlatan::BaseProvider$random_digit_or_empty()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_element"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_element'><code>charlatan::BaseProvider$random_element()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_element_prob"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_element_prob'><code>charlatan::BaseProvider$random_element_prob()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_int"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_int'><code>charlatan::BaseProvider$random_int()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_letter"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_letter'><code>charlatan::BaseProvider$random_letter()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="randomize_nb_elements"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-randomize_nb_elements'><code>charlatan::BaseProvider$randomize_nb_elements()</code></a></span></li>
 </ul>
 </details>
 }}
@@ -212,17 +212,9 @@ fetch the allowed locales for this provider
 \subsection{Method \code{new()}}{
 Create a new \code{InternetProvider} object
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{InternetProvider$new(locale = NULL)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{InternetProvider$new()}\if{html}{\out{</div>}}
 }
 
-\subsection{Arguments}{
-\if{html}{\out{<div class="arguments">}}
-\describe{
-\item{\code{locale}}{(character) the locale to use. See
-\verb{$allowed_locales()} for locales supported (default: en_US)}
-}
-\if{html}{\out{</div>}}
-}
 \subsection{Returns}{
 A new \code{InternetProvider} object
 }

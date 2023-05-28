@@ -3,7 +3,8 @@
 #' @title CompanyProvider fa_IR
 #' @description company methods for locale Persian (Iran) (fa_IR).
 #' @export
-#' @keywords internal
+#' @family fa
+#' @family IR
 #' @examples
 #' x <- company("fa_IR")
 #' x$locale
@@ -15,7 +16,9 @@ CompanyProvider_fa_IR <- R6::R6Class(
   "CompanyProvider_fa_IR",
   inherit = CompanyProvider,
   public = list(
-    #' @description  company names
+    #' @field locale (character) xxx
+    locale = "fa_IR",
+    #' @field  company_names vector of company names.
     company_names = c(
       "\u06af\u0631\u0648\u0647 \u0633\u06cc\u0645\u0627\u0646",
       "\u06af\u0631\u0648\u0647 \u0641\u0644\u0632\u0627\u062a \u0627\u0633\u0627\u0633\u064a",

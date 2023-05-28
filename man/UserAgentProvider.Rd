@@ -6,21 +6,51 @@
 \description{
 user agent methods
 }
-\examples{
-(x <- UserAgentProvider$new())
-x$locale
-x$mac_processor()
-x$linux_processor()
-x$user_agent()
-x$chrome()
-x$firefox()
-x$internet_explorer()
-x$opera()
-x$safari()
+\seealso{
+Other en: 
+\code{\link{AddressProvider_en_GB}},
+\code{\link{AddressProvider_en_NZ}},
+\code{\link{ColorProvider_en_US}},
+\code{\link{CompanyProvider_en_US}},
+\code{\link{ElementProvider_en_US}},
+\code{\link{InternetProvider_en_AU}},
+\code{\link{InternetProvider_en_US}},
+\code{\link{JobProvider_en_US}},
+\code{\link{LoremProvider_en_US}},
+\code{\link{PersonProvider_en_GB}},
+\code{\link{PersonProvider_en_NZ}},
+\code{\link{PersonProvider_en_US}},
+\code{\link{PhoneNumberProvider_en_AU}},
+\code{\link{PhoneNumberProvider_en_CA}},
+\code{\link{PhoneNumberProvider_en_GB}},
+\code{\link{PhoneNumberProvider_en_NZ}},
+\code{\link{PhoneNumberProvider_en_US}},
+\code{\link{PhoneNumberProvider_es_MX}},
+\code{\link{PhoneNumberProvider_tr_TR}},
+\code{\link{PhoneNumberProvider}},
+\code{\link{SSNProvider_en_US}},
+\code{\link{TaxonomyProvider_en_US}},
+\code{\link{UserAgentProvider_en_US}},
+\code{\link{english-language}}
+
+Other US: 
+\code{\link{ColorProvider_en_US}},
+\code{\link{CompanyProvider_en_US}},
+\code{\link{ElementProvider_en_US}},
+\code{\link{InternetProvider_en_US}},
+\code{\link{JobProvider_en_US}},
+\code{\link{LoremProvider_en_US}},
+\code{\link{PersonProvider_en_US}},
+\code{\link{PhoneNumberProvider_en_US}},
+\code{\link{SSNProvider_en_US}},
+\code{\link{TaxonomyProvider_en_US}},
+\code{\link{UserAgentProvider_en_US}}
 }
+\concept{US}
+\concept{en}
 \keyword{internal}
-\section{Super class}{
-\code{\link[charlatan:BaseProvider]{charlatan::BaseProvider}} -> \code{UserAgentProvider}
+\section{Super classes}{
+\code{\link[charlatan:BareProvider]{charlatan::BareProvider}} -> \code{\link[charlatan:BaseProvider]{charlatan::BaseProvider}} -> \code{UserAgentProvider}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
@@ -59,19 +89,19 @@ x$safari()
 \if{html}{\out{
 <details><summary>Inherited methods</summary>
 <ul>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="bothify"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-bothify'><code>charlatan::BaseProvider$bothify()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="bothify"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-bothify'><code>charlatan::BareProvider$bothify()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="lexify"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-lexify'><code>charlatan::BareProvider$lexify()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="numerify"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-numerify'><code>charlatan::BareProvider$numerify()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_digit"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_digit'><code>charlatan::BareProvider$random_digit()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_digit_not_zero"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_digit_not_zero'><code>charlatan::BareProvider$random_digit_not_zero()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_digit_not_zero_or_empty"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_digit_not_zero_or_empty'><code>charlatan::BareProvider$random_digit_not_zero_or_empty()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_digit_or_empty"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_digit_or_empty'><code>charlatan::BareProvider$random_digit_or_empty()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_element"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_element'><code>charlatan::BareProvider$random_element()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_element_prob"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_element_prob'><code>charlatan::BareProvider$random_element_prob()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_int"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_int'><code>charlatan::BareProvider$random_int()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_letter"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_letter'><code>charlatan::BareProvider$random_letter()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="randomize_nb_elements"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-randomize_nb_elements'><code>charlatan::BareProvider$randomize_nb_elements()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-check_locale'><code>charlatan::BaseProvider$check_locale()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="lexify"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-lexify'><code>charlatan::BaseProvider$lexify()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="numerify"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-numerify'><code>charlatan::BaseProvider$numerify()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_digit'><code>charlatan::BaseProvider$random_digit()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_digit_not_zero'><code>charlatan::BaseProvider$random_digit_not_zero()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero_or_empty"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_digit_not_zero_or_empty'><code>charlatan::BaseProvider$random_digit_not_zero_or_empty()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_or_empty"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_digit_or_empty'><code>charlatan::BaseProvider$random_digit_or_empty()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_element"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_element'><code>charlatan::BaseProvider$random_element()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_element_prob"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_element_prob'><code>charlatan::BaseProvider$random_element_prob()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_int"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_int'><code>charlatan::BaseProvider$random_int()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_letter"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_letter'><code>charlatan::BaseProvider$random_letter()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="randomize_nb_elements"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-randomize_nb_elements'><code>charlatan::BaseProvider$randomize_nb_elements()</code></a></span></li>
 </ul>
 </details>
 }}
@@ -91,17 +121,9 @@ fetch the allowed locales for this provider
 \subsection{Method \code{new()}}{
 Create a new \code{UserAgentProvider} object
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{UserAgentProvider$new(locale = NULL)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{UserAgentProvider$new()}\if{html}{\out{</div>}}
 }
 
-\subsection{Arguments}{
-\if{html}{\out{<div class="arguments">}}
-\describe{
-\item{\code{locale}}{(character) the locale to use. See
-\verb{$allowed_locales()} for locales supported (default: en_US)}
-}
-\if{html}{\out{</div>}}
-}
 \subsection{Returns}{
 A new \code{UserAgentProvider} object
 }

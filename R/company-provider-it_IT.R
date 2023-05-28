@@ -4,9 +4,10 @@
 #' @title CompanyProvider it_IT
 #' @description company methods for locale Italian (Italy) (it_IT).
 #' @export
-#' @keywords internal
+#' @family it
+#' @family IT
 #' @examples
-#' x <- company("it_IT")
+#' x <- CompanyProvider_it_IT$new()
 #' x$locale
 #' x$company()
 #' x$catch_phrase()
@@ -16,6 +17,9 @@ CompanyProvider_it_IT <- R6::R6Class(
   "CompanyProvider_it_IT",
   inherit = CompanyProvider,
   public = list(
+    #' @field locale (character) xxx
+    locale = "it_IT",
+
     # add data here, like
     #' @field catch_phrase_words (character) xxx
     catch_phrase_words = list(
@@ -178,21 +182,22 @@ CompanyProvider_it_IT <- R6::R6Class(
         "next-generation", "cutting-edge", "visionari", "plug-and-play", "collaborative", "olistiche", "ricche"
       )
     ),
+    #' @field company_formats formats for company names.
     company_formats = c(
       "{{last_name}} {{company_suffix}}",
       "{{last_name}}-{{last_name2}} {{company_suffix}}",
       "{{last_name}}, {{last_name2}} e {{last_name3}} {{company_suffix}}"
     ),
+    #' @field company_suffixes suffixes for in company names.
     company_suffixes = c("SPA", "e figli", "Group", "s.r.l."),
     ## add functions here
     #' @description a company name
     company = function() {
-      pp <- PersonProvider$new(self$locale)
       pattern <- super$random_element(self$company_formats)
       dat <- list(
-        last_name = pp$last_name(),
-        last_name2 = pp$last_name(),
-        last_name3 = pp$last_name(),
+        last_name = self$pp$last_name(),
+        last_name2 = self$pp$last_name(),
+        last_name3 = self$pp$last_name(),
         company_suffix = super$random_element(self$company_suffixes)
       )
       whisker::whisker.render(template = pattern, data = dat)

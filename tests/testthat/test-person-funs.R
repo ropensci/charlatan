@@ -17,7 +17,7 @@ test_that("ch_name works for all locales", {
     expect_equal(trimws(res), res)
   }
 
-  for (loc in PersonProvider$new()$allowed_locales()) {
+  for (loc in PersonProvider_en_US$new()$allowed_locales()) {
     test_locale(loc)
   }
 })
@@ -30,11 +30,11 @@ test_that("ch_name fails well", {
 
   expect_error(
     ch_name(locale = 5),
-    "5 not in set of available locales"
+    "There is no locale 5 for provider PersonProvider"
   )
 
   expect_error(
     ch_name(messy = "adsf"),
-    "messy must be of class logical"
+    "Messy should be TRUE, or FALSE"
   )
 })

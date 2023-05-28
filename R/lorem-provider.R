@@ -4,57 +4,24 @@
 #' @keywords internal
 #' @param ext_words a character vector of words you would like to have
 #' instead of 'Lorem ipsum'
-#' @examples
-#' (x <- LoremProvider$new())
-#' x$locale
-#' x$word()
-#' x$words(3)
-#' x$words(6)
-#' x$sentence()
-#' x$sentences(3)
-#' x$sentences(6)
-#' x$paragraph()
-#' x$paragraphs(3)
-#' x$paragraphs(6)
-#' cat(x$paragraphs(6), sep = "\n")
-#' x$text(6)
-#' x$text(10)
-#' x$text(19)
-#' x$text(25)
-#' x$text(50)
-#' x$text(300)
-#' x$text(2000)
-#'
-#' # set a different sentence_punctuation or word_connector
-#' (x <- LoremProvider$new(sentence_punctuation = ";"))
-#' x$paragraph(4)
-#' (x <- LoremProvider$new(word_connector = " --- "))
-#' x$paragraph(4)
-#'
-#' # different locales
-#' LoremProvider$new(locale = "ar_AA")$word()
-#' LoremProvider$new(locale = "el_GR")$word()
-#' LoremProvider$new(locale = "he_IL")$word()
-#' LoremProvider$new(locale = "ja_JP")$word()
-#' LoremProvider$new(locale = "zh_TW")$word()
 LoremProvider <- R6::R6Class(
   inherit = BaseProvider,
   "LoremProvider",
   public = list(
     #' @field locale (character) the locale
     locale = NULL,
-
     #' @description fetch the allowed locales for this provider
     allowed_locales = function() private$locales,
 
     #' @description Create a new `LoremProvider` object
-    #' @param locale (character) the locale to use. See
-    #' `$allowed_locales()` for locales supported (default: en_US)
     #' @param sentence_punctuation (character) End of sentence punctuation
     #' @param word_connector (character) Default connector between words
     #' @return A new `LoremProvider` object
-    initialize = function(locale = NULL, sentence_punctuation = ".",
+    initialize = function(sentence_punctuation = ".",
                           word_connector = " ") {
+      if (is.null(self$locale)) {
+        raise_class("JobProvider")
+      }
       assert(sentence_punctuation, "character")
       private$sentence_punctuation <- sentence_punctuation
       assert(word_connector, "character")

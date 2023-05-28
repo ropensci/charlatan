@@ -20,12 +20,11 @@ test_that("charlatan_settings - global settings override local settings", {
   # reset settings
   charlatan_settings()
 
-  aa <- PersonProvider$new()
+  aa <- PersonProvider_en_US$new()
   expect_false(aa$messy)
 
   charlatan_settings(messy = TRUE)
-
-  bb <- PersonProvider$new()
+  expect_warning(PersonProvider_en_US$new(messy = FALSE))
+  bb <- suppressWarnings(PersonProvider_en_US$new(messy = FALSE))
   expect_true(bb$messy)
 })
-

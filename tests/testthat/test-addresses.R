@@ -2,7 +2,7 @@ context("AddressProvider works")
 # Make sure that the inheritance works correctly
 test_that("AddressProvider basic functionality works", {
   expect_error(AddressProvider())
-  aa <- addresses()
+  aa <- cr_loc_spec_provider("AddressProvider", "en_US")
 
   expect_is(aa, "AddressProvider")
   expect_is(aa, "R6")
@@ -15,9 +15,9 @@ test_that("AddressProvider basic functionality works", {
 test_that("every_locale has the same basic functions", {
   # every locale needs to have address, city, street_addres, street_name and postcode,
   # also, the locale field, should match that locale.
-  aa <- addresses()
+  aa <- cr_loc_spec_provider("AddressProvider", "en_US")
   for (locale in aa$allowed_locales()) {
-    bb <- addresses(locale)
+    bb <- cr_loc_spec_provider("AddressProvider", locale)
     expect_type(bb$locale, "character")
     # every address locale should have these functions
     # the result should be character
@@ -45,7 +45,7 @@ test_that("every_locale has the same basic functions", {
 
 # For every specific locale, test custom functions you create
 test_that("custom functions from AddressProvider_en_US work", {
-  aa <- addresses("en_US")
+  aa <- cr_loc_spec_provider("AddressProvider", "en_US")
 
   expect_is(aa$building_number, "function")
   expect_is(aa$building_number(), "character")
@@ -66,7 +66,7 @@ test_that("custom functions from AddressProvider_en_US work", {
 })
 
 test_that("custom functions from AddressProvider_nl_NL work", {
-  aa <- addresses("nl_NL")
+  aa <- cr_loc_spec_provider("AddressProvider", "nl_NL")
 
   expect_is(aa$province, "function")
   expect_is(aa$province(), "character")

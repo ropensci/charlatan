@@ -287,7 +287,15 @@ job_formats_hr_hr <- c(
   "\u010cuvar",
   "\u010cuvar prirode"
 )
-#' @describeIn {JobProvider} {}
+#' Job provider
+#'
+#' Methods for jobs. Create a job name.
+#' @family hr
+#' @family HR
+#' @export
+#' @examples
+#' x <- JobProvider_hr_HR$new()
+#' x$render()
 JobProvider_hr_HR <- R6::R6Class(
   inherit = JobProvider,
   "JobProvider_hr_HR",

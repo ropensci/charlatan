@@ -1,38 +1,41 @@
 context("LoremProvider works")
 
 test_that("LoremProvider works", {
-  aa <- LoremProvider_en_US$new()
+  for (loc in LoremProvider_en_US$new()$allowed_locales()) {
+    aa <- cr_loc_spec_provider("LoremProvider", loc)
 
-  expect_is(aa, "LoremProvider")
-  expect_is(aa, "R6")
+    expect_is(aa, "LoremProvider")
+    expect_is(aa, "R6")
 
-  expect_is(aa$word, "function")
-  expect_is(aa$word(), "character")
-  expect_equal(length(aa$word()), 1)
+    expect_is(aa$word, "function")
+    expect_is(aa$word(), "character")
+    expect_equal(length(aa$word()), 1)
+    expect_false(aa$word() == "")
 
-  expect_is(aa$words, "function")
-  expect_is(aa$words(), "character")
-  expect_equal(length(aa$words()), 3)
+    expect_is(aa$words, "function")
+    expect_is(aa$words(), "character")
+    expect_equal(length(aa$words()), 3)
 
-  expect_is(aa$sentence, "function")
-  expect_is(aa$sentence(), "character")
-  expect_equal(length(aa$sentence()), 1)
+    expect_is(aa$sentence, "function")
+    expect_is(aa$sentence(), "character")
+    expect_equal(length(aa$sentence()), 1)
 
-  expect_is(aa$sentences, "function")
-  expect_is(aa$sentences(), "character")
-  expect_equal(length(aa$sentences()), 3)
+    expect_is(aa$sentences, "function")
+    expect_is(aa$sentences(), "character")
+    expect_equal(length(aa$sentences()), 3)
 
-  expect_is(aa$paragraph, "function")
-  expect_is(aa$paragraph(), "character")
-  expect_equal(length(aa$paragraph()), 1)
+    expect_is(aa$paragraph, "function")
+    expect_is(aa$paragraph(), "character")
+    expect_equal(length(aa$paragraph()), 1)
 
-  expect_is(aa$paragraphs, "function")
-  expect_is(aa$paragraphs(), "character")
-  expect_equal(length(aa$paragraphs()), 3)
+    expect_is(aa$paragraphs, "function")
+    expect_is(aa$paragraphs(), "character")
+    expect_equal(length(aa$paragraphs()), 3)
 
-  expect_is(aa$text, "function")
-  expect_is(aa$text(), "character")
-  expect_equal(length(aa$text()), 1)
+    expect_is(aa$text, "function")
+    expect_is(aa$text(), "character")
+    expect_equal(length(aa$text()), 1)
+  }
 })
 
 test_that("LoremProvider fails well", {
@@ -45,7 +48,7 @@ test_that("LoremProvider fails well", {
     "sentence_punctuation must be of class character"
   )
   expect_error(
-     LoremProvider_en_US$new(word_connector = 5),
+    LoremProvider_en_US$new(word_connector = 5),
     "word_connector must be of class character"
   )
 

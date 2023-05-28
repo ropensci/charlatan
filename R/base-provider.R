@@ -4,6 +4,7 @@
 #' BaseProvider
 #'
 #' @export
+#' @param allowed_locales fetch the allowed locales for this provider
 #' @examples
 #' (x <- BaseProvider$new())
 #'
@@ -28,6 +29,31 @@
 #' x$randomize_nb_elements()
 BaseProvider <- R6::R6Class(
   "BaseProvider",
+  inherit = BareProvider,
+  public = list(
+    #' @field locale (character) xxx
+    locale = NULL,
+    #' @description check a locale to see if it exists, if not, stop with
+    #' error message
+    #' @param x a locale name, e.g, 'bg_BG'
+    #' @return returns nothing if locale is supported; stops w/ message if not
+    check_locale = function(x) check_locale_(x),
+    #' @description fetch the allowed locales for this provider
+    allowed_locales = function() private$locales
+  ),
+  private = list(
+    locales = c(
+      "en_US"
+    )
+  )
+)
+
+#' A NonLocalized Provider that contains all the selection
+#' and creation elements, but not the locales.
+#' That way we can still inherit an do useful stuff
+#' for providers that have no locale.
+BareProvider <- R6::R6Class(
+  "BareProvider",
   public = list(
     #' @description pick a random element from vector/list
     #' @param x vector or list
@@ -36,8 +62,10 @@ BaseProvider <- R6::R6Class(
       if (length(x) == 0) {
         return("")
       }
-      if (inherits(x, "character")) if (!any(nzchar(x))) {
-        return("")
+      if (inherits(x, "character")) {
+        if (!any(nzchar(x))) {
+          return("")
+        }
       }
       x[sample.int(n = length(x), size = 1)]
     },
@@ -48,8 +76,10 @@ BaseProvider <- R6::R6Class(
       if (length(x) == 0) {
         return("")
       }
-      if (inherits(x, "character")) if (!any(nzchar(x))) {
-        return("")
+      if (inherits(x, "character")) {
+        if (!any(nzchar(x))) {
+          return("")
+        }
       }
       choices <- names(x)
       probs <- unname(unlist(x))
@@ -117,11 +147,6 @@ BaseProvider <- R6::R6Class(
       self$lexify(self$numerify(text))
     },
 
-    #' @description check a locale to see if it exists, if not, stop with
-    #' error message
-    #' @param x a locale name, e.g, 'bg_BG'
-    #' @return returns nothing if locale is supported; stops w/ message if not
-    check_locale = function(x) check_locale_(x),
 
     #' @description Returns a random value near number
     #' @param number value to which the result must be near
@@ -141,15 +166,8 @@ BaseProvider <- R6::R6Class(
       if (!is.null(min) && nb < min) nb <- min
       if (!is.null(max) && nb > min) nb <- max
       return(nb)
-    },
-    #' @description fetch the allowed locales for this provider
-    allowed_locales = function() private$locales
+    }
   ),
-  private = list(
-      locales = c(
-          "en_US" 
-      )
-  )
 )
 
 check_locale_ <- function(x, z = available_locales) {

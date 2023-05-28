@@ -14,7 +14,7 @@
 #' ch_date_time()
 #' ch_date_time(20)
 ch_timezone <- function(n = 1) {
-  assert(n, c('integer', 'numeric'))
+  assert(n, c("integer", "numeric"))
   if (n == 1) {
     DateTimeProvider$new()$timezone()
   } else {
@@ -26,7 +26,7 @@ ch_timezone <- function(n = 1) {
 #' @export
 #' @rdname date_time
 ch_unix_time <- function(n = 1) {
-  assert(n, c('integer', 'numeric'))
+  assert(n, c("integer", "numeric"))
   if (n == 1) {
     DateTimeProvider$new()$unix_time()
   } else {
@@ -38,7 +38,7 @@ ch_unix_time <- function(n = 1) {
 #' @export
 #' @rdname date_time
 ch_date_time <- function(n = 1) {
-  assert(n, c('integer', 'numeric'))
+  assert(n, c("integer", "numeric"))
   if (n == 1) {
     DateTimeProvider$new()$date_time()
   } else {
@@ -46,4 +46,3 @@ ch_date_time <- function(n = 1) {
     replicate(n, x$date_time(), simplify = FALSE)
   }
 }
-

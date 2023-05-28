@@ -22,11 +22,24 @@ int_tlds_en_nz <- c(
   "maori.nz"
 )
 
-#' @describeIn {InternetProvider} {English (New Zealand)}
+#' Internet provider for New-Zealand
+#'
+#' methods for internet related data, like email addresses,
+#' usernames, and websites.
+#' @family bg
+#' @family BG
+#' @export
+#' @examples
+#' x <- InternetProvider_en_NZ$new()
+#' x$email()
+#' x$free_email()
+#' x$mac_address()
+#' x$company_email()
 InternetProvider_en_NZ <- R6::R6Class(
   inherit = InternetProvider,
   "InternetProvider_en_NZ",
   public = list(
+    #' @field locale (character) the locale
     locale = "en_NZ",
     #' @field free_email_domains (character) free email tlds
     free_email_domains = int_free_email_domains_en_nz,

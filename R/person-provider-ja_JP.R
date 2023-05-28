@@ -302,7 +302,27 @@ person_ja_jp <- list(
 
 
 # TODO: render does not work for japanese
-#' @describeIn {PersonProvider} {Japanese (Japan)}
+#' #' @title Person Provider for Japanese (Japan)
+#' @description person names methods
+#' @export
+#' @family ja
+#' @family JP
+#' @details Note for female and male components that we fall back on generic
+#' versions if the locale
+#' doesn't provide a male/female version.
+#' e.g., if no female first name we use first
+#' name
+#' @examples
+#' x <- PersonProvider_ja_JP$new()
+#' x$locale
+#' x$render()
+#' x$first_name()
+#' x$first_kana_name()
+#' x$first_name_female()
+#' x$first_name_male()
+#' x$last_name()
+#' x$last_name_female()
+#' x$last_name_male()
 PersonProvider_ja_JP <- R6::R6Class(
   "PersonProvider_ja_JP",
   inherit = PersonProvider,
@@ -315,11 +335,17 @@ PersonProvider_ja_JP <- R6::R6Class(
     person = person_ja_jp,
     ## TODO: describe what we can do here:
     ## because we inherit, we can create special japanese names.
+    #' @field kana_formats different formats
     kana_formats = person_kana_formats_ja_jp,
+    #' @field first_kana_names first names (kana)
     first_kana_names = person_first_kana_names_ja_jp,
+    #' @field last_kana_names last names (kana)
     last_kana_names = person_last_kana_names_ja_jp,
+    #' @field first_kana_names_male first names male (kana)
     first_kana_names_male = person_first_kana_names_male_ja_jp,
+    #' @field first_kana_names_female first names female (kana)
     first_kana_names_female = person_first_kana_names_female_ja_jp,
+    #' @description create a kana name.
     kana_name = function() {
       fmt <- super$random_element(self$kana_formats)
       dat <- lapply(
@@ -344,15 +370,19 @@ PersonProvider_ja_JP <- R6::R6Class(
       }
       whisker::whisker.render(fmt, data = dat)
     },
+    #' @description Generate first name (kana)
     first_kana_name = function() {
       super$random_element(self$first_kana_names)
     },
+    #' @description Generate last name (kana)
     last_kana_name = function() {
       super$random_element(self$last_kana_names)
     },
+    #' @description Generate first name male (kana)
     first_kana_name_male = function() {
       super$random_element(self$first_kana_names_male)
     },
+    #' @description Generate first name female (kana)
     first_kana_name_female = function() {
       super$random_element(self$first_kana_female)
     }

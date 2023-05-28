@@ -14,7 +14,8 @@ A data frame with 45 rows and 4 variables:
 }
 }
 \description{
-A data.frame of locales available in \pkg{charlatan}
+A data.frame of locales available in \pkg{charlatan}.
+All localized providers are linked in the documentation.
 }
 \seealso{
 data.frame used in \code{\link[=charlatan_locales]{charlatan_locales()}}

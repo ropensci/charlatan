@@ -1,6 +1,6 @@
 ---
 title: "Contributing to charlatan"
-author: "Scott Chamberlain"
+author: "Scott Chamberlain & Roel Hogervorst"
 date: "`r Sys.Date()`"
 output:
   html_document:
@@ -41,6 +41,9 @@ associated with a specific country. You can have more than one locale for a
 given language (e.g., `en-US`, `en-GB`). Some fakers won't have any locales,
 whereas others can have many.
 
+So we have the Provider: `AddressProvider` with locale `en_US` that makes the
+provider `AddressProvider_en_US`
+
 If you aren't familiar with R6, have a look at the
 [R6 website](https://r6.r-lib.org/), in particular the
 [introductory vignette](https://r6.r-lib.org/articles/Introduction.html).
@@ -53,7 +56,7 @@ we can help make sure you have the knowledge you need.
 
 ## Adding a new provider
 
-Providers are generally first created by making an R6 class. Let's start with a
+Providers are created by making an R6 class. Let's start with a
 heavily simplified base R6 class that defines some utility methods. We
 call it `BaseProvider` in `charlatan`, but here we'll call it `MyBaseProvider`
 to avoid confusion.
@@ -61,14 +64,19 @@ to avoid confusion.
 ```{r}
 library(R6)
 MyBaseProvider <- R6::R6Class(
-  'MyBaseProvider',
+  "MyBaseProvider",
   public = list(
     random_element = function(x) {
-      if (length(x) == 0) return('')
-      if (inherits(x, "character")) if (!any(nzchar(x))) return('')
+      if (length(x) == 0) {
+        return("")
+      }
+      if (inherits(x, "character")) {
+        if (!any(nzchar(x))) {
+          return("")
+        }
+      }
       x[sample.int(n = length(x), size = 1)]
     },
-
     random_int = function(min = 0, max = 9999, size = 1) {
       stopifnot(max >= min)
       num <- max - min + 1
@@ -78,14 +86,119 @@ MyBaseProvider <- R6::R6Class(
 )
 ```
 
+# Guidelines for providers and locales
+
+It is vital that we provide enough information.
+
+## Inheritance
+At the heart of charlatan is the `BareProvider`, this class
+has all the basic number and text substitution that is used
+throughout the the package. All Providers with locales
+use the `BaseProvider` which inherits all the functionality from
+the BaseProvider and adds locale logic.
+
+All providers inherit from either BaseProvider or  BareProvider; `AddressProvider` for instance, inherits from the `BaseProvider`.
+
+
+## Where should I add logic or data?
+**New localized provider**: If you add a new locale of a provider (f.i. klingon, LoremIpsum): 
+create a new  class that inherits from the baseprovider _in this case LoremProvider_. 
+
+TODO: USE THE TEMPLATE FILE (in inst/) TO EASILY ADD A NEW LOCALE SPECIFIC VERSION. 
+
+TODO: THIS DOESN'T WORK ANYMORE
+use describein to inherit the docs.
+
+```r
+lorem_word_list_tlh <- c("'Igh'aDmegh", "DIron", "Da'lar","moQbID")
+
+#' @describeIn {LoremProvider} {Klingon (Klingon)}
+LoremProvider_tlh <- R6::R6Class(
+  inherit = LoremProvider,
+  "LoremProvider_tlh",
+  public = list(
+    locale = "tlh"
+  ),
+  private = list(
+    word_list = lorem_word_list_tlh
+  )
+)
+
+```
+
+**New provider without locale**: Add enough information on how to use 
+the provider in the examples. 
+
+```r
+#' @title NewProvider
+#' @description a description
+#' @export
+#' @details more details
+#' @examples
+#' # examples here
+NewProvider <- R6::R6Class(
+  "NewProvider",
+  inherit = BareProvider,
+  public = list(
+  
+  # add functionality here
+  
+))
+```
+
+
+**new provider with locale**: make sure you describe here the generic
+and create at least the en_US version. 
+
+The base localized providers have locale = NULL.
+```r
+#' @title NewProvider
+#' @description a description
+#' @export
+#' @details more details
+#' @examples
+#' # examples here
+NewProvider <- R6::R6Class(
+  "NewProvider",
+  inherit = BaseProvider,
+  public = list(
+    #' @field locale (character) the locale
+    locale = NULL
+    
+    # Add new functionality here
+    
+    )
+    )
+    
+#' @describeIn {NewProvider} {English (United states)} 
+NewProvider_en_US <- R6::R6Class(
+  "NewProvider",
+  inherit = NewProvider,
+  public = list(
+    #' @field locale (character) the locale
+    locale = "en_US"
+    
+    # Add new functionality here
+    
+    )
+    )
+
+```
+
+
+
+
+# thing
+
 ### Providers without locale support
 
 If you don't need to handle locales it becomes simpler:
 
 
 ```{r}
+# TODO: this should prob use BareProvider
 FooBar <- R6::R6Class(
-  'FooBar',
+  "FooBar",
   inherit = charlatan::BaseProvider,
   public = list(
     integer = function(n = 1, min = 1, max = 1000) {
@@ -130,7 +243,6 @@ template file.
 library(charlatan)
 file <- system.file("examples", "address-provider-template", package = "charlatan")
 source(file)
-
 ```
 
 If you want to add a locale specific provider you must add a new class. 
@@ -243,12 +355,7 @@ A few things to note:
 
 * if no locale is given, we by default use `en_US`
 * we check that the locale given is in the allowed set
-* for each data type, here just city prefixes shown, use the internal function
-`parse_eval()` to pull in the data. Essentially, `parse_eval()` makes the
-string `city_prefixes_en_US`, then finds that in the package environment
-and `eval()`'s it to bring the data into the R6 object in the `city_prefixes`
-slot. We repeat this for each data type. The result is the user initialized
-class with locale specific data.
+ 
 
 
 [faker]: https://github.com/joke2k/faker

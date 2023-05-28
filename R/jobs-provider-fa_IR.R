@@ -99,7 +99,15 @@ job_formats_fa_ir <- c(
   "\u062e\u0637\u0627\u0637"
 )
 
-#' @describeIn {JobProvider} {Farsi (Iran)}
+#' Job provider
+#'
+#' Methods for jobs. Create a job name.
+#' @family fa
+#' @family IR
+#' @export
+#' @examples
+#' x <- JobProvider_fa_IR$new()
+#' x$render()
 JobProvider_fa_IR <- R6::R6Class(
   inherit = JobProvider,
   "JobProvider_fa_IR",

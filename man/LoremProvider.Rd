@@ -6,43 +6,9 @@
 \description{
 lorem ipsum methods
 }
-\examples{
-(x <- LoremProvider$new())
-x$locale
-x$word()
-x$words(3)
-x$words(6)
-x$sentence()
-x$sentences(3)
-x$sentences(6)
-x$paragraph()
-x$paragraphs(3)
-x$paragraphs(6)
-cat(x$paragraphs(6), sep = "\n")
-x$text(6)
-x$text(10)
-x$text(19)
-x$text(25)
-x$text(50)
-x$text(300)
-x$text(2000)
-
-# set a different sentence_punctuation or word_connector
-(x <- LoremProvider$new(sentence_punctuation = ";"))
-x$paragraph(4)
-(x <- LoremProvider$new(word_connector = " --- "))
-x$paragraph(4)
-
-# different locales
-LoremProvider$new(locale = "ar_AA")$word()
-LoremProvider$new(locale = "el_GR")$word()
-LoremProvider$new(locale = "he_IL")$word()
-LoremProvider$new(locale = "ja_JP")$word()
-LoremProvider$new(locale = "zh_TW")$word()
-}
 \keyword{internal}
-\section{Super class}{
-\code{\link[charlatan:BaseProvider]{charlatan::BaseProvider}} -> \code{LoremProvider}
+\section{Super classes}{
+\code{\link[charlatan:BareProvider]{charlatan::BareProvider}} -> \code{\link[charlatan:BaseProvider]{charlatan::BaseProvider}} -> \code{LoremProvider}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
@@ -69,19 +35,19 @@ LoremProvider$new(locale = "zh_TW")$word()
 \if{html}{\out{
 <details><summary>Inherited methods</summary>
 <ul>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="bothify"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-bothify'><code>charlatan::BaseProvider$bothify()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="bothify"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-bothify'><code>charlatan::BareProvider$bothify()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="lexify"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-lexify'><code>charlatan::BareProvider$lexify()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="numerify"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-numerify'><code>charlatan::BareProvider$numerify()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_digit"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_digit'><code>charlatan::BareProvider$random_digit()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_digit_not_zero"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_digit_not_zero'><code>charlatan::BareProvider$random_digit_not_zero()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_digit_not_zero_or_empty"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_digit_not_zero_or_empty'><code>charlatan::BareProvider$random_digit_not_zero_or_empty()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_digit_or_empty"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_digit_or_empty'><code>charlatan::BareProvider$random_digit_or_empty()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_element"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_element'><code>charlatan::BareProvider$random_element()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_element_prob"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_element_prob'><code>charlatan::BareProvider$random_element_prob()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_int"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_int'><code>charlatan::BareProvider$random_int()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_letter"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_letter'><code>charlatan::BareProvider$random_letter()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="randomize_nb_elements"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-randomize_nb_elements'><code>charlatan::BareProvider$randomize_nb_elements()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-check_locale'><code>charlatan::BaseProvider$check_locale()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="lexify"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-lexify'><code>charlatan::BaseProvider$lexify()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="numerify"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-numerify'><code>charlatan::BaseProvider$numerify()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_digit'><code>charlatan::BaseProvider$random_digit()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_digit_not_zero'><code>charlatan::BaseProvider$random_digit_not_zero()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero_or_empty"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_digit_not_zero_or_empty'><code>charlatan::BaseProvider$random_digit_not_zero_or_empty()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_or_empty"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_digit_or_empty'><code>charlatan::BaseProvider$random_digit_or_empty()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_element"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_element'><code>charlatan::BaseProvider$random_element()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_element_prob"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_element_prob'><code>charlatan::BaseProvider$random_element_prob()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_int"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_int'><code>charlatan::BaseProvider$random_int()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_letter"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_letter'><code>charlatan::BaseProvider$random_letter()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="randomize_nb_elements"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-randomize_nb_elements'><code>charlatan::BaseProvider$randomize_nb_elements()</code></a></span></li>
 </ul>
 </details>
 }}
@@ -101,19 +67,12 @@ fetch the allowed locales for this provider
 \subsection{Method \code{new()}}{
 Create a new \code{LoremProvider} object
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{LoremProvider$new(
-  locale = NULL,
-  sentence_punctuation = ".",
-  word_connector = " "
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{LoremProvider$new(sentence_punctuation = ".", word_connector = " ")}\if{html}{\out{</div>}}
 }
 
 \subsection{Arguments}{
 \if{html}{\out{<div class="arguments">}}
 \describe{
-\item{\code{locale}}{(character) the locale to use. See
-\verb{$allowed_locales()} for locales supported (default: en_US)}
-
 \item{\code{sentence_punctuation}}{(character) End of sentence punctuation}
 
 \item{\code{word_connector}}{(character) Default connector between words}

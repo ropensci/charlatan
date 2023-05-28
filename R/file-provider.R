@@ -18,15 +18,15 @@ FileProvider <- R6::R6Class(
   public = list(
     #' @field locale (character) the locale
     locale = NULL,
-
     #' @description fetch the allowed locales for this provider
     allowed_locales = function() private$locales,
 
     #' @description Create a new `FileProvider` object
-    #' @param locale (character) the locale to use. See
-    #' `$allowed_locales()` for locales supported (default: en_US)
     #' @return A new `FileProvider` object
-    initialize = function(locale = NULL) {
+    initialize = function() {
+      if (is.null(self$locale)) {
+        raise_class("FileProvider")
+      }
       private$mime_types <- list(
         application = private$application_mime_types,
         audio = private$audio_mime_types,
@@ -68,7 +68,7 @@ FileProvider <- R6::R6Class(
     #' `category` is ignored.
     file_name = function(category = NULL, extension = NULL) {
       x <- if (!is.null(extension)) extension else self$file_extension(category)
-      filename <- LoremProvider$new(locale = self$locale)$word()
+      filename <- subclass(provider = "LoremProvider",locale = self$locale)$word()
       sprintf("%s.%s", filename, x)
     },
 
@@ -97,7 +97,7 @@ FileProvider <- R6::R6Class(
       for (d in seq_len(depth)) {
         path <- sprintf(
           "/%s%s",
-          LoremProvider$new(locale = self$locale)$word(), path
+          subclass(provider = "LoremProvider",locale = self$locale)$word(), path
         )
       }
       return(path)

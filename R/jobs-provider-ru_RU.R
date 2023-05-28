@@ -544,7 +544,15 @@ job_formats_ru_ru <- c(
   "\u042e\u0440\u0438\u0441\u0442"
 )
 
-#' @describeIn {JobProvider} {Russian (Russia)}
+#' Job provider
+#'
+#' Methods for jobs. Create a job name.
+#' @family ru
+#' @family RU
+#' @export
+#' @examples
+#' x <- JobProvider_ru_RU$new()
+#' x$render()
 JobProvider_ru_RU <- R6::R6Class(
   inherit = JobProvider,
   "JobProvider_ru_RU",

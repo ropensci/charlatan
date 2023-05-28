@@ -37,7 +37,10 @@ JobProvider <- R6::R6Class(
     #' @param locale (character) the locale to use. See
     #' `$allowed_locales()` for locales supported (default: en_US)
     #' @return A new `JobProvider` object
-    initialize = function(locale = NULL) {
+    initialize = function() {
+      if (is.null(self$locale)) {
+        raise_class("JobProvider")
+      }
     },
 
     #' @description Make a job

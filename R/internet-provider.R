@@ -167,27 +167,11 @@ InternetProvider <- R6::R6Class(
     allowed_locales = function() private$locales,
 
     #' @description Create a new `InternetProvider` object
-    #' @param locale (character) the locale to use. See
-    #' `$allowed_locales()` for locales supported (default: en_US)
     #' @return A new `InternetProvider` object
-    initialize = function(locale = NULL) {
-      # if (!is.null(locale)) {
-      #   # check global locales
-      #   super$check_locale(locale)
-      #   # check person provider locales
-      #   check_locale_(locale, private$locales)
-      #   self$locale <- locale
-      # } else {
-      #   self$locale <- "en_US"
-      # }
-
-      # private$parse_eval_safe("free_email_domains")
-      # private$parse_eval_safe("safe_email_tlds")
-      # private$parse_eval_safe("email_formats")
-      # private$parse_eval_safe("user_name_formats")
-      # private$parse_eval_safe("tlds")
-      # private$parse_eval_safe("replacements")
-      # private$parse_eval_safe("safe_email_tlds")
+    initialize = function() {
+      if (is.null(self$locale)) {
+        raise_class("InternetProvider")
+      }
     },
 
     #' @description convert to ascii
@@ -275,12 +259,12 @@ InternetProvider <- R6::R6Class(
     #' @description a user name
     user_name = function() {
       pattern <- super$random_element(self$user_name_formats)
-      loc <- if (private$has_locale(self$locale, PersonProvider$new()$allowed_locales())) {
+      loc <- if (private$has_locale(self$locale, PersonProvider_en_US$new()$allowed_locales())) {
         self$locale
       } else {
         "en_US"
       }
-      out <- PersonProvider$new(locale = loc)$render(pattern)
+      out <- cr_loc_spec_provider("PersonProvider", loc)$render(pattern)
       self$to_ascii(tolower(super$bothify(out)))
     },
 
@@ -324,7 +308,7 @@ InternetProvider <- R6::R6Class(
 
     #' @description a domain word
     domain_word = function() {
-      comp <- company(locale = self$locale)
+      comp <- subclass("CompanyProvider", locale = self$locale)
       xx <- comp$company()
       xxx <- strsplit(xx, split = "\\s|-")[[1]]
       tolower(self$to_ascii(xxx[2]))
@@ -399,7 +383,8 @@ InternetProvider <- R6::R6Class(
     #' [LoremProvider] to get a random string. default: `NULL`
     slug = function(value = NULL) {
       if (is.null(value)) {
-        value <- paste0(LoremProvider$new()$words(), collapse = "-")
+        lorem <- cr_loc_spec_provider("LoremProvider", self$locale)
+        value <- paste0(lorem$words(), collapse = "-")
       }
       return(value)
     },

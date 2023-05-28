@@ -1,13 +1,29 @@
 # modified from the python library faker:
 # https://github.com/joke2k/faker/blob/master/faker/providers/address/en_NZ/__init__.py
 
-
+#' Addressprovider for New-Zealand
+#'
+#' @description Address methods for New Zealand.
+#' @export
+#' @family en
+#' @family NZ
+#' @examples
+#' (z <- AddressProvider_en_NZ$new())
+#' z$locale
+#' z$postcode()
+#' z$street_name()
+#' z$address()
+#' z$city()
 AddressProvider_en_NZ <- R6::R6Class(
   inherit = AddressProvider,
   "AddressProvider_en_NZ",
   lock_objects = FALSE,
   public = list(
+    #' @field locale (character) xxx
+    locale = "en_NZ",
     # add your data here
+    #' @field city_prefixes (character) Prefixes for cities.
+    #' Combining suffix and prefix makes a random city.
     city_prefixes = c(
       "North",
       "East",
@@ -21,13 +37,17 @@ AddressProvider_en_NZ <- R6::R6Class(
       "High",
       "Mount"
     ),
+    #' @field city_suffixes (character) Suffixes for cities.
+    #' Combining suffix and prefix makes a random city.
     city_suffixes = c(
       "town", "ton", "land", "ville", "berg", "burgh",
       "borough", "bury", "burn", "ing", "port", "mouth", "stone", "ings",
       "mouth", "fort", "haven", "leigh", "side", "gate", "neath", "side",
       " Flats", " Hill"
     ),
+    #' @field building_number_formats (character) Formats for building numbers
     building_number_formats = c("%##", "%#", "%"),
+    #' @field street_suffixes combined with street prefix creates a street.
     street_suffixes = c(
       # Most common:
       "Arcade", "Arcade", "Arcade",
@@ -68,7 +88,7 @@ AddressProvider_en_NZ <- R6::R6Class(
       "View"
     ),
 
-    # Māori nouns commonly present in placenames.
+    #' @field te_reo_parts  Māori nouns commonly present in placenames.
     te_reo_parts = c(
       "ara",
       "awa",
@@ -103,7 +123,7 @@ AddressProvider_en_NZ <- R6::R6Class(
       "whare",
       "weka"
     ),
-    # Māori endings (usually adjectives) commonly present in placenames.
+    #' @field te_reo_ending  Māori endings (usually adjectives) commonly present in placenames.
     te_reo_ending = c(
       "ara",
       "awa",
@@ -156,6 +176,7 @@ AddressProvider_en_NZ <- R6::R6Class(
       "whero",
       "whitu"
     ),
+    #' @field te_reo_first Maori first part
     te_reo_first = c(
       "Ara",
       "Awa",
@@ -190,6 +211,7 @@ AddressProvider_en_NZ <- R6::R6Class(
       "Whare",
       "Weka"
     ),
+    #' @field postcode_formats Formats for postal codes
     postcode_formats = c(
       # as per https://en.wikipedia.org/wiki/Postcodes_in_New_Zealand
       # Northland
@@ -241,6 +263,7 @@ AddressProvider_en_NZ <- R6::R6Class(
       "97##",
       "98##"
     ),
+    #' @field city_formats formats for creating a city name.
     city_formats = c(
       "{{city_prefix}}{{city_suffix}}",
       "{{first_name}}{{city_suffix}}",
@@ -257,6 +280,7 @@ AddressProvider_en_NZ <- R6::R6Class(
       "{{te_reo_first}}{{te_reo_part}}{{te_reo_ending}}",
       "{{te_reo_first}}{{te_reo_part}}{{te_reo_ending}}"
     ),
+    #' @field street_name_formats formats for creating a street name.
     street_name_formats = c(
       "{{first_name}} {{street_suffix}}",
       "{{last_name}} {{street_suffix}}",
@@ -267,6 +291,7 @@ AddressProvider_en_NZ <- R6::R6Class(
       "{{te_reo_first}}{{te_reo_ending}} {{street_suffix}}",
       "{{te_reo_first}}{{te_reo_part}}{{te_reo_ending}} {{street_suffix}}"
     ),
+    #' @field street_address_formats formats for creating a street address.
     street_address_formats = c(
       "{{building_number}} {{street_name}}",
       "{{building_number}} {{street_name}}",
@@ -275,7 +300,10 @@ AddressProvider_en_NZ <- R6::R6Class(
       "{{secondary_address}}\n{{building_number}} {{street_name}}",
       "PO Box {{building_number}}"
     ),
+    #' @field address_formats formats for creating an address.
     address_formats = "{{street_address}}\n{{city}} {{postcode}}",
+    #' @field secondary_address_formats formats for creating secondary parts of
+    #' addresses.
     secondary_address_formats = c(
       "Apt. %##",
       "Flat %#",
@@ -285,7 +313,7 @@ AddressProvider_en_NZ <- R6::R6Class(
     ),
 
     # Fill in these functions
-    #' @description address
+    #' @description Create an address, a combination of street, postal code and city.
     address = function() {
       pattern <- super$random_element(self$address_formats)
       dat <- list(
@@ -295,14 +323,13 @@ AddressProvider_en_NZ <- R6::R6Class(
       )
       whisker::whisker.render(pattern, data = dat)
     },
-    #' @description city
+    #' @description Create a city
     city = function() {
       pattern <- super$random_element(self$city_formats)
-      pp <- PersonProvider$new(locale = self$locale)
       dat <- list(
         # , , te_reo_first, te_reo_ending, te_reo_part
-        first_name = pp$first_name(),
-        last_name = pp$last_name(),
+        first_name = self$pp$first_name(),
+        last_name = self$pp$last_name(),
         city_suffix = super$random_element(self$city_suffix),
         city_prefix = super$random_element(self$city_prefix),
         te_reo_first = super$random_element(self$te_reo_first),
@@ -311,13 +338,12 @@ AddressProvider_en_NZ <- R6::R6Class(
       )
       whisker::whisker.render(pattern, data = dat)
     },
-    #' @description street name
+    #' @description Create a street name
     street_name = function() {
       pattern <- super$random_element(self$street_name_formats)
-      pp <- PersonProvider$new(locale = self$locale)
       dat <- list(
-        first_name = pp$first_name(),
-        last_name = pp$last_name(),
+        first_name = self$pp$first_name(),
+        last_name = self$pp$last_name(),
         street_suffix = super$random_element(self$street_suffixes),
         te_reo_first = super$random_element(self$te_reo_first),
         te_reo_ending = super$random_element(self$te_reo_ending),
@@ -325,7 +351,7 @@ AddressProvider_en_NZ <- R6::R6Class(
       )
       whisker::whisker.render(pattern, data = dat)
     },
-    #' @description street address
+    #' @description Create a street address , a combination of streetname and house indicator.
     street_address = function() {
       pattern <- super$random_element(self$street_address_formats)
       number_format <- super$random_element(self$building_number_formats)
@@ -339,7 +365,7 @@ AddressProvider_en_NZ <- R6::R6Class(
       )
       whisker::whisker.render(pattern, data = dat)
     },
-    #' @description postal code
+    #' @description Create a postal code
     postcode = function() {
       pattern <- super$random_element(self$postcode_formats)
       super$numerify(pattern)

@@ -832,7 +832,15 @@ job_formats_fr_ch <- c(
   "Zingueur dipl\u00f4m\u00e9"
 )
 
-#' @describeIn {JobProvider} {}
+#' Job provider
+#'
+#' Methods for jobs. Create a job name.
+#' @family fr
+#' @family CH
+#' @export
+#' @examples
+#' x <- JobProvider_fr_CHK$new()
+#' x$render()
 JobProvider_fr_CH <- R6::R6Class(
   inherit = JobProvider,
   "JobProvider_fr_CH",

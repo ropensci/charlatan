@@ -1418,7 +1418,27 @@ person_en_nz <- list(
   last_names = person_last_names_en_nz
 )
 
-#' @describeIn {PersonProvider} {English (New Zealand)}
+
+#' @title Person Provider for English (New Zealand)
+#' @description person names methods
+#' @export
+#' @family en
+#' @family NZ
+#' @details Note for female and male components that we fall back on generic
+#' versions if the locale
+#' doesn't provide a male/female version.
+#' e.g., if no female first name we use first
+#' name
+#' @examples
+#' x <- PersonProvider_en_NZ$new()
+#' x$locale
+#' x$render()
+#' x$first_name()
+#' x$first_name_female()
+#' x$first_name_male()
+#' x$last_name()
+#' x$last_name_female()
+#' x$last_name_male()
 PersonProvider_en_NZ <- R6::R6Class(
   "PersonProvider_en_NZ",
   inherit = PersonProvider,

@@ -664,7 +664,27 @@ person_fr_fr <- list(
   prefixes = person_prefixes_fr_fr
 )
 
-#' @describeIn {PersonProvider} {French (France)}
+
+#' @title Person Provider for French (France)
+#' @description person names methods
+#' @export
+#' @family fr
+#' @family FR
+#' @details Note for female and male components that we fall back on generic
+#' versions if the locale
+#' doesn't provide a male/female version.
+#' e.g., if no female first name we use first
+#' name
+#' @examples
+#' x <- PersonProvider_fr_FR$new()
+#' x$locale
+#' x$render()
+#' x$first_name()
+#' x$first_name_female()
+#' x$first_name_male()
+#' x$last_name()
+#' x$last_name_female()
+#' x$last_name_male()
 PersonProvider_fr_FR <- R6::R6Class(
   "PersonProvider_fr_FR",
   inherit = PersonProvider,

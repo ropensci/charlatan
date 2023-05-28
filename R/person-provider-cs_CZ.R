@@ -354,7 +354,26 @@ person_cs_cz <- list(
   suffixes = person_suffixes_cs_cz
 )
 
-#' @describeIn {PersonProvider} {}
+#' @title Person Provider for Czech (Czech Republic)
+#' @description person names methods
+#' @export
+#' @family cs
+#' @family CZ
+#' @details Note for female and male components that we fall back on generic
+#' versions if the locale
+#' doesn't provide a male/female version.
+#' e.g., if no female first name we use first
+#' name
+#' @examples
+#' x <- PersonProvider_cs_CZ$new()
+#' x$locale
+#' x$render()
+#' x$first_name()
+#' x$first_name_female()
+#' x$first_name_male()
+#' x$last_name()
+#' x$last_name_female()
+#' x$last_name_male()
 PersonProvider_cs_CZ <- R6::R6Class(
   "PersonProvider_cs_CZ",
   inherit = PersonProvider,

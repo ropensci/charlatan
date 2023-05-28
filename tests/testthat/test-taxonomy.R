@@ -1,7 +1,8 @@
 context("TaxonomyProvider")
 
 test_that("TaxonomyProvider works", {
-  aa <- TaxonomyProvider$new()
+  charlatan_settings()
+  aa <- TaxonomyProvider_en_US$new()
 
   expect_is(aa, "R6")
   expect_is(aa, "TaxonomyProvider")

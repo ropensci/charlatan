@@ -9,7 +9,7 @@
 #' z$position()
 #' z$position(bbox = c(-120, 30, -110, 60))
 CoordinateProvider <- R6::R6Class(
-  'CoordinateProvider',
+  "CoordinateProvider",
   public = list(
     #' @description a latitude value
     lon = function() private$rnd() * 360,
@@ -27,10 +27,8 @@ CoordinateProvider <- R6::R6Class(
       }
     }
   ),
-
   private = list(
     rnd = function() stats::runif(1) - 0.5,
-
     coord_in_bbbox = function(bbox) {
       stopifnot(0 <= abs(bbox[1]) && abs(bbox[1]) <= 180)
       stopifnot(0 <= abs(bbox[3]) && abs(bbox[3]) <= 180)

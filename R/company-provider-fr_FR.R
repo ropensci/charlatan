@@ -3,9 +3,10 @@
 #' @title CompanyProvider fr_FR
 #' @description company methods for locale French France(fr_FR).
 #' @export
-#' @keywords internal
+#' @family FR
+#' @family fr
 #' @examples
-#' x <- company("fr_FR")
+#' x <- CompanyProvider_fr_FR$new()
 #' x$locale
 #' x$company()
 #' x$catch_phrase()
@@ -14,18 +15,20 @@ CompanyProvider_fr_FR <- R6::R6Class(
   "CompanyProvider_fr_FR",
   inherit = CompanyProvider,
   public = list(
-
-    #' @field siren_format (character) xxx
-    siren_format = "### ### ###",
+    #' @field locale (character) xxx
+    locale = "fr_FR",
+    #' @field catch_phrase_formats formatting for catch phrases.
     catch_phrase_formats = c(
       "{{catch_phrase_noun}} {{catch_phrase_verb}} {{catch_phrase_attribute}}"
     ),
+    #' @field company_formats formatting for company names
     company_formats = c(
       "{{last_name}} {{company_suffix}}",
       "{{last_name}} {{last_name}} {{company_suffix}}",
       "{{last_name}}",
       "{{last_name}}"
     ),
+    #' @field nouns nouns
     nouns = c(
       "la s\u00e9curit\u00e9",
       "le plaisir",
@@ -39,6 +42,7 @@ CompanyProvider_fr_FR <- R6::R6Class(
       "l\'avantage",
       "la libert\u00e9"
     ),
+    #' @field verbs verbs
     verbs = c(
       "de rouler",
       "d\'avancer",
@@ -49,6 +53,7 @@ CompanyProvider_fr_FR <- R6::R6Class(
       "d\'atteindre vos buts",
       "de concr\u00e9tiser vos projets"
     ),
+    #' @field attributes attributes
     attributes = c(
       "de mani\u00e8re efficace",
       "plus rapidement",
@@ -65,23 +70,14 @@ CompanyProvider_fr_FR <- R6::R6Class(
       "de mani\u00e8re s\u00fbre",
       "en toute s\u00e9curit\u00e9"
     ),
+    #' @field company_suffixes endings of companies.
     company_suffixes = c(
       "SA", "S.A.", "SARL", "S.A.R.L.", "S.A.S.",
       "et Fils"
     ),
 
     ## add functions here
-    #' @description a company name
-    company = function() {
-      pp <- PersonProvider$new(self$locale)
-      pattern <- super$random_element(self$company_formats)
-      dat <- list(
-        last_name = pp$last_name(),
-        last_name2 = pp$last_name(),
-        company_suffix = super$random_element(self$company_suffixes)
-      )
-      whisker::whisker.render(template = pattern, data = dat)
-    },
+    #' @description generate a catch phrase for a company.
     catch_phrase = function() {
       whisker::whisker.render(template = self$catch_phrase_formats, data = list(
         catch_phrase_noun = super$random_element(self$nouns),

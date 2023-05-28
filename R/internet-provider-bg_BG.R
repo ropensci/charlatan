@@ -105,23 +105,34 @@ int_replacements_bg_bg <- list(
   c("\u044f", "ya")
 )
 
-#' @describeIn {InternetProvider} {}
+#' Internet provider
+#'
+#' methods for internet related data, like email addresses,
+#' usernames, and websites.
+#' @family bg
+#' @family BG
+#' @export
+#' @examples
+#' x <- InternetProvider_bg_BG$new()
+#' x$email()
+#' x$free_email()
+#' x$mac_address()
+#' x$company_email()
 InternetProvider_bg_BG <- R6::R6Class(
-    inherit = InternetProvider,
-    "InternetProvider_bg_BG",
-    public = list(
-        locale = "bg_BG",
-        #' @field free_email_domains (character) free email tlds
-        free_email_domains = int_free_email_domains_bg_bg,
-        #' @field tlds (character) tlds
-        tlds = int_tlds_bg_bg,
-        #' @field replacements (list) a list
-        replacements = int_replacements_bg_bg,
-        #' @field user_name_formats (character) user name formats
-        user_name_formats =int_user_name_formats_bg_bg,
-        #' @field email_formats (character) email formats
-        email_formats =int_email_formats_bg_bg
-    )
+  inherit = InternetProvider,
+  "InternetProvider_bg_BG",
+  public = list(
+    #' @field locale (character) the locale
+    locale = "bg_BG",
+    #' @field free_email_domains (character) free email tlds
+    free_email_domains = int_free_email_domains_bg_bg,
+    #' @field tlds (character) tlds
+    tlds = int_tlds_bg_bg,
+    #' @field replacements (list) a list
+    replacements = int_replacements_bg_bg,
+    #' @field user_name_formats (character) user name formats
+    user_name_formats = int_user_name_formats_bg_bg,
+    #' @field email_formats (character) email formats
+    email_formats = int_email_formats_bg_bg
+  )
 )
-
-

@@ -64,6 +64,7 @@ check4pkg <- function(x) {
 #
 # Errors with a clear error message if it does not exist
 cr_loc_spec_provider <- function(provider, locale) {
+  if (is.null(locale)) stop("Locale not set", call. = FALSE)
   if (!provider %in% available_providers) stop(paste0(provider, " does not exist"))
   name <- paste0(provider, "_", locale)
   if (exists(name)) {
@@ -74,11 +75,20 @@ cr_loc_spec_provider <- function(provider, locale) {
 }
 
 
-# instantiate subclass
-subclass <- function(provider, locale) {
+#' Create Localized Provider
+#'
+#' @export
+#' @examples
+#' x <- subclass("AddressProvider")
+subclass <- function(provider, locale = NULL) {
   if (is.null(locale)) {
     locale <- "en_US"
     warning(paste("No locale provided for ", provider, " defaulting to en_US"), call. = FALSE)
   }
   return(cr_loc_spec_provider(provider, locale))
+}
+
+raise_class <- function(name = NULL) {
+  msg <- "You cannot instantiate this bare class of {{name}}, \nuse one of the provided localized versions: for example {{name}}_en_US"
+  stop(whisker.render(msg, data = list(name = name)), call. = FALSE)
 }

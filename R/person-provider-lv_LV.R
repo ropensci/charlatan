@@ -465,7 +465,27 @@ person_lv_lv <- list(
   last_names_female = person_last_names_female_lv_lv
 )
 
-#' @describeIn {PersonProvider} {Latvian (Latvia)}
+
+#' @title Person Provider for Latvian (Latvia)
+#' @description person names methods
+#' @export
+#' @family lv
+#' @family LV
+#' @details Note for female and male components that we fall back on generic
+#' versions if the locale
+#' doesn't provide a male/female version.
+#' e.g., if no female first name we use first
+#' name
+#' @examples
+#' x <- PersonProvider_lv_LV$new()
+#' x$locale
+#' x$render()
+#' x$first_name()
+#' x$first_name_female()
+#' x$first_name_male()
+#' x$last_name()
+#' x$last_name_female()
+#' x$last_name_male()
 PersonProvider_lv_LV <- R6::R6Class(
   "PersonProvider_lv_LV",
   inherit = PersonProvider,

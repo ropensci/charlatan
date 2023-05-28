@@ -14,15 +14,28 @@ int_tlds_en_au <- c(
   "net.au", "biz", "info", "edu", "edu.au"
 )
 
-#' @describeIn {InternetProvider} {English (Australia)}
+#' Internet provider
+#'
+#' methods for internet related data, like email addresses,
+#' usernames, and websites.
+#' @family en
+#' @family AU
+#' @export
+#' @examples
+#' x <- InternetProvider_en_AU$new()
+#' x$email()
+#' x$free_email()
+#' x$mac_address()
+#' x$company_email()
 InternetProvider_en_AU <- R6::R6Class(
-    inherit = InternetProvider,
-    "InternetProvider_en_AU",
-    public = list(
-        locale = "en_AU",
-        #' @field free_email_domains (character) free email tlds
-        free_email_domains = int_free_email_domains_en_au,
-        #' @field tlds (character) tlds
-        tlds = int_tlds_en_au
-    )
+  inherit = InternetProvider,
+  "InternetProvider_en_AU",
+  public = list(
+    #' @field locale (character) the locale
+    locale = "en_AU",
+    #' @field free_email_domains (character) free email tlds
+    free_email_domains = int_free_email_domains_en_au,
+    #' @field tlds (character) tlds
+    tlds = int_tlds_en_au
+  )
 )

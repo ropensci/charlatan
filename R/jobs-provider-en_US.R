@@ -643,7 +643,15 @@ job_formats_en_us <- c(
   "Youth worker"
 )
 
-#' @describeIn {JobProvider} {English (United States)}
+#' Job provider
+#'
+#' Methods for jobs. Create a job name.
+#' @family en
+#' @family US
+#' @export
+#' @examples
+#' x <- JobProvider_en_USK$new()
+#' x$render()
 JobProvider_en_US <- R6::R6Class(
   inherit = JobProvider,
   "JobProvider_en_US",

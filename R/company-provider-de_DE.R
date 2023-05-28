@@ -4,9 +4,11 @@
 #' @title CompanyProvider de_DE
 #' @description company methods for locale German, Germany (de_DE).
 #' @export
-#' @keywords internal
+#' @export
+#' @family de
+#' @family DE
 #' @examples
-#' x <- company("de_DE")
+#' x <- CompanyProvider_de_DE$new()
 #' x$locale
 #' x$company()
 CompanyProvider_de_DE <- R6::R6Class(
@@ -14,28 +16,21 @@ CompanyProvider_de_DE <- R6::R6Class(
   "CompanyProvider_de_DE",
   inherit = CompanyProvider,
   public = list(
+    #' @field locale locale for this provider
+    locale = "de_DE",
+    #' @field company_formats formats for company names.
     company_formats = c(
       "{{last_name}} {{company_suffix}}",
       "{{last_name}} {{last_name2}} {{company_suffix}}",
       "{{last_name}}"
     ),
+    #' @field company_suffixes suffixes for in company names.
     company_suffixes = c(
       "AG", "AG", "AG", "AG", "AG & Co. KG", "AG & Co. KGaA", "AG & Co. OHG",
       "GbR", "GbR", "GmbH", "GmbH", "GmbH", "GmbH", "GmbH & Co. KG",
       "GmbH & Co. KG", "GmbH & Co. KGaA", "GmbH & Co. OHG", "KG", "KG", "KG",
       "KGaA", "OHG mbH", "Stiftung & Co. KG", "Stiftung & Co. KGaA", "e.G.",
       "e.V."
-    ),
-    #' @description a company name
-    company = function() {
-      pp <- PersonProvider$new(self$locale)
-      pattern <- super$random_element(self$company_formats)
-      dat <- list(
-        last_name = pp$last_name(),
-        last_name2 = pp$last_name(),
-        company_suffix = super$random_element(self$company_suffixes)
-      )
-      whisker::whisker.render(template = pattern, data = dat)
-    }
+    )
   )
 )

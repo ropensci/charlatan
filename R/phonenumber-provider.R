@@ -1,4 +1,9 @@
-
+#' @title PhoneNumberProvider
+#' @description methods for generating phone numbers
+#' @family en
+#' @family AU
+#' @export
+#' @keywords internal
 PhoneNumberProvider <- R6::R6Class(
   inherit = BaseProvider,
   "PhoneNumberProvider",
@@ -14,13 +19,12 @@ PhoneNumberProvider <- R6::R6Class(
     allowed_locales = function() private$locales,
 
     #' @description Create a new `PhoneNumberProvider` object
-    #' @param locale (character) the locale to use. See
-    #' `$allowed_locales()` for locales supported (default: en_US)
     #' @return A new `PhoneNumberProvider` object
     initialize = function() {
-
+      if (is.null(self$locale)) {
+        raise_class("PhoneNumberProvider")
+      }
     },
-
     #' @description Make a phone number
     render = function() {
       if (!is.null(self$area_code_formats)) {
@@ -39,7 +43,7 @@ PhoneNumberProvider <- R6::R6Class(
       "da_DK", "de_DE", "cs_CZ", "bs_BA", "bg_BG", "fa_IR", "fi_FI",
       "fr_CH", "fr_FR", "hi_IN", "hr_HR", "hu_HU", "it_IT", "ja_JP",
       "ko_KR", "lt_LT", "lv_LV", "ne_NP", "nl_BE", "nl_NL", "nn_NO",
-      "pl_PL", "pt_BR", "pt_PT", "ru_RU", "sk_SK",  "sv_SE",
+      "pl_PL", "pt_BR", "pt_PT", "ru_RU", "sk_SK", "sv_SE",
       "tr_TR", "uk_UA", "zh_TW", "dk_DK", "he_IL", "id_ID", "en_AU",
       "en_NZ", "th_TH"
     )

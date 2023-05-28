@@ -1,115 +1,51 @@
-#' addresses
-#' @export
-#' @examples
-#' x <- addresses("es_ES")
-#' self <- x
-#' x
-#' x$locale
-#' x$street_name()
-#' x$street_prefix()
-#' x$secondary_address()
-#' x$state()
-addresses <- function(locale = NULL) {
-  if (is.null(locale)) {
-    return(AddressProvider_en_US$new("en_US"))
-  }
-  cr_loc_spec_provider("AddressProvider", locale)
-}
-
 #' @title AddressProvider
 #' @description address methods
 #' @include datetime-provider.R
-#' @export
 #' @keywords internal
-#' @examples
-#' (z <- AddressProvider$new())
-#' z$locale
-#' z$allowed_locales()
-#' z$city_suffix()
-#' z$street_suffix()
-#' z$building_number()
-#' z$city()
-#' z$country()
-#' z$street_name()
-#' z$street_address()
-#' z$address()
-#' z$country()
-#' z$country_code()
-#' z$postcode()
-#'
-#' # en_GB
-#' (z <- AddressProvider$new("en_GB"))
-#' z$locale
-#' z$locale_data
-#' z$locale_data$postcode_sets
-#' z$postcode
-#' z$postcode()
-#' z$street_name()
-#'
-#' # en_NZ
-#' (z <- AddressProvider$new("en_NZ"))
-#' z$locale
-#' z$street_name()
-#'
-#' # es_ES
-#' (z <- AddressProvider$new("es_ES"))
-#' z$locale
-#' z$street_name()
-#'
-#' # nl_NL
-#' (z <- AddressProvider$new("nl_NL"))
-#' z$locale
-#' z$street_name()
-#' z$postcode()
-#' z$city()
+#' @export
 AddressProvider <- R6::R6Class(
   inherit = BaseProvider,
   "AddressProvider",
   lock_objects = FALSE,
   public = list(
-    #' @field locale (character) xxx
+    #' @field locale (character) Locale
     locale = NULL,
-    #' @description fetch the allowed locales for this provider
+    #' @description all allowed locales
     allowed_locales = function() private$locales,
     #' @description Create a new `AddressProvider` object
-    #' @param locale (character) the locale to use. See
-    #' `$allowed_locales()` for locales supported (default: en_US)
     #' @return A new `AddressProvider` object
-    initialize = function(locale = NULL) {
-      if (!is.null(locale)) {
-        # check global locales
-        super$check_locale(locale)
-        # check address provider locales
-        check_locale_(locale, private$locales)
-        self$locale <- locale
-      } else {
-        stop("use the `addresses` function to create a locale specific address instance.")
-      }
+    initialize = function() {
+      if (is.null(self$locale)) raise_class("AddressProvider")
+      self$init_person_provider(self$locale)
     },
-    #' @description address
+    #' @description Create an address, a combination of street, postal code and city.
     address = function() {
       # override this required function in the subclass
     },
-    #' @description city
+    #' @description Create a city
     city = function() {
       # override this required function in the subclass
     },
-    #' @description street name
+    #' @description Create a street name.
     street_name = function() {
       # override this required function in the subclass
     },
-    #' @description street address
+    #' @description Create a street address, a combination of streetname and house indicator.
     street_address = function() {
       # override this required function in the subclass
     },
-    #' @description postal code
+    #' @description Create a postal code
     postcode = function() {
       # override this required function in the subclass
+    },
+    #' @description initialize the person provider (for use in addresses based on names)
+    #' @param locale locale
+    init_person_provider = function(locale) {
+      self$pp <- cr_loc_spec_provider("PersonProvider", locale)
     }
   ),
   private = list(
     locales = c("en_US", "en_GB", "en_NZ", "nl_NL"),
-    #' @param str a pattern
     fetch_parts = function(str) {
       pats <- strxt(str, "[A-Za-z]+_[A-Za-z]+")[[1]]
       res <- list()

@@ -13,3 +13,5 @@ appveyor.yml
 ^Makefile$
 ^todo.md$
 ^data-raw$
+^doc$
+^Meta$

@@ -9,7 +9,7 @@
 #' z$render(100)
 #' z$render(500)
 SequenceProvider <- R6::R6Class(
-  'SequenceProvider',
+  "SequenceProvider",
   public = list(
     #' @field letters (character) nucleotides to include in sequences
     letters = c("C", "G", "A", "T", "N"),
@@ -18,7 +18,8 @@ SequenceProvider <- R6::R6Class(
     #' @param length (integer) length of sequence to create. default: 30
     render = function(length = 30) {
       paste0(sample(self$letters, size = length, replace = TRUE),
-        collapse = "")
+        collapse = ""
+      )
     }
   )
 )

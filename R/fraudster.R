@@ -47,7 +47,7 @@ fraudster <- function(locale = NULL) {
 #' @keywords internal
 #' @param n number of random things to generaate. an integer; default: 1
 FraudsterClient <- R6::R6Class(
-  'FraudsterClient',
+  "FraudsterClient",
   public = list(
     #' @field locale (character) the locale to use
     locale = NULL,
@@ -61,7 +61,7 @@ FraudsterClient <- R6::R6Class(
         check_locale_(locale)
         self$locale <- locale
       } else {
-        self$locale <- 'en_US'
+        self$locale <- "en_US"
       }
     },
 
@@ -182,7 +182,7 @@ FraudsterClient <- R6::R6Class(
       ch_double(n, mean, sd)
     },
 
-    #' @description an integer 
+    #' @description an integer
     #' @param min minimum value, default: 1
     #' @param max maximum value, default: 1000
     integer = function(n = 1, min = 1, max = 1000) {
@@ -215,7 +215,7 @@ FraudsterClient <- R6::R6Class(
     #' @param shape2 non-negative parameters of the Beta distribution
     #' @param ncp non-centrality parameter, default: 0
     beta = function(n = 1, shape1, shape2, ncp = 0) {
-      ch_double(n = n)
+      ch_beta(n, shape1, shape2, ncp)
     },
 
     #' @description currency

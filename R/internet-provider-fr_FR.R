@@ -43,19 +43,32 @@ int_replacements_fr_fr <- list(
   c("\u00fc", "u")
 )
 
-#' @describeIn {InternetProvider} {French (France)}
+#' Internet provider for France
+#'
+#' methods for internet related data, like email addresses,
+#' usernames, and websites.
+#' @family fr
+#' @family FR
+#' @export
+#' @examples
+#' x <- InternetProvider_bg_BG$new()
+#' x$email()
+#' x$free_email()
+#' x$mac_address()
+#' x$company_email()
 InternetProvider_fr_FR <- R6::R6Class(
-    inherit = InternetProvider,
-    "InternetProvider_fr_FR",
-    public = list(
-        locale = "fr_FR",
-        #' @field free_email_domains (character) free email tlds
-        free_email_domains = int_free_email_domains_fr_fr,
-        #' @field tlds (character) tlds
-        tlds = int_tlds_fr_fr,
-        #' @field safe_email_tlds (character) safe email tlds
-        safe_email_tlds = int_safe_email_tlds_fr_fr,
-        #' @field replacements (list) a list
-        replacements =int_replacements_fr_fr
-    )
+  inherit = InternetProvider,
+  "InternetProvider_fr_FR",
+  public = list(
+    #' @field locale (character) the locale
+    locale = "fr_FR",
+    #' @field free_email_domains (character) free email tlds
+    free_email_domains = int_free_email_domains_fr_fr,
+    #' @field tlds (character) tlds
+    tlds = int_tlds_fr_fr,
+    #' @field safe_email_tlds (character) safe email tlds
+    safe_email_tlds = int_safe_email_tlds_fr_fr,
+    #' @field replacements (list) a list
+    replacements = int_replacements_fr_fr
+  )
 )

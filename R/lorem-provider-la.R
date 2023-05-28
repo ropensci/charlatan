@@ -32,14 +32,34 @@ lorem_word_list_la <- c(
   "voluptate", "voluptatem", "voluptates", "voluptatibus", "voluptatum"
 )
 
-#' @describeIn {LoremProvider} {Latin}
+#' Lorem provider Latin
+#'
+#' Methods for Lorem Ipsum generation.
+#' Lorem Ipsum is a placeholder text commonly used to demonstrate the visual
+#' form of a document or a typeface without relying on meaningful content.
+#' This Latin version is what is common used
+#' @family la
+#' @export
+#' @examples
+#' x <- LoremProvider_la$new()
+#' x$word()
+#' x$words(3)
+#' x$words(6)
+#' x$sentence()
+#' x$paragraph()
+#' x$paragraphs(3)
+#' cat(x$paragraphs(6), sep = "\n")
+#' x$text(19)
+#' x <- LoremProvider_la$new(word_connector = " --- ")
+#' x$paragraph(4)
 LoremProvider_la <- R6::R6Class(
   inherit = LoremProvider,
   "LoremProvider_la",
   public = list(
+    #' @field locale (character) the locale
     locale = "la"
   ),
   private = list(
-    world_list = lorem_word_list_la
+    word_list = lorem_word_list_la
   )
 )

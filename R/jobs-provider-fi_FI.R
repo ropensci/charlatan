@@ -197,7 +197,15 @@ job_formats_fi_fi <- c(
   "Yritt\u00e4jyysneuvoja",
   "Yva-koordinaattori"
 )
-#' @describeIn {JobProvider} {}
+#' Job provider
+#'
+#' Methods for jobs. Create a job name.
+#' @family fi
+#' @family FI
+#' @export
+#' @examples
+#' x <- JobProvider_fi_FI$new()
+#' x$render()
 JobProvider_fi_FI <- R6::R6Class(
   inherit = JobProvider,
   "JobProvider_fi_FI",

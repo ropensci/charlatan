@@ -158,7 +158,15 @@ job_formats_uk_ua <- c(
   "\u042e\u0440\u0438\u0441\u0442"
 )
 
-#' @describeIn {JobProvider} {}
+#' Job provider
+#'
+#' Methods for jobs. Create a job name.
+#' @family uk
+#' @family UA
+#' @export
+#' @examples
+#' x <- JobProvider_uk_UA$new()
+#' x$render()
 JobProvider_uk_UA <- R6::R6Class(
   inherit = JobProvider,
   "JobProvider_uk_UA",

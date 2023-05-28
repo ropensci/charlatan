@@ -1036,7 +1036,26 @@ person_hr_hr <- list(
   first_name_female = person_first_names_female_hr_hr,
   last_names = person_last_names_hr_hr
 )
-#' @describeIn {PersonProvider} {}
+#' @title Person Provider for Croatian (Croatia)
+#' @description person names methods
+#' @export
+#' @family hr
+#' @family HR
+#' @details Note for female and male components that we fall back on generic
+#' versions if the locale
+#' doesn't provide a male/female version.
+#' e.g., if no female first name we use first
+#' name
+#' @examples
+#' x <- PersonProvider_hr_HR$new()
+#' x$locale
+#' x$render()
+#' x$first_name()
+#' x$first_name_female()
+#' x$first_name_male()
+#' x$last_name()
+#' x$last_name_female()
+#' x$last_name_male()
 PersonProvider_hr_HR <- R6::R6Class(
   "PersonProvider_hr_HR",
   inherit = PersonProvider,

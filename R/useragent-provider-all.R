@@ -1,0 +1,25 @@
+#' @title UserAgentProvider for United States of America
+#' @description user agent methods
+#' @export
+#' @family en
+#' @family US
+#' @examples
+#' (x <- UserAgentProvider_en_US$new())
+#' x$locale
+#' x$mac_processor()
+#' x$linux_processor()
+#' x$user_agent()
+#' x$chrome()
+#' x$firefox()
+#' x$internet_explorer()
+#' x$opera()
+#' x$safari()
+UserAgentProvider_en_US <- R6::R6Class(
+  lock_objects = FALSE,
+  "UserAgentProvider_en_US",
+  inherit = UserAgentProvider,
+  public = list(
+    #' @field locale (character) the locale
+    locale = "en_US"
+  )
+)

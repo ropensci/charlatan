@@ -26,7 +26,7 @@ ch_rgb_css_color(n = 1)
 \item{n}{(integer) number of things to get, any non-negative integer}
 
 \item{locale}{(character) the locale to use. See
-\code{ColorProvider$new()$allowed_locales()} for locales supported.
+\code{colors()$allowed_locales()} for locales supported.
 Affects the \code{ch_color_name} and \code{ch_safe_color_name} functions}
 }
 \description{

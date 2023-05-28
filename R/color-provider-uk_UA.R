@@ -4,7 +4,8 @@
 #' @title ColorProvider uk_UA
 #' @description methods for colors in locale Ukrainian (Ukraine) (uk_UA)
 #' @export
-#' @keywords internal
+#' @family uk
+#' @family UA
 #' @examples
 #' x <- colors("template")
 #' x$locale
@@ -20,6 +21,9 @@ ColorProvider_uk_UA <- R6::R6Class(
   "ColorProvider_uk_UA",
   lock_objects = FALSE,
   public = list(
+    #' @field locale (character) xxx
+    locale = "uk_UA",
+    #' @field all_colors A vector with named list items containing the name of the color and the hex value.
     all_colors = list(
       "\u0410\u0431\u0440\u0438\u043a\u043e\u0441\u043e\u0432\u0438\u0439" = "#FBCEB1",
       "\u0410\u043a\u0432\u0430\u043c\u0430\u0440\u0438\u043d\u043e\u0432\u0438\u0439" = "#7FFFD4",
@@ -207,6 +211,7 @@ ColorProvider_uk_UA <- R6::R6Class(
       "\u042f\u0441\u043d\u043e-\u043b\u0430\u0437\u0443\u0440\u043e\u0432\u0438\u0439" = "#007FFF",
       "\u042f\u0441\u043d\u043e-\u043b\u0430\u0437\u0443\u0440\u043e\u0432\u0438\u0439 (\u0432\u0435\u0431)" = "#F0FFFF"
     ),
+    #' @field safe_colors safe to use colors.
     safe_colors = c(
       "\u0427\u043e\u0440\u043d\u0438\u0439",
       "\u0411\u0440\u0443\u043d\u0430\u0442\u043e-\u043c\u0430\u043b\u0438\u043d\u043e\u0432\u0438\u0439",

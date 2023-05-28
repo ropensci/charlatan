@@ -1782,7 +1782,26 @@ person_bg_bg <- list(
 )
 
 
-#' @describeIn {PersonProvider} {Bulgarian (Bulgaria)}
+#' @title Person Provider for Bulgarian (Bulgaria)
+#' @description person names methods
+#' @export
+#' @family bg
+#' @family BG
+#' @details Note for female and male components that we fall back on generic
+#' versions if the locale
+#' doesn't provide a male/female version.
+#' e.g., if no female first name we use first
+#' name
+#' @examples
+#' x <- PersonProvider_bg_BG$new()
+#' x$locale
+#' x$render()
+#' x$first_name()
+#' x$first_name_female()
+#' x$first_name_male()
+#' x$last_name()
+#' x$last_name_female()
+#' x$last_name_male()
 PersonProvider_bg_BG <- R6::R6Class(
   "PersonProvider_bg_BG",
   inherit = PersonProvider,
