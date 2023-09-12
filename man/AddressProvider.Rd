@@ -23,7 +23,7 @@ z$country_code()
 z$postcode()
 
 # en_GB
-(z <- AddressProvider$new('en_GB'))
+(z <- AddressProvider$new("en_GB"))
 z$locale
 z$locale_data
 z$locale_data$postcode_sets
@@ -32,17 +32,17 @@ z$postcode()
 z$street_name()
 
 # en_NZ
-(z <- AddressProvider$new('en_NZ'))
+(z <- AddressProvider$new("en_NZ"))
 z$locale
 z$street_name()
 
 # es_ES
-(z <- AddressProvider$new('es_ES'))
+(z <- AddressProvider$new("es_ES"))
 z$locale
 z$street_name()
 
 # nl_NL
-(z <- AddressProvider$new('nl_NL'))
+(z <- AddressProvider$new("nl_NL"))
 z$locale
 z$street_name()
 z$postcode()

@@ -17,7 +17,7 @@
 #' @author Martin Pedersen
 #'
 #' @section Package API:
-#' 
+#'
 #' - [ch_generate()]: generate a data.frame with fake data
 #' - [fraudster()]: single interface to all fake data methods
 #' - High level interfaces: There are high level functions prefixed with

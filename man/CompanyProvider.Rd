@@ -39,6 +39,7 @@ CompanyProvider$new(locale = "bg_BG")$company()
 CompanyProvider$new(locale = "cs_CZ")$company()
 CompanyProvider$new(locale = "de_DE")$company()
 CompanyProvider$new(locale = "fa_IR")$company()
+
 }
 \keyword{internal}
 \section{Super class}{

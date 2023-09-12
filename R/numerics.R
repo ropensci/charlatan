@@ -26,41 +26,41 @@
 #' @export
 #' @rdname numerics
 ch_double <- function(n = 1, mean = 0, sd = 1) {
-  assert(n, c('integer', 'numeric'))
+  assert(n, c("integer", "numeric"))
   NumericsProvider$new()$double(n, mean, sd)
 }
 
 #' @export
 #' @rdname numerics
 ch_integer <- function(n = 1, min = 1, max = 1000) {
-  assert(n, c('integer', 'numeric'))
+  assert(n, c("integer", "numeric"))
   NumericsProvider$new()$integer(n, min, max)
 }
 
 #' @export
 #' @rdname numerics
 ch_unif <- function(n = 1, min = 0, max = 9999) {
-  assert(n, c('integer', 'numeric'))
+  assert(n, c("integer", "numeric"))
   NumericsProvider$new()$unif(n, min, max)
 }
 
 #' @export
 #' @rdname numerics
 ch_norm <- function(n = 1, mean = 0, sd = 1) {
-  assert(n, c('integer', 'numeric'))
+  assert(n, c("integer", "numeric"))
   NumericsProvider$new()$norm(n, mean, sd)
 }
 
 #' @export
 #' @rdname numerics
 ch_lnorm <- function(n = 1, mean = 0, sd = 1) {
-  assert(n, c('integer', 'numeric'))
+  assert(n, c("integer", "numeric"))
   NumericsProvider$new()$lnorm(n, mean, sd)
 }
 
 #' @export
 #' @rdname numerics
 ch_beta <- function(n = 1, shape1, shape2, ncp = 0) {
-  assert(n, c('integer', 'numeric'))
+  assert(n, c("integer", "numeric"))
   NumericsProvider$new()$beta(n, shape1, shape2, ncp)
 }

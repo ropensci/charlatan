@@ -11,3 +11,4 @@ appveyor.yml
 ^codemeta\.json$
 ^revdep$
 ^Makefile$
+.git

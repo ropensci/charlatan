@@ -1,7 +1,7 @@
 # modified from the python library faker:
 # https://github.com/joke2k/faker/blob/master/faker/providers/job/__init__.py
 
-job_formats_da_dk = c(
+job_formats_da_dk <- c(
   "Administrationsassistent",
   "Administrationschef",
   "Administrations\u00f8konom",

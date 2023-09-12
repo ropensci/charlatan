@@ -30,3 +30,17 @@ locales_update:
 
 # No real targets!
 .PHONY: all test doc install	
+
+spellcheck:
+	${RSCRIPT} -e "devtools::spell_check()"
+
+lint:
+	${RSCRIPT} -e "devtools::lint()"
+
+style:
+	${RSCRIPT} -e "styler::style_pkg()"
+
+revdep:
+	${RSCRIPT} revdep/check.R
+
+release: style test doc readme build revdep

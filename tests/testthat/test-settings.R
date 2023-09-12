@@ -28,4 +28,3 @@ test_that("charlatan_settings - global settings override local settings", {
   bb <- PersonProvider$new()
   expect_true(bb$messy)
 })
-

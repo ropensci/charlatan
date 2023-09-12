@@ -16,7 +16,7 @@
 #' ch_credit_card_security_code(n = 10)
 #' ch_credit_card_security_code(n = 500)
 ch_credit_card_provider <- function(n = 1) {
-  assert(n, c('integer', 'numeric'))
+  assert(n, c("integer", "numeric"))
   if (n == 1) {
     CreditCardProvider$new()$credit_card_provider()
   } else {
@@ -28,7 +28,7 @@ ch_credit_card_provider <- function(n = 1) {
 #' @export
 #' @rdname ch_credit
 ch_credit_card_number <- function(n = 1) {
-  assert(n, c('integer', 'numeric'))
+  assert(n, c("integer", "numeric"))
   if (n == 1) {
     CreditCardProvider$new()$credit_card_number()
   } else {
@@ -40,7 +40,7 @@ ch_credit_card_number <- function(n = 1) {
 #' @export
 #' @rdname ch_credit
 ch_credit_card_security_code <- function(n = 1) {
-  assert(n, c('integer', 'numeric'))
+  assert(n, c("integer", "numeric"))
   if (n == 1) {
     CreditCardProvider$new()$credit_card_security_code()
   } else {

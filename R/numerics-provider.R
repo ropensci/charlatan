@@ -25,7 +25,7 @@
 #' z$lnorm(10)
 #' z$beta(10, 1, 1)
 NumericsProvider <- R6::R6Class(
-  'NumericsProvider',
+  "NumericsProvider",
   inherit = BaseProvider,
   public = list(
     #' @description get a double, pulls from normal distribution

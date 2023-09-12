@@ -39,9 +39,9 @@ ch_generate()
 ch_generate(n = 1)
 ch_generate(n = 100)
 
-ch_generate('job')
-ch_generate('job', 'name')
-ch_generate('job', 'color_name')
+ch_generate("job")
+ch_generate("job", "name")
+ch_generate("job", "color_name")
 
 # locale
 ch_generate(locale = "en_US")

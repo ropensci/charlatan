@@ -8,7 +8,7 @@
 #' ch_doi(10)
 #' ch_doi(100)
 ch_doi <- function(n = 1) {
-  assert(n, c('integer', 'numeric'))
+  assert(n, c("integer", "numeric"))
   if (n == 1) {
     DOIProvider$new()$render()
   } else {

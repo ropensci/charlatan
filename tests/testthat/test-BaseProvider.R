@@ -3,7 +3,6 @@ context("BaseProvider")
 aa <- BaseProvider$new()
 
 test_that("BaseProvider works", {
-
   expect_is(aa, "BaseProvider")
   expect_is(aa, "R6")
 

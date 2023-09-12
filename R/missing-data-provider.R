@@ -7,7 +7,7 @@
 #' z$make_missing(x = letters)
 MissingDataProvider <- R6::R6Class(
   inherit = BaseProvider,
-  'MissingDataProvider',
+  "MissingDataProvider",
   public = list(
     #' @description make missing data
     #' @param x a vector of characters, numeric, integers, logicals, etc
@@ -16,8 +16,7 @@ MissingDataProvider <- R6::R6Class(
     #' positions and replaces them with NA matching the input class.
     make_missing = function(x) {
       n <- super$random_element(seq_along(x))
-      na_value <- switch(
-        class(x),
+      na_value <- switch(class(x),
         character = NA_character_,
         numeric = NA_integer_,
         integer = NA_integer_,

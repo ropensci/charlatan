@@ -13,7 +13,7 @@
 #' ch_element_element(10)
 #' ch_element_element(50)
 ch_element_symbol <- function(n = 1) {
-  assert(n, c('integer', 'numeric'))
+  assert(n, c("integer", "numeric"))
   if (n == 1) {
     ElementProvider$new()$symbol()
   } else {
@@ -25,7 +25,7 @@ ch_element_symbol <- function(n = 1) {
 #' @export
 #' @rdname elements
 ch_element_element <- function(n = 1) {
-  assert(n, c('integer', 'numeric'))
+  assert(n, c("integer", "numeric"))
   if (n == 1) {
     ElementProvider$new()$element()
   } else {

@@ -18,7 +18,7 @@
 #' x$safe_color_name()
 ColorProvider <- R6::R6Class(
   inherit = BaseProvider,
-  'ColorProvider',
+  "ColorProvider",
   public = list(
     #' @field locale (character) xxx
     locale = NULL,
@@ -42,18 +42,18 @@ ColorProvider <- R6::R6Class(
         check_locale_(locale, private$locales)
         self$locale <- locale
       } else {
-        self$locale <- 'en_US'
+        self$locale <- "en_US"
       }
       self$all_colors <- parse_eval("all_colors_", self$locale)
       self$safe_colors <- parse_eval("safe_colors_", self$locale)
     },
 
-    #' @description color name 
+    #' @description color name
     color_name = function() {
       super$random_element(names(self$all_colors))
     },
 
-    #' @description safe color name 
+    #' @description safe color name
     safe_color_name = function() {
       super$random_element(self$safe_colors)
     },
@@ -61,7 +61,9 @@ ColorProvider <- R6::R6Class(
     #' @description hex color
     hex_color = function() {
       grDevices::rgb(private$sample_col(), private$sample_col(),
-                     private$sample_col(), maxColorValue = 255)
+        private$sample_col(),
+        maxColorValue = 255
+      )
     },
 
     #' @description safe hex color
@@ -91,19 +93,15 @@ ColorProvider <- R6::R6Class(
       sprintf("rgb(%s)", paste0(self$rgb_color(), collapse = ", "))
     }
   ),
-
   private = list(
     ind = function(x, y) {
       substring(x, y, y)
     },
-
     rgb_color_list = function() {
       color <- self$rgb_color()
       sprintf("(%s)", paste0(color, collapse = ", "))
     },
-
     sample_col = function() sample(0:255, 1),
-
     locales = c("uk_UA", "en_US")
   )
 )

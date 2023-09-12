@@ -2,11 +2,11 @@
 # https://github.com/joke2k/faker/blob/master/faker/providers/person/ja_JP/__init__.py
 
 person_formats_female_ja_jp <- c(
-  '{{last_name}} {{first_name_female}}'
+  "{{last_name}} {{first_name_female}}"
 )
 
 person_formats_male_ja_jp <- c(
-  '{{last_name}} {{first_name_male}}'
+  "{{last_name}} {{first_name_male}}"
 )
 
 person_formats_ja_jp <- c(
@@ -131,8 +131,8 @@ person_last_names_ja_jp <- c(
 )
 
 person_kana_formats_ja_jp <- c(
-  '{{last_kana_name}} {{first_kana_name_female}}',
-  '{{last_kana_name}} {{first_kana_name_male}}'
+  "{{last_kana_name}} {{first_kana_name_female}}",
+  "{{last_kana_name}} {{first_kana_name_male}}"
 )
 
 person_first_kana_names_female_ja_jp <- c(
@@ -250,32 +250,32 @@ person_last_kana_names_ja_jp <- c(
 )
 
 person_romanized_formats_ja_jp <- c(
-  '{{first_romanized_name_female}} {{last_romanized_name}}',
-  '{{first_romanized_name_male}} {{last_romanized_name}}'
+  "{{first_romanized_name_female}} {{last_romanized_name}}",
+  "{{first_romanized_name_male}} {{last_romanized_name}}"
 )
 
 person_first_romanized_names_female_ja_jp <- c(
-  'Akira', 'Akemi', 'Asuka',
-  'Kaori', 'Kana', 'Kumiko',
-  'Sayuri',
-  'Chiyo', 'Tsubasa', 'Tomomi',
-  'Naoko', 'Nanaka',
-  'Hanako', 'Haruka',
-  'Maaya', 'Mai', 'Miki', 'Momoko',
-  'Yui', 'Yoko', 'Yumiko',
-  'Rei', 'Rika'
+  "Akira", "Akemi", "Asuka",
+  "Kaori", "Kana", "Kumiko",
+  "Sayuri",
+  "Chiyo", "Tsubasa", "Tomomi",
+  "Naoko", "Nanaka",
+  "Hanako", "Haruka",
+  "Maaya", "Mai", "Miki", "Momoko",
+  "Yui", "Yoko", "Yumiko",
+  "Rei", "Rika"
 )
 
 person_first_romanized_names_male_ja_jp <- c(
-  'Akira', 'Atsushi', 'Osamu',
-  'Kyosuke', 'Kenichi',
-  'Jun', 'Sotaro',
-  'Taichi', 'Takuma', 'Taro', 'Tsubasa', 'Tomoya',
-  'Naoki', 'Naoto',
-  'Hideki', 'Hiroshi',
-  'Manabu', 'Mituru', 'Minoru', 'Hiroki',
-  'Yuta', 'Yasuhiro', 'Yoichi', 'Yosuke',
-  'Ryosuke', 'Ryohei'
+  "Akira", "Atsushi", "Osamu",
+  "Kyosuke", "Kenichi",
+  "Jun", "Sotaro",
+  "Taichi", "Takuma", "Taro", "Tsubasa", "Tomoya",
+  "Naoki", "Naoto",
+  "Hideki", "Hiroshi",
+  "Manabu", "Mituru", "Minoru", "Hiroki",
+  "Yuta", "Yasuhiro", "Yoichi", "Yosuke",
+  "Ryosuke", "Ryohei"
 )
 
 person_first_romanized_names_ja_jp <- c(
@@ -284,23 +284,22 @@ person_first_romanized_names_ja_jp <- c(
 )
 
 person_last_romanized_names_ja_jp <- c(
-  'Aota', 'Aoyama', 'Ishida', 'Idaka', 'Ito', 'Uno', 'Ekoda', 'Ogaki',
-  'Kato', 'Kano', 'Kijima', 'Kimura', 'Kiriyama', 'Kudo', 'Koizumi', 'Kobayashi', 'Kondo',
-  'Saito', 'Sakamoto', 'Sasaki', 'Sato', 'Sasada', 'Suzuki', 'Sugiyama',
-  'Takahashi', 'Tanaka', 'Tanabe', 'Tsuda', 'Tsuchiya',
-  'Nakajima', 'Nakamura', 'Nagisa', 'Nakatsugawa', 'Nishinosono', 'Nomura',
-  'Harada', 'Hamada', 'Hirokawa', 'Fujimoto',
-  'Matsumoto', 'Miyake', 'Miyagawa', 'Murayama',
-  'Yamagishi', 'Yamaguchi', 'Yamada', 'Yamamoto', 'Yoshida', 'Yoshimoto',
-  'Wakamatsu', 'Watanabe'
+  "Aota", "Aoyama", "Ishida", "Idaka", "Ito", "Uno", "Ekoda", "Ogaki",
+  "Kato", "Kano", "Kijima", "Kimura", "Kiriyama", "Kudo", "Koizumi", "Kobayashi", "Kondo",
+  "Saito", "Sakamoto", "Sasaki", "Sato", "Sasada", "Suzuki", "Sugiyama",
+  "Takahashi", "Tanaka", "Tanabe", "Tsuda", "Tsuchiya",
+  "Nakajima", "Nakamura", "Nagisa", "Nakatsugawa", "Nishinosono", "Nomura",
+  "Harada", "Hamada", "Hirokawa", "Fujimoto",
+  "Matsumoto", "Miyake", "Miyagawa", "Murayama",
+  "Yamagishi", "Yamaguchi", "Yamada", "Yamamoto", "Yoshida", "Yoshimoto",
+  "Wakamatsu", "Watanabe"
 )
 
 funs_ja_jp <- list(
   kana_name = function() {
-    pattern = super$random_element(self$kana_formats)
+    pattern <- super$random_element(self$kana_formats)
     self$generator$parse(pattern)
   },
-
   first_kana_name = function() {
     super$random_element(self$first_kana_names)
   }

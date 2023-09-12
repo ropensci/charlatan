@@ -2,9 +2,9 @@
 # https://github.com/joke2k/faker/blob/master/faker/providers/company/bg_BG/__init__.py
 
 company_formats_bg_bg <- c(
-  '{{last_name}} {{company_suffix}}',
-  '{{last_name}} {{last_name}} {{company_suffix}}',
-  '{{last_name}}'
+  "{{last_name}} {{company_suffix}}",
+  "{{last_name}} {{last_name}} {{company_suffix}}",
+  "{{last_name}}"
 )
 
 company_suffixes_bg_bg <- c(
@@ -27,4 +27,3 @@ company_suffixes_bg_bg <- c(
   "SD",
   "\u0421\u0414"
 )
-

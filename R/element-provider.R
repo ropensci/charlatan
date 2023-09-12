@@ -6,7 +6,7 @@ elements <- data.frame(symbol = el_symbols, element = el_elements, stringsAsFact
 #' @description chemical elements methods
 #' @export
 #' @keywords internal
-#' @details Data from Wikipedia at 
+#' @details Data from Wikipedia at
 #' <https://en.wikipedia.org/wiki/Chemical_element>
 #' @examples
 #' z <- ElementProvider$new()
@@ -14,7 +14,7 @@ elements <- data.frame(symbol = el_symbols, element = el_elements, stringsAsFact
 #' z$element()
 ElementProvider <- R6::R6Class(
   inherit = BaseProvider,
-  'ElementProvider',
+  "ElementProvider",
   public = list(
     #' @description Get a symbol
     symbol = function() {

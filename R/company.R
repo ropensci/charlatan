@@ -15,7 +15,7 @@
 #' ch_company(locale = "es_MX", n = 10)
 #' ch_company(locale = "hr_HR", n = 10)
 ch_company <- function(n = 1, locale = NULL) {
-  assert(n, c('integer', 'numeric'))
+  assert(n, c("integer", "numeric"))
   if (n == 1) {
     CompanyProvider$new(locale = locale)$company()
   } else {

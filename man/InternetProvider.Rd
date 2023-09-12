@@ -25,7 +25,7 @@ x$domain_name(levels = 3)
 x$domain_name(levels = 10)
 ## url's
 x$url()
-x$url(schemes = c('hbbp', 'hggp'))
+x$url(schemes = c("hbbp", "hggp"))
 x$image_url()
 ## uri's
 x$uri()
@@ -53,7 +53,7 @@ x$ascii_company_email()
 
 # addresses, mac, ipv4, ipv6
 x$mac_address()
-if (requireNamespace("ipaddress", quietly=TRUE)) {
+if (requireNamespace("ipaddress", quietly = TRUE)) {
   x$ipv4()
   x$ipv4(network = TRUE)
   x$ipv6()
@@ -106,7 +106,7 @@ x$user_name()
 x$email()
 
 # convert a string to ascii with stringi pkg
-if (requireNamespace("stringi", quietly=TRUE)) {
+if (requireNamespace("stringi", quietly = TRUE)) {
   x$to_ascii("anï")
 }
 }

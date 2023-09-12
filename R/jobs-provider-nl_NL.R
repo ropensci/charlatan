@@ -1,6 +1,6 @@
 # modified from https://nl.wikipedia.org/wiki/Lijst_van_beroepen
 
-job_formats_nl_nl = c(
+job_formats_nl_nl <- c(
   "Aankondiger",
   "Acceptant",
   "Accountant",

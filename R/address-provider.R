@@ -20,7 +20,7 @@
 #' z$postcode()
 #'
 #' # en_GB
-#' (z <- AddressProvider$new('en_GB'))
+#' (z <- AddressProvider$new("en_GB"))
 #' z$locale
 #' z$locale_data
 #' z$locale_data$postcode_sets
@@ -29,24 +29,24 @@
 #' z$street_name()
 #'
 #' # en_NZ
-#' (z <- AddressProvider$new('en_NZ'))
+#' (z <- AddressProvider$new("en_NZ"))
 #' z$locale
 #' z$street_name()
 #'
 #' # es_ES
-#' (z <- AddressProvider$new('es_ES'))
+#' (z <- AddressProvider$new("es_ES"))
 #' z$locale
 #' z$street_name()
 #'
 #' # nl_NL
-#' (z <- AddressProvider$new('nl_NL'))
+#' (z <- AddressProvider$new("nl_NL"))
 #' z$locale
 #' z$street_name()
 #' z$postcode()
 #' z$city()
 AddressProvider <- R6::R6Class(
   inherit = BaseProvider,
-  'AddressProvider',
+  "AddressProvider",
   lock_objects = FALSE,
   public = list(
     #' @field locale (character) xxx
@@ -105,7 +105,7 @@ AddressProvider <- R6::R6Class(
         check_locale_(locale, private$locales)
         self$locale <- locale
       } else {
-        self$locale <- 'en_US'
+        self$locale <- "en_US"
       }
 
       self$city_prefixes <- parse_eval("city_prefixes_", self$locale)
@@ -190,23 +190,24 @@ AddressProvider <- R6::R6Class(
 
     #' @description postal code
     postcode = function() {
-      switch(
-        self$locale,
+      switch(self$locale,
         en_US = toupper(super$bothify(super$random_element(self$postcode_formats))),
         en_GB = {
-          pcode <- ''
+          pcode <- ""
           pattern <- super$random_element(self$postcode_formats)
           pattern <- strsplit(pattern, split = "")[[1]]
           for (p in pattern) {
-            pcode <- paste0(pcode,
-                            super$random_element(self$locale_data$postcode_sets[[p]]))
+            pcode <- paste0(
+              pcode,
+              super$random_element(self$locale_data$postcode_sets[[p]])
+            )
           }
           pcode
         },
         nl_NL = {
           paste0(
             super$random_element(1000:9999),
-            ' ',
+            " ",
             super$random_element(LETTERS),
             super$random_element(LETTERS)
           )

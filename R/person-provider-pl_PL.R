@@ -1,18 +1,18 @@
 # modified from the python library faker:
 # https://github.com/joke2k/faker/blob/master/faker/providers/person/pl_PL/__init__.py
 
-person_formats_pl_pl = c(
-  '{{first_names}} {{last_names}}',
-  '{{first_names}} {{last_names}}',
-  '{{first_names}} {{last_names}}',
-  '{{first_names}} {{last_names}}',
-  '{{first_names}} {{last_names}}',
-  '{{prefixes}} {{first_names}} {{last_names}}',
-  '{{first_names}} {{last_names}}',
-  '{{prefixes}} {{first_names}} {{last_names}}'
+person_formats_pl_pl <- c(
+  "{{first_names}} {{last_names}}",
+  "{{first_names}} {{last_names}}",
+  "{{first_names}} {{last_names}}",
+  "{{first_names}} {{last_names}}",
+  "{{first_names}} {{last_names}}",
+  "{{prefixes}} {{first_names}} {{last_names}}",
+  "{{first_names}} {{last_names}}",
+  "{{prefixes}} {{first_names}} {{last_names}}"
 )
 
-person_first_names_male_pl_pl = c(
+person_first_names_male_pl_pl <- c(
   "Adam",
   "Adrian",
   "Alan",
@@ -115,7 +115,7 @@ person_first_names_male_pl_pl = c(
   "Wojciech"
 )
 
-person_first_names_female_pl_pl = c(
+person_first_names_female_pl_pl <- c(
   "Ada",
   "Adrianna",
   "Agnieszka",
@@ -171,7 +171,7 @@ person_first_names_female_pl_pl = c(
   "Urszula"
 )
 
-person_unisex_last_names_pl_pl = c(
+person_unisex_last_names_pl_pl <- c(
   "Abramczuk",
   "Achtelik",
   "Adamaszek",
@@ -3864,7 +3864,7 @@ person_unisex_last_names_pl_pl = c(
   "Zyzik"
 )
 
-person_male_last_names_pl_pl = c(
+person_male_last_names_pl_pl <- c(
   "Adamczyk",
   "Adamski",
   "Andrzejewski",
@@ -4067,10 +4067,12 @@ person_male_last_names_pl_pl = c(
   "Zi\u0119ba"
 )
 
-person_prefixes_pl_pl = c('pan', 'pani')
+person_prefixes_pl_pl <- c("pan", "pani")
 
-person_first_names_pl_pl = c(person_first_names_male_pl_pl,
-                             person_first_names_female_pl_pl)
+person_first_names_pl_pl <- c(
+  person_first_names_male_pl_pl,
+  person_first_names_female_pl_pl
+)
 
 person_pl_pl <- list(
   first_names = person_first_names_pl_pl,

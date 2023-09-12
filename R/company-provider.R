@@ -35,10 +35,10 @@
 #' CompanyProvider$new(locale = "cs_CZ")$company()
 #' CompanyProvider$new(locale = "de_DE")$company()
 #' CompanyProvider$new(locale = "fa_IR")$company()
-
+#'
 CompanyProvider <- R6::R6Class(
   lock_objects = FALSE,
-  'CompanyProvider',
+  "CompanyProvider",
   inherit = BaseProvider,
   public = list(
     #' @field locale (character) xxx
@@ -71,7 +71,7 @@ CompanyProvider <- R6::R6Class(
         check_locale_(locale, private$locales)
         self$locale <- locale
       } else {
-        self$locale <- 'en_US'
+        self$locale <- "en_US"
       }
 
       self$formats <- parse_eval("company_formats_", self$locale)
@@ -124,7 +124,6 @@ CompanyProvider <- R6::R6Class(
       }
     }
   ),
-
   private = list(
     makeit = function(x) {
       result <- list()
@@ -133,11 +132,11 @@ CompanyProvider <- R6::R6Class(
       }
       paste0(result, collapse = " ")
     },
-
     make_company = function(locale, formats, suffix) {
       pattern <- super$random_element(formats)
       dat <- lapply(self$person[pluck_names(pattern, self$person)], sample,
-                    size = 1)
+        size = 1
+      )
       if (length(grep("last_name", names(dat))) > 1) {
         tmp <- grep("last_name", names(dat), value = TRUE)
         nms <- paste(tmp, seq_along(tmp), sep = "")
@@ -145,7 +144,8 @@ CompanyProvider <- R6::R6Class(
       }
 
       nm <- super$random_element(
-        eval(parse(text = paste0("person_last_names_", tolower(locale)))))
+        eval(parse(text = paste0("person_last_names_", tolower(locale))))
+      )
 
       whisker::whisker.render(
         template = pattern,
@@ -155,8 +155,9 @@ CompanyProvider <- R6::R6Class(
         )
       )
     },
-
-    locales = c("bg_BG", "cs_CZ", "de_DE", "en_US", "es_MX", "fa_IR",
-      "fr_FR", "hr_HR", "it_IT")
+    locales = c(
+      "bg_BG", "cs_CZ", "de_DE", "en_US", "es_MX", "fa_IR",
+      "fr_FR", "hr_HR", "it_IT"
+    )
   )
 )

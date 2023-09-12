@@ -6,7 +6,7 @@
 #' (z <- DOIProvider$new())
 #' z$render()
 DOIProvider <- R6::R6Class(
-  'DOIProvider',
+  "DOIProvider",
   inherit = BaseProvider,
   public = list(
     #' @field funs (list) list of functions to use to apply to DOI creation

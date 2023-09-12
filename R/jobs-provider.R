@@ -23,7 +23,7 @@
 #' z$render()
 JobProvider <- R6::R6Class(
   inherit = BaseProvider,
-  'JobProvider',
+  "JobProvider",
   public = list(
     #' @field locale (character) the locale
     locale = NULL,
@@ -45,7 +45,7 @@ JobProvider <- R6::R6Class(
         check_locale_(locale, private$locales)
         self$locale <- locale
       } else {
-        self$locale <- 'en_US'
+        self$locale <- "en_US"
       }
       self$formats <- parse_eval("job_formats_", self$locale)
     },
@@ -55,9 +55,10 @@ JobProvider <- R6::R6Class(
       super$random_element(self$formats)
     }
   ),
-
   private = list(
-    locales = c("da_DK", "fa_IR", "fr_CH", "uk_UA", "ru_RU", "pl_PL",
-      "en_US", "fr_FR", "hr_HR", "zh_TW", "fi_FI", "nl_NL")
+    locales = c(
+      "da_DK", "fa_IR", "fr_CH", "uk_UA", "ru_RU", "pl_PL",
+      "en_US", "fr_FR", "hr_HR", "zh_TW", "fi_FI", "nl_NL"
+    )
   )
 )

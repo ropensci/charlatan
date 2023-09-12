@@ -88,6 +88,8 @@ test_that("FraudsterClient - locale parameter", {
 })
 
 test_that("FraudsterClient - fails well", {
-  expect_error(FraudsterClient$new(locale = "foobar"),
-               "foobar not in set of available locales")
+  expect_error(
+    FraudsterClient$new(locale = "foobar"),
+    "foobar not in set of available locales"
+  )
 })

@@ -1,7 +1,7 @@
 # modified from the python library faker:
 # https://github.com/joke2k/faker/blob/master/faker/providers/person/hr_HR/__init__.py
 
-person_formats_hr_hr <- '{{first_names}} {{last_names}}'
+person_formats_hr_hr <- "{{first_names}} {{last_names}}"
 
 person_first_names_male_hr_hr <- c(
   "Aldo",
