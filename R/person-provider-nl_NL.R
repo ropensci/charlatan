@@ -1,18 +1,18 @@
 # modified from the python library faker:
 # https://github.com/joke2k/faker/blob/master/faker/providers/person/nl_NL/__init__.py
 
-person_formats_nl_nl = c(
-  '{{first_names_male}} {{last_names}}',
-  '{{first_names_male}} {{last_names}}',
-  '{{first_names_male}} {{last_names}}',
-  '{{first_names_male}} {{last_names1}}-{{last_names2}}',
-  '{{first_names_female}} {{last_names}}',
-  '{{first_names_female}} {{last_names}}',
-  '{{first_names_female}} {{last_names}}',
-  '{{first_names_female}} {{last_names1}}-{{last_names2}}'
+person_formats_nl_nl <- c(
+  "{{first_names_male}} {{last_names}}",
+  "{{first_names_male}} {{last_names}}",
+  "{{first_names_male}} {{last_names}}",
+  "{{first_names_male}} {{last_names1}}-{{last_names2}}",
+  "{{first_names_female}} {{last_names}}",
+  "{{first_names_female}} {{last_names}}",
+  "{{first_names_female}} {{last_names}}",
+  "{{first_names_female}} {{last_names1}}-{{last_names2}}"
 )
 
-person_first_names_male_nl_nl = c(
+person_first_names_male_nl_nl <- c(
   "Aaron",
   "Abel",
   "Adam",
@@ -266,7 +266,7 @@ person_first_names_male_nl_nl = c(
   "Zakaria"
 )
 
-person_first_names_female_nl_nl = c(
+person_first_names_female_nl_nl <- c(
   "Aaliyah",
   "Adriana",
   "Aim\u00e9e",
@@ -520,10 +520,12 @@ person_first_names_female_nl_nl = c(
   "Zo\u00eb"
 )
 
-person_first_names_nl_nl = c(person_first_names_male_nl_nl,
-                             person_first_names_female_nl_nl)
+person_first_names_nl_nl <- c(
+  person_first_names_male_nl_nl,
+  person_first_names_female_nl_nl
+)
 
-person_last_names_nl_nl = c(
+person_last_names_nl_nl <- c(
   "\'s Gravensande",
   "Aalts",
   "Aarden",

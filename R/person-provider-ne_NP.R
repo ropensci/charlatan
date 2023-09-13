@@ -1,27 +1,27 @@
 # modified from the python library faker:
 # https://github.com/joke2k/faker/blob/master/faker/providers/person/ne_NP/__init__.py
 
-person_formats_female_ne_np = c(
-  '{{first_names_female}} {{last_names}}',
-  '{{first_names_female}} {{last_names}}',
-  '{{first_names_female}} {{last_names}}',
-  '{{first_names_female}} {{last_names}}',
-  '{{first_names_female}} {{last_names}}',
-  '{{prefixes_female}} {{first_names_female}} {{last_names}}'
+person_formats_female_ne_np <- c(
+  "{{first_names_female}} {{last_names}}",
+  "{{first_names_female}} {{last_names}}",
+  "{{first_names_female}} {{last_names}}",
+  "{{first_names_female}} {{last_names}}",
+  "{{first_names_female}} {{last_names}}",
+  "{{prefixes_female}} {{first_names_female}} {{last_names}}"
 )
 
-person_formats_male_ne_np = c(
-  '{{first_names_male}} {{last_names}}',
-  '{{first_names_male}} {{last_names}}',
-  '{{first_names_male}} {{last_names}}',
-  '{{first_names_male}} {{last_names}}',
-  '{{first_names_male}} {{last_names}}',
-  '{{prefixes_male}} {{first_names_male}} {{last_names}}'
+person_formats_male_ne_np <- c(
+  "{{first_names_male}} {{last_names}}",
+  "{{first_names_male}} {{last_names}}",
+  "{{first_names_male}} {{last_names}}",
+  "{{first_names_male}} {{last_names}}",
+  "{{first_names_male}} {{last_names}}",
+  "{{prefixes_male}} {{first_names_male}} {{last_names}}"
 )
 
-person_formats_ne_np = c(person_formats_male_ne_np, person_formats_female_ne_np)
+person_formats_ne_np <- c(person_formats_male_ne_np, person_formats_female_ne_np)
 
-person_first_names_female_ne_np = c(
+person_first_names_female_ne_np <- c(
   "\u0905\u0902\u0917\u0941\u0930",
   "\u0905\u091c\u093f\u0924\u093e",
   "\u0905\u091e\u094d\u091c\u0928\u093e",
@@ -540,7 +540,7 @@ person_first_names_female_ne_np = c(
   "\u0939\u093f\u0930\u093e"
 )
 
-person_first_names_male_ne_np = c(
+person_first_names_male_ne_np <- c(
   "\u0905\u0915\u094d\u0937\u092f",
   "\u0905\u091a\u094d\u092f\u0941\u0924",
   "\u0905\u091c\u092f",
@@ -1038,10 +1038,12 @@ person_first_names_male_ne_np = c(
   "\u0939\u0947\u092e\u0930\u093e\u091c"
 )
 
-person_first_names_ne_np = c(person_first_names_male_ne_np,
-                             person_first_names_female_ne_np)
+person_first_names_ne_np <- c(
+  person_first_names_male_ne_np,
+  person_first_names_female_ne_np
+)
 
-person_last_names_ne_np = c(
+person_last_names_ne_np <- c(
   "\u0905\u0917\u094d\u0930\u0935\u093e\u0932",
   "\u0928\u0947\u092a\u093e\u0932",
   "\u0928\u094d\u092f\u094c\u092a\u093e\u0928\u0947",
@@ -1539,10 +1541,14 @@ person_last_names_ne_np = c(
   "\u091c\u094b\u0936\u0940"
 )
 
-person_prefixes_female_ne_np = c("\u0936\u094d\u0930\u0940\u092e\u0924\u0940",
-                                 "\u0938\u0941\u0936\u094d\u0930\u0940")
-person_prefixes_male_ne_np = c("\u0936\u094d\u0930\u0940",
-                               "\u0936\u094d\u0930\u0940\u092e\u093e\u0928")
+person_prefixes_female_ne_np <- c(
+  "\u0936\u094d\u0930\u0940\u092e\u0924\u0940",
+  "\u0938\u0941\u0936\u094d\u0930\u0940"
+)
+person_prefixes_male_ne_np <- c(
+  "\u0936\u094d\u0930\u0940",
+  "\u0936\u094d\u0930\u0940\u092e\u093e\u0928"
+)
 person_prefixes_ne_np <- c(person_prefixes_female_ne_np, person_prefixes_male_ne_np)
 
 person_ne_np <- list(

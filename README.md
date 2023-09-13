@@ -144,7 +144,7 @@ ch_generate()
 
 
 ```r
-ch_generate('job', 'phone_number', n = 30)
+ch_generate("job", "phone_number", n = 30)
 #> # A tibble: 30 × 2
 #>    job                                 phone_number      
 #>    <chr>                               <chr>             
@@ -159,7 +159,6 @@ ch_generate('job', 'phone_number', n = 30)
 #>  9 Cytogeneticist                      008.111.9486      
 #> 10 Designer, blown glass/stained glass 387-870-5348      
 #> # … with 20 more rows
-#> # ℹ Use `print(n = ...)` to see more rows
 ```
 
 

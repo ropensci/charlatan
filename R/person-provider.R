@@ -64,7 +64,7 @@
 #' z$first_name_male()
 #' z$last_name()
 #' z$prefix()
-#' 
+#'
 #' z <- PersonProvider$new(locale = "en_NZ")
 #' z$locale
 #' z$render()
@@ -83,7 +83,7 @@
 #' PersonProvider$new(locale = "bg_BG")$render()
 #' PersonProvider$new(locale = "da_DK")$render()
 PersonProvider <- R6::R6Class(
-  'PersonProvider',
+  "PersonProvider",
   inherit = BaseProvider,
   public = list(
     #' @field locale (character) the locale
@@ -118,7 +118,7 @@ PersonProvider <- R6::R6Class(
         check_locale_(locale, private$locales)
         self$locale <- locale
       } else {
-        self$locale <- 'en_US'
+        self$locale <- "en_US"
       }
       self$formats <- parse_eval("person_formats_", self$locale)
       self$person <- parse_eval("person_", self$locale, self$messy)
@@ -130,7 +130,7 @@ PersonProvider <- R6::R6Class(
       if (is.null(fmt)) fmt <- super$random_element(self$formats)
       dat <- lapply(
         self$person[pluck_names(fmt, self$person)],
-        function (x) {
+        function(x) {
           if (has_probs(x)) {
             super$random_element_prob(x)
           } else {
@@ -197,7 +197,7 @@ PersonProvider <- R6::R6Class(
       } else {
         comb <- c(self$person$last_names_female, self$person$last_names_male)
         if (has_probs(self$person$last_names_female) ||
-            has_probs(self$person$last_names_male)) {
+          has_probs(self$person$last_names_male)) {
           super$random_element_prob(comb)
         } else {
           super$random_element(comb)
@@ -234,8 +234,10 @@ PersonProvider <- R6::R6Class(
     #' @description make a name prefix
     prefix = function() {
       if (any(c("prefixes_male", "prefixes_female") %in% names(self$person))) {
-        super$random_element(c(self$person$prefixes_male,
-          self$person$prefixes_female))
+        super$random_element(c(
+          self$person$prefixes_male,
+          self$person$prefixes_female
+        ))
       } else {
         super$random_element(self$person$prefixes)
       }
@@ -262,8 +264,10 @@ PersonProvider <- R6::R6Class(
     #' @description make a name suffix
     suffix = function() {
       if (any(c("suffixes_male", "suffixes_female") %in% names(self$person))) {
-        super$random_element(c(self$person$suffixes_male,
-          self$person$suffixes_female))
+        super$random_element(c(
+          self$person$suffixes_male,
+          self$person$suffixes_female
+        ))
       } else {
         super$random_element(self$person$suffixes)
       }
@@ -286,9 +290,7 @@ PersonProvider <- R6::R6Class(
         super$random_element(self$person$suffixes)
       }
     }
-
   ),
-
   private = list(
     locales = c(
       "bg_BG", "fr_FR", "es_ES", "en_US", "fa_IR", "da_DK",

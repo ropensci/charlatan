@@ -39,7 +39,7 @@
 #' LoremProvider$new(locale = "zh_TW")$word()
 LoremProvider <- R6::R6Class(
   inherit = BaseProvider,
-  'LoremProvider',
+  "LoremProvider",
   public = list(
     #' @field locale (character) the locale
     locale = NULL,
@@ -53,9 +53,8 @@ LoremProvider <- R6::R6Class(
     #' @param sentence_punctuation (character) End of sentence punctuation
     #' @param word_connector (character) Default connector between words
     #' @return A new `LoremProvider` object
-    initialize = function(locale = NULL, sentence_punctuation = '.',
-                          word_connector = ' ') {
-
+    initialize = function(locale = NULL, sentence_punctuation = ".",
+                          word_connector = " ") {
       if (!is.null(locale)) {
         # check global locales
         super$check_locale(locale)
@@ -63,18 +62,18 @@ LoremProvider <- R6::R6Class(
         check_locale_(locale, private$locales)
         self$locale <- locale
       } else {
-        self$locale <- 'en_US'
+        self$locale <- "en_US"
       }
-      private$parse_eval_safe('word_list')
+      private$parse_eval_safe("word_list")
 
       if (missing(sentence_punctuation)) {
-        private$parse_eval_safe('sentence_punctuation')
+        private$parse_eval_safe("sentence_punctuation")
       } else {
         assert(sentence_punctuation, "character")
         private$sentence_punctuation <- sentence_punctuation
       }
       if (missing(word_connector)) {
-        private$parse_eval_safe('word_connector')
+        private$parse_eval_safe("word_connector")
       } else {
         assert(word_connector, "character")
         private$word_connector <- word_connector
@@ -84,7 +83,7 @@ LoremProvider <- R6::R6Class(
     #' @description Generate a random word
     #' @return a single word
     word = function(ext_words = NULL) {
-      assert(ext_words, 'character')
+      assert(ext_words, "character")
       wds <- private$word_list
       if (!is.null(ext_words)) {
         wds <- super$random_element(ext_words)
@@ -96,8 +95,8 @@ LoremProvider <- R6::R6Class(
     #' @param nb (integer) how many words to return
     #' @return many words
     words = function(nb = 3, ext_words = NULL) {
-      assert(nb, c('numeric', 'integer'))
-      assert(ext_words, 'character')
+      assert(nb, c("numeric", "integer"))
+      assert(ext_words, "character")
       replicate(nb, self$word(ext_words))
     },
 
@@ -109,13 +108,15 @@ LoremProvider <- R6::R6Class(
     #' of `nb` +/-40% (with a minimum of 1)
     #' @return a single sentence
     sentence = function(nb_words = 6, variable_nb_words = TRUE, ext_words = NULL) {
-      assert(nb_words, c('numeric', 'integer'))
-      assert(variable_nb_words, 'logical')
-      assert(ext_words, 'character')
-      if (nb_words <= 0) return('')
+      assert(nb_words, c("numeric", "integer"))
+      assert(variable_nb_words, "logical")
+      assert(ext_words, "character")
+      if (nb_words <= 0) {
+        return("")
+      }
 
       if (variable_nb_words) {
-        nb_words = super$randomize_nb_elements(nb_words, min = 1)
+        nb_words <- super$randomize_nb_elements(nb_words, min = 1)
       }
 
       words <- self$words(nb = nb_words, ext_words = ext_words)
@@ -131,8 +132,8 @@ LoremProvider <- R6::R6Class(
     #' @param nb (integer) how many sentences to return
     #' @return many sentences
     sentences = function(nb = 3, ext_words = NULL) {
-      assert(nb, c('numeric', 'integer'))
-      assert(ext_words, 'character')
+      assert(nb, c("numeric", "integer"))
+      assert(ext_words, "character")
       replicate(nb, self$sentence(ext_words = ext_words))
     },
 
@@ -144,16 +145,17 @@ LoremProvider <- R6::R6Class(
     #' sentences of ``nb`` +/-40% (with a minimum of 1)
     #' @return a single paragraph
     paragraph = function(nb_sentences = 3, variable_nb_sentences = TRUE,
-      ext_words = NULL) {
-
-      assert(nb_sentences, c('numeric', 'integer'))
-      assert(variable_nb_sentences, 'logical')
-      assert(ext_words, 'character')
-      if (nb_sentences <= 0) return('')
-      if (variable_nb_sentences) {
-        nb_sentences = super$randomize_nb_elements(nb_sentences, min = 1)
+                         ext_words = NULL) {
+      assert(nb_sentences, c("numeric", "integer"))
+      assert(variable_nb_sentences, "logical")
+      assert(ext_words, "character")
+      if (nb_sentences <= 0) {
+        return("")
       }
-      para <- self$sentences(nb_sentences, ext_words=ext_words)
+      if (variable_nb_sentences) {
+        nb_sentences <- super$randomize_nb_elements(nb_sentences, min = 1)
+      }
+      para <- self$sentences(nb_sentences, ext_words = ext_words)
       paste0(para, collapse = private$word_connector)
     },
 
@@ -161,8 +163,8 @@ LoremProvider <- R6::R6Class(
     #' @param nb (integer) how many paragraphs to return
     #' @return many paragraphs
     paragraphs = function(nb = 3, ext_words = NULL) {
-      assert(nb, c('numeric', 'integer'))
-      assert(ext_words, 'character')
+      assert(nb, c("numeric", "integer"))
+      assert(ext_words, "character")
       replicate(nb, self$paragraph(ext_words = ext_words))
     },
 
@@ -173,11 +175,11 @@ LoremProvider <- R6::R6Class(
     #' contain (minimum 5)
     #' @return character string of words
     text = function(max_nb_chars = 200, ext_words = NULL) {
-      assert(max_nb_chars, c('numeric', 'integer'))
-      assert(ext_words, 'character')
+      assert(max_nb_chars, c("numeric", "integer"))
+      assert(ext_words, "character")
       text <- list()
       if (max_nb_chars < 5) {
-        stop('text() can only generate text of at least 5 characters')
+        stop("text() can only generate text of at least 5 characters")
       }
 
       if (max_nb_chars < 25) {
@@ -187,8 +189,8 @@ LoremProvider <- R6::R6Class(
           # determine how many words are needed to reach the
           # $max_nb_chars once;
           while (size < max_nb_chars) {
-            word = paste0(
-              if (size > 0) private$word_connector else '',
+            word <- paste0(
+              if (size > 0) private$word_connector else "",
               self$word(ext_words = ext_words)
             )
             text <- c(text, word)
@@ -207,7 +209,7 @@ LoremProvider <- R6::R6Class(
           # $max_nb_chars once
           while (size < max_nb_chars) {
             sentence <- paste0(
-              if (size > 0) private$word_connector else '',
+              if (size > 0) private$word_connector else "",
               self$sentence(ext_words = ext_words)
             )
             text <- c(text, sentence)
@@ -223,7 +225,7 @@ LoremProvider <- R6::R6Class(
           # $max_nb_chars once
           while (size < max_nb_chars) {
             paragraph <- paste0(
-              if (size > 0) '\n' else '',
+              if (size > 0) "\n" else "",
               self$paragraph(ext_words = ext_words)
             )
             text <- c(text, paragraph)
@@ -236,26 +238,23 @@ LoremProvider <- R6::R6Class(
       return(paste0(text, collapse = ""))
     }
   ),
-
   private = list(
-    word_connector = ' ',
-    sentence_punctuation = '.',
+    word_connector = " ",
+    sentence_punctuation = ".",
     word_list = NULL,
-
     parse_eval_safe = function(name) {
       tmp <- parse_eval(sprintf("lorem_%s_", name), self$locale)
       if (!is.null(tmp)) private[[name]] <- tmp
     },
-
     cap_first = function(x) {
-      gsub("(^|[[:space:]])([[:alpha:]])", "\\1\\U\\2", x, perl=TRUE)
+      gsub("(^|[[:space:]])([[:alpha:]])", "\\1\\U\\2", x, perl = TRUE)
     },
-
     drop_last = function(x) {
       x[-length(x)]
     },
-
-    locales = c("en_US", "ar_AA", "el_GR", "he_IL", "ja_JP", "la",
-      "ru_RU", "zh_CN", "zh_TW")
+    locales = c(
+      "en_US", "ar_AA", "el_GR", "he_IL", "ja_JP", "la",
+      "ru_RU", "zh_CN", "zh_TW"
+    )
   )
 )

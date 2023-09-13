@@ -1,8 +1,8 @@
 # modified from the python library faker:
 # https://github.com/joke2k/faker/blob/master/faker/providers/lorem/ja_JP/__init__.py
 
-lorem_word_connector_ja_jp <- ''
-lorem_sentence_punctuation_ja_jp <- '\\u3002'
+lorem_word_connector_ja_jp <- ""
+lorem_sentence_punctuation_ja_jp <- "\\u3002"
 lorem_word_list_ja_jp <- c(
   "\u30b3\u30df\u30e5\u30cb\u30c6\u30a3",
   "\u96a0\u3059",

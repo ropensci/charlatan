@@ -8,7 +8,7 @@
 #'
 SSNProvider <- R6::R6Class(
   inherit = BaseProvider,
-  'SSNProvider',
+  "SSNProvider",
   public = list(
     #' @field locale (character) the locale
     locale = NULL,
@@ -28,14 +28,12 @@ SSNProvider <- R6::R6Class(
         check_locale_(locale, private$locales)
         self$locale <- locale
       } else {
-        self$locale <- 'en_US'
+        self$locale <- "en_US"
       }
-
     },
 
     #' @description Make a SSN
     render = function() {
-
       # Adapted from https://github.com/joke2k/faker/blob/e14abc47e5f1ea7ce62f068c4aac6b9f51db6f5c/faker/providers/ssn/en_US/__init__.py#L219-L231
 
       # Certain numbers are invalid for United States Social Security
@@ -47,13 +45,11 @@ SSNProvider <- R6::R6Class(
       group <- sample.int(99, 1)
       serial <- sample.int(9999, 1)
 
-      if(area >= 666) area <- area + 1
+      if (area >= 666) area <- area + 1
 
       sprintf("%03d-%02d-%04d", area, group, serial)
-
     }
   ),
-
   private = list(
     locales = c(
       "en_US" # TODO

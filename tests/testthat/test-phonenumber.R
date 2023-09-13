@@ -14,7 +14,8 @@ test_that("PhoneNumberProvider works", {
   expect_is(PhoneNumberProvider$new("en_AU")$render(), "character")
   expect_is(PhoneNumberProvider$new("es_PE")$render(), "character")
 
-  expect_error(PhoneNumberProvider$new("ex_EX"), 
-    "ex_EX not in set of available locales")
+  expect_error(
+    PhoneNumberProvider$new("ex_EX"),
+    "ex_EX not in set of available locales"
+  )
 })
-

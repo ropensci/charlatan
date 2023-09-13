@@ -1,5 +1,5 @@
 #' @title PhoneNumberProvider
-#' @description methods for generating phone numbers 
+#' @description methods for generating phone numbers
 #' @export
 #' @keywords internal
 #' @examples
@@ -8,14 +8,14 @@
 #'
 #' PhoneNumberProvider$new(locale = "fr_FR")$render()
 #' PhoneNumberProvider$new(locale = "sk_SK")$render()
-#' 
+#'
 #' # locales with area codes
 #' PhoneNumberProvider$new(locale = "en_AU")$render()
 #' PhoneNumberProvider$new(locale = "en_NZ")$render()
 #' PhoneNumberProvider$new(locale = "es_PE")$render()
 PhoneNumberProvider <- R6::R6Class(
   inherit = BaseProvider,
-  'PhoneNumberProvider',
+  "PhoneNumberProvider",
   public = list(
     #' @field locale (character) the locale
     locale = NULL,
@@ -39,10 +39,10 @@ PhoneNumberProvider <- R6::R6Class(
         check_locale_(locale, private$locales)
         self$locale <- locale
       } else {
-        self$locale <- 'en_US'
+        self$locale <- "en_US"
       }
       self$formats <- parse_eval("phone_number_formats_", self$locale)
-      self$area_code_formats <- 
+      self$area_code_formats <-
         parse_eval("area_codes_formats_", self$locale)
     },
 
@@ -51,13 +51,13 @@ PhoneNumberProvider <- R6::R6Class(
       if (!is.null(self$area_code_formats)) {
         return(super$numerify(
           whisker::whisker.render(super$random_element(self$formats),
-          data = list(area_code = super$random_element(self$area_code_formats)))
+            data = list(area_code = super$random_element(self$area_code_formats))
+          )
         ))
       }
       super$numerify(text = super$random_element(self$formats))
     }
   ),
-
   private = list(
     locales = c(
       "en_US", "es_ES", "es_MX", "es_PE", "en_GB", "en_CA", "el_GR",

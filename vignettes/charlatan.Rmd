@@ -116,7 +116,7 @@ ch_generate()
 ```
 
 ```{r}
-ch_generate('job', 'phone_number', n = 30)
+ch_generate("job", "phone_number", n = 30)
 ```
 
 ## Data types
@@ -179,14 +179,14 @@ testVector <- MissingDataProvider$new()
 ### character strings
 
 ```{r}
-testVector$make_missing(x = ch_generate()$name) 
+testVector$make_missing(x = ch_generate()$name)
 ```
 
 
 ### numeric data
 
 ```{r}
-testVector$make_missing(x = ch_integer(10)) 
+testVector$make_missing(x = ch_integer(10))
 ```
 
 
@@ -194,7 +194,7 @@ testVector$make_missing(x = ch_integer(10))
 
 ```{r}
 set.seed(123)
-testVector$make_missing(x = sample(c(TRUE, FALSE), 10, replace = TRUE)) 
+testVector$make_missing(x = sample(c(TRUE, FALSE), 10, replace = TRUE))
 ```
 
 ## Messy data

@@ -12,8 +12,8 @@
 #' ch_gene_sequence(length = 500)
 #' ch_gene_sequence(10, length = 500)
 ch_gene_sequence <- function(n = 1, length = 30) {
-  assert(n, c('integer', 'numeric'))
-  assert(length, c('integer', 'numeric'))
+  assert(n, c("integer", "numeric"))
+  assert(length, c("integer", "numeric"))
   if (n == 1) {
     SequenceProvider$new()$render(length)
   } else {

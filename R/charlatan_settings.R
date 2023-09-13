@@ -3,7 +3,7 @@
 #' @export
 #' @param messy (logical) make some messy data. Default: `NULL`
 #' @section More deets:
-#' 
+#'
 #' - `messy` - When `FALSE`, nothing is different from normal.
 #'  When `TRUE`, we select incorrect/wrong values with probability X.
 #'  Messy mode is only available for **en-US** for now, and only for

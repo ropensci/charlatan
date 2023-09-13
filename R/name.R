@@ -17,7 +17,7 @@
 #' ch_name(locale = "fa_IR", n = 10)
 #' ch_name(locale = "fi_FI", n = 10)
 ch_name <- function(n = 1, locale = NULL, messy = FALSE) {
-  assert(n, c('integer', 'numeric'))
+  assert(n, c("integer", "numeric"))
   if (n == 1) {
     PersonProvider$new(locale = locale, messy = messy)$render()
   } else {

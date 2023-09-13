@@ -21,7 +21,7 @@ test_that("CreditCardProvider works", {
 test_that("ColorProvider locale support works", {
   bb <- CreditCardProvider$new()$credit_card_type()
 
-  expect_is(bb$length, 'numeric')
+  expect_is(bb$length, "numeric")
   expect_is(bb$name, "character")
   expect_is(bb$prefixes, "character")
   expect_is(bb$security_code, "character")

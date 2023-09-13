@@ -2,14 +2,14 @@
 # https://github.com/joke2k/faker/blob/master/faker/providers/company/es_MX/__init__.py
 
 company_formats_es_mx <- c(
-  '{{last_name}} {{company_suffix}}',
-  '{{last_name1}}-{{last_name2}}',
-  '{{company_prefix}} {{last_name1}}-{{last_name2}}',
-  '{{company_prefix}} {{last_name1}} y {{last_name2}}',
-  '{{company_prefix}} {{last_name1}}, {{last_name2}} y {{last_name3}}',
-  '{{last_name1}}-{{last_name2}} {{company_suffix}}',
-  '{{last_name1}}, {{last_name2}} y {{last_name3}}',
-  '{{last_name1}} y {{last_name2}} {{company_suffix}}'
+  "{{last_name}} {{company_suffix}}",
+  "{{last_name1}}-{{last_name2}}",
+  "{{company_prefix}} {{last_name1}}-{{last_name2}}",
+  "{{company_prefix}} {{last_name1}} y {{last_name2}}",
+  "{{company_prefix}} {{last_name1}}, {{last_name2}} y {{last_name3}}",
+  "{{last_name1}}-{{last_name2}} {{company_suffix}}",
+  "{{last_name1}}, {{last_name2}} y {{last_name3}}",
+  "{{last_name1}} y {{last_name2}} {{company_suffix}}"
 )
 
 catch_phrase_words_es_mx <- list(
@@ -107,7 +107,7 @@ catch_phrase_words_es_mx <- list(
     "utilizaci\u00f3n",
     "website",
     "fuerza de trabajo"
-   ),
+  ),
   c(
     "24 horas",
     "24/7",
@@ -275,16 +275,16 @@ catch_phrase_words_es_mx <- list(
 
 bsWords_es_mx <- list(
   c(
-    'implementa', 'utiliza', 'integrata', 'optimiza',
-    'evoluciona', 'transforma', 'abraza', 'habilia',
-    'orquesta', 'reinventa', 'agrega', 'mejora', 'incentiviza',
-    'modifica', 'empondera', 'monetiza', 'fortalece',
-    'facilita', 'synergiza',  'crear marca', 'crece',
-    'sintetiza', 'entrega', 'mezcla', 'incuba', 'compromete',
-    'maximiza', 'inmediata', 'visualiza', 'inova',
-    'escala', 'libera', 'maneja', 'extiende', 'revoluciona',
-    'genera', 'explota', 'transici\u00f3n', 'itera', 'cultiva',
-    'redefine', 'recontextualiza'
+    "implementa", "utiliza", "integrata", "optimiza",
+    "evoluciona", "transforma", "abraza", "habilia",
+    "orquesta", "reinventa", "agrega", "mejora", "incentiviza",
+    "modifica", "empondera", "monetiza", "fortalece",
+    "facilita", "synergiza", "crear marca", "crece",
+    "sintetiza", "entrega", "mezcla", "incuba", "compromete",
+    "maximiza", "inmediata", "visualiza", "inova",
+    "escala", "libera", "maneja", "extiende", "revoluciona",
+    "genera", "explota", "transici\u00f3n", "itera", "cultiva",
+    "redefine", "recontextualiza"
   ),
   c(
     "synerg\u00edas",
@@ -380,8 +380,12 @@ bsWords_es_mx <- list(
   )
 )
 
-company_prefixes_es_mx <- c('Despacho', 'Grupo', 'Corporativo', 'Club',
-                             'Industrias', 'Laboratorios', 'Proyectos')
+company_prefixes_es_mx <- c(
+  "Despacho", "Grupo", "Corporativo", "Club",
+  "Industrias", "Laboratorios", "Proyectos"
+)
 
-company_suffixes_es_mx <- c('A.C.', 'S.A.', 'S.A. de C.V.', 'S.C.',
-                            'S. R.L. de C.V.','e Hijos', 'y Asociados')
+company_suffixes_es_mx <- c(
+  "A.C.", "S.A.", "S.A. de C.V.", "S.C.",
+  "S. R.L. de C.V.", "e Hijos", "y Asociados"
+)

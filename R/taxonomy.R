@@ -19,7 +19,7 @@
 #' ch_taxonomic_species(10)
 #' ch_taxonomic_species(500)
 ch_taxonomic_genus <- function(n = 1) {
-  assert(n, c('integer', 'numeric'))
+  assert(n, c("integer", "numeric"))
   if (n == 1) {
     TaxonomyProvider$new()$genus()
   } else {
@@ -31,7 +31,7 @@ ch_taxonomic_genus <- function(n = 1) {
 #' @export
 #' @rdname taxonomy
 ch_taxonomic_epithet <- function(n = 1) {
-  assert(n, c('integer', 'numeric'))
+  assert(n, c("integer", "numeric"))
   if (n == 1) {
     TaxonomyProvider$new()$epithet()
   } else {
@@ -43,7 +43,7 @@ ch_taxonomic_epithet <- function(n = 1) {
 #' @export
 #' @rdname taxonomy
 ch_taxonomic_species <- function(n = 1) {
-  assert(n, c('integer', 'numeric'))
+  assert(n, c("integer", "numeric"))
   if (n == 1) {
     TaxonomyProvider$new()$species()
   } else {

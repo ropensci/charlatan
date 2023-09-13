@@ -1,7 +1,7 @@
 # modified from the python library faker:
 # https://github.com/joke2k/faker/blob/master/faker/providers/lorem/ar_AA/__init__.py
 
-lorem_word_list_ar_aa = c(
+lorem_word_list_ar_aa <- c(
   "\u062a\u0627\u0631\u064a\u062e",
   "\u062b\u0645\u0651\u0629",
   "\u0648\u064a\u0643\u064a\u0628\u064a\u062f\u064a\u0627",

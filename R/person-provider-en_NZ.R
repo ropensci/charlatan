@@ -2,16 +2,16 @@
 # https://github.com/joke2k/faker/blob/master/faker/providers/person/en_NZ/__init__.py
 
 person_formats_en_nz <- c(
-  '{{first_names_male}} {{last_names}}',
-  '{{first_names_male}} {{last_names}}',
-  '{{first_names_male}} {{last_names}}',
-  '{{first_names_male}} {{last_names}}',
-  '{{first_names_male}} {{last_names1}}-{{last_names2}}',
-  '{{first_names_female}} {{last_names}}',
-  '{{first_names_female}} {{last_names}}',
-  '{{first_names_female}} {{last_names}}',
-  '{{first_names_female}} {{last_names}}',
-  '{{first_names_female}} {{last_names1}}-{{last_names2}}'
+  "{{first_names_male}} {{last_names}}",
+  "{{first_names_male}} {{last_names}}",
+  "{{first_names_male}} {{last_names}}",
+  "{{first_names_male}} {{last_names}}",
+  "{{first_names_male}} {{last_names1}}-{{last_names2}}",
+  "{{first_names_female}} {{last_names}}",
+  "{{first_names_female}} {{last_names}}",
+  "{{first_names_female}} {{last_names}}",
+  "{{first_names_female}} {{last_names}}",
+  "{{first_names_female}} {{last_names1}}-{{last_names2}}"
 )
 
 # Names compiled from the following sources:
@@ -340,7 +340,6 @@ person_first_names_male_en_nz <- list(
   Zachary = 2569,
   Zane = 761,
   Zion = 217,
-
   Anaru = 735,
   Ari = 984,
   Ariki = 1178,
@@ -767,7 +766,6 @@ person_first_names_female_en_nz <- list(
   Zara = 1292,
   Zoe = 3973,
   Zoey = 165,
-
   Amaia = 667,
   Ana = 730,
   Anahera = 1760,
@@ -800,8 +798,10 @@ person_first_names_female_en_nz <- list(
   Wikitoria = 583
 )
 
-person_first_names_en_nz <- c(person_first_names_male_en_nz,
-  person_first_names_female_en_nz)
+person_first_names_en_nz <- c(
+  person_first_names_male_en_nz,
+  person_first_names_female_en_nz
+)
 
 # New Zealand surnames compiled (and cleaned up) from the following sources:
 #

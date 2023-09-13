@@ -1,24 +1,24 @@
 # modified from the python library faker:
 # https://github.com/joke2k/faker/blob/master/faker/providers/person/dk_DK/__init__.py
 
-person_formats_da_dk = c(
-  '{{first_names_male}} {{last_names}}',
-  '{{first_names_male}} {{last_names}}',
-  '{{first_names_male}} {{last_names}}',
-  '{{first_names_male}} {{last_names}}',
-  '{{first_names_male}} {{last_names1}}-{{last_names2}}',
-  '{{first_names_female}} {{last_names}}',
-  '{{first_names_female}} {{last_names}}',
-  '{{first_names_female}} {{last_names}}',
-  '{{first_names_female}} {{last_names}}',
-  '{{first_names_female}} {{last_names1}}-{{last_names2}}',
-  '{{prefixes_male}} {{first_names_male}} {{last_names}}',
-  '{{prefixes_female}} {{first_names_female}} {{last_names}}',
-  '{{prefixes_male}} {{first_names_male}} {{last_names}}',
-  '{{prefixes_female}} {{first_names_female}} {{last_names}}'
+person_formats_da_dk <- c(
+  "{{first_names_male}} {{last_names}}",
+  "{{first_names_male}} {{last_names}}",
+  "{{first_names_male}} {{last_names}}",
+  "{{first_names_male}} {{last_names}}",
+  "{{first_names_male}} {{last_names1}}-{{last_names2}}",
+  "{{first_names_female}} {{last_names}}",
+  "{{first_names_female}} {{last_names}}",
+  "{{first_names_female}} {{last_names}}",
+  "{{first_names_female}} {{last_names}}",
+  "{{first_names_female}} {{last_names1}}-{{last_names2}}",
+  "{{prefixes_male}} {{first_names_male}} {{last_names}}",
+  "{{prefixes_female}} {{first_names_female}} {{last_names}}",
+  "{{prefixes_male}} {{first_names_male}} {{last_names}}",
+  "{{prefixes_female}} {{first_names_female}} {{last_names}}"
 )
 
-person_first_names_male_da_dk = c(
+person_first_names_male_da_dk <- c(
   "Adam",
   "Albert",
   "Aksel",
@@ -265,7 +265,7 @@ person_first_names_male_da_dk = c(
   "\u00c5ge"
 )
 
-person_first_names_female_da_dk = c(
+person_first_names_female_da_dk <- c(
   "Abelone",
   "Agnes",
   "Agnete",
@@ -520,9 +520,9 @@ person_first_names_female_da_dk = c(
   "\u00c5se"
 )
 
-person_first_names_da_dk = c(person_first_names_male_da_dk, person_first_names_female_da_dk)
+person_first_names_da_dk <- c(person_first_names_male_da_dk, person_first_names_female_da_dk)
 
-person_last_names_da_dk = c(
+person_last_names_da_dk <- c(
   "Jensen",
   "Nielsen",
   "Hansen",
@@ -616,12 +616,12 @@ person_last_names_da_dk = c(
   "Thygesen"
 )
 
-person_prefixes_male_da_dk = c(
-  'Hr', 'Dr.', 'Prof.', 'Univ.Prof.'
+person_prefixes_male_da_dk <- c(
+  "Hr", "Dr.", "Prof.", "Univ.Prof."
 )
 
-person_prefixes_female_da_dk = c(
-  'Fru', 'Dr.', 'Prof.', 'Univ.Prof.'
+person_prefixes_female_da_dk <- c(
+  "Fru", "Dr.", "Prof.", "Univ.Prof."
 )
 
 person_da_dk <- list(

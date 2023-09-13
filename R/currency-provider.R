@@ -176,7 +176,7 @@ currency_formats <- c(
 #' z$render()
 CurrencyProvider <- R6::R6Class(
   inherit = BaseProvider,
-  'CurrencyProvider',
+  "CurrencyProvider",
   public = list(
     #' @field formats (character) currency formats character vector
     formats = currency_formats,

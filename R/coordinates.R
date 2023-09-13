@@ -16,7 +16,7 @@
 #' ch_position(10)
 #' ch_position(bbox = c(-120, 30, -110, 60))
 ch_lon <- function(n = 1) {
-  assert(n, c('integer', 'numeric'))
+  assert(n, c("integer", "numeric"))
   if (n == 1) {
     CoordinateProvider$new()$lon()
   } else {
@@ -28,7 +28,7 @@ ch_lon <- function(n = 1) {
 #' @export
 #' @rdname coordinates
 ch_lat <- function(n = 1) {
-  assert(n, c('integer', 'numeric'))
+  assert(n, c("integer", "numeric"))
   if (n == 1) {
     CoordinateProvider$new()$lat()
   } else {
@@ -40,7 +40,7 @@ ch_lat <- function(n = 1) {
 #' @export
 #' @rdname coordinates
 ch_position <- function(n = 1, bbox = NULL) {
-  assert(n, c('integer', 'numeric'))
+  assert(n, c("integer", "numeric"))
   if (n == 1) {
     CoordinateProvider$new()$position(bbox)
   } else {

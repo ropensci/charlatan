@@ -117,7 +117,7 @@ ch_generate()
 ```
 
 ```{r}
-ch_generate('job', 'phone_number', n = 30)
+ch_generate("job", "phone_number", n = 30)
 ```
 
 

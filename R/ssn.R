@@ -10,7 +10,7 @@
 #' ch_ssn()
 #' ch_ssn(10)
 ch_ssn <- function(n = 1, locale = NULL) {
-  assert(n, c('integer', 'numeric'))
+  assert(n, c("integer", "numeric"))
   if (n == 1) {
     SSNProvider$new(locale = locale)$render()
   } else {

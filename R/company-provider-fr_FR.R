@@ -2,14 +2,14 @@
 # https://github.com/joke2k/faker/blob/master/faker/providers/company/fr_FR/__init__.py
 
 company_formats_fr_fr <- c(
-  '{{last_name}} {{company_suffix}}',
-  '{{last_name}} {{last_name}} {{company_suffix}}',
-  '{{last_name}}',
-  '{{last_name}}'
+  "{{last_name}} {{company_suffix}}",
+  "{{last_name}} {{last_name}} {{company_suffix}}",
+  "{{last_name}}",
+  "{{last_name}}"
 )
 
 catch_phrase_formats_fr_fr <- c(
-  '{{catch_phrase_noun}} {{catch_phrase_verb}} {{catch_phrase_attribute}}'
+  "{{catch_phrase_noun}} {{catch_phrase_verb}} {{catch_phrase_attribute}}"
 )
 
 nouns_fr_fr <- c(
@@ -54,7 +54,9 @@ attributes_fr_fr <- c(
   "en toute s\u00e9curit\u00e9"
 )
 
-company_suffixes_fr_fr <- c('SA', 'S.A.', 'SARL', 'S.A.R.L.', 'S.A.S.',
-                            'et Fils')
+company_suffixes_fr_fr <- c(
+  "SA", "S.A.", "SARL", "S.A.R.L.", "S.A.S.",
+  "et Fils"
+)
 
 siren_format_fr_fr <- "### ### ###"

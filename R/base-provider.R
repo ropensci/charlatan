@@ -27,27 +27,35 @@
 #'
 #' x$randomize_nb_elements()
 BaseProvider <- R6::R6Class(
-  'BaseProvider',
+  "BaseProvider",
   public = list(
     #' @description pick a random element from vector/list
     #' @param x vector or list
     #' @return a single element from x
     random_element = function(x) {
-      if (length(x) == 0) return('')
-      if (inherits(x, "character")) if (!any(nzchar(x))) return('')
+      if (length(x) == 0) {
+        return("")
+      }
+      if (inherits(x, "character")) if (!any(nzchar(x))) {
+        return("")
+      }
       x[sample.int(n = length(x), size = 1)]
     },
 
     #' @description pick a random element with probability from vector/list
     #' @param x vector or list
     random_element_prob = function(x) {
-      if (length(x) == 0) return('')
-      if (inherits(x, "character")) if (!any(nzchar(x))) return('')
+      if (length(x) == 0) {
+        return("")
+      }
+      if (inherits(x, "character")) if (!any(nzchar(x))) {
+        return("")
+      }
       choices <- names(x)
       probs <- unname(unlist(x))
       sample(choices, size = 1, prob = probs)
     },
-    
+
     #' @description any number of random integers from a min, max
     #' @param min the minimum value. default: 0
     #' @param max the maximum value. default: 9999
@@ -87,7 +95,7 @@ BaseProvider <- R6::R6Class(
 
     #' @description replace a template with numbers
     #' @param text (character) a string
-    numerify = function(text = '###') {
+    numerify = function(text = "###") {
       text <- do_match(text, "#", self$random_digit)
       text <- do_match(text, "%", self$random_digit_not_zero)
       text <- do_match(text, "!", self$random_digit_or_empty)
@@ -97,14 +105,14 @@ BaseProvider <- R6::R6Class(
 
     #' @description replace a template with letters
     #' @param text (character) a string
-    lexify = function(text = '????') {
+    lexify = function(text = "????") {
       # Replaces all question mark ('?') occurrences with a random letter
       do_match(text, "?", self$random_letter)
     },
 
     #' @description both numerify and lexify together
     #' @param text (character) a string
-    bothify = function(text = '## ??') {
+    bothify = function(text = "## ??") {
       # Replaces all placeholders with random numbers and letters.
       self$lexify(self$numerify(text))
     },
@@ -123,14 +131,15 @@ BaseProvider <- R6::R6Class(
     #' @param max the maximum value. default: `NULL`
     #' @return a random int near number
     randomize_nb_elements = function(number = 10, le = FALSE, ge = FALSE,
-      min = NULL, max = NULL) {
-
-      if (le && ge) return(number)
-      '_min' = if (ge) 100 else 60
-      '_max' = if (le) 100 else 140
-      nb = as.integer(number * self$random_int(`_min`, `_max`) / 100)
-      if (!is.null(min) && nb < min) nb = min
-      if (!is.null(max) && nb > min) nb = max
+                                     min = NULL, max = NULL) {
+      if (le && ge) {
+        return(number)
+      }
+      "_min" <- if (ge) 100 else 60
+      "_max" <- if (le) 100 else 140
+      nb <- as.integer(number * self$random_int(`_min`, `_max`) / 100)
+      if (!is.null(min) && nb < min) nb <- min
+      if (!is.null(max) && nb > min) nb <- max
       return(nb)
     }
   )
@@ -138,7 +147,7 @@ BaseProvider <- R6::R6Class(
 
 check_locale_ <- function(x, z = available_locales) {
   if (!x %in% z) {
-    stop(x, ' not in set of available locales', call. = FALSE)
+    stop(x, " not in set of available locales", call. = FALSE)
   }
 }
 

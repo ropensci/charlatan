@@ -144,8 +144,8 @@ all_colors_en_us <- c(
   list(YellowGreen = "#9ACD3")
 )
 
-safe_colors_en_us = c(
-  'black', 'maroon', 'green', 'navy', 'olive',
-  'purple', 'teal', 'lime', 'blue', 'silver',
-  'gray', 'yellow', 'fuchsia', 'aqua', 'white'
+safe_colors_en_us <- c(
+  "black", "maroon", "green", "navy", "olive",
+  "purple", "teal", "lime", "blue", "silver",
+  "gray", "yellow", "fuchsia", "aqua", "white"
 )

@@ -22,7 +22,7 @@
 #' ch_job(locale = "uk_UA", n = 10)
 #' ch_job(locale = "zh_TW", n = 10)
 ch_job <- function(n = 1, locale = NULL) {
-  assert(n, c('integer', 'numeric'))
+  assert(n, c("integer", "numeric"))
   if (n == 1) {
     JobProvider$new(locale = locale)$render()
   } else {

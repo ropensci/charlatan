@@ -1,19 +1,19 @@
 # modified from the python library faker:
 # https://github.com/joke2k/faker/blob/master/faker/providers/person/fi_FI/__init__.py
 
-person_formats_fi_fi = c(
-  '{{first_names}} {{last_names}}',
-  '{{first_names}} {{last_names}}',
-  '{{last_names}}, {{first_names}}'
+person_formats_fi_fi <- c(
+  "{{first_names}} {{last_names}}",
+  "{{first_names}} {{last_names}}",
+  "{{last_names}}, {{first_names}}"
 )
 
-person_prefixes_fi_fi = c(
-  'Herra', 'hra', 'Rouva', 'rva', 'Tohtori', 'tri', 'prof.', 'arkkit.'
+person_prefixes_fi_fi <- c(
+  "Herra", "hra", "Rouva", "rva", "Tohtori", "tri", "prof.", "arkkit."
 )
 
-person_suffixes_fi_fi = c('DI', 'PhD', 'MSc', 'BSc')
+person_suffixes_fi_fi <- c("DI", "PhD", "MSc", "BSc")
 
-person_first_names_fi_fi = c(
+person_first_names_fi_fi <- c(
   "Aake",
   "Aapeli",
   "Aapo",
@@ -778,7 +778,7 @@ person_first_names_fi_fi = c(
   "Vuokko"
 )
 
-person_last_names_fi_fi = c(
+person_last_names_fi_fi <- c(
   "Aalto",
   "Aaltonen",
   "Aarnio",

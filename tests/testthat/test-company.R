@@ -47,4 +47,3 @@ test_that("ch_company - locale parameter", {
   expect_is(ch_company(locale = "de_DE"), "character")
   expect_is(ch_company(locale = "bg_BG"), "character")
 })
-
