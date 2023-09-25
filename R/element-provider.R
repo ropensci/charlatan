@@ -10,26 +10,13 @@ ElementProvider <- R6::R6Class(
   inherit = BaseProvider,
   "ElementProvider",
   public = list(
-    #' @field locale (character) xxx
-    locale = NULL,
-    #' @field symbolvec symbols for elements
-    symbolvec = el_symbols,
-    #' @field elementvec vector of element names
-    elementvec = NA_character_,
     #' @description dataframe of symbols and elements
     elements = function() {
       data.frame(
-        symbol = self$symbolvec,
-        element = self$elementvec,
+        symbol = private$symbolvec,
+        element = private$elementvec,
         stringsAsFactors = FALSE
       )
-    },
-    #' @description Create a new `ElementProvider` object
-    #' @return A new `ElementProvider` object
-    initialize = function() {
-      if (is.null(self$locale)) {
-        raise_class("ElementProvider")
-      }
     },
     #' @description Get a symbol
     symbol = function() {
@@ -51,7 +38,10 @@ ElementProvider <- R6::R6Class(
     }
   ),
   private = list(
-    locales = c("en_US", "nl_NL")
+    locales = c("en_US", "nl_NL"),
+    provider_ = "ElementProvider",
+    symbolvec = el_symbols,
+    elementvec = NA_character_
   )
 )
 
@@ -74,17 +64,132 @@ el_elements_en_us <- c(
 ElementProvider_en_US <- R6::R6Class(
   inherit = ElementProvider,
   "ElementProvider_en_US",
-  public = list(
-    #' @field locale (character) xxx
-    locale = "en_US",
-    #' @field elementvec vector of element names
+  private = list(
+    locale_ = "en_US",
+    # vector of element names
     elementvec = el_elements_en_us
   )
 )
 # https://nl.wikipedia.org/wiki/Lijst_van_chemische_elementen
 el_elements_nl_nl <- c(
-  "Waterstof", "Helium", "Lithium", "Berylium", "Boor", "Koolstof", "Stikstof", "Zuurstof", "Fluor", "Neon", "Natrium", "Magnesium", "Aluminium", "Silicium", "Fosfor", "Zwavel", "Chloor", "Argon", "Kalium", "Calcium", "Scandium", "Titanium", "Vanadium", "Chroom", "Mangaan", "IJzer", "Kobalt", "Nikkel", "Koper", "Zink", "Gallium", "Germanium", "Arseen", "Seleen", "Broom", "Krypton", "Rubidium", "Strontium", "Ytrium", "Zirkonium", "Nobium", "Molybdeen", "Technitium", "Ruthenium", "Rodium", "Palladium", "Zilver", "Cadmium", "Indium", "Tin", "Antimoon", "Telluur", "Jodium", "Xenon", "Cesium", "Barium", "Lanthaan", "Cerium", "Praseodymium", "Neodymium", "Promethium", "Samarium", "Europium", "Gadolinium", "Terbium", "Dysprosium", "Holmium", "Erbium", "Thulium", "Ytterbium", "Lutetium", "Hafnium", "Tantaal", "Wolfraam", "Renium", "Osmium", "Iridium", "Platina", "Goud", "Kwik", "Thallium", "Lood", "Bismut", "Polonium", "Astaat", "Radon", "Francium", "Radium", "Actinium", "Thorium", "Protactinium", "Uranium", "Neptunium", "Plutonium", "Americium", "Curium", "Berkelium", "Californium", "Einsteinium", "Fermium", "Mendelevium", "Nobelium", "Lawrencium", "Rutherfordium", "Dubnium", "Seaborgium", "Bohrium", "Hassium", "Meitnerium", "Darmstadtium", "Röntgenium", "Copernicum", "Nihonium", "Flerovium", "Moscovium",
-  "Livermorium", "Tennessine", "Oganesson"
+  "Waterstof",
+  "Helium",
+  "Lithium",
+  "Berylium",
+  "Boor",
+  "Koolstof",
+  "Stikstof",
+  "Zuurstof",
+  "Fluor",
+  "Neon",
+  "Natrium",
+  "Magnesium",
+  "Aluminium",
+  "Silicium",
+  "Fosfor",
+  "Zwavel",
+  "Chloor",
+  "Argon",
+  "Kalium",
+  "Calcium",
+  "Scandium",
+  "Titanium",
+  "Vanadium",
+  "Chroom",
+  "Mangaan",
+  "IJzer",
+  "Kobalt",
+  "Nikkel",
+  "Koper",
+  "Zink",
+  "Gallium",
+  "Germanium",
+  "Arseen",
+  "Seleen",
+  "Broom",
+  "Krypton",
+  "Rubidium",
+  "Strontium",
+  "Ytrium",
+  "Zirkonium",
+  "Nobium",
+  "Molybdeen",
+  "Technitium",
+  "Ruthenium",
+  "Rodium",
+  "Palladium",
+  "Zilver",
+  "Cadmium",
+  "Indium",
+  "Tin",
+  "Antimoon",
+  "Telluur",
+  "Jodium",
+  "Xenon",
+  "Cesium",
+  "Barium",
+  "Lanthaan",
+  "Cerium",
+  "Praseodymium",
+  "Neodymium",
+  "Promethium",
+  "Samarium",
+  "Europium",
+  "Gadolinium",
+  "Terbium",
+  "Dysprosium",
+  "Holmium",
+  "Erbium",
+  "Thulium",
+  "Ytterbium",
+  "Lutetium",
+  "Hafnium",
+  "Tantaal",
+  "Wolfraam",
+  "Renium",
+  "Osmium",
+  "Iridium",
+  "Platina",
+  "Goud",
+  "Kwik",
+  "Thallium",
+  "Lood",
+  "Bismut",
+  "Polonium",
+  "Astaat",
+  "Radon",
+  "Francium",
+  "Radium",
+  "Actinium",
+  "Thorium",
+  "Protactinium",
+  "Uranium",
+  "Neptunium",
+  "Plutonium",
+  "Americium",
+  "Curium",
+  "Berkelium",
+  "Californium",
+  "Einsteinium",
+  "Fermium",
+  "Mendelevium",
+  "Nobelium",
+  "Lawrencium",
+  "Rutherfordium",
+  "Dubnium",
+  "Seaborgium",
+  "Bohrium",
+  "Hassium",
+  "Meitnerium",
+  "Darmstadtium",
+  "R\u00f6ntgenium",
+  "Copernicum",
+  "Nihonium",
+  "Flerovium",
+  "Moscovium",
+  "Livermorium",
+  "Tennessine",
+  "Oganesson"
 )
 #' @title ElementProvider for the Netherlands
 #' @description chemical elements methods
@@ -100,10 +205,9 @@ el_elements_nl_nl <- c(
 ElementProvider_nl_NL <- R6::R6Class(
   inherit = ElementProvider,
   "ElementProvider_nl_NL",
-  public = list(
-    #' @field locale (character) xxx
-    locale = "nl_NL",
-    #' @field elementvec vector of element names
+  private = list(
+    locale_ = "nl_NL",
+    # vector of element names
     elementvec = el_elements_nl_nl
   )
 )

@@ -16,8 +16,6 @@ CompanyProvider_de_DE <- R6::R6Class(
   "CompanyProvider_de_DE",
   inherit = CompanyProvider,
   public = list(
-    #' @field locale locale for this provider
-    locale = "de_DE",
     #' @field company_formats formats for company names.
     company_formats = c(
       "{{last_name}} {{company_suffix}}",
@@ -32,5 +30,8 @@ CompanyProvider_de_DE <- R6::R6Class(
       "KGaA", "OHG mbH", "Stiftung & Co. KG", "Stiftung & Co. KGaA", "e.G.",
       "e.V."
     )
+  ),
+  private = list(
+    locale_ = "de_DE"
   )
 )

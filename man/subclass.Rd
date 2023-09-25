@@ -6,6 +6,14 @@
 \usage{
 subclass(provider, locale = NULL)
 }
+\arguments{
+\item{provider}{The name of the provider you want to create}
+
+\item{locale}{Locale to use}
+}
+\value{
+Localized provider
+}
 \description{
 Create Localized Provider
 }

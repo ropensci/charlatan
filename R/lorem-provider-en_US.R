@@ -1002,11 +1002,8 @@ lorem_word_list_en_us <- c(
 LoremProvider_en_US <- R6::R6Class(
   inherit = LoremProvider,
   "LoremProvider_en_US",
-  public = list(
-    #' @field locale (character) the locale
-    locale = "en_US"
-  ),
   private = list(
+    locale_ = "en_US",
     word_list = lorem_word_list_en_us
   )
 )

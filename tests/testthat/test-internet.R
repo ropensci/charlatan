@@ -1,30 +1,58 @@
 context("InternetProvider works")
 
+
+
 test_that("InternetProvider works", {
   aa <- InternetProvider_en_US$new()
-
   expect_is(aa, "InternetProvider")
   expect_is(aa, "R6")
+  # we don't have providers for every locale, so some
+  # providers that are called from InternetProvider will
+  # default to en_US and warn us. That is good and useful but
+  # we must capture and check those warnings.
+  # But I don't want to hard-code all the locales that are missing for every
+  # combination of locales. So here is a workaround to check all methods for
+  # all locales but also capture all warnings.
 
-  expect_is(aa$tld, "function")
-  expect_is(aa$tld(), "character")
+  cp <- locale_mismatch("InternetProvider", "CompanyProvider")
+  lp <- locale_mismatch("InternetProvider", "LoremProvider")
+  pp <- locale_mismatch("InternetProvider", "PersonProvider")
+  warn_locales <- unique(c(cp, lp, pp))
 
-  expect_is(aa$ascii_email, "function")
-  expect_match(aa$ascii_email(), "\\@")
+  for (loc in aa$allowed_locales()) {
+    # bit of a workaround to make sure we capture warnings for a subset only.
+    if (loc %in% warn_locales) {
+      expect_warning(
+        {
+          ip <- cr_loc_spec_provider("InternetProvider", loc)
+        },
+        regexp = sprintf("Provider does not have locale %s, defaulting to", loc),
+        label = loc
+      )
+    } else {
+      ip <- cr_loc_spec_provider("InternetProvider", loc)
+    }
 
-  expect_is(aa$domain_name, "function")
-  expect_is(aa$domain_name(), "character")
+    expect_is(ip$tld, "function")
+    expect_is(ip$tld(), "character")
 
-  expect_is(aa$email, "function")
-  expect_is(aa$email(), "character")
-  expect_match(aa$email(), "\\@")
+    expect_is(ip$ascii_email, "function")
+    expect_match(ip$ascii_email(), "\\@")
 
-  expect_is(aa$image_url(), "character")
-  expect_match(aa$image_url(), "http")
+    expect_is(ip$domain_name, "function")
+    expect_is(ip$domain_name(), "character")
 
-  expect_is(aa$slug(), "character")
-  expect_match(aa$slug(), "-")
-  expect_match(aa$slug(), "[A-Za-z]")
+    expect_is(ip$email, "function")
+    expect_is(ip$email(), "character")
+    expect_match(ip$email(), "\\@")
+
+    expect_is(ip$image_url(), "character")
+    expect_match(ip$image_url(), "http")
+
+    expect_is(ip$slug(), "character")
+    expect_match(ip$slug(), "-")
+    expect_match(ip$slug(), "[A-Za-z]")
+  }
 })
 
 test_that("IP address generation works", {

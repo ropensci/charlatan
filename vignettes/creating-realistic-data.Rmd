@@ -1,0 +1,275 @@
+---
+title: "Creating realistic data"
+author: 
+    - "Roel M. Hogervorst"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Creating realistic data}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(charlatan)
+```
+
+# Introduction
+Charlatan creates realistic looking data. By now you have seen some examples of
+the high level and low level APIs. But maybe you would like to see some
+examples of generating data for specific use-cases? Then this vignette is for
+you. It will show you how to create fake transactional data, fake health care
+(PII) data and finally an example of a plumber API that returns fake data.
+
+But first a slight detour into different ways of faking data. 
+
+# Other options for faking data
+
+Simulation of data (creating fake data that looks realistic) is not always the 
+best option, there are
+other options that we will discuss first.
+
+- use real data
+- use pseudonomous or anonymous data
+- create a dataset from scratch
+
+Using **real actual data** is great for live systems. You want actual data for 
+actual predictions or actual inference. It is, however smart to reduce your data to
+only the columns you need. 
+
+Using real actual data is a bad idea for demonstration
+use-cases. Personal Identifyable Information (PII) are sensitive data and need
+to be handled with care. Even if you strip away the full names it is relatively
+easy to pinpoint specific people on the basis of several data points. 
+
+
+**Pseudonymous or anonymous data** is a safer way to deal with personal identifyable
+data. By stripping away PII or replacing values with other random values you make
+it harder to link the data back to actual people. The main pro in using this kind
+of data is that you keep the data structure intact. The relationship between
+variables remain, and you can do predictions/inference on that. 
+
+It is quite a lot of work to make your data truly anonymous. You need surprisingly 
+little data to de-anonomize data and link it back to actual people.
+
+
+**Creating a fake dataset from scratch** is relatively easy when the data is 
+small. Using the build-in functions like`sample`, `runif`, and `rnorm` etc. is 
+very doable. It is slightly faster than using this package. 
+
+Using completely random values does make it difficult to talk to stakeholders,
+they would not understand the random values. It is also really a lot of work
+to generate more complex data or many different columns. 
+
+
+# What this package does, and does not do
+
+This package creates realistic looking values, but does not help you in creating
+relations in a data set. For instance you can create streets, cities and postal
+codes, but those components are unrelated, the postal code is not related to
+the street nor to the city. 
+
+This package creates realistic names, jobs, streets, business names, 
+phone numbers and much more. It also can create those things for different 
+countries and languages. For example:
+
+- You could create a dataset with real Czech names like 'František Krejčí' or 'Nikol Machová'.
+- You can create addresses that look like they come from New Zealand:"68 Morris Concourse Tererongo 6128" or "485 Manawarongo Way, Pedersen 3196". 
+- You can create Danish jobs like "Børsmægler" or "Ventilationsmontør". 
+
+
+# Examples
+
+Next are a few examples of faked data with the help of the {charlatan} package.
+The examples are with the en_US locale, but work for many locales. 
+
+## Fake business transactional data
+This example shows transactional data, from an ecommerce website for example, 
+and will also show you how to add some logical structure to your data. 
+_This example comes from an issue opened on our github._
+
+Let's imagine we sell clothes on the internet. What would that data
+look like?
+
+I would need:
+
+- ids for items
+- item information
+- a price paid
+- customer information (Who bought it, where do we ship it)
+
+### Steps for creating realistic looking business transactional data
+
+- create products
+- create orders
+- combine the two
+
+
+```{r}
+# setup
+fraudster_cl <- fraudster("en_US")
+n <- 5
+set.seed(1235)
+```
+
+
+We first create a few categories and subcategories. This is too specific for
+the {charlatan} package (and
+different for every store). I imagine you have a better idea for this data then 
+I have. 
+
+
+In this example I have categories Shoes, Jeans and Dresses. 
+All Shoes have a prefix that
+starts with 1, all Jeans have prefix starting with 2, and Dresses start with 5.
+We combine the prefix with a random number to have consistent product ids (
+I have no idea if clothing stores actually do this, but it looked neat).
+
+```{r}
+# create product data
+products <- data.frame(
+  prefix = c(rep(1, 5), rep(2, 2), rep(5, 2)),
+  product_id = fraudster_cl$integer(n = 9, min = 1000, max = 9999),
+  main_category = c(rep("Shoes", 5), rep("Jeans", 2), rep("Dresses", 2)),
+  sub_category = c("Dress shoes", "Tennis shoes", "Boots", "Hiking boots", "Country & Western style boots", "Regular fit", "Straight fit", "Summer dress", "Evening gown")
+)
+## when you have {dplyr} installed there are way cleaner ways to do this
+products$product_id <- as.integer(sprintf("%s%s", as.character(products$prefix), products$product_id))
+products
+```
+
+Then we create the orders with a price, a product id, and location. 
+Orders also have an email address and are shipped to an address. 
+
+```{r}
+# create orders
+orders <- data.frame(
+  order_id = fraudster_cl$integer(n = n, min = 10000, max = 90000),
+  location_id = fraudster_cl$integer(n = n, min = 1, max = 5),
+  price_paid = fraudster_cl$integer(n = n, min = 1, max = 9900) / 100,
+  product_id = sample(products$product_id, size = n, replace = TRUE),
+  order_email = fraudster_cl$email(n = n),
+  customer_name = fraudster_cl$name(n = n),
+  shipping_address = fraudster_cl$address(n = n)
+)
+```
+
+Finally we combine everything:
+
+```{r}
+# combine orders and transactions
+example_transactions <- merge(orders, products)
+## reorder the columns to let it make more sense.
+example_transactions[, c("order_id", "location_id", "product_id", "main_category", "sub_category", "price_paid", "customer_name", "order_email", "shipping_address")]
+```
+
+Notice that customer_name and email are completely unrelated. You could create
+a customer 'table' like the product table above to create a bit more structure.
+
+
+## Protected health information
+Here is how you simulate protected health information with {charlatan}.
+Here we use the low level api. 
+
+_This example also comes from an issue in our github._
+
+First a setup:
+
+```{r}
+# setup the providers
+ap <- AddressProvider_en_US$new()
+pp <- PersonProvider_en_US$new()
+ip <- InternetProvider_en_US$new()
+lp <- LoremProvider_en_US$new()
+SSNP <- SSNProvider_en_US$new()
+dtp <- DateTimeProvider$new()
+np <- NumericsProvider$new()
+pnp <- PhoneNumberProvider_en_US$new()
+
+set.seed(1235)
+```
+
+We don't have a list of counties in the US (there are 3007 of them). 
+So we will use a random word from the `LoremProvider` with county.
+It is probably nicer if you wrap this into a function.
+
+Generate a single 'record' for a person:
+
+```{r}
+prot_health <- list(
+  first_name = pp$first_name(),
+  last_name = pp$last_name(),
+  phone_number = pnp$render(),
+  fax_number = pnp$render(),
+  street = ap$street_address(),
+  zipcode = ap$postcode(),
+  email = ip$email(),
+  county = paste0(lp$word(), " county"),
+  SSN = SSNP$render(),
+  dob = as.Date(dtp$date_time_between("1930-01-01", "1990-12-31")),
+  # I've decided record number is an integer between 10000 - 99999
+  medical_record_number = np$integer(min = 10000, max = 99999),
+  ip_address = ip$ipv4()
+)
+prot_health
+```
+
+We can also create medical records in sequence with a custom
+function.
+In the following example I create a sequence of events based on a date.
+
+```{r}
+#' Generate a bunch of dates in sequence
+gen_med_record <- function(date_value, events = 4, event_types = c("admission", "x-ray", "blood-test", "general exam")) {
+  days <- sort(np$integer(events, 1, 365))
+  result <- data.frame(
+    date = date_value + days
+  )
+  result$event <- sample(event_types, size = nrow(result), replace = TRUE)
+  result
+}
+
+result <- gen_med_record(date_value = as.Date("2022-03-01"), events = 5)
+result$medical_record_number <- prot_health$medical_record_number
+result
+```
+
+
+### plumber api
+You can also create a plumber API.
+For this to work you need the [{plumber}](https://CRAN.R-project.org/package=plumber) package installed. 
+
+```r
+# plumber.R
+
+fraudster_cl <- fraudster('en_US')
+
+#* Create a random address
+#* @param n how many do you want
+#* @get /adress
+function(n=1){
+  list(address=fraudster_cl$address())
+}
+
+#* Create a random company
+#* @param n how many do you want
+#* @get /company
+function(n=1){
+  list(address=fraudster_cl$company())
+}
+
+```
+Then run the file like this to start an API:
+
+`plumber::plumb("R/plumber.R") %>% plumber::pr_run()`
+
+# Conclusion
+As you can see this package helps you in generating plausible data, but
+to add structure (relationships between variables) to your data you need to do 
+work yourself. 

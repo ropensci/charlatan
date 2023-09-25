@@ -6,7 +6,7 @@
 #' @family es
 #' @family MX
 #' @examples
-#' x <- company("es_MX")
+#' x <- CompanyProvider_es_MX$new()
 #' x$locale
 #' x$company()
 #' x$catch_phrase()
@@ -16,8 +16,6 @@ CompanyProvider_es_MX <- R6::R6Class(
   "CompanyProvider_es_MX",
   inherit = CompanyProvider,
   public = list(
-    #' @field locale (character) xxx
-    locale = "es_MX",
     #' @field catch_phrase_words (character) xxx
     catch_phrase_words = list(
       c(
@@ -420,5 +418,8 @@ CompanyProvider_es_MX <- R6::R6Class(
       )
       whisker::whisker.render(pattern, data = dat)
     }
+  ),
+  private = list(
+    locale_ = "es_MX"
   )
 )

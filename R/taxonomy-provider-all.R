@@ -24,8 +24,7 @@
 TaxonomyProvider_en_US <- R6::R6Class(
   inherit = TaxonomyProvider,
   "TaxonomyProvider_en_US",
-  public = list(
-    #' @field locale locale for this provider
-    locale = "en_US"
+  private = list(
+    locale_ = "en_US"
   )
 )

@@ -14,22 +14,10 @@ Data from Wikipedia at
 \section{Super classes}{
 \code{\link[charlatan:BareProvider]{charlatan::BareProvider}} -> \code{\link[charlatan:BaseProvider]{charlatan::BaseProvider}} -> \code{ElementProvider}
 }
-\section{Public fields}{
-\if{html}{\out{<div class="r6-fields">}}
-\describe{
-\item{\code{locale}}{(character) xxx}
-
-\item{\code{symbolvec}}{symbols for elements}
-
-\item{\code{elementvec}}{vector of element names}
-}
-\if{html}{\out{</div>}}
-}
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
 \item \href{#method-ElementProvider-elements}{\code{ElementProvider$elements()}}
-\item \href{#method-ElementProvider-new}{\code{ElementProvider$new()}}
 \item \href{#method-ElementProvider-symbol}{\code{ElementProvider$symbol()}}
 \item \href{#method-ElementProvider-element}{\code{ElementProvider$element()}}
 \item \href{#method-ElementProvider-symbol_by_number}{\code{ElementProvider$symbol_by_number()}}
@@ -54,6 +42,8 @@ Data from Wikipedia at
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="randomize_nb_elements"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-randomize_nb_elements'><code>charlatan::BareProvider$randomize_nb_elements()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="allowed_locales"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-allowed_locales'><code>charlatan::BaseProvider$allowed_locales()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-check_locale'><code>charlatan::BaseProvider$check_locale()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="initialize"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-initialize'><code>charlatan::BaseProvider$initialize()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="print"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-print'><code>charlatan::BaseProvider$print()</code></a></span></li>
 </ul>
 </details>
 }}
@@ -66,19 +56,6 @@ dataframe of symbols and elements
 \if{html}{\out{<div class="r">}}\preformatted{ElementProvider$elements()}\if{html}{\out{</div>}}
 }
 
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-ElementProvider-new"></a>}}
-\if{latex}{\out{\hypertarget{method-ElementProvider-new}{}}}
-\subsection{Method \code{new()}}{
-Create a new \code{ElementProvider} object
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{ElementProvider$new()}\if{html}{\out{</div>}}
-}
-
-\subsection{Returns}{
-A new \code{ElementProvider} object
-}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-ElementProvider-symbol"></a>}}

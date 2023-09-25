@@ -45,14 +45,16 @@ test_that("PersonProvider works", {
 test_that("all locales have the basic functionality", {
   en_us <- cr_loc_spec_provider("PersonProvider", "en_US")
   for (loc in en_us$allowed_locales()) {
+    # print(loc)
     aa <- cr_loc_spec_provider("PersonProvider", loc)
     expect_equal(aa$locale, loc)
-    expect_false(aa$render() == " ")
+    expect_false(aa$render() == " ", label = loc)
     expect_is(aa$render(), "character")
-    expect_is(aa$first_name(), "character")
+    expect_gt(nchar(aa$first_name()), 0, label = loc)
     expect_is(aa$first_name_female(), "character")
     expect_is(aa$first_name_male(), "character")
     expect_is(aa$last_name(), "character")
+    expect_gt(nchar(aa$last_name()), 0, label = loc)
     expect_is(aa$last_name_female(), "character")
     expect_is(aa$last_name_male(), "character")
   }
@@ -98,7 +100,7 @@ test_that("messy argument turns on messyness.", {
   # when possible
   charlatan_settings(messy = TRUE)
   exbg <- PersonProvider_bg_BG$new(messy = FALSE)
-  expect_warning(exus <- PersonProvider_en_US$new(messy = FALSE))
+  expect_warning((exus <- PersonProvider_en_US$new(messy = FALSE)))
   expect_true(exus$messy)
   expect_false(exbg$messy) # has not messy options
 
@@ -107,7 +109,10 @@ test_that("messy argument turns on messyness.", {
   # en_US has messy
   aa <- PersonProvider_en_US$new(messy = TRUE)
   expect_true(aa$messy)
-  expect_false(is.null(aa$person_messy))
+
+  aa <- cr_loc_spec_provider("PersonProvider", "en_US")
+  aa$change_messy(TRUE)
+  expect_true(aa$messy)
   expect_true(
     aa$suffix_male() %in% person_suffixes_male_en_us_messy
   )

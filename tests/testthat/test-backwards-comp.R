@@ -1,4 +1,3 @@
-
 ### 0.5.0 CRAN functions should still exist
 ### The functionality is tested in the other tests but
 ### this makes sure we have everything that was exported then is still here.
@@ -83,4 +82,17 @@ test_that("coordinates, numbers and time work", {
   expect_type(ch_norm(), "double")
   expect_type(ch_lnorm(), "double")
   expect_type(ch_beta(shape1 = 0.2, shape2 = 0.1), "double")
+})
+
+test_that("datafaker and salty revdep still works", {
+  expect_no_condition(ch_name(1))
+})
+
+test_that("fakir revdep still works", {
+  expect_no_condition(ch_color_name(1))
+  expect_no_condition(ch_company(1))
+  expect_no_condition(ch_credit_card_provider(1))
+  expect_no_condition(ch_job(1))
+  expect_no_condition(ch_element_symbol(1))
+  expect_no_condition(ch_name(1))
 })

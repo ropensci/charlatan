@@ -26,5 +26,8 @@ MissingDataProvider <- R6::R6Class(
       x[pos] <- rep(na_value, times = length(seq_len(n)))
       return(x)
     }
+  ),
+  private = list(
+    provider_ = "MissingDataProvider"
   )
 )

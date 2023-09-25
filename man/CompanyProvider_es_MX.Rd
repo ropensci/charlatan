@@ -7,7 +7,7 @@
 company methods for locale Mexican Spanish (es_MX).
 }
 \examples{
-x <- company("es_MX")
+x <- CompanyProvider_es_MX$new()
 x$locale
 x$company()
 x$catch_phrase()
@@ -33,8 +33,6 @@ Other MX:
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{locale}}{(character) xxx}
-
 \item{\code{catch_phrase_words}}{(character) xxx}
 
 \item{\code{bsWords}}{(character) xxx}
@@ -70,11 +68,11 @@ Other MX:
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_letter"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_letter'><code>charlatan::BareProvider$random_letter()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="randomize_nb_elements"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-randomize_nb_elements'><code>charlatan::BareProvider$randomize_nb_elements()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-check_locale'><code>charlatan::BaseProvider$check_locale()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="print"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-print'><code>charlatan::BaseProvider$print()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="CompanyProvider" data-id="allowed_locales"><a href='../../charlatan/html/CompanyProvider.html#method-CompanyProvider-allowed_locales'><code>charlatan::CompanyProvider$allowed_locales()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="CompanyProvider" data-id="bs"><a href='../../charlatan/html/CompanyProvider.html#method-CompanyProvider-bs'><code>charlatan::CompanyProvider$bs()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="CompanyProvider" data-id="catch_phrase"><a href='../../charlatan/html/CompanyProvider.html#method-CompanyProvider-catch_phrase'><code>charlatan::CompanyProvider$catch_phrase()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="CompanyProvider" data-id="initialize"><a href='../../charlatan/html/CompanyProvider.html#method-CompanyProvider-initialize'><code>charlatan::CompanyProvider$initialize()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="CompanyProvider" data-id="siren"><a href='../../charlatan/html/CompanyProvider.html#method-CompanyProvider-siren'><code>charlatan::CompanyProvider$siren()</code></a></span></li>
 </ul>
 </details>
 }}

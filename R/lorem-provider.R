@@ -1,15 +1,13 @@
 #' @title LoremProvider
-#' @description lorem ipsum methods
+#' @description lorem ipsum methods for generating random words in a language.
+#' @inherit BaseProvider note
+#' @param ext_words a character vector of words you would like to have instead of "Lorem ipsum"
+#' @family ParentProviders
 #' @export
-#' @keywords internal
-#' @param ext_words a character vector of words you would like to have
-#' instead of 'Lorem ipsum'
 LoremProvider <- R6::R6Class(
   inherit = BaseProvider,
   "LoremProvider",
   public = list(
-    #' @field locale (character) the locale
-    locale = NULL,
     #' @description fetch the allowed locales for this provider
     allowed_locales = function() private$locales,
 
@@ -19,9 +17,7 @@ LoremProvider <- R6::R6Class(
     #' @return A new `LoremProvider` object
     initialize = function(sentence_punctuation = ".",
                           word_connector = " ") {
-      if (is.null(self$locale)) {
-        raise_class("JobProvider")
-      }
+      super$initialize()
       assert(sentence_punctuation, "character")
       private$sentence_punctuation <- sentence_punctuation
       assert(word_connector, "character")
@@ -203,6 +199,7 @@ LoremProvider <- R6::R6Class(
     locales = c(
       "en_US", "ar_AA", "el_GR", "he_IL", "ja_JP", "la",
       "ru_RU", "zh_CN", "zh_TW"
-    )
+    ),
+    provider_ = "LoremProvider"
   )
 )

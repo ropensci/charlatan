@@ -3,24 +3,39 @@
 \name{AddressProvider}
 \alias{AddressProvider}
 \title{AddressProvider}
-\description{
-address methods
+\value{
+Returns an AddressProvider object.
 }
-\keyword{internal}
+\description{
+Object to create addresses for a locale.
+Makes use of \link{PersonProvider} for creating street names.
+}
+\details{
+When there is no PersonProvider for this locale, we default back to en_US.
+}
+\note{
+You cannot instantiate the Parent providers. You must use one of
+the localized one.
+}
+\seealso{
+Other ParentProviders: 
+\code{\link{ColorProvider}},
+\code{\link{CompanyProvider}},
+\code{\link{InternetProvider}},
+\code{\link{JobProvider}},
+\code{\link{LoremProvider}},
+\code{\link{PersonProvider}},
+\code{\link{PhoneNumberProvider}},
+\code{\link{TaxonomyProvider}},
+\code{\link{UserAgentProvider}}
+}
+\concept{ParentProviders}
 \section{Super classes}{
 \code{\link[charlatan:BareProvider]{charlatan::BareProvider}} -> \code{\link[charlatan:BaseProvider]{charlatan::BaseProvider}} -> \code{AddressProvider}
-}
-\section{Public fields}{
-\if{html}{\out{<div class="r6-fields">}}
-\describe{
-\item{\code{locale}}{(character) Locale}
-}
-\if{html}{\out{</div>}}
 }
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
-\item \href{#method-AddressProvider-allowed_locales}{\code{AddressProvider$allowed_locales()}}
 \item \href{#method-AddressProvider-new}{\code{AddressProvider$new()}}
 \item \href{#method-AddressProvider-address}{\code{AddressProvider$address()}}
 \item \href{#method-AddressProvider-city}{\code{AddressProvider$city()}}
@@ -46,20 +61,12 @@ address methods
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_int"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_int'><code>charlatan::BareProvider$random_int()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_letter"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_letter'><code>charlatan::BareProvider$random_letter()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="randomize_nb_elements"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-randomize_nb_elements'><code>charlatan::BareProvider$randomize_nb_elements()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="allowed_locales"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-allowed_locales'><code>charlatan::BaseProvider$allowed_locales()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-check_locale'><code>charlatan::BaseProvider$check_locale()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="print"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-print'><code>charlatan::BaseProvider$print()</code></a></span></li>
 </ul>
 </details>
 }}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-AddressProvider-allowed_locales"></a>}}
-\if{latex}{\out{\hypertarget{method-AddressProvider-allowed_locales}{}}}
-\subsection{Method \code{allowed_locales()}}{
-all allowed locales
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{AddressProvider$allowed_locales()}\if{html}{\out{</div>}}
-}
-
-}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-AddressProvider-new"></a>}}
 \if{latex}{\out{\hypertarget{method-AddressProvider-new}{}}}

@@ -252,7 +252,6 @@ person_first_names_male_nl_nl <- c(
   "Valentijn",
   "Victor",
   "Vigo",
-  "Vince",
   "Vincent",
   "Wesley",
   "Wessel",
@@ -1689,12 +1688,11 @@ person_nl_nl <- list(
 PersonProvider_nl_NL <- R6::R6Class(
   "PersonProvider_nl_NL",
   inherit = PersonProvider,
-  public = list(
-    #' @field locale (character) the locale
-    locale = "nl_NL",
-    #' @field formats (character) person name formats
+  private = list(
+    # person name formats
     formats = person_formats_nl_nl,
-    #' @field person (character) person name data
-    person = person_nl_nl
+    # person name data
+    persons = person_nl_nl,
+    locale_ = "nl_NL"
   )
 )

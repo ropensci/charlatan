@@ -17,8 +17,7 @@ CompanyProvider_en_US <- R6::R6Class(
   "CompanyProvider_en_US",
   inherit = CompanyProvider,
   public = list(
-    #' @field locale locale for this provider
-    locale = "en_US",
+
     # add data here, like
     #' @field company_formats formats for company names.
     company_formats = c(
@@ -126,5 +125,8 @@ CompanyProvider_en_US <- R6::R6Class(
       )
       whisker::whisker.render(template = pattern, data = dat)
     }
+  ),
+  private = list(
+    locale_ = "en_US"
   )
 )

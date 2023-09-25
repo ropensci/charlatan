@@ -839,15 +839,13 @@ job_formats_fr_ch <- c(
 #' @family CH
 #' @export
 #' @examples
-#' x <- JobProvider_fr_CHK$new()
+#' x <- JobProvider_fr_CH$new()
 #' x$render()
 JobProvider_fr_CH <- R6::R6Class(
   inherit = JobProvider,
   "JobProvider_fr_CH",
-  public = list(
-    #' @field locale (character) the locale
-    locale = "fr_CH",
-    #' @field formats (character) vector of possible formats
+  private = list(
+    locale_ = "fr_CH",
     formats = job_formats_fr_ch
   )
 )

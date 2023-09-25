@@ -19,7 +19,7 @@ Create fake jobs
 \examples{
 ch_job()
 ch_job(10)
-ch_job(500)
+# or even ch_job(500)
 
 ch_job(locale = "da_DK", n = 10)
 ch_job(locale = "fi_FI", n = 10)

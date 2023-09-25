@@ -1,185 +1,30 @@
 #' @title InternetProvider
 #' @description internet methods, e.g., email addresses, domain names
-#' @export
-#' @keywords internal
-#' @note Note that if a locale you set doesn't have a locale specific set
+#' 
+#' Note that if a locale you set doesn't have a locale specific set
 #' of data for [PersonProvider] or [CompanyProvider] we fall back to
 #' `en_US`
-#' @examples
-#' (x <- InternetProvider$new())
-#' x$locale
-#'
-#' # uri/url/tld/etc.
-#' x$tld()
-#' x$slug()
-#' x$domain_word()
-#' x$domain_name()
-#' x$domain_name(levels = 2)
-#' x$domain_name(levels = 3)
-#' x$domain_name(levels = 10)
-#' ## url's
-#' x$url()
-#' x$url(schemes = c("hbbp", "hggp"))
-#' x$image_url()
-#' ## uri's
-#' x$uri()
-#' x$uri_page()
-#' x$uri_extension()
-#' x$uri_path()
-#' x$uri_path(deep = 1)
-#' x$uri_path(deep = 2)
-#' x$uri_path(deep = 3)
-#' x$uri_path(deep = 4)
-#'
-#' # user name
-#' x$user_name()
-#'
-#' # emails
-#' x$email()
-#' x$safe_email()
-#' x$free_email()
-#' x$company_email()
-#' x$free_email_domain()
-#' x$ascii_email()
-#' x$ascii_safe_email()
-#' x$ascii_free_email()
-#' x$ascii_company_email()
-#'
-#' # addresses, mac, ipv4, ipv6
-#' x$mac_address()
-#' if (requireNamespace("ipaddress", quietly = TRUE)) {
-#'   x$ipv4()
-#'   x$ipv4(network = TRUE)
-#'   x$ipv6()
-#'   x$ipv6(network = TRUE)
-#' }
-#'
-#' # different locales
-#' (x <- InternetProvider$new(locale = "en_AU"))
-#' x$locale
-#' x$tld()
-#' x$email()
-#' x$free_email_domain()
-#'
-#' (x <- InternetProvider$new(locale = "de_DE"))
-#' x$locale
-#' x$tld()
-#' x$uri()
-#' x$email()
-#' x$ascii_email()
-#'
-#' (x <- InternetProvider$new(locale = "bg_BG"))
-#' x$locale
-#' x$tld()
-#' x$uri()
-#' x$url()
-#' x$user_name()
-#' x$email()
-#' x$ascii_email()
-#'
-#' (x <- InternetProvider$new(locale = "cs_CZ"))
-#' x$url()
-#' x$user_name()
-#' x$email()
-#'
-#' (x <- InternetProvider$new(locale = "en_NZ"))
-#' x$free_email_domain()
-#' x$tld()
-#'
-#' (x <- InternetProvider$new(locale = "fa_IR"))
-#' x$url()
-#'
-#' (x <- InternetProvider$new(locale = "fr_FR"))
-#' x$url()
-#' x$user_name()
-#' x$email()
-#'
-#' (x <- InternetProvider$new(locale = "hr_HR"))
-#' x$url()
-#' x$user_name()
-#' x$email()
-#'
-#' # convert a string to ascii with stringi pkg
-#' if (requireNamespace("stringi", quietly = TRUE)) {
-#'   x$to_ascii("anï")
-#' }
+#' Also note that you
+#' @family ParentProviders
+#' @export
 InternetProvider <- R6::R6Class(
   inherit = BaseProvider,
   "InternetProvider",
   public = list(
-    #' @field locale (character) the locale
-    locale = NULL,
-    #' @field safe_email_tlds (character) safe email tlds
-    safe_email_tlds = c("org", "com", "net"),
-    #' @field free_email_domains (character) free email tlds
-    free_email_domains = c("gmail.com", "yahoo.com", "hotmail.com"),
-    #' @field tlds (character) tlds
-    tlds = c(
-      "com", "com", "com", "com", "com", "com", "biz", "info", "net", "org"
-    ),
-    #' @field uri_pages (character) uri pages
-    uri_pages = c(
-      "index", "home", "search", "main", "post", "homepage", "category",
-      "register", "login", "faq", "about", "terms", "privacy", "author"
-    ),
-    #' @field uri_paths (character) uri paths
-    uri_paths = c(
-      "app", "main", "wp-content", "search", "category", "tag", "categories",
-      "tags", "blog", "posts", "list", "explore"
-    ),
-    #' @field uri_extensions (character) uri extensions
-    uri_extensions = c(
-      ".html", ".html", ".html", ".htm", ".htm", ".php", ".php", ".jsp",
-      ".asp"
-    ),
-    #' @field user_name_formats (character) user name formats
-    user_name_formats = c(
-      "{{last_names}}.{{first_names}}",
-      "{{first_names}}.{{last_names}}",
-      "{{first_names}}##",
-      "?{{last_names}}"
-    ),
-    #' @field email_formats (character) email formats
-    email_formats = c(
-      "{{user_name}}@{{domain_name}}",
-      "{{user_name}}@{{free_email_domain}}"
-    ),
-    #' @field url_formats (character) url formats
-    url_formats = c("www.{{domain_name}}/", "{{domain_name}}/"),
-    #' @field uri_formats (character) uri formats
-    uri_formats = c(
-      "{{url}}",
-      "{{url}}{{uri_page}}/",
-      "{{url}}{{uri_page}}{{uri_extension}}",
-      "{{url}}{{uri_path}}/{{uri_page}}/",
-      "{{url}}{{uri_path}}/{{uri_page}}{{uri_extension}}"
-    ),
-    #' @field image_placeholder_services (character) image uri formats
-    image_placeholder_services = c(
-      "https://placeholdit.imgix.net/~text?txtsize=55&txt={{width}}x{{height}}&w={{width}&h={{height}}",
-      "https://www.lorempixel.com/{{width}}/{{height}}",
-      "https://dummyimage.com/{{width}}x{{height}}"
-    ),
-    #' @field replacements (list) a list
-    replacements = list(),
-
-    #' @description fetch the allowed locales for this provider
-    allowed_locales = function() private$locales,
-
-    #' @description Create a new `InternetProvider` object
-    #' @return A new `InternetProvider` object
+    #' @description Create a new Provider object
+    #' @return A new object
     initialize = function() {
-      if (is.null(self$locale)) {
-        raise_class("InternetProvider")
-      }
+      super$initialize()
+      private$cp <- subclass("CompanyProvider", locale = self$locale)
+      private$pp <- subclass("PersonProvider", locale = self$locale)
+      private$lp <- subclass("LoremProvider", locale = self$locale)
     },
-
     #' @description convert to ascii
     #' @param x the stringn to convert to ascii
     to_ascii = function(x) {
-      if (length(self$replacements) != 0) {
-        for (i in seq_along(self$replacements)) {
-          x <- gsub(self$replacements[1], self$replacements[2], x)
+      if (length(private$replacements) != 0) {
+        for (i in seq_along(private$replacements)) {
+          x <- gsub(private$replacements[1], private$replacements[2], x)
         }
         # for search, replace in self.replacements:
         #   string = string.replace(search, replace)
@@ -195,7 +40,7 @@ InternetProvider <- R6::R6Class(
       if (!is.null(domain)) {
         sprintf("%s@%s", self$user_name(), domain)
       } else {
-        pattern <- super$random_element(self$email_formats)
+        pattern <- super$random_element(private$email_formats)
         out <- list(
           user_name = self$user_name(),
           domain_name = self$domain_name(),
@@ -209,7 +54,7 @@ InternetProvider <- R6::R6Class(
     safe_email = function() {
       tolower(sprintf(
         "%s@example.%s",
-        self$user_name(), super$random_element(self$safe_email_tlds)
+        self$user_name(), super$random_element(private$safe_email_tlds)
       ))
     },
 
@@ -225,7 +70,7 @@ InternetProvider <- R6::R6Class(
 
     #' @description ascii email address
     ascii_email = function() {
-      pattern <- super$random_element(self$email_formats)
+      pattern <- super$random_element(private$email_formats)
       out <- list(
         user_name = self$user_name(),
         domain_name = self$domain_name(),
@@ -239,7 +84,7 @@ InternetProvider <- R6::R6Class(
       tolower(self$to_ascii(
         paste0(
           self$user_name(), "@example.",
-          super$random_element(self$safe_email_tlds)
+          super$random_element(private$safe_email_tlds)
         )
       ))
     },
@@ -258,24 +103,24 @@ InternetProvider <- R6::R6Class(
 
     #' @description a user name
     user_name = function() {
-      pattern <- super$random_element(self$user_name_formats)
+      pattern <- super$random_element(private$user_name_formats)
       loc <- if (private$has_locale(self$locale, PersonProvider_en_US$new()$allowed_locales())) {
         self$locale
       } else {
         "en_US"
       }
-      out <- cr_loc_spec_provider("PersonProvider", loc)$render(pattern)
+      out <- private$pp$render(pattern)
       self$to_ascii(tolower(super$bothify(out)))
     },
 
     #' @description a tld
     tld = function() {
-      super$random_element(self$tlds)
+      super$random_element(private$tlds)
     },
 
     #' @description free email domain name
     free_email_domain = function() {
-      super$random_element(self$free_email_domains)
+      super$random_element(private$free_email_domains)
     },
 
     #' @description a url
@@ -285,7 +130,7 @@ InternetProvider <- R6::R6Class(
       pattern <- sprintf(
         "%s://%s",
         if (!is.null(schemes)) super$random_element(schemes) else "",
-        super$random_element(self$url_formats)
+        super$random_element(private$url_formats)
       )
       whisker::whisker.render(
         template = pattern,
@@ -308,8 +153,7 @@ InternetProvider <- R6::R6Class(
 
     #' @description a domain word
     domain_word = function() {
-      comp <- subclass("CompanyProvider", locale = self$locale)
-      xx <- comp$company()
+      xx <- private$cp$company()
       xxx <- strsplit(xx, split = "\\s|-")[[1]]
       tolower(self$to_ascii(xxx[2]))
     },
@@ -346,7 +190,7 @@ InternetProvider <- R6::R6Class(
 
     #' @description a uri page
     uri_page = function() {
-      super$random_element(self$uri_pages)
+      super$random_element(private$uri_pages)
     },
 
     #' @description a uri path
@@ -355,19 +199,19 @@ InternetProvider <- R6::R6Class(
     uri_path = function(deep = NULL) {
       deep <- if (!is.null(deep)) deep else super$random_int(1, 4)
       paste0(
-        replicate(deep, super$random_element(self$uri_paths)),
+        replicate(deep, super$random_element(private$uri_paths)),
         collapse = "/"
       )
     },
 
     #' @description a uri extension
     uri_extension = function() {
-      super$random_element(self$uri_extensions)
+      super$random_element(private$uri_extensions)
     },
 
     #' @description a uri
     uri = function() {
-      pattern <- super$random_element(self$uri_formats)
+      pattern <- super$random_element(private$uri_formats)
       "{{url}}{{uri_path}}/{{uri_page}}{{uri_extension}}"
       dat <- list(
         url = self$url(),
@@ -383,8 +227,7 @@ InternetProvider <- R6::R6Class(
     #' [LoremProvider] to get a random string. default: `NULL`
     slug = function(value = NULL) {
       if (is.null(value)) {
-        lorem <- cr_loc_spec_provider("LoremProvider", self$locale)
-        value <- paste0(lorem$words(), collapse = "-")
+        value <- paste0(private$lp$words(), collapse = "-")
       }
       return(value)
     },
@@ -396,13 +239,65 @@ InternetProvider <- R6::R6Class(
     image_url = function(width = NULL, height = NULL) {
       width_ <- if (!is.null(width)) width else super$random_int(max = 1024)
       height_ <- if (!is.null(height)) height else super$random_int(max = 1024)
-      placeholder_url <- super$random_element(self$image_placeholder_services)
+      placeholder_url <- super$random_element(private$image_placeholder_services)
       whisker::whisker.render(placeholder_url,
         data = list(width = width_, height = height_)
       )
     }
   ),
   private = list(
+    # safe email tlds
+    safe_email_tlds = c("org", "com", "net"),
+    # free email tlds
+    free_email_domains = c("gmail.com", "yahoo.com", "hotmail.com"),
+    # tlds
+    tlds = c(
+      "com", "com", "com", "com", "com", "com", "biz", "info", "net", "org"
+    ),
+    # uri pages
+    uri_pages = c(
+      "index", "home", "search", "main", "post", "homepage", "category",
+      "register", "login", "faq", "about", "terms", "privacy", "author"
+    ),
+    # uri paths
+    uri_paths = c(
+      "app", "main", "wp-content", "search", "category", "tag", "categories",
+      "tags", "blog", "posts", "list", "explore"
+    ),
+    # uri extensions
+    uri_extensions = c(
+      ".html", ".html", ".html", ".htm", ".htm", ".php", ".php", ".jsp",
+      ".asp"
+    ),
+    # user name formats
+    user_name_formats = c(
+      "{{last_names}}.{{first_names}}",
+      "{{first_names}}.{{last_names}}",
+      "{{first_names}}##",
+      "?{{last_names}}"
+    ),
+    # email formats
+    email_formats = c(
+      "{{user_name}}@{{domain_name}}",
+      "{{user_name}}@{{free_email_domain}}"
+    ),
+    # url formats
+    url_formats = c("www.{{domain_name}}/", "{{domain_name}}/"),
+    # uri formats
+    uri_formats = c(
+      "{{url}}",
+      "{{url}}{{uri_page}}/",
+      "{{url}}{{uri_page}}{{uri_extension}}",
+      "{{url}}{{uri_path}}/{{uri_page}}/",
+      "{{url}}{{uri_path}}/{{uri_page}}{{uri_extension}}"
+    ),
+    # image uri formats
+    image_placeholder_services = c(
+      "https://placeholdit.imgix.net/~text?txtsize=55&txt={{width}}x{{height}}&w={{width}&h={{height}}",
+      "https://www.lorempixel.com/{{width}}/{{height}}",
+      "https://dummyimage.com/{{width}}x{{height}}"
+    ),
+    replacements = list(),
     has_locale = function(locale, provider) locale %in% provider,
     # parse_eval_safe = function(name) {
     #   if (self$locale != "en_US") {
@@ -413,6 +308,10 @@ InternetProvider <- R6::R6Class(
     locales = c(
       "en_US", "en_AU", "en_NZ", "de_DE", "bg_BG", "cs_CZ",
       "fa_IR", "fr_FR", "hr_HR"
-    )
+    ),
+    provider_ = "InternetProvider",
+    pp = NULL,
+    lp = NULL,
+    cp = NULL
   )
 )

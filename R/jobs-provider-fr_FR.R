@@ -681,10 +681,8 @@ job_formats_fr_fr <- c(
 JobProvider_fr_FR <- R6::R6Class(
   inherit = JobProvider,
   "JobProvider_fr_FR",
-  public = list(
-    #' @field locale (character) the locale
-    locale = "fr_FR",
-    #' @field formats (character) vector of possible formats
+  private = list(
+    locale_ = "fr_FR",
     formats = job_formats_fr_fr
   )
 )

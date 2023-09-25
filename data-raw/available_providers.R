@@ -25,4 +25,4 @@ available_providers <- c(
   "AddressProvider"
 )
 usethis::use_data(available_providers, overwrite = TRUE)
-save(available_providers, version=2, file="data/available_providers.rda")
+# save(available_providers, version = 2, file = "data/available_providers.rda")

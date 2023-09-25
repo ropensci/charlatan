@@ -11,7 +11,18 @@ test_that("fraudster works", {
 })
 
 test_that("fraudster - all the things work", {
-  aa <- fraudster()
+  aa <- fraudster(locale = "en_US")
+  ## expect all providers to be filled for en_US
+  providers <- c(
+    # localized
+    "ap", "colp", "comp", "ep", "fp", "ip", "jp", "lp", "pp", "pnp", "ssnp", "tp", "uap",
+    # non localized
+    "coordp", "ccp", "curp", "dtp", "doip", "sp"
+  )
+  for (prov in providers) {
+    expect_no_error(aa$.__enclos_env__$private$check_prov("test", prov))
+  }
+
 
   expect_is(aa$job(), "character")
   expect_is(aa$name(), "character")
@@ -47,10 +58,25 @@ test_that("fraudster - all the things work", {
   expect_is(aa$credit_card_number(), "character")
   expect_is(aa$credit_card_provider(), "character")
   expect_is(aa$credit_card_security_code(), "character")
+  expect_gt(nchar(aa$address()), 0)
+  expect_gt(nchar(aa$company()), 0)
+  expect_gt(nchar(aa$element()), 0)
+  expect_gt(nchar(aa$element_symbol()), 0)
+  expect_gt(nchar(aa$file_name()), 3)
+  expect_gt(nchar(aa$email()), 3)
+  expect_gt(nchar(aa$url()), 3)
+  expect_gt(nchar(aa$mac_address()), 0)
+  expect_gt(nchar(aa$lorem_paragraph()), 0)
+  expect_gt(nchar(aa$ssn()), 0)
 })
 
 test_that("fraudster locale support works", {
-  bb <- fraudster(locale = "fr_FR")
+  expect_warning(
+    {
+      bb <- fraudster(locale = "fr_FR")
+    },
+    regexp = "does not have locale fr_FR"
+  )
 
   expect_is(bb, "FraudsterClient")
   expect_is(bb$locale, "character")
@@ -74,17 +100,6 @@ test_that("FraudsterClient works", {
   expect_equal(aa$locale, "en_US")
   expect_is(aa$beta, "function")
   expect_is(aa$color_name, "function")
-})
-
-test_that("FraudsterClient - locale parameter", {
-  bb <- FraudsterClient$new(locale = "fr_FR")
-
-  expect_is(bb, "FraudsterClient")
-  expect_is(bb$locale, "character")
-  expect_equal(bb$locale, "fr_FR")
-
-  # some funs don't have support in certain locales
-  expect_error(bb$color_name(), "There is no locale fr_FR for provider ColorProvider")
 })
 
 test_that("FraudsterClient - fails well", {

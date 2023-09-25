@@ -2,19 +2,32 @@
 % Please edit documentation in R/company-provider.R
 \name{CompanyProvider}
 \alias{CompanyProvider}
-\title{company}
+\title{CompanyProvider}
 \description{
 company name/etc. methods
+
+Note that you cannot instantiate this class, you can only
+use the localized versions such as \link{CompanyProvider_en_US}.
 }
-\keyword{internal}
+\seealso{
+Other ParentProviders: 
+\code{\link{AddressProvider}},
+\code{\link{ColorProvider}},
+\code{\link{InternetProvider}},
+\code{\link{JobProvider}},
+\code{\link{LoremProvider}},
+\code{\link{PersonProvider}},
+\code{\link{PhoneNumberProvider}},
+\code{\link{TaxonomyProvider}},
+\code{\link{UserAgentProvider}}
+}
+\concept{ParentProviders}
 \section{Super classes}{
 \code{\link[charlatan:BareProvider]{charlatan::BareProvider}} -> \code{\link[charlatan:BaseProvider]{charlatan::BaseProvider}} -> \code{CompanyProvider}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
-\item{\code{locale}}{(character) xxx}
-
 \item{\code{formats}}{(character) xxx}
 
 \item{\code{prefixes}}{(character) xxx}
@@ -37,7 +50,6 @@ company name/etc. methods
 \item \href{#method-CompanyProvider-company}{\code{CompanyProvider$company()}}
 \item \href{#method-CompanyProvider-catch_phrase}{\code{CompanyProvider$catch_phrase()}}
 \item \href{#method-CompanyProvider-bs}{\code{CompanyProvider$bs()}}
-\item \href{#method-CompanyProvider-siren}{\code{CompanyProvider$siren()}}
 \item \href{#method-CompanyProvider-clone}{\code{CompanyProvider$clone()}}
 }
 }
@@ -57,6 +69,7 @@ company name/etc. methods
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_letter"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_letter'><code>charlatan::BareProvider$random_letter()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="randomize_nb_elements"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-randomize_nb_elements'><code>charlatan::BareProvider$randomize_nb_elements()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-check_locale'><code>charlatan::BaseProvider$check_locale()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="print"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-print'><code>charlatan::BaseProvider$print()</code></a></span></li>
 </ul>
 </details>
 }}
@@ -110,16 +123,6 @@ a catch phrase
 BS words
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{CompanyProvider$bs()}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-CompanyProvider-siren"></a>}}
-\if{latex}{\out{\hypertarget{method-CompanyProvider-siren}{}}}
-\subsection{Method \code{siren()}}{
-a siren
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{CompanyProvider$siren()}\if{html}{\out{</div>}}
 }
 
 }

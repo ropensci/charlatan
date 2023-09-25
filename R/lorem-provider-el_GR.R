@@ -548,11 +548,8 @@ lorem_word_list_el_gr <- c(rep(lorem_common_words_el_gr, 2), c(
 LoremProvider_el_GR <- R6::R6Class(
   inherit = LoremProvider,
   "LoremProvider_el_GR",
-  public = list(
-    #' @field locale (character) the locale
-    locale = "el_GR"
-  ),
   private = list(
-    word_list = lorem_word_list_el_gr
+    word_list = lorem_word_list_el_gr,
+    locale_ = "el_GR"
   )
 )

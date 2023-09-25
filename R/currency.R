@@ -6,7 +6,7 @@
 #' @examples
 #' ch_currency()
 #' ch_currency(10)
-#' ch_currency(500)
+#' # or even ch_currency(500)
 ch_currency <- function(n = 1) {
   assert(n, c("integer", "numeric"))
   if (n == 1) {

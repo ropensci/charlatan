@@ -1223,14 +1223,10 @@ person_en_us_messy$suffixes_male <- person_suffixes_male_en_us_messy
 PersonProvider_en_US <- R6::R6Class(
   "PersonProvider_en_US",
   inherit = PersonProvider,
-  public = list(
-    #' @field locale (character) the locale
-    locale = "en_US",
-    #' @field formats (character) person name formats
+  private = list(
+    locale_ = "en_US",
     formats = person_formats_en_us,
-    #' @field person (character) person name data
-    person = person_en_us,
-    #' @field person_messy (character) person name data (but messy data)
-    person_messy = person_en_us_messy
+    persons = person_en_us,
+    persons_messy = person_en_us_messy
   )
 )

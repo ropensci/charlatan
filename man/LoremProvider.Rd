@@ -4,18 +4,27 @@
 \alias{LoremProvider}
 \title{LoremProvider}
 \description{
-lorem ipsum methods
+lorem ipsum methods for generating random words in a language.
 }
-\keyword{internal}
+\note{
+You cannot instantiate the Parent providers. You must use one of
+the localized one.
+}
+\seealso{
+Other ParentProviders: 
+\code{\link{AddressProvider}},
+\code{\link{ColorProvider}},
+\code{\link{CompanyProvider}},
+\code{\link{InternetProvider}},
+\code{\link{JobProvider}},
+\code{\link{PersonProvider}},
+\code{\link{PhoneNumberProvider}},
+\code{\link{TaxonomyProvider}},
+\code{\link{UserAgentProvider}}
+}
+\concept{ParentProviders}
 \section{Super classes}{
 \code{\link[charlatan:BareProvider]{charlatan::BareProvider}} -> \code{\link[charlatan:BaseProvider]{charlatan::BaseProvider}} -> \code{LoremProvider}
-}
-\section{Public fields}{
-\if{html}{\out{<div class="r6-fields">}}
-\describe{
-\item{\code{locale}}{(character) the locale}
-}
-\if{html}{\out{</div>}}
 }
 \section{Methods}{
 \subsection{Public methods}{
@@ -48,6 +57,7 @@ lorem ipsum methods
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_letter"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_letter'><code>charlatan::BareProvider$random_letter()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="randomize_nb_elements"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-randomize_nb_elements'><code>charlatan::BareProvider$randomize_nb_elements()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-check_locale'><code>charlatan::BaseProvider$check_locale()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="print"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-print'><code>charlatan::BaseProvider$print()</code></a></span></li>
 </ul>
 </details>
 }}
@@ -95,8 +105,7 @@ Generate a random word
 \subsection{Arguments}{
 \if{html}{\out{<div class="arguments">}}
 \describe{
-\item{\code{ext_words}}{a character vector of words you would like to have
-instead of 'Lorem ipsum'}
+\item{\code{ext_words}}{a character vector of words you would like to have instead of "Lorem ipsum"}
 }
 \if{html}{\out{</div>}}
 }
@@ -118,8 +127,7 @@ Generate a character vector of random words
 \describe{
 \item{\code{nb}}{(integer) how many words to return}
 
-\item{\code{ext_words}}{a character vector of words you would like to have
-instead of 'Lorem ipsum'}
+\item{\code{ext_words}}{a character vector of words you would like to have instead of "Lorem ipsum"}
 }
 \if{html}{\out{</div>}}
 }
@@ -150,8 +158,7 @@ contain}
 words returned, otherwise the result may include a number of words
 of \code{nb} +/-40\% (with a minimum of 1)}
 
-\item{\code{ext_words}}{a character vector of words you would like to have
-instead of 'Lorem ipsum'}
+\item{\code{ext_words}}{a character vector of words you would like to have instead of "Lorem ipsum"}
 }
 \if{html}{\out{</div>}}
 }
@@ -173,8 +180,7 @@ Generate a character vector of random sentences
 \describe{
 \item{\code{nb}}{(integer) how many sentences to return}
 
-\item{\code{ext_words}}{a character vector of words you would like to have
-instead of 'Lorem ipsum'}
+\item{\code{ext_words}}{a character vector of words you would like to have instead of "Lorem ipsum"}
 }
 \if{html}{\out{</div>}}
 }
@@ -205,8 +211,7 @@ should contain}
 sentences returned, otherwise the result may include a number of
 sentences of \code{nb} +/-40\% (with a minimum of 1)}
 
-\item{\code{ext_words}}{a character vector of words you would like to have
-instead of 'Lorem ipsum'}
+\item{\code{ext_words}}{a character vector of words you would like to have instead of "Lorem ipsum"}
 }
 \if{html}{\out{</div>}}
 }
@@ -228,8 +233,7 @@ Generate many paragraphs
 \describe{
 \item{\code{nb}}{(integer) how many paragraphs to return}
 
-\item{\code{ext_words}}{a character vector of words you would like to have
-instead of 'Lorem ipsum'}
+\item{\code{ext_words}}{a character vector of words you would like to have instead of "Lorem ipsum"}
 }
 \if{html}{\out{</div>}}
 }
@@ -254,8 +258,7 @@ paragraphs.
 \item{\code{max_nb_chars}}{Maximum number of characters the text should
 contain (minimum 5)}
 
-\item{\code{ext_words}}{a character vector of words you would like to have
-instead of 'Lorem ipsum'}
+\item{\code{ext_words}}{a character vector of words you would like to have instead of "Lorem ipsum"}
 }
 \if{html}{\out{</div>}}
 }

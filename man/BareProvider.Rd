@@ -17,6 +17,13 @@ and creation elements, but not the locales.
 That way we can still inherit an do useful stuff
 for providers that have no locale.
 }
+\section{Active bindings}{
+\if{html}{\out{<div class="r6-active-bindings">}}
+\describe{
+\item{\code{provider}}{Display the provider name.}
+}
+\if{html}{\out{</div>}}
+}
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
@@ -32,6 +39,7 @@ for providers that have no locale.
 \item \href{#method-BareProvider-lexify}{\code{BareProvider$lexify()}}
 \item \href{#method-BareProvider-bothify}{\code{BareProvider$bothify()}}
 \item \href{#method-BareProvider-randomize_nb_elements}{\code{BareProvider$randomize_nb_elements()}}
+\item \href{#method-BareProvider-print}{\code{BareProvider$print()}}
 \item \href{#method-BareProvider-clone}{\code{BareProvider$clone()}}
 }
 }
@@ -229,6 +237,23 @@ Returns a random value near number
 }
 \subsection{Returns}{
 a random int near number
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-BareProvider-print"></a>}}
+\if{latex}{\out{\hypertarget{method-BareProvider-print}{}}}
+\subsection{Method \code{print()}}{
+Print method for provider
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{BareProvider$print(...)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{...}}{ignored by this method}
+}
+\if{html}{\out{</div>}}
 }
 }
 \if{html}{\out{<hr>}}

@@ -1,9 +1,9 @@
 # modified from the python library faker:
 # https://github.com/joke2k/faker/blob/master/faker/providers/address/en_US/__init__.py
 
-#' Addressprovider for United States of America
+#' AddressProvider for United States of America
 #'
-#' @description Address methods for USA.
+#' @inherit AddressProvider description details return
 #' @export
 #' @examples
 #' (z <- AddressProvider_en_US$new())
@@ -19,13 +19,92 @@ AddressProvider_en_US <- R6::R6Class(
   "AddressProvider_en_US",
   lock_objects = FALSE,
   public = list(
-    #' @field locale (character) en_US
-    locale = "en_US",
-    #' @field city_prefixes (character) Prefixes for cities.
-    #' Combining suffix and prefix makes a random city.
+    #' @description address
+    address = function() {
+      # faker python library has 25 civ addresses, and 3 military addresses
+      draw <- sample(1:28, 1)
+      if (draw >= 26) {
+        self$mil_address()
+      } else {
+        self$civ_address()
+      }
+    },
+
+    #' @description civilian address, the type of address you would expect. Not to be confused with Military address which is also available for this locale.
+    civ_address = function() {
+      pattern <- super$random_element(private$address_formats)
+      dat <- list(
+        street_address = self$street_address(),
+        city = self$city(),
+        state_abbr = super$random_element(private$states_abbr),
+        postcode = self$postcode()
+      )
+      whisker::whisker.render(pattern, data = dat)
+    },
+    #' @description Military address
+    mil_address = function() {
+      pattern <- super$random_element(private$mil_address_formats)
+      dat <- list(
+        military_state = super$random_element(private$military_state_abbr),
+        military_apo = super$numerify(super$random_element(private$military_apo_format)),
+        military_ship = super$random_element(private$military_ship_prefix),
+        military_dpo = super$numerify(super$random_element(private$military_dpo_format)),
+        last_name = self$pp$last_name(),
+        postcode = self$postcode()
+      )
+      whisker::whisker.render(pattern, data = dat)
+    },
+    #' @description city
+    city = function() {
+      pattern <- super$random_element(private$city_formats)
+
+      dat <- list(
+        first_name = self$pp$first_name(),
+        last_name = self$pp$last_name(),
+        city_prefix = super$random_element(private$city_prefixes),
+        city_suffix = super$random_element(private$city_suffixes)
+      )
+      whisker::whisker.render(pattern, data = dat)
+    },
+    #' @description street name
+    street_name = function() {
+      pattern <- super$random_element(private$street_name_formats)
+      dat <- list(
+        first_name = self$pp$first_name(),
+        last_name = self$pp$last_name(),
+        street_suffix = super$random_element(private$street_suffixes)
+      )
+      whisker::whisker.render(pattern, data = dat)
+    },
+    #' @description street address
+    street_address = function() {
+      pattern <- super$random_element(private$street_address_formats)
+      dat <- list(
+        building_number = self$building_number(),
+        street_name = self$street_name(),
+        secondary_address = super$bothify(super$random_element(private$secondary_address_formats))
+      )
+      whisker::whisker.render(pattern, data = dat)
+    },
+    #' @description postal code
+    postcode = function() {
+      toupper(super$bothify(super$random_element(private$postcode_formats)))
+    },
+    #' @description building number
+    building_number = function() {
+      super$numerify(super$random_element(private$building_number_formats))
+    },
+    #' @description state
+    state = function() {
+      super$random_element(private$states)
+    }
+  ),
+  private = list(
+    # Prefixes for cities.
+    # Combining suffix and prefix makes a random city.
     city_prefixes = c("North", "East", "West", "South", "New", "Lake", "Port"),
-    #' @field city_suffixes (character) Suffixes for cities.
-    #' Combining suffix and prefix makes a random city.
+    # Suffixes for cities.
+    # Combining suffix and prefix makes a random city.
     city_suffixes = c(
       "town",
       "ton",
@@ -46,10 +125,10 @@ AddressProvider_en_US <- R6::R6Class(
       "side",
       "shire"
     ),
-    #' @field building_number_formats (character) Formats for building numbers
+    # Formats for building numbers
     building_number_formats = c("#####", "####", "###"),
 
-    #' @field street_suffixes combined with street prefix creates a street.
+    # combined with street prefix creates a street.
     street_suffixes = c(
       "Alley",
       "Avenue",
@@ -247,9 +326,9 @@ AddressProvider_en_US <- R6::R6Class(
       "Well",
       "Wells"
     ),
-    #' @field postcode_formats Formats for postal codes
+    # Formats for postal codes
     postcode_formats = c("#####", "#####-####"),
-    #' @field states States in the USA
+    # States in the USA
     states = c(
       "Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado",
       "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho",
@@ -262,7 +341,7 @@ AddressProvider_en_US <- R6::R6Class(
       "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington",
       "West Virginia", "Wisconsin", "Wyoming"
     ),
-    #' @field states_abbr States in the USA, abbreviation.
+    # States in the USA, abbreviation.
     states_abbr = c(
       "AL", "AK", "AS", "AZ", "AR", "CA", "CO", "CT", "DE", "DC", "FM", "FL",
       "GA", "GU", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MH",
@@ -270,123 +349,44 @@ AddressProvider_en_US <- R6::R6Class(
       "NY", "NC", "ND", "MP", "OH", "OK", "OR", "PW", "PA", "PR", "RI", "SC",
       "SD", "TN", "TX", "UT", "VT", "VI", "VA", "WA", "WV", "WI", "WY"
     ),
-    #' @field military_state_abbr States in the USA, military.
+    # States in the USA, military.
     military_state_abbr = c("AE", "AA", "AP"),
-    #' @field military_ship_prefix Ship abbreviations
+    # Ship abbreviations
     military_ship_prefix = c("USS", "USNS", "USNV", "USCGC"),
-    #' @field military_apo_format (apo )PO box format (military)
+    # (apo) PO box format (military)
     military_apo_format = c("PSC ####, Box ####"),
-    #' @field military_dpo_format (dpo) PO box format (military)
+    # (dpo) PO box format (military)
     military_dpo_format = c("Unit #### Box ####"),
-    #' @field city_formats formats for creating a city name.
+    #  formats for creating a city name.
     city_formats = c(
       "{{city_prefix}} {{first_name}}{{city_suffix}}",
       "{{city_prefix}} {{first_name}}",
       "{{first_name}}{{city_suffix}}",
       "{{last_name}}{{city_suffix}}"
     ),
-    #' @field street_name_formats formats for creating a street name.
+    # formats for creating a street name.
     street_name_formats = c(
       "{{first_name}} {{street_suffix}}",
       "{{last_name}} {{street_suffix}}"
     ),
-    #' @field street_address_formats formats for creating a street address.
+    # formats for creating a street address.
     street_address_formats = c(
       "{{building_number}} {{street_name}}",
       "{{building_number}} {{street_name}} {{secondary_address}}"
     ),
-    #' @field address_formats formats for creating an address.
+    # formats for creating an address.
     address_formats = c(
       "{{street_address}}\n{{city}}, {{state_abbr}} {{postcode}}"
     ),
-    #' @field mil_address_formats formats for military addresses in the USA.
+    # formats for military addresses in the USA.
     mil_address_formats = c(
       "{{military_apo}}\nAPO {{military_state}} {{postcode}}",
       "{{military_ship}} {{last_name}}\nFPO {{military_state}} {{postcode}}",
       "{{military_dpo}}\nDPO {{military_state}} {{postcode}}"
     ),
-    #' @field secondary_address_formats formats for creating secondary parts of
-    #' addresses.
+    # formats for creating secondary parts of
+    # addresses.
     secondary_address_formats = c("Apt. ###", "Suite ###"),
-
-    #' @description address
-    address = function() {
-      # faker python library has 25 civ addresses, and 3 military addresses
-      draw <- sample(1:28, 1)
-      if (draw >= 26) {
-        self$mil_address()
-      } else {
-        self$civ_address()
-      }
-    },
-
-    #' @description civilian address, the type of address you would expect. Not to be confused with Military address which is also available for this locale.
-    civ_address = function() {
-      pattern <- super$random_element(self$address_formats)
-      dat <- list(
-        street_address = self$street_address(),
-        city = self$city(),
-        state_abbr = super$random_element(self$states_abbr),
-        postcode = self$postcode()
-      )
-      whisker::whisker.render(pattern, data = dat)
-    },
-    #' @description Military address
-    mil_address = function() {
-      pattern <- super$random_element(self$mil_address_formats)
-      dat <- list(
-        military_state = super$random_element(self$military_state_abbr),
-        military_apo = super$numerify(super$random_element(self$military_apo_format)),
-        military_ship = super$random_element(self$military_ship_prefix),
-        military_dpo = super$numerify(super$random_element(self$military_dpo_format)),
-        last_name = self$pp$last_name(),
-        postcode = self$postcode()
-      )
-      whisker::whisker.render(pattern, data = dat)
-    },
-    #' @description city
-    city = function() {
-      pattern <- super$random_element(self$city_formats)
-
-      dat <- list(
-        first_name = self$pp$first_name(),
-        last_name = self$pp$last_name(),
-        city_prefix = super$random_element(self$city_prefixes),
-        city_suffix = super$random_element(self$city_suffixes)
-      )
-      whisker::whisker.render(pattern, data = dat)
-    },
-    #' @description street name
-    street_name = function() {
-      pattern <- super$random_element(self$street_name_formats)
-      dat <- list(
-        first_name = self$pp$first_name(),
-        last_name = self$pp$last_name(),
-        street_suffix = super$random_element(self$street_suffixes)
-      )
-      whisker::whisker.render(pattern, data = dat)
-    },
-    #' @description street address
-    street_address = function() {
-      pattern <- super$random_element(self$street_address_formats)
-      dat <- list(
-        building_number = self$building_number(),
-        street_name = self$street_name(),
-        secondary_address = super$bothify(super$random_element(self$secondary_address_formats))
-      )
-      whisker::whisker.render(pattern, data = dat)
-    },
-    #' @description postal code
-    postcode = function() {
-      toupper(super$bothify(super$random_element(self$postcode_formats)))
-    },
-    #' @description building number
-    building_number = function() {
-      super$numerify(super$random_element(self$building_number_formats))
-    },
-    #' @description state
-    state = function() {
-      super$random_element(self$states)
-    }
+    locale_ = "en_US"
   )
 )

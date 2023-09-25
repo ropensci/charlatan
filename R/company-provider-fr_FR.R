@@ -15,8 +15,7 @@ CompanyProvider_fr_FR <- R6::R6Class(
   "CompanyProvider_fr_FR",
   inherit = CompanyProvider,
   public = list(
-    #' @field locale (character) xxx
-    locale = "fr_FR",
+
     #' @field catch_phrase_formats formatting for catch phrases.
     catch_phrase_formats = c(
       "{{catch_phrase_noun}} {{catch_phrase_verb}} {{catch_phrase_attribute}}"
@@ -85,5 +84,8 @@ CompanyProvider_fr_FR <- R6::R6Class(
         catch_phrase_attribute = super$random_element(self$attributes)
       ))
     }
+  ),
+  private = list(
+    locale_ = "fr_FR"
   )
 )

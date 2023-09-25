@@ -61,5 +61,8 @@ NumericsProvider <- R6::R6Class(
     beta = function(n = 1, shape1, shape2, ncp = 0) {
       rbeta(n, shape1, shape2, ncp)
     }
+  ),
+  private = list(
+    "provider_" = "NumericsProvider"
   )
 )

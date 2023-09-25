@@ -11,8 +11,6 @@ SSNProvider_en_US <- R6Class(
   inherit = SSNProvider,
   "SSNProvider_en_US",
   public = list(
-    #' @field locale (character) the locale
-    locale = "en_US",
     #' @description Make a SSN
     render = function() {
       # Adapted from https://github.com/joke2k/faker/blob/e14abc47e5f1ea7ce62f068c4aac6b9f51db6f5c/faker/providers/ssn/en_US/__init__.py#L219-L231
@@ -30,6 +28,9 @@ SSNProvider_en_US <- R6Class(
 
       sprintf("%03d-%02d-%04d", area, group, serial)
     }
+  ),
+  private = list(
+    locale_ = "en_US"
   )
 )
 
@@ -45,8 +46,6 @@ SSNProvider_nl_NL <- R6Class(
   inherit = SSNProvider,
   "SSNProvider_nl_NL",
   public = list(
-    #' @field locale (character) the locale
-    locale = "nl_NL",
     #' @description Make a SSN
     #'  Dutch SSN (BSN) is 9 digits that follow a certain proof (elfproef).
     render = function() {
@@ -68,5 +67,8 @@ SSNProvider_nl_NL <- R6Class(
       bsn <- paste0(c(first_8, final_number), collapse = "")
       bsn
     }
+  ),
+  private = list(
+    locale_ = "nl_NL"
   )
 )

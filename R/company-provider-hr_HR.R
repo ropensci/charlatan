@@ -16,8 +16,7 @@ CompanyProvider_hr_HR <- R6::R6Class(
   "CompanyProvider_hr_HR",
   inherit = CompanyProvider,
   public = list(
-    #' @field locale (character) xxx
-    locale = "hr_HR",
+
     # add data here, like
     #' @field company_formats formats for company names.
     company_formats = c(
@@ -30,5 +29,8 @@ CompanyProvider_hr_HR <- R6::R6Class(
       "d.o.o.", "d.d.", "j.d.o.o."
     )
     ## add custom functions here
+  ),
+  private = list(
+    locale_ = "hr_HR"
   )
 )

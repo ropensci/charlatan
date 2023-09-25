@@ -6,3 +6,4 @@ revdep/data.sqlite
 revdep/library.noindex
 /doc/
 /Meta/
+inst/doc

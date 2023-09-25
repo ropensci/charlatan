@@ -7,58 +7,24 @@
 methods for generating phone numbers
 }
 \seealso{
-Other en: 
-\code{\link{AddressProvider_en_GB}},
-\code{\link{AddressProvider_en_NZ}},
-\code{\link{ColorProvider_en_US}},
-\code{\link{CompanyProvider_en_US}},
-\code{\link{ElementProvider_en_US}},
-\code{\link{InternetProvider_en_AU}},
-\code{\link{InternetProvider_en_US}},
-\code{\link{JobProvider_en_US}},
-\code{\link{LoremProvider_en_US}},
-\code{\link{PersonProvider_en_GB}},
-\code{\link{PersonProvider_en_NZ}},
-\code{\link{PersonProvider_en_US}},
-\code{\link{PhoneNumberProvider_en_AU}},
-\code{\link{PhoneNumberProvider_en_CA}},
-\code{\link{PhoneNumberProvider_en_GB}},
-\code{\link{PhoneNumberProvider_en_NZ}},
-\code{\link{PhoneNumberProvider_en_US}},
-\code{\link{PhoneNumberProvider_es_MX}},
-\code{\link{PhoneNumberProvider_tr_TR}},
-\code{\link{SSNProvider_en_US}},
-\code{\link{TaxonomyProvider_en_US}},
-\code{\link{UserAgentProvider_en_US}},
-\code{\link{UserAgentProvider}},
-\code{\link{english-language}}
-
-Other AU: 
-\code{\link{InternetProvider_en_AU}},
-\code{\link{PhoneNumberProvider_en_AU}}
+Other ParentProviders: 
+\code{\link{AddressProvider}},
+\code{\link{ColorProvider}},
+\code{\link{CompanyProvider}},
+\code{\link{InternetProvider}},
+\code{\link{JobProvider}},
+\code{\link{LoremProvider}},
+\code{\link{PersonProvider}},
+\code{\link{TaxonomyProvider}},
+\code{\link{UserAgentProvider}}
 }
-\concept{AU}
-\concept{en}
-\keyword{internal}
+\concept{ParentProviders}
 \section{Super classes}{
 \code{\link[charlatan:BareProvider]{charlatan::BareProvider}} -> \code{\link[charlatan:BaseProvider]{charlatan::BaseProvider}} -> \code{PhoneNumberProvider}
-}
-\section{Public fields}{
-\if{html}{\out{<div class="r6-fields">}}
-\describe{
-\item{\code{locale}}{(character) the locale}
-
-\item{\code{formats}}{phone number formats}
-
-\item{\code{area_code_formats}}{area code formats}
-}
-\if{html}{\out{</div>}}
 }
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
-\item \href{#method-PhoneNumberProvider-allowed_locales}{\code{PhoneNumberProvider$allowed_locales()}}
-\item \href{#method-PhoneNumberProvider-new}{\code{PhoneNumberProvider$new()}}
 \item \href{#method-PhoneNumberProvider-render}{\code{PhoneNumberProvider$render()}}
 \item \href{#method-PhoneNumberProvider-clone}{\code{PhoneNumberProvider$clone()}}
 }
@@ -78,33 +44,13 @@ Other AU:
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_int"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_int'><code>charlatan::BareProvider$random_int()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_letter"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_letter'><code>charlatan::BareProvider$random_letter()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="randomize_nb_elements"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-randomize_nb_elements'><code>charlatan::BareProvider$randomize_nb_elements()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="allowed_locales"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-allowed_locales'><code>charlatan::BaseProvider$allowed_locales()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-check_locale'><code>charlatan::BaseProvider$check_locale()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="initialize"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-initialize'><code>charlatan::BaseProvider$initialize()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="print"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-print'><code>charlatan::BaseProvider$print()</code></a></span></li>
 </ul>
 </details>
 }}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-PhoneNumberProvider-allowed_locales"></a>}}
-\if{latex}{\out{\hypertarget{method-PhoneNumberProvider-allowed_locales}{}}}
-\subsection{Method \code{allowed_locales()}}{
-fetch the allowed locales for this provider
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{PhoneNumberProvider$allowed_locales()}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-PhoneNumberProvider-new"></a>}}
-\if{latex}{\out{\hypertarget{method-PhoneNumberProvider-new}{}}}
-\subsection{Method \code{new()}}{
-Create a new \code{PhoneNumberProvider} object
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{PhoneNumberProvider$new()}\if{html}{\out{</div>}}
-}
-
-\subsection{Returns}{
-A new \code{PhoneNumberProvider} object
-}
-}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-PhoneNumberProvider-render"></a>}}
 \if{latex}{\out{\hypertarget{method-PhoneNumberProvider-render}{}}}

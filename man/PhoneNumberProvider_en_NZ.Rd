@@ -7,7 +7,7 @@
 methods for generating phone numbers
 }
 \examples{
-z <- PhoneNumberProvider_en_NZS$new()
+z <- PhoneNumberProvider_en_NZ$new()
 z$render()
 }
 \seealso{
@@ -17,6 +17,7 @@ Other en:
 \code{\link{ColorProvider_en_US}},
 \code{\link{CompanyProvider_en_US}},
 \code{\link{ElementProvider_en_US}},
+\code{\link{FileProvider_en_US}},
 \code{\link{InternetProvider_en_AU}},
 \code{\link{InternetProvider_en_US}},
 \code{\link{JobProvider_en_US}},
@@ -30,11 +31,9 @@ Other en:
 \code{\link{PhoneNumberProvider_en_US}},
 \code{\link{PhoneNumberProvider_es_MX}},
 \code{\link{PhoneNumberProvider_tr_TR}},
-\code{\link{PhoneNumberProvider}},
 \code{\link{SSNProvider_en_US}},
 \code{\link{TaxonomyProvider_en_US}},
 \code{\link{UserAgentProvider_en_US}},
-\code{\link{UserAgentProvider}},
 \code{\link{english-language}}
 
 Other NZ: 
@@ -45,17 +44,6 @@ Other NZ:
 \concept{en}
 \section{Super classes}{
 \code{\link[charlatan:BareProvider]{charlatan::BareProvider}} -> \code{\link[charlatan:BaseProvider]{charlatan::BaseProvider}} -> \code{\link[charlatan:PhoneNumberProvider]{charlatan::PhoneNumberProvider}} -> \code{PhoneNumberProvider_en_NZ}
-}
-\section{Public fields}{
-\if{html}{\out{<div class="r6-fields">}}
-\describe{
-\item{\code{locale}}{(character) the locale}
-
-\item{\code{formats}}{phone number formats}
-
-\item{\code{area_code_formats}}{area code formats}
-}
-\if{html}{\out{</div>}}
 }
 \section{Methods}{
 \subsection{Public methods}{
@@ -78,9 +66,10 @@ Other NZ:
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_int"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_int'><code>charlatan::BareProvider$random_int()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_letter"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_letter'><code>charlatan::BareProvider$random_letter()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="randomize_nb_elements"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-randomize_nb_elements'><code>charlatan::BareProvider$randomize_nb_elements()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="allowed_locales"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-allowed_locales'><code>charlatan::BaseProvider$allowed_locales()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-check_locale'><code>charlatan::BaseProvider$check_locale()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="PhoneNumberProvider" data-id="allowed_locales"><a href='../../charlatan/html/PhoneNumberProvider.html#method-PhoneNumberProvider-allowed_locales'><code>charlatan::PhoneNumberProvider$allowed_locales()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="PhoneNumberProvider" data-id="initialize"><a href='../../charlatan/html/PhoneNumberProvider.html#method-PhoneNumberProvider-initialize'><code>charlatan::PhoneNumberProvider$initialize()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="initialize"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-initialize'><code>charlatan::BaseProvider$initialize()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="print"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-print'><code>charlatan::BaseProvider$print()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="PhoneNumberProvider" data-id="render"><a href='../../charlatan/html/PhoneNumberProvider.html#method-PhoneNumberProvider-render'><code>charlatan::PhoneNumberProvider$render()</code></a></span></li>
 </ul>
 </details>

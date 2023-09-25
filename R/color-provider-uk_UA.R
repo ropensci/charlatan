@@ -7,7 +7,7 @@
 #' @family uk
 #' @family UA
 #' @examples
-#' x <- colors("template")
+#' x <- ColorProvider_uk_UA$new()
 #' x$locale
 #' x$color_name()
 #' x$safe_color_name()
@@ -20,11 +20,9 @@ ColorProvider_uk_UA <- R6::R6Class(
   inherit = ColorProvider,
   "ColorProvider_uk_UA",
   lock_objects = FALSE,
-  public = list(
-    #' @field locale (character) xxx
-    locale = "uk_UA",
-    #' @field all_colors A vector with named list items containing the name of the color and the hex value.
-    all_colors = list(
+  private = list(
+    # A vector with named list items containing the name of the color and the hex value.
+    all_colors_ = list(
       "\u0410\u0431\u0440\u0438\u043a\u043e\u0441\u043e\u0432\u0438\u0439" = "#FBCEB1",
       "\u0410\u043a\u0432\u0430\u043c\u0430\u0440\u0438\u043d\u043e\u0432\u0438\u0439" = "#7FFFD4",
       "\u0410\u043b\u0456\u0437\u0430\u0440\u0438\u043d\u043e\u0432\u0438\u0439 \u0447\u0435\u0440\u0432\u043e\u043d\u0438\u0439" = "#E32636",
@@ -211,8 +209,8 @@ ColorProvider_uk_UA <- R6::R6Class(
       "\u042f\u0441\u043d\u043e-\u043b\u0430\u0437\u0443\u0440\u043e\u0432\u0438\u0439" = "#007FFF",
       "\u042f\u0441\u043d\u043e-\u043b\u0430\u0437\u0443\u0440\u043e\u0432\u0438\u0439 (\u0432\u0435\u0431)" = "#F0FFFF"
     ),
-    #' @field safe_colors safe to use colors.
-    safe_colors = c(
+    # safe to use colors.
+    safe_colors_ = c(
       "\u0427\u043e\u0440\u043d\u0438\u0439",
       "\u0411\u0440\u0443\u043d\u0430\u0442\u043e-\u043c\u0430\u043b\u0438\u043d\u043e\u0432\u0438\u0439",
       "\u041a\u043e\u043b\u0456\u0440 \u043c\u043e\u0440\u0441\u044c\u043a\u043e\u0457 \u0445\u0432\u0438\u043b\u0456",
@@ -228,6 +226,7 @@ ColorProvider_uk_UA <- R6::R6Class(
       "\u0421\u0456\u0440\u0438\u0439",
       "\u0416\u043e\u0432\u0442\u0438\u0439",
       "\u0411\u0456\u043b\u0438\u0439"
-    )
+    ),
+    locale_ = "uk_UA"
   )
 )

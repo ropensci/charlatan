@@ -137,10 +137,8 @@ area_codes_formats_en_nz <- c(
 PhoneNumberProvider_en_US <- R6::R6Class(
   inherit = PhoneNumberProvider,
   "PhoneNumberProvider_en_US",
-  public = list(
-    #' @field locale (character) the locale
-    locale = "en_US",
-    #' @field formats phone number formats
+  private = list(
+    locale_ = "en_US",
     formats = phone_number_formats_en_us
   )
 )
@@ -156,12 +154,11 @@ PhoneNumberProvider_en_US <- R6::R6Class(
 PhoneNumberProvider_en_AU <- R6::R6Class(
   inherit = PhoneNumberProvider,
   "PhoneNumberProvider_en_AU",
-  public = list(
-    #' @field locale (character) the locale
-    locale = "en_AU",
-    #' @field formats phone number formats
+  private = list(
+    locale_ = "en_AU",
+    # phone number formats
     formats = phone_number_formats_en_au,
-    #' @field area_code_formats area code formats
+    # area code formats
     area_code_formats = area_codes_formats_en_au
   )
 )
@@ -172,17 +169,14 @@ PhoneNumberProvider_en_AU <- R6::R6Class(
 #' @family NZ
 #' @export
 #' @examples
-#' z <- PhoneNumberProvider_en_NZS$new()
+#' z <- PhoneNumberProvider_en_NZ$new()
 #' z$render()
 PhoneNumberProvider_en_NZ <- R6::R6Class(
   inherit = PhoneNumberProvider,
   "PhoneNumberProvider_en_NZ",
-  public = list(
-    #' @field locale (character) the locale
-    locale = "en_NZ",
-    #' @field formats phone number formats
+  private = list(
+    locale_ = "en_NZ",
     formats = phone_number_formats_en_nz,
-    #' @field area_code_formats area code formats
     area_code_formats = area_codes_formats_en_nz
   )
 )
@@ -197,10 +191,9 @@ PhoneNumberProvider_en_NZ <- R6::R6Class(
 PhoneNumberProvider_en_GB <- R6::R6Class(
   inherit = PhoneNumberProvider,
   "PhoneNumberProvider_en_GB",
-  public = list(
-    #' @field locale (character) the locale
-    locale = "en_GB",
-    #' @field formats phone number formats
+  private = list(
+    locale_ = "en_GB",
+    # phone number formats
     formats = phone_number_formats_en_gb
   )
 )
@@ -216,10 +209,8 @@ PhoneNumberProvider_en_GB <- R6::R6Class(
 PhoneNumberProvider_en_CA <- R6::R6Class(
   inherit = PhoneNumberProvider,
   "PhoneNumberProvider_en_CA",
-  public = list(
-    #' @field locale (character) the locale
-    locale = "en_CA",
-    #' @field formats phone number formats
+  private = list(
+    locale_ = "en_CA",
     formats = phone_number_formats_en_ca
   )
 )

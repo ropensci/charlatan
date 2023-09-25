@@ -10,14 +10,14 @@
 #' @examples
 #' ch_color_name()
 #' ch_color_name(10)
-#' ch_color_name(500)
+#' # or even ch_color_name(500)
 #'
 #' ch_safe_color_name()
 #' ch_safe_color_name(10)
 #'
 #' ch_hex_color()
 #' ch_hex_color(10)
-#' ch_hex_color(1000)
+#' # or even ch_hex_color(1000)
 #'
 #' ch_safe_hex_color()
 #' ch_safe_hex_color(10)
@@ -95,8 +95,9 @@ ch_rgb_css_color <- function(n = 1) {
 
 color_provider <- function(n, locale = NULL) {
   assert(n, c("integer", "numeric"))
+
   if (is.null(locale)) {
     locale <- "en_US"
   }
-  subclass("ColorProvider", locale=locale)
+  subclass("ColorProvider", locale = locale)
 }

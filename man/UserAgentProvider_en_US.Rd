@@ -25,6 +25,7 @@ Other en:
 \code{\link{ColorProvider_en_US}},
 \code{\link{CompanyProvider_en_US}},
 \code{\link{ElementProvider_en_US}},
+\code{\link{FileProvider_en_US}},
 \code{\link{InternetProvider_en_AU}},
 \code{\link{InternetProvider_en_US}},
 \code{\link{JobProvider_en_US}},
@@ -39,36 +40,27 @@ Other en:
 \code{\link{PhoneNumberProvider_en_US}},
 \code{\link{PhoneNumberProvider_es_MX}},
 \code{\link{PhoneNumberProvider_tr_TR}},
-\code{\link{PhoneNumberProvider}},
 \code{\link{SSNProvider_en_US}},
 \code{\link{TaxonomyProvider_en_US}},
-\code{\link{UserAgentProvider}},
 \code{\link{english-language}}
 
 Other US: 
 \code{\link{ColorProvider_en_US}},
 \code{\link{CompanyProvider_en_US}},
 \code{\link{ElementProvider_en_US}},
+\code{\link{FileProvider_en_US}},
 \code{\link{InternetProvider_en_US}},
 \code{\link{JobProvider_en_US}},
 \code{\link{LoremProvider_en_US}},
 \code{\link{PersonProvider_en_US}},
 \code{\link{PhoneNumberProvider_en_US}},
 \code{\link{SSNProvider_en_US}},
-\code{\link{TaxonomyProvider_en_US}},
-\code{\link{UserAgentProvider}}
+\code{\link{TaxonomyProvider_en_US}}
 }
 \concept{US}
 \concept{en}
 \section{Super classes}{
 \code{\link[charlatan:BareProvider]{charlatan::BareProvider}} -> \code{\link[charlatan:BaseProvider]{charlatan::BaseProvider}} -> \code{\link[charlatan:UserAgentProvider]{charlatan::UserAgentProvider}} -> \code{UserAgentProvider_en_US}
-}
-\section{Public fields}{
-\if{html}{\out{<div class="r6-fields">}}
-\describe{
-\item{\code{locale}}{(character) the locale}
-}
-\if{html}{\out{</div>}}
 }
 \section{Methods}{
 \subsection{Public methods}{
@@ -91,11 +83,12 @@ Other US:
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_int"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_int'><code>charlatan::BareProvider$random_int()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_letter"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_letter'><code>charlatan::BareProvider$random_letter()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="randomize_nb_elements"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-randomize_nb_elements'><code>charlatan::BareProvider$randomize_nb_elements()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="allowed_locales"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-allowed_locales'><code>charlatan::BaseProvider$allowed_locales()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-check_locale'><code>charlatan::BaseProvider$check_locale()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="UserAgentProvider" data-id="allowed_locales"><a href='../../charlatan/html/UserAgentProvider.html#method-UserAgentProvider-allowed_locales'><code>charlatan::UserAgentProvider$allowed_locales()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="initialize"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-initialize'><code>charlatan::BaseProvider$initialize()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="print"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-print'><code>charlatan::BaseProvider$print()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="UserAgentProvider" data-id="chrome"><a href='../../charlatan/html/UserAgentProvider.html#method-UserAgentProvider-chrome'><code>charlatan::UserAgentProvider$chrome()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="UserAgentProvider" data-id="firefox"><a href='../../charlatan/html/UserAgentProvider.html#method-UserAgentProvider-firefox'><code>charlatan::UserAgentProvider$firefox()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="UserAgentProvider" data-id="initialize"><a href='../../charlatan/html/UserAgentProvider.html#method-UserAgentProvider-initialize'><code>charlatan::UserAgentProvider$initialize()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="UserAgentProvider" data-id="internet_explorer"><a href='../../charlatan/html/UserAgentProvider.html#method-UserAgentProvider-internet_explorer'><code>charlatan::UserAgentProvider$internet_explorer()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="UserAgentProvider" data-id="linux_platform_token"><a href='../../charlatan/html/UserAgentProvider.html#method-UserAgentProvider-linux_platform_token'><code>charlatan::UserAgentProvider$linux_platform_token()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="UserAgentProvider" data-id="linux_processor"><a href='../../charlatan/html/UserAgentProvider.html#method-UserAgentProvider-linux_processor'><code>charlatan::UserAgentProvider$linux_processor()</code></a></span></li>

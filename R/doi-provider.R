@@ -37,5 +37,7 @@ DOIProvider <- R6::R6Class(
       x <- super$random_element(seq_along(self$funs))
       self$funs[[x]]()
     }
+  ), private = list(
+    provider_ = "DOIProvider"
   )
 )

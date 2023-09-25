@@ -327,29 +327,11 @@ PersonProvider_ja_JP <- R6::R6Class(
   "PersonProvider_ja_JP",
   inherit = PersonProvider,
   public = list(
-    #' @field locale (character) the locale
-    locale = "ja_JP",
-    #' @field formats (character) person name formats
-    formats = person_formats_ja_jp,
-    #' @field person (character) person name data
-    person = person_ja_jp,
-    ## TODO: describe what we can do here:
-    ## because we inherit, we can create special japanese names.
-    #' @field kana_formats different formats
-    kana_formats = person_kana_formats_ja_jp,
-    #' @field first_kana_names first names (kana)
-    first_kana_names = person_first_kana_names_ja_jp,
-    #' @field last_kana_names last names (kana)
-    last_kana_names = person_last_kana_names_ja_jp,
-    #' @field first_kana_names_male first names male (kana)
-    first_kana_names_male = person_first_kana_names_male_ja_jp,
-    #' @field first_kana_names_female first names female (kana)
-    first_kana_names_female = person_first_kana_names_female_ja_jp,
     #' @description create a kana name.
     kana_name = function() {
-      fmt <- super$random_element(self$kana_formats)
+      fmt <- super$random_element(private$kana_formats)
       dat <- lapply(
-        self$person[pluck_names(fmt, self$person)],
+        self$person[pluck_names(fmt, private$persons)],
         function(x) {
           if (has_probs(x)) {
             super$random_element_prob(x)
@@ -372,19 +354,38 @@ PersonProvider_ja_JP <- R6::R6Class(
     },
     #' @description Generate first name (kana)
     first_kana_name = function() {
-      super$random_element(self$first_kana_names)
+      super$random_element(private$first_kana_names)
     },
     #' @description Generate last name (kana)
     last_kana_name = function() {
-      super$random_element(self$last_kana_names)
+      super$random_element(private$last_kana_names)
     },
     #' @description Generate first name male (kana)
     first_kana_name_male = function() {
-      super$random_element(self$first_kana_names_male)
+      super$random_element(private$first_kana_names_male)
     },
     #' @description Generate first name female (kana)
     first_kana_name_female = function() {
-      super$random_element(self$first_kana_female)
+      super$random_element(private$first_kana_female)
     }
+  ),
+  private = list(
+    # person name formats
+    formats = person_formats_ja_jp,
+    # person name data
+    persons = person_ja_jp,
+    ## TODO: describe what we can do here:
+    ## because we inherit, we can create special japanese names.
+    # kana_formats different formats for kana names
+    kana_formats = person_kana_formats_ja_jp,
+    # first names (kana)
+    first_kana_names = person_first_kana_names_ja_jp,
+    # last names (kana)
+    last_kana_names = person_last_kana_names_ja_jp,
+    # first names male (kana)
+    first_kana_names_male = person_first_kana_names_male_ja_jp,
+    # first names female (kana)
+    first_kana_names_female = person_first_kana_names_female_ja_jp,
+    locale_ = "ja_JP"
   )
 )

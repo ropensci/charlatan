@@ -6,15 +6,25 @@
 \description{
 methods for colors
 }
-\keyword{internal}
+\seealso{
+Other ParentProviders: 
+\code{\link{AddressProvider}},
+\code{\link{CompanyProvider}},
+\code{\link{InternetProvider}},
+\code{\link{JobProvider}},
+\code{\link{LoremProvider}},
+\code{\link{PersonProvider}},
+\code{\link{PhoneNumberProvider}},
+\code{\link{TaxonomyProvider}},
+\code{\link{UserAgentProvider}}
+}
+\concept{ParentProviders}
 \section{Super classes}{
 \code{\link[charlatan:BareProvider]{charlatan::BareProvider}} -> \code{\link[charlatan:BaseProvider]{charlatan::BaseProvider}} -> \code{ColorProvider}
 }
-\section{Public fields}{
-\if{html}{\out{<div class="r6-fields">}}
+\section{Active bindings}{
+\if{html}{\out{<div class="r6-active-bindings">}}
 \describe{
-\item{\code{locale}}{(character) xxx}
-
 \item{\code{all_colors}}{(character) xxx}
 
 \item{\code{safe_colors}}{(character) xxx}
@@ -24,8 +34,6 @@ methods for colors
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
-\item \href{#method-ColorProvider-allowed_locales}{\code{ColorProvider$allowed_locales()}}
-\item \href{#method-ColorProvider-new}{\code{ColorProvider$new()}}
 \item \href{#method-ColorProvider-color_name}{\code{ColorProvider$color_name()}}
 \item \href{#method-ColorProvider-hex_from_name}{\code{ColorProvider$hex_from_name()}}
 \item \href{#method-ColorProvider-safe_color_name}{\code{ColorProvider$safe_color_name()}}
@@ -51,33 +59,13 @@ methods for colors
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_int"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_int'><code>charlatan::BareProvider$random_int()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_letter"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_letter'><code>charlatan::BareProvider$random_letter()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="randomize_nb_elements"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-randomize_nb_elements'><code>charlatan::BareProvider$randomize_nb_elements()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="allowed_locales"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-allowed_locales'><code>charlatan::BaseProvider$allowed_locales()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-check_locale'><code>charlatan::BaseProvider$check_locale()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="initialize"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-initialize'><code>charlatan::BaseProvider$initialize()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="print"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-print'><code>charlatan::BaseProvider$print()</code></a></span></li>
 </ul>
 </details>
 }}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-ColorProvider-allowed_locales"></a>}}
-\if{latex}{\out{\hypertarget{method-ColorProvider-allowed_locales}{}}}
-\subsection{Method \code{allowed_locales()}}{
-fetch the allowed locales for this provider
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{ColorProvider$allowed_locales()}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-ColorProvider-new"></a>}}
-\if{latex}{\out{\hypertarget{method-ColorProvider-new}{}}}
-\subsection{Method \code{new()}}{
-Create a new \code{ColorProvider} object
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{ColorProvider$new()}\if{html}{\out{</div>}}
-}
-
-\subsection{Returns}{
-A new \code{ColorProvider} object
-}
-}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-ColorProvider-color_name"></a>}}
 \if{latex}{\out{\hypertarget{method-ColorProvider-color_name}{}}}

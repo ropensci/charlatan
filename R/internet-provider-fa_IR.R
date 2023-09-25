@@ -24,14 +24,10 @@ int_tlds_fa_ir <- c("com", "com", "com", "net", "org", "ir", "ir", "ir")
 InternetProvider_fa_IR <- R6::R6Class(
   inherit = InternetProvider,
   "InternetProvider_fa_IR",
-  public = list(
-    #' @field locale (character) the locale
-    locale = "fa_IR",
-    #' @field free_email_domains (character) free email tlds
+  private = list(
+    locale_ = "fa_IR",
     free_email_domains = int_free_email_domains_fa_ir,
-    #' @field tlds (character) tlds
     tlds = int_tlds_fa_ir,
-    #' @field safe_email_tlds (character) safe email tlds
     safe_email_tlds = int_safe_email_tlds_fa_ir
   )
 )

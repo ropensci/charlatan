@@ -49,10 +49,8 @@ phone_number_formats_nl_nl <- c(
 PhoneNumberProvider_nl_BE <- R6::R6Class(
   inherit = PhoneNumberProvider,
   "PhoneNumberProvider_nl_BE",
-  public = list(
-    #' @field locale (character) the locale
-    locale = "nl_BE",
-    #' @field formats phone number formats
+  private = list(
+    locale_ = "nl_BE",
     formats = phone_number_formats_nl_be
   )
 )
@@ -62,15 +60,13 @@ PhoneNumberProvider_nl_BE <- R6::R6Class(
 #' @family NL
 #' @export
 #' @examples
-#' z <- PhoneNumberProvider_nl_NLU$new()
+#' z <- PhoneNumberProvider_nl_NL$new()
 #' z$render()
 PhoneNumberProvider_nl_NL <- R6::R6Class(
   inherit = PhoneNumberProvider,
   "PhoneNumberProvider_nl_NL",
-  public = list(
-    #' @field locale (character) the locale
-    locale = "nl_NL",
-    #' @field formats phone number formats
+  private = list(
+    locale_ = "nl_NL",
     formats = phone_number_formats_nl_nl
   )
 )

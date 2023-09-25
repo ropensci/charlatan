@@ -59,16 +59,11 @@ int_replacements_fr_fr <- list(
 InternetProvider_fr_FR <- R6::R6Class(
   inherit = InternetProvider,
   "InternetProvider_fr_FR",
-  public = list(
-    #' @field locale (character) the locale
-    locale = "fr_FR",
-    #' @field free_email_domains (character) free email tlds
+  private = list(
+    locale_ = "fr_FR",
     free_email_domains = int_free_email_domains_fr_fr,
-    #' @field tlds (character) tlds
     tlds = int_tlds_fr_fr,
-    #' @field safe_email_tlds (character) safe email tlds
     safe_email_tlds = int_safe_email_tlds_fr_fr,
-    #' @field replacements (list) a list
     replacements = int_replacements_fr_fr
   )
 )

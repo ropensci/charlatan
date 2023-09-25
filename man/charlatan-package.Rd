@@ -44,7 +44,7 @@ x$hex_color()
 # low level interfaces to "data providers"
 # these are exported by hidden from package man page
 # as most users will likely not interact with these
-x <- ColorProvider$new()
+x <- ColorProvider_en_US$new()
 x$color_name()
 x$hex_color()
 }

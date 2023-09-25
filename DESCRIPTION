@@ -1,7 +1,8 @@
 Package: charlatan
 Type: Package
 Title: Make Fake Data
-Description: Make fake data, supporting addresses, person names, dates,
+Description: Make fake data that looks realistic, supporting addresses, 
+    person names, dates,
     times, colors, coordinates, currencies, digital object identifiers
     ('DOIs'), jobs, phone numbers, 'DNA' sequences, doubles and integers
     from distributions and within a range.
@@ -41,8 +42,9 @@ Suggests:
     knitr,
     rmarkdown,
     ipaddress,
-    stringi
-RoxygenNote: 7.2.2
+    stringi,
+    spelling
+RoxygenNote: 7.2.3
 Depends: 
     R (>= 2.10)
 Collate: 
@@ -50,11 +52,11 @@ Collate:
     'address-provider-en_NZ.R'
     'address-provider-en_US.R'
     'address-provider-nl_NL.R'
-    'base-provider.R'
     'datetime-provider.R'
     'address-provider.R'
     'available_locales.R'
     'available_providers.R'
+    'base-provider.R'
     'charlatan-package.R'
     'charlatan_settings.R'
     'color-provider-en_US.R'

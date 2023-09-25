@@ -33,17 +33,6 @@ Other BG:
 \section{Super classes}{
 \code{\link[charlatan:BareProvider]{charlatan::BareProvider}} -> \code{\link[charlatan:BaseProvider]{charlatan::BaseProvider}} -> \code{\link[charlatan:InternetProvider]{charlatan::InternetProvider}} -> \code{InternetProvider_en_NZ}
 }
-\section{Public fields}{
-\if{html}{\out{<div class="r6-fields">}}
-\describe{
-\item{\code{locale}}{(character) the locale}
-
-\item{\code{free_email_domains}}{(character) free email tlds}
-
-\item{\code{tlds}}{(character) tlds}
-}
-\if{html}{\out{</div>}}
-}
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
@@ -65,8 +54,9 @@ Other BG:
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_int"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_int'><code>charlatan::BareProvider$random_int()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_letter"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_letter'><code>charlatan::BareProvider$random_letter()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="randomize_nb_elements"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-randomize_nb_elements'><code>charlatan::BareProvider$randomize_nb_elements()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="allowed_locales"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-allowed_locales'><code>charlatan::BaseProvider$allowed_locales()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-check_locale'><code>charlatan::BaseProvider$check_locale()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="InternetProvider" data-id="allowed_locales"><a href='../../charlatan/html/InternetProvider.html#method-InternetProvider-allowed_locales'><code>charlatan::InternetProvider$allowed_locales()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="print"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-print'><code>charlatan::BaseProvider$print()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="InternetProvider" data-id="ascii_company_email"><a href='../../charlatan/html/InternetProvider.html#method-InternetProvider-ascii_company_email'><code>charlatan::InternetProvider$ascii_company_email()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="InternetProvider" data-id="ascii_email"><a href='../../charlatan/html/InternetProvider.html#method-InternetProvider-ascii_email'><code>charlatan::InternetProvider$ascii_email()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="InternetProvider" data-id="ascii_free_email"><a href='../../charlatan/html/InternetProvider.html#method-InternetProvider-ascii_free_email'><code>charlatan::InternetProvider$ascii_free_email()</code></a></span></li>

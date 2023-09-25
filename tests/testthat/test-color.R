@@ -25,7 +25,7 @@ test_that("ColorProvider locale support works", {
   skip_on_travis()
 
   test_locale <- function(loc) {
-    bb <- cr_loc_spec_provider("ColorProvider",loc)
+    bb <- cr_loc_spec_provider("ColorProvider", loc)
 
     expect_is(bb$locale, "character")
     expect_equal(bb$locale, loc)
@@ -50,10 +50,10 @@ context("ch color functions work")
 test_that("ch color functions error for incorrect input", {
   expect_error(ch_color_name(-1))
   expect_error(ch_color_name(-99, "uk_UA"))
-  expect_error(ch_color_name(locale = "ch_AR"))
+  expect_warning(ch_color_name(locale = "ch_AR"))
   expect_error(ch_safe_color_name(-1))
   expect_error(ch_safe_color_name(-99, "uk_UA"))
-  expect_error(ch_safe_color_name(locale = "ch_AR"))
+  expect_warning(ch_safe_color_name(locale = "ch_AR"))
   expect_error(ch_hex_color(-99))
   expect_error(ch_safe_hex_color(-1))
   expect_error(ch_rgb_color(-99))

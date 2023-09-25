@@ -104,10 +104,8 @@ phone_number_formats_es_pe <- c(
 PhoneNumberProvider_es_ES <- R6::R6Class(
   inherit = PhoneNumberProvider,
   "PhoneNumberProvider_es_ES",
-  public = list(
-    #' @field locale (character) the locale
-    locale = "es_ES",
-    #' @field formats phone number formats
+  private = list(
+    locale_ = "es_ES",
     formats = phone_number_formats_es_es
   )
 )
@@ -122,10 +120,8 @@ PhoneNumberProvider_es_ES <- R6::R6Class(
 PhoneNumberProvider_es_MX <- R6::R6Class(
   inherit = PhoneNumberProvider,
   "PhoneNumberProvider_es_MX",
-  public = list(
-    #' @field locale (character) the locale
-    locale = "es_MX",
-    #' @field formats phone number formats
+  private = list(
+    locale_ = "es_MX",
     formats = phone_number_formats_es_mx
   )
 )
@@ -142,12 +138,9 @@ PhoneNumberProvider_es_MX <- R6::R6Class(
 PhoneNumberProvider_es_PE <- R6::R6Class(
   inherit = PhoneNumberProvider,
   "PhoneNumberProvider_es_PE",
-  public = list(
-    #' @field locale (character) the locale
-    locale = "es_PE",
-    #' @field formats phone number formats
+  private = list(
+    locale_ = "es_PE",
     formats = phone_number_formats_es_pe,
-    #' @field area_code_formats area code formats
     area_code_formats = area_codes_formats_es_pe
   )
 )

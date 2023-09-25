@@ -3,8 +3,15 @@
 \name{AddressProvider_en_GB}
 \alias{AddressProvider_en_GB}
 \title{AddressProvider for English, Great Britain}
+\value{
+Returns an AddressProvider object.
+}
 \description{
-address methods for Great Britain.
+Object to create addresses for a locale.
+Makes use of \link{PersonProvider} for creating street names.
+}
+\details{
+When there is no PersonProvider for this locale, we default back to en_US.
 }
 \examples{
 (z <- AddressProvider_en_GB$new())
@@ -20,6 +27,7 @@ Other en:
 \code{\link{ColorProvider_en_US}},
 \code{\link{CompanyProvider_en_US}},
 \code{\link{ElementProvider_en_US}},
+\code{\link{FileProvider_en_US}},
 \code{\link{InternetProvider_en_AU}},
 \code{\link{InternetProvider_en_US}},
 \code{\link{JobProvider_en_US}},
@@ -34,11 +42,9 @@ Other en:
 \code{\link{PhoneNumberProvider_en_US}},
 \code{\link{PhoneNumberProvider_es_MX}},
 \code{\link{PhoneNumberProvider_tr_TR}},
-\code{\link{PhoneNumberProvider}},
 \code{\link{SSNProvider_en_US}},
 \code{\link{TaxonomyProvider_en_US}},
 \code{\link{UserAgentProvider_en_US}},
-\code{\link{UserAgentProvider}},
 \code{\link{english-language}}
 
 Other GB: 
@@ -50,38 +56,6 @@ Other GB:
 \concept{en}
 \section{Super classes}{
 \code{\link[charlatan:BareProvider]{charlatan::BareProvider}} -> \code{\link[charlatan:BaseProvider]{charlatan::BaseProvider}} -> \code{\link[charlatan:AddressProvider]{charlatan::AddressProvider}} -> \code{AddressProvider_en_GB}
-}
-\section{Public fields}{
-\if{html}{\out{<div class="r6-fields">}}
-\describe{
-\item{\code{locale}}{(character) en_GB Locale.}
-
-\item{\code{city_prefixes}}{(character) Prefixes for cities.
-Combining suffix and prefix makes a random city.}
-
-\item{\code{city_suffixes}}{(character) suffixes for cities.}
-
-\item{\code{building_number_formats}}{(character) Formats for building numbers}
-
-\item{\code{street_suffixes}}{combined with street prefix creates a street.}
-
-\item{\code{postcode_formats}}{Formats for postal codes}
-
-\item{\code{postcode_sets}}{Specifically for en_GB, postcodes
-form specific combinations.}
-
-\item{\code{city_formats}}{formats for creating a city name.}
-
-\item{\code{street_name_formats}}{formats for creating a street name.}
-
-\item{\code{street_address_formats}}{formats for creating a street address.}
-
-\item{\code{address_formats}}{formats for creating an address.}
-
-\item{\code{secondary_address_formats}}{formats for creating secondary parts of
-addresses.}
-}
-\if{html}{\out{</div>}}
 }
 \section{Methods}{
 \subsection{Public methods}{
@@ -110,8 +84,9 @@ addresses.}
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_int"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_int'><code>charlatan::BareProvider$random_int()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_letter"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_letter'><code>charlatan::BareProvider$random_letter()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="randomize_nb_elements"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-randomize_nb_elements'><code>charlatan::BareProvider$randomize_nb_elements()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="allowed_locales"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-allowed_locales'><code>charlatan::BaseProvider$allowed_locales()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-check_locale'><code>charlatan::BaseProvider$check_locale()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="AddressProvider" data-id="allowed_locales"><a href='../../charlatan/html/AddressProvider.html#method-AddressProvider-allowed_locales'><code>charlatan::AddressProvider$allowed_locales()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="print"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-print'><code>charlatan::BaseProvider$print()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="AddressProvider" data-id="init_person_provider"><a href='../../charlatan/html/AddressProvider.html#method-AddressProvider-init_person_provider'><code>charlatan::AddressProvider$init_person_provider()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="AddressProvider" data-id="initialize"><a href='../../charlatan/html/AddressProvider.html#method-AddressProvider-initialize'><code>charlatan::AddressProvider$initialize()</code></a></span></li>
 </ul>

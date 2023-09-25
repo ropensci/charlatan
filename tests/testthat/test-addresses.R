@@ -54,7 +54,7 @@ test_that("custom functions from AddressProvider_en_US work", {
   expect_is(aa$state, "function")
   expect_is(aa$state(), "character")
   expect_equal(length(aa$state()), 1)
-  expect_true(aa$state() %in% aa$states)
+  expect_true(aa$state() %in% aa$.__enclos_env__$private$states)
 
   expect_is(aa$mil_address, "function")
   expect_is(aa$mil_address(), "character")
@@ -71,5 +71,5 @@ test_that("custom functions from AddressProvider_nl_NL work", {
   expect_is(aa$province, "function")
   expect_is(aa$province(), "character")
   expect_equal(length(aa$province()), 1)
-  expect_true(aa$province() %in% aa$provinces)
+  expect_true(aa$province() %in% aa$.__enclos_env__$private$provinces)
 })

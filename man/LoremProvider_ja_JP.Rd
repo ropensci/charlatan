@@ -18,7 +18,7 @@ x$paragraph()
 x$paragraphs(3)
 cat(x$paragraphs(6), sep = "\n")
 x$text(19)
-x <- LoremProvider_ja_JPA$new(word_connector = " --- ")
+x <- LoremProvider_ja_JP$new(word_connector = " --- ")
 x$paragraph(4)
 }
 \seealso{
@@ -35,13 +35,6 @@ Other JP:
 \concept{ja}
 \section{Super classes}{
 \code{\link[charlatan:BareProvider]{charlatan::BareProvider}} -> \code{\link[charlatan:BaseProvider]{charlatan::BaseProvider}} -> \code{\link[charlatan:LoremProvider]{charlatan::LoremProvider}} -> \code{LoremProvider_ja_JP}
-}
-\section{Public fields}{
-\if{html}{\out{<div class="r6-fields">}}
-\describe{
-\item{\code{locale}}{(character) the locale}
-}
-\if{html}{\out{</div>}}
 }
 \section{Methods}{
 \subsection{Public methods}{
@@ -65,6 +58,7 @@ Other JP:
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_letter"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_letter'><code>charlatan::BareProvider$random_letter()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="randomize_nb_elements"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-randomize_nb_elements'><code>charlatan::BareProvider$randomize_nb_elements()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-check_locale'><code>charlatan::BaseProvider$check_locale()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="print"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-print'><code>charlatan::BaseProvider$print()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="LoremProvider" data-id="allowed_locales"><a href='../../charlatan/html/LoremProvider.html#method-LoremProvider-allowed_locales'><code>charlatan::LoremProvider$allowed_locales()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="LoremProvider" data-id="initialize"><a href='../../charlatan/html/LoremProvider.html#method-LoremProvider-initialize'><code>charlatan::LoremProvider$initialize()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="LoremProvider" data-id="paragraph"><a href='../../charlatan/html/LoremProvider.html#method-LoremProvider-paragraph'><code>charlatan::LoremProvider$paragraph()</code></a></span></li>

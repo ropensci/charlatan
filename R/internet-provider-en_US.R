@@ -14,8 +14,7 @@
 InternetProvider_en_US <- R6::R6Class(
   inherit = InternetProvider,
   "InternetProvider_en_US",
-  public = list(
-    #' @field locale (character) the locale
-    locale = "en_US"
+  private = list(
+    locale_ = "en_US"
   )
 )

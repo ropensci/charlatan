@@ -1,14 +1,15 @@
-#' @title company
+#' @title CompanyProvider
 #' @description company name/etc. methods
+#' 
+#' Note that you cannot instantiate this class, you can only 
+#' use the localized versions such as [CompanyProvider_en_US].
 #' @export
-#' @keywords internal
+#' @family ParentProviders
 CompanyProvider <- R6::R6Class(
   lock_objects = FALSE,
   "CompanyProvider",
   inherit = BaseProvider,
   public = list(
-    #' @field locale (character) xxx
-    locale = NULL,
     #' @field formats (character) xxx
     formats = NULL,
     #' @field prefixes (character) xxx
@@ -69,6 +70,7 @@ CompanyProvider <- R6::R6Class(
     locales = c(
       "bg_BG", "cs_CZ", "de_DE", "en_US", "es_MX", "fa_IR",
       "fr_FR", "hr_HR", "it_IT"
-    )
+    ),
+    provider_ = "CompanyProvider"
   )
 )

@@ -18,8 +18,7 @@ UserAgentProvider_en_US <- R6::R6Class(
   lock_objects = FALSE,
   "UserAgentProvider_en_US",
   inherit = UserAgentProvider,
-  public = list(
-    #' @field locale (character) the locale
-    locale = "en_US"
+  private = list(
+    locale_ = "en_US"
   )
 )

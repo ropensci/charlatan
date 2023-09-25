@@ -10,11 +10,11 @@
 #'
 #' ch_credit_card_number()
 #' ch_credit_card_number(n = 10)
-#' ch_credit_card_number(n = 500)
+#' # or even ch_credit_card_number(n = 500)
 #'
 #' ch_credit_card_security_code()
 #' ch_credit_card_security_code(n = 10)
-#' ch_credit_card_security_code(n = 500)
+#' # or even ch_credit_card_security_code(n = 500)
 ch_credit_card_provider <- function(n = 1) {
   assert(n, c("integer", "numeric"))
   if (n == 1) {

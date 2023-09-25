@@ -374,12 +374,9 @@ lorem_word_list_zh_tw <- c(
 LoremProvider_zh_TW <- R6::R6Class(
   inherit = LoremProvider,
   "LoremProvider_zh_TW",
-  public = list(
-    #' @field locale (character) the locale
-    locale = "zh_TW"
-  ),
   private = list(
     word_list = lorem_word_list_zh_tw,
-    word_connector = lorem_word_connector_zh_tw
+    word_connector = lorem_word_connector_zh_tw,
+    locale_ = "zh_TW"
   )
 )

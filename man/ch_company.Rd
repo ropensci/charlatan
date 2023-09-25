@@ -18,7 +18,7 @@ Create fake company names and other company bits
 \examples{
 ch_company()
 ch_company(10)
-ch_company(500)
+# or even ch_company(500)
 
 ch_company(locale = "fr_FR", n = 10)
 ch_company(locale = "cs_CZ", n = 10)

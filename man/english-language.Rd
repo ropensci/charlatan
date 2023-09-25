@@ -13,6 +13,7 @@ Other en:
 \code{\link{ColorProvider_en_US}},
 \code{\link{CompanyProvider_en_US}},
 \code{\link{ElementProvider_en_US}},
+\code{\link{FileProvider_en_US}},
 \code{\link{InternetProvider_en_AU}},
 \code{\link{InternetProvider_en_US}},
 \code{\link{JobProvider_en_US}},
@@ -27,11 +28,9 @@ Other en:
 \code{\link{PhoneNumberProvider_en_US}},
 \code{\link{PhoneNumberProvider_es_MX}},
 \code{\link{PhoneNumberProvider_tr_TR}},
-\code{\link{PhoneNumberProvider}},
 \code{\link{SSNProvider_en_US}},
 \code{\link{TaxonomyProvider_en_US}},
-\code{\link{UserAgentProvider_en_US}},
-\code{\link{UserAgentProvider}}
+\code{\link{UserAgentProvider_en_US}}
 
 Other languages: 
 \code{\link{arabic-language}},

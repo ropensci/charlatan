@@ -206,8 +206,11 @@ dt_countries <- list(
 #' @title DateTimeProvider
 #' @description date and time methods
 #' @export
-#' @include base-provider.R
-#' @keywords internal
+#' @param start_date start date, a valid date format
+#' @param end_date start date, a valid date format, default: "now"
+#' @param tzinfo timezone, see [timezone]
+#' @param timestamp a timestamp
+#' @param date a date, in a valid date format
 #' @examples
 #' z <- DateTimeProvider$new()
 #' z$countries
@@ -238,8 +241,6 @@ DateTimeProvider <- R6::R6Class(
 
     #' @description Get a timestamp between January 1, 1970 and now, unless passed
     #' explicit `start_date` or `end_date` values
-    #' @param start_date start date, a valid date format
-    #' @param end_date start date, a valid date format, default: "now"
     #' @references https://en.wikipedia.org/wiki/Unix_time
     unix_time = function(start_date = NULL, end_date = "now") {
       private$timestamp_between(start_date, end_date)
@@ -253,22 +254,18 @@ DateTimeProvider <- R6::R6Class(
     },
 
     #' @description Generate a date time between January 1, 1970 and now
-    #' @param tzinfo timezone, see [timezone]
     date_time = function(tzinfo = NULL) {
       as.POSIXct(self$unix_time(), origin = "1970-01-01", tz = tzinfo)
     },
 
     #' @description Generate a iso8601 format date
-    #' @param timestamp a timestamp
-    #' @param tzinfo timezone, see [timezone]
+    
     #' @references https://en.wikipedia.org/wiki/Unix_time
     date_time_fromtimestamp = function(timestamp, tzinfo = NULL) {
       as.POSIXct(timestamp, origin = "1970-01-01", tz = tzinfo)
     },
 
     #' @description Generate a iso8601 format date
-    #' @param date a date, in a valid date format
-    #' @param tzinfo timezone, see [timezone]
     iso8601 = function(date, tzinfo = NULL) {
       strftime(date, format = "%F", tz = tzinfo %||% "")
     },
@@ -290,9 +287,6 @@ DateTimeProvider <- R6::R6Class(
 
     #' @description Generate a date time based on a random date between
     #' two given dates
-    #' @param start_date start date, a valid date format
-    #' @param end_date start date, a valid date format, default: "now"
-    #' @param tzinfo timezone, see [timezone]
     date_time_between = function(start_date, end_date = "now", tzinfo = NULL) {
       timestamp <- private$timestamp_between(start_date, end_date)
       return(self$date_time_fromtimestamp(timestamp, tzinfo))
@@ -308,11 +302,12 @@ DateTimeProvider <- R6::R6Class(
       start_ts <- private$date2timestamp(start_date)
       end_ts <- private$date2timestamp(end_date)
       return(super$random_int(start_ts, end_ts))
-    }
+    },
     # parse_date = function(date) {
     #   parsed <- parsedate::parse_date(date)
     #   if (is.na(parsed)) stop("Invalid format for date: ", date)
     #   return(parsed)
     # }
+    provider_ = "DateTimeProvider"
   )
 )

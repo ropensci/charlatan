@@ -527,11 +527,8 @@ lorem_word_list_ru_ru <- c(
 LoremProvider_ru_RU <- R6::R6Class(
   inherit = LoremProvider,
   "LoremProvider_ru_RU",
-  public = list(
-    #' @field locale (character) the locale
-    locale = "ru_RU"
-  ),
   private = list(
-    word_list = lorem_word_list_ru_ru
+    word_list = lorem_word_list_ru_ru,
+    locale_ = "ru_RU"
   )
 )

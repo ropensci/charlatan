@@ -186,5 +186,8 @@ CurrencyProvider <- R6::R6Class(
     render = function() {
       super$random_element(self$formats)
     }
+  ),
+  private = list(
+    provider_ = "CurrencyProvider"
   )
 )

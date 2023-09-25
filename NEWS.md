@@ -4,35 +4,52 @@
 charlatan 0.6.0
 ===============
 This release changes the internal logic of the package to make it easier for you to contribute.
-One of the greatest strengths of charlatan and its spirit brothers faker (in python) and faker (in perl) is
+One of the greatest strengths of charlatan, _and its spirit brothers faker (in python) and faker (in perl),_ is
 the ability to customize realistically looking data in many locales.
 But it was not so easy to add locales that were very different from en_US. 
+This release aims to make it easier for you to add new locales for your favorite
+data types.
 
 ## Detailed
-Charlatan used logic to load in locale-specific data, and this worked great, but requires every locale to use the same naming conventions.
-We are using R6 classes to encapsulate the functions and inherit from other classes.
-Since version 0.6.0, locale specific Providers inherit from a global provider with minimal functionality.
-See vignette [TODO name of vignette] for more info.
-TODO this text needs work.
+Previous versions of {charlatan} used special logic to load in locale-specific 
+data, and this worked great, but requires every locale to use the same naming 
+conventions and required a lot of work across all locales of that provider
+if you only needed that change for one locale.
+
+Since version 0.6.0, locale specific Providers inherit from 
+a **Parent provider** with basic functionality for that Provider type, 
+and more specific functions for a locale are moved into that locale.
+For example, if you are Spongebob Squarepants, and all of your addresses are 
+required to have a fruit in the street name, this is now possible by 
+overriding the address function for the spongebob squarepants locale only. 
+See the revamped `contributing` vignette for more info.
 
 
 ### NEW FEATURES
-* Locales inherit from a global provider, giving us the ability to customize every locale.
-* A new baseclass BareProvider creates all of the selection and fill in functions, the BaseProvider inherits from that  and provides the locale specific functionality. Functionality of BaseProvider remains the same, but we can now also use BareProvider for non-locale Providers such as datetime provider.
-* Every provider has at least an en_US locale.
-* Ability to create specific functions for your locale specific provider. Example: Are first and last names not used in your locale? you can now create specific functions for your locale. Example: the japanese locale now has first_kana_name _(for example ヒロキ)_, last_kana_name functionality next to the romanized names. 
+* Added a new vignette with more detailed examples of data simulation. 
+* A new baseclass `BareProvider` creates all of the selection and fill in functions.
 * all bare classes will error when you try to init them.
-* all locales have labels so they are connected in the docs.
+* Locales inherit from a **Parent provider**, giving us the ability to customize 
+every locale (when needed) without changing the logic for all locales.
+* The `BaseProvider` inherits from the `BareProvider` and provides  locale specific functionality. Functionality of BaseProvider remains the same.
+* Every provider (when it has locales) has at least an en_US locale.
+* Ability to create specific functions for your locale specific provider. Example: Are first and last names not used in your locale? you can now create specific functions for your locale. Example: the Japanese locale now has first_kana_name _(for example ヒロキ)_, last_kana_name functionality next to the romanized names. 
+* all locales have labels so they are connected in the docs. You can now see all NZ Providers in one overview.
 
+### REMOVED
+* Removed the siren functionality from CompanyProvider (it was only used in the fr_FR locale and we can provide phone numbers with the PhoneProvider.
 
 ### MINOR IMPROVEMENTS
 * All locale specific Providers fall back to locale `en_US` if there is no version of this locale provider and will warn you if they do.
 * Reworked development vignette
 * added locale-templates for addresses, colors, company and internet
 * fix all docs
+* added the following functionality to fraudster: `address`, `company`, `element`, `element_symbol`, `file_name`, `email`, `url`, `mac_address`, `lorem_paragraph`, `ssn`
 
 ### BUG FIXES
 * None
+
+
 
 
 charlatan 0.5.1

@@ -487,10 +487,8 @@ job_formats_zh_tw <- c(
 JobProvider_zh_TW <- R6::R6Class(
   inherit = JobProvider,
   "JobProvider_zh_TW",
-  public = list(
-    #' @field locale (character) the locale
-    locale = "zh_TW",
-    #' @field formats (character) vector of possible formats
+  private = list(
+    locale_ = "zh_TW",
     formats = job_formats_zh_tw
   )
 )

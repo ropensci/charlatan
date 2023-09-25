@@ -17,7 +17,7 @@ ch_element_symbol <- function(n = 1) {
   if (n == 1) {
     ElementProvider_en_US$new()$symbol()
   } else {
-    x <- ElementProvider$new()
+    x <- ElementProvider_en_US$new()
     replicate(n, x$symbol())
   }
 }

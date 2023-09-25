@@ -19,11 +19,10 @@ ColorProvider_en_US <- R6::R6Class(
   inherit = ColorProvider,
   "ColorProvider_en_US",
   lock_objects = FALSE,
-  public = list(
-    #' @field locale (character) xxx
-    locale = "en_US",
-    #' @field all_colors A vector with named list items containing the name of the color and the hex value.
-    all_colors = c(
+  private = list(
+
+    #  A vector with named list items containing the name of the color and the hex value.
+    all_colors_ = c(
       list(AliceBlue = "#F0F8FF"),
       list(AntiqueWhite = "#FAEBD7"),
       list(Aqua = "#00FFFF"),
@@ -165,11 +164,11 @@ ColorProvider_en_US <- R6::R6Class(
       list(Yellow = "#FFFF00"),
       list(YellowGreen = "#9ACD3")
     ),
-    #' @field safe_colors safe to use colors.
-    safe_colors = c(
+    safe_colors_ = c(
       "black", "maroon", "green", "navy", "olive",
       "purple", "teal", "lime", "blue", "silver",
       "gray", "yellow", "fuchsia", "aqua", "white"
-    )
+    ),
+    locale_ = "en_US"
   )
 )

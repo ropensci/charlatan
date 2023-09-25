@@ -6,7 +6,7 @@
 #' @family bg
 #' @family BG
 #' @examples
-#' x <- company("bg_BG")
+#' x <- CompanyProvider_bg_BG$new()
 #' x$locale
 #' x$company()
 CompanyProvider_bg_BG <- R6::R6Class(
@@ -14,8 +14,6 @@ CompanyProvider_bg_BG <- R6::R6Class(
   "CompanyProvider_bg_BG",
   inherit = CompanyProvider,
   public = list(
-    #' @field locale (character) xxx
-    locale = "bg_BG",
     #' @field company_formats formats for company names.
     company_formats = c(
       "{{last_name}} {{company_suffix}}",
@@ -43,5 +41,8 @@ CompanyProvider_bg_BG <- R6::R6Class(
       "SD",
       "\u0421\u0414"
     )
+  ),
+  private = list(
+    locale_ = "bg_BG"
   )
 )

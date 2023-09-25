@@ -121,18 +121,12 @@ int_replacements_bg_bg <- list(
 InternetProvider_bg_BG <- R6::R6Class(
   inherit = InternetProvider,
   "InternetProvider_bg_BG",
-  public = list(
-    #' @field locale (character) the locale
-    locale = "bg_BG",
-    #' @field free_email_domains (character) free email tlds
+  private = list(
+    locale_ = "bg_BG",
     free_email_domains = int_free_email_domains_bg_bg,
-    #' @field tlds (character) tlds
     tlds = int_tlds_bg_bg,
-    #' @field replacements (list) a list
     replacements = int_replacements_bg_bg,
-    #' @field user_name_formats (character) user name formats
     user_name_formats = int_user_name_formats_bg_bg,
-    #' @field email_formats (character) email formats
     email_formats = int_email_formats_bg_bg
   )
 )

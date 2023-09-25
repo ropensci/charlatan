@@ -19,7 +19,7 @@ Create fake phone numbers
 \examples{
 ch_phone_number()
 ch_phone_number(10)
-ch_phone_number(500)
+# or even ch_phone_number(500)
 
 # locales
 ch_phone_number(locale = "fr_FR")

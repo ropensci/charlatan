@@ -2,40 +2,24 @@
 
 #' @title ColorProvider
 #' @description methods for colors
-#' @keywords internal
+#' @family ParentProviders
 ColorProvider <- R6::R6Class(
   inherit = BaseProvider,
   "ColorProvider",
   public = list(
-    #' @field locale (character) xxx
-    locale = NULL,
-    #' @field all_colors (character) xxx
-    all_colors = NULL,
-    #' @field safe_colors (character) xxx
-    safe_colors = NULL,
-
-    #' @description fetch the allowed locales for this provider
-    allowed_locales = function() private$locales,
-
-    #' @description Create a new `ColorProvider` object
-    #' @return A new `ColorProvider` object
-    initialize = function() {
-      if (is.null(self$locale)) raise_class("ColorProvider")
-    },
-
     #' @description color name
     color_name = function() {
-      super$random_element(names(self$all_colors))
+      super$random_element(names(private$all_colors_))
     },
     #' @description get color by name
     #' @param name color name
     #' @return hex value
     hex_from_name = function(name) {
-      self$all_colors[name]
+      private$all_colors[name]
     },
     #' @description safe color name
     safe_color_name = function() {
-      super$random_element(self$safe_colors)
+      super$random_element(private$safe_colors_)
     },
 
     #' @description hex color
@@ -73,7 +57,16 @@ ColorProvider <- R6::R6Class(
       sprintf("rgb(%s)", paste0(self$rgb_color(), collapse = ", "))
     }
   ),
+  active = list(
+    all_colors = function() {
+      private$all_colors_
+    },
+    safe_colors = function() {
+      private$safe_colors_
+    }
+  ),
   private = list(
+    provider_ = "ColorProvider",
     ind = function(x, y) {
       substring(x, y, y)
     },
@@ -82,6 +75,10 @@ ColorProvider <- R6::R6Class(
       sprintf("(%s)", paste0(color, collapse = ", "))
     },
     sample_col = function() sample(0:255, 1),
+    #' @field all_colors (character) xxx
+    all_colors_ = NULL,
+    #' @field safe_colors (character) xxx
+    safe_colors_ = NULL,
     locales = c("uk_UA", "en_US")
   )
 )

@@ -38,12 +38,9 @@ int_tlds_en_nz <- c(
 InternetProvider_en_NZ <- R6::R6Class(
   inherit = InternetProvider,
   "InternetProvider_en_NZ",
-  public = list(
-    #' @field locale (character) the locale
-    locale = "en_NZ",
-    #' @field free_email_domains (character) free email tlds
+  private = list(
+    locale_ = "en_NZ",
     free_email_domains = int_free_email_domains_en_nz,
-    #' @field tlds (character) tlds
     tlds = int_tlds_en_nz
   )
 )

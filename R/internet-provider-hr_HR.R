@@ -38,14 +38,10 @@ int_replacements_hr_hr <- list(
 InternetProvider_hr_HR <- R6::R6Class(
   inherit = InternetProvider,
   "InternetProvider_hr_HR",
-  public = list(
-    #' @field locale (character) the locale
-    locale = "hr_HR",
-    #' @field free_email_domains (character) free email tlds
+  private = list(
+    locale_ = "hr_HR",
     free_email_domains = int_free_email_domains_hr_hr,
-    #' @field tlds (character) tlds
     tlds = int_tlds_hr_hr,
-    #' @field replacements (list) a list
     replacements = int_replacements_hr_hr
   )
 )

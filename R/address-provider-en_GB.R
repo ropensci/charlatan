@@ -3,7 +3,7 @@
 
 
 #' @title AddressProvider for English, Great Britain
-#' @description address methods for Great Britain.
+#' @inherit AddressProvider description details return
 #' @family en
 #' @family GB
 #' @export
@@ -19,13 +19,75 @@ AddressProvider_en_GB <- R6::R6Class(
   "AddressProvider_en_GB",
   lock_objects = FALSE,
   public = list(
-    #' @field locale (character) en_GB Locale.
-    locale = "en_GB",
+
+    #' @description Create an address, a combination of street, postal code and city.
+    address = function() {
+      pattern <- super$random_element(private$address_formats)
+      dat <- list(
+        street_address = self$street_address(),
+        city = self$city(),
+        postcode = self$postcode()
+      )
+      whisker::whisker.render(pattern, data = dat)
+    },
+    #' @description Create a city
+    city = function() {
+      pattern <- super$random_element(private$city_formats)
+      dat <- list(
+        first_name = self$pp$first_name(),
+        last_name = self$pp$last_name(),
+        city_prefix = super$random_element(private$city_prefixes),
+        city_suffix = super$random_element(private$city_suffixes)
+      )
+      whisker::whisker.render(pattern, data = dat)
+    },
+    #' @description Create a street name.
+    street_name = function() {
+      pattern <- super$random_element(private$street_name_formats)
+      # PersonProvider must implement the same locales for this to work
+      dat <- list(
+        first_name = self$pp$first_name(),
+        last_name = self$pp$last_name(),
+        street_suffix = super$random_element(private$street_suffixes)
+      )
+      whisker::whisker.render(pattern, data = dat)
+    },
+    #' @description Create a street address, a combination of streetname and house indicator.
+    street_address = function() {
+      pattern <- super$random_element(private$street_address_formats)
+      dat <- list(
+        building_number = self$building_number(),
+        street_name = self$street_name(),
+        secondary_address = super$bothify(super$random_element(private$secondary_address_formats))
+      )
+      whisker::whisker.render(pattern, data = dat)
+    },
+    #' @description Create a postal code
+    postcode = function() {
+      pcode <- ""
+      pattern <- super$random_element(private$postcode_formats)
+      pattern <- strsplit(pattern, split = "")[[1]]
+      for (p in pattern) {
+        pcode <- paste0(
+          pcode,
+          super$random_element(private$postcode_sets[[p]])
+        )
+      }
+      pcode
+    },
+    #' @description Create a building number
+    building_number = function() {
+      super$numerify(super$random_element(private$building_number_formats))
+    }
+  ),
+  private = list(
+    locale_ = "en_GB",
+
     # add your data here
-    #' @field city_prefixes (character) Prefixes for cities.
-    #' Combining suffix and prefix makes a random city.
+    #  Prefixes for cities.
+    # Combining suffix and prefix makes a random city.
     city_prefixes = c("North", "East", "West", "South", "New", "Lake", "Port"),
-    #' @field city_suffixes (character) suffixes for cities.
+    # suffixes for cities.
     city_suffixes = c(
       "town",
       "ton",
@@ -46,9 +108,9 @@ AddressProvider_en_GB <- R6::R6Class(
       "side",
       "shire"
     ),
-    #' @field building_number_formats (character) Formats for building numbers
+    #  Formats for building numbers
     building_number_formats = c("#", "##", "###"),
-    #' @field street_suffixes combined with street prefix creates a street.
+    # combined with street prefix creates a street.
     street_suffixes = c(
       "alley",
       "avenue",
@@ -246,7 +308,7 @@ AddressProvider_en_GB <- R6::R6Class(
       "well",
       "wells"
     ),
-    #' @field postcode_formats Formats for postal codes
+    # Formats for postal codes
     postcode_formats = c(
       "AN NEE",
       "ANN NEE",
@@ -271,8 +333,8 @@ AddressProvider_en_GB <- R6::R6Class(
     #   "TS", "TW", "UB", "WA", "WC", "WD", "WF", "WN", "WR",
     #   "WS", "WV", "YO", "ZE"
     # ),
-    #' @field postcode_sets Specifically for en_GB, postcodes
-    #' form specific combinations.
+    # Specifically for en_GB, postcodes
+    # form specific combinations.
     postcode_sets = list(
       " " = " ",
       "N" = 0:9,
@@ -297,90 +359,30 @@ AddressProvider_en_GB <- R6::R6Class(
         "WS", "WV", "YO", "ZE"
       )
     ),
-    #' @field city_formats formats for creating a city name.
+    # formats for creating a city name.
     city_formats = c(
       "{{city_prefix}} {{first_name}}{{city_suffix}}",
       "{{city_prefix}} {{first_name}}",
       "{{first_name}}{{city_suffix}}",
       "{{last_name}}{{city_suffix}}"
     ),
-    #' @field street_name_formats formats for creating a street name.
+    # formats for creating a street name.
     street_name_formats = c(
       "{{first_name}} {{street_suffix}}",
       "{{last_name}} {{street_suffix}}"
     ),
-    #' @field street_address_formats formats for creating a street address.
+    # formats for creating a street address.
     street_address_formats = c(
       "{{building_number}} {{street_name}}",
       "{{secondary_address}}\n{{street_name}}"
     ),
-    #' @field address_formats formats for creating an address.
+    # formats for creating an address.
     address_formats = "{{street_address}}\n{{city}}\n{{postcode}}",
-    #' @field secondary_address_formats formats for creating secondary parts of
-    #' addresses.
+    # formats for creating secondary parts of
+    # addresses.
     secondary_address_formats = c(
       "Flat #", "Flat ##", "Flat ##?",
       "Studio #", "Studio ##", "Studio ##?"
-    ),
-    #' @description Create an address, a combination of street, postal code and city.
-    address = function() {
-      pattern <- super$random_element(self$address_formats)
-      dat <- list(
-        street_address = self$street_address(),
-        city = self$city(),
-        state_abbr = super$random_element(self$states_abbr),
-        postcode = self$postcode()
-      )
-      whisker::whisker.render(pattern, data = dat)
-    },
-    #' @description Create a city
-    city = function() {
-      pattern <- super$random_element(self$city_formats)
-      dat <- list(
-        first_name = self$pp$first_name(),
-        last_name = self$pp$last_name(),
-        city_prefix = super$random_element(self$city_prefixes),
-        city_suffix = super$random_element(self$city_suffixes)
-      )
-      whisker::whisker.render(pattern, data = dat)
-    },
-    #' @description Create a street name.
-    street_name = function() {
-      pattern <- super$random_element(self$street_name_formats)
-      # PersonProvider must implement the same locales for this to work
-      dat <- list(
-        first_name = self$pp$first_name(),
-        last_name = self$pp$last_name(),
-        street_suffix = super$random_element(self$street_suffixes)
-      )
-      whisker::whisker.render(pattern, data = dat)
-    },
-    #' @description Create a street address, a combination of streetname and house indicator.
-    street_address = function() {
-      pattern <- super$random_element(self$street_address_formats)
-      dat <- list(
-        building_number = self$building_number(),
-        street_name = self$street_name(),
-        secondary_address = super$bothify(super$random_element(self$secondary_address_formats))
-      )
-      whisker::whisker.render(pattern, data = dat)
-    },
-    #' @description Create a postal code
-    postcode = function() {
-      pcode <- ""
-      pattern <- super$random_element(self$postcode_formats)
-      pattern <- strsplit(pattern, split = "")[[1]]
-      for (p in pattern) {
-        pcode <- paste0(
-          pcode,
-          super$random_element(self$postcode_sets[[p]])
-        )
-      }
-      pcode
-    },
-    #' @description Create a building number
-    building_number = function() {
-      super$numerify(super$random_element(self$building_number_formats))
-    }
+    )
   )
 )

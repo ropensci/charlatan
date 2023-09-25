@@ -243,18 +243,15 @@ lorem_word_list_ja_jp <- c(
 #' x$paragraphs(3)
 #' cat(x$paragraphs(6), sep = "\n")
 #' x$text(19)
-#' x <- LoremProvider_ja_JPA$new(word_connector = " --- ")
+#' x <- LoremProvider_ja_JP$new(word_connector = " --- ")
 #' x$paragraph(4)
 LoremProvider_ja_JP <- R6::R6Class(
   inherit = LoremProvider,
   "LoremProvider_ja_JP",
-  public = list(
-    #' @field locale (character) the locale
-    locale = "ja_JP"
-  ),
   private = list(
     word_list = lorem_word_list_ja_jp,
     word_connector = lorem_word_connector_ja_jp,
-    sentence_punctuation = lorem_sentence_punctuation_ja_jp
+    sentence_punctuation = lorem_sentence_punctuation_ja_jp,
+    locale_ = "ja_JP"
   )
 )

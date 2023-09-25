@@ -22,37 +22,29 @@ Randomly, the taxonomic authority is in parentheses - which represents
 that the given authority was not the original authority.
 }
 
-\examples{
-(z <- TaxonomyProvider$new())
-z$genus()
-z$epithet()
-z$species()
-z$species(authority = TRUE)
-## FIXME - datetimeprovider slow - may be related to unix time problem
-# z$species(authority = TRUE, date = TRUE)
+\seealso{
+Other ParentProviders: 
+\code{\link{AddressProvider}},
+\code{\link{ColorProvider}},
+\code{\link{CompanyProvider}},
+\code{\link{InternetProvider}},
+\code{\link{JobProvider}},
+\code{\link{LoremProvider}},
+\code{\link{PersonProvider}},
+\code{\link{PhoneNumberProvider}},
+\code{\link{UserAgentProvider}}
 }
-\keyword{internal}
+\concept{ParentProviders}
 \section{Super classes}{
 \code{\link[charlatan:BareProvider]{charlatan::BareProvider}} -> \code{\link[charlatan:BaseProvider]{charlatan::BaseProvider}} -> \code{TaxonomyProvider}
-}
-\section{Public fields}{
-\if{html}{\out{<div class="r6-fields">}}
-\describe{
-\item{\code{locale}}{locale for this provider}
-
-\item{\code{genera}}{(character) vector of generic names}
-
-\item{\code{epithets}}{(character) vector of eptithet names}
-}
-\if{html}{\out{</div>}}
 }
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
-\item \href{#method-TaxonomyProvider-new}{\code{TaxonomyProvider$new()}}
 \item \href{#method-TaxonomyProvider-genus}{\code{TaxonomyProvider$genus()}}
 \item \href{#method-TaxonomyProvider-epithet}{\code{TaxonomyProvider$epithet()}}
 \item \href{#method-TaxonomyProvider-species}{\code{TaxonomyProvider$species()}}
+\item \href{#method-TaxonomyProvider-new}{\code{TaxonomyProvider$new()}}
 \item \href{#method-TaxonomyProvider-clone}{\code{TaxonomyProvider$clone()}}
 }
 }
@@ -73,22 +65,10 @@ z$species(authority = TRUE)
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="randomize_nb_elements"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-randomize_nb_elements'><code>charlatan::BareProvider$randomize_nb_elements()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="allowed_locales"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-allowed_locales'><code>charlatan::BaseProvider$allowed_locales()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-check_locale'><code>charlatan::BaseProvider$check_locale()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="print"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-print'><code>charlatan::BaseProvider$print()</code></a></span></li>
 </ul>
 </details>
 }}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-TaxonomyProvider-new"></a>}}
-\if{latex}{\out{\hypertarget{method-TaxonomyProvider-new}{}}}
-\subsection{Method \code{new()}}{
-Create a new \code{TaxonomyProvider} object
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{TaxonomyProvider$new()}\if{html}{\out{</div>}}
-}
-
-\subsection{Returns}{
-A new \code{TaxonomyProvider} object
-}
-}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-TaxonomyProvider-genus"></a>}}
 \if{latex}{\out{\hypertarget{method-TaxonomyProvider-genus}{}}}
@@ -128,6 +108,16 @@ this is ignored. default: \code{FALSE}}
 }
 \if{html}{\out{</div>}}
 }
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-TaxonomyProvider-new"></a>}}
+\if{latex}{\out{\hypertarget{method-TaxonomyProvider-new}{}}}
+\subsection{Method \code{new()}}{
+Initialize new Taxonomy Provider.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{TaxonomyProvider$new()}\if{html}{\out{</div>}}
+}
+
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-TaxonomyProvider-clone"></a>}}

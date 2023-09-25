@@ -7,71 +7,24 @@
 user agent methods
 }
 \seealso{
-Other en: 
-\code{\link{AddressProvider_en_GB}},
-\code{\link{AddressProvider_en_NZ}},
-\code{\link{ColorProvider_en_US}},
-\code{\link{CompanyProvider_en_US}},
-\code{\link{ElementProvider_en_US}},
-\code{\link{InternetProvider_en_AU}},
-\code{\link{InternetProvider_en_US}},
-\code{\link{JobProvider_en_US}},
-\code{\link{LoremProvider_en_US}},
-\code{\link{PersonProvider_en_GB}},
-\code{\link{PersonProvider_en_NZ}},
-\code{\link{PersonProvider_en_US}},
-\code{\link{PhoneNumberProvider_en_AU}},
-\code{\link{PhoneNumberProvider_en_CA}},
-\code{\link{PhoneNumberProvider_en_GB}},
-\code{\link{PhoneNumberProvider_en_NZ}},
-\code{\link{PhoneNumberProvider_en_US}},
-\code{\link{PhoneNumberProvider_es_MX}},
-\code{\link{PhoneNumberProvider_tr_TR}},
+Other ParentProviders: 
+\code{\link{AddressProvider}},
+\code{\link{ColorProvider}},
+\code{\link{CompanyProvider}},
+\code{\link{InternetProvider}},
+\code{\link{JobProvider}},
+\code{\link{LoremProvider}},
+\code{\link{PersonProvider}},
 \code{\link{PhoneNumberProvider}},
-\code{\link{SSNProvider_en_US}},
-\code{\link{TaxonomyProvider_en_US}},
-\code{\link{UserAgentProvider_en_US}},
-\code{\link{english-language}}
-
-Other US: 
-\code{\link{ColorProvider_en_US}},
-\code{\link{CompanyProvider_en_US}},
-\code{\link{ElementProvider_en_US}},
-\code{\link{InternetProvider_en_US}},
-\code{\link{JobProvider_en_US}},
-\code{\link{LoremProvider_en_US}},
-\code{\link{PersonProvider_en_US}},
-\code{\link{PhoneNumberProvider_en_US}},
-\code{\link{SSNProvider_en_US}},
-\code{\link{TaxonomyProvider_en_US}},
-\code{\link{UserAgentProvider_en_US}}
+\code{\link{TaxonomyProvider}}
 }
-\concept{US}
-\concept{en}
-\keyword{internal}
+\concept{ParentProviders}
 \section{Super classes}{
 \code{\link[charlatan:BareProvider]{charlatan::BareProvider}} -> \code{\link[charlatan:BaseProvider]{charlatan::BaseProvider}} -> \code{UserAgentProvider}
-}
-\section{Public fields}{
-\if{html}{\out{<div class="r6-fields">}}
-\describe{
-\item{\code{locale}}{(character) the locale}
-
-\item{\code{user_agents}}{(character) user agent browser specific strings}
-
-\item{\code{windows_platform_tokens}}{(character) windows platform tokens}
-
-\item{\code{linux_processors}}{(character) linux processor options}
-
-\item{\code{mac_processors}}{(character) mac processor options}
-}
-\if{html}{\out{</div>}}
 }
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
-\item \href{#method-UserAgentProvider-allowed_locales}{\code{UserAgentProvider$allowed_locales()}}
-\item \href{#method-UserAgentProvider-new}{\code{UserAgentProvider$new()}}
 \item \href{#method-UserAgentProvider-mac_processor}{\code{UserAgentProvider$mac_processor()}}
 \item \href{#method-UserAgentProvider-linux_processor}{\code{UserAgentProvider$linux_processor()}}
 \item \href{#method-UserAgentProvider-user_agent}{\code{UserAgentProvider$user_agent()}}
@@ -101,33 +54,13 @@ Other US:
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_int"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_int'><code>charlatan::BareProvider$random_int()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_letter"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_letter'><code>charlatan::BareProvider$random_letter()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="randomize_nb_elements"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-randomize_nb_elements'><code>charlatan::BareProvider$randomize_nb_elements()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="allowed_locales"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-allowed_locales'><code>charlatan::BaseProvider$allowed_locales()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-check_locale'><code>charlatan::BaseProvider$check_locale()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="initialize"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-initialize'><code>charlatan::BaseProvider$initialize()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="print"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-print'><code>charlatan::BaseProvider$print()</code></a></span></li>
 </ul>
 </details>
 }}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-UserAgentProvider-allowed_locales"></a>}}
-\if{latex}{\out{\hypertarget{method-UserAgentProvider-allowed_locales}{}}}
-\subsection{Method \code{allowed_locales()}}{
-fetch the allowed locales for this provider
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{UserAgentProvider$allowed_locales()}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-UserAgentProvider-new"></a>}}
-\if{latex}{\out{\hypertarget{method-UserAgentProvider-new}{}}}
-\subsection{Method \code{new()}}{
-Create a new \code{UserAgentProvider} object
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{UserAgentProvider$new()}\if{html}{\out{</div>}}
-}
-
-\subsection{Returns}{
-A new \code{UserAgentProvider} object
-}
-}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-UserAgentProvider-mac_processor"></a>}}
 \if{latex}{\out{\hypertarget{method-UserAgentProvider-mac_processor}{}}}

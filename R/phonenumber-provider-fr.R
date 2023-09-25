@@ -79,10 +79,8 @@ phone_number_formats_fr_fr <- c(
 PhoneNumberProvider_fr_CH <- R6::R6Class(
   inherit = PhoneNumberProvider,
   "PhoneNumberProvider_fr_CH",
-  public = list(
-    #' @field locale (character) the locale
-    locale = "fr_CH",
-    #' @field formats phone number formats
+  private = list(
+    locale_ = "fr_CH",
     formats = phone_number_formats_fr_ch
   )
 )
@@ -98,10 +96,8 @@ PhoneNumberProvider_fr_CH <- R6::R6Class(
 PhoneNumberProvider_fr_FR <- R6::R6Class(
   inherit = PhoneNumberProvider,
   "PhoneNumberProvider_fr_FR",
-  public = list(
-    #' @field locale (character) the locale
-    locale = "fr_FR",
-    #' @field formats phone number formats
+  private = list(
+    locale_ = "fr_FR",
     formats = phone_number_formats_fr_fr
   )
 )

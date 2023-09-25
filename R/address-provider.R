@@ -1,21 +1,24 @@
 #' @title AddressProvider
-#' @description address methods
+#' @description Object to create addresses for a locale. 
+#' Makes use of [PersonProvider] for creating street names.
+#' 
+#' @details
+#' When there is no PersonProvider for this locale, we default back to en_US.
+#' 
 #' @include datetime-provider.R
-#' @keywords internal
+#' @family ParentProviders
+#' @returns Returns an AddressProvider object.
+#' @inherit BaseProvider note
 #' @export
 AddressProvider <- R6::R6Class(
   inherit = BaseProvider,
   "AddressProvider",
   lock_objects = FALSE,
   public = list(
-    #' @field locale (character) Locale
-    locale = NULL,
-    #' @description all allowed locales
-    allowed_locales = function() private$locales,
     #' @description Create a new `AddressProvider` object
     #' @return A new `AddressProvider` object
     initialize = function() {
-      if (is.null(self$locale)) raise_class("AddressProvider")
+      super$initialize()
       self$init_person_provider(self$locale)
     },
     #' @description Create an address, a combination of street, postal code and city.
@@ -46,14 +49,6 @@ AddressProvider <- R6::R6Class(
   ),
   private = list(
     locales = c("en_US", "en_GB", "en_NZ", "nl_NL"),
-    fetch_parts = function(str) {
-      pats <- strxt(str, "[A-Za-z]+_[A-Za-z]+")[[1]]
-      res <- list()
-      for (i in seq_along(pats)) {
-        tmp <- self[[pats[i]]]
-        res[[pats[i]]] <- if (is.function(tmp)) tmp() else super$random_element(tmp)
-      }
-      return(res)
-    }
+    provider_ = "AddressProvider"
   )
 )

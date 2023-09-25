@@ -8,36 +8,24 @@ BaseProvider
 
 BaseProvider
 }
+\note{
+You cannot instantiate the Parent providers. You must use one of
+the localized one.
+}
 \examples{
 (x <- BaseProvider$new())
 
 x$numerify("#\%\%asdf221?")
 x$lexify("#\%\%asdf221?")
 x$bothify("#\%\%asdf221?")
-
-z <- PhoneNumberProvider$new()
-x$numerify(z$render())
-
-x$random_element(letters)
-x$random_int()
-x$random_digit()
-x$random_digit_not_zero()
-x$random_digit_or_empty()
-x$random_digit_not_zero_or_empty()
-x$random_letter()
-x$check_locale("es_ES")
-## fails
-# x$check_locale("es_EQ")
-
-x$randomize_nb_elements()
 }
 \section{Super class}{
 \code{\link[charlatan:BareProvider]{charlatan::BareProvider}} -> \code{BaseProvider}
 }
-\section{Public fields}{
-\if{html}{\out{<div class="r6-fields">}}
+\section{Active bindings}{
+\if{html}{\out{<div class="r6-active-bindings">}}
 \describe{
-\item{\code{locale}}{(character) xxx}
+\item{\code{locale}}{(character) locale of this Provider.}
 }
 \if{html}{\out{</div>}}
 }
@@ -46,6 +34,8 @@ x$randomize_nb_elements()
 \itemize{
 \item \href{#method-BaseProvider-check_locale}{\code{BaseProvider$check_locale()}}
 \item \href{#method-BaseProvider-allowed_locales}{\code{BaseProvider$allowed_locales()}}
+\item \href{#method-BaseProvider-new}{\code{BaseProvider$new()}}
+\item \href{#method-BaseProvider-print}{\code{BaseProvider$print()}}
 \item \href{#method-BaseProvider-clone}{\code{BaseProvider$clone()}}
 }
 }
@@ -97,6 +87,36 @@ fetch the allowed locales for this provider
 \if{html}{\out{<div class="r">}}\preformatted{BaseProvider$allowed_locales()}\if{html}{\out{</div>}}
 }
 
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-BaseProvider-new"></a>}}
+\if{latex}{\out{\hypertarget{method-BaseProvider-new}{}}}
+\subsection{Method \code{new()}}{
+Create a new Provider object
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{BaseProvider$new()}\if{html}{\out{</div>}}
+}
+
+\subsection{Returns}{
+A new object
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-BaseProvider-print"></a>}}
+\if{latex}{\out{\hypertarget{method-BaseProvider-print}{}}}
+\subsection{Method \code{print()}}{
+Print method for provider
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{BaseProvider$print(...)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{...}}{ignored by this method}
+}
+\if{html}{\out{</div>}}
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-BaseProvider-clone"></a>}}

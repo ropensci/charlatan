@@ -6,7 +6,7 @@ charlatan
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![R-check](https://github.com/ropensci/charlatan/workflows/R-check/badge.svg)](https://github.com/ropensci/charlatan/actions?query=workflow%3AR-check)
 [![cran checks](https://badges.cranchecks.info/worst/charlatan.svg)](https://cloud.r-project.org/web/checks/check_results_charlatan.html)
-[![cran version](https://www.r-pkg.org/badges/version/charlatan)](https://cran.r-project.org/package=charlatan)
+[![cran status](https://www.r-pkg.org/badges/version/charlatan)](https://cran.r-project.org/package=charlatan)
 [![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/charlatan)](https://github.com/r-hub/cranlogs.app)
 [![](https://badges.ropensci.org/94_status.svg)](https://github.com/ropensci/software-review/issues/94)
 
@@ -45,7 +45,7 @@ sequence data
 
 Reasons to use `charlatan`:
 
-* Lite weight, few dependencies
+* Light weight, few dependencies
 * Relatively comprehensive types of data, and more being added
 * Comprehensive set of languages supported, more being added
 * Useful R features such as creating entire fake data.frame's
@@ -144,7 +144,7 @@ ch_generate()
 
 
 ```r
-ch_generate('job', 'phone_number', n = 30)
+ch_generate("job", "phone_number", n = 30)
 #> # A tibble: 30 × 2
 #>    job                                 phone_number      
 #>    <chr>                               <chr>             
@@ -158,8 +158,7 @@ ch_generate('job', 'phone_number', n = 30)
 #>  8 Lobbyist                            (976)726-0690x1803
 #>  9 Cytogeneticist                      008.111.9486      
 #> 10 Designer, blown glass/stained glass 387-870-5348      
-#> # … with 20 more rows
-#> # ℹ Use `print(n = ...)` to see more rows
+#> # ℹ 20 more rows
 ```
 
 
@@ -256,6 +255,8 @@ ch_credit_card_security_code(10)
 * Scott Chamberlain (https://github.com/sckott)
 * Kyle Voytovich (https://github.com/kylevoyto)
 * Martin Pedersen (https://github.com/MartinMSPedersen)
+
+If you would like to contribute, see [CONTRIBUTING (on github)](.github/CONTRIBUTING.md)
 
 ## similar art
 

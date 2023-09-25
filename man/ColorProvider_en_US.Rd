@@ -22,6 +22,7 @@ Other en:
 \code{\link{AddressProvider_en_NZ}},
 \code{\link{CompanyProvider_en_US}},
 \code{\link{ElementProvider_en_US}},
+\code{\link{FileProvider_en_US}},
 \code{\link{InternetProvider_en_AU}},
 \code{\link{InternetProvider_en_US}},
 \code{\link{JobProvider_en_US}},
@@ -36,16 +37,15 @@ Other en:
 \code{\link{PhoneNumberProvider_en_US}},
 \code{\link{PhoneNumberProvider_es_MX}},
 \code{\link{PhoneNumberProvider_tr_TR}},
-\code{\link{PhoneNumberProvider}},
 \code{\link{SSNProvider_en_US}},
 \code{\link{TaxonomyProvider_en_US}},
 \code{\link{UserAgentProvider_en_US}},
-\code{\link{UserAgentProvider}},
 \code{\link{english-language}}
 
 Other US: 
 \code{\link{CompanyProvider_en_US}},
 \code{\link{ElementProvider_en_US}},
+\code{\link{FileProvider_en_US}},
 \code{\link{InternetProvider_en_US}},
 \code{\link{JobProvider_en_US}},
 \code{\link{LoremProvider_en_US}},
@@ -53,24 +53,12 @@ Other US:
 \code{\link{PhoneNumberProvider_en_US}},
 \code{\link{SSNProvider_en_US}},
 \code{\link{TaxonomyProvider_en_US}},
-\code{\link{UserAgentProvider_en_US}},
-\code{\link{UserAgentProvider}}
+\code{\link{UserAgentProvider_en_US}}
 }
 \concept{US}
 \concept{en}
 \section{Super classes}{
 \code{\link[charlatan:BareProvider]{charlatan::BareProvider}} -> \code{\link[charlatan:BaseProvider]{charlatan::BaseProvider}} -> \code{\link[charlatan:ColorProvider]{charlatan::ColorProvider}} -> \code{ColorProvider_en_US}
-}
-\section{Public fields}{
-\if{html}{\out{<div class="r6-fields">}}
-\describe{
-\item{\code{locale}}{(character) xxx}
-
-\item{\code{all_colors}}{A vector with named list items containing the name of the color and the hex value.}
-
-\item{\code{safe_colors}}{safe to use colors.}
-}
-\if{html}{\out{</div>}}
 }
 \section{Methods}{
 \subsection{Public methods}{
@@ -93,12 +81,13 @@ Other US:
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_int"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_int'><code>charlatan::BareProvider$random_int()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_letter"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_letter'><code>charlatan::BareProvider$random_letter()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="randomize_nb_elements"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-randomize_nb_elements'><code>charlatan::BareProvider$randomize_nb_elements()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="allowed_locales"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-allowed_locales'><code>charlatan::BaseProvider$allowed_locales()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-check_locale'><code>charlatan::BaseProvider$check_locale()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="ColorProvider" data-id="allowed_locales"><a href='../../charlatan/html/ColorProvider.html#method-ColorProvider-allowed_locales'><code>charlatan::ColorProvider$allowed_locales()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="initialize"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-initialize'><code>charlatan::BaseProvider$initialize()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="print"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-print'><code>charlatan::BaseProvider$print()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="ColorProvider" data-id="color_name"><a href='../../charlatan/html/ColorProvider.html#method-ColorProvider-color_name'><code>charlatan::ColorProvider$color_name()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="ColorProvider" data-id="hex_color"><a href='../../charlatan/html/ColorProvider.html#method-ColorProvider-hex_color'><code>charlatan::ColorProvider$hex_color()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="ColorProvider" data-id="hex_from_name"><a href='../../charlatan/html/ColorProvider.html#method-ColorProvider-hex_from_name'><code>charlatan::ColorProvider$hex_from_name()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="ColorProvider" data-id="initialize"><a href='../../charlatan/html/ColorProvider.html#method-ColorProvider-initialize'><code>charlatan::ColorProvider$initialize()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="ColorProvider" data-id="rgb_color"><a href='../../charlatan/html/ColorProvider.html#method-ColorProvider-rgb_color'><code>charlatan::ColorProvider$rgb_color()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="ColorProvider" data-id="rgb_css_color"><a href='../../charlatan/html/ColorProvider.html#method-ColorProvider-rgb_css_color'><code>charlatan::ColorProvider$rgb_css_color()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="ColorProvider" data-id="safe_color_name"><a href='../../charlatan/html/ColorProvider.html#method-ColorProvider-safe_color_name'><code>charlatan::ColorProvider$safe_color_name()</code></a></span></li>

@@ -1,56 +1,25 @@
 
 #' @title UserAgentProvider
 #' @description user agent methods
-#' @keywords internal
+#' @family ParentProviders
 #' @export
-#' @family en
-#' @family US
 UserAgentProvider <- R6::R6Class(
   inherit = BaseProvider,
   "UserAgentProvider",
   public = list(
-    #' @field locale (character) the locale
-    locale = NULL,
-    #' @field user_agents (character) user agent browser specific strings
-    user_agents = c(
-      "chrome", "firefox", "internet_explorer", "opera", "safari"
-    ),
-    #' @field windows_platform_tokens (character) windows platform tokens
-    windows_platform_tokens = c(
-      "Windows 95", "Windows 98", "Windows 98; Win 9x 4.90", "Windows CE",
-      "Windows NT 4.0", "Windows NT 5.0", "Windows NT 5.01",
-      "Windows NT 5.1", "Windows NT 5.2", "Windows NT 6.0", "Windows NT 6.1",
-      "Windows NT 6.2"
-    ),
-    #' @field linux_processors (character) linux processor options
-    linux_processors = c("i686", "x86_64"),
-    #' @field mac_processors (character) mac processor options
-    mac_processors = c("Intel", "PPC", "U; Intel", "U; PPC"),
-
-    #' @description fetch the allowed locales for this provider
-    allowed_locales = function() private$locales,
-
-    #' @description Create a new `UserAgentProvider` object
-    #' @return A new `UserAgentProvider` object
-    initialize = function() {
-      if (is.null(self$locale)) {
-        raise_class("UserAgentProvider")
-      }
-    },
-
     #' @description a mac processor
     mac_processor = function() {
-      super$random_element(self$mac_processors)
+      super$random_element(private$mac_processors)
     },
 
     #' @description a linux processor
     linux_processor = function() {
-      super$random_element(self$linux_processors)
+      super$random_element(private$linux_processors)
     },
 
     #' @description a random user agent string
     user_agent = function() {
-      name <- super$random_element(self$user_agents)
+      name <- super$random_element(private$user_agents)
       self[[name]]()
     },
 
@@ -212,25 +181,41 @@ UserAgentProvider <- R6::R6Class(
 
     #' @description a windows platform token
     windows_platform_token = function() {
-      super$random_element(self$windows_platform_tokens)
+      super$random_element(private$windows_platform_tokens)
     },
 
     #' @description a linux platform token
     linux_platform_token = function() {
-      paste0("X11; Linux ", super$random_element(self$linux_processors))
+      paste0("X11; Linux ", super$random_element(private$linux_processors))
     },
 
     #' @description a mac platform token
     mac_platform_token = function() {
       sprintf(
         "Macintosh; %s Mac OS X 10_%s_%s",
-        super$random_element(self$mac_processors),
+        super$random_element(private$mac_processors),
         super$random_int(5, 12),
         super$random_int(0, 9)
       )
     }
   ),
   private = list(
-    locales = c("en_US")
+    locales = c("en_US"),
+    # user agent browser specific strings
+    user_agents = c(
+      "chrome", "firefox", "internet_explorer", "opera", "safari"
+    ),
+    # windows platform tokens
+    windows_platform_tokens = c(
+      "Windows 95", "Windows 98", "Windows 98; Win 9x 4.90", "Windows CE",
+      "Windows NT 4.0", "Windows NT 5.0", "Windows NT 5.01",
+      "Windows NT 5.1", "Windows NT 5.2", "Windows NT 6.0", "Windows NT 6.1",
+      "Windows NT 6.2"
+    ),
+    # linux processor options
+    linux_processors = c("i686", "x86_64"),
+    # mac processor options
+    mac_processors = c("Intel", "PPC", "U; Intel", "U; PPC"),
+    provider_ = "UserAgentProvider"
   )
 )

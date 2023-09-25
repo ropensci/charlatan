@@ -11,10 +11,50 @@
 #' x$null_boolean()
 MiscProvider <- R6::R6Class(
   "MiscProvider",
+  inherit = BareProvider,
   public = list(
+
+    #' @description get a random boolean, `TRUE` or `FALSE`
+    #' @param chance_of_getting_true (integer) an integer, default: 50
+    boolean = function(chance_of_getting_true = 50) {
+      super$random_int(1, 100) <= chance_of_getting_true
+    },
+
+    #' @description get a random boolean, `TRUE` or `FALSE`, or NULL
+    null_boolean = function() {
+      take <- as.character(super$random_int(-1, 1))
+      list(`0` = NULL, `1` = TRUE, `-1` = FALSE)[[take]]
+    },
+
+    # def binary(self, length=(1 * 1024 * 1024)):
+    #     """ Returns random binary blob.
+
+    #     Default blob size is 1 Mb.
+    #     """
+    #     blob = [self.generator.random.randrange(256) for o in range(length)]
+    #     return bytes(blob) if sys.version_info[0] >= 3 else bytearray(blob)
+
+    #' @description get a random locale
+    locale = function() {
+      lc <- self$language_code()
+      paste0(lc, "_", super$random_element(private$language_locale_codes_[[lc]]))
+    },
+
+    #' @description random language code
+    language_code = function() {
+      super$random_element(names(private$language_locale_codes_))
+    }
+  ),
+  active = list(
     # Locales supported by Linux Mint from `/usr/share/i18n/SUPPORTED`
     #' @field language_locale_codes (list) locale codes by locale family
-    language_locale_codes = list(
+    language_locale_codes = function() {
+      private$language_locale_codes_
+    }
+  ),
+  private = list(
+    provider_ = "MiscProvider",
+    language_locale_codes_ = list(
       "aa" = c("DJ", "ER", "ET"),
       "af" = c("ZA"),
       "ak" = c("GH"),
@@ -207,37 +247,6 @@ MiscProvider <- R6::R6Class(
       "yue" = c("HK"),
       "zh" = c("CN", "HK", "SG", "TW"),
       "zu" = c("ZA")
-    ),
-
-    #' @description get a random boolean, `TRUE` or `FALSE`
-    #' @param chance_of_getting_true (integer) an integer, default: 50
-    boolean = function(chance_of_getting_true = 50) {
-      super$random_int(1, 100) <= chance_of_getting_true
-    },
-
-    #' @description get a random boolean, `TRUE` or `FALSE`, or NULL
-    null_boolean = function() {
-      take <- as.character(super$random_int(-1, 1))
-      list(`0` = NULL, `1` = TRUE, `-1` = FALSE)[[take]]
-    },
-
-    # def binary(self, length=(1 * 1024 * 1024)):
-    #     """ Returns random binary blob.
-
-    #     Default blob size is 1 Mb.
-    #     """
-    #     blob = [self.generator.random.randrange(256) for o in range(length)]
-    #     return bytes(blob) if sys.version_info[0] >= 3 else bytearray(blob)
-
-    #' @description get a random locale
-    locale = function() {
-      lc <- self$language_code()
-      paste0(lc, "_", super$random_element(self$language_locale_codes[[lc]]))
-    },
-
-    #' @description random language code
-    language_code = function() {
-      super$random_element(names(self$language_locale_codes))
-    }
+    )
   )
 )

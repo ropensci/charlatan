@@ -17,8 +17,6 @@ CompanyProvider_it_IT <- R6::R6Class(
   "CompanyProvider_it_IT",
   inherit = CompanyProvider,
   public = list(
-    #' @field locale (character) xxx
-    locale = "it_IT",
 
     # add data here, like
     #' @field catch_phrase_words (character) xxx
@@ -202,5 +200,8 @@ CompanyProvider_it_IT <- R6::R6Class(
       )
       whisker::whisker.render(template = pattern, data = dat)
     }
+  ),
+  private = list(
+    locale_ = "it_IT"
   )
 )

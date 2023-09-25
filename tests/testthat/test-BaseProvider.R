@@ -6,6 +6,9 @@ test_that("BaseProvider works", {
   expect_is(aa, "BaseProvider")
   expect_is(aa, "R6")
 
+  expect_equal(aa$provider, "BaseProvider")
+  expect_true(is.null(aa$locale))
+
   expect_is(aa$random_element, "function")
   expect_is(aa$random_element(letters), "character")
   expect_true(aa$random_element(letters) %in% letters)
@@ -45,4 +48,11 @@ test_that("BaseProvider works", {
 test_that("random_element doesn't expand input into a range", {
   expect_equal(length(aa$random_element(10)), 1)
   expect_equal(aa$random_element(10), 10)
+})
+
+context("BareProvider")
+barep <- BareProvider$new()
+
+test_that("BareProvider basic functionality", {
+  expect_type(barep$provider, "character")
 })

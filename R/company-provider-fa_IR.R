@@ -6,7 +6,7 @@
 #' @family fa
 #' @family IR
 #' @examples
-#' x <- company("fa_IR")
+#' x <- CompanyProvider_fa_IR$new()
 #' x$locale
 #' x$company()
 #' x$catch_phrase()
@@ -16,8 +16,6 @@ CompanyProvider_fa_IR <- R6::R6Class(
   "CompanyProvider_fa_IR",
   inherit = CompanyProvider,
   public = list(
-    #' @field locale (character) xxx
-    locale = "fa_IR",
     #' @field  company_names vector of company names.
     company_names = c(
       "\u06af\u0631\u0648\u0647 \u0633\u06cc\u0645\u0627\u0646",
@@ -1078,5 +1076,8 @@ CompanyProvider_fa_IR <- R6::R6Class(
     company = function() {
       super$random_element(self$company_names)
     }
+  ),
+  private = list(
+    locale_ = "fa_IR"
   )
 )

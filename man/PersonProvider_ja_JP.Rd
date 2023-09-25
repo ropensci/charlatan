@@ -38,28 +38,7 @@ Other JP:
 \concept{JP}
 \concept{ja}
 \section{Super classes}{
-\code{\link[charlatan:BareProvider]{charlatan::BareProvider}} -> \code{\link[charlatan:BaseProvider]{charlatan::BaseProvider}} -> \code{charlatan::PersonProvider} -> \code{PersonProvider_ja_JP}
-}
-\section{Public fields}{
-\if{html}{\out{<div class="r6-fields">}}
-\describe{
-\item{\code{locale}}{(character) the locale}
-
-\item{\code{formats}}{(character) person name formats}
-
-\item{\code{person}}{(character) person name data}
-
-\item{\code{kana_formats}}{different formats}
-
-\item{\code{first_kana_names}}{first names (kana)}
-
-\item{\code{last_kana_names}}{last names (kana)}
-
-\item{\code{first_kana_names_male}}{first names male (kana)}
-
-\item{\code{first_kana_names_female}}{first names female (kana)}
-}
-\if{html}{\out{</div>}}
+\code{\link[charlatan:BareProvider]{charlatan::BareProvider}} -> \code{\link[charlatan:BaseProvider]{charlatan::BaseProvider}} -> \code{\link[charlatan:PersonProvider]{charlatan::PersonProvider}} -> \code{PersonProvider_ja_JP}
 }
 \section{Methods}{
 \subsection{Public methods}{
@@ -87,8 +66,10 @@ Other JP:
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_int"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_int'><code>charlatan::BareProvider$random_int()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_letter"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_letter'><code>charlatan::BareProvider$random_letter()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="randomize_nb_elements"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-randomize_nb_elements'><code>charlatan::BareProvider$randomize_nb_elements()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="allowed_locales"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-allowed_locales'><code>charlatan::BaseProvider$allowed_locales()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-check_locale'><code>charlatan::BaseProvider$check_locale()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="PersonProvider" data-id="allowed_locales"><a href='../../charlatan/html/PersonProvider.html#method-PersonProvider-allowed_locales'><code>charlatan::PersonProvider$allowed_locales()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="print"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-print'><code>charlatan::BaseProvider$print()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="PersonProvider" data-id="change_messy"><a href='../../charlatan/html/PersonProvider.html#method-PersonProvider-change_messy'><code>charlatan::PersonProvider$change_messy()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="PersonProvider" data-id="first_name"><a href='../../charlatan/html/PersonProvider.html#method-PersonProvider-first_name'><code>charlatan::PersonProvider$first_name()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="PersonProvider" data-id="first_name_female"><a href='../../charlatan/html/PersonProvider.html#method-PersonProvider-first_name_female'><code>charlatan::PersonProvider$first_name_female()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="PersonProvider" data-id="first_name_male"><a href='../../charlatan/html/PersonProvider.html#method-PersonProvider-first_name_male'><code>charlatan::PersonProvider$first_name_male()</code></a></span></li>

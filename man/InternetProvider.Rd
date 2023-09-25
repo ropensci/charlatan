@@ -5,150 +5,31 @@
 \title{InternetProvider}
 \description{
 internet methods, e.g., email addresses, domain names
-}
-\note{
+
 Note that if a locale you set doesn't have a locale specific set
 of data for \link{PersonProvider} or \link{CompanyProvider} we fall back to
 \code{en_US}
+Also note that you
 }
-\examples{
-(x <- InternetProvider$new())
-x$locale
-
-# uri/url/tld/etc.
-x$tld()
-x$slug()
-x$domain_word()
-x$domain_name()
-x$domain_name(levels = 2)
-x$domain_name(levels = 3)
-x$domain_name(levels = 10)
-## url's
-x$url()
-x$url(schemes = c("hbbp", "hggp"))
-x$image_url()
-## uri's
-x$uri()
-x$uri_page()
-x$uri_extension()
-x$uri_path()
-x$uri_path(deep = 1)
-x$uri_path(deep = 2)
-x$uri_path(deep = 3)
-x$uri_path(deep = 4)
-
-# user name
-x$user_name()
-
-# emails
-x$email()
-x$safe_email()
-x$free_email()
-x$company_email()
-x$free_email_domain()
-x$ascii_email()
-x$ascii_safe_email()
-x$ascii_free_email()
-x$ascii_company_email()
-
-# addresses, mac, ipv4, ipv6
-x$mac_address()
-if (requireNamespace("ipaddress", quietly = TRUE)) {
-  x$ipv4()
-  x$ipv4(network = TRUE)
-  x$ipv6()
-  x$ipv6(network = TRUE)
+\seealso{
+Other ParentProviders: 
+\code{\link{AddressProvider}},
+\code{\link{ColorProvider}},
+\code{\link{CompanyProvider}},
+\code{\link{JobProvider}},
+\code{\link{LoremProvider}},
+\code{\link{PersonProvider}},
+\code{\link{PhoneNumberProvider}},
+\code{\link{TaxonomyProvider}},
+\code{\link{UserAgentProvider}}
 }
-
-# different locales
-(x <- InternetProvider$new(locale = "en_AU"))
-x$locale
-x$tld()
-x$email()
-x$free_email_domain()
-
-(x <- InternetProvider$new(locale = "de_DE"))
-x$locale
-x$tld()
-x$uri()
-x$email()
-x$ascii_email()
-
-(x <- InternetProvider$new(locale = "bg_BG"))
-x$locale
-x$tld()
-x$uri()
-x$url()
-x$user_name()
-x$email()
-x$ascii_email()
-
-(x <- InternetProvider$new(locale = "cs_CZ"))
-x$url()
-x$user_name()
-x$email()
-
-(x <- InternetProvider$new(locale = "en_NZ"))
-x$free_email_domain()
-x$tld()
-
-(x <- InternetProvider$new(locale = "fa_IR"))
-x$url()
-
-(x <- InternetProvider$new(locale = "fr_FR"))
-x$url()
-x$user_name()
-x$email()
-
-(x <- InternetProvider$new(locale = "hr_HR"))
-x$url()
-x$user_name()
-x$email()
-
-# convert a string to ascii with stringi pkg
-if (requireNamespace("stringi", quietly = TRUE)) {
-  x$to_ascii("anï")
-}
-}
-\keyword{internal}
+\concept{ParentProviders}
 \section{Super classes}{
 \code{\link[charlatan:BareProvider]{charlatan::BareProvider}} -> \code{\link[charlatan:BaseProvider]{charlatan::BaseProvider}} -> \code{InternetProvider}
-}
-\section{Public fields}{
-\if{html}{\out{<div class="r6-fields">}}
-\describe{
-\item{\code{locale}}{(character) the locale}
-
-\item{\code{safe_email_tlds}}{(character) safe email tlds}
-
-\item{\code{free_email_domains}}{(character) free email tlds}
-
-\item{\code{tlds}}{(character) tlds}
-
-\item{\code{uri_pages}}{(character) uri pages}
-
-\item{\code{uri_paths}}{(character) uri paths}
-
-\item{\code{uri_extensions}}{(character) uri extensions}
-
-\item{\code{user_name_formats}}{(character) user name formats}
-
-\item{\code{email_formats}}{(character) email formats}
-
-\item{\code{url_formats}}{(character) url formats}
-
-\item{\code{uri_formats}}{(character) uri formats}
-
-\item{\code{image_placeholder_services}}{(character) image uri formats}
-
-\item{\code{replacements}}{(list) a list}
-}
-\if{html}{\out{</div>}}
 }
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
-\item \href{#method-InternetProvider-allowed_locales}{\code{InternetProvider$allowed_locales()}}
 \item \href{#method-InternetProvider-new}{\code{InternetProvider$new()}}
 \item \href{#method-InternetProvider-to_ascii}{\code{InternetProvider$to_ascii()}}
 \item \href{#method-InternetProvider-email}{\code{InternetProvider$email()}}
@@ -192,31 +73,23 @@ if (requireNamespace("stringi", quietly = TRUE)) {
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_int"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_int'><code>charlatan::BareProvider$random_int()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_letter"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_letter'><code>charlatan::BareProvider$random_letter()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="randomize_nb_elements"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-randomize_nb_elements'><code>charlatan::BareProvider$randomize_nb_elements()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="allowed_locales"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-allowed_locales'><code>charlatan::BaseProvider$allowed_locales()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-check_locale'><code>charlatan::BaseProvider$check_locale()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="print"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-print'><code>charlatan::BaseProvider$print()</code></a></span></li>
 </ul>
 </details>
 }}
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-InternetProvider-allowed_locales"></a>}}
-\if{latex}{\out{\hypertarget{method-InternetProvider-allowed_locales}{}}}
-\subsection{Method \code{allowed_locales()}}{
-fetch the allowed locales for this provider
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{InternetProvider$allowed_locales()}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-InternetProvider-new"></a>}}
 \if{latex}{\out{\hypertarget{method-InternetProvider-new}{}}}
 \subsection{Method \code{new()}}{
-Create a new \code{InternetProvider} object
+Create a new Provider object
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{InternetProvider$new()}\if{html}{\out{</div>}}
 }
 
 \subsection{Returns}{
-A new \code{InternetProvider} object
+A new object
 }
 }
 \if{html}{\out{<hr>}}

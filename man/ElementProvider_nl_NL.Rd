@@ -37,15 +37,6 @@ Other NL:
 \section{Super classes}{
 \code{\link[charlatan:BareProvider]{charlatan::BareProvider}} -> \code{\link[charlatan:BaseProvider]{charlatan::BaseProvider}} -> \code{\link[charlatan:ElementProvider]{charlatan::ElementProvider}} -> \code{ElementProvider_nl_NL}
 }
-\section{Public fields}{
-\if{html}{\out{<div class="r6-fields">}}
-\describe{
-\item{\code{locale}}{(character) xxx}
-
-\item{\code{elementvec}}{vector of element names}
-}
-\if{html}{\out{</div>}}
-}
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
@@ -69,10 +60,11 @@ Other NL:
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="randomize_nb_elements"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-randomize_nb_elements'><code>charlatan::BareProvider$randomize_nb_elements()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="allowed_locales"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-allowed_locales'><code>charlatan::BaseProvider$allowed_locales()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-check_locale'><code>charlatan::BaseProvider$check_locale()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="initialize"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-initialize'><code>charlatan::BaseProvider$initialize()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="print"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-print'><code>charlatan::BaseProvider$print()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="ElementProvider" data-id="element"><a href='../../charlatan/html/ElementProvider.html#method-ElementProvider-element'><code>charlatan::ElementProvider$element()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="ElementProvider" data-id="element_by_number"><a href='../../charlatan/html/ElementProvider.html#method-ElementProvider-element_by_number'><code>charlatan::ElementProvider$element_by_number()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="ElementProvider" data-id="elements"><a href='../../charlatan/html/ElementProvider.html#method-ElementProvider-elements'><code>charlatan::ElementProvider$elements()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="ElementProvider" data-id="initialize"><a href='../../charlatan/html/ElementProvider.html#method-ElementProvider-initialize'><code>charlatan::ElementProvider$initialize()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="ElementProvider" data-id="symbol"><a href='../../charlatan/html/ElementProvider.html#method-ElementProvider-symbol'><code>charlatan::ElementProvider$symbol()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="ElementProvider" data-id="symbol_by_number"><a href='../../charlatan/html/ElementProvider.html#method-ElementProvider-symbol_by_number'><code>charlatan::ElementProvider$symbol_by_number()</code></a></span></li>
 </ul>

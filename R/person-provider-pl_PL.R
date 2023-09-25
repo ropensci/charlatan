@@ -4083,14 +4083,9 @@ person_pl_pl <- list(
   prefixes = person_prefixes_pl_pl
 )
 
-# TODO
-# @classmethod
-# def last_name(cls):
-#   return cls.random_element(cls.unisex_last_names)
-
 
 #' @title Person Provider for Polish (Poland)
-#' @description person names methods
+#' @inherit PersonProvider description details return
 #' @export
 #' @family pl
 #' @family PL
@@ -4112,12 +4107,12 @@ person_pl_pl <- list(
 PersonProvider_pl_PL <- R6::R6Class(
   "PersonProvider_pl_PL",
   inherit = PersonProvider,
-  public = list(
-    #' @field locale (character) the locale
-    locale = "pl_PL",
-    #' @field formats (character) person name formats
+  private = list(
+
+    # person name formats
     formats = person_formats_pl_pl,
-    #' @field person (character) person name data
-    person = person_pl_pl
+    # person name data
+    persons = person_pl_pl,
+    locale_ = "pl_PL"
   )
 )

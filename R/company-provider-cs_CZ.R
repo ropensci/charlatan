@@ -14,8 +14,6 @@ CompanyProvider_cs_CZ <- R6::R6Class(
   "CompanyProvider_cs_CZ",
   inherit = CompanyProvider,
   public = list(
-    #' @field locale locale for this provider
-    locale = "cs_CZ",
     # add data here, like
     #' @field company_formats formats for company names.
     company_formats = c(
@@ -27,5 +25,8 @@ CompanyProvider_cs_CZ <- R6::R6Class(
     company_suffixes = c(
       "s.r.o.", "o.s.", "a.s."
     )
+  ),
+  private = list(
+    locale_ = "cs_CZ"
   )
 )

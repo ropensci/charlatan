@@ -1805,12 +1805,11 @@ person_bg_bg <- list(
 PersonProvider_bg_BG <- R6::R6Class(
   "PersonProvider_bg_BG",
   inherit = PersonProvider,
-  public = list(
-    #' @field locale (character) the locale
-    locale = "bg_BG",
-    #' @field formats (character) person name formats
+  private = list(
+    # person name formats
     formats = person_formats_bg_bg,
-    #' @field person (character) person name data
-    person = person_bg_bg
+    # person name data
+    persons = person_bg_bg,
+    locale_ = "bg_BG"
   )
 )

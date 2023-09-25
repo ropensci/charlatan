@@ -29,18 +29,47 @@ test_that("all localized providers have their locale set", {
     if (inherit_from_base_provider(provider)) {
       # the bare class (not localized) must Error when you try to
       # activate it.
+      # print(provider)
       expect_error(
         eval(parse(text = provider))$new(),
-        regexp = "You cannot instantiate this bare class of"
+        regexp = "You cannot instantiate this Parent Provider:"
       )
       # if a provider inherits from BaseProvider it MUST have
       # an en_US locale.
       prov <- cr_loc_spec_provider(provider, "en_US")
       # make sure every locale has $locale filled
       for (loc in prov$allowed_locales()) {
-        provider_test <- cr_loc_spec_provider(provider, loc)
+        # print(loc)
+        suppressWarnings(
+          # some providers call others, if those do not exist
+          # we default to en_US. But it is a bit annoying in the
+          # tests.
+          {
+            provider_test <- cr_loc_spec_provider(provider, loc)
+          }
+        )
+        # must have a locale, and a provider set.
         expect_identical(provider_test$locale, loc)
+        expect_identical(provider_test$provider, provider)
+        # must have a check_locale, allowed_locales method.
+        expect_error(provider_test$check_locale("en_OO"))
+        thing <- provider_test$allowed_locales()
+        expect_true(is.vector(thing))
+        expect_gt(length(thing), 0)
       }
+    }
+  }
+})
+
+test_that("All non-localized providers inherit from BareProvider", {
+  for (provider in charlatan::available_providers) {
+    # All nonlocalized providers only:
+    if (!inherit_from_base_provider(provider)) {
+      # should inherit from bare provider
+      # print(provider)
+      prov <- eval(parse(text = provider))$new()
+      expect_true("BareProvider" %in% class(prov), label = provider)
+      expect_equal(prov$provider, provider, label = provider)
     }
   }
 })

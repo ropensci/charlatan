@@ -650,15 +650,13 @@ job_formats_en_us <- c(
 #' @family US
 #' @export
 #' @examples
-#' x <- JobProvider_en_USK$new()
+#' x <- JobProvider_en_US$new()
 #' x$render()
 JobProvider_en_US <- R6::R6Class(
   inherit = JobProvider,
   "JobProvider_en_US",
-  public = list(
-    #' @field locale (character) the locale
-    locale = "en_US",
-    #' @field formats (character) vector of possible formats
+  private = list(
+    locale_ = "en_US",
     formats = job_formats_en_us
   )
 )

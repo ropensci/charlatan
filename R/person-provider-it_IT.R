@@ -127,12 +127,9 @@ person_it_it <- list(
 PersonProvider_it_IT <- R6::R6Class(
   "PersonProvider_it_IT",
   inherit = PersonProvider,
-  public = list(
-    #' @field locale (character) the locale
-    locale = "it_IT",
-    #' @field formats (character) person name formats
+  private = list(
     formats = person_formats_it_it,
-    #' @field person (character) person name data
-    person = person_it_it
+    persons = person_it_it,
+    locale_ = "it_IT"
   )
 )
