@@ -35,13 +35,14 @@ AddressProvider_en_NZ <- R6::R6Class(
       pattern <- super$random_element(private$city_formats)
       dat <- list(
         # , , te_reo_first, te_reo_ending, te_reo_part
+
         first_name = private$pp$first_name(),
         last_name = private$pp$last_name(),
-        city_suffix = super$random_element(private$city_suffix),
-        city_prefix = super$random_element(private$city_prefix),
+        city_suffix = super$random_element(private$street_suffixes),
+        city_prefix = super$random_element(private$city_prefixes),
         te_reo_first = super$random_element(private$te_reo_first),
         te_reo_ending = super$random_element(private$te_reo_ending),
-        te_reo_part = super$random_element(private$te_reo_part)
+        te_reo_part = super$random_element(private$te_reo_parts)
       )
       whisker::whisker.render(pattern, data = dat)
     },
@@ -54,7 +55,7 @@ AddressProvider_en_NZ <- R6::R6Class(
         street_suffix = super$random_element(private$street_suffixes),
         te_reo_first = super$random_element(private$te_reo_first),
         te_reo_ending = super$random_element(private$te_reo_ending),
-        re_reo_part = super$random_element(private$re_reo_part)
+        re_reo_part = super$random_element(private$re_reo_parts)
       )
       whisker::whisker.render(pattern, data = dat)
     },
@@ -147,7 +148,7 @@ AddressProvider_en_NZ <- R6::R6Class(
     ),
 
     # Māori nouns commonly present in placenames.
-    te_reo_parts = c(
+    te_reo_part = c(
       "ara",
       "awa",
       "horo",

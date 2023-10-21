@@ -45,6 +45,7 @@ test_that("all locales have `company()` function", {
   for (loc in CompanyProvider_en_US$new()$allowed_locales()) {
     aa <- cr_loc_spec_provider("CompanyProvider", locale = loc)
     expect_gt(nchar(aa$company()), 0)
+    expect_false(aa$company() == "",label = sprintf("company - %s", loc))
     expect_type(aa$company, "closure")
   }
 })

@@ -28,20 +28,21 @@ test_that("every_locale has the same basic functions", {
     expect_false(bb$address() == "")
     expect_is(bb$city, "function")
     expect_type(bb$city(), "character")
-    expect_false(bb$city() == "")
+    expect_false(bb$city() == "",label = sprintf("city - %s", locale))
     expect_is(bb$street_address, "function")
     expect_type(bb$street_address(), "character")
-    expect_false(bb$street_address() == "")
+    expect_false(bb$street_address() == "",label = sprintf("city - %s", locale))
     expect_is(bb$street_name, "function")
     expect_type(bb$street_name(), "character")
-    expect_false(bb$street_name() == "")
+    expect_false(bb$street_name() == "",label = sprintf("city - %s", locale))
     expect_is(bb$postcode, "function")
     expect_type(bb$postcode(), "character")
-    expect_false(bb$postcode() == "")
+    expect_false(bb$postcode() == "", label = sprintf("postcode - %s", locale))
     # locale should match locale
     expect_equal(bb$locale, locale)
   }
 })
+
 
 # For every specific locale, test custom functions you create
 test_that("custom functions from AddressProvider_en_US work", {
@@ -72,4 +73,20 @@ test_that("custom functions from AddressProvider_nl_NL work", {
   expect_is(aa$province(), "character")
   expect_equal(length(aa$province()), 1)
   expect_true(aa$province() %in% aa$.__enclos_env__$private$provinces)
+})
+
+test_that("all locales consistently give results -- stresstest",{
+    skip_on_cran()
+    skip_on_ci()
+    
+    aa <- cr_loc_spec_provider("AddressProvider", "en_US")
+    for (locale in aa$allowed_locales()) {
+        bb <- cr_loc_spec_provider("AddressProvider", locale)
+        for (i in 1:50){
+            expect_false(bb$city() == "",label = sprintf("city - %s", locale))
+            expect_false(bb$street_address() == "",label = sprintf("city - %s", locale))
+            expect_false(bb$street_name() == "",label = sprintf("city - %s", locale))
+            expect_false(bb$postcode() == "", label = sprintf("postcode - %s", locale))
+        }
+    }
 })
