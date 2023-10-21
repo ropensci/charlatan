@@ -4,30 +4,59 @@
 #' BaseProvider
 #'
 #' @export
+#' @param allowed_locales fetch the allowed locales for this provider
+#' @note You cannot instantiate the Parent providers. You must use one of
+#' the localized one.
 #' @examples
 #' (x <- BaseProvider$new())
 #'
 #' x$numerify("#%%asdf221?")
 #' x$lexify("#%%asdf221?")
 #' x$bothify("#%%asdf221?")
-#'
-#' z <- PhoneNumberProvider$new()
-#' x$numerify(z$render())
-#'
-#' x$random_element(letters)
-#' x$random_int()
-#' x$random_digit()
-#' x$random_digit_not_zero()
-#' x$random_digit_or_empty()
-#' x$random_digit_not_zero_or_empty()
-#' x$random_letter()
-#' x$check_locale("es_ES")
-#' ## fails
-#' # x$check_locale("es_EQ")
-#'
-#' x$randomize_nb_elements()
 BaseProvider <- R6::R6Class(
   "BaseProvider",
+  inherit = BareProvider,
+  public = list(
+    #' @description check a locale to see if it exists, if not, stop with
+    #' error message
+    #' @param x a locale name, e.g, 'bg_BG'
+    #' @return returns nothing if locale is supported; stops w/ message if not
+    check_locale = function(x) check_locale_(x),
+    #' @description fetch the allowed locales for this provider
+    allowed_locales = function() private$locales,
+    #' @description Create a new Provider object
+    #' @return A new object
+    initialize = function() {
+      if (self$provider != "BaseProvider") {
+        if (is.null(self$locale)) raise_class(self$provider)
+      }
+    },
+    #' @description Print method for provider
+    #' @param ... ignored by this method
+    print = function(...) {
+      cat("<", self$provider, ">\n", sep = " ")
+      cat("locale: ", self$locale, sep = "")
+    }
+  ),
+  active = list(
+    #' @field locale (character) locale of this Provider.
+    locale = function() private$locale_
+  ),
+  private = list(
+    locales = c(
+      "en_US"
+    ),
+    locale_ = NULL,
+    provider_ = "BaseProvider"
+  )
+)
+
+#' A NonLocalized Provider that contains all the selection
+#' and creation elements, but not the locales.
+#' That way we can still inherit an do useful stuff
+#' for providers that have no locale.
+BareProvider <- R6::R6Class(
+  "BareProvider",
   public = list(
     #' @description pick a random element from vector/list
     #' @param x vector or list
@@ -36,8 +65,10 @@ BaseProvider <- R6::R6Class(
       if (length(x) == 0) {
         return("")
       }
-      if (inherits(x, "character")) if (!any(nzchar(x))) {
-        return("")
+      if (inherits(x, "character")) {
+        if (!any(nzchar(x))) {
+          return("")
+        }
       }
       x[sample.int(n = length(x), size = 1)]
     },
@@ -48,8 +79,10 @@ BaseProvider <- R6::R6Class(
       if (length(x) == 0) {
         return("")
       }
-      if (inherits(x, "character")) if (!any(nzchar(x))) {
-        return("")
+      if (inherits(x, "character")) {
+        if (!any(nzchar(x))) {
+          return("")
+        }
       }
       choices <- names(x)
       probs <- unname(unlist(x))
@@ -117,11 +150,6 @@ BaseProvider <- R6::R6Class(
       self$lexify(self$numerify(text))
     },
 
-    #' @description check a locale to see if it exists, if not, stop with
-    #' error message
-    #' @param x a locale name, e.g, 'bg_BG'
-    #' @return returns nothing if locale is supported; stops w/ message if not
-    check_locale = function(x) check_locale_(x),
 
     #' @description Returns a random value near number
     #' @param number value to which the result must be near
@@ -141,7 +169,19 @@ BaseProvider <- R6::R6Class(
       if (!is.null(min) && nb < min) nb <- min
       if (!is.null(max) && nb > min) nb <- max
       return(nb)
+    },
+    #' @description Print method for provider
+    #' @param ... ignored by this method
+    print = function(...) {
+      cat("<", self$provider, ">\n", sep = " ")
     }
+  ),
+  active = list(
+    #' @field provider Display the provider name.
+    provider = function() private$provider_
+  ),
+  private = list(
+    provider_ = "BareProvider"
   )
 )
 

@@ -61,3 +61,33 @@ person_de_at <- list(
   last_names = person_last_names_de_at,
   prefixes = person_prefixes_de_at
 )
+
+#' @title Person Provider for Austrian German
+#' @inherit PersonProvider description details return
+#' @export
+#' @family de
+#' @family AT
+#' @details Note for female and male components that we fall back on generic
+#' versions if the locale
+#' doesn't provide a male/female version.
+#' e.g., if no female first name we use first
+#' name
+#' @examples
+#' x <- PersonProvider_de_AT$new()
+#' x$locale
+#' x$render()
+#' x$first_name()
+#' x$first_name_female()
+#' x$first_name_male()
+#' x$last_name()
+#' x$last_name_female()
+#' x$last_name_male()
+PersonProvider_de_AT <- R6::R6Class(
+  "PersonProvider_de_AT",
+  inherit = PersonProvider,
+  private = list(
+    formats = person_formats_de_at,
+    persons = person_de_at,
+    locale_ = "de_AT"
+  )
+)

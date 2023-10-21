@@ -524,3 +524,32 @@ lorem_word_list_el_gr <- c(rep(lorem_common_words_el_gr, 2), c(
   "\u03cd\u03c8\u03bf\u03c2",
   "\u03ce\u03c1\u03b1"
 ))
+
+#' Lorem provider
+#'
+#' Methods for Lorem Ipsum generation.
+#' Lorem Ipsum is a placeholder text commonly used to demonstrate the visual
+#' form of a document or a typeface without relying on meaningful content.
+#' @family el
+#' @family GR
+#' @export
+#' @examples
+#' x <- LoremProvider_el_GR$new()
+#' x$word()
+#' x$words(3)
+#' x$words(6)
+#' x$sentence()
+#' x$paragraph()
+#' x$paragraphs(3)
+#' cat(x$paragraphs(6), sep = "\n")
+#' x$text(19)
+#' x <- LoremProvider_el_GR$new(word_connector = " --- ")
+#' x$paragraph(4)
+LoremProvider_el_GR <- R6::R6Class(
+  inherit = LoremProvider,
+  "LoremProvider_el_GR",
+  private = list(
+    word_list = lorem_word_list_el_gr,
+    locale_ = "el_GR"
+  )
+)

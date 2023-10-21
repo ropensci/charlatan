@@ -252,7 +252,6 @@ person_first_names_male_nl_nl <- c(
   "Valentijn",
   "Victor",
   "Vigo",
-  "Vince",
   "Vincent",
   "Wesley",
   "Wessel",
@@ -1664,4 +1663,36 @@ person_nl_nl <- list(
   first_names_female = person_first_names_female_nl_nl,
   first_names_male = person_first_names_male_nl_nl,
   last_names = person_last_names_nl_nl
+)
+
+#' @title Person Provider for Dutch (Netherlands)
+#' @inherit PersonProvider description details return
+#' @export
+#' @family nl
+#' @family NL
+#' @details Note for female and male components that we fall back on generic
+#' versions if the locale
+#' doesn't provide a male/female version.
+#' e.g., if no female first name we use first
+#' name
+#' @examples
+#' x <- PersonProvider_nl_NL$new()
+#' x$locale
+#' x$render()
+#' x$first_name()
+#' x$first_name_female()
+#' x$first_name_male()
+#' x$last_name()
+#' x$last_name_female()
+#' x$last_name_male()
+PersonProvider_nl_NL <- R6::R6Class(
+  "PersonProvider_nl_NL",
+  inherit = PersonProvider,
+  private = list(
+    # person name formats
+    formats = person_formats_nl_nl,
+    # person name data
+    persons = person_nl_nl,
+    locale_ = "nl_NL"
+  )
 )

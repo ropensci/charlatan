@@ -58,3 +58,63 @@ check4pkg <- function(x) {
 }
 
 `%||%` <- function(x, y) if (is.null(x)) y else x
+
+
+
+# instantiate a locale specific provider
+#
+# Errors with a clear error message if it does not exist
+cr_loc_spec_provider <- function(provider, locale) {
+  if (is.null(locale)) stop("Locale not set", call. = FALSE)
+  if (!provider %in% available_providers) stop(paste0(provider, " does not exist"))
+  name <- paste0(provider, "_", locale)
+  if (exists(name)) {
+    return(eval(parse(text = name))$new())
+  } else {
+    stop(paste0("There is no locale ", locale, " for provider ", provider), call. = FALSE)
+  }
+}
+
+
+#' Create Localized Provider
+#'
+#' @export
+#' @param provider The name of the provider you want to create
+#' @param locale Locale to use
+#' @return Localized provider
+#' @examples
+#' x <- subclass("AddressProvider")
+subclass <- function(provider, locale = NULL) {
+  if (is.null(locale)) {
+    locale <- "en_US"
+    warning(paste("No locale provided for ", provider, " defaulting to en_US"), call. = FALSE)
+  }
+  # first make en_US version
+  prov <- cr_loc_spec_provider(provider, "en_US")
+  if (locale %in% prov$allowed_locales()) {
+    prov <- cr_loc_spec_provider(provider, locale)
+  } else {
+    msg <- sprintf(" %s does not have locale %s, defaulting to en_US locale.", provider, locale)
+    warning(msg, call. = FALSE)
+  }
+  prov
+}
+
+raise_class <- function(name = NULL) {
+  msg <- "You cannot instantiate this Parent Provider: {{name}}, \nuse one of the provided localized versions: for example {{name}}_en_US"
+  stop(whisker.render(msg, data = list(name = name)), call. = FALSE)
+}
+
+
+#' Find mismatch between parent and child locales
+#'
+#' @returns locales that ARE in the parent, but are not available in the child.
+#' @keywords internal
+#' @param parent_provider provider that you want the locales to check for
+#' @param child_provider provider where we check if parent locales are in.
+#' For example InternetProvider has en_AU but LoremProvider does not.
+locale_mismatch <- function(parent_provider, child_provider) {
+  parent <- cr_loc_spec_provider(parent_provider, "en_US")$allowed_locales()
+  child <- cr_loc_spec_provider(child_provider, "en_US")$allowed_locales()
+  parent[!parent %in% child]
+}

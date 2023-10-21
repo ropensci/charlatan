@@ -7,7 +7,7 @@
 #' z$render()
 DOIProvider <- R6::R6Class(
   "DOIProvider",
-  inherit = BaseProvider,
+  inherit = BareProvider,
   public = list(
     #' @field funs (list) list of functions to use to apply to DOI creation
     funs = list(
@@ -37,5 +37,7 @@ DOIProvider <- R6::R6Class(
       x <- super$random_element(seq_along(self$funs))
       self$funs[[x]]()
     }
+  ), private = list(
+    provider_ = "DOIProvider"
   )
 )

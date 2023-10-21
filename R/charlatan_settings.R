@@ -16,10 +16,10 @@
 #' charlatan_settings(messy = FALSE)
 #'
 #' # with PersonProvider - overrides local messy param in all cases
-#' x <- PersonProvider$new()
+#' x <- PersonProvider_en_US$new()
 #' x$messy
 #' charlatan_settings(messy = TRUE)
-#' x <- PersonProvider$new()
+#' x <- PersonProvider_en_US$new()
 #' x$messy
 charlatan_settings <- function(messy = NULL) {
   assert(messy, "logical")

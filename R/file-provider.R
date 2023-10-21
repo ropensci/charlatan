@@ -2,41 +2,14 @@
 #' @description file methods
 #' @export
 #' @keywords internal
-#' @examples
-#' (x <- FileProvider$new())
-#' x$locale
-#' x$mime_type()
-#' x$file_extension()
-#' x$file_name()
-#' x$file_path()
-#' x$file_path(depth = 2)
-#' x$file_path(depth = 3)
-#' x$file_path(depth = 6)
 FileProvider <- R6::R6Class(
   inherit = BaseProvider,
   "FileProvider",
   public = list(
-    #' @field locale (character) the locale
-    locale = NULL,
-
-    #' @description fetch the allowed locales for this provider
-    allowed_locales = function() private$locales,
-
     #' @description Create a new `FileProvider` object
-    #' @param locale (character) the locale to use. See
-    #' `$allowed_locales()` for locales supported (default: en_US)
     #' @return A new `FileProvider` object
-    initialize = function(locale = NULL) {
-      if (!is.null(locale)) {
-        # check global locales
-        super$check_locale(locale)
-        # check person provider locales
-        check_locale_(locale, private$locales)
-        self$locale <- locale
-      } else {
-        self$locale <- "en_US"
-      }
-
+    initialize = function() {
+      super$initialize()
       private$mime_types <- list(
         application = private$application_mime_types,
         audio = private$audio_mime_types,
@@ -78,7 +51,7 @@ FileProvider <- R6::R6Class(
     #' `category` is ignored.
     file_name = function(category = NULL, extension = NULL) {
       x <- if (!is.null(extension)) extension else self$file_extension(category)
-      filename <- LoremProvider$new(locale = self$locale)$word()
+      filename <- subclass(provider = "LoremProvider", locale = self$locale)$word()
       sprintf("%s.%s", filename, x)
     },
 
@@ -107,7 +80,7 @@ FileProvider <- R6::R6Class(
       for (d in seq_len(depth)) {
         path <- sprintf(
           "/%s%s",
-          LoremProvider$new(locale = self$locale)$word(), path
+          subclass(provider = "LoremProvider", locale = self$locale)$word(), path
         )
       }
       return(path)
@@ -265,6 +238,32 @@ FileProvider <- R6::R6Class(
       "pdf" # Portable Document Format
     ),
     file_extensions = NULL,
-    locales = c("en_US")
+    locales = c("en_US"),
+    provider_ = "FileProvider"
+  )
+)
+
+
+#' File Provider for United States English
+#'
+#' Creates files and file types.
+#' @family en
+#' @family US
+#' @export
+#' @examples
+#' (x <- FileProvider_en_US$new())
+#' x$locale
+#' x$mime_type()
+#' x$file_extension()
+#' x$file_name()
+#' x$file_path()
+#' x$file_path(depth = 2)
+#' x$file_path(depth = 3)
+#' x$file_path(depth = 6)
+FileProvider_en_US <- R6::R6Class(
+  inherit = FileProvider,
+  "FileProvider_en_US",
+  private = list(
+    locale_ = "en_US"
   )
 )

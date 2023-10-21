@@ -7,14 +7,16 @@
 \alias{ch_taxonomic_species}
 \title{Create fake taxonomic names}
 \usage{
-ch_taxonomic_genus(n = 1)
+ch_taxonomic_genus(n = 1, locale = "en_US")
 
-ch_taxonomic_epithet(n = 1)
+ch_taxonomic_epithet(n = 1, locale = "en_US")
 
-ch_taxonomic_species(n = 1)
+ch_taxonomic_species(n = 1, locale = "en_US")
 }
 \arguments{
 \item{n}{(integer) number of things to get, any non-negative integer}
+
+\item{locale}{Locale for provider}
 }
 \description{
 Create fake taxonomic names
@@ -38,15 +40,15 @@ that the given authority was not the original authority.
 \examples{
 ch_taxonomic_genus()
 ch_taxonomic_genus(10)
-ch_taxonomic_genus(500)
+# or even ch_taxonomic_genus(500)
 
 ch_taxonomic_epithet()
 ch_taxonomic_epithet(10)
-ch_taxonomic_epithet(500)
+# or even ch_taxonomic_epithet(500)
 
 ch_taxonomic_species()
 ch_taxonomic_species(10)
-ch_taxonomic_species(500)
+# or even ch_taxonomic_species(500)
 }
 \seealso{
 \link{TaxonomyProvider}

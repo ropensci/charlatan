@@ -78,7 +78,7 @@ credit_card_types["jcb"] <- credit_card_types["jcb16"]
 #' z$credit_card_security_code()
 #' z$generate_number(13)
 CreditCardProvider <- R6::R6Class(
-  inherit = BaseProvider,
+  inherit = BareProvider,
   "CreditCardProvider",
   public = list(
     #' @description Returns a random credit card type
@@ -151,6 +151,9 @@ CreditCardProvider <- R6::R6Class(
       "0" = 0, "1" = 2, "2" = 4, "3" = 6, "4" = 8,
       "5" = 1, "6" = 3, "7" = 5, "8" = 7, "9" = 9
     )
+  ),
+  private = list(
+    provider_ = "CreditCardProvider"
   )
 )
 

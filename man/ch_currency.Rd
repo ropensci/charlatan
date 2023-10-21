@@ -15,7 +15,7 @@ Create fake currencies
 \examples{
 ch_currency()
 ch_currency(10)
-ch_currency(500)
+# or even ch_currency(500)
 }
 \seealso{
 \link{CurrencyProvider}

@@ -668,3 +668,21 @@ job_formats_fr_fr <- c(
   "Webmestre",
   "Zoologiste"
 )
+
+#' Job provider for France
+#'
+#' @inherit JobProvider description details return
+#' @family fr
+#' @family FR
+#' @export
+#' @examples
+#' x <- JobProvider_fr_FR$new()
+#' x$render()
+JobProvider_fr_FR <- R6::R6Class(
+  inherit = JobProvider,
+  "JobProvider_fr_FR",
+  private = list(
+    locale_ = "fr_FR",
+    formats = job_formats_fr_fr
+  )
+)

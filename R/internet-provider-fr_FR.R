@@ -42,3 +42,28 @@ int_replacements_fr_fr <- list(
   c("\u00f9", "u"),
   c("\u00fc", "u")
 )
+
+#' Internet provider for France
+#'
+#' methods for internet related data, like email addresses,
+#' usernames, and websites.
+#' @family fr
+#' @family FR
+#' @export
+#' @examples
+#' x <- InternetProvider_bg_BG$new()
+#' x$email()
+#' x$free_email()
+#' x$mac_address()
+#' x$company_email()
+InternetProvider_fr_FR <- R6::R6Class(
+  inherit = InternetProvider,
+  "InternetProvider_fr_FR",
+  private = list(
+    locale_ = "fr_FR",
+    free_email_domains = int_free_email_domains_fr_fr,
+    tlds = int_tlds_fr_fr,
+    safe_email_tlds = int_safe_email_tlds_fr_fr,
+    replacements = int_replacements_fr_fr
+  )
+)

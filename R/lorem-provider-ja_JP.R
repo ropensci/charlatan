@@ -224,3 +224,34 @@ lorem_word_list_ja_jp <- c(
   "\u3058\u3076\u3093\u306e",
   "\u9271\u5c71"
 )
+
+#' Lorem provider Japanese
+#'
+#' Methods for Lorem Ipsum generation.
+#' Lorem Ipsum is a placeholder text commonly used to demonstrate the visual
+#' form of a document or a typeface without relying on meaningful content.
+#' @family ja
+#' @family JP
+#' @export
+#' @examples
+#' x <- LoremProvider_ja_JP$new()
+#' x$word()
+#' x$words(3)
+#' x$words(6)
+#' x$sentence()
+#' x$paragraph()
+#' x$paragraphs(3)
+#' cat(x$paragraphs(6), sep = "\n")
+#' x$text(19)
+#' x <- LoremProvider_ja_JP$new(word_connector = " --- ")
+#' x$paragraph(4)
+LoremProvider_ja_JP <- R6::R6Class(
+  inherit = LoremProvider,
+  "LoremProvider_ja_JP",
+  private = list(
+    word_list = lorem_word_list_ja_jp,
+    word_connector = lorem_word_connector_ja_jp,
+    sentence_punctuation = lorem_sentence_punctuation_ja_jp,
+    locale_ = "ja_JP"
+  )
+)

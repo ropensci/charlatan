@@ -1333,3 +1333,36 @@ person_es_es <- list(
   last_names = person_last_names_es_es,
   prefixes = person_prefixes_es_es
 )
+
+
+#' @title Person Provider for Spanish (Spain)
+#' @inherit PersonProvider description details return
+#' @export
+#' @family es
+#' @family ES
+#' @details Note for female and male components that we fall back on generic
+#' versions if the locale
+#' doesn't provide a male/female version.
+#' e.g., if no female first name we use first
+#' name
+#' @examples
+#' x <- PersonProvider_es_ES$new()
+#' x$locale
+#' x$render()
+#' x$first_name()
+#' x$first_name_female()
+#' x$first_name_male()
+#' x$last_name()
+#' x$last_name_female()
+#' x$last_name_male()
+PersonProvider_es_ES <- R6::R6Class(
+  "PersonProvider_es_ES",
+  inherit = PersonProvider,
+  private = list(
+    # person name formats
+    formats = person_formats_es_es,
+    # person name data
+    persons = person_es_es,
+    locale_ = "es_ES"
+  )
+)

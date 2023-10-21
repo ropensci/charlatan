@@ -1,83 +1,26 @@
 #' @title LoremProvider
-#' @description lorem ipsum methods
+#' @description lorem ipsum methods for generating random words in a language.
+#' Lorem Ipsum is a placeholder text commonly used to demonstrate the visual
+#' form of a document or a typeface without relying on meaningful content.
+#' @inherit BaseProvider note
+#' @param ext_words a character vector of words you would like to have instead of "Lorem ipsum"
+#' @family ParentProviders
 #' @export
-#' @keywords internal
-#' @param ext_words a character vector of words you would like to have
-#' instead of 'Lorem ipsum'
-#' @examples
-#' (x <- LoremProvider$new())
-#' x$locale
-#' x$word()
-#' x$words(3)
-#' x$words(6)
-#' x$sentence()
-#' x$sentences(3)
-#' x$sentences(6)
-#' x$paragraph()
-#' x$paragraphs(3)
-#' x$paragraphs(6)
-#' cat(x$paragraphs(6), sep = "\n")
-#' x$text(6)
-#' x$text(10)
-#' x$text(19)
-#' x$text(25)
-#' x$text(50)
-#' x$text(300)
-#' x$text(2000)
-#'
-#' # set a different sentence_punctuation or word_connector
-#' (x <- LoremProvider$new(sentence_punctuation = ";"))
-#' x$paragraph(4)
-#' (x <- LoremProvider$new(word_connector = " --- "))
-#' x$paragraph(4)
-#'
-#' # different locales
-#' LoremProvider$new(locale = "ar_AA")$word()
-#' LoremProvider$new(locale = "el_GR")$word()
-#' LoremProvider$new(locale = "he_IL")$word()
-#' LoremProvider$new(locale = "ja_JP")$word()
-#' LoremProvider$new(locale = "zh_TW")$word()
 LoremProvider <- R6::R6Class(
   inherit = BaseProvider,
   "LoremProvider",
   public = list(
-    #' @field locale (character) the locale
-    locale = NULL,
-
-    #' @description fetch the allowed locales for this provider
-    allowed_locales = function() private$locales,
-
     #' @description Create a new `LoremProvider` object
-    #' @param locale (character) the locale to use. See
-    #' `$allowed_locales()` for locales supported (default: en_US)
     #' @param sentence_punctuation (character) End of sentence punctuation
     #' @param word_connector (character) Default connector between words
     #' @return A new `LoremProvider` object
-    initialize = function(locale = NULL, sentence_punctuation = ".",
+    initialize = function(sentence_punctuation = ".",
                           word_connector = " ") {
-      if (!is.null(locale)) {
-        # check global locales
-        super$check_locale(locale)
-        # check person provider locales
-        check_locale_(locale, private$locales)
-        self$locale <- locale
-      } else {
-        self$locale <- "en_US"
-      }
-      private$parse_eval_safe("word_list")
-
-      if (missing(sentence_punctuation)) {
-        private$parse_eval_safe("sentence_punctuation")
-      } else {
-        assert(sentence_punctuation, "character")
-        private$sentence_punctuation <- sentence_punctuation
-      }
-      if (missing(word_connector)) {
-        private$parse_eval_safe("word_connector")
-      } else {
-        assert(word_connector, "character")
-        private$word_connector <- word_connector
-      }
+      super$initialize()
+      assert(sentence_punctuation, "character")
+      private$sentence_punctuation <- sentence_punctuation
+      assert(word_connector, "character")
+      private$word_connector <- word_connector
     },
 
     #' @description Generate a random word
@@ -242,10 +185,10 @@ LoremProvider <- R6::R6Class(
     word_connector = " ",
     sentence_punctuation = ".",
     word_list = NULL,
-    parse_eval_safe = function(name) {
-      tmp <- parse_eval(sprintf("lorem_%s_", name), self$locale)
-      if (!is.null(tmp)) private[[name]] <- tmp
-    },
+    # parse_eval_safe = function(name) {
+    #   tmp <- parse_eval(sprintf("lorem_%s_", name), self$locale)
+    #   if (!is.null(tmp)) private[[name]] <- tmp
+    # },
     cap_first = function(x) {
       gsub("(^|[[:space:]])([[:alpha:]])", "\\1\\U\\2", x, perl = TRUE)
     },
@@ -255,6 +198,7 @@ LoremProvider <- R6::R6Class(
     locales = c(
       "en_US", "ar_AA", "el_GR", "he_IL", "ja_JP", "la",
       "ru_RU", "zh_CN", "zh_TW"
-    )
+    ),
+    provider_ = "LoremProvider"
   )
 )

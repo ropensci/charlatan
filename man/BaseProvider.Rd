@@ -8,210 +8,55 @@ BaseProvider
 
 BaseProvider
 }
+\note{
+You cannot instantiate the Parent providers. You must use one of
+the localized one.
+}
 \examples{
 (x <- BaseProvider$new())
 
 x$numerify("#\%\%asdf221?")
 x$lexify("#\%\%asdf221?")
 x$bothify("#\%\%asdf221?")
-
-z <- PhoneNumberProvider$new()
-x$numerify(z$render())
-
-x$random_element(letters)
-x$random_int()
-x$random_digit()
-x$random_digit_not_zero()
-x$random_digit_or_empty()
-x$random_digit_not_zero_or_empty()
-x$random_letter()
-x$check_locale("es_ES")
-## fails
-# x$check_locale("es_EQ")
-
-x$randomize_nb_elements()
+}
+\section{Super class}{
+\code{\link[charlatan:BareProvider]{charlatan::BareProvider}} -> \code{BaseProvider}
+}
+\section{Active bindings}{
+\if{html}{\out{<div class="r6-active-bindings">}}
+\describe{
+\item{\code{locale}}{(character) locale of this Provider.}
+}
+\if{html}{\out{</div>}}
 }
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
-\item \href{#method-BaseProvider-random_element}{\code{BaseProvider$random_element()}}
-\item \href{#method-BaseProvider-random_element_prob}{\code{BaseProvider$random_element_prob()}}
-\item \href{#method-BaseProvider-random_int}{\code{BaseProvider$random_int()}}
-\item \href{#method-BaseProvider-random_digit}{\code{BaseProvider$random_digit()}}
-\item \href{#method-BaseProvider-random_digit_not_zero}{\code{BaseProvider$random_digit_not_zero()}}
-\item \href{#method-BaseProvider-random_digit_or_empty}{\code{BaseProvider$random_digit_or_empty()}}
-\item \href{#method-BaseProvider-random_digit_not_zero_or_empty}{\code{BaseProvider$random_digit_not_zero_or_empty()}}
-\item \href{#method-BaseProvider-random_letter}{\code{BaseProvider$random_letter()}}
-\item \href{#method-BaseProvider-numerify}{\code{BaseProvider$numerify()}}
-\item \href{#method-BaseProvider-lexify}{\code{BaseProvider$lexify()}}
-\item \href{#method-BaseProvider-bothify}{\code{BaseProvider$bothify()}}
 \item \href{#method-BaseProvider-check_locale}{\code{BaseProvider$check_locale()}}
-\item \href{#method-BaseProvider-randomize_nb_elements}{\code{BaseProvider$randomize_nb_elements()}}
+\item \href{#method-BaseProvider-allowed_locales}{\code{BaseProvider$allowed_locales()}}
+\item \href{#method-BaseProvider-new}{\code{BaseProvider$new()}}
+\item \href{#method-BaseProvider-print}{\code{BaseProvider$print()}}
 \item \href{#method-BaseProvider-clone}{\code{BaseProvider$clone()}}
 }
 }
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-BaseProvider-random_element"></a>}}
-\if{latex}{\out{\hypertarget{method-BaseProvider-random_element}{}}}
-\subsection{Method \code{random_element()}}{
-pick a random element from vector/list
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{BaseProvider$random_element(x)}\if{html}{\out{</div>}}
-}
-
-\subsection{Arguments}{
-\if{html}{\out{<div class="arguments">}}
-\describe{
-\item{\code{x}}{vector or list}
-}
-\if{html}{\out{</div>}}
-}
-\subsection{Returns}{
-a single element from x
-}
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-BaseProvider-random_element_prob"></a>}}
-\if{latex}{\out{\hypertarget{method-BaseProvider-random_element_prob}{}}}
-\subsection{Method \code{random_element_prob()}}{
-pick a random element with probability from vector/list
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{BaseProvider$random_element_prob(x)}\if{html}{\out{</div>}}
-}
-
-\subsection{Arguments}{
-\if{html}{\out{<div class="arguments">}}
-\describe{
-\item{\code{x}}{vector or list}
-}
-\if{html}{\out{</div>}}
-}
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-BaseProvider-random_int"></a>}}
-\if{latex}{\out{\hypertarget{method-BaseProvider-random_int}{}}}
-\subsection{Method \code{random_int()}}{
-any number of random integers from a min, max
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{BaseProvider$random_int(min = 0, max = 9999, size = 1)}\if{html}{\out{</div>}}
-}
-
-\subsection{Arguments}{
-\if{html}{\out{<div class="arguments">}}
-\describe{
-\item{\code{min}}{the minimum value. default: 0}
-
-\item{\code{max}}{the maximum value. default: 9999}
-
-\item{\code{size}}{number of values to return. default: 1}
-}
-\if{html}{\out{</div>}}
-}
-\subsection{Returns}{
-random integer
-}
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-BaseProvider-random_digit"></a>}}
-\if{latex}{\out{\hypertarget{method-BaseProvider-random_digit}{}}}
-\subsection{Method \code{random_digit()}}{
-random integer between 0 and 9
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{BaseProvider$random_digit()}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-BaseProvider-random_digit_not_zero"></a>}}
-\if{latex}{\out{\hypertarget{method-BaseProvider-random_digit_not_zero}{}}}
-\subsection{Method \code{random_digit_not_zero()}}{
-random integer between 1 and 9
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{BaseProvider$random_digit_not_zero()}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-BaseProvider-random_digit_or_empty"></a>}}
-\if{latex}{\out{\hypertarget{method-BaseProvider-random_digit_or_empty}{}}}
-\subsection{Method \code{random_digit_or_empty()}}{
-random integer between 0 and 9 or empty character string
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{BaseProvider$random_digit_or_empty()}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-BaseProvider-random_digit_not_zero_or_empty"></a>}}
-\if{latex}{\out{\hypertarget{method-BaseProvider-random_digit_not_zero_or_empty}{}}}
-\subsection{Method \code{random_digit_not_zero_or_empty()}}{
-random integer between 1 and 9 or empty character string
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{BaseProvider$random_digit_not_zero_or_empty()}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-BaseProvider-random_letter"></a>}}
-\if{latex}{\out{\hypertarget{method-BaseProvider-random_letter}{}}}
-\subsection{Method \code{random_letter()}}{
-random letter
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{BaseProvider$random_letter()}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-BaseProvider-numerify"></a>}}
-\if{latex}{\out{\hypertarget{method-BaseProvider-numerify}{}}}
-\subsection{Method \code{numerify()}}{
-replace a template with numbers
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{BaseProvider$numerify(text = "###")}\if{html}{\out{</div>}}
-}
-
-\subsection{Arguments}{
-\if{html}{\out{<div class="arguments">}}
-\describe{
-\item{\code{text}}{(character) a string}
-}
-\if{html}{\out{</div>}}
-}
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-BaseProvider-lexify"></a>}}
-\if{latex}{\out{\hypertarget{method-BaseProvider-lexify}{}}}
-\subsection{Method \code{lexify()}}{
-replace a template with letters
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{BaseProvider$lexify(text = "????")}\if{html}{\out{</div>}}
-}
-
-\subsection{Arguments}{
-\if{html}{\out{<div class="arguments">}}
-\describe{
-\item{\code{text}}{(character) a string}
-}
-\if{html}{\out{</div>}}
-}
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-BaseProvider-bothify"></a>}}
-\if{latex}{\out{\hypertarget{method-BaseProvider-bothify}{}}}
-\subsection{Method \code{bothify()}}{
-both numerify and lexify together
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{BaseProvider$bothify(text = "## ??")}\if{html}{\out{</div>}}
-}
-
-\subsection{Arguments}{
-\if{html}{\out{<div class="arguments">}}
-\describe{
-\item{\code{text}}{(character) a string}
-}
-\if{html}{\out{</div>}}
-}
-}
+\if{html}{\out{
+<details><summary>Inherited methods</summary>
+<ul>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="bothify"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-bothify'><code>charlatan::BareProvider$bothify()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="lexify"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-lexify'><code>charlatan::BareProvider$lexify()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="numerify"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-numerify'><code>charlatan::BareProvider$numerify()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_digit"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_digit'><code>charlatan::BareProvider$random_digit()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_digit_not_zero"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_digit_not_zero'><code>charlatan::BareProvider$random_digit_not_zero()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_digit_not_zero_or_empty"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_digit_not_zero_or_empty'><code>charlatan::BareProvider$random_digit_not_zero_or_empty()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_digit_or_empty"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_digit_or_empty'><code>charlatan::BareProvider$random_digit_or_empty()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_element"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_element'><code>charlatan::BareProvider$random_element()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_element_prob"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_element_prob'><code>charlatan::BareProvider$random_element_prob()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_int"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_int'><code>charlatan::BareProvider$random_int()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_letter"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_letter'><code>charlatan::BareProvider$random_letter()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="randomize_nb_elements"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-randomize_nb_elements'><code>charlatan::BareProvider$randomize_nb_elements()</code></a></span></li>
+</ul>
+</details>
+}}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-BaseProvider-check_locale"></a>}}
 \if{latex}{\out{\hypertarget{method-BaseProvider-check_locale}{}}}
@@ -234,37 +79,43 @@ returns nothing if locale is supported; stops w/ message if not
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-BaseProvider-randomize_nb_elements"></a>}}
-\if{latex}{\out{\hypertarget{method-BaseProvider-randomize_nb_elements}{}}}
-\subsection{Method \code{randomize_nb_elements()}}{
-Returns a random value near number
+\if{html}{\out{<a id="method-BaseProvider-allowed_locales"></a>}}
+\if{latex}{\out{\hypertarget{method-BaseProvider-allowed_locales}{}}}
+\subsection{Method \code{allowed_locales()}}{
+fetch the allowed locales for this provider
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{BaseProvider$randomize_nb_elements(
-  number = 10,
-  le = FALSE,
-  ge = FALSE,
-  min = NULL,
-  max = NULL
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{BaseProvider$allowed_locales()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-BaseProvider-new"></a>}}
+\if{latex}{\out{\hypertarget{method-BaseProvider-new}{}}}
+\subsection{Method \code{new()}}{
+Create a new Provider object
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{BaseProvider$new()}\if{html}{\out{</div>}}
+}
+
+\subsection{Returns}{
+A new object
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-BaseProvider-print"></a>}}
+\if{latex}{\out{\hypertarget{method-BaseProvider-print}{}}}
+\subsection{Method \code{print()}}{
+Print method for provider
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{BaseProvider$print(...)}\if{html}{\out{</div>}}
 }
 
 \subsection{Arguments}{
 \if{html}{\out{<div class="arguments">}}
 \describe{
-\item{\code{number}}{value to which the result must be near}
-
-\item{\code{le}}{result must be lower or equal to number}
-
-\item{\code{ge}}{result must be greater or equal to number}
-
-\item{\code{min}}{the minimum value. default: \code{NULL}}
-
-\item{\code{max}}{the maximum value. default: \code{NULL}}
+\item{\code{...}}{ignored by this method}
 }
 \if{html}{\out{</div>}}
-}
-\subsection{Returns}{
-a random int near number
 }
 }
 \if{html}{\out{<hr>}}

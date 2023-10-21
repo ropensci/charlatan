@@ -12,7 +12,8 @@
 #' @aliases charlatan
 #' @docType package
 #' @keywords package
-#' @author Scott Chamberlain \email{myrmecocystus+r@@gmail.com}
+#' @author Roel M. Hogervorst \email{hogervorst.rm@gmail.com}
+#' @author Scott Chamberlain
 #' @author Kyle Voytovich
 #' @author Martin Pedersen
 #'
@@ -46,7 +47,7 @@
 #' # low level interfaces to "data providers"
 #' # these are exported by hidden from package man page
 #' # as most users will likely not interact with these
-#' x <- ColorProvider$new()
+#' x <- ColorProvider_en_US$new()
 #' x$color_name()
 #' x$hex_color()
 NULL

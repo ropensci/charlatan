@@ -10,7 +10,7 @@ ch_company(n = 1, locale = NULL)
 \item{n}{(integer) number of things to get, any non-negative integer}
 
 \item{locale}{(character) the locale to use. See
-\code{CompanyProvider$new()$allowed_locales()} for locales supported.}
+\code{company()$allowed_locales()} for locales supported.}
 }
 \description{
 Create fake company names and other company bits
@@ -18,7 +18,7 @@ Create fake company names and other company bits
 \examples{
 ch_company()
 ch_company(10)
-ch_company(500)
+# or even ch_company(500)
 
 ch_company(locale = "fr_FR", n = 10)
 ch_company(locale = "cs_CZ", n = 10)

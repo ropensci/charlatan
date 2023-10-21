@@ -26,7 +26,7 @@
 #' z$beta(10, 1, 1)
 NumericsProvider <- R6::R6Class(
   "NumericsProvider",
-  inherit = BaseProvider,
+  inherit = BareProvider,
   public = list(
     #' @description get a double, pulls from normal distribution
     double = function(n = 1, mean = 0, sd = 1) {
@@ -61,5 +61,8 @@ NumericsProvider <- R6::R6Class(
     beta = function(n = 1, shape1, shape2, ncp = 0) {
       rbeta(n, shape1, shape2, ncp)
     }
+  ),
+  private = list(
+    "provider_" = "NumericsProvider"
   )
 )

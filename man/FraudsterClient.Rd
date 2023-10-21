@@ -22,7 +22,18 @@ Fraudster R6 client
 \item \href{#method-FraudsterClient-job}{\code{FraudsterClient$job()}}
 \item \href{#method-FraudsterClient-name}{\code{FraudsterClient$name()}}
 \item \href{#method-FraudsterClient-color_name}{\code{FraudsterClient$color_name()}}
+\item \href{#method-FraudsterClient-phone_number}{\code{FraudsterClient$phone_number()}}
 \item \href{#method-FraudsterClient-safe_color_name}{\code{FraudsterClient$safe_color_name()}}
+\item \href{#method-FraudsterClient-address}{\code{FraudsterClient$address()}}
+\item \href{#method-FraudsterClient-company}{\code{FraudsterClient$company()}}
+\item \href{#method-FraudsterClient-element}{\code{FraudsterClient$element()}}
+\item \href{#method-FraudsterClient-file_name}{\code{FraudsterClient$file_name()}}
+\item \href{#method-FraudsterClient-email}{\code{FraudsterClient$email()}}
+\item \href{#method-FraudsterClient-url}{\code{FraudsterClient$url()}}
+\item \href{#method-FraudsterClient-lorem_paragraph}{\code{FraudsterClient$lorem_paragraph()}}
+\item \href{#method-FraudsterClient-ssn}{\code{FraudsterClient$ssn()}}
+\item \href{#method-FraudsterClient-mac_address}{\code{FraudsterClient$mac_address()}}
+\item \href{#method-FraudsterClient-element_symbol}{\code{FraudsterClient$element_symbol()}}
 \item \href{#method-FraudsterClient-hex_color}{\code{FraudsterClient$hex_color()}}
 \item \href{#method-FraudsterClient-safe_hex_color}{\code{FraudsterClient$safe_hex_color()}}
 \item \href{#method-FraudsterClient-rgb_color}{\code{FraudsterClient$rgb_color()}}
@@ -38,7 +49,6 @@ Fraudster R6 client
 \item \href{#method-FraudsterClient-epithet}{\code{FraudsterClient$epithet()}}
 \item \href{#method-FraudsterClient-species}{\code{FraudsterClient$species()}}
 \item \href{#method-FraudsterClient-sequence}{\code{FraudsterClient$sequence()}}
-\item \href{#method-FraudsterClient-phone_number}{\code{FraudsterClient$phone_number()}}
 \item \href{#method-FraudsterClient-double}{\code{FraudsterClient$double()}}
 \item \href{#method-FraudsterClient-integer}{\code{FraudsterClient$integer()}}
 \item \href{#method-FraudsterClient-uniform}{\code{FraudsterClient$uniform()}}
@@ -144,12 +154,202 @@ colors
 }
 }
 \if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-FraudsterClient-phone_number"></a>}}
+\if{latex}{\out{\hypertarget{method-FraudsterClient-phone_number}{}}}
+\subsection{Method \code{phone_number()}}{
+phone number
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{FraudsterClient$phone_number(n = 1)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{n}}{number of random things to generaate. an integer; default: 1}
+}
+\if{html}{\out{</div>}}
+}
+}
+\if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-FraudsterClient-safe_color_name"></a>}}
 \if{latex}{\out{\hypertarget{method-FraudsterClient-safe_color_name}{}}}
 \subsection{Method \code{safe_color_name()}}{
 safe color name
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{FraudsterClient$safe_color_name(n = 1)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{n}}{number of random things to generaate. an integer; default: 1}
+}
+\if{html}{\out{</div>}}
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-FraudsterClient-address"></a>}}
+\if{latex}{\out{\hypertarget{method-FraudsterClient-address}{}}}
+\subsection{Method \code{address()}}{
+Create address
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{FraudsterClient$address(n = 1)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{n}}{number of random things to generaate. an integer; default: 1}
+}
+\if{html}{\out{</div>}}
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-FraudsterClient-company"></a>}}
+\if{latex}{\out{\hypertarget{method-FraudsterClient-company}{}}}
+\subsection{Method \code{company()}}{
+Create company
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{FraudsterClient$company(n = 1)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{n}}{number of random things to generaate. an integer; default: 1}
+}
+\if{html}{\out{</div>}}
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-FraudsterClient-element"></a>}}
+\if{latex}{\out{\hypertarget{method-FraudsterClient-element}{}}}
+\subsection{Method \code{element()}}{
+Create an element (name).
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{FraudsterClient$element(n = 1)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{n}}{number of random things to generaate. an integer; default: 1}
+}
+\if{html}{\out{</div>}}
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-FraudsterClient-file_name"></a>}}
+\if{latex}{\out{\hypertarget{method-FraudsterClient-file_name}{}}}
+\subsection{Method \code{file_name()}}{
+Create a File name.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{FraudsterClient$file_name(n = 1, category = NULL)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{n}}{number of random things to generaate. an integer; default: 1}
+
+\item{\code{category}}{(character) a category of file extension type, one of
+audio, image, office, text or video. default: \code{NULL}.}
+}
+\if{html}{\out{</div>}}
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-FraudsterClient-email"></a>}}
+\if{latex}{\out{\hypertarget{method-FraudsterClient-email}{}}}
+\subsection{Method \code{email()}}{
+get an email address
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{FraudsterClient$email(n = 1)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{n}}{number of random things to generaate. an integer; default: 1}
+}
+\if{html}{\out{</div>}}
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-FraudsterClient-url"></a>}}
+\if{latex}{\out{\hypertarget{method-FraudsterClient-url}{}}}
+\subsection{Method \code{url()}}{
+a url
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{FraudsterClient$url(n = 1)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{n}}{number of random things to generaate. an integer; default: 1}
+}
+\if{html}{\out{</div>}}
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-FraudsterClient-lorem_paragraph"></a>}}
+\if{latex}{\out{\hypertarget{method-FraudsterClient-lorem_paragraph}{}}}
+\subsection{Method \code{lorem_paragraph()}}{
+Generate many paragraphs
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{FraudsterClient$lorem_paragraph(n = 1)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{n}}{number of random things to generaate. an integer; default: 1}
+}
+\if{html}{\out{</div>}}
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-FraudsterClient-ssn"></a>}}
+\if{latex}{\out{\hypertarget{method-FraudsterClient-ssn}{}}}
+\subsection{Method \code{ssn()}}{
+Make a SSN (Social Security Number).
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{FraudsterClient$ssn(n = 1)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{n}}{number of random things to generaate. an integer; default: 1}
+}
+\if{html}{\out{</div>}}
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-FraudsterClient-mac_address"></a>}}
+\if{latex}{\out{\hypertarget{method-FraudsterClient-mac_address}{}}}
+\subsection{Method \code{mac_address()}}{
+a mac address
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{FraudsterClient$mac_address(n = 1)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{n}}{number of random things to generaate. an integer; default: 1}
+}
+\if{html}{\out{</div>}}
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-FraudsterClient-element_symbol"></a>}}
+\if{latex}{\out{\hypertarget{method-FraudsterClient-element_symbol}{}}}
+\subsection{Method \code{element_symbol()}}{
+create a element symbol
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{FraudsterClient$element_symbol(n = 1)}\if{html}{\out{</div>}}
 }
 
 \subsection{Arguments}{
@@ -338,13 +538,15 @@ unix time
 \subsection{Method \code{date_time()}}{
 date time
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{FraudsterClient$date_time(n = 1)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{FraudsterClient$date_time(n = 1, tzinfo = NULL)}\if{html}{\out{</div>}}
 }
 
 \subsection{Arguments}{
 \if{html}{\out{<div class="arguments">}}
 \describe{
 \item{\code{n}}{number of random things to generaate. an integer; default: 1}
+
+\item{\code{tzinfo}}{timezone, see \link{timezone}}
 }
 \if{html}{\out{</div>}}
 }
@@ -415,23 +617,6 @@ random genetic sequence
 \item{\code{n}}{number of random things to generaate. an integer; default: 1}
 
 \item{\code{length}}{(integer) length of the sequence. default: 30}
-}
-\if{html}{\out{</div>}}
-}
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-FraudsterClient-phone_number"></a>}}
-\if{latex}{\out{\hypertarget{method-FraudsterClient-phone_number}{}}}
-\subsection{Method \code{phone_number()}}{
-phone number
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{FraudsterClient$phone_number(n = 1)}\if{html}{\out{</div>}}
-}
-
-\subsection{Arguments}{
-\if{html}{\out{<div class="arguments">}}
-\describe{
-\item{\code{n}}{number of random things to generaate. an integer; default: 1}
 }
 \if{html}{\out{</div>}}
 }

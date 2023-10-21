@@ -1,61 +1,27 @@
 #' @title ColorProvider
 #' @description methods for colors
-#' @export
-#' @keywords internal
-#' @examples
-#' x <- ColorProvider$new()
-#' x$locale
-#' x$color_name()
-#' x$safe_color_name()
-#' x$hex_color()
-#' x$safe_hex_color()
-#' x$rgb_color()
-#' x$rgb_css_color()
-#'
-#' x <- ColorProvider$new(locale = "uk_UA")
-#' x$locale
-#' x$color_name()
-#' x$safe_color_name()
+#' create color names, hex values, rgb values
+#' or css values.
+#' @family ParentProviders
+#' @return A ColorProvider object that can generate
+#' colors.
 ColorProvider <- R6::R6Class(
   inherit = BaseProvider,
   "ColorProvider",
   public = list(
-    #' @field locale (character) xxx
-    locale = NULL,
-    #' @field all_colors (character) xxx
-    all_colors = NULL,
-    #' @field safe_colors (character) xxx
-    safe_colors = NULL,
-
-    #' @description fetch the allowed locales for this provider
-    allowed_locales = function() private$locales,
-
-    #' @description Create a new `ColorProvider` object
-    #' @param locale (character) the locale to use. See
-    #' `$allowed_locales()` for locales supported (default: en_US)
-    #' @return A new `ColorProvider` object
-    initialize = function(locale = NULL) {
-      if (!is.null(locale)) {
-        # check global locales
-        super$check_locale(locale)
-        # check person provider locales
-        check_locale_(locale, private$locales)
-        self$locale <- locale
-      } else {
-        self$locale <- "en_US"
-      }
-      self$all_colors <- parse_eval("all_colors_", self$locale)
-      self$safe_colors <- parse_eval("safe_colors_", self$locale)
-    },
-
     #' @description color name
     color_name = function() {
-      super$random_element(names(self$all_colors))
+      super$random_element(names(private$all_colors_))
     },
-
+    #' @description get color by name
+    #' @param name color name
+    #' @return hex value
+    hex_from_name = function(name) {
+      private$all_colors[name]
+    },
     #' @description safe color name
     safe_color_name = function() {
-      super$random_element(self$safe_colors)
+      super$random_element(private$safe_colors_)
     },
 
     #' @description hex color
@@ -93,7 +59,16 @@ ColorProvider <- R6::R6Class(
       sprintf("rgb(%s)", paste0(self$rgb_color(), collapse = ", "))
     }
   ),
+  active = list(
+    all_colors = function() {
+      private$all_colors_
+    },
+    safe_colors = function() {
+      private$safe_colors_
+    }
+  ),
   private = list(
+    provider_ = "ColorProvider",
     ind = function(x, y) {
       substring(x, y, y)
     },
@@ -102,6 +77,10 @@ ColorProvider <- R6::R6Class(
       sprintf("(%s)", paste0(color, collapse = ", "))
     },
     sample_col = function() sample(0:255, 1),
+    #' @field all_colors (character) xxx
+    all_colors_ = NULL,
+    #' @field safe_colors (character) xxx
+    safe_colors_ = NULL,
     locales = c("uk_UA", "en_US")
   )
 )

@@ -4,57 +4,33 @@
 \alias{LoremProvider}
 \title{LoremProvider}
 \description{
-lorem ipsum methods
+lorem ipsum methods for generating random words in a language.
+Lorem Ipsum is a placeholder text commonly used to demonstrate the visual
+form of a document or a typeface without relying on meaningful content.
 }
-\examples{
-(x <- LoremProvider$new())
-x$locale
-x$word()
-x$words(3)
-x$words(6)
-x$sentence()
-x$sentences(3)
-x$sentences(6)
-x$paragraph()
-x$paragraphs(3)
-x$paragraphs(6)
-cat(x$paragraphs(6), sep = "\n")
-x$text(6)
-x$text(10)
-x$text(19)
-x$text(25)
-x$text(50)
-x$text(300)
-x$text(2000)
-
-# set a different sentence_punctuation or word_connector
-(x <- LoremProvider$new(sentence_punctuation = ";"))
-x$paragraph(4)
-(x <- LoremProvider$new(word_connector = " --- "))
-x$paragraph(4)
-
-# different locales
-LoremProvider$new(locale = "ar_AA")$word()
-LoremProvider$new(locale = "el_GR")$word()
-LoremProvider$new(locale = "he_IL")$word()
-LoremProvider$new(locale = "ja_JP")$word()
-LoremProvider$new(locale = "zh_TW")$word()
+\note{
+You cannot instantiate the Parent providers. You must use one of
+the localized one.
 }
-\keyword{internal}
-\section{Super class}{
-\code{\link[charlatan:BaseProvider]{charlatan::BaseProvider}} -> \code{LoremProvider}
+\seealso{
+Other ParentProviders: 
+\code{\link{AddressProvider}},
+\code{\link{ColorProvider}},
+\code{\link{CompanyProvider}},
+\code{\link{InternetProvider}},
+\code{\link{JobProvider}},
+\code{\link{PersonProvider}},
+\code{\link{PhoneNumberProvider}},
+\code{\link{TaxonomyProvider}},
+\code{\link{UserAgentProvider}}
 }
-\section{Public fields}{
-\if{html}{\out{<div class="r6-fields">}}
-\describe{
-\item{\code{locale}}{(character) the locale}
-}
-\if{html}{\out{</div>}}
+\concept{ParentProviders}
+\section{Super classes}{
+\code{\link[charlatan:BareProvider]{charlatan::BareProvider}} -> \code{\link[charlatan:BaseProvider]{charlatan::BaseProvider}} -> \code{LoremProvider}
 }
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
-\item \href{#method-LoremProvider-allowed_locales}{\code{LoremProvider$allowed_locales()}}
 \item \href{#method-LoremProvider-new}{\code{LoremProvider$new()}}
 \item \href{#method-LoremProvider-word}{\code{LoremProvider$word()}}
 \item \href{#method-LoremProvider-words}{\code{LoremProvider$words()}}
@@ -69,51 +45,36 @@ LoremProvider$new(locale = "zh_TW")$word()
 \if{html}{\out{
 <details><summary>Inherited methods</summary>
 <ul>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="bothify"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-bothify'><code>charlatan::BaseProvider$bothify()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="bothify"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-bothify'><code>charlatan::BareProvider$bothify()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="lexify"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-lexify'><code>charlatan::BareProvider$lexify()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="numerify"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-numerify'><code>charlatan::BareProvider$numerify()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_digit"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_digit'><code>charlatan::BareProvider$random_digit()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_digit_not_zero"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_digit_not_zero'><code>charlatan::BareProvider$random_digit_not_zero()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_digit_not_zero_or_empty"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_digit_not_zero_or_empty'><code>charlatan::BareProvider$random_digit_not_zero_or_empty()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_digit_or_empty"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_digit_or_empty'><code>charlatan::BareProvider$random_digit_or_empty()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_element"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_element'><code>charlatan::BareProvider$random_element()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_element_prob"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_element_prob'><code>charlatan::BareProvider$random_element_prob()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_int"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_int'><code>charlatan::BareProvider$random_int()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_letter"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_letter'><code>charlatan::BareProvider$random_letter()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="randomize_nb_elements"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-randomize_nb_elements'><code>charlatan::BareProvider$randomize_nb_elements()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="allowed_locales"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-allowed_locales'><code>charlatan::BaseProvider$allowed_locales()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-check_locale'><code>charlatan::BaseProvider$check_locale()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="lexify"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-lexify'><code>charlatan::BaseProvider$lexify()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="numerify"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-numerify'><code>charlatan::BaseProvider$numerify()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_digit'><code>charlatan::BaseProvider$random_digit()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_digit_not_zero'><code>charlatan::BaseProvider$random_digit_not_zero()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero_or_empty"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_digit_not_zero_or_empty'><code>charlatan::BaseProvider$random_digit_not_zero_or_empty()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_or_empty"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_digit_or_empty'><code>charlatan::BaseProvider$random_digit_or_empty()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_element"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_element'><code>charlatan::BaseProvider$random_element()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_element_prob"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_element_prob'><code>charlatan::BaseProvider$random_element_prob()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_int"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_int'><code>charlatan::BaseProvider$random_int()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_letter"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_letter'><code>charlatan::BaseProvider$random_letter()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="randomize_nb_elements"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-randomize_nb_elements'><code>charlatan::BaseProvider$randomize_nb_elements()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="print"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-print'><code>charlatan::BaseProvider$print()</code></a></span></li>
 </ul>
 </details>
 }}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-LoremProvider-allowed_locales"></a>}}
-\if{latex}{\out{\hypertarget{method-LoremProvider-allowed_locales}{}}}
-\subsection{Method \code{allowed_locales()}}{
-fetch the allowed locales for this provider
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{LoremProvider$allowed_locales()}\if{html}{\out{</div>}}
-}
-
-}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-LoremProvider-new"></a>}}
 \if{latex}{\out{\hypertarget{method-LoremProvider-new}{}}}
 \subsection{Method \code{new()}}{
 Create a new \code{LoremProvider} object
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{LoremProvider$new(
-  locale = NULL,
-  sentence_punctuation = ".",
-  word_connector = " "
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{LoremProvider$new(sentence_punctuation = ".", word_connector = " ")}\if{html}{\out{</div>}}
 }
 
 \subsection{Arguments}{
 \if{html}{\out{<div class="arguments">}}
 \describe{
-\item{\code{locale}}{(character) the locale to use. See
-\verb{$allowed_locales()} for locales supported (default: en_US)}
-
 \item{\code{sentence_punctuation}}{(character) End of sentence punctuation}
 
 \item{\code{word_connector}}{(character) Default connector between words}
@@ -136,8 +97,7 @@ Generate a random word
 \subsection{Arguments}{
 \if{html}{\out{<div class="arguments">}}
 \describe{
-\item{\code{ext_words}}{a character vector of words you would like to have
-instead of 'Lorem ipsum'}
+\item{\code{ext_words}}{a character vector of words you would like to have instead of "Lorem ipsum"}
 }
 \if{html}{\out{</div>}}
 }
@@ -159,8 +119,7 @@ Generate a character vector of random words
 \describe{
 \item{\code{nb}}{(integer) how many words to return}
 
-\item{\code{ext_words}}{a character vector of words you would like to have
-instead of 'Lorem ipsum'}
+\item{\code{ext_words}}{a character vector of words you would like to have instead of "Lorem ipsum"}
 }
 \if{html}{\out{</div>}}
 }
@@ -191,8 +150,7 @@ contain}
 words returned, otherwise the result may include a number of words
 of \code{nb} +/-40\% (with a minimum of 1)}
 
-\item{\code{ext_words}}{a character vector of words you would like to have
-instead of 'Lorem ipsum'}
+\item{\code{ext_words}}{a character vector of words you would like to have instead of "Lorem ipsum"}
 }
 \if{html}{\out{</div>}}
 }
@@ -214,8 +172,7 @@ Generate a character vector of random sentences
 \describe{
 \item{\code{nb}}{(integer) how many sentences to return}
 
-\item{\code{ext_words}}{a character vector of words you would like to have
-instead of 'Lorem ipsum'}
+\item{\code{ext_words}}{a character vector of words you would like to have instead of "Lorem ipsum"}
 }
 \if{html}{\out{</div>}}
 }
@@ -246,8 +203,7 @@ should contain}
 sentences returned, otherwise the result may include a number of
 sentences of \code{nb} +/-40\% (with a minimum of 1)}
 
-\item{\code{ext_words}}{a character vector of words you would like to have
-instead of 'Lorem ipsum'}
+\item{\code{ext_words}}{a character vector of words you would like to have instead of "Lorem ipsum"}
 }
 \if{html}{\out{</div>}}
 }
@@ -269,8 +225,7 @@ Generate many paragraphs
 \describe{
 \item{\code{nb}}{(integer) how many paragraphs to return}
 
-\item{\code{ext_words}}{a character vector of words you would like to have
-instead of 'Lorem ipsum'}
+\item{\code{ext_words}}{a character vector of words you would like to have instead of "Lorem ipsum"}
 }
 \if{html}{\out{</div>}}
 }
@@ -295,8 +250,7 @@ paragraphs.
 \item{\code{max_nb_chars}}{Maximum number of characters the text should
 contain (minimum 5)}
 
-\item{\code{ext_words}}{a character vector of words you would like to have
-instead of 'Lorem ipsum'}
+\item{\code{ext_words}}{a character vector of words you would like to have instead of "Lorem ipsum"}
 }
 \if{html}{\out{</div>}}
 }

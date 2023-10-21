@@ -31,3 +31,28 @@ lorem_word_list_la <- c(
   "vel", "velit", "veniam", "veritatis", "vero", "vitae", "voluptas",
   "voluptate", "voluptatem", "voluptates", "voluptatibus", "voluptatum"
 )
+
+#' Lorem provider Latin
+#' @inherit LoremProvider description return
+#' @family la
+#' @export
+#' @examples
+#' x <- LoremProvider_la$new()
+#' x$word()
+#' x$words(3)
+#' x$words(6)
+#' x$sentence()
+#' x$paragraph()
+#' x$paragraphs(3)
+#' cat(x$paragraphs(6), sep = "\n")
+#' x$text(19)
+#' x <- LoremProvider_la$new(word_connector = " --- ")
+#' x$paragraph(4)
+LoremProvider_la <- R6::R6Class(
+  inherit = LoremProvider,
+  "LoremProvider_la",
+  private = list(
+    locale_ = "la",
+    word_list = lorem_word_list_la
+  )
+)

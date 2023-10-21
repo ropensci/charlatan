@@ -3,127 +3,71 @@
 \name{CompanyProvider}
 \alias{CompanyProvider}
 \title{CompanyProvider}
+\value{
+A CompanyProvider object that can create companies.
+}
 \description{
 company name/etc. methods
+
+Note that you cannot instantiate this class, you can only
+use the localized versions such as \link{CompanyProvider_en_US}.
 }
-\examples{
-x <- CompanyProvider$new()
-x$locale
-x$company()
-x$company_suffix()
-x$catch_phrase()
-x$bs()
-
-x <- CompanyProvider$new(locale = "fr_FR")
-x$locale
-x$company()
-x$company_suffix()
-x$siren()
-
-x <- CompanyProvider$new(locale = "hr_HR")
-x$locale
-x$company()
-x$company_suffix()
-
-x <- CompanyProvider$new(locale = "it_IT")
-x$locale
-x$company()
-x$company_suffix()
-x$bs()
-
-CompanyProvider$new(locale = "es_MX")$bs()
-CompanyProvider$new(locale = "es_MX")$company_prefix()
-CompanyProvider$new(locale = "es_MX")$catch_phrase()
-
-CompanyProvider$new(locale = "bg_BG")$company()
-CompanyProvider$new(locale = "cs_CZ")$company()
-CompanyProvider$new(locale = "de_DE")$company()
-CompanyProvider$new(locale = "fa_IR")$company()
-
+\seealso{
+Other ParentProviders: 
+\code{\link{AddressProvider}},
+\code{\link{ColorProvider}},
+\code{\link{InternetProvider}},
+\code{\link{JobProvider}},
+\code{\link{LoremProvider}},
+\code{\link{PersonProvider}},
+\code{\link{PhoneNumberProvider}},
+\code{\link{TaxonomyProvider}},
+\code{\link{UserAgentProvider}}
 }
-\keyword{internal}
-\section{Super class}{
-\code{\link[charlatan:BaseProvider]{charlatan::BaseProvider}} -> \code{CompanyProvider}
-}
-\section{Public fields}{
-\if{html}{\out{<div class="r6-fields">}}
-\describe{
-\item{\code{locale}}{(character) xxx}
-
-\item{\code{formats}}{(character) xxx}
-
-\item{\code{prefixes}}{(character) xxx}
-
-\item{\code{suffixes}}{(character) xxx}
-
-\item{\code{catch_phrase_words}}{(character) xxx}
-
-\item{\code{bsWords}}{(character) xxx}
-
-\item{\code{siren_format}}{(character) xxx}
-}
-\if{html}{\out{</div>}}
+\concept{ParentProviders}
+\section{Super classes}{
+\code{\link[charlatan:BareProvider]{charlatan::BareProvider}} -> \code{\link[charlatan:BaseProvider]{charlatan::BaseProvider}} -> \code{CompanyProvider}
 }
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
-\item \href{#method-CompanyProvider-allowed_locales}{\code{CompanyProvider$allowed_locales()}}
 \item \href{#method-CompanyProvider-new}{\code{CompanyProvider$new()}}
 \item \href{#method-CompanyProvider-company}{\code{CompanyProvider$company()}}
-\item \href{#method-CompanyProvider-company_prefix}{\code{CompanyProvider$company_prefix()}}
-\item \href{#method-CompanyProvider-company_suffix}{\code{CompanyProvider$company_suffix()}}
 \item \href{#method-CompanyProvider-catch_phrase}{\code{CompanyProvider$catch_phrase()}}
 \item \href{#method-CompanyProvider-bs}{\code{CompanyProvider$bs()}}
-\item \href{#method-CompanyProvider-siren}{\code{CompanyProvider$siren()}}
 \item \href{#method-CompanyProvider-clone}{\code{CompanyProvider$clone()}}
 }
 }
 \if{html}{\out{
 <details><summary>Inherited methods</summary>
 <ul>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="bothify"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-bothify'><code>charlatan::BaseProvider$bothify()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="bothify"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-bothify'><code>charlatan::BareProvider$bothify()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="lexify"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-lexify'><code>charlatan::BareProvider$lexify()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="numerify"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-numerify'><code>charlatan::BareProvider$numerify()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_digit"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_digit'><code>charlatan::BareProvider$random_digit()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_digit_not_zero"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_digit_not_zero'><code>charlatan::BareProvider$random_digit_not_zero()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_digit_not_zero_or_empty"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_digit_not_zero_or_empty'><code>charlatan::BareProvider$random_digit_not_zero_or_empty()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_digit_or_empty"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_digit_or_empty'><code>charlatan::BareProvider$random_digit_or_empty()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_element"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_element'><code>charlatan::BareProvider$random_element()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_element_prob"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_element_prob'><code>charlatan::BareProvider$random_element_prob()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_int"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_int'><code>charlatan::BareProvider$random_int()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_letter"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_letter'><code>charlatan::BareProvider$random_letter()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="randomize_nb_elements"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-randomize_nb_elements'><code>charlatan::BareProvider$randomize_nb_elements()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="allowed_locales"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-allowed_locales'><code>charlatan::BaseProvider$allowed_locales()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-check_locale'><code>charlatan::BaseProvider$check_locale()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="lexify"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-lexify'><code>charlatan::BaseProvider$lexify()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="numerify"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-numerify'><code>charlatan::BaseProvider$numerify()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_digit'><code>charlatan::BaseProvider$random_digit()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_digit_not_zero'><code>charlatan::BaseProvider$random_digit_not_zero()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero_or_empty"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_digit_not_zero_or_empty'><code>charlatan::BaseProvider$random_digit_not_zero_or_empty()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_or_empty"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_digit_or_empty'><code>charlatan::BaseProvider$random_digit_or_empty()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_element"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_element'><code>charlatan::BaseProvider$random_element()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_element_prob"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_element_prob'><code>charlatan::BaseProvider$random_element_prob()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_int"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_int'><code>charlatan::BaseProvider$random_int()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_letter"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_letter'><code>charlatan::BaseProvider$random_letter()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="randomize_nb_elements"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-randomize_nb_elements'><code>charlatan::BaseProvider$randomize_nb_elements()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="print"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-print'><code>charlatan::BaseProvider$print()</code></a></span></li>
 </ul>
 </details>
 }}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-CompanyProvider-allowed_locales"></a>}}
-\if{latex}{\out{\hypertarget{method-CompanyProvider-allowed_locales}{}}}
-\subsection{Method \code{allowed_locales()}}{
-fetch the allowed locales for this provider
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{CompanyProvider$allowed_locales()}\if{html}{\out{</div>}}
-}
-
-}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-CompanyProvider-new"></a>}}
 \if{latex}{\out{\hypertarget{method-CompanyProvider-new}{}}}
 \subsection{Method \code{new()}}{
 Create a new \code{CompanyProvider} object
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{CompanyProvider$new(locale = NULL)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{CompanyProvider$new()}\if{html}{\out{</div>}}
 }
 
-\subsection{Arguments}{
-\if{html}{\out{<div class="arguments">}}
-\describe{
-\item{\code{locale}}{(character) the locale to use. See
-\verb{$allowed_locales()} for locales supported (default: en_US)}
-}
-\if{html}{\out{</div>}}
-}
 \subsection{Returns}{
 A new \code{CompanyProvider} object
 }
@@ -135,26 +79,6 @@ A new \code{CompanyProvider} object
 a company name
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{CompanyProvider$company()}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-CompanyProvider-company_prefix"></a>}}
-\if{latex}{\out{\hypertarget{method-CompanyProvider-company_prefix}{}}}
-\subsection{Method \code{company_prefix()}}{
-a company prefix
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{CompanyProvider$company_prefix()}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-CompanyProvider-company_suffix"></a>}}
-\if{latex}{\out{\hypertarget{method-CompanyProvider-company_suffix}{}}}
-\subsection{Method \code{company_suffix()}}{
-a company suffix
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{CompanyProvider$company_suffix()}\if{html}{\out{</div>}}
 }
 
 }
@@ -175,16 +99,6 @@ a catch phrase
 BS words
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{CompanyProvider$bs()}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-CompanyProvider-siren"></a>}}
-\if{latex}{\out{\hypertarget{method-CompanyProvider-siren}{}}}
-\subsection{Method \code{siren()}}{
-a siren
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{CompanyProvider$siren()}\if{html}{\out{</div>}}
 }
 
 }

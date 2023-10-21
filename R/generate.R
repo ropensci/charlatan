@@ -33,6 +33,9 @@
 #' ch_generate(locale = "fr_FR")
 #' ch_generate(locale = "fr_CH")
 ch_generate <- function(..., n = 10, locale = NULL) {
+  if (is.null(locale)) {
+    locale <- "en_US"
+  }
   choices <- unlist(list(...))
   if (length(choices) == 0) choices <- c("name", "job", "phone_number")
   # stopifnot(inherits(choices, "character"))

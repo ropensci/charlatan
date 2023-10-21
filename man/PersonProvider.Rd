@@ -3,115 +3,53 @@
 \name{PersonProvider}
 \alias{PersonProvider}
 \title{PersonProvider}
+\value{
+A PersonProvider object that can create names.
+}
 \description{
-person names methods
+PersonProvider
+
+PersonProvider
 }
 \details{
-Note that with the male/female versions if the locale
-doesn't provide a male/female version then we fall back to the
-generic thing, e.g., if no female first name we give you first
-name
+Methods for Persons, methods for generating names.
 }
-\examples{
-x <- PersonProvider$new()
-x$locale
-x$render()
-x$first_name()
-x$first_name_female()
-x$first_name_male()
-x$last_name()
-x$last_name_female()
-x$last_name_male()
-
-x <- PersonProvider$new(locale = "en_GB")
-x$locale
-x$render()
-x$first_name()
-x$first_name_female()
-x$first_name_male()
-x$last_name()
-x$last_name_female()
-x$last_name_male()
-
-z <- PersonProvider$new(locale = "fr_FR")
-z$locale
-z$render()
-z$first_name()
-z$first_name_female()
-z$first_name_male()
-z$last_name()
-z$last_name_female()
-z$last_name_male()
-z$prefix()
-
-z <- PersonProvider$new(locale = "de_AT")
-z$locale
-z$render()
-z$first_name()
-z$last_name()
-z$prefix()
-
-z <- PersonProvider$new(locale = "cs_CZ")
-z$locale
-z$render()
-z$first_name()
-z$first_name_female()
-z$first_name_male()
-z$last_name()
-z$last_name_female()
-z$last_name_male()
-z$prefix()
-
-z <- PersonProvider$new(locale = "es_MX")
-z$locale
-z$render()
-z$first_name()
-z$first_name_female()
-z$first_name_male()
-z$last_name()
-z$prefix()
-
-z <- PersonProvider$new(locale = "en_NZ")
-z$locale
-z$render()
-z$first_name()
-z$first_name_female()
-z$first_name_male()
-z$last_name()
-
-PersonProvider$new(locale = "fr_CH")$render()
-PersonProvider$new(locale = "fi_FI")$render()
-PersonProvider$new(locale = "fa_IR")$render()
-PersonProvider$new(locale = "es_ES")$render()
-PersonProvider$new(locale = "de_DE")$render()
-PersonProvider$new(locale = "de_AT")$render()
-PersonProvider$new(locale = "cs_CZ")$render()
-PersonProvider$new(locale = "bg_BG")$render()
-PersonProvider$new(locale = "da_DK")$render()
+\note{
+You cannot instantiate the Parent providers. You must use one of
+the localized one.
 }
-\keyword{internal}
-\section{Super class}{
-\code{\link[charlatan:BaseProvider]{charlatan::BaseProvider}} -> \code{PersonProvider}
+\seealso{
+Other ParentProviders: 
+\code{\link{AddressProvider}},
+\code{\link{ColorProvider}},
+\code{\link{CompanyProvider}},
+\code{\link{InternetProvider}},
+\code{\link{JobProvider}},
+\code{\link{LoremProvider}},
+\code{\link{PhoneNumberProvider}},
+\code{\link{TaxonomyProvider}},
+\code{\link{UserAgentProvider}}
 }
-\section{Public fields}{
-\if{html}{\out{<div class="r6-fields">}}
+\concept{ParentProviders}
+\section{Super classes}{
+\code{\link[charlatan:BareProvider]{charlatan::BareProvider}} -> \code{\link[charlatan:BaseProvider]{charlatan::BaseProvider}} -> \code{PersonProvider}
+}
+\section{Active bindings}{
+\if{html}{\out{<div class="r6-active-bindings">}}
 \describe{
-\item{\code{locale}}{(character) the locale}
-
-\item{\code{formats}}{(character) person name formats}
-
-\item{\code{person}}{(character) person name data}
-
-\item{\code{messy}}{(logical) the messy setting, \code{TRUE} or \code{FALSE}}
+\item{\code{messy}}{show current setting for messy. Either TRUE or FALSE depending
+on configuration and if this is even possible for the locale.}
 }
 \if{html}{\out{</div>}}
 }
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
-\item \href{#method-PersonProvider-allowed_locales}{\code{PersonProvider$allowed_locales()}}
 \item \href{#method-PersonProvider-new}{\code{PersonProvider$new()}}
+\item \href{#method-PersonProvider-messy_is_possible}{\code{PersonProvider$messy_is_possible()}}
+\item \href{#method-PersonProvider-change_messy}{\code{PersonProvider$change_messy()}}
 \item \href{#method-PersonProvider-render}{\code{PersonProvider$render()}}
+\item \href{#method-PersonProvider-messy_switch}{\code{PersonProvider$messy_switch()}}
 \item \href{#method-PersonProvider-first_name}{\code{PersonProvider$first_name()}}
 \item \href{#method-PersonProvider-first_name_female}{\code{PersonProvider$first_name_female()}}
 \item \href{#method-PersonProvider-first_name_male}{\code{PersonProvider$first_name_male()}}
@@ -130,53 +68,67 @@ PersonProvider$new(locale = "da_DK")$render()
 \if{html}{\out{
 <details><summary>Inherited methods</summary>
 <ul>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="bothify"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-bothify'><code>charlatan::BaseProvider$bothify()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="bothify"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-bothify'><code>charlatan::BareProvider$bothify()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="lexify"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-lexify'><code>charlatan::BareProvider$lexify()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="numerify"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-numerify'><code>charlatan::BareProvider$numerify()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_digit"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_digit'><code>charlatan::BareProvider$random_digit()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_digit_not_zero"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_digit_not_zero'><code>charlatan::BareProvider$random_digit_not_zero()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_digit_not_zero_or_empty"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_digit_not_zero_or_empty'><code>charlatan::BareProvider$random_digit_not_zero_or_empty()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_digit_or_empty"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_digit_or_empty'><code>charlatan::BareProvider$random_digit_or_empty()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_element"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_element'><code>charlatan::BareProvider$random_element()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_element_prob"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_element_prob'><code>charlatan::BareProvider$random_element_prob()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_int"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_int'><code>charlatan::BareProvider$random_int()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_letter"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_letter'><code>charlatan::BareProvider$random_letter()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="randomize_nb_elements"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-randomize_nb_elements'><code>charlatan::BareProvider$randomize_nb_elements()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="allowed_locales"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-allowed_locales'><code>charlatan::BaseProvider$allowed_locales()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-check_locale'><code>charlatan::BaseProvider$check_locale()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="lexify"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-lexify'><code>charlatan::BaseProvider$lexify()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="numerify"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-numerify'><code>charlatan::BaseProvider$numerify()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_digit'><code>charlatan::BaseProvider$random_digit()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_digit_not_zero'><code>charlatan::BaseProvider$random_digit_not_zero()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_not_zero_or_empty"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_digit_not_zero_or_empty'><code>charlatan::BaseProvider$random_digit_not_zero_or_empty()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_digit_or_empty"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_digit_or_empty'><code>charlatan::BaseProvider$random_digit_or_empty()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_element"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_element'><code>charlatan::BaseProvider$random_element()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_element_prob"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_element_prob'><code>charlatan::BaseProvider$random_element_prob()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_int"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_int'><code>charlatan::BaseProvider$random_int()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="random_letter"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-random_letter'><code>charlatan::BaseProvider$random_letter()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="randomize_nb_elements"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-randomize_nb_elements'><code>charlatan::BaseProvider$randomize_nb_elements()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="print"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-print'><code>charlatan::BaseProvider$print()</code></a></span></li>
 </ul>
 </details>
 }}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-PersonProvider-allowed_locales"></a>}}
-\if{latex}{\out{\hypertarget{method-PersonProvider-allowed_locales}{}}}
-\subsection{Method \code{allowed_locales()}}{
-fetch the allowed locales for this provider
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{PersonProvider$allowed_locales()}\if{html}{\out{</div>}}
-}
-
-}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-PersonProvider-new"></a>}}
 \if{latex}{\out{\hypertarget{method-PersonProvider-new}{}}}
 \subsection{Method \code{new()}}{
 Create a new \code{PersonProvider} object
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{PersonProvider$new(locale = NULL, messy = FALSE)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{PersonProvider$new(messy = FALSE)}\if{html}{\out{</div>}}
 }
 
 \subsection{Arguments}{
 \if{html}{\out{<div class="arguments">}}
 \describe{
-\item{\code{locale}}{(character) the locale to use. See
-\verb{$allowed_locales()} for locales supported (default: en_US)}
-
-\item{\code{messy}}{(logical) make some messy data. Default: \code{FALSE}}
+\item{\code{messy}}{make it messy}
 }
 \if{html}{\out{</div>}}
 }
-\subsection{Returns}{
-A new \code{PersonProvider} object
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-PersonProvider-messy_is_possible"></a>}}
+\if{latex}{\out{\hypertarget{method-PersonProvider-messy_is_possible}{}}}
+\subsection{Method \code{messy_is_possible()}}{
+internal function to figure out if
+messy is a valid option for this locale.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{PersonProvider$messy_is_possible()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-PersonProvider-change_messy"></a>}}
+\if{latex}{\out{\hypertarget{method-PersonProvider-change_messy}{}}}
+\subsection{Method \code{change_messy()}}{
+Change messy (if possible)
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{PersonProvider$change_messy(messy)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{messy}}{TRUE or FALSE}
+}
+\if{html}{\out{</div>}}
 }
 }
 \if{html}{\out{<hr>}}
@@ -192,6 +144,27 @@ Make a person's name
 \if{html}{\out{<div class="arguments">}}
 \describe{
 \item{\code{fmt}}{(character) a name format, default: \code{NULL}}
+}
+\if{html}{\out{</div>}}
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-PersonProvider-messy_switch"></a>}}
+\if{latex}{\out{\hypertarget{method-PersonProvider-messy_switch}{}}}
+\subsection{Method \code{messy_switch()}}{
+messy switch (internal).
+Always return a text, when messy is allowed return a messy
+version, but otherwise return a clean version.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{PersonProvider$messy_switch(clean_choice, messy_choice)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{clean_choice}}{the clean version}
+
+\item{\code{messy_choice}}{the messy version}
 }
 \if{html}{\out{</div>}}
 }

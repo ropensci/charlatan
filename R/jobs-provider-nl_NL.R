@@ -1247,3 +1247,21 @@ job_formats_nl_nl <- c(
   "Zweminstructeur",
   "Zo\u00f6loog"
 )
+
+#' Job provider for Netherlands
+#'
+#' @inherit JobProvider description details return
+#' @family nl
+#' @family NL
+#' @export
+#' @examples
+#' x <- JobProvider_nl_NL$new()
+#' x$render()
+JobProvider_nl_NL <- R6::R6Class(
+  inherit = JobProvider,
+  "JobProvider_nl_NL",
+  private = list(
+    locale_ = "nl_NL",
+    formats = job_formats_nl_nl
+  )
+)

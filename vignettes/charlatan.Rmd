@@ -1,6 +1,8 @@
 ---
 title: "Introduction to the charlatan package"
-author: "Scott Chamberlain"
+author: 
+    - "Scott Chamberlain"
+    - "Roel M. Hogervorst"
 date: "`r Sys.Date()`"
 output:
   html_document:
@@ -34,11 +36,10 @@ give you a sense for what you can do with this package:
 * Generate fake data to replace sensitive real data with before public release
 * Create a random set of colors for visualization
 * Generate random coordinates for a map
-* Get a set of randomly generated DOIs (Digial Object Identifiers) to
+* Get a set of randomly generated DOIs (Digital Object Identifiers) to
 assign to fake scholarly artifacts
 * Generate fake taxonomic names for a biological dataset
-* Get a set of fake sequences to use to test code/software that uses
-sequence data
+* Get a set of fake sequences to use to test code/software that uses sequence data
 
 ## Contributing
 

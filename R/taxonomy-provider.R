@@ -180,9 +180,9 @@ tax_epithets <- c(
 )
 
 #' @title TaxonomyProvider
-#' @description Taxonomy provider
 #' @export
-#' @keywords internal
+#' @family ParentProviders
+#' @description Taxonomy provider for Generating Taxonomic names.
 #' @section Names:
 #' Names were taken from Theplantlist. 500 genera names and 500
 #' epithets were chosen at random from the set of 10,000 names in the
@@ -193,31 +193,17 @@ tax_epithets <- c(
 #' @section Taxonomic authority:
 #' Randomly, the taxonomic authority is in parentheses - which represents
 #' that the given authority was not the original authority.
-#' @examples
-#' (z <- TaxonomyProvider$new())
-#' z$genus()
-#' z$epithet()
-#' z$species()
-#' z$species(authority = TRUE)
-#' ## FIXME - datetimeprovider slow - may be related to unix time problem
-#' # z$species(authority = TRUE, date = TRUE)
 TaxonomyProvider <- R6::R6Class(
   inherit = BaseProvider,
   "TaxonomyProvider",
   public = list(
-    #' @field genera (character) vector of generic names
-    genera = tax_genera,
-    #' @field epithets (character) vector of eptithet names
-    epithets = tax_epithets,
-
     #' @description Get a genus name
     genus = function() {
-      super$random_element(self$genera)
+      super$random_element(private$genera)
     },
-
     #' @description Get an epithet name
     epithet = function() {
-      super$random_element(self$epithets)
+      super$random_element(private$epithets)
     },
 
     #' @description Get a binomial name (genus + epithet)
@@ -226,11 +212,14 @@ TaxonomyProvider <- R6::R6Class(
     #' this is ignored. default: `FALSE`
     species = function(authority = FALSE, date = FALSE) {
       name <- paste(
-        super$random_element(self$genera),
-        super$random_element(self$epithets)
+        super$random_element(private$genera),
+        super$random_element(private$epithets)
       )
       if (authority) {
-        lname <- super$random_element(PersonProvider$new()$person$last_names)
+        ## I made this provider consistent with other providers, but what
+        ## really matters here for locale
+        ## is only the person provider. Genus names are all latin.
+        lname <- private$pp$last_name()
         if (date) {
           lname <- paste(lname, DateTimeProvider$new()$year(), sep = ", ")
         }
@@ -238,6 +227,19 @@ TaxonomyProvider <- R6::R6Class(
         name <- paste(name, lname)
       }
       return(name)
+    },
+    #' @description Initialize new Taxonomy Provider.
+    initialize = function() {
+      super$initialize()
+      private$pp <- subclass("PersonProvider", locale = self$locale)
     }
+  ),
+  private = list(
+    provider_ = "TaxonomyProvider",
+    # vector of generic names
+    genera = tax_genera,
+    #  vector of eptithet names
+    epithets = tax_epithets,
+    pp = NULL
   )
 )

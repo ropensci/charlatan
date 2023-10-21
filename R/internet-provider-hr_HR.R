@@ -21,3 +21,27 @@ int_replacements_hr_hr <- list(
   c("\u017e", "z"),
   c("\u017d", "Z")
 )
+
+#' Internet provider for
+#'
+#' methods for internet related data, like email addresses,
+#' usernames, and websites.
+#' @family hr
+#' @family HR
+#' @export
+#' @examples
+#' x <- InternetProvider_hr_HR$new()
+#' x$email()
+#' x$free_email()
+#' x$mac_address()
+#' x$company_email()
+InternetProvider_hr_HR <- R6::R6Class(
+  inherit = InternetProvider,
+  "InternetProvider_hr_HR",
+  private = list(
+    locale_ = "hr_HR",
+    free_email_domains = int_free_email_domains_hr_hr,
+    tlds = int_tlds_hr_hr,
+    replacements = int_replacements_hr_hr
+  )
+)

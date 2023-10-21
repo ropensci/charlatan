@@ -11,4 +11,9 @@ appveyor.yml
 ^codemeta\.json$
 ^revdep$
 ^Makefile$
+^todo.md$
+^data-raw$
+^doc$
+^Meta$
+^inst\examples$
 .git

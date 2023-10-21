@@ -26,7 +26,7 @@ ch_rgb_css_color(n = 1)
 \item{n}{(integer) number of things to get, any non-negative integer}
 
 \item{locale}{(character) the locale to use. See
-\code{ColorProvider$new()$allowed_locales()} for locales supported.
+\code{colors()$allowed_locales()} for locales supported.
 Affects the \code{ch_color_name} and \code{ch_safe_color_name} functions}
 }
 \description{
@@ -35,14 +35,14 @@ Create fake colors
 \examples{
 ch_color_name()
 ch_color_name(10)
-ch_color_name(500)
+# or even ch_color_name(500)
 
 ch_safe_color_name()
 ch_safe_color_name(10)
 
 ch_hex_color()
 ch_hex_color(10)
-ch_hex_color(1000)
+# or even ch_hex_color(1000)
 
 ch_safe_hex_color()
 ch_safe_hex_color(10)

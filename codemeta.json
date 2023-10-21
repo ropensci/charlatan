@@ -8,13 +8,13 @@
   "codeRepository": "https://github.com/ropensci/charlatan",
   "issueTracker": "https://github.com/ropensci/charlatan/issues",
   "license": "https://spdx.org/licenses/MIT",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 4.2.1 (2022-06-23)",
+  "runtimePlatform": "R version 4.2.2 (2022-10-31)",
   "provider": {
     "@id": "https://cran.r-project.org",
     "@type": "Organization",
@@ -27,7 +27,7 @@
       "givenName": "Roel M.",
       "familyName": "Hogervorst",
       "email": "hogervorst.rm@gmail.com",
-      "@id": "https://orchid.org/0000-0001-7509-0328"
+      "@id": "https://orcid.org/0000-0001-7509-0328"
     },
     {
       "@type": "Person",
@@ -60,7 +60,7 @@
       "givenName": "Roel M.",
       "familyName": "Hogervorst",
       "email": "hogervorst.rm@gmail.com",
-      "@id": "https://orchid.org/0000-0001-7509-0328"
+      "@id": "https://orcid.org/0000-0001-7509-0328"
     }
   ],
   "softwareSuggestions": [
@@ -123,6 +123,18 @@
         "url": "https://cran.r-project.org"
       },
       "sameAs": "https://CRAN.R-project.org/package=stringi"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "spelling",
+      "name": "spelling",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=spelling"
     }
   ],
   "softwareRequirements": {
@@ -164,7 +176,21 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=whisker"
     },
+    "4": {
+      "@type": "SoftwareApplication",
+      "identifier": "R",
+      "name": "R",
+      "version": ">= 2.10"
+    },
     "SystemRequirements": null
   },
-  "fileSize": "1495.95KB"
+  "fileSize": "21555.202KB",
+  "releaseNotes": "https://github.com/ropensci/charlatan/blob/master/NEWS.md",
+  "contIntegration": "https://github.com/ropensci/charlatan/actions?query=workflow%3AR-check",
+  "developmentStatus": "https://www.repostatus.org/#active",
+  "review": {
+    "@type": "Review",
+    "url": "https://github.com/ropensci/software-review/issues/94",
+    "provider": "https://ropensci.org"
+  }
 }

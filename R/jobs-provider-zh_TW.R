@@ -475,3 +475,20 @@ job_formats_zh_tw <- c(
   "\u9eb5\u5305\u5e2b",
   "\u9ebb\u9189\u91ab\u5e2b"
 )
+#' Job provider for Taiwan
+#'
+#' @inherit JobProvider description details return
+#' @family zh
+#' @family TW
+#' @export
+#' @examples
+#' x <- JobProvider_zh_TW$new()
+#' x$render()
+JobProvider_zh_TW <- R6::R6Class(
+  inherit = JobProvider,
+  "JobProvider_zh_TW",
+  private = list(
+    locale_ = "zh_TW",
+    formats = job_formats_zh_tw
+  )
+)

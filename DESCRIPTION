@@ -1,11 +1,12 @@
 Package: charlatan
 Type: Package
 Title: Make Fake Data
-Description: Make fake data, supporting addresses, person names, dates,
+Description: Make fake data that looks realistic, supporting addresses, 
+    person names, dates,
     times, colors, coordinates, currencies, digital object identifiers
     ('DOIs'), jobs, phone numbers, 'DNA' sequences, doubles and integers
     from distributions and within a range.
-Version: 0.5.1
+Version: 0.6.0
 Authors@R: c(
       person("Roel M.", "Hogervorst", 
             email ="hogervorst.rm@gmail.com", 
@@ -41,17 +42,21 @@ Suggests:
     knitr,
     rmarkdown,
     ipaddress,
-    stringi
-RoxygenNote: 7.2.2
+    stringi,
+    spelling
+RoxygenNote: 7.2.3
+Depends: 
+    R (>= 2.10)
 Collate: 
     'address-provider-en_GB.R'
     'address-provider-en_NZ.R'
     'address-provider-en_US.R'
     'address-provider-nl_NL.R'
-    'base-provider.R'
     'datetime-provider.R'
     'address-provider.R'
     'available_locales.R'
+    'available_providers.R'
+    'base-provider.R'
     'charlatan-package.R'
     'charlatan_settings.R'
     'color-provider-en_US.R'
@@ -89,6 +94,7 @@ Collate:
     'internet-provider-de_DE.R'
     'internet-provider-en_AU.R'
     'internet-provider-en_NZ.R'
+    'internet-provider-en_US.R'
     'internet-provider-fa_IR.R'
     'internet-provider-fr_FR.R'
     'internet-provider-hr_HR.R'
@@ -107,6 +113,7 @@ Collate:
     'jobs-provider-uk_UA.R'
     'jobs-provider-zh_TW.R'
     'jobs-provider.R'
+    'languages.R'
     'lorem-provider-ar_AA.R'
     'lorem-provider-el_GR.R'
     'lorem-provider-en_US.R'
@@ -149,14 +156,21 @@ Collate:
     'person-provider-no_NO.R'
     'person-provider-pl_PL.R'
     'person-provider.R'
-    'phone-number-provider-all.R'
     'phone_number.R'
-    'phonenumbers-provider.R'
+    'phonenumber-provider-en.R'
+    'phonenumber-provider-es.R'
+    'phonenumber-provider-fr.R'
+    'phonenumber-provider-nl.R'
+    'phonenumber-provider-rest.R'
+    'phonenumber-provider.R'
     'sequence-provider.R'
     'sequences.R'
+    'ssn-provider-all.R'
     'ssn-provider.R'
     'ssn.R'
+    'taxonomy-provider-all.R'
     'taxonomy-provider.R'
     'taxonomy.R'
+    'useragent-provider-all.R'
     'useragent-provider.R'
     'zzz.R'

@@ -31,6 +31,15 @@ locales_update:
 # No real targets!
 .PHONY: all test doc install	
 
+vignettes:
+	${RSCRIPT} -e "devtools::build_vignettes()"
+
+style:
+	${RSCRIPT} -e "styler:::style_active_pkg()"
+cov:
+	${RSCRIPT} -e "covr::package_coverage()"
+cloc:
+	${RSCRIPT} -e "cloc::cloc('R')"
 spellcheck:
 	${RSCRIPT} -e "devtools::spell_check()"
 

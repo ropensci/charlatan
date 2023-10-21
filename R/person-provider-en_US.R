@@ -1199,3 +1199,34 @@ person_en_us_messy$prefixes_female <- person_prefixes_female_en_us_messy
 person_en_us_messy$prefixes_male <- person_prefixes_male_en_us_messy
 person_en_us_messy$suffixes_female <- person_suffixes_female_en_us_messy
 person_en_us_messy$suffixes_male <- person_suffixes_male_en_us_messy
+
+#' @title Person Provider for English (United States)
+#' @inherit PersonProvider description details return
+#' @export
+#' @family en
+#' @family US
+#' @details Note for female and male components that we fall back on generic
+#' versions if the locale
+#' doesn't provide a male/female version.
+#' e.g., if no female first name we use first
+#' name
+#' @examples
+#' x <- PersonProvider_en_US$new()
+#' x$locale
+#' x$render()
+#' x$first_name()
+#' x$first_name_female()
+#' x$first_name_male()
+#' x$last_name()
+#' x$last_name_female()
+#' x$last_name_male()
+PersonProvider_en_US <- R6::R6Class(
+  "PersonProvider_en_US",
+  inherit = PersonProvider,
+  private = list(
+    locale_ = "en_US",
+    formats = person_formats_en_us,
+    persons = person_en_us,
+    persons_messy = person_en_us_messy
+  )
+)

@@ -9,7 +9,7 @@
 #' @examples
 #' ch_job()
 #' ch_job(10)
-#' ch_job(500)
+#' # or even ch_job(500)
 #'
 #' ch_job(locale = "da_DK", n = 10)
 #' ch_job(locale = "fi_FI", n = 10)
@@ -23,10 +23,13 @@
 #' ch_job(locale = "zh_TW", n = 10)
 ch_job <- function(n = 1, locale = NULL) {
   assert(n, c("integer", "numeric"))
+  if (is.null(locale)) {
+    locale <- "en_US"
+  }
+  jj <- cr_loc_spec_provider("JobProvider", locale)
   if (n == 1) {
-    JobProvider$new(locale = locale)$render()
+    jj$render()
   } else {
-    x <- JobProvider$new(locale = locale)
-    replicate(n, x$render())
+    replicate(n, jj$render())
   }
 }

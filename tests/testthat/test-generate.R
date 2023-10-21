@@ -64,6 +64,6 @@ test_that("ch_generate fails well", {
 
   expect_error(
     ch_generate(locale = "foobar"),
-    "foobar not in set of available locales"
+    "There is no locale foobar for provider PersonProvider"
   )
 })

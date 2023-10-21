@@ -295,53 +295,97 @@ person_last_romanized_names_ja_jp <- c(
   "Wakamatsu", "Watanabe"
 )
 
-funs_ja_jp <- list(
-  kana_name = function() {
-    pattern <- super$random_element(self$kana_formats)
-    self$generator$parse(pattern)
-  },
-  first_kana_name = function() {
-    super$random_element(self$first_kana_names)
-  }
+person_ja_jp <- list(
+  first_names = person_first_romanized_names_ja_jp,
+  last_names = person_last_romanized_names_ja_jp
 )
 
-# @classmethod
-# def first_kana_name_female(cls):
-#     return cls.random_element(cls.first_kana_names_female)
 
-# @classmethod
-# def first_kana_name_male(cls):
-#     return cls.random_element(cls.first_kana_names_male)
-
-# @classmethod
-# def last_kana_name(cls):
-#     return cls.random_element(cls.last_kana_names)
-
-# def romanized_name(self):
-#     '''
-#     @example 'Akira Aota'
-#     '''
-#     pattern = self.random_element(self.romanized_formats)
-#     return self.generator.parse(pattern)
-
-# @classmethod
-# def first_romanized_name(cls):
-#     '''
-#     @example 'Akira'
-#     '''
-#     return cls.random_element(cls.first_romanized_names)
-
-# @classmethod
-# def first_romanized_name_female(cls):
-#     return cls.random_element(cls.first_romanized_names_female)
-
-# @classmethod
-# def first_romanized_name_male(cls):
-#     return cls.random_element(cls.first_romanized_names_male)
-
-# @classmethod
-# def last_romanized_name(cls):
-#     '''
-#     @example 'Aota'
-#     '''
-#     return cls.random_element(cls.last_romanized_names)
+# TODO: render does not work for japanese
+#' @title Person Provider for Japanese (Japan)
+#' @inherit PersonProvider description details return
+#' @export
+#' @family ja
+#' @family JP
+#' @details Note for female and male components that we fall back on generic
+#' versions if the locale
+#' doesn't provide a male/female version.
+#' e.g., if no female first name we use first
+#' name
+#' @examples
+#' x <- PersonProvider_ja_JP$new()
+#' x$locale
+#' x$render()
+#' x$first_name()
+#' x$first_kana_name()
+#' x$first_name_female()
+#' x$first_name_male()
+#' x$last_name()
+#' x$last_name_female()
+#' x$last_name_male()
+PersonProvider_ja_JP <- R6::R6Class(
+  "PersonProvider_ja_JP",
+  inherit = PersonProvider,
+  public = list(
+    #' @description create a kana name.
+    kana_name = function() {
+      fmt <- super$random_element(private$kana_formats)
+      dat <- lapply(
+        self$person[pluck_names(fmt, private$persons)],
+        function(x) {
+          if (has_probs(x)) {
+            super$random_element_prob(x)
+          } else {
+            super$random_element(x)
+          }
+        }
+      )
+      if (length(grep("first_kana_names", names(dat))) > 1) {
+        tmp <- grep("first_kana_names", names(dat), value = TRUE)
+        nms <- paste(tmp, seq_along(tmp), sep = "")
+        names(dat)[grep("first_kana_names", names(dat))] <- nms
+      }
+      if (length(grep("last_kana_names", names(dat))) > 1) {
+        tmp <- grep("last_kana_names", names(dat), value = TRUE)
+        nms <- paste(tmp, seq_along(tmp), sep = "")
+        names(dat)[grep("last_kana_names", names(dat))] <- nms
+      }
+      whisker::whisker.render(fmt, data = dat)
+    },
+    #' @description Generate first name (kana)
+    first_kana_name = function() {
+      super$random_element(private$first_kana_names)
+    },
+    #' @description Generate last name (kana)
+    last_kana_name = function() {
+      super$random_element(private$last_kana_names)
+    },
+    #' @description Generate first name male (kana)
+    first_kana_name_male = function() {
+      super$random_element(private$first_kana_names_male)
+    },
+    #' @description Generate first name female (kana)
+    first_kana_name_female = function() {
+      super$random_element(private$first_kana_female)
+    }
+  ),
+  private = list(
+    # person name formats
+    formats = person_formats_ja_jp,
+    # person name data
+    persons = person_ja_jp,
+    ## TODO: describe what we can do here:
+    ## because we inherit, we can create special japanese names.
+    # kana_formats different formats for kana names
+    kana_formats = person_kana_formats_ja_jp,
+    # first names (kana)
+    first_kana_names = person_first_kana_names_ja_jp,
+    # last names (kana)
+    last_kana_names = person_last_kana_names_ja_jp,
+    # first names male (kana)
+    first_kana_names_male = person_first_kana_names_male_ja_jp,
+    # first names female (kana)
+    first_kana_names_female = person_first_kana_names_female_ja_jp,
+    locale_ = "ja_JP"
+  )
+)

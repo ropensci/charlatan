@@ -351,3 +351,35 @@ person_fa_ir <- list(
   prefixes_female = person_prefixes_female_fa_ir,
   prefixes_male = person_prefixes_male_fa_ir
 )
+
+#' @title Person Provider for Farsi (Iran)
+#' @inherit PersonProvider description details return
+#' @export
+#' @family fa
+#' @family IR
+#' @details Note for female and male components that we fall back on generic
+#' versions if the locale
+#' doesn't provide a male/female version.
+#' e.g., if no female first name we use first
+#' name
+#' @examples
+#' x <- PersonProvider_fa_IR$new()
+#' x$locale
+#' x$render()
+#' x$first_name()
+#' x$first_name_female()
+#' x$first_name_male()
+#' x$last_name()
+#' x$last_name_female()
+#' x$last_name_male()
+PersonProvider_fa_IR <- R6::R6Class(
+  "PersonProvider_fa_IR",
+  inherit = PersonProvider,
+  private = list(
+    # person name formats
+    formats = person_formats_fa_ir,
+    # person name data
+    persons = person_fa_ir,
+    locale_ = "fa_IR"
+  )
+)

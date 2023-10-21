@@ -281,3 +281,34 @@ person_ko_kr <- list(
   first_names = person_first_names_ko_kr,
   last_names = person_last_names_ko_kr
 )
+
+
+#' @title Person Provider for Korean (Republic of Korea)
+#' @inherit PersonProvider description details return
+#' @export
+#' @family ko
+#' @family KR
+#' @details Note for female and male components that we fall back on generic
+#' versions if the locale
+#' doesn't provide a male/female version.
+#' e.g., if no female first name we use first
+#' name
+#' @examples
+#' x <- PersonProvider_hr_HR$new()
+#' x$locale
+#' x$render()
+#' x$first_name()
+#' x$first_name_female()
+#' x$first_name_male()
+#' x$last_name()
+#' x$last_name_female()
+#' x$last_name_male()
+PersonProvider_ko_KR <- R6::R6Class(
+  "PersonProvider_ko_KR",
+  inherit = PersonProvider,
+  private = list(
+    formats = person_formats_ko_kr,
+    persons = person_ko_kr,
+    locale_ = "ko_KR"
+  )
+)

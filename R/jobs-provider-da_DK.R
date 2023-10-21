@@ -701,3 +701,21 @@ job_formats_da_dk <- c(
   "\u00d8konomikonsulent",
   "\u00d8konomir\u00e5dgiver"
 )
+#' Job provider for Danish
+#'
+#' @inherit JobProvider description details return
+#' @family da
+#' @family DK
+#' @export
+#' @examples
+#' x <- JobProvider_da_DK$new()
+#' x$render()
+JobProvider_da_DK <- R6::R6Class(
+  inherit = JobProvider,
+  "JobProvider_da_DK",
+  private = list(
+    locale_ = "da_DK",
+    # vector of possible formats
+    formats = job_formats_da_dk
+  )
+)

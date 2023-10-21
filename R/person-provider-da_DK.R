@@ -632,3 +632,33 @@ person_da_dk <- list(
   prefixes_female = person_prefixes_female_da_dk,
   prefixes_male = person_prefixes_male_da_dk
 )
+
+#' @title Person Provider for Danish (Denmark)
+#' @inherit PersonProvider description details return
+#' @export
+#' @family da
+#' @family DK
+#' @details Note for female and male components that we fall back on generic
+#' versions if the locale
+#' doesn't provide a male/female version.
+#' e.g., if no female first name we use first
+#' name
+#' @examples
+#' x <- PersonProvider_da_DK$new()
+#' x$locale
+#' x$render()
+#' x$first_name()
+#' x$first_name_female()
+#' x$first_name_male()
+#' x$last_name()
+#' x$last_name_female()
+#' x$last_name_male()
+PersonProvider_da_DK <- R6::R6Class(
+  "PersonProvider_da_DK",
+  inherit = PersonProvider,
+  private = list(
+    formats = person_formats_da_dk,
+    persons = person_da_dk,
+    locale_ = "da_DK"
+  )
+)

@@ -157,3 +157,21 @@ job_formats_uk_ua <- c(
   "\u042e\u0432\u0435\u043b\u0456\u0440",
   "\u042e\u0440\u0438\u0441\u0442"
 )
+
+#' Job provider for Ukraine
+#'
+#' @inherit JobProvider description details return
+#' @family uk
+#' @family UA
+#' @export
+#' @examples
+#' x <- JobProvider_uk_UA$new()
+#' x$render()
+JobProvider_uk_UA <- R6::R6Class(
+  inherit = JobProvider,
+  "JobProvider_uk_UA",
+  private = list(
+    locale_ = "uk_UA",
+    formats = job_formats_uk_ua
+  )
+)

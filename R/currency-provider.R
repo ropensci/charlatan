@@ -175,7 +175,7 @@ currency_formats <- c(
 #' z <- CurrencyProvider$new()
 #' z$render()
 CurrencyProvider <- R6::R6Class(
-  inherit = BaseProvider,
+  inherit = BareProvider,
   "CurrencyProvider",
   public = list(
     #' @field formats (character) currency formats character vector
@@ -186,5 +186,8 @@ CurrencyProvider <- R6::R6Class(
     render = function() {
       super$random_element(self$formats)
     }
+  ),
+  private = list(
+    provider_ = "CurrencyProvider"
   )
 )

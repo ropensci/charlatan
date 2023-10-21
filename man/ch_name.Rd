@@ -21,7 +21,7 @@ Create fake person names
 \examples{
 ch_name()
 ch_name(10)
-ch_name(500)
+# or even ch_name(500)
 
 ch_name(locale = "fr_FR", n = 10)
 ch_name(locale = "fr_CH", n = 10)
@@ -29,5 +29,5 @@ ch_name(locale = "fa_IR", n = 10)
 ch_name(locale = "fi_FI", n = 10)
 }
 \seealso{
-\link{PersonProvider}
+\link{PersonProvider_en_US}
 }

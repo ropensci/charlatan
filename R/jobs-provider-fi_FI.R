@@ -197,3 +197,20 @@ job_formats_fi_fi <- c(
   "Yritt\u00e4jyysneuvoja",
   "Yva-koordinaattori"
 )
+#' Job provider for Finnish
+#'
+#' @inherit JobProvider description details return
+#' @family fi
+#' @family FI
+#' @export
+#' @examples
+#' x <- JobProvider_fi_FI$new()
+#' x$render()
+JobProvider_fi_FI <- R6::R6Class(
+  inherit = JobProvider,
+  "JobProvider_fi_FI",
+  private = list(
+    locale_ = "fi_FI",
+    formats = job_formats_fi_fi
+  )
+)

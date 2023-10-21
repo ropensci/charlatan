@@ -4,20 +4,20 @@
 #' @name ch_color
 #' @template params
 #' @param locale (character) the locale to use. See
-#' `ColorProvider$new()$allowed_locales()` for locales supported.
+#' `colors()$allowed_locales()` for locales supported.
 #' Affects the `ch_color_name` and `ch_safe_color_name` functions
 #' @seealso [ColorProvider]
 #' @examples
 #' ch_color_name()
 #' ch_color_name(10)
-#' ch_color_name(500)
+#' # or even ch_color_name(500)
 #'
 #' ch_safe_color_name()
 #' ch_safe_color_name(10)
 #'
 #' ch_hex_color()
 #' ch_hex_color(10)
-#' ch_hex_color(1000)
+#' # or even ch_hex_color(1000)
 #'
 #' ch_safe_hex_color()
 #' ch_safe_hex_color(10)
@@ -34,11 +34,10 @@
 #' ch_safe_color_name(locale = "uk_UA")
 #' ch_safe_color_name(n = 10, locale = "uk_UA")
 ch_color_name <- function(n = 1, locale = NULL) {
-  assert(n, c("integer", "numeric"))
+  x <- color_provider(n, locale = locale)
   if (n == 1) {
-    ColorProvider$new(locale = locale)$color_name()
+    x$color_name()
   } else {
-    x <- ColorProvider$new(locale = locale)
     rep_licate(n, x$color_name(), "")
   }
 }
@@ -46,11 +45,10 @@ ch_color_name <- function(n = 1, locale = NULL) {
 #' @export
 #' @rdname ch_color
 ch_safe_color_name <- function(n = 1, locale = NULL) {
-  assert(n, c("integer", "numeric"))
+  x <- color_provider(n, locale)
   if (n == 1) {
-    ColorProvider$new(locale = locale)$safe_color_name()
+    x$safe_color_name()
   } else {
-    x <- ColorProvider$new(locale = locale)
     rep_licate(n, x$safe_color_name(), "")
   }
 }
@@ -58,11 +56,10 @@ ch_safe_color_name <- function(n = 1, locale = NULL) {
 #' @export
 #' @rdname ch_color
 ch_hex_color <- function(n = 1) {
-  assert(n, c("integer", "numeric"))
+  x <- color_provider(n, "en_US")
   if (n == 1) {
-    ColorProvider$new()$hex_color()
+    x$hex_color()
   } else {
-    x <- ColorProvider$new()
     rep_licate(n, x$hex_color(), "")
   }
 }
@@ -70,11 +67,10 @@ ch_hex_color <- function(n = 1) {
 #' @export
 #' @rdname ch_color
 ch_safe_hex_color <- function(n = 1) {
-  assert(n, c("integer", "numeric"))
+  x <- color_provider(n, "en_US")
   if (n == 1) {
-    ColorProvider$new()$safe_hex_color()
+    x$safe_hex_color()
   } else {
-    x <- ColorProvider$new()
     rep_licate(n, x$safe_hex_color(), "")
   }
 }
@@ -82,19 +78,26 @@ ch_safe_hex_color <- function(n = 1) {
 #' @export
 #' @rdname ch_color
 ch_rgb_color <- function(n = 1) {
-  assert(n, c("integer", "numeric"))
-  x <- ColorProvider$new()
+  x <- color_provider(n, "en_US")
   replicate(n, x$rgb_color(), simplify = FALSE)
 }
 
 #' @export
 #' @rdname ch_color
 ch_rgb_css_color <- function(n = 1) {
-  assert(n, c("integer", "numeric"))
+  x <- color_provider(n, "en_US")
   if (n == 1) {
-    ColorProvider$new()$rgb_css_color()
+    x$rgb_css_color()
   } else {
-    x <- ColorProvider$new()
     rep_licate(n, x$rgb_css_color(), "")
   }
+}
+
+color_provider <- function(n, locale = NULL) {
+  assert(n, c("integer", "numeric"))
+
+  if (is.null(locale)) {
+    locale <- "en_US"
+  }
+  subclass("ColorProvider", locale = locale)
 }

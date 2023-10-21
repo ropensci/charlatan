@@ -103,3 +103,33 @@ person_it_it <- list(
   prefixes_male = person_prefixes_male_it_it,
   prefixes = person_prefixes_it_it
 )
+
+#' @title Person Provider for Italian (Italy)
+#' @inherit PersonProvider description details return
+#' @export
+#' @family it
+#' @family IT
+#' @details Note for female and male components that we fall back on generic
+#' versions if the locale
+#' doesn't provide a male/female version.
+#' e.g., if no female first name we use first
+#' name
+#' @examples
+#' x <- PersonProvider_it_IT$new()
+#' x$locale
+#' x$render()
+#' x$first_name()
+#' x$first_name_female()
+#' x$first_name_male()
+#' x$last_name()
+#' x$last_name_female()
+#' x$last_name_male()
+PersonProvider_it_IT <- R6::R6Class(
+  "PersonProvider_it_IT",
+  inherit = PersonProvider,
+  private = list(
+    formats = person_formats_it_it,
+    persons = person_it_it,
+    locale_ = "it_IT"
+  )
+)

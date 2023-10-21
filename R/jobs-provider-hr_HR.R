@@ -287,3 +287,20 @@ job_formats_hr_hr <- c(
   "\u010cuvar",
   "\u010cuvar prirode"
 )
+#' Job provider for Croatia
+#'
+#' @inherit JobProvider description details return
+#' @family hr
+#' @family HR
+#' @export
+#' @examples
+#' x <- JobProvider_hr_HR$new()
+#' x$render()
+JobProvider_hr_HR <- R6::R6Class(
+  inherit = JobProvider,
+  "JobProvider_hr_HR",
+  private = list(
+    locale_ = "hr_HR",
+    formats = job_formats_hr_hr
+  )
+)

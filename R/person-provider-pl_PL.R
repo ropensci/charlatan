@@ -4084,6 +4084,35 @@ person_pl_pl <- list(
 )
 
 
-# @classmethod
-# def last_name(cls):
-#   return cls.random_element(cls.unisex_last_names)
+#' @title Person Provider for Polish (Poland)
+#' @inherit PersonProvider description details return
+#' @export
+#' @family pl
+#' @family PL
+#' @details Note for female and male components that we fall back on generic
+#' versions if the locale
+#' doesn't provide a male/female version.
+#' e.g., if no female first name we use first
+#' name
+#' @examples
+#' x <- PersonProvider_pl_PL$new()
+#' x$locale
+#' x$render()
+#' x$first_name()
+#' x$first_name_female()
+#' x$first_name_male()
+#' x$last_name()
+#' x$last_name_female()
+#' x$last_name_male()
+PersonProvider_pl_PL <- R6::R6Class(
+  "PersonProvider_pl_PL",
+  inherit = PersonProvider,
+  private = list(
+
+    # person name formats
+    formats = person_formats_pl_pl,
+    # person name data
+    persons = person_pl_pl,
+    locale_ = "pl_PL"
+  )
+)

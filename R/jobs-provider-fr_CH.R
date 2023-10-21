@@ -831,3 +831,21 @@ job_formats_fr_ch <- c(
   "Zingueur avec brevet f\u00e9d\u00e9ral",
   "Zingueur dipl\u00f4m\u00e9"
 )
+
+#' Job provider for Zwitserland
+#'
+#' @inherit JobProvider description details return
+#' @family fr
+#' @family CH
+#' @export
+#' @examples
+#' x <- JobProvider_fr_CH$new()
+#' x$render()
+JobProvider_fr_CH <- R6::R6Class(
+  inherit = JobProvider,
+  "JobProvider_fr_CH",
+  private = list(
+    locale_ = "fr_CH",
+    formats = job_formats_fr_ch
+  )
+)

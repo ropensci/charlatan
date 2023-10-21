@@ -5,49 +5,50 @@
 #' @template params
 #' @inheritSection TaxonomyProvider Names
 #' @inheritSection TaxonomyProvider Taxonomic authority
+#' @param locale Locale for provider
 #' @seealso [TaxonomyProvider]
 #' @examples
 #' ch_taxonomic_genus()
 #' ch_taxonomic_genus(10)
-#' ch_taxonomic_genus(500)
+#' # or even ch_taxonomic_genus(500)
 #'
 #' ch_taxonomic_epithet()
 #' ch_taxonomic_epithet(10)
-#' ch_taxonomic_epithet(500)
+#' # or even ch_taxonomic_epithet(500)
 #'
 #' ch_taxonomic_species()
 #' ch_taxonomic_species(10)
-#' ch_taxonomic_species(500)
-ch_taxonomic_genus <- function(n = 1) {
+#' # or even ch_taxonomic_species(500)
+ch_taxonomic_genus <- function(n = 1, locale = "en_US") {
   assert(n, c("integer", "numeric"))
+  x <- subclass(provider = "TaxonomyProvider", locale = locale)
   if (n == 1) {
-    TaxonomyProvider$new()$genus()
+    x$genus()
   } else {
-    x <- TaxonomyProvider$new()
     replicate(n, x$genus())
   }
 }
 
 #' @export
 #' @rdname taxonomy
-ch_taxonomic_epithet <- function(n = 1) {
+ch_taxonomic_epithet <- function(n = 1, locale = "en_US") {
   assert(n, c("integer", "numeric"))
+  x <- subclass(provider = "TaxonomyProvider", locale = locale)
   if (n == 1) {
-    TaxonomyProvider$new()$epithet()
+    x$epithet()
   } else {
-    x <- TaxonomyProvider$new()
     replicate(n, x$epithet())
   }
 }
 
 #' @export
 #' @rdname taxonomy
-ch_taxonomic_species <- function(n = 1) {
+ch_taxonomic_species <- function(n = 1, locale = "en_US") {
   assert(n, c("integer", "numeric"))
+  x <- subclass(provider = "TaxonomyProvider", locale = locale)
   if (n == 1) {
-    TaxonomyProvider$new()$species()
+    x$species()
   } else {
-    x <- TaxonomyProvider$new()
     replicate(n, x$species())
   }
 }

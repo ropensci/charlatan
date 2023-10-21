@@ -6,8 +6,8 @@
 #' z <- MissingDataProvider$new()
 #' z$make_missing(x = letters)
 MissingDataProvider <- R6::R6Class(
-  inherit = BaseProvider,
   "MissingDataProvider",
+  inherit = BareProvider,
   public = list(
     #' @description make missing data
     #' @param x a vector of characters, numeric, integers, logicals, etc
@@ -26,5 +26,8 @@ MissingDataProvider <- R6::R6Class(
       x[pos] <- rep(na_value, times = length(seq_len(n)))
       return(x)
     }
+  ),
+  private = list(
+    provider_ = "MissingDataProvider"
   )
 )

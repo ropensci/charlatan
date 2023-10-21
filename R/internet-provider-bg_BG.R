@@ -104,3 +104,29 @@ int_replacements_bg_bg <- list(
   c("\u044e", "yu"),
   c("\u044f", "ya")
 )
+
+#' Internet provider
+#'
+#' methods for internet related data, like email addresses,
+#' usernames, and websites.
+#' @family bg
+#' @family BG
+#' @export
+#' @examples
+#' x <- InternetProvider_bg_BG$new()
+#' x$email()
+#' x$free_email()
+#' x$mac_address()
+#' x$company_email()
+InternetProvider_bg_BG <- R6::R6Class(
+  inherit = InternetProvider,
+  "InternetProvider_bg_BG",
+  private = list(
+    locale_ = "bg_BG",
+    free_email_domains = int_free_email_domains_bg_bg,
+    tlds = int_tlds_bg_bg,
+    replacements = int_replacements_bg_bg,
+    user_name_formats = int_user_name_formats_bg_bg,
+    email_formats = int_email_formats_bg_bg
+  )
+)

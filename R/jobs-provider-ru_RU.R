@@ -543,3 +543,21 @@ job_formats_ru_ru <- c(
   "\u042e\u0440\u0438\u0441\u043a\u043e\u043d\u0441\u0443\u043b\u044c\u0442",
   "\u042e\u0440\u0438\u0441\u0442"
 )
+
+#' Job provider for Russia
+#'
+#' @inherit JobProvider description details return
+#' @family ru
+#' @family RU
+#' @export
+#' @examples
+#' x <- JobProvider_ru_RU$new()
+#' x$render()
+JobProvider_ru_RU <- R6::R6Class(
+  inherit = JobProvider,
+  "JobProvider_ru_RU",
+  private = list(
+    locale_ = "ru_RU",
+    formats = job_formats_ru_ru
+  )
+)

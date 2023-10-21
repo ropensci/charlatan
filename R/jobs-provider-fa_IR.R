@@ -98,3 +98,21 @@ job_formats_fa_ir <- c(
   "\u06af\u0632\u0627\u0631\u0634\f\u06af\u0631",
   "\u062e\u0637\u0627\u0637"
 )
+
+#' Job provider for Iran (Persian)
+#'
+#' @inherit JobProvider description details return
+#' @family fa
+#' @family IR
+#' @export
+#' @examples
+#' x <- JobProvider_fa_IR$new()
+#' x$render()
+JobProvider_fa_IR <- R6::R6Class(
+  inherit = JobProvider,
+  "JobProvider_fa_IR",
+  private = list(
+    locale_ = "fa_IR",
+    formats = job_formats_fa_ir
+  )
+)

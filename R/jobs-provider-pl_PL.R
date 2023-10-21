@@ -221,3 +221,21 @@ job_formats_pl_pl <- c(
   "\u017bo\u0142nierz",
   "\u017bongler"
 )
+
+#' Job provider for Poland
+#'
+#' @inherit JobProvider description details return
+#' @family pl
+#' @family PL
+#' @export
+#' @examples
+#' x <- JobProvider_pl_PL$new()
+#' x$render()
+JobProvider_pl_PL <- R6::R6Class(
+  inherit = JobProvider,
+  "JobProvider_pl_PL",
+  private = list(
+    locale_ = "pl_PL",
+    formats = job_formats_pl_pl
+  )
+)

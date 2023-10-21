@@ -503,3 +503,32 @@ lorem_word_list_ru_ru <- c(
   "\u0443\u0432\u0435\u043b\u0438\u0447\u0438\u0432\u0430\u0442\u044c\u0441\u044f",
   "\u0440\u0430\u0432\u043d\u043e\u0434\u0443\u0448\u043d\u044b\u0439"
 )
+
+#' Lorem provider Russian
+#'
+#' Methods for Lorem Ipsum generation.
+#' Lorem Ipsum is a placeholder text commonly used to demonstrate the visual
+#' form of a document or a typeface without relying on meaningful content.
+#' @family ru
+#' @family RU
+#' @export
+#' @examples
+#' x <- LoremProvider_ru_RU$new()
+#' x$word()
+#' x$words(3)
+#' x$words(6)
+#' x$sentence()
+#' x$paragraph()
+#' x$paragraphs(3)
+#' cat(x$paragraphs(6), sep = "\n")
+#' x$text(19)
+#' x <- LoremProvider_ru_RU$new(word_connector = " --- ")
+#' x$paragraph(4)
+LoremProvider_ru_RU <- R6::R6Class(
+  inherit = LoremProvider,
+  "LoremProvider_ru_RU",
+  private = list(
+    word_list = lorem_word_list_ru_ru,
+    locale_ = "ru_RU"
+  )
+)

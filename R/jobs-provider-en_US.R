@@ -642,3 +642,21 @@ job_formats_en_us <- c(
   "Writer",
   "Youth worker"
 )
+
+#' Job provider for United States
+#'
+#' @inherit JobProvider description details return
+#' @family en
+#' @family US
+#' @export
+#' @examples
+#' x <- JobProvider_en_US$new()
+#' x$render()
+JobProvider_en_US <- R6::R6Class(
+  inherit = JobProvider,
+  "JobProvider_en_US",
+  private = list(
+    locale_ = "en_US",
+    formats = job_formats_en_us
+  )
+)
