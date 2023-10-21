@@ -10,13 +10,13 @@
 
 ## Reverse dependencies
 
-I have checked the 2 reverse dependencies, and there were no problems.
-See (<https://github.com/ropensci/charlatan/tree/master/revdep>).
+I have checked 3 reverse dependencies, comparing R CMD check results across CRAN and dev versions of this package.
+
+ * I saw 0 new problems
+ * I failed to check 0 packages
 
 ---
 
-This version adds support for NL language locale for jobs and addresses,
-and InternetProvider adds new methods for generating ipv4 and ipv6 addresses.
 
 Thanks!
-Scott Chamberlain
+Roel Hogervorst

@@ -40,3 +40,16 @@ cov:
 	${RSCRIPT} -e "covr::package_coverage()"
 cloc:
 	${RSCRIPT} -e "cloc::cloc('R')"
+spellcheck:
+	${RSCRIPT} -e "devtools::spell_check()"
+
+lint:
+	${RSCRIPT} -e "devtools::lint()"
+
+style:
+	${RSCRIPT} -e "styler::style_pkg()"
+
+revdep:
+	${RSCRIPT} revdep/check.R
+
+release: style test doc readme build revdep

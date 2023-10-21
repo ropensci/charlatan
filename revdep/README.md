@@ -1,23 +1,24 @@
 # Platform
 
-|field    |value                                       |
-|:--------|:-------------------------------------------|
-|version  |R version 3.6.2 Patched (2019-12-12 r77564) |
-|os       |macOS Mojave 10.14.6                        |
-|system   |x86_64, darwin15.6.0                        |
-|ui       |X11                                         |
-|language |(EN)                                        |
-|collate  |en_US.UTF-8                                 |
-|ctype    |en_US.UTF-8                                 |
-|tz       |US/Pacific                                  |
-|date     |2020-01-23                                  |
+|field    |value                            |
+|:--------|:--------------------------------|
+|version  |R version 4.2.2 (2022-10-31)     |
+|os       |macOS Big Sur ... 10.16          |
+|system   |x86_64, darwin17.0               |
+|ui       |X11                              |
+|language |(EN)                             |
+|collate  |C                                |
+|ctype    |UTF-8                            |
+|tz       |Europe/Amsterdam                 |
+|date     |2023-09-12                       |
+|pandoc   |2.11.0.4 @ /usr/local/bin/pandoc |
 
 # Dependencies
 
 |package   |old   |new   |Δ  |
 |:---------|:-----|:-----|:--|
-|charlatan |0.3.0 |0.4.0 |*  |
-|rlang     |NA    |0.4.3 |*  |
+|charlatan |0.5.0 |0.5.1 |*  |
+|whisker   |NA    |0.4.1 |*  |
 
 # Revdeps
 

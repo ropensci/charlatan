@@ -16,3 +16,4 @@ appveyor.yml
 ^doc$
 ^Meta$
 ^inst\examples$
+.git

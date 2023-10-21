@@ -13,6 +13,7 @@
 AddressProvider <- R6::R6Class(
   inherit = BaseProvider,
   "AddressProvider",
+  "AddressProvider",
   lock_objects = FALSE,
   public = list(
     #' @description Create a new `AddressProvider` object
