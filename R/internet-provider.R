@@ -1,12 +1,13 @@
 #' @title InternetProvider
 #' @description internet methods, e.g., email addresses, domain names
-#' 
+#'
 #' Note that if a locale you set doesn't have a locale specific set
 #' of data for [PersonProvider] or [CompanyProvider] we fall back to
 #' `en_US`
 #' Also note that you
 #' @family ParentProviders
 #' @export
+#' @returns A InternetProvider object with specific functions for internet.
 InternetProvider <- R6::R6Class(
   inherit = BaseProvider,
   "InternetProvider",

@@ -666,7 +666,7 @@ person_fr_fr <- list(
 
 
 #' @title Person Provider for French (France)
-#' @description person names methods
+#' @inherit PersonProvider description details return
 #' @export
 #' @family fr
 #' @family FR

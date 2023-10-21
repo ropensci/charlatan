@@ -4,7 +4,7 @@
 \alias{TaxonomyProvider}
 \title{TaxonomyProvider}
 \description{
-Taxonomy provider
+Taxonomy provider for Generating Taxonomic names.
 }
 \section{Names}{
 

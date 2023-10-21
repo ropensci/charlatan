@@ -1225,7 +1225,7 @@ person_fi_fi <- list(
 )
 
 #' @title Person Provider for Finnish (Finland)
-#' @description person names methods
+#' @inherit PersonProvider description details return
 #' @export
 #' @family fi
 #' @family FI

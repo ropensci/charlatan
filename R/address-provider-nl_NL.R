@@ -38,8 +38,8 @@ AddressProvider_nl_NL <- R6::R6Class(
       pattern <- super$random_element(private$city_formats)
 
       dat <- list(
-        first_name = self$pp$first_name(),
-        last_name = self$pp$last_name(),
+        first_name = private$pp$first_name(),
+        last_name = private$pp$last_name(),
         city_prefix = super$random_element(private$city_prefixes),
         city_suffix = super$random_element(private$city_suffixes)
       )
@@ -49,8 +49,8 @@ AddressProvider_nl_NL <- R6::R6Class(
     street_name = function() {
       pattern <- super$random_element(private$street_name_formats)
       dat <- list(
-        first_name = self$pp$first_name(),
-        last_name = self$pp$last_name(),
+        first_name = private$pp$first_name(),
+        last_name = private$pp$last_name(),
         street_suffix = super$random_element(private$street_suffixes)
       )
       whisker::whisker.render(pattern, data = dat)

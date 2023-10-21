@@ -25,6 +25,7 @@ x$paragraph(4)
 Other en: 
 \code{\link{AddressProvider_en_GB}},
 \code{\link{AddressProvider_en_NZ}},
+\code{\link{AddressProvider_en_US}},
 \code{\link{ColorProvider_en_US}},
 \code{\link{CompanyProvider_en_US}},
 \code{\link{ElementProvider_en_US}},
@@ -41,13 +42,13 @@ Other en:
 \code{\link{PhoneNumberProvider_en_NZ}},
 \code{\link{PhoneNumberProvider_en_US}},
 \code{\link{PhoneNumberProvider_es_MX}},
-\code{\link{PhoneNumberProvider_tr_TR}},
 \code{\link{SSNProvider_en_US}},
 \code{\link{TaxonomyProvider_en_US}},
 \code{\link{UserAgentProvider_en_US}},
 \code{\link{english-language}}
 
 Other US: 
+\code{\link{AddressProvider_en_US}},
 \code{\link{ColorProvider_en_US}},
 \code{\link{CompanyProvider_en_US}},
 \code{\link{ElementProvider_en_US}},
@@ -86,9 +87,9 @@ Other US:
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_int"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_int'><code>charlatan::BareProvider$random_int()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_letter"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_letter'><code>charlatan::BareProvider$random_letter()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="randomize_nb_elements"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-randomize_nb_elements'><code>charlatan::BareProvider$randomize_nb_elements()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="allowed_locales"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-allowed_locales'><code>charlatan::BaseProvider$allowed_locales()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-check_locale'><code>charlatan::BaseProvider$check_locale()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="print"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-print'><code>charlatan::BaseProvider$print()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="LoremProvider" data-id="allowed_locales"><a href='../../charlatan/html/LoremProvider.html#method-LoremProvider-allowed_locales'><code>charlatan::LoremProvider$allowed_locales()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="LoremProvider" data-id="initialize"><a href='../../charlatan/html/LoremProvider.html#method-LoremProvider-initialize'><code>charlatan::LoremProvider$initialize()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="LoremProvider" data-id="paragraph"><a href='../../charlatan/html/LoremProvider.html#method-LoremProvider-paragraph'><code>charlatan::LoremProvider$paragraph()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="LoremProvider" data-id="paragraphs"><a href='../../charlatan/html/LoremProvider.html#method-LoremProvider-paragraphs'><code>charlatan::LoremProvider$paragraphs()</code></a></span></li>

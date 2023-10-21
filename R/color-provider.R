@@ -1,8 +1,10 @@
-
-
 #' @title ColorProvider
 #' @description methods for colors
+#' create color names, hex values, rgb values
+#' or css values.
 #' @family ParentProviders
+#' @return A ColorProvider object that can generate
+#' colors.
 ColorProvider <- R6::R6Class(
   inherit = BaseProvider,
   "ColorProvider",

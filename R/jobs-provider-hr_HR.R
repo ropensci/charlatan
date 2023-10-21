@@ -287,9 +287,9 @@ job_formats_hr_hr <- c(
   "\u010cuvar",
   "\u010cuvar prirode"
 )
-#' Job provider
+#' Job provider for Croatia
 #'
-#' Methods for jobs. Create a job name.
+#' @inherit JobProvider description details return
 #' @family hr
 #' @family HR
 #' @export

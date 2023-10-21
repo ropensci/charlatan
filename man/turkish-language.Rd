@@ -7,6 +7,9 @@
 Providers with the Turkish locale (tr).
 }
 \seealso{
+Other tr: 
+\code{\link{PhoneNumberProvider_tr_TR}}
+
 Other languages: 
 \code{\link{arabic-language}},
 \code{\link{bosnian-language}},

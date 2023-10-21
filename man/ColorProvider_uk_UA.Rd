@@ -2,9 +2,15 @@
 % Please edit documentation in R/color-provider-uk_UA.R
 \name{ColorProvider_uk_UA}
 \alias{ColorProvider_uk_UA}
-\title{ColorProvider uk_UA}
+\title{ColorProvider Ukrainian (Ukraine)}
+\value{
+A ColorProvider object that can generate
+colors.
+}
 \description{
-methods for colors in locale Ukrainian (Ukraine) (uk_UA)
+methods for colors
+create color names, hex values, rgb values
+or css values.
 }
 \examples{
 x <- ColorProvider_uk_UA$new()

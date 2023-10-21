@@ -2,6 +2,7 @@
 #' @description generate jobs
 #' @export
 #' @family ParentProviders
+#' @returns A JobProvider object with methods for jobs
 JobProvider <- R6::R6Class(
   inherit = BaseProvider,
   "JobProvider",

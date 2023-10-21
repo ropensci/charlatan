@@ -2,9 +2,12 @@
 % Please edit documentation in R/jobs-provider-en_US.R
 \name{JobProvider_en_US}
 \alias{JobProvider_en_US}
-\title{Job provider}
+\title{Job provider for United States}
+\value{
+A JobProvider object with methods for jobs
+}
 \description{
-Methods for jobs. Create a job name.
+generate jobs
 }
 \examples{
 x <- JobProvider_en_US$new()
@@ -14,6 +17,7 @@ x$render()
 Other en: 
 \code{\link{AddressProvider_en_GB}},
 \code{\link{AddressProvider_en_NZ}},
+\code{\link{AddressProvider_en_US}},
 \code{\link{ColorProvider_en_US}},
 \code{\link{CompanyProvider_en_US}},
 \code{\link{ElementProvider_en_US}},
@@ -30,13 +34,13 @@ Other en:
 \code{\link{PhoneNumberProvider_en_NZ}},
 \code{\link{PhoneNumberProvider_en_US}},
 \code{\link{PhoneNumberProvider_es_MX}},
-\code{\link{PhoneNumberProvider_tr_TR}},
 \code{\link{SSNProvider_en_US}},
 \code{\link{TaxonomyProvider_en_US}},
 \code{\link{UserAgentProvider_en_US}},
 \code{\link{english-language}}
 
 Other US: 
+\code{\link{AddressProvider_en_US}},
 \code{\link{ColorProvider_en_US}},
 \code{\link{CompanyProvider_en_US}},
 \code{\link{ElementProvider_en_US}},

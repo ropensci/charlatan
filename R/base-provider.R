@@ -6,7 +6,7 @@
 #' @export
 #' @param allowed_locales fetch the allowed locales for this provider
 #' @note You cannot instantiate the Parent providers. You must use one of
-#' the localized one. 
+#' the localized one.
 #' @examples
 #' (x <- BaseProvider$new())
 #'

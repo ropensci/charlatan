@@ -2,6 +2,7 @@
 #' @description methods for generating phone numbers
 #' @export
 #' @family ParentProviders
+#' @returns A PhoneNumberProvider object that can create phonenumbers.
 PhoneNumberProvider <- R6::R6Class(
   inherit = BaseProvider,
   "PhoneNumberProvider",

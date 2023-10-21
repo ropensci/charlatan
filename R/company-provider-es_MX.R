@@ -1,7 +1,7 @@
 # modified from the python library faker:
 # https://github.com/joke2k/faker/blob/master/faker/providers/company/es_MX/__init__.py
-#' @title CompanyProvider es_MX
-#' @description company methods for locale Mexican Spanish (es_MX).
+#' @title CompanyProvider Spanish (Mexico)
+#' @inherit CompanyProvider description details return
 #' @export
 #' @family es
 #' @family MX
@@ -16,7 +16,23 @@ CompanyProvider_es_MX <- R6::R6Class(
   "CompanyProvider_es_MX",
   inherit = CompanyProvider,
   public = list(
-    #' @field catch_phrase_words (character) xxx
+
+    ## add functions here
+    #' @description a company name
+    company = function() {
+      pattern <- super$random_element(private$company_formats)
+      dat <- list(
+        last_name = self$pp$last_name(),
+        last_name2 = self$pp$last_name(),
+        last_name3 = self$pp$last_name(),
+        company_suffix = super$random_element(private$company_suffixes),
+        company_prefix = super$random_element(private$company_prefixes)
+      )
+      whisker::whisker.render(pattern, data = dat)
+    }
+  ),
+  private = list(
+    # catch_phrase_words (character) xxx
     catch_phrase_words = list(
       c(
         "habilidad",
@@ -277,7 +293,7 @@ CompanyProvider_es_MX <- R6::R6Class(
         "visionario"
       )
     ),
-    #' @field bsWords (character) xxx
+    # bsWords (character) xxx
     bsWords = list(
       c(
         "implementa", "utiliza", "integrata", "optimiza",
@@ -384,7 +400,7 @@ CompanyProvider_es_MX <- R6::R6Class(
         "ricas"
       )
     ),
-    #' @field company_formats formats for company names.
+    # company_formats formats for company names.
     company_formats = c(
       "{{last_name}} {{company_suffix}}",
       "{{last_name}}-{{last_name2}}",
@@ -395,31 +411,16 @@ CompanyProvider_es_MX <- R6::R6Class(
       "{{last_name}}, {{last_name2}} y {{last_name3}}",
       "{{last_name}} y {{last_name2}} {{company_suffix}}"
     ),
-    #' @field company_prefixes first part of company names.
+    # company_prefixes first part of company names.
     company_prefixes = c(
       "Despacho", "Grupo", "Corporativo", "Club",
       "Industrias", "Laboratorios", "Proyectos"
     ),
-    #' @field company_suffixes suffixes for in company names.
+    # company_suffixes suffixes for in company names.
     company_suffixes = c(
       "A.C.", "S.A.", "S.A. de C.V.", "S.C.",
       "S. R.L. de C.V.", "e Hijos", "y Asociados"
     ),
-    ## add functions here
-    #' @description a company name
-    company = function() {
-      pattern <- super$random_element(self$company_formats)
-      dat <- list(
-        last_name = self$pp$last_name(),
-        last_name2 = self$pp$last_name(),
-        last_name3 = self$pp$last_name(),
-        company_suffix = super$random_element(self$company_suffixes),
-        company_prefix = super$random_element(self$company_prefixes)
-      )
-      whisker::whisker.render(pattern, data = dat)
-    }
-  ),
-  private = list(
     locale_ = "es_MX"
   )
 )

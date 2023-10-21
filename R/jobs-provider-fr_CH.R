@@ -832,9 +832,9 @@ job_formats_fr_ch <- c(
   "Zingueur dipl\u00f4m\u00e9"
 )
 
-#' Job provider
+#' Job provider for Zwitserland
 #'
-#' Methods for jobs. Create a job name.
+#' @inherit JobProvider description details return
 #' @family fr
 #' @family CH
 #' @export

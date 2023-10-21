@@ -1,8 +1,8 @@
 # modified from the python library faker:
 # https://github.com/joke2k/faker/blob/master/faker/providers/company/en_US/__init__.py
 #
-#' @title CompanyProvider en_US
-#' @description company methods for locale English United States (en_US).
+#' @title CompanyProvider for English (United States)
+#' @inherit CompanyProvider description details return
 #' @export
 #' @family en
 #' @family US
@@ -17,15 +17,26 @@ CompanyProvider_en_US <- R6::R6Class(
   "CompanyProvider_en_US",
   inherit = CompanyProvider,
   public = list(
-
-    # add data here, like
-    #' @field company_formats formats for company names.
+    #' @description a company name
+    company = function() {
+      pattern <- super$random_element(private$company_formats)
+      dat <- list(
+        last_name = self$pp$last_name(),
+        last_name2 = self$pp$last_name(),
+        last_name3 = self$pp$last_name(),
+        company_suffix = super$random_element(private$company_suffixes)
+      )
+      whisker::whisker.render(template = pattern, data = dat)
+    }
+  ),
+  private = list(
+    # company_formats formats for company names.
     company_formats = c(
       "{{last_name}} {{company_suffix}}",
       "{{last_name}}-{{last_name2}}",
       "{{last_name}}, {{last_name2}} and {{last_name3}}"
     ),
-    #' @field catch_phrase_words (character) xxx
+    # catch_phrase_words (character) xxx
     catch_phrase_words = list(
       c(
         "Adaptive", "Advanced", "Ameliorated", "Assimilated", "Automated", "Balanced", "Business-focused",
@@ -79,7 +90,7 @@ CompanyProvider_en_US <- R6::R6Class(
         "toolset", "utilization", "website", "workforce"
       )
     ),
-    #' @field bsWords (character) xxx
+    # bsWords (character) xxx
     bsWords = list(
       c(
         "implement", "utilize", "integrate", "streamline", "optimize", "evolve", "transform", "embrace", "enable",
@@ -110,23 +121,8 @@ CompanyProvider_en_US <- R6::R6Class(
         "metrics", "e-business", "functionalities", "experiences", "web services", "methodologies"
       )
     ),
-    #' @field company_suffixes suffixes for in company names.
+    # company_suffixes suffixes for in company names.
     company_suffixes = c("Inc", "and Sons", "LLC", "Group", "PLC", "Ltd"),
-
-    ## add functions here
-    #' @description a company name
-    company = function() {
-      pattern <- super$random_element(self$company_formats)
-      dat <- list(
-        last_name = self$pp$last_name(),
-        last_name2 = self$pp$last_name(),
-        last_name3 = self$pp$last_name(),
-        company_suffix = super$random_element(self$company_suffixes)
-      )
-      whisker::whisker.render(template = pattern, data = dat)
-    }
-  ),
-  private = list(
     locale_ = "en_US"
   )
 )

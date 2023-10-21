@@ -3,6 +3,9 @@
 \name{JobProvider}
 \alias{JobProvider}
 \title{JobProvider}
+\value{
+A JobProvider object with methods for jobs
+}
 \description{
 generate jobs
 }

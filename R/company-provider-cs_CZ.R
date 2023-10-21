@@ -1,7 +1,7 @@
 # modified from the python library faker:
 # https://github.com/joke2k/faker/blob/master/faker/providers/company/cs_CZ/__init__.py
-#' @title CompanyProvider cs_CZ
-#' @description company methods for locale Czech (Czechia) (cs_CZ).
+#' @title CompanyProvider for Czech
+#' @inherit CompanyProvider description details return
 #' @family cs
 #' @family CZ
 #' @export
@@ -13,20 +13,17 @@ CompanyProvider_cs_CZ <- R6::R6Class(
   lock_objects = FALSE,
   "CompanyProvider_cs_CZ",
   inherit = CompanyProvider,
-  public = list(
-    # add data here, like
-    #' @field company_formats formats for company names.
+  private = list(
+    locale_ = "cs_CZ",
+    # formats
     company_formats = c(
       "{{last_name}} {{company_suffix}}",
       "{{last_name}} {{last_name2}} {{company_suffix}}",
       "{{last_name}}"
     ),
-    #' @field company_suffixes suffixes for in company names.
+    # company_suffixes suffixes for in company names.
     company_suffixes = c(
       "s.r.o.", "o.s.", "a.s."
     )
-  ),
-  private = list(
-    locale_ = "cs_CZ"
   )
 )

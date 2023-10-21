@@ -1248,9 +1248,9 @@ job_formats_nl_nl <- c(
   "Zo\u00f6loog"
 )
 
-#' Job provider
+#' Job provider for Netherlands
 #'
-#' Methods for jobs. Create a job name.
+#' @inherit JobProvider description details return
 #' @family nl
 #' @family NL
 #' @export

@@ -3,6 +3,9 @@
 \name{PhoneNumberProvider_tr_TR}
 \alias{PhoneNumberProvider_tr_TR}
 \title{PhoneNumberProvider for Turkey}
+\value{
+A PhoneNumberProvider object that can create phonenumbers.
+}
 \description{
 methods for generating phone numbers
 }
@@ -11,38 +14,11 @@ z <- PhoneNumberProvider_tr_TR$new()
 z$render()
 }
 \seealso{
-Other en: 
-\code{\link{AddressProvider_en_GB}},
-\code{\link{AddressProvider_en_NZ}},
-\code{\link{ColorProvider_en_US}},
-\code{\link{CompanyProvider_en_US}},
-\code{\link{ElementProvider_en_US}},
-\code{\link{FileProvider_en_US}},
-\code{\link{InternetProvider_en_AU}},
-\code{\link{InternetProvider_en_US}},
-\code{\link{JobProvider_en_US}},
-\code{\link{LoremProvider_en_US}},
-\code{\link{PersonProvider_en_GB}},
-\code{\link{PersonProvider_en_NZ}},
-\code{\link{PersonProvider_en_US}},
-\code{\link{PhoneNumberProvider_en_AU}},
-\code{\link{PhoneNumberProvider_en_CA}},
-\code{\link{PhoneNumberProvider_en_GB}},
-\code{\link{PhoneNumberProvider_en_NZ}},
-\code{\link{PhoneNumberProvider_en_US}},
-\code{\link{PhoneNumberProvider_es_MX}},
-\code{\link{SSNProvider_en_US}},
-\code{\link{TaxonomyProvider_en_US}},
-\code{\link{UserAgentProvider_en_US}},
-\code{\link{english-language}}
-
-Other GB: 
-\code{\link{AddressProvider_en_GB}},
-\code{\link{PersonProvider_en_GB}},
-\code{\link{PhoneNumberProvider_en_GB}}
+Other tr: 
+\code{\link{turkish-language}}
 }
-\concept{GB}
-\concept{en}
+\concept{TR}
+\concept{tr}
 \section{Super classes}{
 \code{\link[charlatan:BareProvider]{charlatan::BareProvider}} -> \code{\link[charlatan:BaseProvider]{charlatan::BaseProvider}} -> \code{\link[charlatan:PhoneNumberProvider]{charlatan::PhoneNumberProvider}} -> \code{PhoneNumberProvider_tr_TR}
 }

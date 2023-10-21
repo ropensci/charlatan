@@ -197,9 +197,9 @@ job_formats_fi_fi <- c(
   "Yritt\u00e4jyysneuvoja",
   "Yva-koordinaattori"
 )
-#' Job provider
+#' Job provider for Finnish
 #'
-#' Methods for jobs. Create a job name.
+#' @inherit JobProvider description details return
 #' @family fi
 #' @family FI
 #' @export

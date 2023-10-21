@@ -1,8 +1,8 @@
 # modified from the python library faker:
 # https://github.com/joke2k/faker/blob/master/faker/providers/color/uk_UA/__init__.py
 
-#' @title ColorProvider uk_UA
-#' @description methods for colors in locale Ukrainian (Ukraine) (uk_UA)
+#' @title ColorProvider Ukrainian (Ukraine)
+#' @inherit ColorProvider description details return
 #' @export
 #' @family uk
 #' @family UA

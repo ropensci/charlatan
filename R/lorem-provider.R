@@ -1,5 +1,7 @@
 #' @title LoremProvider
 #' @description lorem ipsum methods for generating random words in a language.
+#' Lorem Ipsum is a placeholder text commonly used to demonstrate the visual
+#' form of a document or a typeface without relying on meaningful content.
 #' @inherit BaseProvider note
 #' @param ext_words a character vector of words you would like to have instead of "Lorem ipsum"
 #' @family ParentProviders
@@ -8,9 +10,6 @@ LoremProvider <- R6::R6Class(
   inherit = BaseProvider,
   "LoremProvider",
   public = list(
-    #' @description fetch the allowed locales for this provider
-    allowed_locales = function() private$locales,
-
     #' @description Create a new `LoremProvider` object
     #' @param sentence_punctuation (character) End of sentence punctuation
     #' @param word_connector (character) Default connector between words

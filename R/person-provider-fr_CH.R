@@ -354,7 +354,7 @@ person_fr_ch <- list(
 )
 
 #' @title Person Provider for French (Switzerland)
-#' @description person names methods
+#' @inherit PersonProvider description details return
 #' @export
 #' @family fr
 #' @family CH

@@ -302,8 +302,8 @@ person_ja_jp <- list(
 
 
 # TODO: render does not work for japanese
-#' #' @title Person Provider for Japanese (Japan)
-#' @description person names methods
+#' @title Person Provider for Japanese (Japan)
+#' @inherit PersonProvider description details return
 #' @export
 #' @family ja
 #' @family JP

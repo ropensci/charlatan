@@ -1,4 +1,3 @@
-
 test_that("instantiation failure is clear", {
   expect_error(cr_loc_spec_provider("ColorProvider", "fr_FR"), "There is no locale fr_FR for provider ColorProvider")
   expect_error(cr_loc_spec_provider("CremeBruleeProvider", "fr_FR"), "CremeBruleeProvider does not exist")

@@ -3,8 +3,13 @@
 \name{PersonProvider_fa_IR}
 \alias{PersonProvider_fa_IR}
 \title{Person Provider for Farsi (Iran)}
+\value{
+A PersonProvider object that can create names.
+}
 \description{
-person names methods
+Person Provider for Farsi (Iran)
+
+Person Provider for Farsi (Iran)
 }
 \details{
 Note for female and male components that we fall back on generic

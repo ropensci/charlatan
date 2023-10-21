@@ -1,8 +1,8 @@
 # modified from the python library faker:
 # https://github.com/joke2k/faker/blob/master/faker/providers/company/it_IT/__init__.py
 
-#' @title CompanyProvider it_IT
-#' @description company methods for locale Italian (Italy) (it_IT).
+#' @title CompanyProvider Italian (Italy)
+#' @inherit CompanyProvider description details return
 #' @export
 #' @family it
 #' @family IT
@@ -17,9 +17,20 @@ CompanyProvider_it_IT <- R6::R6Class(
   "CompanyProvider_it_IT",
   inherit = CompanyProvider,
   public = list(
-
-    # add data here, like
-    #' @field catch_phrase_words (character) xxx
+    #' @description a company name
+    company = function() {
+      pattern <- super$random_element(private$company_formats)
+      dat <- list(
+        last_name = self$pp$last_name(),
+        last_name2 = self$pp$last_name(),
+        last_name3 = self$pp$last_name(),
+        company_suffix = super$random_element(private$company_suffixes)
+      )
+      whisker::whisker.render(template = pattern, data = dat)
+    }
+  ),
+  private = list(
+    # catch_phrase_words (character) xxx
     catch_phrase_words = list(
       c(
         "Abilit\u00e0",
@@ -135,7 +146,7 @@ CompanyProvider_it_IT <- R6::R6Class(
         "sistematica", "sistemica", "tangibile", "terziaria", "uniforme", "valore aggiunto"
       )
     ),
-    #' @field bsWords (character) xxx
+    # bsWords (character) xxx
     bsWords = list(
       c(
         "partnerships",
@@ -180,28 +191,14 @@ CompanyProvider_it_IT <- R6::R6Class(
         "next-generation", "cutting-edge", "visionari", "plug-and-play", "collaborative", "olistiche", "ricche"
       )
     ),
-    #' @field company_formats formats for company names.
+    # formats for company names.
     company_formats = c(
       "{{last_name}} {{company_suffix}}",
       "{{last_name}}-{{last_name2}} {{company_suffix}}",
       "{{last_name}}, {{last_name2}} e {{last_name3}} {{company_suffix}}"
     ),
-    #' @field company_suffixes suffixes for in company names.
+    # company_suffixes suffixes for in company names.
     company_suffixes = c("SPA", "e figli", "Group", "s.r.l."),
-    ## add functions here
-    #' @description a company name
-    company = function() {
-      pattern <- super$random_element(self$company_formats)
-      dat <- list(
-        last_name = self$pp$last_name(),
-        last_name2 = self$pp$last_name(),
-        last_name3 = self$pp$last_name(),
-        company_suffix = super$random_element(self$company_suffixes)
-      )
-      whisker::whisker.render(template = pattern, data = dat)
-    }
-  ),
-  private = list(
     locale_ = "it_IT"
   )
 )

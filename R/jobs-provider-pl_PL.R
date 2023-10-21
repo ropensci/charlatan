@@ -222,9 +222,9 @@ job_formats_pl_pl <- c(
   "\u017bongler"
 )
 
-#' Job provider
+#' Job provider for Poland
 #'
-#' Methods for jobs. Create a job name.
+#' @inherit JobProvider description details return
 #' @family pl
 #' @family PL
 #' @export

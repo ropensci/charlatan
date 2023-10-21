@@ -1,4 +1,3 @@
-
 phone_number_formats_nl_be <- c(
   "0### ######",
   "0## #######",
@@ -39,7 +38,7 @@ phone_number_formats_nl_nl <- c(
 
 
 #' @title PhoneNumberProvider for Belgium
-#' @description methods for generating phone numbers
+#' @inherit PhoneNumberProvider description details return
 #' @family nl
 #' @family BE
 #' @export
@@ -55,7 +54,7 @@ PhoneNumberProvider_nl_BE <- R6::R6Class(
   )
 )
 #' @title PhoneNumberProvider for the Netherlands
-#' @description methods for generating phone numbers
+#' @inherit PhoneNumberProvider description details return
 #' @family nl
 #' @family NL
 #' @export

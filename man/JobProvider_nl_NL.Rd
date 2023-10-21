@@ -2,9 +2,12 @@
 % Please edit documentation in R/jobs-provider-nl_NL.R
 \name{JobProvider_nl_NL}
 \alias{JobProvider_nl_NL}
-\title{Job provider}
+\title{Job provider for Netherlands}
+\value{
+A JobProvider object with methods for jobs
+}
 \description{
-Methods for jobs. Create a job name.
+generate jobs
 }
 \examples{
 x <- JobProvider_nl_NL$new()

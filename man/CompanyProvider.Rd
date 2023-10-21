@@ -3,6 +3,9 @@
 \name{CompanyProvider}
 \alias{CompanyProvider}
 \title{CompanyProvider}
+\value{
+A CompanyProvider object that can create companies.
+}
 \description{
 company name/etc. methods
 
@@ -25,27 +28,9 @@ Other ParentProviders:
 \section{Super classes}{
 \code{\link[charlatan:BareProvider]{charlatan::BareProvider}} -> \code{\link[charlatan:BaseProvider]{charlatan::BaseProvider}} -> \code{CompanyProvider}
 }
-\section{Public fields}{
-\if{html}{\out{<div class="r6-fields">}}
-\describe{
-\item{\code{formats}}{(character) xxx}
-
-\item{\code{prefixes}}{(character) xxx}
-
-\item{\code{suffixes}}{(character) xxx}
-
-\item{\code{catch_phrase_words}}{(character) xxx}
-
-\item{\code{bsWords}}{(character) xxx}
-
-\item{\code{siren_format}}{(character) xxx}
-}
-\if{html}{\out{</div>}}
-}
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
-\item \href{#method-CompanyProvider-allowed_locales}{\code{CompanyProvider$allowed_locales()}}
 \item \href{#method-CompanyProvider-new}{\code{CompanyProvider$new()}}
 \item \href{#method-CompanyProvider-company}{\code{CompanyProvider$company()}}
 \item \href{#method-CompanyProvider-catch_phrase}{\code{CompanyProvider$catch_phrase()}}
@@ -68,21 +53,12 @@ Other ParentProviders:
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_int"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_int'><code>charlatan::BareProvider$random_int()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_letter"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_letter'><code>charlatan::BareProvider$random_letter()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="randomize_nb_elements"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-randomize_nb_elements'><code>charlatan::BareProvider$randomize_nb_elements()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="allowed_locales"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-allowed_locales'><code>charlatan::BaseProvider$allowed_locales()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-check_locale'><code>charlatan::BaseProvider$check_locale()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="print"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-print'><code>charlatan::BaseProvider$print()</code></a></span></li>
 </ul>
 </details>
 }}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-CompanyProvider-allowed_locales"></a>}}
-\if{latex}{\out{\hypertarget{method-CompanyProvider-allowed_locales}{}}}
-\subsection{Method \code{allowed_locales()}}{
-fetch the allowed locales for this provider
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{CompanyProvider$allowed_locales()}\if{html}{\out{</div>}}
-}
-
-}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-CompanyProvider-new"></a>}}
 \if{latex}{\out{\hypertarget{method-CompanyProvider-new}{}}}

@@ -1,30 +1,16 @@
 #' @title CompanyProvider
 #' @description company name/etc. methods
-#' 
-#' Note that you cannot instantiate this class, you can only 
+#'
+#' Note that you cannot instantiate this class, you can only
 #' use the localized versions such as [CompanyProvider_en_US].
 #' @export
 #' @family ParentProviders
+#' @returns A CompanyProvider object that can create companies.
 CompanyProvider <- R6::R6Class(
   lock_objects = FALSE,
   "CompanyProvider",
   inherit = BaseProvider,
   public = list(
-    #' @field formats (character) xxx
-    formats = NULL,
-    #' @field prefixes (character) xxx
-    prefixes = NULL,
-    #' @field suffixes (character) xxx
-    suffixes = NULL,
-    #' @field catch_phrase_words (character) xxx
-    catch_phrase_words = NULL,
-    #' @field bsWords (character) xxx
-    bsWords = NULL,
-    #' @field siren_format (character) xxx
-    siren_format = NULL,
-    #' @description fetch the allowed locales for this provider
-    allowed_locales = function() private$locales,
-
     #' @description Create a new `CompanyProvider` object
     #' @return A new `CompanyProvider` object
     initialize = function() {
@@ -35,23 +21,23 @@ CompanyProvider <- R6::R6Class(
     },
     #' @description a company name
     company = function() {
-      pattern <- super$random_element(self$company_formats)
+      pattern <- super$random_element(private$company_formats)
       dat <- list(
         last_name = self$pp$last_name(),
         last_name2 = self$pp$last_name(),
-        company_suffix = super$random_element(self$company_suffixes)
+        company_suffix = super$random_element(private$company_suffixes)
       )
       whisker::whisker.render(template = pattern, data = dat)
     },
 
     #' @description a catch phrase
     catch_phrase = function() {
-      private$makeit(self$catch_phrase_words)
+      private$makeit(private$catch_phrase_words)
     },
 
     #' @description BS words
     bs = function() {
-      private$makeit(self$bsWords)
+      private$makeit(private$bsWords)
     }
   ),
   private = list(
@@ -71,6 +57,16 @@ CompanyProvider <- R6::R6Class(
       "bg_BG", "cs_CZ", "de_DE", "en_US", "es_MX", "fa_IR",
       "fr_FR", "hr_HR", "it_IT"
     ),
+    # formats (character) xxx
+    formats = NULL,
+    # prefixes (character) xxx
+    prefixes = NULL,
+    # suffixes (character) xxx
+    suffixes = NULL,
+    # catch_phrase_words (character) xxx
+    catch_phrase_words = NULL,
+    # bsWords (character) xxx
+    bsWords = NULL,
     provider_ = "CompanyProvider"
   )
 )

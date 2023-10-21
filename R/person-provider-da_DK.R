@@ -634,7 +634,7 @@ person_da_dk <- list(
 )
 
 #' @title Person Provider for Danish (Denmark)
-#' @description person names methods
+#' @inherit PersonProvider description details return
 #' @export
 #' @family da
 #' @family DK

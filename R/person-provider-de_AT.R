@@ -63,7 +63,7 @@ person_de_at <- list(
 )
 
 #' @title Person Provider for Austrian German
-#' @description person names methods
+#' @inherit PersonProvider description details return
 #' @export
 #' @family de
 #' @family AT

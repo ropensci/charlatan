@@ -33,11 +33,7 @@ lorem_word_list_la <- c(
 )
 
 #' Lorem provider Latin
-#'
-#' Methods for Lorem Ipsum generation.
-#' Lorem Ipsum is a placeholder text commonly used to demonstrate the visual
-#' form of a document or a typeface without relying on meaningful content.
-#' This Latin version is what is common used
+#' @inherit LoremProvider description return
 #' @family la
 #' @export
 #' @examples

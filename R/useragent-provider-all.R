@@ -1,5 +1,5 @@
 #' @title UserAgentProvider for United States of America
-#' @description user agent methods
+#' @inherit UserAgentProvider description details return
 #' @export
 #' @family en
 #' @family US

@@ -3,8 +3,14 @@
 \name{ColorProvider}
 \alias{ColorProvider}
 \title{ColorProvider}
+\value{
+A ColorProvider object that can generate
+colors.
+}
 \description{
 methods for colors
+create color names, hex values, rgb values
+or css values.
 }
 \seealso{
 Other ParentProviders: 

@@ -643,9 +643,9 @@ job_formats_en_us <- c(
   "Youth worker"
 )
 
-#' Job provider
+#' Job provider for United States
 #'
-#' Methods for jobs. Create a job name.
+#' @inherit JobProvider description details return
 #' @family en
 #' @family US
 #' @export

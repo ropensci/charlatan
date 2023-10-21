@@ -4,7 +4,7 @@
 \alias{TaxonomyProvider_en_US}
 \title{TaxonomyProvider en_US}
 \description{
-Taxonomy provider
+Taxonomy provider for Generating Taxonomic names.
 }
 \section{Names}{
 
@@ -35,6 +35,7 @@ z$species(authority = TRUE)
 Other en: 
 \code{\link{AddressProvider_en_GB}},
 \code{\link{AddressProvider_en_NZ}},
+\code{\link{AddressProvider_en_US}},
 \code{\link{ColorProvider_en_US}},
 \code{\link{CompanyProvider_en_US}},
 \code{\link{ElementProvider_en_US}},
@@ -52,12 +53,12 @@ Other en:
 \code{\link{PhoneNumberProvider_en_NZ}},
 \code{\link{PhoneNumberProvider_en_US}},
 \code{\link{PhoneNumberProvider_es_MX}},
-\code{\link{PhoneNumberProvider_tr_TR}},
 \code{\link{SSNProvider_en_US}},
 \code{\link{UserAgentProvider_en_US}},
 \code{\link{english-language}}
 
 Other US: 
+\code{\link{AddressProvider_en_US}},
 \code{\link{ColorProvider_en_US}},
 \code{\link{CompanyProvider_en_US}},
 \code{\link{ElementProvider_en_US}},

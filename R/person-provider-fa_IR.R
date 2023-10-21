@@ -353,7 +353,7 @@ person_fa_ir <- list(
 )
 
 #' @title Person Provider for Farsi (Iran)
-#' @description person names methods
+#' @inherit PersonProvider description details return
 #' @export
 #' @family fa
 #' @family IR

@@ -1666,7 +1666,7 @@ person_nl_nl <- list(
 )
 
 #' @title Person Provider for Dutch (Netherlands)
-#' @description person names methods
+#' @inherit PersonProvider description details return
 #' @export
 #' @family nl
 #' @family NL

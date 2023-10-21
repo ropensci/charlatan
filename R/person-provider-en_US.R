@@ -1201,7 +1201,7 @@ person_en_us_messy$suffixes_female <- person_suffixes_female_en_us_messy
 person_en_us_messy$suffixes_male <- person_suffixes_male_en_us_messy
 
 #' @title Person Provider for English (United States)
-#' @description person names methods
+#' @inherit PersonProvider description details return
 #' @export
 #' @family en
 #' @family US

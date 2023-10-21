@@ -4,7 +4,7 @@
 #' @inherit BaseProvider note
 #' @family ParentProviders
 #' @export
-#' @returns A PersonProvider object that can create names. 
+#' @returns A PersonProvider object that can create names.
 PersonProvider <- R6::R6Class(
   "PersonProvider",
   inherit = BaseProvider,
@@ -236,9 +236,9 @@ PersonProvider <- R6::R6Class(
     }
   ),
   active = list(
-            #' @field messy
-            #' show current setting for messy. Either TRUE or FALSE depending
-            #' on configuration and if this is even possible for the locale.
+    #' @field messy
+    #' show current setting for messy. Either TRUE or FALSE depending
+    #' on configuration and if this is even possible for the locale.
     messy = function() private$messy_
   ),
   private = list(

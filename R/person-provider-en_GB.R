@@ -595,7 +595,7 @@ person_en_gb <- list(
 )
 
 #' @title Person Provider for English (Great Brittain)
-#' @description person names methods
+#' @inherit PersonProvider description details return
 #' @export
 #' @family en
 #' @family GB

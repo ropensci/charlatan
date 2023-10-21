@@ -3,6 +3,9 @@
 \name{PhoneNumberProvider_cs_CZ}
 \alias{PhoneNumberProvider_cs_CZ}
 \title{PhoneNumberProvider for Chechia}
+\value{
+A PhoneNumberProvider object that can create phonenumbers.
+}
 \description{
 methods for generating phone numbers
 }

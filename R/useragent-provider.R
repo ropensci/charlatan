@@ -1,8 +1,9 @@
-
 #' @title UserAgentProvider
 #' @description user agent methods
+#' For instance mac_processor, user_agents, chrome and firefox user agents.
 #' @family ParentProviders
 #' @export
+#' @returns UserAgentProvider object.
 UserAgentProvider <- R6::R6Class(
   inherit = BaseProvider,
   "UserAgentProvider",

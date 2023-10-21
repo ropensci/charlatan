@@ -2,7 +2,7 @@
 # https://github.com/joke2k/faker/blob/master/faker/providers/color/__init__.py
 
 #' @title ColorProvider
-#' @description methods for colors in locale English (United States)
+#' @inherit ColorProvider description details return
 #' @export
 #' @family en
 #' @family US

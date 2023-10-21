@@ -1420,7 +1420,7 @@ person_en_nz <- list(
 
 
 #' @title Person Provider for English (New Zealand)
-#' @description person names methods
+#' @inherit PersonProvider description details return
 #' @export
 #' @family en
 #' @family NZ

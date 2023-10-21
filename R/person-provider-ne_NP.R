@@ -1563,7 +1563,7 @@ person_ne_np <- list(
 
 
 #' @title Person Provider for Nepali (Nepal)
-#' @description person names methods
+#' @inherit PersonProvider description details return
 #' @export
 #' @family ne
 #' @family NP

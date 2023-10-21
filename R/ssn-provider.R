@@ -1,7 +1,7 @@
 #' @title SSNProvider
 #' @description methods for generating social security numbers
 #' @export
-#' @keywords internal
+#' @returns a SSNProvider object for generating social security numbers.
 SSNProvider <- R6::R6Class(
   inherit = BaseProvider,
   "SSNProvider",

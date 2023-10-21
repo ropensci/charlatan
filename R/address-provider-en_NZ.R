@@ -3,7 +3,7 @@
 
 #' AddressProvider for New-Zealand
 #'
-#' @description Address methods for New Zealand.
+#' @inherit AddressProvider description details return
 #' @export
 #' @family en
 #' @family NZ
@@ -35,8 +35,8 @@ AddressProvider_en_NZ <- R6::R6Class(
       pattern <- super$random_element(private$city_formats)
       dat <- list(
         # , , te_reo_first, te_reo_ending, te_reo_part
-        first_name = self$pp$first_name(),
-        last_name = self$pp$last_name(),
+        first_name = private$pp$first_name(),
+        last_name = private$pp$last_name(),
         city_suffix = super$random_element(private$city_suffix),
         city_prefix = super$random_element(private$city_prefix),
         te_reo_first = super$random_element(private$te_reo_first),
@@ -49,8 +49,8 @@ AddressProvider_en_NZ <- R6::R6Class(
     street_name = function() {
       pattern <- super$random_element(private$street_name_formats)
       dat <- list(
-        first_name = self$pp$first_name(),
-        last_name = self$pp$last_name(),
+        first_name = private$pp$first_name(),
+        last_name = private$pp$last_name(),
         street_suffix = super$random_element(private$street_suffixes),
         te_reo_first = super$random_element(private$te_reo_first),
         te_reo_ending = super$random_element(private$te_reo_ending),

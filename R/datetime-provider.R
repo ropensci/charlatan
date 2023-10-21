@@ -259,7 +259,7 @@ DateTimeProvider <- R6::R6Class(
     },
 
     #' @description Generate a iso8601 format date
-    
+
     #' @references https://en.wikipedia.org/wiki/Unix_time
     date_time_fromtimestamp = function(timestamp, tzinfo = NULL) {
       as.POSIXct(timestamp, origin = "1970-01-01", tz = tzinfo)

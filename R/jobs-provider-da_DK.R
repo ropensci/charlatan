@@ -701,9 +701,9 @@ job_formats_da_dk <- c(
   "\u00d8konomikonsulent",
   "\u00d8konomir\u00e5dgiver"
 )
-#' Job provider
+#' Job provider for Danish
 #'
-#' Methods for jobs. Create a job name.
+#' @inherit JobProvider description details return
 #' @family da
 #' @family DK
 #' @export

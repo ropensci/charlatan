@@ -20,7 +20,8 @@ test_that("CompanyProvider works", {
 context("ch_company works")
 
 test_that("ch_company", {
-  expect_warning(ch_company())
+  # temporary allow company locale NULL
+  # expect_warning(ch_company())
   aa <- ch_company(locale = "en_US")
 
   expect_type(aa, "character")

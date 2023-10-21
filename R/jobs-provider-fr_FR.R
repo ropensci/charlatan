@@ -669,9 +669,9 @@ job_formats_fr_fr <- c(
   "Zoologiste"
 )
 
-#' Job provider
+#' Job provider for France
 #'
-#' Methods for jobs. Create a job name.
+#' @inherit JobProvider description details return
 #' @family fr
 #' @family FR
 #' @export

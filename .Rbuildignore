@@ -15,3 +15,4 @@ appveyor.yml
 ^data-raw$
 ^doc$
 ^Meta$
+^inst\examples$

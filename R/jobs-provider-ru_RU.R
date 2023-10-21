@@ -544,9 +544,9 @@ job_formats_ru_ru <- c(
   "\u042e\u0440\u0438\u0441\u0442"
 )
 
-#' Job provider
+#' Job provider for Russia
 #'
-#' Methods for jobs. Create a job name.
+#' @inherit JobProvider description details return
 #' @family ru
 #' @family RU
 #' @export

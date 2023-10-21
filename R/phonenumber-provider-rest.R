@@ -23,7 +23,7 @@ phone_number_formats_el_gr <- c(
 
 
 #' @title PhoneNumberProvider for Greece
-#' @description methods for generating phone numbers
+#' @inherit PhoneNumberProvider description details return
 #' @family el
 #' @family GR
 #' @export
@@ -65,7 +65,7 @@ phone_number_formats_dk_dk <- c(
 
 
 #' @title PhoneNumberProvider for Denmark
-#' @description methods for generating phone numbers
+#' @inherit PhoneNumberProvider description details return
 #' @family da
 #' @family DK
 #' @export
@@ -83,7 +83,7 @@ PhoneNumberProvider_da_DK <- R6::R6Class(
 
 
 #' @title PhoneNumberProvider for Denmark
-#' @description methods for generating phone numbers
+#' @inherit PhoneNumberProvider description details return
 #' @family dk
 #' @family DK
 #' @export
@@ -114,7 +114,7 @@ phone_number_formats_de_de <- c(
 )
 
 #' @title PhoneNumberProvider for Germany
-#' @description methods for generating phone numbers
+#' @inherit PhoneNumberProvider description details return
 #' @family de
 #' @family DE
 #' @export
@@ -170,7 +170,7 @@ phone_number_formats_cs_cz <- c(
 
 
 #' @title PhoneNumberProvider for Chechia
-#' @description methods for generating phone numbers
+#' @inherit PhoneNumberProvider description details return
 #' @family cs
 #' @family CZ
 #' @export
@@ -225,7 +225,7 @@ phone_number_formats_bs_ba <- c(
 
 
 #' @title PhoneNumberProvider for Bosnia and Herzegovina
-#' @description methods for generating phone numbers
+#' @inherit PhoneNumberProvider description details return
 #' @family bs
 #' @family BA
 #' @export
@@ -258,7 +258,7 @@ phone_number_formats_bg_bg <- c(
 )
 
 #' @title PhoneNumberProvider for Bulgaria
-#' @description methods for generating phone numbers
+#' @inherit PhoneNumberProvider description details return
 #' @family bg
 #' @family BG
 #' @export
@@ -377,7 +377,7 @@ phone_number_formats_fi_fi <- c(
 )
 
 #' @title PhoneNumberProvider for Finland
-#' @description methods for generating phone numbers
+#' @inherit PhoneNumberProvider description details return
 #' @family fi
 #' @family FI
 #' @export
@@ -403,7 +403,7 @@ phone_number_formats_hi_in <- c(
 )
 
 #' @title PhoneNumberProvider for India
-#' @description methods for generating phone numbers
+#' @inherit PhoneNumberProvider description details return
 #' @family hi
 #' @family IN
 #' @export
@@ -453,7 +453,7 @@ phone_number_formats_hr_hr <- c(
 )
 
 #' @title PhoneNumberProvider for Croatia
-#' @description methods for generating phone numbers
+#' @inherit PhoneNumberProvider description details return
 #' @family hr
 #' @family HR
 #' @export
@@ -480,7 +480,7 @@ phone_number_formats_hu_hu <- c(
 )
 
 #' @title PhoneNumberProvider for Hungary
-#' @description methods for generating phone numbers
+#' @inherit PhoneNumberProvider description details return
 #' @family hu
 #' @family HU
 #' @export
@@ -506,7 +506,7 @@ phone_number_formats_it_it <- c(
   "+39 #### ########"
 )
 #' @title PhoneNumberProvider for Italy
-#' @description methods for generating phone numbers
+#' @inherit PhoneNumberProvider description details return
 #' @family it
 #' @family IT
 #' @export
@@ -531,7 +531,7 @@ phone_number_formats_ja_jp <- c(
 )
 
 #' @title PhoneNumberProvider for Japan
-#' @description methods for generating phone numbers
+#' @inherit PhoneNumberProvider description details return
 #' @family ja
 #' @family JP
 #' @export
@@ -576,7 +576,7 @@ phone_number_formats_ko_kr <- c(
 )
 
 #' @title PhoneNumberProvider for Korean Republic
-#' @description methods for generating phone numbers
+#' @inherit PhoneNumberProvider description details return
 #' @family ko
 #' @family KR
 #' @export
@@ -599,7 +599,7 @@ phone_number_formats_lt_lt <- c(
 )
 
 #' @title PhoneNumberProvider for Lithuania
-#' @description methods for generating phone numbers
+#' @inherit PhoneNumberProvider description details return
 #' @family lt
 #' @family LT
 #' @export
@@ -622,7 +622,7 @@ phone_number_formats_lv_lv <- c(
 )
 
 #' @title PhoneNumberProvider for Latvia
-#' @description methods for generating phone numbers
+#' @inherit PhoneNumberProvider description details return
 #' @family lv
 #' @family LV
 #' @export
@@ -649,7 +649,7 @@ phone_number_formats_ne_np <- c(
 
 
 #' @title PhoneNumberProvider for Nepal
-#' @description methods for generating phone numbers
+#' @inherit PhoneNumberProvider description details return
 #' @family ne
 #' @family NP
 #' @export
@@ -682,8 +682,8 @@ phone_number_formats_nn_no <- c(
 )
 
 
-#' @title PhoneNumberProvider for Great Britain
-#' @description methods for generating phone numbers
+#' @title PhoneNumberProvider for Norway
+#' @inherit PhoneNumberProvider description details return
 #' @family nn
 #' @family NO
 #' @export
@@ -701,7 +701,7 @@ PhoneNumberProvider_nn_NO <- R6::R6Class(
 
 
 #' @title PhoneNumberProvider for Norway
-#' @description methods for generating phone numbers
+#' @inherit PhoneNumberProvider description details return
 #' @family no
 #' @family NO
 #' @export
@@ -752,7 +752,7 @@ phone_number_formats_pl_pl <- c(
 )
 
 #' @title PhoneNumberProvider for Poland
-#' @description methods for generating phone numbers
+#' @inherit PhoneNumberProvider description details return
 #' @family pl
 #' @family PL
 #' @export
@@ -838,7 +838,7 @@ phone_number_formats_pt_br <- c(
 )
 
 #' @title PhoneNumberProvider for Brazil
-#' @description methods for generating phone numbers
+#' @inherit PhoneNumberProvider description details return
 #' @family pt
 #' @family BR
 #' @export
@@ -894,7 +894,7 @@ phone_number_formats_pt_pt <- c(
 )
 
 #' @title PhoneNumberProvider for Portugal
-#' @description methods for generating phone numbers
+#' @inherit PhoneNumberProvider description details return
 #' @family pt
 #' @family PT
 #' @export
@@ -920,7 +920,7 @@ phone_number_formats_ru_ru <- c(
 )
 
 #' @title PhoneNumberProvider for Russia
-#' @description methods for generating phone numbers
+#' @inherit PhoneNumberProvider description details return
 #' @family ru
 #' @family RU
 #' @export
@@ -950,7 +950,7 @@ phone_number_formats_sk_sk <- c(
 )
 
 #' @title PhoneNumberProvider for Slovakia
-#' @description methods for generating phone numbers
+#' @inherit PhoneNumberProvider description details return
 #' @family sk
 #' @family SK
 #' @export
@@ -1010,7 +1010,7 @@ phone_number_formats_sv_se <- c(
 
 
 #' @title PhoneNumberProvider for Sweden
-#' @description methods for generating phone numbers
+#' @inherit PhoneNumberProvider description details return
 #' @family sv
 #' @family SE
 #' @export
@@ -1039,9 +1039,9 @@ phone_number_formats_tr_tr <- c(
 )
 
 #' @title PhoneNumberProvider for Turkey
-#' @description methods for generating phone numbers
-#' @family en
-#' @family GB
+#' @inherit PhoneNumberProvider description details return
+#' @family tr
+#' @family TR
 #' @export
 #' @examples
 #' z <- PhoneNumberProvider_tr_TR$new()
@@ -1067,7 +1067,7 @@ phone_number_formats_uk_ua <- c(
 )
 
 #' @title PhoneNumberProvider for Ukraine
-#' @description methods for generating phone numbers
+#' @inherit PhoneNumberProvider description details return
 #' @family uk
 #' @family UA
 #' @export
@@ -1094,7 +1094,7 @@ phone_number_formats_zh_tw <- c(
 )
 
 #' @title PhoneNumberProvider for Taiwan
-#' @description methods for generating phone numbers
+#' @inherit PhoneNumberProvider description details return
 #' @family zh
 #' @family TW
 #' @export
@@ -1131,7 +1131,7 @@ phone_number_formats_he_il <- c(
 
 
 #' @title PhoneNumberProvider for Israel
-#' @description methods for generating phone numbers
+#' @inherit PhoneNumberProvider description details return
 #' @family he
 #' @family IL
 #' @export
@@ -1170,7 +1170,7 @@ phone_number_formats_id_id <- c(
 
 
 #' @title PhoneNumberProvider for Indonesia
-#' @description methods for generating phone numbers
+#' @inherit PhoneNumberProvider description details return
 #' @family id
 #' @family ID
 #' @export
@@ -1193,7 +1193,7 @@ phone_number_formats_th_th <- c(
 )
 
 #' @title PhoneNumberProvider for Thailand
-#' @description methods for generating phone numbers
+#' @inherit PhoneNumberProvider description details return
 #' @family th
 #' @family TH
 #' @export

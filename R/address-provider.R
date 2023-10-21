@@ -1,10 +1,10 @@
 #' @title AddressProvider
-#' @description Object to create addresses for a locale. 
+#' @description Object to create addresses for a locale.
 #' Makes use of [PersonProvider] for creating street names.
-#' 
+#'
 #' @details
 #' When there is no PersonProvider for this locale, we default back to en_US.
-#' 
+#'
 #' @include datetime-provider.R
 #' @family ParentProviders
 #' @returns Returns an AddressProvider object.
@@ -44,7 +44,7 @@ AddressProvider <- R6::R6Class(
     #' @description initialize the person provider (for use in addresses based on names)
     #' @param locale locale
     init_person_provider = function(locale) {
-      self$pp <- cr_loc_spec_provider("PersonProvider", locale)
+      private$pp <- cr_loc_spec_provider("PersonProvider", locale)
     }
   ),
   private = list(

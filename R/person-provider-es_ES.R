@@ -1336,7 +1336,7 @@ person_es_es <- list(
 
 
 #' @title Person Provider for Spanish (Spain)
-#' @description person names methods
+#' @inherit PersonProvider description details return
 #' @export
 #' @family es
 #' @family ES

@@ -1,5 +1,5 @@
 devtools::load_all()
-z <- PersonProvider$new(locale = "pl_PL")
+z <- cr_loc_spec_provider("PersonProvider", "pl_PL")
 z$locale
 z$render()
 z$first_name()
@@ -13,6 +13,7 @@ z$suffix()
 
 
 tools::showNonASCIIfile("R/jobs-provider-nl_NL.R")
+to_replace <- vapply(el_elements_nl_nl, "[[", "", 1)
 to_replace <- vapply(job_formats_nl_nl, "[[", "", 1)
 replaced <- stringi::stri_escape_unicode(to_replace)
 invisible(lapply(replaced, function(z) cat(sprintf('"%s",', z), sep="\n")))

@@ -1,4 +1,3 @@
-
 phone_number_formats_fr_ch <- c(
   "+41 2# ### ## ##",
   "+41 3# ### ## ##",
@@ -69,7 +68,7 @@ phone_number_formats_fr_fr <- c(
 
 
 #' @title PhoneNumberProvider for Switserland
-#' @description methods for generating phone numbers
+#' @inherit PhoneNumberProvider description details return
 #' @family fr
 #' @family CH
 #' @export
@@ -86,7 +85,7 @@ PhoneNumberProvider_fr_CH <- R6::R6Class(
 )
 
 #' @title PhoneNumberProvider for France
-#' @description methods for generating phone numbers
+#' @inherit PhoneNumberProvider description details return
 #' @family fr
 #' @family FR
 #' @export

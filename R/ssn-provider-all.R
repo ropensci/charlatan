@@ -1,6 +1,5 @@
-
 #' @title SSNProvider United States
-#' @description methods for generating social security numbers
+#' @inherit SSNProvider description details return
 #' @export
 #' @family en
 #' @family US
@@ -35,7 +34,7 @@ SSNProvider_en_US <- R6Class(
 )
 
 #' @title SSNProvider the Netherlands
-#' @description methods for generating social security numbers
+#' @inherit SSNProvider description details return
 #' @export
 #' @family nl
 #' @family NL

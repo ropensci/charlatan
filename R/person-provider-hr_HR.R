@@ -1037,7 +1037,7 @@ person_hr_hr <- list(
   last_names = person_last_names_hr_hr
 )
 #' @title Person Provider for Croatian (Croatia)
-#' @description person names methods
+#' @inherit PersonProvider description details return
 #' @export
 #' @family hr
 #' @family HR

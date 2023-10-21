@@ -4,6 +4,8 @@
 #' AddressProvider for United States of America
 #'
 #' @inherit AddressProvider description details return
+#' @family en
+#' @family US
 #' @export
 #' @examples
 #' (z <- AddressProvider_en_US$new())
@@ -49,7 +51,7 @@ AddressProvider_en_US <- R6::R6Class(
         military_apo = super$numerify(super$random_element(private$military_apo_format)),
         military_ship = super$random_element(private$military_ship_prefix),
         military_dpo = super$numerify(super$random_element(private$military_dpo_format)),
-        last_name = self$pp$last_name(),
+        last_name = private$pp$last_name(),
         postcode = self$postcode()
       )
       whisker::whisker.render(pattern, data = dat)
@@ -59,8 +61,8 @@ AddressProvider_en_US <- R6::R6Class(
       pattern <- super$random_element(private$city_formats)
 
       dat <- list(
-        first_name = self$pp$first_name(),
-        last_name = self$pp$last_name(),
+        first_name = private$pp$first_name(),
+        last_name = private$pp$last_name(),
         city_prefix = super$random_element(private$city_prefixes),
         city_suffix = super$random_element(private$city_suffixes)
       )
@@ -70,8 +72,8 @@ AddressProvider_en_US <- R6::R6Class(
     street_name = function() {
       pattern <- super$random_element(private$street_name_formats)
       dat <- list(
-        first_name = self$pp$first_name(),
-        last_name = self$pp$last_name(),
+        first_name = private$pp$first_name(),
+        last_name = private$pp$last_name(),
         street_suffix = super$random_element(private$street_suffixes)
       )
       whisker::whisker.render(pattern, data = dat)

@@ -99,9 +99,9 @@ job_formats_fa_ir <- c(
   "\u062e\u0637\u0627\u0637"
 )
 
-#' Job provider
+#' Job provider for Iran (Persian)
 #'
-#' Methods for jobs. Create a job name.
+#' @inherit JobProvider description details return
 #' @family fa
 #' @family IR
 #' @export

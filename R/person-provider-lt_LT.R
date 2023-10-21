@@ -254,7 +254,7 @@ person_lt_lt <- list(
 )
 
 #' @title Person Provider for Lithuanian (Lithuania)
-#' @description person names methods
+#' @inherit PersonProvider description details return
 #' @export
 #' @family lt
 #' @family LT

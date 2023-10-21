@@ -467,7 +467,7 @@ person_lv_lv <- list(
 
 
 #' @title Person Provider for Latvian (Latvia)
-#' @description person names methods
+#' @inherit PersonProvider description details return
 #' @export
 #' @family lv
 #' @family LV

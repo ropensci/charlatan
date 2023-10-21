@@ -284,7 +284,7 @@ person_ko_kr <- list(
 
 
 #' @title Person Provider for Korean (Republic of Korea)
-#' @description person names methods
+#' @inherit PersonProvider description details return
 #' @export
 #' @family ko
 #' @family KR

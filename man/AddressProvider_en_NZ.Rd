@@ -3,8 +3,15 @@
 \name{AddressProvider_en_NZ}
 \alias{AddressProvider_en_NZ}
 \title{AddressProvider for New-Zealand}
+\value{
+Returns an AddressProvider object.
+}
 \description{
-Address methods for New Zealand.
+Object to create addresses for a locale.
+Makes use of \link{PersonProvider} for creating street names.
+}
+\details{
+When there is no PersonProvider for this locale, we default back to en_US.
 }
 \examples{
 (z <- AddressProvider_en_NZ$new())
@@ -16,6 +23,7 @@ z$city()
 \seealso{
 Other en: 
 \code{\link{AddressProvider_en_GB}},
+\code{\link{AddressProvider_en_US}},
 \code{\link{ColorProvider_en_US}},
 \code{\link{CompanyProvider_en_US}},
 \code{\link{ElementProvider_en_US}},
@@ -33,7 +41,6 @@ Other en:
 \code{\link{PhoneNumberProvider_en_NZ}},
 \code{\link{PhoneNumberProvider_en_US}},
 \code{\link{PhoneNumberProvider_es_MX}},
-\code{\link{PhoneNumberProvider_tr_TR}},
 \code{\link{SSNProvider_en_US}},
 \code{\link{TaxonomyProvider_en_US}},
 \code{\link{UserAgentProvider_en_US}},

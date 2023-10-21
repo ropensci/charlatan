@@ -127,7 +127,7 @@ area_codes_formats_en_nz <- c(
 
 
 #' @title PhoneNumberProvider for United States of America
-#' @description methods for generating phone numbers
+#' @inherit PhoneNumberProvider description details return
 #' @family en
 #' @family US
 #' @export
@@ -144,7 +144,7 @@ PhoneNumberProvider_en_US <- R6::R6Class(
 )
 
 #' @title PhoneNumberProvider for Australia
-#' @description methods for generating phone numbers
+#' @inherit PhoneNumberProvider description details return
 #' @family en
 #' @family AU
 #' @export
@@ -164,7 +164,7 @@ PhoneNumberProvider_en_AU <- R6::R6Class(
 )
 
 #' @title PhoneNumberProvider for New Zealand
-#' @description methods for generating phone numbers
+#' @inherit PhoneNumberProvider description details return
 #' @family en
 #' @family NZ
 #' @export
@@ -181,7 +181,7 @@ PhoneNumberProvider_en_NZ <- R6::R6Class(
   )
 )
 #' @title PhoneNumberProvider for Great Britain
-#' @description methods for generating phone numbers
+#' @inherit PhoneNumberProvider description details return
 #' @family en
 #' @family GB
 #' @export
@@ -199,7 +199,7 @@ PhoneNumberProvider_en_GB <- R6::R6Class(
 )
 
 #' @title PhoneNumberProvider for Canada
-#' @description methods for generating phone numbers
+#' @inherit PhoneNumberProvider description details return
 #' @family en
 #' @family CA
 #' @export

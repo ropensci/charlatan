@@ -3,6 +3,9 @@
 \name{PhoneNumberProvider_it_IT}
 \alias{PhoneNumberProvider_it_IT}
 \title{PhoneNumberProvider for Italy}
+\value{
+A PhoneNumberProvider object that can create phonenumbers.
+}
 \description{
 methods for generating phone numbers
 }

@@ -1,4 +1,3 @@
-
 phone_number_formats_es_es <- c(
   "+34 ### ### ###",
   "+34 #########",
@@ -94,7 +93,7 @@ phone_number_formats_es_pe <- c(
 
 
 #' @title PhoneNumberProvider for Spain
-#' @description methods for generating phone numbers
+#' @inherit PhoneNumberProvider description details return
 #' @family es
 #' @family ES
 #' @export
@@ -110,7 +109,7 @@ PhoneNumberProvider_es_ES <- R6::R6Class(
   )
 )
 #' @title PhoneNumberProvider for Mexico
-#' @description methods for generating phone numbers
+#' @inherit PhoneNumberProvider description details return
 #' @family en
 #' @family MX
 #' @export
@@ -128,7 +127,7 @@ PhoneNumberProvider_es_MX <- R6::R6Class(
 
 
 #' @title PhoneNumberProvider for Peru
-#' @description methods for generating phone numbers
+#' @inherit PhoneNumberProvider description details return
 #' @family es
 #' @family PE
 #' @export

@@ -3,6 +3,9 @@
 \name{InternetProvider}
 \alias{InternetProvider}
 \title{InternetProvider}
+\value{
+A InternetProvider object with specific functions for internet.
+}
 \description{
 internet methods, e.g., email addresses, domain names
 

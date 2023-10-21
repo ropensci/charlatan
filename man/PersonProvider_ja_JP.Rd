@@ -2,9 +2,14 @@
 % Please edit documentation in R/person-provider-ja_JP.R
 \name{PersonProvider_ja_JP}
 \alias{PersonProvider_ja_JP}
-\title{#' @title Person Provider for Japanese (Japan)}
+\title{Person Provider for Japanese (Japan)}
+\value{
+A PersonProvider object that can create names.
+}
 \description{
-person names methods
+Person Provider for Japanese (Japan)
+
+Person Provider for Japanese (Japan)
 }
 \details{
 Note for female and male components that we fall back on generic

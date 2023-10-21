@@ -1,7 +1,7 @@
 # modified from the python library faker:
 # https://github.com/joke2k/faker/blob/master/faker/providers/company/bg_BG/__init__.py
 #' @title CompanyProvider bg_BG
-#' @description company methods for locale Bulgarian (Bulgaria) (bg_BG).
+#' @inherit CompanyProvider description details return
 #' @export
 #' @family bg
 #' @family BG
@@ -13,14 +13,15 @@ CompanyProvider_bg_BG <- R6::R6Class(
   lock_objects = FALSE,
   "CompanyProvider_bg_BG",
   inherit = CompanyProvider,
-  public = list(
-    #' @field company_formats formats for company names.
+  public = list(),
+  private = list(
+    # company_formats formats for company names.
     company_formats = c(
       "{{last_name}} {{company_suffix}}",
       "{{last_name}} {{last_name2}} {{company_suffix}}",
       "{{last_name}}"
     ),
-    #' @field company_suffixes suffixes for in company names.
+    # company_suffixes suffixes for in company names.
     company_suffixes = c(
       "\u0410\u0414",
       "AD",
@@ -40,9 +41,7 @@ CompanyProvider_bg_BG <- R6::R6Class(
       "\u041a\u0414\u0410",
       "SD",
       "\u0421\u0414"
-    )
-  ),
-  private = list(
+    ),
     locale_ = "bg_BG"
   )
 )

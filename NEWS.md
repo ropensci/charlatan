@@ -6,7 +6,7 @@ charlatan 0.6.0
 This release changes the internal logic of the package to make it easier for you to contribute.
 One of the greatest strengths of charlatan, _and its spirit brothers faker (in python) and faker (in perl),_ is
 the ability to customize realistically looking data in many locales.
-But it was not so easy to add locales that were very different from en_US. 
+But it was not so easy to add locales that were very different from en_US.
 This release aims to make it easier for you to add new locales for your favorite
 data types.
 
@@ -27,14 +27,15 @@ See the revamped `contributing` vignette for more info.
 
 ### NEW FEATURES
 * Added a new vignette with more detailed examples of data simulation. 
-* A new baseclass `BareProvider` creates all of the selection and fill in functions.
-* all bare classes will error when you try to init them.
+* A new baseclass `BareProvider` creates all of the selection and fill-in functions.
+* The `BaseProvider` inherits from the `BareProvider` and provides  locale specific functionality. Functionality of BaseProvider remains the same.
+* All **Parent providers**  will error when you try to init them.
 * Locales inherit from a **Parent provider**, giving us the ability to customize 
 every locale (when needed) without changing the logic for all locales.
-* The `BaseProvider` inherits from the `BareProvider` and provides  locale specific functionality. Functionality of BaseProvider remains the same.
 * Every provider (when it has locales) has at least an en_US locale.
 * Ability to create specific functions for your locale specific provider. Example: Are first and last names not used in your locale? you can now create specific functions for your locale. Example: the Japanese locale now has first_kana_name _(for example ヒロキ)_, last_kana_name functionality next to the romanized names. 
 * all locales have labels so they are connected in the docs. You can now see all NZ Providers in one overview.
+
 
 ### REMOVED
 * Removed the siren functionality from CompanyProvider (it was only used in the fr_FR locale and we can provide phone numbers with the PhoneProvider.
@@ -42,9 +43,11 @@ every locale (when needed) without changing the logic for all locales.
 ### MINOR IMPROVEMENTS
 * All locale specific Providers fall back to locale `en_US` if there is no version of this locale provider and will warn you if they do.
 * Reworked development vignette
-* added locale-templates for addresses, colors, company and internet
-* fix all docs
+* added locale-templates for addresses, colors, company, internet, job, lorem,person, phonenumber and ssn. 
 * added the following functionality to fraudster: `address`, `company`, `element`, `element_symbol`, `file_name`, `email`, `url`, `mac_address`, `lorem_paragraph`, `ssn`
+* add print method so the providers print nicely in the console.
+* All data fields are moved to `private` to reduce visual clutter.
+* Added docs for languages like `czech-language` `turkish-language`.
 
 ### BUG FIXES
 * None

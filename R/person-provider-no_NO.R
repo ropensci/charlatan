@@ -359,7 +359,7 @@ person_no_no <- list(
 )
 
 #' @title Person Provider for Norwegian (Norway)
-#' @description person names methods
+#' @inherit PersonProvider description details return
 #' @export
 #' @family no
 #' @family NO

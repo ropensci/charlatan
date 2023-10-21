@@ -105,7 +105,7 @@ person_it_it <- list(
 )
 
 #' @title Person Provider for Italian (Italy)
-#' @description person names methods
+#' @inherit PersonProvider description details return
 #' @export
 #' @family it
 #' @family IT

@@ -475,9 +475,9 @@ job_formats_zh_tw <- c(
   "\u9eb5\u5305\u5e2b",
   "\u9ebb\u9189\u91ab\u5e2b"
 )
-#' Job provider
+#' Job provider for Taiwan
 #'
-#' Methods for jobs. Create a job name.
+#' @inherit JobProvider description details return
 #' @family zh
 #' @family TW
 #' @export

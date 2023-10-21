@@ -24,6 +24,7 @@ z$city()
 \seealso{
 Other en: 
 \code{\link{AddressProvider_en_NZ}},
+\code{\link{AddressProvider_en_US}},
 \code{\link{ColorProvider_en_US}},
 \code{\link{CompanyProvider_en_US}},
 \code{\link{ElementProvider_en_US}},
@@ -41,7 +42,6 @@ Other en:
 \code{\link{PhoneNumberProvider_en_NZ}},
 \code{\link{PhoneNumberProvider_en_US}},
 \code{\link{PhoneNumberProvider_es_MX}},
-\code{\link{PhoneNumberProvider_tr_TR}},
 \code{\link{SSNProvider_en_US}},
 \code{\link{TaxonomyProvider_en_US}},
 \code{\link{UserAgentProvider_en_US}},
@@ -49,8 +49,7 @@ Other en:
 
 Other GB: 
 \code{\link{PersonProvider_en_GB}},
-\code{\link{PhoneNumberProvider_en_GB}},
-\code{\link{PhoneNumberProvider_tr_TR}}
+\code{\link{PhoneNumberProvider_en_GB}}
 }
 \concept{GB}
 \concept{en}

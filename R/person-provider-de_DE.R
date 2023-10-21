@@ -2462,7 +2462,7 @@ person_de_de <- list(
 )
 
 #' @title Person Provider for German (Germany)
-#' @description person names methods
+#' @inherit PersonProvider description details return
 #' @export
 #' @family de
 #' @family DE

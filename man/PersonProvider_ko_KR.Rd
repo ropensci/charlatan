@@ -3,8 +3,13 @@
 \name{PersonProvider_ko_KR}
 \alias{PersonProvider_ko_KR}
 \title{Person Provider for Korean (Republic of Korea)}
+\value{
+A PersonProvider object that can create names.
+}
 \description{
-person names methods
+Person Provider for Korean (Republic of Korea)
+
+Person Provider for Korean (Republic of Korea)
 }
 \details{
 Note for female and male components that we fall back on generic

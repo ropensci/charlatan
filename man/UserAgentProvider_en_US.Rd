@@ -3,8 +3,12 @@
 \name{UserAgentProvider_en_US}
 \alias{UserAgentProvider_en_US}
 \title{UserAgentProvider for United States of America}
+\value{
+UserAgentProvider object.
+}
 \description{
 user agent methods
+For instance mac_processor, user_agents, chrome and firefox user agents.
 }
 \examples{
 (x <- UserAgentProvider_en_US$new())
@@ -22,6 +26,7 @@ x$safari()
 Other en: 
 \code{\link{AddressProvider_en_GB}},
 \code{\link{AddressProvider_en_NZ}},
+\code{\link{AddressProvider_en_US}},
 \code{\link{ColorProvider_en_US}},
 \code{\link{CompanyProvider_en_US}},
 \code{\link{ElementProvider_en_US}},
@@ -39,12 +44,12 @@ Other en:
 \code{\link{PhoneNumberProvider_en_NZ}},
 \code{\link{PhoneNumberProvider_en_US}},
 \code{\link{PhoneNumberProvider_es_MX}},
-\code{\link{PhoneNumberProvider_tr_TR}},
 \code{\link{SSNProvider_en_US}},
 \code{\link{TaxonomyProvider_en_US}},
 \code{\link{english-language}}
 
 Other US: 
+\code{\link{AddressProvider_en_US}},
 \code{\link{ColorProvider_en_US}},
 \code{\link{CompanyProvider_en_US}},
 \code{\link{ElementProvider_en_US}},

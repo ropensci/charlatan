@@ -180,9 +180,9 @@ tax_epithets <- c(
 )
 
 #' @title TaxonomyProvider
-#' @description Taxonomy provider
 #' @export
 #' @family ParentProviders
+#' @description Taxonomy provider for Generating Taxonomic names.
 #' @section Names:
 #' Names were taken from Theplantlist. 500 genera names and 500
 #' epithets were chosen at random from the set of 10,000 names in the

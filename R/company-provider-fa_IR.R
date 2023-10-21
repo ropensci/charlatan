@@ -1,7 +1,7 @@
 # modified from the python library faker:
 # https://github.com/joke2k/faker/blob/master/faker/providers/company/fa_IR/__init__.py
-#' @title CompanyProvider fa_IR
-#' @description company methods for locale Persian (Iran) (fa_IR).
+#' @title CompanyProvider Persian (Iran)
+#' @inherit CompanyProvider description details return
 #' @export
 #' @family fa
 #' @family IR
@@ -16,7 +16,13 @@ CompanyProvider_fa_IR <- R6::R6Class(
   "CompanyProvider_fa_IR",
   inherit = CompanyProvider,
   public = list(
-    #' @field  company_names vector of company names.
+    #' @description a company name
+    company = function() {
+      super$random_element(private$company_names)
+    }
+  ),
+  private = list(
+    # company_names vector of company names.
     company_names = c(
       "\u06af\u0631\u0648\u0647 \u0633\u06cc\u0645\u0627\u0646",
       "\u06af\u0631\u0648\u0647 \u0641\u0644\u0632\u0627\u062a \u0627\u0633\u0627\u0633\u064a",
@@ -1071,13 +1077,6 @@ CompanyProvider_fa_IR <- R6::R6Class(
       "\u06af\u0631\u0648\u0647 \u0634\u0631\u06a9\u062a \u0647\u0627\u06cc \u0645\u0634\u0627\u0648\u0631\u0647 \u062a\u0628\u0644\u06cc\u063a\u0627\u062a\u06cc",
       "\u0645\u0648\u0633\u0633\u0647 \u067e\u0648\u06cc\u0646\u062f\u06af\u0627\u0646 \u062a\u0648\u0633\u0639\u0647 \u067e\u0627\u0631\u0633"
     ),
-    ## add functions here
-    #' @description a company name
-    company = function() {
-      super$random_element(self$company_names)
-    }
-  ),
-  private = list(
     locale_ = "fa_IR"
   )
 )

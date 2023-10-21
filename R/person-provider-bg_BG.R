@@ -1783,7 +1783,7 @@ person_bg_bg <- list(
 
 
 #' @title Person Provider for Bulgarian (Bulgaria)
-#' @description person names methods
+#' @inherit PersonProvider description details return
 #' @export
 #' @family bg
 #' @family BG

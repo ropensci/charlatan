@@ -3,8 +3,14 @@
 \name{CompanyProvider_bg_BG}
 \alias{CompanyProvider_bg_BG}
 \title{CompanyProvider bg_BG}
+\value{
+A CompanyProvider object that can create companies.
+}
 \description{
-company methods for locale Bulgarian (Bulgaria) (bg_BG).
+company name/etc. methods
+
+Note that you cannot instantiate this class, you can only
+use the localized versions such as \link{CompanyProvider_en_US}.
 }
 \examples{
 x <- CompanyProvider_bg_BG$new()
@@ -30,15 +36,6 @@ Other BG:
 \section{Super classes}{
 \code{\link[charlatan:BareProvider]{charlatan::BareProvider}} -> \code{\link[charlatan:BaseProvider]{charlatan::BaseProvider}} -> \code{\link[charlatan:CompanyProvider]{charlatan::CompanyProvider}} -> \code{CompanyProvider_bg_BG}
 }
-\section{Public fields}{
-\if{html}{\out{<div class="r6-fields">}}
-\describe{
-\item{\code{company_formats}}{formats for company names.}
-
-\item{\code{company_suffixes}}{suffixes for in company names.}
-}
-\if{html}{\out{</div>}}
-}
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
@@ -60,9 +57,9 @@ Other BG:
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_int"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_int'><code>charlatan::BareProvider$random_int()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_letter"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_letter'><code>charlatan::BareProvider$random_letter()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="randomize_nb_elements"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-randomize_nb_elements'><code>charlatan::BareProvider$randomize_nb_elements()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="allowed_locales"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-allowed_locales'><code>charlatan::BaseProvider$allowed_locales()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-check_locale'><code>charlatan::BaseProvider$check_locale()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="print"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-print'><code>charlatan::BaseProvider$print()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="CompanyProvider" data-id="allowed_locales"><a href='../../charlatan/html/CompanyProvider.html#method-CompanyProvider-allowed_locales'><code>charlatan::CompanyProvider$allowed_locales()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="CompanyProvider" data-id="bs"><a href='../../charlatan/html/CompanyProvider.html#method-CompanyProvider-bs'><code>charlatan::CompanyProvider$bs()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="CompanyProvider" data-id="catch_phrase"><a href='../../charlatan/html/CompanyProvider.html#method-CompanyProvider-catch_phrase'><code>charlatan::CompanyProvider$catch_phrase()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="CompanyProvider" data-id="company"><a href='../../charlatan/html/CompanyProvider.html#method-CompanyProvider-company'><code>charlatan::CompanyProvider$company()</code></a></span></li>

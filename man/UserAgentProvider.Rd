@@ -3,8 +3,12 @@
 \name{UserAgentProvider}
 \alias{UserAgentProvider}
 \title{UserAgentProvider}
+\value{
+UserAgentProvider object.
+}
 \description{
 user agent methods
+For instance mac_processor, user_agents, chrome and firefox user agents.
 }
 \seealso{
 Other ParentProviders: 

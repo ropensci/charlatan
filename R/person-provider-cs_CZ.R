@@ -355,7 +355,7 @@ person_cs_cz <- list(
 )
 
 #' @title Person Provider for Czech (Czech Republic)
-#' @description person names methods
+#' @inherit PersonProvider description details return
 #' @export
 #' @family cs
 #' @family CZ

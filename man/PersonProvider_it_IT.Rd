@@ -3,8 +3,13 @@
 \name{PersonProvider_it_IT}
 \alias{PersonProvider_it_IT}
 \title{Person Provider for Italian (Italy)}
+\value{
+A PersonProvider object that can create names.
+}
 \description{
-person names methods
+Person Provider for Italian (Italy)
+
+Person Provider for Italian (Italy)
 }
 \details{
 Note for female and male components that we fall back on generic

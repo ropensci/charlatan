@@ -3,6 +3,9 @@
 \name{SSNProvider_nl_NL}
 \alias{SSNProvider_nl_NL}
 \title{SSNProvider the Netherlands}
+\value{
+a SSNProvider object for generating social security numbers.
+}
 \description{
 methods for generating social security numbers
 }

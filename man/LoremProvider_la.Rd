@@ -4,10 +4,9 @@
 \alias{LoremProvider_la}
 \title{Lorem provider Latin}
 \description{
-Methods for Lorem Ipsum generation.
+lorem ipsum methods for generating random words in a language.
 Lorem Ipsum is a placeholder text commonly used to demonstrate the visual
 form of a document or a typeface without relying on meaningful content.
-This Latin version is what is common used
 }
 \examples{
 x <- LoremProvider_la$new()
@@ -51,9 +50,9 @@ Other la:
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_int"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_int'><code>charlatan::BareProvider$random_int()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="random_letter"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-random_letter'><code>charlatan::BareProvider$random_letter()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BareProvider" data-id="randomize_nb_elements"><a href='../../charlatan/html/BareProvider.html#method-BareProvider-randomize_nb_elements'><code>charlatan::BareProvider$randomize_nb_elements()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="allowed_locales"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-allowed_locales'><code>charlatan::BaseProvider$allowed_locales()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="check_locale"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-check_locale'><code>charlatan::BaseProvider$check_locale()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="BaseProvider" data-id="print"><a href='../../charlatan/html/BaseProvider.html#method-BaseProvider-print'><code>charlatan::BaseProvider$print()</code></a></span></li>
-<li><span class="pkg-link" data-pkg="charlatan" data-topic="LoremProvider" data-id="allowed_locales"><a href='../../charlatan/html/LoremProvider.html#method-LoremProvider-allowed_locales'><code>charlatan::LoremProvider$allowed_locales()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="LoremProvider" data-id="initialize"><a href='../../charlatan/html/LoremProvider.html#method-LoremProvider-initialize'><code>charlatan::LoremProvider$initialize()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="LoremProvider" data-id="paragraph"><a href='../../charlatan/html/LoremProvider.html#method-LoremProvider-paragraph'><code>charlatan::LoremProvider$paragraph()</code></a></span></li>
 <li><span class="pkg-link" data-pkg="charlatan" data-topic="LoremProvider" data-id="paragraphs"><a href='../../charlatan/html/LoremProvider.html#method-LoremProvider-paragraphs'><code>charlatan::LoremProvider$paragraphs()</code></a></span></li>

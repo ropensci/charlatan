@@ -3,10 +3,12 @@
 \name{SSNProvider}
 \alias{SSNProvider}
 \title{SSNProvider}
+\value{
+a SSNProvider object for generating social security numbers.
+}
 \description{
 methods for generating social security numbers
 }
-\keyword{internal}
 \section{Super classes}{
 \code{\link[charlatan:BareProvider]{charlatan::BareProvider}} -> \code{\link[charlatan:BaseProvider]{charlatan::BaseProvider}} -> \code{SSNProvider}
 }
