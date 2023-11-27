@@ -1,7 +1,6 @@
 #' @title SequenceProvider
 #' @description genetic sequence generator
 #' @export
-#' @keywords internal
 #' @examples
 #' z <- SequenceProvider$new()
 #' z$render()
