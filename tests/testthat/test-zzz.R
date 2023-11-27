@@ -72,3 +72,14 @@ test_that("All non-localized providers inherit from BareProvider", {
     }
   }
 })
+
+
+test_that("checksum_util works for our usecases",{
+    # ISBN 10
+    expect_equal(checksum_util(c(0,3,0,6,4,0,6,1,5),10:2), 130)
+    # ISBN 13
+    expect_equal(checksum_util(c(9,7,8,0,3,0,6,4,0,6,1,5),rep(c(1,3),6)), 93)
+    #SSN dutch
+    #111222333 en 123456782
+    expect_equal(checksum_util(c(1,1,1,2,2,2,3,3),9:2), 69)
+})

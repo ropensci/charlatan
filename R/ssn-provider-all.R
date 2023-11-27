@@ -52,17 +52,7 @@ SSNProvider_nl_NL <- R6Class(
       if (length(first_8) == 7) {
         first_8[8] <- 1
       }
-      final_number <- (
-        9 * first_8[1] +
-          +8 * first_8[2] +
-          +7 * first_8[3] +
-          +6 * first_8[4] +
-          +5 * first_8[5] +
-          +4 * first_8[6] +
-          +3 * first_8[7] +
-          +2 * first_8[8]
-      ) %% 11
-
+      final_number <- checksum_util(first_8,9:2) %% 11
       bsn <- paste0(c(first_8, final_number), collapse = "")
       bsn
     }
