@@ -48,11 +48,9 @@ SSNProvider_nl_NL <- R6Class(
     #' @description Make a SSN
     #'  Dutch SSN (BSN) is 9 digits that follow a certain proof (elfproef).
     render = function() {
-      first_8 <- as.integer(strsplit(as.character(as.integer(runif(1) * 1e8)), "")[[1]])
-      if (length(first_8) == 7) {
-        first_8[8] <- 1
-      }
-      final_number <- checksum_util(first_8,9:2) %% 11
+      first_8 <- sample(0:9, 8, replace = TRUE)
+
+      final_number <- checksum_util(first_8, 9:2) %% 11
       bsn <- paste0(c(first_8, final_number), collapse = "")
       bsn
     }
