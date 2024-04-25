@@ -67,7 +67,7 @@ ISBNProvider <- R6::R6Class(
       isbn
     },
     generate_isbn13_checkdigit = function(first12isbn) {
-        # first12isbn should be a vector of 12 long.
+      # first12isbn should be a vector of 12 long.
       first_12 <- as.integer(first12isbn)
       if (length(first_12) != 12) {
         stop("needs exactly 12 tokens")
