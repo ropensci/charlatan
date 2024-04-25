@@ -52,4 +52,3 @@ AddressProvider <- R6::R6Class(
     provider_ = "AddressProvider"
   )
 )
-

@@ -35,7 +35,6 @@ AddressProvider_en_NZ <- R6::R6Class(
       pattern <- super$random_element(private$city_formats)
       dat <- list(
         # , , te_reo_first, te_reo_ending, te_reo_part
-
         first_name = private$pp$first_name(),
         last_name = private$pp$last_name(),
         city_suffix = super$random_element(private$street_suffixes),

@@ -99,6 +99,7 @@ Collate:
     'internet-provider-fr_FR.R'
     'internet-provider-hr_HR.R'
     'internet-provider.R'
+    'isbn-provider.R'
     'job.R'
     'jobs-provider-da_DK.R'
     'jobs-provider-en_US.R'

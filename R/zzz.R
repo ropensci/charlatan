@@ -118,3 +118,13 @@ locale_mismatch <- function(parent_provider, child_provider) {
   child <- cr_loc_spec_provider(child_provider, "en_US")$allowed_locales()
   parent[!parent %in% child]
 }
+
+#' generalized util function for sequence multiplication
+#'
+#' Util function for ISBN, ean, SSN providers.
+#' for cases such as sum(x[4]*5 + x[3]*4 + x[2]*3 + x[1] *2)
+#' @keywords internal
+checksum_util <- function(vector, multiplicationvector) {
+  stopifnot(length(vector) == length(multiplicationvector))
+  sum(vector * multiplicationvector)
+}
