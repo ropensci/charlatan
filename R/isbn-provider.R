@@ -51,10 +51,11 @@ ISBNProvider <- R6::R6Class(
         stop("needs exactly 9 tokens")
       }
       final_number <- 11 - (checksum_util(first_9, 10:2) %% 11)
+      final_number <- final_number %% 11
       if (final_number == 10) {
         final_number <- "X"
       }
-      final_number
+      as.character(final_number)
     },
     generate_isbn13 = function(prefix = NULL) {
       first12isbn <- sample(0:9, 12, replace = TRUE)
