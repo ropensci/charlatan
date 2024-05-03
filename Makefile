@@ -49,9 +49,6 @@ spellcheck:
 lint:
 	${RSCRIPT} -e "devtools::lint()"
 
-style:
-	${RSCRIPT} -e "styler::style_pkg()"
-
 revdep:
 	${RSCRIPT} revdep/check.R
 
