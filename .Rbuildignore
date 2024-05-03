@@ -17,3 +17,4 @@ appveyor.yml
 ^Meta$
 ^inst\examples$
 .git
+^\.github$
