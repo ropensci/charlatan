@@ -10,7 +10,6 @@
 #' @importFrom whisker whisker.render
 #' @importFrom tibble as_tibble
 #' @aliases charlatan
-#' @docType package
 #' @keywords package
 #' @author Roel M. Hogervorst \email{hogervorst.rm@gmail.com}
 #' @author Scott Chamberlain
@@ -50,4 +49,4 @@
 #' x <- ColorProvider_en_US$new()
 #' x$color_name()
 #' x$hex_color()
-NULL
+"_PACKAGE"

@@ -44,7 +44,7 @@ Suggests:
     ipaddress,
     stringi,
     spelling
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.2
 Depends: 
     R (>= 2.10)
 Collate: 

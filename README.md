@@ -58,19 +58,19 @@ Reasons to use `charlatan`:
 cran version
 
 
-```r
+``` r
 install.packages("charlatan")
 ```
 
 dev version
 
 
-```r
+``` r
 remotes::install_github("ropensci/charlatan")
 ```
 
 
-```r
+``` r
 library("charlatan")
 #> Error in library("charlatan"): there is no package called 'charlatan'
 set.seed(12345)
@@ -81,15 +81,15 @@ set.seed(12345)
 ... for all fake data operations
 
 
-```r
+``` r
 x <- fraudster()
 #> Error in fraudster(): could not find function "fraudster"
 x$job()
-#> Error in eval(expr, envir, enclos): object 'x' not found
+#> Error: object 'x' not found
 x$name()
-#> Error in eval(expr, envir, enclos): object 'x' not found
+#> Error: object 'x' not found
 x$color_name()
-#> Error in eval(expr, envir, enclos): object 'x' not found
+#> Error: object 'x' not found
 ```
 
 ## locale support
@@ -99,7 +99,7 @@ Adding more locales through time, e.g.,
 Locale support for job data
 
 
-```r
+``` r
 ch_job(locale = "en_US", n = 3)
 #> Error in ch_job(locale = "en_US", n = 3): could not find function "ch_job"
 ch_job(locale = "fr_FR", n = 3)
@@ -115,7 +115,7 @@ ch_job(locale = "zh_TW", n = 3)
 For colors:
 
 
-```r
+``` r
 ch_color_name(locale = "en_US", n = 3)
 #> Error in ch_color_name(locale = "en_US", n = 3): could not find function "ch_color_name"
 ch_color_name(locale = "uk_UA", n = 3)
@@ -127,13 +127,13 @@ More coming soon ...
 ## generate a dataset
 
 
-```r
+``` r
 ch_generate()
 #> Error in ch_generate(): could not find function "ch_generate"
 ```
 
 
-```r
+``` r
 ch_generate("job", "phone_number", n = 30)
 #> Error in ch_generate("job", "phone_number", n = 30): could not find function "ch_generate"
 ```
@@ -142,13 +142,13 @@ ch_generate("job", "phone_number", n = 30)
 ## person name
 
 
-```r
+``` r
 ch_name()
 #> Error in ch_name(): could not find function "ch_name"
 ```
 
 
-```r
+``` r
 ch_name(10)
 #> Error in ch_name(10): could not find function "ch_name"
 ```
@@ -157,13 +157,13 @@ ch_name(10)
 ## phone number
 
 
-```r
+``` r
 ch_phone_number()
 #> Error in ch_phone_number(): could not find function "ch_phone_number"
 ```
 
 
-```r
+``` r
 ch_phone_number(10)
 #> Error in ch_phone_number(10): could not find function "ch_phone_number"
 ```
@@ -171,13 +171,13 @@ ch_phone_number(10)
 ## job
 
 
-```r
+``` r
 ch_job()
 #> Error in ch_job(): could not find function "ch_job"
 ```
 
 
-```r
+``` r
 ch_job(10)
 #> Error in ch_job(10): could not find function "ch_job"
 ```
@@ -185,7 +185,7 @@ ch_job(10)
 ## credit cards
 
 
-```r
+``` r
 ch_credit_card_provider()
 #> Error in ch_credit_card_provider(): could not find function "ch_credit_card_provider"
 ch_credit_card_provider(n = 4)
@@ -193,7 +193,7 @@ ch_credit_card_provider(n = 4)
 ```
 
 
-```r
+``` r
 ch_credit_card_number()
 #> Error in ch_credit_card_number(): could not find function "ch_credit_card_number"
 ch_credit_card_number(n = 10)
@@ -201,7 +201,7 @@ ch_credit_card_number(n = 10)
 ```
 
 
-```r
+``` r
 ch_credit_card_security_code()
 #> Error in ch_credit_card_security_code(): could not find function "ch_credit_card_security_code"
 ch_credit_card_security_code(10)
