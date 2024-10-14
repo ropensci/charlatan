@@ -8,6 +8,6 @@ checksum_util(vector, multiplicationvector)
 }
 \description{
 Util function for ISBN, ean, SSN providers.
-for cases such as sum(x\link{4}*5 + x\link{3}*4 + x\link{2}*3 + x\link{1} *2)
+for cases such as \code{sum(x[4]*5 + x[3]*4 + x[2]*3 + x[1] *2)}
 }
 \keyword{internal}

@@ -2,7 +2,7 @@
   "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
   "@type": "SoftwareSourceCode",
   "identifier": "charlatan",
-  "description": "Make fake data, supporting addresses, person names, dates, times, colors, coordinates, currencies, digital object identifiers ('DOIs'), jobs, phone numbers, 'DNA' sequences, doubles and integers from distributions and within a range.",
+  "description": "Make fake data that looks realistic, supporting addresses, person names, dates, times, colors, coordinates, currencies, digital object identifiers ('DOIs'), jobs, phone numbers, 'DNA' sequences, doubles and integers from distributions and within a range.",
   "name": "charlatan: Make Fake Data",
   "relatedLink": "https://docs.ropensci.org/charlatan/",
   "codeRepository": "https://github.com/ropensci/charlatan",
@@ -14,7 +14,7 @@
     "name": "R",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 4.2.2 (2022-10-31)",
+  "runtimePlatform": "R version 4.4.1 (2024-06-14)",
   "provider": {
     "@id": "https://cran.r-project.org",
     "@type": "Organization",
@@ -184,13 +184,15 @@
     },
     "SystemRequirements": null
   },
-  "fileSize": "21555.202KB",
+  "fileSize": "2662.878KB",
   "releaseNotes": "https://github.com/ropensci/charlatan/blob/master/NEWS.md",
-  "contIntegration": "https://github.com/ropensci/charlatan/actions?query=workflow%3AR-check",
+  "readme": "https://github.com/ropensci/charlatan/blob/master/README.md",
+  "contIntegration": ["https://github.com/ropensci/charlatan/actions?query=workflow%3AR-check", "https://github.com/ropensci/charlatan/actions/workflows/R-CMD-check.yaml"],
   "developmentStatus": "https://www.repostatus.org/#active",
   "review": {
     "@type": "Review",
     "url": "https://github.com/ropensci/software-review/issues/94",
     "provider": "https://ropensci.org"
-  }
+  },
+  "keywords": ["data", "faker", "rstats", "dataset", "fake-data", "r", "r-package", "peer-reviewed"]
 }

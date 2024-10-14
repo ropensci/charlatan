@@ -53,3 +53,6 @@ revdep:
 	${RSCRIPT} revdep/check.R
 
 release: style test doc readme build revdep
+
+codemeta:
+	${RSCRIPT} -e "codemetar::write_codemeta()"
