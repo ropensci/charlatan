@@ -48,6 +48,7 @@ every locale (when needed) without changing the logic for all locales.
 * add print method so the providers print nicely in the console.
 * All data fields are moved to `private` to reduce visual clutter.
 * Added docs for languages like `czech-language` `turkish-language`.
+* modified tests so they work for test_that version 3
 
 ### BUG FIXES
 * None

@@ -19,8 +19,6 @@ test_that("SSNProvider nl_NL", {
   expect_match(aa$render(), "\\d{9}")
 })
 
-
-
 test_that("ch_ssn", {
   expect_type(ch_ssn(), "character")
   expect_match(ch_ssn(), "\\d\\d\\d-\\d\\d-\\d\\d\\d\\d")

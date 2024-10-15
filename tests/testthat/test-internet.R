@@ -9,7 +9,7 @@ test_that("InternetProvider works", {
   # But I don't want to hard-code all the locales that are missing for every
   # combination of locales. So here is a workaround to check all methods for
   # all locales but also capture all warnings.
-  
+
   cp <- locale_mismatch("InternetProvider", "CompanyProvider")
   lp <- locale_mismatch("InternetProvider", "LoremProvider")
   pp <- locale_mismatch("InternetProvider", "PersonProvider")
@@ -17,7 +17,7 @@ test_that("InternetProvider works", {
   local_edition(2) ## some of these providers have multiple subproviders and
   # therefore multiple warnings, but version 3 of testthat only captures the
   # first warning
-  
+
   for (loc in aa$allowed_locales()) {
     # bit of a workaround to make sure we capture warnings for a subset only.
     if (loc %in% warn_locales) {

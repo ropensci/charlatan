@@ -184,7 +184,7 @@
     },
     "SystemRequirements": null
   },
-  "fileSize": "2662.878KB",
+  "fileSize": "2658.23KB",
   "releaseNotes": "https://github.com/ropensci/charlatan/blob/master/NEWS.md",
   "readme": "https://github.com/ropensci/charlatan/blob/master/README.md",
   "contIntegration": ["https://github.com/ropensci/charlatan/actions?query=workflow%3AR-check", "https://github.com/ropensci/charlatan/actions/workflows/R-CMD-check.yaml"],
