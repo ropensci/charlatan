@@ -1,5 +1,3 @@
-context("PhoneNumberProvider works")
-
 test_that("PhoneNumberProvider works", {
   aa <- PhoneNumberProvider_en_US$new()
 

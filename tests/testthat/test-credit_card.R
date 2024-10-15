@@ -1,5 +1,3 @@
-context("CreditCardProvider works")
-
 test_that("CreditCardProvider works", {
   aa <- CreditCardProvider$new()
 
@@ -29,14 +27,12 @@ test_that("ColorProvider locale support works", {
 })
 
 
-context("ch_credit_card_provider fxn works")
 test_that("ch_credit_card_provider", {
   expect_is(ch_credit_card_provider(), "character")
   expect_equal(length(ch_credit_card_provider(3)), 3)
 })
 
 
-context("ch_credit_card_number fxn works")
 test_that("ch_credit_card_number", {
   expect_is(ch_credit_card_number(), "character")
   expect_is(as.numeric(ch_credit_card_number()), "numeric")
@@ -44,7 +40,6 @@ test_that("ch_credit_card_number", {
 })
 
 
-context("ch_credit_card_security_code fxn works")
 test_that("ch_credit_card_security_code", {
   expect_is(ch_credit_card_security_code(), "character")
   expect_is(as.numeric(ch_credit_card_security_code()), "numeric")

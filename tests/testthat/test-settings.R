@@ -1,5 +1,3 @@
-context("charlatan_settings")
-
 test_that("charlatan_settings - default", {
   aa <- charlatan_settings()
 

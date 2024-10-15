@@ -1,4 +1,3 @@
-context("DateTimeProvider works")
 test_that("DateTimeProvider works", {
   aa <- DateTimeProvider$new()
 
@@ -29,7 +28,6 @@ test_that("DateTimeProvider works", {
 
 
 
-context("ch_timezone works")
 test_that("ch_timezone", {
   aa <- ch_timezone()
 
@@ -50,7 +48,6 @@ test_that("ch_timezone - n parameter", {
 
 
 
-context("ch_unix_time works")
 test_that("ch_unix_time", {
   aa <- ch_unix_time()
 
@@ -66,7 +63,6 @@ test_that("ch_unix_time - n parameter", {
 
 
 
-context("ch_date_time works")
 test_that("ch_date_time", {
   aa <- ch_date_time()
 

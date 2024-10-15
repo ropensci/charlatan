@@ -1,5 +1,3 @@
-context("charlatan_locales")
-
 test_that("charlatan_locales works", {
   expect_is(charlatan_locales, "function")
   expect_is(charlatan_locales(), "data.frame")

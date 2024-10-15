@@ -1,5 +1,3 @@
-context("DOIProvider works")
-
 test_that("DOIProvider works", {
   aa <- DOIProvider$new()
 
@@ -14,8 +12,6 @@ test_that("DOIProvider works", {
   expect_is(aa$render, "function")
   expect_is(aa$render(), "character")
 })
-
-context("ch_doi works")
 
 test_that("ch_doi", {
   aa <- ch_doi()

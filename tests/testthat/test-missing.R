@@ -1,5 +1,3 @@
-context("MissingDataProvider")
-
 skip_on_cran()
 
 test_that("MissingDataProvider works", {
@@ -30,7 +28,6 @@ test_that("MissingDataProvider fails well", {
 })
 
 
-context("ch_missing")
 
 test_that("ch_missing works", {
   letters2 <- ch_missing(letters)

@@ -1,5 +1,3 @@
-context("PersonProvider")
-
 test_that("PersonProvider works", {
   aa <- PersonProvider_en_US$new()
 

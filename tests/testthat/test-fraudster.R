@@ -1,5 +1,3 @@
-context("fraudster")
-
 test_that("fraudster works", {
   aa <- fraudster()
 
@@ -91,7 +89,6 @@ test_that("fraudster - fails well", {
 })
 
 
-context("FraudsterClient")
 
 test_that("FraudsterClient works", {
   aa <- FraudsterClient$new()

@@ -1,5 +1,3 @@
-context("LoremProvider works")
-
 test_that("LoremProvider works", {
   for (loc in LoremProvider_en_US$new()$allowed_locales()) {
     aa <- cr_loc_spec_provider("LoremProvider", loc)

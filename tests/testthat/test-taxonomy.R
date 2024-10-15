@@ -1,5 +1,3 @@
-context("TaxonomyProvider")
-
 test_that("TaxonomyProvider works", {
   charlatan_settings()
   aa <- TaxonomyProvider_en_US$new()
@@ -27,7 +25,6 @@ test_that("TaxonomyProvider works", {
 })
 
 
-context("ch_taxonomic_genus")
 test_that("ch_taxonomic_genus works", {
   aa <- ch_taxonomic_genus()
 
@@ -39,7 +36,7 @@ test_that("ch_taxonomic_genus works", {
 })
 
 
-context("ch_taxonomic_epithet")
+
 test_that("ch_taxonomic_epithet works", {
   aa <- ch_taxonomic_epithet()
 
@@ -51,7 +48,6 @@ test_that("ch_taxonomic_epithet works", {
 })
 
 
-context("ch_taxonomic_species")
 test_that("ch_taxonomic_species works", {
   aa <- ch_taxonomic_species()
 

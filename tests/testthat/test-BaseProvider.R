@@ -1,5 +1,3 @@
-context("BaseProvider")
-
 aa <- BaseProvider$new()
 
 test_that("BaseProvider works", {
@@ -50,7 +48,6 @@ test_that("random_element doesn't expand input into a range", {
   expect_equal(aa$random_element(10), 10)
 })
 
-context("BareProvider")
 barep <- BareProvider$new()
 
 test_that("BareProvider basic functionality", {

@@ -1,5 +1,3 @@
-context("CompanyProvider works")
-
 test_that("CompanyProvider works", {
   aa <- CompanyProvider_en_US$new()
 
@@ -17,7 +15,6 @@ test_that("CompanyProvider works", {
   expect_type(aa$bs(), "character")
 })
 
-context("ch_company works")
 
 test_that("ch_company", {
   # temporary allow company locale NULL

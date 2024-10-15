@@ -1,7 +1,3 @@
-context("InternetProvider works")
-
-
-
 test_that("InternetProvider works", {
   aa <- InternetProvider_en_US$new()
   expect_is(aa, "InternetProvider")

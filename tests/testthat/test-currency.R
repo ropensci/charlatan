@@ -1,5 +1,3 @@
-context("CurrencyProvider works")
-
 test_that("CurrencyProvider works", {
   aa <- CurrencyProvider$new()
 
@@ -13,7 +11,6 @@ test_that("CurrencyProvider works", {
 })
 
 
-context("ch_currency fxn")
 test_that("ch_currency works", {
   expect_is(ch_currency(), "character")
   expect_equal(length(ch_currency(3)), 3)

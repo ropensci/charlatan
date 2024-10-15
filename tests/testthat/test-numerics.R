@@ -1,5 +1,3 @@
-context("NumericsProvider")
-
 test_that("NumericsProvider works", {
   aa <- NumericsProvider$new()
 
@@ -34,7 +32,6 @@ test_that("NumericsProvider works", {
 # ch_lnorm
 # ch_beta
 
-context("ch_double")
 test_that("ch_double works", {
   expect_type(ch_double(), "double")
   expect_equal(length(ch_double(n = 10)), 10)
@@ -42,7 +39,6 @@ test_that("ch_double works", {
   expect_equal(length(ch_double(n = 500)), 500)
 })
 
-context("ch_integer")
 test_that("ch_integer works", {
   expect_type(ch_integer(), "double")
   expect_equal(length(ch_integer(n = 10)), 10)
@@ -50,7 +46,6 @@ test_that("ch_integer works", {
   expect_equal(length(ch_integer(n = 500)), 500)
 })
 
-context("ch_unif")
 test_that("ch_unif works", {
   expect_type(ch_unif(), "double")
   expect_equal(length(ch_unif(n = 10)), 10)
@@ -58,7 +53,6 @@ test_that("ch_unif works", {
   expect_equal(length(ch_unif(n = 500)), 500)
 })
 
-context("ch_norm")
 test_that("ch_norm works", {
   expect_type(ch_norm(), "double")
   expect_equal(length(ch_norm(n = 10)), 10)
@@ -66,7 +60,6 @@ test_that("ch_norm works", {
   expect_equal(length(ch_norm(n = 500)), 500)
 })
 
-context("ch_lnorm")
 test_that("ch_lnorm works", {
   expect_type(ch_lnorm(), "double")
   expect_equal(length(ch_lnorm(n = 10)), 10)
@@ -75,7 +68,6 @@ test_that("ch_lnorm works", {
 })
 
 
-context("ch_beta")
 test_that("ch_beta works", {
   expect_type(ch_beta(shape1 = 10, shape2 = 1), "double")
   expect_equal(length(ch_beta(n = 10, shape1 = 10, shape2 = 1)), 10)

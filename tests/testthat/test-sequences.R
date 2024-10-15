@@ -1,5 +1,3 @@
-context("SequenceProvider")
-
 test_that("SequenceProvider works", {
   aa <- SequenceProvider$new()
 
@@ -11,7 +9,6 @@ test_that("SequenceProvider works", {
 })
 
 
-context("ch_gene_sequence")
 test_that("ch_gene_sequence works", {
   aa <- ch_gene_sequence()
 

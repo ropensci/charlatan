@@ -1,5 +1,3 @@
-context("ColorProvider works")
-
 test_that("ColorProvider works", {
   aa <- ColorProvider_en_US$new()
 
@@ -45,7 +43,6 @@ test_that("ColorProvider locale support works", {
   }
 })
 
-context("ch color functions work")
 
 test_that("ch color functions error for incorrect input", {
   expect_error(ch_color_name(-1))

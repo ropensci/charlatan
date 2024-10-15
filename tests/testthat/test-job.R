@@ -1,5 +1,3 @@
-context("JobProvider works")
-
 skip_on_cran()
 
 test_that("JobProvider works", {
@@ -15,9 +13,6 @@ test_that("JobProvider works", {
     expect_true(job %in% provider_test$.__enclos_env__$private$formats)
   }
 })
-
-
-context("ch_job works")
 
 
 test_that("ch_job - n parameter", {

@@ -1,4 +1,3 @@
-context("AddressProvider works")
 # Make sure that the inheritance works correctly
 test_that("AddressProvider basic functionality works", {
   expect_error(AddressProvider())

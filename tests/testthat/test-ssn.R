@@ -1,5 +1,3 @@
-context("SSNProvider works")
-
 test_that("SSNProvider works", {
   for (loc in SSNProvider_en_US$new()$allowed_locales()) {
     aa <- cr_loc_spec_provider("SSNProvider", loc)
@@ -22,7 +20,6 @@ test_that("SSNProvider nl_NL", {
 })
 
 
-context("ch_ssn works")
 
 test_that("ch_ssn", {
   expect_is(ch_ssn(), "character")

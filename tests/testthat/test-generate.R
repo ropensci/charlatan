@@ -1,5 +1,3 @@
-context("ch_generate")
-
 test_that("ch_generate works - default settings", {
   aa <- ch_generate()
 
