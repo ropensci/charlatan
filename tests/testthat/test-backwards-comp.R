@@ -4,7 +4,7 @@
 ### People hate backwards incompatible packages
 test_that("base provider exists", {
   aa <- BaseProvider$new()
-  expect_is(aa, "R6")
+  expect_s3_class(aa, "R6")
 })
 
 test_that("locales exist", {
@@ -14,7 +14,7 @@ test_that("locales exist", {
   settings <- charlatan_settings()
   expect_type(settings, "list")
   aa <- fraudster()
-  expect_is(aa, "R6")
+  expect_s3_class(aa, "R6")
 })
 
 test_that("colors exists", {

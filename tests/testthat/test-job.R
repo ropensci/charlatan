@@ -8,7 +8,7 @@ test_that("JobProvider works", {
     # print(loc)
     provider_test <- cr_loc_spec_provider(provider, loc)
     job <- provider_test$render()
-    expect_is(job, "character")
+    expect_type(job, "character")
     expect_gt(nchar(job), 0)
     expect_true(job %in% provider_test$.__enclos_env__$private$formats)
   }

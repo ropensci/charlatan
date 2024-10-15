@@ -1,19 +1,19 @@
 test_that("ColorProvider works", {
   aa <- ColorProvider_en_US$new()
 
-  expect_is(aa, "ColorProvider")
-  expect_is(aa, "R6")
-  expect_is(aa$locale, "character")
+  expect_s3_class(aa, "ColorProvider")
+  expect_s3_class(aa, "R6")
+  expect_type(aa$locale, "character")
   expect_equal(aa$locale, "en_US")
-  expect_is(aa$all_colors, "list")
+  expect_type(aa$all_colors, "list")
   expect_equal(aa$all_colors$AliceBlue, "#F0F8FF")
-  expect_is(aa$safe_colors, "character")
-  expect_is(aa$bothify, "function")
-  expect_is(aa$color_name, "function")
+  expect_type(aa$safe_colors, "character")
+  expect_type(aa$bothify, "closure")
+  expect_type(aa$color_name, "closure")
 
-  expect_is(aa$color_name(), "character")
-  expect_is(aa$hex_color(), "character")
-  expect_is(aa$safe_color_name(), "character")
+  expect_type(aa$color_name(), "character")
+  expect_type(aa$hex_color(), "character")
+  expect_type(aa$safe_color_name(), "character")
 
   expect_error(aa$check_locale("en_asdf"))
 })
@@ -25,16 +25,16 @@ test_that("ColorProvider locale support works", {
   test_locale <- function(loc) {
     bb <- cr_loc_spec_provider("ColorProvider", loc)
 
-    expect_is(bb$locale, "character")
+    expect_type(bb$locale, "character")
     expect_equal(bb$locale, loc)
 
-    expect_is(bb$color_name(), "character")
+    expect_type(bb$color_name(), "character")
     expect_true(all(bb$color_name() %in% names(bb$all_colors)))
 
-    expect_is(bb$safe_color_name(), "character")
+    expect_type(bb$safe_color_name(), "character")
     expect_true(all(bb$safe_color_name() %in% bb$safe_colors))
 
-    expect_is(bb$hex_from_name, "function")
+    expect_type(bb$hex_from_name, "closure")
   }
 
   locales <- c("en_US", "uk_UA")
@@ -44,7 +44,7 @@ test_that("ColorProvider locale support works", {
 })
 
 
-test_that("ch color functions error for incorrect input", {
+test_that("ch color closures error for incorrect input", {
   expect_error(ch_color_name(-1))
   expect_error(ch_color_name(-99, "uk_UA"))
   expect_warning(ch_color_name(locale = "ch_AR"))
@@ -58,8 +58,8 @@ test_that("ch color functions error for incorrect input", {
 })
 
 test_that("ch_color_name works", {
-  expect_is(ch_color_name(), "character")
-  expect_is(ch_color_name(7), "character")
+  expect_type(ch_color_name(), "character")
+  expect_type(ch_color_name(7), "character")
 
   expect_equal(length(ch_color_name()), 1)
   expect_equal(length(ch_color_name(12)), 12)
@@ -69,8 +69,8 @@ test_that("ch_color_name works", {
 })
 
 test_that("ch_safe_color_name works", {
-  expect_is(ch_safe_color_name(), "character")
-  expect_is(ch_safe_color_name(5), "character")
+  expect_type(ch_safe_color_name(), "character")
+  expect_type(ch_safe_color_name(5), "character")
 
   expect_equal(length(ch_safe_color_name()), 1)
   expect_equal(length(ch_safe_color_name(7)), 7)
@@ -80,8 +80,8 @@ test_that("ch_safe_color_name works", {
 })
 
 test_that("ch_hex_color works", {
-  expect_is(ch_hex_color(), "character")
-  expect_is(ch_hex_color(7), "character")
+  expect_type(ch_hex_color(), "character")
+  expect_type(ch_hex_color(7), "character")
 
   expect_equal(length(ch_hex_color()), 1)
   expect_equal(length(ch_hex_color(12)), 12)
@@ -96,8 +96,8 @@ test_that("ch_hex_color works", {
 })
 
 test_that("ch_safe_hex_color works", {
-  expect_is(ch_safe_hex_color(), "character")
-  expect_is(ch_safe_hex_color(7), "character")
+  expect_type(ch_safe_hex_color(), "character")
+  expect_type(ch_safe_hex_color(7), "character")
 
   expect_equal(length(ch_safe_hex_color()), 1)
   expect_equal(length(ch_safe_hex_color(12)), 12)
@@ -114,8 +114,8 @@ test_that("ch_safe_hex_color works", {
 between_0_255 <- function(x) all(0 <= x & x <= 255)
 
 test_that("ch_rgb_color works", {
-  expect_is(ch_rgb_color(), "list")
-  expect_is(ch_rgb_color(7), "list")
+  expect_type(ch_rgb_color(), "list")
+  expect_type(ch_rgb_color(7), "list")
 
   expect_equal(length(ch_rgb_color()), 1)
   expect_equal(length(ch_rgb_color(7)), 7)
@@ -128,8 +128,8 @@ test_that("ch_rgb_color works", {
 })
 
 test_that("ch_rgb_css_color works", {
-  expect_is(ch_rgb_css_color(), "character")
-  expect_is(ch_rgb_css_color(7), "character")
+  expect_type(ch_rgb_css_color(), "character")
+  expect_type(ch_rgb_css_color(7), "character")
 
   expect_equal(length(ch_rgb_css_color()), 1)
   expect_equal(length(ch_rgb_css_color(7)), 7)

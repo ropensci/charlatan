@@ -1,7 +1,7 @@
 test_that("ch_name works", {
   aa <- ch_name()
 
-  expect_is(aa, "character")
+  expect_type(aa, "character")
 })
 
 test_that("ch_name - n parameter", {
@@ -13,7 +13,7 @@ test_that("ch_name - n parameter", {
 test_that("ch_name works for all locales", {
   test_locale <- function(loc) {
     res <- ch_name(100, locale = loc)
-    expect_is(res, "character")
+    expect_type(res, "character")
     expect_equal(trimws(res), res)
   }
 

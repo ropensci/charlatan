@@ -2,16 +2,16 @@ test_that("TaxonomyProvider works", {
   charlatan_settings()
   aa <- TaxonomyProvider_en_US$new()
 
-  expect_is(aa, "R6")
-  expect_is(aa, "TaxonomyProvider")
+  expect_s3_class(aa, "R6")
+  expect_s3_class(aa, "TaxonomyProvider")
 
-  expect_is(aa$genus, "function")
-  expect_is(aa$epithet, "function")
-  expect_is(aa$species, "function")
+  expect_type(aa$genus, "closure")
+  expect_type(aa$epithet, "closure")
+  expect_type(aa$species, "closure")
 
-  expect_is(aa$genus(), "character")
-  expect_is(aa$epithet(), "character")
-  expect_is(aa$species(), "character")
+  expect_type(aa$genus(), "character")
+  expect_type(aa$epithet(), "character")
+  expect_type(aa$species(), "character")
 
   expect_true(grepl(
     "[[:digit:]]",
@@ -28,7 +28,7 @@ test_that("TaxonomyProvider works", {
 test_that("ch_taxonomic_genus works", {
   aa <- ch_taxonomic_genus()
 
-  expect_is(aa, "character")
+  expect_type(aa, "character")
 
   expect_equal(length(ch_taxonomic_genus(n = 10)), 10)
   expect_equal(length(ch_taxonomic_genus(n = 100)), 100)
@@ -40,7 +40,7 @@ test_that("ch_taxonomic_genus works", {
 test_that("ch_taxonomic_epithet works", {
   aa <- ch_taxonomic_epithet()
 
-  expect_is(aa, "character")
+  expect_type(aa, "character")
 
   expect_equal(length(ch_taxonomic_epithet(n = 10)), 10)
   expect_equal(length(ch_taxonomic_epithet(n = 100)), 100)
@@ -51,7 +51,7 @@ test_that("ch_taxonomic_epithet works", {
 test_that("ch_taxonomic_species works", {
   aa <- ch_taxonomic_species()
 
-  expect_is(aa, "character")
+  expect_type(aa, "character")
 
   expect_equal(length(ch_taxonomic_species(n = 10)), 10)
   expect_equal(length(ch_taxonomic_species(n = 100)), 100)

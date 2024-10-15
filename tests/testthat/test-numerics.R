@@ -1,27 +1,27 @@
 test_that("NumericsProvider works", {
   aa <- NumericsProvider$new()
 
-  expect_is(aa, "R6")
-  expect_is(aa, "NumericsProvider")
+  expect_s3_class(aa, "R6")
+  expect_s3_class(aa, "NumericsProvider")
 
-  expect_is(aa$double, "function")
+  expect_type(aa$double, "closure")
   expect_type(aa$double(), "double")
 
-  expect_is(aa$integer, "function")
+  expect_type(aa$integer, "closure")
   expect_type(aa$integer(), "double")
-  expect_is(aa$integer(), "numeric")
+  expect_type(aa$integer(), "double")
 
-  expect_is(aa$unif, "function")
+  expect_type(aa$unif, "closure")
   expect_type(aa$unif(), "double")
-  expect_is(aa$unif(), "numeric")
+  expect_type(aa$unif(), "double")
 
-  expect_is(aa$norm, "function")
+  expect_type(aa$norm, "closure")
   expect_type(aa$norm(), "double")
 
-  expect_is(aa$lnorm, "function")
+  expect_type(aa$lnorm, "closure")
   expect_type(aa$lnorm(), "double")
 
-  expect_is(aa$beta, "function")
+  expect_type(aa$beta, "closure")
   expect_type(aa$beta(10, 1, 1), "double")
 })
 
