@@ -2,7 +2,7 @@
 % Please edit documentation in R/internet-provider-hr_HR.R
 \name{InternetProvider_hr_HR}
 \alias{InternetProvider_hr_HR}
-\title{Internet provider for}
+\title{Internet provider for Croatian (Croatia)}
 \description{
 methods for internet related data, like email addresses,
 usernames, and websites.

@@ -2,7 +2,7 @@
 % Please edit documentation in R/lorem-provider-en_US.R
 \name{LoremProvider_en_US}
 \alias{LoremProvider_en_US}
-\title{Lorem provider}
+\title{Lorem provider English (USA)}
 \description{
 Methods for Lorem Ipsum generation.
 Lorem Ipsum is a placeholder text commonly used to demonstrate the visual

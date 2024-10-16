@@ -1,21 +1,18 @@
-context("SequenceProvider")
-
 test_that("SequenceProvider works", {
   aa <- SequenceProvider$new()
 
-  expect_is(aa, "R6")
-  expect_is(aa, "SequenceProvider")
+  expect_s3_class(aa, "R6")
+  expect_s3_class(aa, "SequenceProvider")
 
-  expect_is(aa$render, "function")
-  expect_is(aa$render(), "character")
+  expect_type(aa$render, "closure")
+  expect_type(aa$render(), "character")
 })
 
 
-context("ch_gene_sequence")
 test_that("ch_gene_sequence works", {
   aa <- ch_gene_sequence()
 
-  expect_is(aa, "character")
+  expect_type(aa, "character")
 
   expect_equal(length(ch_gene_sequence(n = 10)), 10)
   expect_equal(length(ch_gene_sequence(n = 100)), 100)

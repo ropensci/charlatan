@@ -80,6 +80,6 @@ test_that("checksum_util works for our usecases", {
   # ISBN 13
   expect_equal(checksum_util(c(9, 7, 8, 0, 3, 0, 6, 4, 0, 6, 1, 5), rep(c(1, 3), 6)), 93)
   # SSN dutch
-  # 111222333 en 123456782
-  expect_equal(checksum_util(c(1, 1, 1, 2, 2, 2, 3, 3), 9:2), 69)
+  expect_equal(checksum_util(c(1, 1, 1, 2, 2, 2, 3, 3), 9:2) %% 11, 3)
+  expect_equal(checksum_util(c(1, 2, 3, 4, 5, 6, 7, 8), 9:2) %% 11, 2)
 })

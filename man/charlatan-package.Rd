@@ -48,6 +48,14 @@ x <- ColorProvider_en_US$new()
 x$color_name()
 x$hex_color()
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://docs.ropensci.org/charlatan/ (website) https://github.com/ropensci/charlatan (devel)}
+  \item Report bugs at \url{https://github.com/ropensci/charlatan/issues}
+}
+
+}
 \author{
 Roel M. Hogervorst \email{hogervorst.rm@gmail.com}
 

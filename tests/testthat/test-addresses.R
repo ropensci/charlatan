@@ -1,13 +1,12 @@
-context("AddressProvider works")
 # Make sure that the inheritance works correctly
 test_that("AddressProvider basic functionality works", {
   expect_error(AddressProvider())
   aa <- cr_loc_spec_provider("AddressProvider", "en_US")
 
-  expect_is(aa, "AddressProvider")
-  expect_is(aa, "R6")
+  expect_s3_class(aa, "AddressProvider")
+  expect_s3_class(aa, "R6")
 
-  expect_is(aa$locale, "character")
+  expect_type(aa$locale, "character")
   expect_equal(aa$locale, "en_US")
 })
 
@@ -23,19 +22,19 @@ test_that("every_locale has the same basic functions", {
     # the result should be character
     # and the result should not be empty string
     # TODO: check if start or end is not space (could indicate missing value)
-    expect_is(bb$address, "function")
+    expect_type(bb$address, "closure")
     expect_type(bb$address(), "character")
     expect_false(bb$address() == "")
-    expect_is(bb$city, "function")
+    expect_type(bb$city, "closure")
     expect_type(bb$city(), "character")
     expect_false(bb$city() == "", label = sprintf("city - %s", locale))
-    expect_is(bb$street_address, "function")
+    expect_type(bb$street_address, "closure")
     expect_type(bb$street_address(), "character")
     expect_false(bb$street_address() == "", label = sprintf("city - %s", locale))
-    expect_is(bb$street_name, "function")
+    expect_type(bb$street_name, "closure")
     expect_type(bb$street_name(), "character")
     expect_false(bb$street_name() == "", label = sprintf("city - %s", locale))
-    expect_is(bb$postcode, "function")
+    expect_type(bb$postcode, "closure")
     expect_type(bb$postcode(), "character")
     expect_false(bb$postcode() == "", label = sprintf("postcode - %s", locale))
     # locale should match locale
@@ -48,29 +47,29 @@ test_that("every_locale has the same basic functions", {
 test_that("custom functions from AddressProvider_en_US work", {
   aa <- cr_loc_spec_provider("AddressProvider", "en_US")
 
-  expect_is(aa$building_number, "function")
-  expect_is(aa$building_number(), "character")
+  expect_type(aa$building_number, "closure")
+  expect_type(aa$building_number(), "character")
   expect_equal(length(aa$building_number()), 1)
 
-  expect_is(aa$state, "function")
-  expect_is(aa$state(), "character")
+  expect_type(aa$state, "closure")
+  expect_type(aa$state(), "character")
   expect_equal(length(aa$state()), 1)
   expect_true(aa$state() %in% aa$.__enclos_env__$private$states)
 
-  expect_is(aa$mil_address, "function")
-  expect_is(aa$mil_address(), "character")
+  expect_type(aa$mil_address, "closure")
+  expect_type(aa$mil_address(), "character")
   expect_equal(length(aa$mil_address()), 1)
 
-  expect_is(aa$civ_address, "function")
-  expect_is(aa$civ_address(), "character")
+  expect_type(aa$civ_address, "closure")
+  expect_type(aa$civ_address(), "character")
   expect_equal(length(aa$civ_address()), 1)
 })
 
 test_that("custom functions from AddressProvider_nl_NL work", {
   aa <- cr_loc_spec_provider("AddressProvider", "nl_NL")
 
-  expect_is(aa$province, "function")
-  expect_is(aa$province(), "character")
+  expect_type(aa$province, "closure")
+  expect_type(aa$province(), "character")
   expect_equal(length(aa$province()), 1)
   expect_true(aa$province() %in% aa$.__enclos_env__$private$provinces)
 })

@@ -34,7 +34,7 @@ locales_update:
 # No real targets!
 .PHONY: all test doc install
 
-vignettes:
+vignettes: vignettes/charlatan.Rmd vignettes/contributing.Rmd vignettes/creating-realistic-data.Rmd
 	${RSCRIPT} -e "devtools::build_vignettes()"
 
 style:
@@ -53,3 +53,6 @@ revdep:
 	${RSCRIPT} revdep/check.R
 
 release: style test doc readme build revdep
+
+codemeta:
+	${RSCRIPT} -e "codemetar::write_codemeta()"

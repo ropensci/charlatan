@@ -148,7 +148,7 @@ lorem_word_list_he_il <- c(
   "\u05ea\u05e8\u05d1\u05e0\u05da"
 )
 
-#' Lorem provider
+#' Lorem provider Hebrew
 #'
 #' Methods for Lorem Ipsum generation.
 #' Lorem Ipsum is a placeholder text commonly used to demonstrate the visual

@@ -2,7 +2,7 @@
 % Please edit documentation in R/internet-provider-bg_BG.R
 \name{InternetProvider_bg_BG}
 \alias{InternetProvider_bg_BG}
-\title{Internet provider}
+\title{Internet provider for Bulgarian (Bulgaria)}
 \description{
 methods for internet related data, like email addresses,
 usernames, and websites.

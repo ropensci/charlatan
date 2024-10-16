@@ -13,7 +13,6 @@ z$render(10)
 z$render(100)
 # or even z$render(500)
 }
-\keyword{internal}
 \section{Super class}{
 \code{\link[charlatan:BareProvider]{charlatan::BareProvider}} -> \code{SequenceProvider}
 }

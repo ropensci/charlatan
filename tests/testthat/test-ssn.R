@@ -1,14 +1,12 @@
-context("SSNProvider works")
-
 test_that("SSNProvider works", {
   for (loc in SSNProvider_en_US$new()$allowed_locales()) {
     aa <- cr_loc_spec_provider("SSNProvider", loc)
     expect_equal(aa$locale, loc)
-    expect_is(aa, "SSNProvider")
-    expect_is(aa, "R6")
+    expect_s3_class(aa, "SSNProvider")
+    expect_s3_class(aa, "R6")
 
-    expect_is(aa$render, "function")
-    expect_is(aa$render(), "character")
+    expect_type(aa$render, "closure")
+    expect_type(aa$render(), "character")
   }
 })
 test_that("SSNProvider en_US", {
@@ -21,11 +19,8 @@ test_that("SSNProvider nl_NL", {
   expect_match(aa$render(), "\\d{9}")
 })
 
-
-context("ch_ssn works")
-
 test_that("ch_ssn", {
-  expect_is(ch_ssn(), "character")
+  expect_type(ch_ssn(), "character")
   expect_match(ch_ssn(), "\\d\\d\\d-\\d\\d-\\d\\d\\d\\d")
   expect_equal(length(ch_ssn(3)), 3)
 })

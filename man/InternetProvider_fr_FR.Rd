@@ -8,7 +8,7 @@ methods for internet related data, like email addresses,
 usernames, and websites.
 }
 \examples{
-x <- InternetProvider_bg_BG$new()
+x <- InternetProvider_fr_FR$new()
 x$email()
 x$free_email()
 x$mac_address()

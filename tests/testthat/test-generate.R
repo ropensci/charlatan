@@ -1,14 +1,12 @@
-context("ch_generate")
-
 test_that("ch_generate works - default settings", {
   aa <- ch_generate()
 
-  expect_is(aa, "data.frame")
-  expect_is(aa, "tbl_df")
+  expect_s3_class(aa, "data.frame")
+  expect_s3_class(aa, "tbl_df")
   expect_named(aa, c("name", "job", "phone_number"))
-  expect_is(aa$name, "character")
-  expect_is(aa$job, "character")
-  expect_is(aa$phone_number, "character")
+  expect_type(aa$name, "character")
+  expect_type(aa$job, "character")
+  expect_type(aa$phone_number, "character")
 
   expect_equal(NROW(aa), 10)
 })
@@ -16,13 +14,13 @@ test_that("ch_generate works - default settings", {
 
 test_that("ch_generate works - choose fields", {
   aa <- ch_generate("job")
-  expect_is(aa, "data.frame")
-  expect_is(aa, "tbl_df")
+  expect_s3_class(aa, "data.frame")
+  expect_s3_class(aa, "tbl_df")
   expect_named(aa, "job")
 
   aa <- ch_generate("job", "currency")
-  expect_is(aa, "data.frame")
-  expect_is(aa, "tbl_df")
+  expect_s3_class(aa, "data.frame")
+  expect_s3_class(aa, "tbl_df")
   expect_named(aa, c("job", "currency"))
 })
 
@@ -41,13 +39,13 @@ test_that("ch_generate works - locale", {
   bb <- ch_generate(locale = "fr_FR")
   cc <- ch_generate(locale = "fr_CH")
 
-  expect_is(aa, "data.frame")
+  expect_s3_class(aa, "data.frame")
   expect_equal(NROW(aa), 10)
 
-  expect_is(bb, "data.frame")
+  expect_s3_class(bb, "data.frame")
   expect_equal(NROW(bb), 10)
 
-  expect_is(cc, "data.frame")
+  expect_s3_class(cc, "data.frame")
   expect_equal(NROW(cc), 10)
 })
 

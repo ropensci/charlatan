@@ -504,7 +504,7 @@ lorem_word_list_ru_ru <- c(
   "\u0440\u0430\u0432\u043d\u043e\u0434\u0443\u0448\u043d\u044b\u0439"
 )
 
-#' Lorem provider Russian
+#' Lorem provider Russian (Russia)
 #'
 #' Methods for Lorem Ipsum generation.
 #' Lorem Ipsum is a placeholder text commonly used to demonstrate the visual

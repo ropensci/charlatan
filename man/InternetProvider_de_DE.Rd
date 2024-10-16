@@ -2,7 +2,7 @@
 % Please edit documentation in R/internet-provider-de_DE.R
 \name{InternetProvider_de_DE}
 \alias{InternetProvider_de_DE}
-\title{Internet provider}
+\title{Internet provider German (Germany)}
 \description{
 methods for internet related data, like email addresses,
 usernames, and websites.

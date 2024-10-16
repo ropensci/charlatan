@@ -1,39 +1,37 @@
-context("LoremProvider works")
-
 test_that("LoremProvider works", {
   for (loc in LoremProvider_en_US$new()$allowed_locales()) {
     aa <- cr_loc_spec_provider("LoremProvider", loc)
 
-    expect_is(aa, "LoremProvider")
-    expect_is(aa, "R6")
+    expect_s3_class(aa, "LoremProvider")
+    expect_s3_class(aa, "R6")
 
-    expect_is(aa$word, "function")
-    expect_is(aa$word(), "character")
+    expect_type(aa$word, "closure")
+    expect_type(aa$word(), "character")
     expect_equal(length(aa$word()), 1)
     expect_false(aa$word() == "")
 
-    expect_is(aa$words, "function")
-    expect_is(aa$words(), "character")
+    expect_type(aa$words, "closure")
+    expect_type(aa$words(), "character")
     expect_equal(length(aa$words()), 3)
 
-    expect_is(aa$sentence, "function")
-    expect_is(aa$sentence(), "character")
+    expect_type(aa$sentence, "closure")
+    expect_type(aa$sentence(), "character")
     expect_equal(length(aa$sentence()), 1)
 
-    expect_is(aa$sentences, "function")
-    expect_is(aa$sentences(), "character")
+    expect_type(aa$sentences, "closure")
+    expect_type(aa$sentences(), "character")
     expect_equal(length(aa$sentences()), 3)
 
-    expect_is(aa$paragraph, "function")
-    expect_is(aa$paragraph(), "character")
+    expect_type(aa$paragraph, "closure")
+    expect_type(aa$paragraph(), "character")
     expect_equal(length(aa$paragraph()), 1)
 
-    expect_is(aa$paragraphs, "function")
-    expect_is(aa$paragraphs(), "character")
+    expect_type(aa$paragraphs, "closure")
+    expect_type(aa$paragraphs(), "character")
     expect_equal(length(aa$paragraphs()), 3)
 
-    expect_is(aa$text, "function")
-    expect_is(aa$text(), "character")
+    expect_type(aa$text, "closure")
+    expect_type(aa$text(), "character")
     expect_equal(length(aa$text()), 1)
   }
 })

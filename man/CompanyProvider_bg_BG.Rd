@@ -2,7 +2,7 @@
 % Please edit documentation in R/company-provider-bg_BG.R
 \name{CompanyProvider_bg_BG}
 \alias{CompanyProvider_bg_BG}
-\title{CompanyProvider bg_BG}
+\title{CompanyProvider for Bulgarian (Bulgaria)}
 \value{
 A CompanyProvider object that can create companies.
 }

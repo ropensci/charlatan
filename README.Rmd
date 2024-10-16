@@ -92,26 +92,12 @@ x$color_name()
 
 ## locale support
 
-Adding more locales through time, e.g.,
-
-Locale support for job data
-
 ```{r}
-ch_job(locale = "en_US", n = 3)
 ch_job(locale = "fr_FR", n = 3)
 ch_job(locale = "hr_HR", n = 3)
 ch_job(locale = "uk_UA", n = 3)
 ch_job(locale = "zh_TW", n = 3)
 ```
-
-For colors:
-
-```{r}
-ch_color_name(locale = "en_US", n = 3)
-ch_color_name(locale = "uk_UA", n = 3)
-```
-
-More coming soon ...
 
 ## generate a dataset
 
@@ -121,28 +107,6 @@ ch_generate()
 
 ```{r}
 ch_generate("job", "phone_number", n = 30)
-```
-
-
-## person name
-
-```{r}
-ch_name()
-```
-
-```{r}
-ch_name(10)
-```
-
-
-## phone number
-
-```{r}
-ch_phone_number()
-```
-
-```{r}
-ch_phone_number(10)
 ```
 
 ## job
@@ -163,7 +127,6 @@ ch_credit_card_provider(n = 4)
 ```
 
 ```{r}
-ch_credit_card_number()
 ch_credit_card_number(n = 10)
 ```
 
@@ -171,6 +134,15 @@ ch_credit_card_number(n = 10)
 ch_credit_card_security_code()
 ch_credit_card_security_code(10)
 ```
+
+## Documentation
+
+All providers have documentation available through the help functions.
+All providers of the same locales, are linked together, and for every language
+we have a generic page, for example```?`dutch-language` ```.
+
+There are three vignettes, about contributing to this project, what {charlatan}
+does and a more in depth vignette about creating realistic data.
 
 ## Usage in the wild
 

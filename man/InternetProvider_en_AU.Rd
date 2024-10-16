@@ -2,7 +2,7 @@
 % Please edit documentation in R/internet-provider-en_AU.R
 \name{InternetProvider_en_AU}
 \alias{InternetProvider_en_AU}
-\title{Internet provider}
+\title{Internet provider English (Australia)}
 \description{
 methods for internet related data, like email addresses,
 usernames, and websites.

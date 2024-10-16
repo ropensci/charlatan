@@ -525,7 +525,7 @@ lorem_word_list_el_gr <- c(rep(lorem_common_words_el_gr, 2), c(
   "\u03ce\u03c1\u03b1"
 ))
 
-#' Lorem provider
+#' Lorem provider Greek (Greece)
 #'
 #' Methods for Lorem Ipsum generation.
 #' Lorem Ipsum is a placeholder text commonly used to demonstrate the visual

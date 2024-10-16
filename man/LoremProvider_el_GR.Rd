@@ -2,7 +2,7 @@
 % Please edit documentation in R/lorem-provider-el_GR.R
 \name{LoremProvider_el_GR}
 \alias{LoremProvider_el_GR}
-\title{Lorem provider}
+\title{Lorem provider Greek (Greece)}
 \description{
 Methods for Lorem Ipsum generation.
 Lorem Ipsum is a placeholder text commonly used to demonstrate the visual

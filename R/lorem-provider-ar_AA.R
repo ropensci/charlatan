@@ -697,7 +697,7 @@ lorem_word_list_ar_aa <- c(
   "\u0648\u0627\u0644\u0645\u0627\u0646\u064a\u0627"
 )
 
-#' Lorem provider
+#' Lorem provider Arabic
 #'
 #' Methods for Lorem Ipsum generation.
 #' Lorem Ipsum is a placeholder text commonly used to demonstrate the visual

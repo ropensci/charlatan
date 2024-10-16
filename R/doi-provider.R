@@ -1,5 +1,6 @@
 #' DOIProvider
 #'
+#' Generate random Digital Object Identifyers, used in scientific journals.
 #' @export
 #' @keywords internal
 #' @examples

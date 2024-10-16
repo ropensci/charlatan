@@ -1,26 +1,22 @@
-context("DOIProvider works")
-
 test_that("DOIProvider works", {
   aa <- DOIProvider$new()
 
-  expect_is(aa, "DOIProvider")
-  expect_is(aa, "R6")
+  expect_s3_class(aa, "DOIProvider")
+  expect_s3_class(aa, "R6")
 
-  expect_is(aa$funs, "list")
-  expect_is(aa$funs$a, "function")
-  expect_is(aa$funs$a(), "character")
-  expect_is(aa$funs$b, "function")
-  expect_is(aa$funs$b(), "character")
-  expect_is(aa$render, "function")
-  expect_is(aa$render(), "character")
+  expect_type(aa$funs, "list")
+  expect_type(aa$funs$a, "closure")
+  expect_type(aa$funs$a(), "character")
+  expect_type(aa$funs$b, "closure")
+  expect_type(aa$funs$b(), "character")
+  expect_type(aa$render, "closure")
+  expect_type(aa$render(), "character")
 })
-
-context("ch_doi works")
 
 test_that("ch_doi", {
   aa <- ch_doi()
 
-  expect_is(aa, "character")
+  expect_type(aa, "character")
   expect_gt(nchar(aa), 0)
 })
 
