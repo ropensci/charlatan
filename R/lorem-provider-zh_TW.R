@@ -351,7 +351,7 @@ lorem_word_list_zh_tw <- c(
   "\u51c6\u5099"
 )
 
-#' Lorem provider
+#' Lorem provider Chinese (Taiwan)
 #'
 #' Methods for Lorem Ipsum generation.
 #' Lorem Ipsum is a placeholder text commonly used to demonstrate the visual

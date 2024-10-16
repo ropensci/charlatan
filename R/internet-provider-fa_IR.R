@@ -16,7 +16,7 @@ int_tlds_fa_ir <- c("com", "com", "com", "net", "org", "ir", "ir", "ir")
 #' @family IR
 #' @export
 #' @examples
-#' x <- InternetProvider_bg_BG$new()
+#' x <- InternetProvider_fa_IR$new()
 #' x$email()
 #' x$free_email()
 #' x$mac_address()

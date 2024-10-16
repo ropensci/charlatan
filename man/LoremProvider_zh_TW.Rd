@@ -2,7 +2,7 @@
 % Please edit documentation in R/lorem-provider-zh_TW.R
 \name{LoremProvider_zh_TW}
 \alias{LoremProvider_zh_TW}
-\title{Lorem provider}
+\title{Lorem provider Chinese (Taiwan)}
 \description{
 Methods for Lorem Ipsum generation.
 Lorem Ipsum is a placeholder text commonly used to demonstrate the visual

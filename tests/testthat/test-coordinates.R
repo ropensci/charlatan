@@ -16,16 +16,15 @@ test_that("CoordinateProvider works", {
   expect_gte(abs(aa$lon()), 0)
 
   expect_type(aa$position, "closure")
-  test_that("Coordinate position works",{
-      res <- aa$position(bbox = c(20,30,25,35))
-      expect_gte(res[1],20)
-      expect_lte(res[1],25)
-      expect_gte(res[2],30)
-      expect_lte(res[2],35)
-      expect_type(res, "double")
-      expect_equal(length(res), 2)
+  test_that("Coordinate position works", {
+    res <- aa$position(bbox = c(20, 30, 25, 35))
+    expect_gte(res[1], 20)
+    expect_lte(res[1], 25)
+    expect_gte(res[2], 30)
+    expect_lte(res[2], 35)
+    expect_type(res, "double")
+    expect_equal(length(res), 2)
   })
-
 })
 
 

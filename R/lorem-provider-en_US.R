@@ -979,7 +979,7 @@ lorem_word_list_en_us <- c(
   "yourself"
 )
 
-#' Lorem provider
+#' Lorem provider English (USA)
 #'
 #' Methods for Lorem Ipsum generation.
 #' Lorem Ipsum is a placeholder text commonly used to demonstrate the visual

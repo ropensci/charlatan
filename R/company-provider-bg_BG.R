@@ -1,6 +1,6 @@
 # modified from the python library faker:
 # https://github.com/joke2k/faker/blob/master/faker/providers/company/bg_BG/__init__.py
-#' @title CompanyProvider bg_BG
+#' @title CompanyProvider for Bulgarian (Bulgaria)
 #' @inherit CompanyProvider description details return
 #' @export
 #' @family bg

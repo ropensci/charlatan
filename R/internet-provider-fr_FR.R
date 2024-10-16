@@ -51,7 +51,7 @@ int_replacements_fr_fr <- list(
 #' @family FR
 #' @export
 #' @examples
-#' x <- InternetProvider_bg_BG$new()
+#' x <- InternetProvider_fr_FR$new()
 #' x$email()
 #' x$free_email()
 #' x$mac_address()

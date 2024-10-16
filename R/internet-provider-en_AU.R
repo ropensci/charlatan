@@ -14,7 +14,7 @@ int_tlds_en_au <- c(
   "net.au", "biz", "info", "edu", "edu.au"
 )
 
-#' Internet provider
+#' Internet provider English (Australia)
 #'
 #' methods for internet related data, like email addresses,
 #' usernames, and websites.

@@ -22,7 +22,7 @@ int_replacements_hr_hr <- list(
   c("\u017d", "Z")
 )
 
-#' Internet provider for
+#' Internet provider for Croatian (Croatia)
 #'
 #' methods for internet related data, like email addresses,
 #' usernames, and websites.

@@ -22,7 +22,7 @@ int_replacements_de_de <- list(
   c("\\u00df", "ss")
 )
 
-#' Internet provider
+#' Internet provider German (Germany)
 #'
 #' methods for internet related data, like email addresses,
 #' usernames, and websites.

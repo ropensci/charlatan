@@ -146,9 +146,11 @@ products <- data.frame(
   prefix = c(rep(1, 5), rep(2, 2), rep(5, 2)),
   product_id = fraudster_cl$integer(n = 9, min = 1000, max = 9999),
   main_category = c(rep("Shoes", 5), rep("Jeans", 2), rep("Dresses", 2)),
-  sub_category = c("Dress shoes", "Tennis shoes", "Boots", "Hiking boots", "Country & Western style boots", 
-                   "Regular fit", "Straight fit", 
-                   "Summer dress", "Evening gown")
+  sub_category = c(
+    "Dress shoes", "Tennis shoes", "Boots", "Hiking boots", "Country & Western style boots",
+    "Regular fit", "Straight fit",
+    "Summer dress", "Evening gown"
+  )
 )
 ## when you have {dplyr} installed there are way cleaner ways to do this
 products$product_id <- as.integer(sprintf("%s%s", as.character(products$prefix), products$product_id))

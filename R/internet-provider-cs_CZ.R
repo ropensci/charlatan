@@ -28,7 +28,7 @@ int_free_email_domains_cs_cz <- c(
 
 int_tlds_cs_cz <- c("cz", "com", "cz")
 
-#' Internet provider
+#' Internet provider Czech
 #'
 #' methods for internet related data, like email addresses,
 #' usernames, and websites.

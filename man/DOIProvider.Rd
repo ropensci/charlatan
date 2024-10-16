@@ -8,6 +8,9 @@ DOIProvider
 
 DOIProvider
 }
+\details{
+Generate random Digital Object Identifyers, used in scientific journals.
+}
 \examples{
 (z <- DOIProvider$new())
 z$render()

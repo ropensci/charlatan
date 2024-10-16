@@ -2,7 +2,7 @@
 % Please edit documentation in R/internet-provider-cs_CZ.R
 \name{InternetProvider_cs_CZ}
 \alias{InternetProvider_cs_CZ}
-\title{Internet provider}
+\title{Internet provider Czech}
 \description{
 methods for internet related data, like email addresses,
 usernames, and websites.

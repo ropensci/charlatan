@@ -105,7 +105,7 @@ int_replacements_bg_bg <- list(
   c("\u044f", "ya")
 )
 
-#' Internet provider
+#' Internet provider for Bulgarian (Bulgaria)
 #'
 #' methods for internet related data, like email addresses,
 #' usernames, and websites.
