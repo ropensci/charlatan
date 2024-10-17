@@ -51,7 +51,8 @@ x$hex_color()
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://docs.ropensci.org/charlatan/ (website) https://github.com/ropensci/charlatan (devel)}
+  \item \url{https://docs.ropensci.org/charlatan/}
+  \item \url{https://github.com/ropensci/charlatan}
   \item Report bugs at \url{https://github.com/ropensci/charlatan/issues}
 }
 

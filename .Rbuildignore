@@ -18,3 +18,4 @@ appveyor.yml
 ^inst\examples$
 .git
 ^\.github$
+^CRAN-SUBMISSION$

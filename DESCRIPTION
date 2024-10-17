@@ -6,7 +6,7 @@ Description: Make fake data that looks realistic, supporting addresses,
     times, colors, coordinates, currencies, digital object identifiers
     ('DOIs'), jobs, phone numbers, 'DNA' sequences, doubles and integers
     from distributions and within a range.
-Version: 0.6.0
+Version: 0.6.1
 Authors@R: c(
       person("Roel M.", "Hogervorst", 
             email ="hogervorst.rm@gmail.com", 
@@ -25,8 +25,7 @@ Authors@R: c(
       person("rOpenSci", role = "fnd", comment = "https://ropensci.org")
     )
 License: MIT + file LICENSE
-URL: https://docs.ropensci.org/charlatan/ (website)
-    https://github.com/ropensci/charlatan (devel)
+URL: https://docs.ropensci.org/charlatan/, https://github.com/ropensci/charlatan
 BugReports: https://github.com/ropensci/charlatan/issues
 LazyData: true
 Encoding: UTF-8

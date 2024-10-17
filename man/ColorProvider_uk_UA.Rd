@@ -21,7 +21,6 @@ x$hex_color()
 x$safe_hex_color()
 x$rgb_color()
 x$rgb_css_color()
-x$hex_from_name("Синій")
 }
 \seealso{
 Other uk: 

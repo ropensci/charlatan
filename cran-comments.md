@@ -1,3 +1,9 @@
+## Resubmission
+This is a resubmission. In this version I have:
+
+* Removed unicode from the examples so the PDF renders.
+* changed URL in DESCRIPTION, so it is just two plain URLs with a comma in between
+
 ## Test environments
 
 * macos-latest (macOS Sonoma 14.7; on github actions), R 4.4.1

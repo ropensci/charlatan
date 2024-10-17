@@ -15,7 +15,6 @@
 #' x$safe_hex_color()
 #' x$rgb_color()
 #' x$rgb_css_color()
-#' x$hex_from_name("Синій")
 ColorProvider_uk_UA <- R6::R6Class(
   inherit = ColorProvider,
   "ColorProvider_uk_UA",

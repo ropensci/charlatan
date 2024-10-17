@@ -1,7 +1,7 @@
 
 
 
-charlatan 0.6.0
+charlatan 0.6.1
 ===============
 This release changes the internal logic of the package to make it easier for you to contribute.
 One of the greatest strengths of charlatan, _and its spirit brothers faker (in python) and faker (in perl),_ is

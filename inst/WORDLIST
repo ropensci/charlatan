@@ -28,6 +28,7 @@ HU
 ISBNProvider
 ISBNs
 Identifyable
+Identifyers
 InternetProvider
 Ipsum
 JobProvider
@@ -64,6 +65,7 @@ Tererongo
 Theplantlist
 UA
 URIs
+UserAgent
 UserAgentProvider
 Util
 Ventilationsmontør
