@@ -1,8 +1,8 @@
 
 
 
-charlatan 0.6.1
-===============
+# charlatan 0.6.1
+
 This release changes the internal logic of the package to make it easier for you to contribute.
 One of the greatest strengths of charlatan, _and its spirit brothers faker (in python) and faker (in perl),_ is
 the ability to customize realistically looking data in many locales.
@@ -56,8 +56,8 @@ every locale (when needed) without changing the logic for all locales.
 
 
 
-charlatan 0.5.1
-===============
+# charlatan 0.5.1
+
 
 ### NEW FEATURES
 * added a SSN number generation process for en_US, addition by Neal Furtz (@nfultz)
@@ -68,8 +68,7 @@ charlatan 0.5.1
 
 
 
-charlatan 0.5.0
-===============
+# charlatan 0.5.0
 
 ### NEW FEATURES
 
@@ -81,8 +80,7 @@ charlatan 0.5.0
 * fixed typo in docs (#117) thanks @j450h1
 
 
-charlatan 0.4.0
-===============
+#charlatan 0.4.0
 
 ### NEW FEATURES
 
@@ -101,7 +99,6 @@ charlatan 0.4.0
 
 
 charlatan 0.3.0
-===============
 
 ### NEW FEATURES
 
@@ -118,8 +115,7 @@ charlatan 0.3.0
 * mention similar packages (#72)
 
 
-charlatan 0.2.2
-===============
+# charlatan 0.2.2
 
 ### BUG FIXES
 
@@ -152,8 +148,7 @@ charlatan 0.2.0
 * `AddressProvider` gains methods `street_name`, `street_address`, `postcode`, and `address`. in addition, various fixes to `AddressProvider`  (#62) (#80)
 
 
-charlatan 0.1.0
-===============
+# charlatan 0.1.0
 
 ### NEW FEATURES
 
