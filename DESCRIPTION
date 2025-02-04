@@ -22,7 +22,7 @@ Authors@R: c(
       person("Tristan", "Mahr", role = "rev",
         comment = "Tristan Mahr reviewed the package for rOpenSci,
         see https://github.com/ropensci/onboarding/issues/94"),
-      person("rOpenSci", role = "fnd", comment = "https://ropensci.org")
+      person("rOpenSci", role = "fnd", comment = c(ROR = "019jywm96"))
     )
 License: MIT + file LICENSE
 URL: https://docs.ropensci.org/charlatan/, https://github.com/ropensci/charlatan
