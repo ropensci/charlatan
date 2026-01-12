@@ -7,7 +7,6 @@ JobProvider <- R6::R6Class(
   inherit = BaseProvider,
   "JobProvider",
   public = list(
-
     #' @description Make a job
     render = function() {
       super$random_element(private$formats)

@@ -6,7 +6,7 @@ Description: Make fake data that looks realistic, supporting addresses,
     times, colors, coordinates, currencies, digital object identifiers
     ('DOIs'), jobs, phone numbers, 'DNA' sequences, doubles and integers
     from distributions and within a range.
-Version: 0.6.1
+Version: 0.6.2
 Authors@R: c(
       person("Roel M.", "Hogervorst", 
             email ="hogervorst.rm@gmail.com", 
@@ -43,7 +43,7 @@ Suggests:
     ipaddress,
     stringi,
     spelling
-RoxygenNote: 7.3.2
+RoxygenNote: 7.3.3
 Config/testthat/edition: 3
 Depends: 
     R (>= 2.10)

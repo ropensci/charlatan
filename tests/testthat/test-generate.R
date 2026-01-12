@@ -50,7 +50,6 @@ test_that("ch_generate works - locale", {
 })
 
 
-
 test_that("ch_generate fails well", {
   # has to be character
   expect_error(ch_generate(4), "choices must be of class character")

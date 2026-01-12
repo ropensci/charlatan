@@ -1060,7 +1060,6 @@ PersonProvider_hr_HR <- R6::R6Class(
   "PersonProvider_hr_HR",
   inherit = PersonProvider,
   private = list(
-
     # person name formats
     formats = person_formats_hr_hr,
     # person name data

@@ -89,7 +89,6 @@ test_that("fraudster - fails well", {
 })
 
 
-
 test_that("FraudsterClient works", {
   aa <- FraudsterClient$new()
 

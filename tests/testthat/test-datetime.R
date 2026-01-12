@@ -27,7 +27,6 @@ test_that("DateTimeProvider works", {
 })
 
 
-
 test_that("ch_timezone", {
   aa <- ch_timezone()
 
@@ -47,7 +46,6 @@ test_that("ch_timezone - n parameter", {
 })
 
 
-
 test_that("ch_unix_time", {
   aa <- ch_unix_time()
 
@@ -60,7 +58,6 @@ test_that("ch_unix_time - n parameter", {
   expect_equal(length(ch_unix_time(n = 100)), 100)
   expect_equal(length(ch_unix_time(n = 500)), 500)
 })
-
 
 
 test_that("ch_date_time", {

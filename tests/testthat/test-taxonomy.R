@@ -36,7 +36,6 @@ test_that("ch_taxonomic_genus works", {
 })
 
 
-
 test_that("ch_taxonomic_epithet works", {
   aa <- ch_taxonomic_epithet()
 
@@ -57,7 +56,6 @@ test_that("ch_taxonomic_species works", {
   expect_equal(length(ch_taxonomic_species(n = 100)), 100)
   expect_equal(length(ch_taxonomic_species(n = 500)), 500)
 })
-
 
 
 test_that("ch_name fails well", {

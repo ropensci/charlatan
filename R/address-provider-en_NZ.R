@@ -18,7 +18,6 @@ AddressProvider_en_NZ <- R6::R6Class(
   "AddressProvider_en_NZ",
   lock_objects = FALSE,
   public = list(
-
     # Fill in these functions
     #' @description Create an address, a combination of street, postal code and city.
     address = function() {

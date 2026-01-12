@@ -223,7 +223,6 @@ phone_number_formats_bs_ba <- c(
 )
 
 
-
 #' @title PhoneNumberProvider for Bosnia and Herzegovina
 #' @inherit PhoneNumberProvider description details return
 #' @family bs
@@ -240,7 +239,6 @@ PhoneNumberProvider_bs_BA <- R6::R6Class(
     formats = phone_number_formats_bs_ba
   )
 )
-
 
 
 phone_number_formats_bg_bg <- c(
@@ -909,7 +907,6 @@ PhoneNumberProvider_pt_PT <- R6::R6Class(
     formats = phone_number_formats_pt_pt
   )
 )
-
 
 
 phone_number_formats_ru_ru <- c(
