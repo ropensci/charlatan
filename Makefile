@@ -49,7 +49,7 @@ spellcheck:
 lint:
 	${RSCRIPT} -e "devtools::lint()"
 
-revdep:
+revdep: FORCE
 	${RSCRIPT} revdep/check.R
 
 release: style test doc readme build revdep

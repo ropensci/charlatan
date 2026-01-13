@@ -1,46 +1,9 @@
-# DataFakeR
+# fakir ()
 
-<details>
+* GitHub: <https://github.com/ropensci/charlatan>
+* Email: <mailto:hogervorst.rm@gmail.com>
 
-* Version: 
-* GitHub: https://github.com/ropensci/charlatan
-* Source code: NA
-* Number of recursive dependencies: 0
-
-</details>
-
-## Error before installation
-
-### Devel
-
-```
-
-
-
-
-
-
-```
-### CRAN
-
-```
-
-
-
-
-
-
-```
-# fakir
-
-<details>
-
-* Version: 
-* GitHub: https://github.com/ropensci/charlatan
-* Source code: NA
-* Number of recursive dependencies: 0
-
-</details>
+Run `revdepcheck::revdep_details(, "fakir")` for more info
 
 ## Error before installation
 
