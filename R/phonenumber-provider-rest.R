@@ -680,7 +680,7 @@ phone_number_formats_nn_no <- c(
 )
 
 
-#' @title PhoneNumberProvider for Norway
+#' @title PhoneNumberProvider for Norway (nn_NO)
 #' @inherit PhoneNumberProvider description details return
 #' @family nn
 #' @family NO
@@ -698,6 +698,22 @@ PhoneNumberProvider_nn_NO <- R6::R6Class(
 )
 
 
+#' @title PhoneNumberProvider for Norway (no_NO)
+#' @inherit PhoneNumberProvider description details return
+#' @family no
+#' @family NO
+#' @export
+#' @examples
+#' z <- PhoneNumberProvider_no_NO$new()
+#' z$render()
+PhoneNumberProvider_no_NO <- R6::R6Class(
+  inherit = PhoneNumberProvider,
+  "PhoneNumberProvider_nn_NO",
+  private = list(
+    locale_ = "no_NO",
+    formats = phone_number_formats_nn_no
+  )
+)
 
 
 phone_number_formats_pl_pl <- c(

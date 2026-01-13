@@ -2,7 +2,7 @@
 % Please edit documentation in R/phonenumber-provider-rest.R
 \name{PhoneNumberProvider_no_NO}
 \alias{PhoneNumberProvider_no_NO}
-\title{PhoneNumberProvider for Norway}
+\title{PhoneNumberProvider for Norway (no_NO)}
 \value{
 A PhoneNumberProvider object that can create phonenumbers.
 }

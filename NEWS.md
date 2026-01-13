@@ -1,6 +1,6 @@
 # charlatan 0.6.2
 No changes but a rebuild of the docs with a new version of devtools. Due to
-CRAN changes.
+CRAN changes. 
 
 
 # charlatan 0.6.1
