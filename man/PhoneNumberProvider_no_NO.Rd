@@ -25,12 +25,12 @@ Other NO:
 \concept{NO}
 \concept{no}
 \section{Super classes}{
-\code{\link[charlatan:BareProvider]{charlatan::BareProvider}} -> \code{\link[charlatan:BaseProvider]{charlatan::BaseProvider}} -> \code{\link[charlatan:PhoneNumberProvider]{charlatan::PhoneNumberProvider}} -> \code{PhoneNumberProvider_nn_NO}
+\code{\link[charlatan:BareProvider]{charlatan::BareProvider}} -> \code{\link[charlatan:BaseProvider]{charlatan::BaseProvider}} -> \code{\link[charlatan:PhoneNumberProvider]{charlatan::PhoneNumberProvider}} -> \code{PhoneNumberProvider_no_NO}
 }
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
-\item \href{#method-PhoneNumberProvider_nn_NO-clone}{\code{PhoneNumberProvider_no_NO$clone()}}
+\item \href{#method-PhoneNumberProvider_no_NO-clone}{\code{PhoneNumberProvider_no_NO$clone()}}
 }
 }
 \if{html}{\out{
@@ -57,8 +57,8 @@ Other NO:
 </details>
 }}
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-PhoneNumberProvider_nn_NO-clone"></a>}}
-\if{latex}{\out{\hypertarget{method-PhoneNumberProvider_nn_NO-clone}{}}}
+\if{html}{\out{<a id="method-PhoneNumberProvider_no_NO-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-PhoneNumberProvider_no_NO-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

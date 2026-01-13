@@ -708,7 +708,7 @@ PhoneNumberProvider_nn_NO <- R6::R6Class(
 #' z$render()
 PhoneNumberProvider_no_NO <- R6::R6Class(
   inherit = PhoneNumberProvider,
-  "PhoneNumberProvider_nn_NO",
+  "PhoneNumberProvider_no_NO",
   private = list(
     locale_ = "no_NO",
     formats = phone_number_formats_nn_no
