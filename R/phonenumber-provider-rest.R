@@ -223,7 +223,6 @@ phone_number_formats_bs_ba <- c(
 )
 
 
-
 #' @title PhoneNumberProvider for Bosnia and Herzegovina
 #' @inherit PhoneNumberProvider description details return
 #' @family bs
@@ -240,7 +239,6 @@ PhoneNumberProvider_bs_BA <- R6::R6Class(
     formats = phone_number_formats_bs_ba
   )
 )
-
 
 
 phone_number_formats_bg_bg <- c(
@@ -682,7 +680,7 @@ phone_number_formats_nn_no <- c(
 )
 
 
-#' @title PhoneNumberProvider for Norway
+#' @title PhoneNumberProvider for Norway (nn_NO)
 #' @inherit PhoneNumberProvider description details return
 #' @family nn
 #' @family NO
@@ -700,7 +698,7 @@ PhoneNumberProvider_nn_NO <- R6::R6Class(
 )
 
 
-#' @title PhoneNumberProvider for Norway
+#' @title PhoneNumberProvider for Norway (no_NO)
 #' @inherit PhoneNumberProvider description details return
 #' @family no
 #' @family NO
@@ -710,7 +708,7 @@ PhoneNumberProvider_nn_NO <- R6::R6Class(
 #' z$render()
 PhoneNumberProvider_no_NO <- R6::R6Class(
   inherit = PhoneNumberProvider,
-  "PhoneNumberProvider_nn_NO",
+  "PhoneNumberProvider_no_NO",
   private = list(
     locale_ = "no_NO",
     formats = phone_number_formats_nn_no
@@ -909,7 +907,6 @@ PhoneNumberProvider_pt_PT <- R6::R6Class(
     formats = phone_number_formats_pt_pt
   )
 )
-
 
 
 phone_number_formats_ru_ru <- c(

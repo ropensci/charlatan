@@ -28,7 +28,6 @@ test_that("MissingDataProvider fails well", {
 })
 
 
-
 test_that("ch_missing works", {
   letters2 <- ch_missing(letters)
   letters3 <- ch_missing(letters)

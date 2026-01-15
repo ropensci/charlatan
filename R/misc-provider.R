@@ -13,7 +13,6 @@ MiscProvider <- R6::R6Class(
   "MiscProvider",
   inherit = BareProvider,
   public = list(
-
     #' @description get a random boolean, `TRUE` or `FALSE`
     #' @param chance_of_getting_true (integer) an integer, default: 50
     boolean = function(chance_of_getting_true = 50) {

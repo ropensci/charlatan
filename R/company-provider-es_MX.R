@@ -16,7 +16,6 @@ CompanyProvider_es_MX <- R6::R6Class(
   "CompanyProvider_es_MX",
   inherit = CompanyProvider,
   public = list(
-
     ## add functions here
     #' @description a company name
     company = function() {

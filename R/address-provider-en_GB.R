@@ -19,7 +19,6 @@ AddressProvider_en_GB <- R6::R6Class(
   "AddressProvider_en_GB",
   lock_objects = FALSE,
   public = list(
-
     #' @description Create an address, a combination of street, postal code and city.
     address = function() {
       pattern <- super$random_element(private$address_formats)

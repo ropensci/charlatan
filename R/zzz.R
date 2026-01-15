@@ -60,7 +60,6 @@ check4pkg <- function(x) {
 `%||%` <- function(x, y) if (is.null(x)) y else x
 
 
-
 # instantiate a locale specific provider
 #
 # Errors with a clear error message if it does not exist

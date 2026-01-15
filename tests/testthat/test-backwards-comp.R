@@ -37,7 +37,6 @@ test_that("creditcards exists", {
 })
 
 
-
 test_that("academic things exists", {
   expect_type(ch_doi(), "character")
   expect_type(ch_gene_sequence(), "character")
@@ -55,7 +54,6 @@ test_that("generate still works", {
   b <- ch_missing(x = 1:10)
   expect_gt(sum(is.na(b)), 0)
 })
-
 
 
 test_that("people vars exists", {

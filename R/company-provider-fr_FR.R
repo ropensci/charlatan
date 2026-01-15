@@ -15,7 +15,6 @@ CompanyProvider_fr_FR <- R6::R6Class(
   "CompanyProvider_fr_FR",
   inherit = CompanyProvider,
   public = list(
-
     #' @description generate a catch phrase for a company.
     catch_phrase = function() {
       whisker::whisker.render(template = private$catch_phrase_formats, data = list(
@@ -26,7 +25,6 @@ CompanyProvider_fr_FR <- R6::R6Class(
     }
   ),
   private = list(
-
     # catch_phrase_formats formatting for catch phrases.
     catch_phrase_formats = c(
       "{{catch_phrase_noun}} {{catch_phrase_verb}} {{catch_phrase_attribute}}"

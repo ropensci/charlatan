@@ -20,7 +20,6 @@ ColorProvider_en_US <- R6::R6Class(
   "ColorProvider_en_US",
   lock_objects = FALSE,
   private = list(
-
     #  A vector with named list items containing the name of the color and the hex value.
     all_colors_ = c(
       list(AliceBlue = "#F0F8FF"),
