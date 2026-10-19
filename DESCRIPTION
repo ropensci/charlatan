@@ -8,21 +8,25 @@ Description: Make fake data that looks realistic, supporting addresses,
     from distributions and within a range.
 Version: 0.6.2
 Authors@R: c(
-      person("Roel M.", "Hogervorst", 
-            email ="hogervorst.rm@gmail.com", 
-            role = c("cre", "aut"), 
-            comment = c(ORCID = "0000-0001-7509-0328")),
-      person("Scott", "Chamberlain", role = c("aut"),
-        comment = c(ORCID = "0000-0003-1444-9135")),
-      person("Kyle", "Voytovich", role = "aut"),
-      person("Martin", "Pedersen", role = "ctb"),
-      person("Brooke", "Anderson", role = "rev",
-        comment = "Brooke Anderson reviewed the package for rOpenSci,
-        see https://github.com/ropensci/onboarding/issues/94"),
-      person("Tristan", "Mahr", role = "rev",
-        comment = "Tristan Mahr reviewed the package for rOpenSci,
-        see https://github.com/ropensci/onboarding/issues/94"),
-      person("rOpenSci", role = "fnd", comment = c(ROR = "019jywm96"))
+    person("Joash Joshua", "Ayo",
+           email = "joashjoshua789@gmail.com",
+           role = c("aut", "cre"),
+           comment = c(ORCID = "0009-0007-1642-0172")),
+    person("Roel M.", "Hogervorst",
+           email ="hogervorst.rm@gmail.com",
+           role = c("aut"),
+           comment = c(ORCID = "0000-0001-7509-0328")),
+    person("Scott", "Chamberlain", role = c("aut"),
+           comment = c(ORCID = "0000-0003-1444-9135")),
+    person("Kyle", "Voytovich", role = "aut"),
+    person("Martin", "Pedersen", role = "ctb"),
+    person("Brooke", "Anderson", role = "rev",
+           comment = "Brooke Anderson reviewed the package for rOpenSci,
+           see https://github.com/ropensci/onboarding/issues/94"),
+    person("Tristan", "Mahr", role = "rev",
+           comment = "Tristan Mahr reviewed the package for rOpenSci,
+           see https://github.com/ropensci/onboarding/issues/94"),
+    person("rOpenSci", role = "fnd", comment = c(ROR = "019jywm96"))
     )
 License: MIT + file LICENSE
 URL: https://docs.ropensci.org/charlatan/, https://github.com/ropensci/charlatan
